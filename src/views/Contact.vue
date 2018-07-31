@@ -1,6 +1,7 @@
 <template lang="pug">
-  section.animate_intro
-    h1 Contact
+  section.text-center.animate_intro
+    h1 {{ $t('nav.contact') }}
+    p lucaslimay@gmail.com
 </template>
 
 <script>

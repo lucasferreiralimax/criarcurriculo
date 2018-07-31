@@ -1,6 +1,8 @@
 <template lang="pug">
   section.animate_intro
-    img(src="../assets/logo.png")
+    .text-center
+      h2 {{ $t('text.text1') }}
+      h2#start {{ $t('text.text2') }}
     form-curriculo
     notice
 </template>

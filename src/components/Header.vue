@@ -1,6 +1,6 @@
 <template lang="pug">
 header.header.animate_intro
-  h1 {{ $t('text.name1')}} {{ $t('text.name2')}}
+  router-link(to="/" v-scroll-to="'#start'" tag="h1").logo.text-center {{ $t('text.name1')}} {{ $t('text.name2')}}
   nav-menu
   pluralization
 </template>

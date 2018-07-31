@@ -10,18 +10,24 @@
   user-select none
   transition .5s all
   transform translateX(-999px)
+  opacity 0
   position fixed
   top 0
   left 0
   z-index 99
   &.active
     transform translateX(0)
+    opacity 1
   .title
     font-size 1.5em
-    margin 0
-    position absolute
-    top 18px
-    left calc(50% - 1.5em)
+    padding 15px
+  .btn
+    width 95%
+    margin 10px auto
+    +tablet()
+      margin-right 20px
+      &:last-of-type
+        margin-right 0
   +tablet()
     width 80%
     background rgba(#222, 0)
@@ -30,6 +36,7 @@
     transform translateX(0)
     padding-top 0
     display flex
+    opacity 1
     .title
       display none
     &:after

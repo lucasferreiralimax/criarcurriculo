@@ -11,6 +11,7 @@
         path(fill="#fca326" d="M2 14L.1 20.16c-.18.565 0 1.2.5 1.56l17.42 12.66z")
         path(fill="#fca326" d="M34 14l1.9 6.16c.18.565 0 1.2-.5 1.56L18 34.38z")
     scroll-top
+    small {{ $t('text.name1') }} {{ $t('text.name2') }}
 </template>
 
 <script>

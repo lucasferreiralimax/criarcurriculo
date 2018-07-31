@@ -1,7 +1,7 @@
 <template lang="pug">
-div.select-maritals.box(v-bind:class="{ error: !user.maritalstatus && errors.length }")
+.select-maritals(v-bind:class="{ error: !user.maritalstatus && errors.length }")
   // Get the marital status
-  p.text.text-left(v-bind:class="{ 'display-n-print': !user.maritalstatus }") Estado civil:
+  p(v-bind:class="{ 'display-n-print': !user.maritalstatus }") Estado civil:
 
   label(for="GET-maritalstatus-s" v-bind:class="{ 'display-n-print': user.maritalstatus !== 's' }")
     input#GET-maritalstatus-s(name="maritalstatus" type="radio" value="s"  @input="updateVuex('updateMaritalStatus', $event)").display-n-print

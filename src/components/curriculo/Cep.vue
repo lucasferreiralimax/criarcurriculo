@@ -1,6 +1,6 @@
 <template lang="pug">
   label(for="GET-cep" v-bind:class="{ error: !user.cep && err.length }")
-    p.text.text-left CEP:
+    p CEP:
     input#GET-cep(name="cep" type="tel" maxlength="8" placeholder="00000-000" :value="user.cep" @keyup="search_cep" @input="updateVuex('updateCep', $event)")
 </template>
 

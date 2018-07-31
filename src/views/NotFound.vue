@@ -1,5 +1,5 @@
 <template lang="pug">
-section.container.animate_intro
+section.text-center.animate_intro
   h1 {{ $t('text.notfound_t1') }}
   p {{ $t('text.notfound_t2') }}
   br
