@@ -1,0 +1,48 @@
+{
+  "text": {
+    "name1": "Curriculum",
+    "name2": "Free",
+    "message": "This web application is still in constant development.",
+    "text1": "Create your new curriculum quick, easy and free!",
+    "text2": "Fill out the form below ...",
+    "notfound_t1": "Page does not exist yet",
+    "notfound_t2": "Sorry for any embarrassment",
+    "notfound_t3": "To go back to the beginning",
+    "notfound_click": "Click here!"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "actions": {
+    "print": "Print"
+  },
+  "form": {
+    "h1": "Personal data",
+    "name": "Full name:",
+    "name_place": "Fill in your full name...",
+    "genre": "Genre:",
+    "select_genre": "Select your genre ...",
+    "woman": "Woman",
+    "man": "Man",
+    "born": "Date of Birth:",
+    "born_man": "Born in:",
+    "born_woman": "Born in:",
+    "end": "Address",
+    "end_place": "Name of street or avenue...",
+    "number": "Number:",
+    "number_place": "Home number...",
+    "city": "City:",
+    "city_place": "Name of your current city...",
+    "travel": "Willingness to travel",
+    "yes": "Yes",
+    "no": "No",
+    "contact": "Contact",
+    "phone": "Phone",
+    "email": "E-mail",
+    "email_place": "example@email.com",
+    "about": "About me",
+    "about_place": "Tell me a little about you..."
+  }
+}

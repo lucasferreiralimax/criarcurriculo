@@ -1,0 +1,41 @@
+.btn
+  width 98%
+  border 2px solid #999
+  background rgba(#fff,0)
+  border-radius 6px
+  color #333
+  outline none
+  line-height 23px
+  font-size 20px
+  font-weight 100
+  transition .2s all
+  cursor pointer
+  position relative
+  padding 20px 0
+  margin 10px 0
+  user-select none
+  &:hover
+    background #333
+    color #fff
+.menu
+  width 45px
+  padding 10px 0
+  position fixed
+  top 0
+  left 10px
+  z-index 999
+  background rgba(#333,.5)
+  &:hover span
+    transform scale(.6)
+  span
+    background #fff
+    border-radius 4px
+    height 2px
+    width 70%
+    display block
+    margin 0 auto 6px
+    transition .3s transform
+    &:last-of-type
+      margin 0 auto
+  +tablet()
+    display none

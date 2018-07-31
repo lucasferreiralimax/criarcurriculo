@@ -1,0 +1,48 @@
+{
+  "text": {
+    "name1": "カリキュラム",
+    "name2": "無料",
+    "message": "クリエイターと共同作業者",
+    "text1": "新しいカリキュラムを素早く簡単に作成できます。",
+    "text2": "下のフォームに記入してください...",
+    "notfound_t1": "ページはまだ存在しません",
+    "notfound_t2": "どんな恥ずかしがっても申し訳ありません",
+    "notfound_t3": "最初に戻るには",
+    "notfound_click": "ここをクリック！"
+  },
+  "nav": {
+    "home": "スタート",
+    "about": "情報",
+    "contact": "接触"
+  },
+  "actions": {
+    "print": "ホーム"
+  },
+  "form": {
+    "h1": "個人データ",
+    "name": "氏名",
+    "name_place": "あなたのフルネームを記入してください...",
+    "genre": "ジャンル:",
+    "select_genre": "あなたのジャンルを選択...",
+    "woman": "女性の",
+    "man": "男",
+    "born": "生まれる:",
+    "born_man": "生まれる:",
+    "born_woman": "生まれる:",
+    "end": "住所",
+    "end_place": "ストリートまたはアベニューの名前...",
+    "number": "番号:",
+    "number_place": "自宅の番号..",
+    "city": "都市:",
+    "city_place": "あなたの現在の都市の名前...",
+    "travel": "Disponibilidade para viagens",
+    "yes": "はい",
+    "no": "で",
+    "contact": "お問い合わせ",
+    "phone": "電話番号",
+    "email": "電子メイル",
+    "email_place": "exemplo@email.com",
+    "about": "ホーム",
+    "about_place": "あなた自身について教えてください..."
+  }
+}

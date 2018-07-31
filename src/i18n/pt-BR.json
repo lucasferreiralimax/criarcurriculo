@@ -1,0 +1,48 @@
+{
+  "text": {
+    "name1": "Curriculo",
+    "name2": "Grátis",
+    "message": "Essa web aplicação ainda está em constante desenvolvimento.",
+    "text1": "Crie seu novo curriculo rápido, fácil e grátis!",
+    "text2": "Preencha o formulário abaixo...",
+    "notfound_t1": "Página ainda não existe",
+    "notfound_t2": "Desculpe qualquer constrangimento",
+    "notfound_t3": "Para voltar para o inicio",
+    "notfound_click": "Clique aqui!"
+  },
+  "nav": {
+    "home": "Início",
+    "about": "Informações",
+    "contact": "Contato"
+  },
+  "actions": {
+    "print": "Imprimir"
+  },
+  "form": {
+    "h1": "Dados Pessoais",
+    "name": "Nome completo:",
+    "name_place": "Preencha com seu nome completo...",
+    "genre": "Gênero:",
+    "select_genre": "Selecione seu gênero...",
+    "woman": "Feminino",
+    "man": "Masculino",
+    "born": "Nascido(a) em:",
+    "born_man": "Nascido em:",
+    "born_woman": "Nascida em:",
+    "end": "Endereço",
+    "end_place": "Nome da rua ou avenida...",
+    "number": "Número:",
+    "number_place": "Número do lar...",
+    "city": "Cidade:",
+    "city_place": "Nome da sua cidade atual...",
+    "travel": "Disponibilidade para viagens",
+    "yes": "sim",
+    "no": "Não",
+    "contact": "Contato",
+    "phone": "Telefone",
+    "email": "E-mail",
+    "email_place": "exemplo@email.com",
+    "about": "Apresentação",
+    "about_place": "Fale um pouco sobre você..."
+  }
+}
