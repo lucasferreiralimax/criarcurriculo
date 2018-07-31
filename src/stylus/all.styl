@@ -18,7 +18,8 @@ html, body
   width 100%
 
 body
-  background #fff
+  background #fff url('./assets/bg-paperr.jpg')
+  background-size 50%
   box-sizing border-box
   color #444
   font-family Arial
@@ -40,11 +41,18 @@ body
   	-webkit-box-shadow inset 0 0 6px rgba(0,0,0,0)
   	background-color rgba(#000,.2)
 
+h1
+  font-size 2.5em
+h2
+  font-size 1.8em
+
 @import '_app-print'
 
 @import 'base/_header'
+@import 'base/_curriculo'
 @import 'base/_footer'
 
+@import 'components/_logo'
 @import 'components/_nav'
 @import 'components/_buttons'
 @import 'components/_animate'

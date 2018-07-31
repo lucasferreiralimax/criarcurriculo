@@ -1,6 +1,6 @@
 <template lang='pug'>
   label(for="GET-nationality" v-bind:class="{ error: !user.countrystatuss && errors.length }")
-    p.text.text-left Nacionalidade:
+    p Nacionalidade:
     select#GET-nationality(name='nationality' v-on:mouseover.once="createdList" :value="user.countrystatus" @input="updateVuex('updateCountryStatus', $event)")
       option(value='') Seu país de origem
       option(v-for='(item, key) in countrys' :key='key') {{ item.country }}
