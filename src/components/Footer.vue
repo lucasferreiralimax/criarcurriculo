@@ -36,7 +36,7 @@ export default {
     position relative
     line-height 0
     display block
-    filter grayscale(100%)
+    filter grayscale(50%)
     &:after, &:before
       box-sizing border-box
       opacity 0

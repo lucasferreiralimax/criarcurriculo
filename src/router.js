@@ -27,5 +27,8 @@ export default new Router({
       name: 'notfound',
       component: () => import(/* webpackChunkName: "about" */ './views/NotFound.vue')
     }
-  ]
+  ],
+  scrollBehavior () {
+    return { x: 0, y: 0 }
+  }
 })

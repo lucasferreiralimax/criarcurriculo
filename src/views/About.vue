@@ -1,8 +1,7 @@
 <template lang="pug">
-  section.text-center.animate_intro
+  section.mark.text-center.animate_intro
     h1 Informações
     p Esse web aplicativo é uma ação social e auxiliará você a criar um curriculo profissional, elegante e objetivo, de uma forma totalmente gratuita!
-    p Ele é totalmente gratuito, sendo assim você não tem nenhuma obrigação financeira com ele.
     p Espera-se que esse aplicativo, ajude você de todas as maneiras portáteis possíveis para geração de seu novo curriculo profissional.
     p Criado por um rapaz que mesmo em meio a todas as adversidades do seu cotidiano, focou e dedicou seus estudos para elaborar esse web aplicativo.
     p Se você deseja ajudar com esse projeto de alguma forma ou comentário, deixe sua contribuição em nosso

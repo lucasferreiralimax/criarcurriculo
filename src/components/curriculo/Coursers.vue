@@ -5,9 +5,9 @@
     fieldset.course(:id="'course-' + course.id" v-for="(course, key, index) in user.coursers")
       legend
         | Formação Acadêmica {{ course.formation.name }}
-        button.btn-less(type="button" @click='remove_component(key)')
+        button.btn.right(type="button" @click='remove_component(key)')
           i -
-        button.btn-plus(type="button" @click='new_component(key)' v-scroll-to="'#course-' + course.id_sibiling")
+        button.btn.right(type="button" @click='new_component(key)' v-scroll-to="'#course-' + course.id_sibiling")
           i +
 
       // Get the Course Now?

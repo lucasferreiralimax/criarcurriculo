@@ -1,5 +1,5 @@
 <template lang="pug">
-.select-maritals(v-bind:class="{ error: !user.maritalstatus && errors.length }")
+.box.select-maritals(v-bind:class="{ error: !user.maritalstatus && errors.length }")
   // Get the marital status
   p(v-bind:class="{ 'display-n-print': !user.maritalstatus }") Estado civil:
 

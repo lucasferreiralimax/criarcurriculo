@@ -1,6 +1,6 @@
 <template lang="pug">
   section.animate_intro
-    .text-center
+    .mark.text-center
       h2 {{ $t('text.text1') }}
       h2#start {{ $t('text.text2') }}
     form-curriculo

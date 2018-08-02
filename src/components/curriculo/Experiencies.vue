@@ -5,9 +5,9 @@
     fieldset.experience(v-for="(exp, key, index) in user.exps" :id="'exp-' + exp.id")
       legend
         | Experiência {{ exp.experience.work }}
-        button.btn-less(type="button" @click="remove_component(key)")
+        button.btn.right(type="button" @click="remove_component(key)")
           i -
-        button.btn-plus(type="button" @click="new_component(key)" v-scroll-to="'#exp-' + exp.id_sibiling")
+        button.btn.right(type="button" @click="new_component(key)" v-scroll-to="'#exp-' + exp.id_sibiling")
           i +
 
       // Get the exps Now?

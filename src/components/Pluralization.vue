@@ -37,7 +37,7 @@ export default {
     background rgba(#fff, .3)
     border-radius 6px
     padding 10px
-    z-index 999
+    z-index 99
     position fixed
     top 10px
     right 10px

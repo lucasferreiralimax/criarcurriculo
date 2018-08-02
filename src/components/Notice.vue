@@ -31,7 +31,7 @@ export default {
 </script>
 <style lang="stylus">
 .notice
-  background red
+  background red - 30
   position fixed
   top 0
   left 0
@@ -40,7 +40,7 @@ export default {
   margin 20px
   z-index 9999
   border-radius 6px
-  box-shadow 0 6px 13px red
+  box-shadow 0 6px 13px red - 30
   cursor pointer
   opacity .8
   p

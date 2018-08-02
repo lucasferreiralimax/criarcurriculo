@@ -1,5 +1,5 @@
 .nav-menu
-  background #fff
+  background linear-gradient(to bottom, color4 - 30 50%, rgba(color5,.5))
   text-align center
   display block
   clear both
@@ -14,11 +14,12 @@
   position fixed
   top 0
   left 0
-  z-index 99
+  z-index 998
   &.active
     transform translateX(0)
     opacity 1
   .title
+    color #fff
     font-size 1.5em
     padding 15px
   .btn
@@ -29,7 +30,7 @@
       &:last-of-type
         margin-right 0
   +tablet()
-    width 80%
+    width 70%
     background rgba(#222, 0)
     box-shadow none
     position relative
@@ -39,9 +40,21 @@
     opacity 1
     .title
       display none
+    .btn
+      margin 0
+      border-radius 0
+      z-index -1 !important
+      &:first-of-type
+        border-radius 6px 0 0 6px
+        border-right 0
+      &:last-of-type
+        border-radius 0 6px 6px 0
+        border-left 0
     &:after
       content ''
       display table
       clear both
+  +desktop()
+    width 40%
   +ultrawide()
-    width 60%
+    width 30%
