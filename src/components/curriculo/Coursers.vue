@@ -1,13 +1,14 @@
 <template lang='pug'>
-  .coursers
-    button.btn.new_course(type="button" v-if="user.coursers == 0" @click='new_component()')
-      | + Adicionar Formação Acadêmica
+  .box.coursers
+    button.btn.plus(type="button" v-if="user.coursers == 0" @click='new_component()')
+      span +
+      | Formação Acadêmica
     fieldset.course(:id="'course-' + course.id" v-for="(course, key, index) in user.coursers")
       legend
         | Formação Acadêmica {{ course.formation.name }}
-        button.btn.right(type="button" @click='remove_component(key)')
+        button.btn.delete.right.bullet(type="button" @click='remove_component(key)')
           i -
-        button.btn.right(type="button" @click='new_component(key)' v-scroll-to="'#course-' + course.id_sibiling")
+        button.btn.plus.right.bullet(type="button" @click='new_component(key)' v-scroll-to="'#course-' + course.id_sibiling")
           i +
 
       // Get the Course Now?

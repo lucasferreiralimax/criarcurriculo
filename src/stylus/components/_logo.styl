@@ -13,8 +13,12 @@
   font-size 3em
   display block
   cursor pointer
-  transition .3s all
-  margin 1.5em auto
+  transition .3s transform, .3s color
+  will-change transform color
+  margin 0 auto
+  position relative
+  top 2em
+  animation force 3s infinite alternate
   &:hover
     transform scale(1.2)
     color color2
@@ -30,3 +34,4 @@
     transform scale(1.1)
   +tablet()
     margin 2em auto
+    top 1em

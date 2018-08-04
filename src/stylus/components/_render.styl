@@ -1,0 +1,74 @@
+.render
+  width 100%
+  height 40vh
+  background #fff
+  color #000
+  box-shadow 0 -10px 40px rgba(#000,.3)
+  clear both
+  padding 3em
+  box-sizing border-box
+  transition .3s all
+  position fixed
+  bottom 0
+  z-index 1
+  overflow auto
+  cursor pointer
+  outline none
+  -webkit-tap-highlight-color transparent
+  &:after
+    content ''
+    display block
+    background linear-gradient(#fff 10%, rgba(#fff,0) 80%)
+    width 100%
+    height 60px
+    position fixed
+    right 3em
+    bottom calc(40vh - 60px)
+    z-index 99
+    pointer-events none
+    transition .3s all
+    +tablet()
+      width 50%
+  &.fixedFooter
+    transform scale(0.6) translateY(-15vh)
+    height 85vh
+    filter blur(0) !important
+  &.active,
+  &.fixedH
+    filter blur(3px)
+    transform rotate(-35deg) translate(50vw, 100px)
+    &:after
+      bottom calc(20vh - 60px)
+  &.fixedH
+    transform rotate(10deg) translate(10vw, 130px)
+    pointer-events none
+  label
+    cursor pointer
+  h1, p
+    margin-bottom 1em
+  h2
+    margin 1em 0 .5em
+  +tablet()
+    width 50%
+    height 85vh !important
+    right 3em
+    position absolute
+    top 240px
+    &.active,
+    &.fixedH
+      overflow auto
+      filter blur(0)
+      transform rotate(0) translate(0, 0)
+    &.fixedFooter
+      transform scale(1) !important
+      height 90vh !important
+      top 5vh !important
+    &:after
+      display none
+    &.fixed
+      position fixed
+      top 11vh
+      transition none
+      &:after
+        display block
+        top 11vh

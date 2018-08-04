@@ -1,13 +1,14 @@
 <template lang='pug'>
-  .experience
-    button.btn.new_exp(type="button" v-if="user.exps == 0" @click='new_component()')
-      | + Adicionar Experiência
+  .box.experiences
+    button.btn.plus(type="button" v-if="user.exps == 0" @click='new_component()')
+      span +
+      | Experiência
     fieldset.experience(v-for="(exp, key, index) in user.exps" :id="'exp-' + exp.id")
       legend
         | Experiência {{ exp.experience.work }}
-        button.btn.right(type="button" @click="remove_component(key)")
+        button.btn.delete.right.bullet(type="button" @click="remove_component(key)")
           i -
-        button.btn.right(type="button" @click="new_component(key)" v-scroll-to="'#exp-' + exp.id_sibiling")
+        button.btn.plus.right.bullet(type="button" @click="new_component(key)" v-scroll-to="'#exp-' + exp.id_sibiling")
           i +
 
       // Get the exps Now?

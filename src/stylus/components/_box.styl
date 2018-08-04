@@ -1,0 +1,31 @@
+.box
+  border-radius 6px
+  margin-bottom 2em
+  &.active
+    height 60px
+    overflow hidden
+  & legend
+    &:first-child
+      border-radius 6px 6px 0 0
+      &:after,
+      &:before
+        // display block
+        position relative
+        margin-right 15px
+      &:before
+        content '+'
+      &:after
+        content '-'
+  & > label,
+  & > .radio
+    &:last-child
+      border-radius 0 0 6px 6px
+.course,
+.experience
+  margin-bottom 2em
+  &.active
+    height 60px
+    overflow hidden
+  & > label
+    &:last-child
+      border-radius 0 0 6px 6px
