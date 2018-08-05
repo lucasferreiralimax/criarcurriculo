@@ -28,19 +28,20 @@
     pointer-events none
     transition .3s all
     +tablet()
-      width 50%
+      width 45%
   &.fixedFooter
-    transform scale(0.6) translateY(-15vh)
-    height 85vh
+    transform scale(0.6) translateY(-15vh) !important
+    height 85vh !important
     filter blur(0) !important
   &.active,
   &.fixedH
     filter blur(3px)
-    transform rotate(-35deg) translate(50vw, 100px)
+    transform rotate(-35deg) translate(30vw, 300px)
+    height 70vh
     &:after
       bottom calc(20vh - 60px)
   &.fixedH
-    transform rotate(10deg) translate(10vw, 130px)
+    transform rotate(10deg) translate(10vw, 350px)
     pointer-events none
   label
     cursor pointer
@@ -53,7 +54,7 @@
     height 85vh !important
     right 3em
     position absolute
-    top 240px
+    top 300px
     &.active,
     &.fixedH
       overflow auto

@@ -1,11 +1,14 @@
 .footer
   text-align center
-  padding 65vh 0 40px
   font-weight normal
-  +tablet()
-    padding 0 0 40px
-    width 35%
-    float left
+  padding 40px 0
+  &.home
+    padding 65vh 0 40px
+    +tablet()
+      padding 5em 3em
+      width 35%
+    +desktop()
+      width 40%
 .credits
   user-select none
   color #fff

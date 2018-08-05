@@ -1,21 +1,20 @@
 .box
   border-radius 6px
   margin-bottom 2em
+  & legend:first-child
+    border-radius 6px 6px 0 0
+    cursor pointer
+    user-select none
+    &:before
+      content '-'
+      position relative
+      margin-right 15px
   &.active
     height 60px
     overflow hidden
-  & legend
-    &:first-child
-      border-radius 6px 6px 0 0
-      &:after,
-      &:before
-        // display block
-        position relative
-        margin-right 15px
+    & legend:first-child
       &:before
         content '+'
-      &:after
-        content '-'
   & > label,
   & > .radio
     &:last-child
@@ -26,6 +25,7 @@
   &.active
     height 60px
     overflow hidden
+    overscroll-behavior contain
   & > label
     &:last-child
       border-radius 0 0 6px 6px

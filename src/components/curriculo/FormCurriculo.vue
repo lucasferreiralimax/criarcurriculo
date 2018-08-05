@@ -24,7 +24,13 @@ form#curriculo(method="get" @submit="checkForm" :class="{ renderActive: user.nam
         input#GET-dataofbirth(name="dataofbirth" type="number" min="13" :value="user.age" @input="updateVuex('updateAge', $event)")
 
       select-maritals(v-bind:errors="errors")
-    .box
+
+      // Get the About
+      label(for="GET-about" v-bind:class="{ error: !this.user.about && errors.length }")
+        p {{ $t('form.about')}}:
+        textarea#GET-about(ref="GET_about" :placeholder="$t('form.about_place')" :value="user.about" @input="updatetextAreaHeight, updateVuex('updateAbout', $event)")
+
+    .box.active
       legend {{ $t('form.end')}}
 
       // Get the CEP
@@ -44,11 +50,6 @@ form#curriculo(method="get" @submit="checkForm" :class="{ renderActive: user.nam
       label(for="GET-address")
         p  {{ $t('form.end')}}:
         input#GET-address(name="address" type="text" :placeholder="$t('form.end_place')" :value="user.end.logradouro")
-
-      // Get the About
-      label(for="GET-about" v-bind:class="{ error: !this.user.about && errors.length }")
-        p {{ $t('form.about')}}:
-        textarea#GET-about(ref="GET_about" :placeholder="$t('form.about_place')" :value="user.about" @input="updatetextAreaHeight, updateVuex('updateAbout', $event)")
 
       .radio(v-bind:class="{ 'error': !user.travel && errors.length }")
         p {{ $t('form.travel')}}:
@@ -124,9 +125,11 @@ export default {
   },
   mounted () {
     this.toggleBox()
+    document.querySelector('.footer').classList.add('home')
   },
   destroyed () {
     this.toggleBox()
+    document.querySelector('.footer').classList.remove('home')
   },
   methods: {
     print: () => {

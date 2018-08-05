@@ -3,19 +3,19 @@
     h1
       label {{ user.name }}
     hr
-    p(v-if="user.age") Idade: {{ user.age }} anos |
+    p(v-if="user.age") Idade: {{ user.age }} anos
       span(v-if="user.maritalstatus") Estado Civil: {{ user.genero == 'h' ? 'Solteiro' : 'Solteira' }}
     p(v-if="user.end.logradouro") Endereço: {{ user.end.logradouro }}, {{ user.end.localidade }} - {{ user.cep }}.
     h2(v-if="user.about") Sobre mim
     p(v-if="user.about") {{ user.about }}
     h2(v-if="user.coursers[0]") Formação Acadêmica
     .coursers(v-for="(course, key, index) in user.coursers")
-      p Instituição: {{ course.formation.school }} | Formação: {{ course.formation.name }}
+      p Instituição: {{ course.formation.school }} Formação: {{ course.formation.name }}
       p {{ course.formation.about }}
       p(v-if="course.formation.now") {{ course.formation.now ? 'Cursando' : '' }}
     h2(v-if="user.exps[0]") Experiência
     .experiencies(v-for="(exp, key, index) in user.exps")
-      p Empresa: {{ exp.experience.name }} | Cargo: {{ exp.experience.work }}
+      p Empresa: {{ exp.experience.name }} Cargo: {{ exp.experience.work }}
       p {{ exp.experience.about }}
       p(v-if="exp.experience.now") {{ exp.experience.now ? 'Atual' : '' }}
     h2(v-if="user.telephone || user.email") Contato
@@ -53,24 +53,7 @@ export default {
       if (window.innerWidth >= 800) {
         this.fixedFooter = !(this.oldScroll > window.scrollY) && window.scrollY > 630
       }
-      // console.log(el)
-      // console.log(window.innerWidth, "window.outerWidth")
-      // console.log(this.fixedFooter, "this.fixedFooter")
-      // console.log(window.scrollY > el, "window.scrollY > el")
-      // console.log(!(this.oldScroll > window.scrollY) && window.scrollY > 630, "!(this.oldScroll > window.scrollY) && window.scrollY > 630")
-      // console.log(this.oldScroll > window.scrollY)
       this.oldScroll = window.scrollY
-
-      // if(window.scrollY > el) {
-      //   this.fixedFooter = true
-      //   // window.scrollTo(0, el + 180)
-      // } else {
-      //   this.fixedFooter = false
-      // }
-
-      // console.log(document.querySelector('html').getBoundingClientRect())
-      // console.log(el)
-      // console.log(window.scrollY)
     }
   },
   created () {

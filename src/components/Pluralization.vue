@@ -37,7 +37,6 @@ export default {
   .pluralization
     width 45px
     height 45px
-    background rgba(#fff, .3)
     border-radius 6px
     z-index 99
     position fixed
@@ -53,7 +52,6 @@ export default {
       cursor pointer
       display block
       float right
-      filter drop-shadow(0 2px 6px #000)
       top -8px
       left 9px
       height 60px
