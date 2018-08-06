@@ -23,7 +23,12 @@
     "name": "Full name:",
     "name_place": "Fill in your full name...",
     "genre": "Genre:",
-    "select_genre": "Select your genre ...",
+    "marital_status": "Marital Status",
+    "single": "Single",
+    "married": "Married",
+    "widowed": "Widowed",
+    "divorced": "Divorced",
+    "select_genre": "Select your genre...",
     "woman": "Woman",
     "man": "Man",
     "born": "Born in:",
@@ -41,6 +46,17 @@
     "email": "E-mail",
     "email_place": "example@email.com",
     "about": "About me",
-    "about_place": "Tell me a little about you..."
+    "about_place": "Tell me a little about you...",
+    "cademy": "Academic education",
+    "cademy_now": "Studying",
+    "school": "Institution",
+    "course": "Formation",
+    "start": "Beginning",
+    "end": "Conclusion",
+    "about": "About",
+    "exp": "Experience",
+    "exp_now": "Current",
+    "company": "Company",
+    "office": "Work"
   }
 }

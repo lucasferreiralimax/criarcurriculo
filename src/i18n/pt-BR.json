@@ -23,6 +23,11 @@
     "name": "Nome completo:",
     "name_place": "Preencha com seu nome completo...",
     "genre": "Gênero:",
+    "marital_status": "Estado civil",
+    "single": "Solteiro",
+    "married": "Casado",
+    "widowed": "Viúvo",
+    "divorced": "Divorciado",
     "select_genre": "Selecione seu gênero...",
     "woman": "Feminino",
     "man": "Masculino",
@@ -40,7 +45,17 @@
     "phone": "Telefone",
     "email": "E-mail",
     "email_place": "exemplo@email.com",
-    "about": "Apresentação",
-    "about_place": "Fale um pouco sobre você..."
+    "about_place": "Fale um pouco sobre você...",
+    "cademy": "Formação Acadêmica",
+    "cademy_now": "Cursando",
+    "school": "Instituição",
+    "course": "Formação",
+    "start": "Início",
+    "end": "Término",
+    "about": "Sobre",
+    "exp": "Experiência",
+    "exp_now": "Atual",
+    "company": "Empresa",
+    "office": "Cargo"
   }
 }

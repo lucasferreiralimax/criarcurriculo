@@ -19,7 +19,12 @@
     "name": "Полное имя",
     "name_place": "Заполните свое полное имя...",
     "genre": "Сюжет Ключевые слова:",
-    "select_genre": "あなたのジャンルを選択...",
+    "marital_status": "Гражданский статус",
+    "single": "один",
+    "married": "женат",
+    "widowed": "вдовец",
+    "divorced": "разведенный",
+    "select_genre": "Выберите жанр...",
     "woman": "женщина",
     "man": "человек",
     "born": "Родился в:",
@@ -37,6 +42,17 @@
     "email": "Электронная почта",
     "email_place": "exemplo@email.com",
     "about": "презентация",
-    "about_place": "Расскажите нам о себе..."
+    "about_place": "Расскажите нам о себе...",
+    "cademy": "Академическая история",
+    "cademy_now": "Текущий",
+    "school": "учреждение",
+    "course": "Formação",
+    "start": "Início",
+    "end": "Término",
+    "about": "Sobre",
+    "exp": "Experiência",
+    "exp_now": "Atual",
+    "company": "Empresa",
+    "office": "Cargo"
   }
 }

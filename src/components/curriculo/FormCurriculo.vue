@@ -56,11 +56,11 @@ form#curriculo(method="get" @submit="checkForm" :class="{ renderActive: user.nam
 
         label(for="GET-travel-yes")
           input#GET-travel-yes(name="travel" type="radio" value="yes" :value="user.travel" @input="updateVuex('updateTravel', $event)")
-          span {{ $t('form.yes')}}:
+          span {{ $t('form.yes')}}
 
         label(for="GET-travel-no")
           input#GET-travel-no(name="travel" type="radio" value="no" :value="user.travel" @input="updateVuex('updateTravel', $event)")
-          span {{ $t('form.no')}}:
+          span {{ $t('form.no')}}
     .box
       legend {{ $t('form.contact')}}
 
