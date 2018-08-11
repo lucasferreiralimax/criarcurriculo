@@ -28,10 +28,10 @@ npm install
 # install dependencies with yarn
 yarn install
 
-# serve with hot reload at localhost:9999
+# serve with hot reload
 npm run dev
 
-# serve with yarn hot reload at localhost:9999
+# serve with yarn hot reload
 yarn run dev
 ```
 
