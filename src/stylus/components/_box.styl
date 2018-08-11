@@ -19,13 +19,47 @@
   & > .radio
     &:last-child
       border-radius 0 0 6px 6px
-.course,
-.experience
-  margin-bottom 2em
-  &.active
-    height 60px
-    overflow hidden
-    overscroll-behavior contain
-  & > label
-    &:last-child
-      border-radius 0 0 6px 6px
+  &.course,
+  &.experience
+    margin-bottom 2em
+    &.active
+      height 60px
+      overflow hidden
+      overscroll-behavior contain
+    & > label
+      &:last-child
+        border-radius 0 0 6px 6px
+.flexbox
+  display flex
+  flex-wrap wrap
+  flex 1
+  label[for="GET-name"],
+  label[for="GET-genero"],
+  label[for="GET-dataofbirth"],
+  label[for="GET-dataofbirth"],
+  label[for="GET-state"],
+  label[for="GET-address-number"],
+  label[for="GET-telephone"],
+  label[for="GET-email"],
+  label[for="GET-school"],
+  label[for="GET-course"],
+  label[for="GET-coursedata"],
+  label[for="GET-school"],
+  label[for="GET-exps"],
+  label[for="GET-exps"],
+  label[for="GET-expsdata"],
+  .radio,
+  .address,
+  .select-maritals
+    width 100%
+    +desktop()
+      width 50%
+      box-sizing border-box
+  label[for="GET-about"],
+  label[for="GET-address"],
+  label[for="GET-courseabout"],
+  label[for="GET-expsabout"],
+  .course_now,
+  .exps_now
+    width 100%
+    box-sizing border-box

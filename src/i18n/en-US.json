@@ -52,7 +52,7 @@
     "school": "Institution",
     "course": "Formation",
     "start": "Beginning",
-    "end": "Conclusion",
+    "finish": "Conclusion",
     "about": "About",
     "exp": "Experience",
     "exp_now": "Current",

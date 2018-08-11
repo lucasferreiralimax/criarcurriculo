@@ -1,81 +1,83 @@
 <template lang="pug">
 // Form get the data info person
 form#curriculo(method="get" @submit="checkForm" :class="{ renderActive: user.name}")
-  fieldset
-    .box
+  .box
+    fieldset
       legend {{ $t('form.h1') }}
+      .flexbox
+        // Get the name
+        label(for="GET-name" v-bind:class="{ error: !user.name && errors.length }")
+          p {{ $t('form.name') }}
+          input#GET-name(name="name" type="text" :placeholder="$t('form.name_place')" :value="user.name" @input="updateVuex('updateName', $event)")
 
-      // Get the name
-      label(for="GET-name" v-bind:class="{ error: !user.name && errors.length }")
-        p {{ $t('form.name') }}
-        input#GET-name(name="name" type="text" :placeholder="$t('form.name_place')" :value="user.name" @input="updateVuex('updateName', $event)")
+        // Get the data of birth
+        label(for="GET-genero" v-bind:class="{ error: !user.genero && errors.length }")
+          p {{ $t('form.genre')}}
+          select#GET-genero(name='genero' :value="user.genero" @input="updateVuex('updateGenero', $event)")
+            option(value='') {{ $t('form.select_genre')}}
+            option(value='m') {{ $t('form.woman')}}
+            option(value='h') {{ $t('form.man')}}
 
-      // Get the data of birth
-      label(for="GET-genero" v-bind:class="{ error: !user.genero && errors.length }")
-        p {{ $t('form.genre')}}
-        select#GET-genero(name='genero' :value="user.genero" @input="updateVuex('updateGenero', $event)")
-          option(value='') {{ $t('form.select_genre')}}
-          option(value='m') {{ $t('form.woman')}}
-          option(value='h') {{ $t('form.man')}}
+        select-maritals(v-bind:errors="errors")
 
-      // Get the data of birth
-      label(for="GET-dataofbirth" v-bind:class="{ error: !user.age && errors.length }")
-        p {{ $t('form.born')}}
-        input#GET-dataofbirth(name="dataofbirth" type="number" min="13" :value="user.age" @input="updateVuex('updateAge', $event)")
+        // Get the data of birth
+        label(for="GET-dataofbirth" v-bind:class="{ error: !user.age && errors.length }")
+          p {{ $t('form.born')}}
+          input#GET-dataofbirth(name="dataofbirth" type="number" min="13" :value="user.age" @input="updateVuex('updateAge', $event)")
 
-      select-maritals(v-bind:errors="errors")
+        // Get the About
+        label(for="GET-about" v-bind:class="{ error: !this.user.about && errors.length }")
+          p {{ $t('form.about')}}:
+          textarea#GET-about(ref="GET_about" :placeholder="$t('form.about_place')" :value="user.about" @input="updatetextAreaHeight, updateVuex('updateAbout', $event)")
 
-      // Get the About
-      label(for="GET-about" v-bind:class="{ error: !this.user.about && errors.length }")
-        p {{ $t('form.about')}}:
-        textarea#GET-about(ref="GET_about" :placeholder="$t('form.about_place')" :value="user.about" @input="updatetextAreaHeight, updateVuex('updateAbout', $event)")
-
-    .box.active
+  .box.active
+    fieldset
       legend {{ $t('form.end')}}
-
-      // Get the CEP
-      .address
-        cep(v-bind:err="errors")
+      .flexbox
+        // Get the CEP
+        .address
+          cep(v-bind:err="errors")
 
         label(for="GET-address-number" v-bind:class="{ error: !user.addressNumber && errors.length }")
           p  {{ $t('form.number')}}
           input#GET-address-number(name="address-number" type="number" :placeholder="$t('form.number_place')" :value="user.addressNumber" @input="updateVuex('updateAddressNumber', $event)")
 
-      // Get the State
-      label(for="GET-state")
-        p  {{ $t('form.city')}}
-        input#GET-state(name="state" type="text" :placeholder="$t('form.city_place')" :value="user.end.localidade")
+        // Get the Address
+        label(for="GET-address")
+          p  {{ $t('form.end')}}:
+          input#GET-address(name="address" type="text" :placeholder="$t('form.end_place')" :value="user.end.logradouro")
 
-      // Get the Address
-      label(for="GET-address")
-        p  {{ $t('form.end')}}:
-        input#GET-address(name="address" type="text" :placeholder="$t('form.end_place')" :value="user.end.logradouro")
+        // Get the State
+        label(for="GET-state")
+          p  {{ $t('form.city')}}
+          input#GET-state(name="state" type="text" :placeholder="$t('form.city_place')" :value="user.end.localidade")
 
-      .radio(v-bind:class="{ 'error': !user.travel && errors.length }")
-        p {{ $t('form.travel')}}:
+        .radio(v-bind:class="{ 'error': !user.travel && errors.length }")
+          p {{ $t('form.travel')}}:
 
-        label(for="GET-travel-yes")
-          input#GET-travel-yes(name="travel" type="radio" value="yes" :value="user.travel" @input="updateVuex('updateTravel', $event)")
-          span {{ $t('form.yes')}}
+          label(for="GET-travel-yes")
+            input#GET-travel-yes(name="travel" type="radio" value="yes" :value="user.travel" @input="updateVuex('updateTravel', $event)")
+            span {{ $t('form.yes')}}
 
-        label(for="GET-travel-no")
-          input#GET-travel-no(name="travel" type="radio" value="no" :value="user.travel" @input="updateVuex('updateTravel', $event)")
-          span {{ $t('form.no')}}
-    .box
+          label(for="GET-travel-no")
+            input#GET-travel-no(name="travel" type="radio" value="no" :value="user.travel" @input="updateVuex('updateTravel', $event)")
+            span {{ $t('form.no')}}
+  .box
+    fieldset
       legend {{ $t('form.contact')}}
+      .flexbox
+        // Get the Address
+        label(for="GET-telephone" v-bind:class="{ error: !this.user.telephone && errors.length }")
+          p {{ $t('form.phone')}}:
+          input#GET-telephone(name="telephone" type="tel" placeholder="(011)00000-0000" maxlength="15" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" :value="user.telephone" @input="updateVuex('updateTelephone', $event)")
 
-      // Get the Address
-      label(for="GET-telephone" v-bind:class="{ error: !this.user.telephone && errors.length }")
-        p {{ $t('form.phone')}}:
-        input#GET-telephone(name="telephone" type="tel" placeholder="(011)00000-0000" maxlength="15" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" :value="user.telephone" @input="updateVuex('updateTelephone', $event)")
+        // Get the E-mail
+        label(for="GET-email" v-bind:class="{ error: !this.user.email && errors.length }")
+          p {{ $t('form.email')}}:
+          input#GET-email(name="email" type="email" :placeholder="$t('form.email_place')" :value="user.email" @input="updateVuex('updateEmail', $event)")
 
-      // Get the E-mail
-      label(for="GET-email" v-bind:class="{ error: !this.user.email && errors.length }")
-        p {{ $t('form.email')}}:
-        input#GET-email(name="email" type="email" :placeholder="$t('form.email_place')" :value="user.email" @input="updateVuex('updateEmail', $event)")
-
-    coursers-data(v-bind:errors="errors")
-    experiencies-data(v-bind:errors="errors")
+  coursers-data(v-bind:errors="errors")
+  experiencies-data(v-bind:errors="errors")
 
   button.btn.left(type="submit" v-on:click="print")
     svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32")
@@ -141,10 +143,12 @@ export default {
       for(let i = 0; i < boxs.length; ++i) {
         boxs[i].addEventListener('click', (e) => {
           e.preventDefault()
-          e.target.parentNode.classList.toggle('active')
-          console.log('E ', e)
-          console.log('E target', e.target.parentNode.classList)
-          console.log('Teste ', i)
+          e.target.parentNode.parentNode.classList.toggle('active')
+          // console.log('E ', e)
+          // console.log('E target', e.target.parentNode.classList)
+          // console.log('E parentNode', e.target.parentNode)
+          // console.log('E parentNode', e.target.parentNode.parentNode)
+          // console.log('Teste ', i)
         }, false)
       }
       console.log(boxs)
