@@ -4,7 +4,7 @@
       span +
       | {{ $t('form.exp')}}
     fieldset.experience(v-for="(exp, key, index) in user.exps" :id="'exp-' + exp.id")
-      legend
+      legend(@click='toggleBox($event)')
         | {{ $t('form.exp')}} {{ exp.experience.work }}
         button.btn.delete.right.bullet(type="button" @click="remove_component(key)")
           i -
@@ -31,7 +31,7 @@
           p {{ $t('form.start')}}:
           input#GET-expsdata(name="expsdata" type="date" placeholder="00/00/0000" v-model="exp.experience.data_start")
         label(for="GET-expsdata" v-show="!exp.experience.now" v-bind:class="{ error: !exp.experience.data_end && errors.length }")
-          p {{ $t('form.end')}}:
+          p {{ $t('form.finish')}}:
           input#GET-expsdata(name="expsdata" type="date" placeholder="00/00/0000" v-model="exp.experience.data_end")
 
         // Get the exps About
@@ -80,6 +80,9 @@ export default {
     },
     remove_component (key) {
       this.$delete(this.user.exps, key)
+    },
+    toggleBox (e) {
+      e.srcElement.parentElement.classList.toggle('active')
     }
   }
 }

@@ -3,7 +3,7 @@
 form#curriculo(:class="{ renderActive: user.name}")
   .box
     fieldset
-      legend {{ $t('form.h1') }}
+      legend(@click='toggleBox($event)') {{ $t('form.h1') }}
       .flexbox
         // Get the name
         label(for="GET-name" v-bind:class="{ error: !user.name && errors.length }")
@@ -32,7 +32,7 @@ form#curriculo(:class="{ renderActive: user.name}")
 
   .box.active
     fieldset
-      legend {{ $t('form.end')}}
+      legend(@click='toggleBox($event)') {{ $t('form.end')}}
       .flexbox
         // Get the CEP
         .address
@@ -64,7 +64,7 @@ form#curriculo(:class="{ renderActive: user.name}")
             span {{ $t('form.no')}}
   .box
     fieldset
-      legend {{ $t('form.contact')}}
+      legend(@click='toggleBox($event)') {{ $t('form.contact')}}
       .flexbox
         // Get the Address
         label(for="GET-telephone" v-bind:class="{ error: !this.user.telephone && errors.length }")
@@ -123,14 +123,11 @@ export default {
   },
   created () {
     console.log('Erros: ' + (this.errors ? 'nenhum...' : this.erros))
-    this.toggleBox()
   },
   mounted () {
-    this.toggleBox()
     document.querySelector('.footer').classList.add('home')
   },
   destroyed () {
-    this.toggleBox()
     document.querySelector('.footer').classList.remove('home')
   },
   methods: {
@@ -193,14 +190,8 @@ export default {
         window.scrollTo(0, 600)
       }
     },
-    toggleBox () {
-      let boxs = document.querySelectorAll('.box legend:first-of-type')
-      for(let i = 0; i < boxs.length; ++i) {
-        boxs[i].addEventListener('click', (e) => {
-          e.preventDefault()
-          e.target.parentNode.parentNode.classList.toggle('active')
-        }, false)
-      }
+    toggleBox (e) {
+      e.srcElement.parentElement.classList.toggle('active')
     },
     updateVuex (name, e) {
       this.$store.commit(name, e.target.value)

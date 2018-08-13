@@ -4,7 +4,7 @@
       span +
       | {{ $t('form.cademy')}}
     fieldset.course(:id="'course-' + course.id" v-for="(course, key, index) in user.coursers")
-      legend
+      legend(@click='toggleBox($event)')
         | {{ $t('form.cademy')}} {{ course.formation.name }}
         button.btn.delete.right.bullet(type="button" @click='remove_component(key)')
           i -
@@ -31,7 +31,7 @@
           p {{ $t('form.start')}}:
           input#GET-coursedata(name="coursedata" type="date" placeholder="00/00/0000" v-model="course.formation.data_start")
         label(for="GET-coursedata")
-          p {{ $t('form.end')}}:
+          p {{ $t('form.finish')}}:
           input#GET-coursedata(name="coursedata" type="date" placeholder="00/00/0000" v-model="course.formation.data_end")
 
         // Get the Course About
@@ -80,6 +80,9 @@ export default {
     },
     remove_component (key) {
       this.$delete(this.user.coursers, key)
+    },
+    toggleBox (e) {
+      e.srcElement.parentElement.classList.toggle('active')
     }
   }
 }

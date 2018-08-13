@@ -1,20 +1,6 @@
 .box
   border-radius 6px
   margin-bottom 2em
-  & legend:first-child
-    border-radius 6px 6px 0 0
-    cursor pointer
-    user-select none
-    &:before
-      content '-'
-      position relative
-      margin-right 15px
-  &.active
-    height 60px
-    overflow hidden
-    & legend:first-child
-      &:before
-        content '+'
   & > label,
   & > .radio
     &:last-child
@@ -29,6 +15,28 @@
     & > label
       &:last-child
         border-radius 0 0 6px 6px
+  fieldset
+    display block
+    position relative
+    &.course,
+    &.experience
+      margin-bottom 2em
+      &:last-of-type
+        margin-bottom 0
+    & legend:first-child
+      border-radius 6px 6px 0 0
+      cursor pointer
+      user-select none
+      &:before
+        content '-'
+        position relative
+        margin-right 15px
+    &.active
+      height 60px
+      overflow hidden
+      & legend:first-child
+        &:before
+          content '+'
 .flexbox
   display flex
   flex-wrap wrap
