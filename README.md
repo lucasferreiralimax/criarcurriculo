@@ -5,7 +5,7 @@
 >
 > Com uma interface totalmente adpatável e reativa ao tamanho da tela do dispositivo usado.
 > :computer::iphone::tv::watch::video_game:
-# Ajude também :cloud::yin_yang::yinyang::yangyin::yang_yin::peace:
+# Ajude também :cloud::yin_yang:
 > Se encontrar algum bug ou quiser contribuir com o projeto cria uma issue, sua ajuda será muito bem vinda.
 > A aplicação foi desenvolvida com diversos componentes interativos com transicões e animações, rico em usabilidade.
 

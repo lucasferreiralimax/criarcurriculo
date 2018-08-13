@@ -12,17 +12,20 @@
     h2(v-if="user.coursers[0]") Formação Acadêmica
     .coursers(v-for="(course, key, index) in user.coursers")
       p(v-if="course.formation.school") Instituição: {{ course.formation.school }}
-      p(v-if="course.formation.name") Formação: {{ course.formation.name }}
+      p(v-if="course.formation.name") {{ course.formation.name }}
       p(v-if="course.formation.about") Atividades: {{ course.formation.about }}
-      p(v-if="course.formation.about") De {{ course.formation.data_start }} até {{ course.formation.data_start }}
+      p(v-if="course.formation.data_start") De {{ course.formation.data_start }} {{ course.formation.data_end ? 'até' : '' }} {{ course.formation.data_end }}
       p(v-if="course.formation.now") {{ course.formation.now ? 'Cursando' : '' }}
+      hr
     h2(v-if="user.exps[0]") Experiência
     .experiencies(v-for="(exp, key, index) in user.exps")
       p(v-if="exp.experience.name") Empresa: {{ exp.experience.name }}
       p(v-if="exp.experience.work") Cargo: {{ exp.experience.work }}
       p(v-if="exp.experience.about") {{ exp.experience.about }}
-      p(v-if="exp.experience.about") De {{ exp.experience.data_start }} até {{ exp.experience.data_start }}
+      p(v-if="exp.experience.data_start && exp.experience.now") De {{ exp.experience.data_start }}
+      p(v-if="exp.experience.data_start && !exp.experience.now") De {{ exp.experience.data_start }} {{ exp.experience.data_end ? 'até' : '' }} {{ exp.experience.data_end }}
       p(v-if="exp.experience.now") {{ exp.experience.now ? 'Atual' : '' }}
+      hr
     h2(v-if="user.telephone || user.email") Contato
     p(v-if="user.telephone") Telefone: {{ user.telephone }}
     p(v-if="user.email") E-mail: {{ user.email }}

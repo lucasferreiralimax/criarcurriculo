@@ -65,7 +65,7 @@ form#curriculo(:class="{ renderActive: user.name}")
         // Get the Address
         label(for="GET-telephone" v-bind:class="{ error: !this.user.telephone && errors.length }")
           p {{ $t('form.phone')}}:
-          input#GET-telephone(name="telephone" type="tel" placeholder="(011)00000-0000" maxlength="15" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" :value="user.telephone" @input="updateVuex('updateTelephone', $event)")
+          input#GET-telephone(name="telephone" type="number" placeholder="(011)00000-0000" maxlength="15" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" :value="user.telephone" @input="updateVuex('updateTelephone', $event)")
 
         // Get the E-mail
         label(for="GET-email" v-bind:class="{ error: !this.user.email && errors.length }")

@@ -1,10 +1,16 @@
 .box
   border-radius 6px
   margin-bottom 2em
-  & > label,
-  & > .radio
+  & .flexbox > label,
+  & .flexbox > .radio
     &:last-child
       border-radius 0 0 6px 6px
+  & .flexbox > label[for="GET-email"],
+  & .flexbox > .radio
+    &:last-child
+      +desktop()
+        border-radius 0 0 6px 0
+
   &.course,
   &.experience
     margin-bottom 2em
@@ -12,7 +18,7 @@
       height 60px
       overflow hidden
       overscroll-behavior contain
-    & > label
+    & .flexbox > label
       &:last-child
         border-radius 0 0 6px 6px
   fieldset
@@ -34,6 +40,7 @@
     &.active
       height 60px
       overflow hidden
+      border-radius 6px
       & legend:first-child
         &:before
           content '+'
