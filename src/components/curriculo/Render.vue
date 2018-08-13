@@ -3,20 +3,25 @@
     h1
       label {{ user.name }}
     hr
-    p(v-if="user.age") Idade: {{ user.age }} anos
-      span(v-if="user.maritalstatus") Estado Civil: {{ user.genero == 'h' ? 'Solteiro' : 'Solteira' }}
-    p(v-if="user.end.logradouro") Endereço: {{ user.end.logradouro }}, {{ user.end.localidade }} - {{ user.cep }}.
+    p(v-if="user.maritalstatus") {{ user.age }} {{ user.age ? 'anos ' : '' }}
+      span(v-if="user.maritalstatus")  {{ user.maritalstatus }}
+    p(v-if="user.end.logradouro") Endereço: {{ user.end.logradouro }}, {{ user.addressNumber }}{{ user.addressNumber ? ',' : '' }} {{ user.end.localidade }} - {{ user.end.uf }} - {{ user.cep }}
+    p(v-if="user.travel") {{ user.travel ? 'Disponível para viagens' : '' }}
     h2(v-if="user.about") Sobre mim
     p(v-if="user.about") {{ user.about }}
     h2(v-if="user.coursers[0]") Formação Acadêmica
     .coursers(v-for="(course, key, index) in user.coursers")
-      p Instituição: {{ course.formation.school }} Formação: {{ course.formation.name }}
-      p {{ course.formation.about }}
+      p(v-if="course.formation.school") Instituição: {{ course.formation.school }}
+      p(v-if="course.formation.name") Formação: {{ course.formation.name }}
+      p(v-if="course.formation.about") Atividades: {{ course.formation.about }}
+      p(v-if="course.formation.about") De {{ course.formation.data_start }} até {{ course.formation.data_start }}
       p(v-if="course.formation.now") {{ course.formation.now ? 'Cursando' : '' }}
     h2(v-if="user.exps[0]") Experiência
     .experiencies(v-for="(exp, key, index) in user.exps")
-      p Empresa: {{ exp.experience.name }} Cargo: {{ exp.experience.work }}
-      p {{ exp.experience.about }}
+      p(v-if="exp.experience.name") Empresa: {{ exp.experience.name }}
+      p(v-if="exp.experience.work") Cargo: {{ exp.experience.work }}
+      p(v-if="exp.experience.about") {{ exp.experience.about }}
+      p(v-if="exp.experience.about") De {{ exp.experience.data_start }} até {{ exp.experience.data_start }}
       p(v-if="exp.experience.now") {{ exp.experience.now ? 'Atual' : '' }}
     h2(v-if="user.telephone || user.email") Contato
     p(v-if="user.telephone") Telefone: {{ user.telephone }}

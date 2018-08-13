@@ -33,6 +33,7 @@ export default {
         HTTP.get(this.user.cep + '/json/')
         .then(response => {
           this.user.end = response.data
+          console.log(response.data)
         })
         .catch(e => {
           this.errors.push(e)
@@ -40,7 +41,11 @@ export default {
       } else {
         this.user.end = {
           localidade: null,
-          logradouro: null
+          logradouro: null,
+          complemento: null,
+          uf: null,
+          bairro: null,
+          cep: null
         }
       }
     }

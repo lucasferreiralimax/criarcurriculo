@@ -56,12 +56,8 @@ form#curriculo(:class="{ renderActive: user.name}")
           p {{ $t('form.travel')}}:
 
           label(for="GET-travel-yes")
-            input#GET-travel-yes(name="travel" type="radio" value="yes" :value="user.travel" @input="updateVuex('updateTravel', $event)")
-            span {{ $t('form.yes')}}
-
-          label(for="GET-travel-no")
-            input#GET-travel-no(name="travel" type="radio" value="no" :value="user.travel" @input="updateVuex('updateTravel', $event)")
-            span {{ $t('form.no')}}
+            input#GET-travel-yes(name="travel" type="checkbox" :checked="user.travel" @input="updateVuex('updateTravel', $event)")
+            span {{ user.travel ? $t('form.yes') : $t('form.no') }}
   .box
     fieldset
       legend(@click='toggleBox($event)') {{ $t('form.contact')}}
@@ -194,7 +190,11 @@ export default {
       e.srcElement.parentElement.classList.toggle('active')
     },
     updateVuex (name, e) {
-      this.$store.commit(name, e.target.value)
+      if(name == 'updateTravel') {
+        this.$store.commit(name, e.target.checked)
+      } else {
+        this.$store.commit(name, e.target.value)
+      }
       window.localStorage.setItem('store', JSON.stringify(this.user))
     }
   }
