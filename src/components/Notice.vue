@@ -1,5 +1,5 @@
 <template lang="pug">
-  .popup.animate_intro(v-if='notice' @click='close_notice()')
+  section.popup.animate_intro(v-if='notice' @click='close_notice()')
     article.notice
       p {{ $t('text.message') }}
     .overlay
@@ -33,6 +33,8 @@ export default {
 </script>
 <style lang="stylus">
 .popup
+  position absolute
+  z-index 999
   .overlay
     background rgba(#000, .7)
     width 100vw

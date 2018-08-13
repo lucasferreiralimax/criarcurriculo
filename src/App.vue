@@ -4,6 +4,7 @@
     main
       router-view
     footer-app
+    router-view(name="popup")
 </template>
 
 <style lang="stylus">

@@ -5,7 +5,6 @@
       h2#start {{ $t('text.text2') }}
     form-curriculo
     render
-    notice
 </template>
 
 <script>
