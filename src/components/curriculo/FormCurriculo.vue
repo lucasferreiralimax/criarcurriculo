@@ -1,6 +1,6 @@
 <template lang="pug">
 // Form get the data info person
-form#curriculo(method="get" @submit="checkForm" :class="{ renderActive: user.name}")
+form#curriculo(:class="{ renderActive: user.name}")
   .box
     fieldset
       legend {{ $t('form.h1') }}
@@ -79,7 +79,7 @@ form#curriculo(method="get" @submit="checkForm" :class="{ renderActive: user.nam
   coursers-data(v-bind:errors="errors")
   experiencies-data(v-bind:errors="errors")
 
-  button.btn.left(type="submit" v-on:click="print")
+  button.btn.left(type="button" v-on:click="print")
     svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32")
       path(d="M10 24h10v2H10v-2zM8 2h16v4h2V2c0-1.103-.896-2-2-2H8C6.896 0 6 .896 6 2v4h2V2zm2 18h12v2H10v-2z")
       path(d="M30 8H2c-1.104 0-2 .896-2 2v12c0 1.105.896 2 2 2h4v6c0 1.105.896 2 2 2h16c1.104 0 2-.895 2-2v-6h4c1.104 0 2-.895 2-2V10c0-1.104-.897-2-2-2zm-6 22H8V18h16v12zm4-16c-1.104 0-2-.895-2-2 0-1.104.896-2 2-2s2 .896 2 2c0 1.105-.897 2-2 2z")
@@ -134,34 +134,8 @@ export default {
     document.querySelector('.footer').classList.remove('home')
   },
   methods: {
-    print: () => {
+    print (e) {
       console.log('Clickou para imprimir!')
-      window.print()
-    },
-    toggleBox () {
-      let boxs = document.querySelectorAll('.box legend:first-of-type')
-      for(let i = 0; i < boxs.length; ++i) {
-        boxs[i].addEventListener('click', (e) => {
-          e.preventDefault()
-          e.target.parentNode.parentNode.classList.toggle('active')
-          // console.log('E ', e)
-          // console.log('E target', e.target.parentNode.classList)
-          // console.log('E parentNode', e.target.parentNode)
-          // console.log('E parentNode', e.target.parentNode.parentNode)
-          // console.log('Teste ', i)
-        }, false)
-      }
-      console.log(boxs)
-      console.log('Teste')
-    },
-    updateVuex (name, e) {
-      this.$store.commit(name, e.target.value)
-      window.localStorage.setItem('store', JSON.stringify(this.user))
-    },
-    checkForm (e) {
-      if (this.name && this.age) {
-        return true
-      }
 
       this.errors = [[], 0]
 
@@ -173,9 +147,9 @@ export default {
         this.errors[0].push('Precisa colocar seu genero.')
       }
 
-      if (!this.user.countrystatus) {
-        this.errors[0].push('Precisa colocar sua Nacionalidade.')
-      }
+      // if (!this.user.countrystatus) {
+      //   this.errors[0].push('Precisa colocar sua Nacionalidade.')
+      // }
 
       if (!this.user.maritalstatus) {
         this.errors[0].push('Precisa colocar seu estado civil.')
@@ -207,7 +181,30 @@ export default {
 
       e.preventDefault()
 
-      console.log(this.erros)
+      console.log(this.errors, "erros")
+
+      if(!this.errors[0].length) {
+        let scroll_end = (document.querySelector('#app').clientHeight - document.querySelector('#app').parentElement.offsetHeight)
+        document.querySelector('.render').classList.remove('active', 'fixed', 'fixedFooter')
+        window.print()
+        document.querySelector('.render').classList.add('active', 'fixed', 'fixedFooter')
+        window.scrollTo(0, scroll_end)
+      } else {
+        window.scrollTo(0, 600)
+      }
+    },
+    toggleBox () {
+      let boxs = document.querySelectorAll('.box legend:first-of-type')
+      for(let i = 0; i < boxs.length; ++i) {
+        boxs[i].addEventListener('click', (e) => {
+          e.preventDefault()
+          e.target.parentNode.parentNode.classList.toggle('active')
+        }, false)
+      }
+    },
+    updateVuex (name, e) {
+      this.$store.commit(name, e.target.value)
+      window.localStorage.setItem('store', JSON.stringify(this.user))
     }
   }
 }
