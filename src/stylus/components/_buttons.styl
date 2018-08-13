@@ -60,23 +60,25 @@
       right 33px
   &.plus,
   &.delete
-    &:active
-      color green - 55
+    color color1
+    text-shadow 0 2px 3px rgba(#000, .6)
+    box-shadow 0 0px 0 color3 - 60, 0 3px 10px rgba(#000, .1), inset 0 2px rgba(#fff,.6), inset 0 -2px 13px rgba(red - 22,.3)
     span
       font-size 2em
       position absolute
       left 20px
   &.plus
     background green + 55
-    text-shadow 0 2px 3px color4
     border-color green - 22
-    box-shadow 0 0px 0 color3 - 60, 0 3px 10px color4, inset 0 2px rgba(#fff,.6), inset 0 -2px 13px rgba(green - 22,.3)
+    &:active
+      background green !important
+      color green - 90
   &.delete
     background red + 55
-    text-shadow 0 2px 3px red - 66
     border-color red - 66
-    color color1
-    box-shadow 0 0px 0 color3 - 60, 0 3px 10px color4, inset 0 2px rgba(#fff,.6), inset 0 -2px 13px rgba(red - 22,.3)
+    &:active
+      background red - 50 !important
+      color red - 190
     & + .plus
       margin-right 1em !important
 .menu
