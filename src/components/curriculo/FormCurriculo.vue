@@ -38,21 +38,21 @@ form#curriculo(:class="{ renderActive: user.name}")
         .address
           cep(v-bind:err="errors")
 
-        label(for="GET-address-number" v-bind:class="{ error: !user.addressNumber && errors.length }")
+        label(for="GET-address-number")
           p  {{ $t('form.number')}}
           input#GET-address-number(name="address-number" type="number" :placeholder="$t('form.number_place')" :value="user.addressNumber" @input="updateVuex('updateAddressNumber', $event)")
 
         // Get the Address
-        label(for="GET-address")
+        label(for="GET-address" v-bind:class="{ error: !user.end.logradouro && errors.length }")
           p  {{ $t('form.end')}}:
-          input#GET-address(name="address" type="text" :placeholder="$t('form.end_place')" :value="user.end.logradouro")
+          input#GET-address(name="address" type="text" :placeholder="$t('form.end_place')" :value="user.end.logradouro" @input="updateVuex('updateEndLogradouro', $event)")
 
         // Get the State
-        label(for="GET-state")
+        label(for="GET-state" v-bind:class="{ error: !user.end.localidade && errors.length }")
           p  {{ $t('form.city')}}
-          input#GET-state(name="state" type="text" :placeholder="$t('form.city_place')" :value="user.end.localidade")
+          input#GET-state(name="state" type="text" :placeholder="$t('form.city_place')" :value="user.end.localidade" @input="updateVuex('updateEndLocalidade', $event)")
 
-        .radio(v-bind:class="{ 'error': !user.travel && errors.length }")
+        .radio
           p {{ $t('form.travel')}}:
 
           label(for="GET-travel-yes")
@@ -140,10 +140,6 @@ export default {
         this.errors[0].push('Precisa colocar seu genero.')
       }
 
-      // if (!this.user.countrystatus) {
-      //   this.errors[0].push('Precisa colocar sua Nacionalidade.')
-      // }
-
       if (!this.user.maritalstatus) {
         this.errors[0].push('Precisa colocar seu estado civil.')
       }
@@ -156,12 +152,12 @@ export default {
         this.errors[0].push('Precisa preencher o campo cep.')
       }
 
-      if (!this.user.addressNumber) {
-        this.errors[0].push('Precisa preencher o campo número.')
+      if (!this.user.end.logradouro) {
+        this.errors[0].push('Precisa preencher o campo logradouro.')
       }
 
-      if (!this.user.travel) {
-        this.errors[0].push('Precisa colocar se está disponível para viagem.')
+      if (!this.user.end.localidade) {
+        this.errors[0].push('Precisa preencher o campo localidade.')
       }
 
       if (!this.user.telephone) {

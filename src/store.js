@@ -11,8 +11,12 @@ export default new Vuex.Store({
       countrystatus: '',
       cep: null,
       end: {
-        localidade: null,
-        logradouro: null
+        localidade: '',
+        logradouro: '',
+        complemento: '',
+        uf: '',
+        bairro: '',
+        cep: ''
       },
       maritalstatus: '',
       addressNumber: null,
@@ -23,7 +27,8 @@ export default new Vuex.Store({
       email: null,
       exps: [],
       coursers: []
-    }
+    },
+    theme_app: 'default'
   },
   mutations: {
     updateUser (state, value) {
@@ -67,6 +72,15 @@ export default new Vuex.Store({
     },
     updateEnd (state, value) {
       state.user.end = value
+    },
+    updateEndLogradouro (state, value) {
+      state.user.end.logradouro = value
+    },
+    updateEndLocalidade (state, value) {
+      state.user.end.localidade = value
+    },
+    updateThemeApp (state, value) {
+      state.theme_app = value
     }
   }
 })

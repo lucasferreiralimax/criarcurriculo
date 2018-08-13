@@ -38,15 +38,6 @@ export default {
         .catch(e => {
           this.errors.push(e)
         })
-      } else {
-        this.user.end = {
-          localidade: null,
-          logradouro: null,
-          complemento: null,
-          uf: null,
-          bairro: null,
-          cep: null
-        }
       }
     }
   }

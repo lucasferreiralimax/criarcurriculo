@@ -29,12 +29,12 @@ export default {
 
 <style lang="stylus">
 .scroll-top
-  bottom 35px
   box-sizing border-box
   opacity 0
   pointer-events none
   position fixed
-  right 25px
+  bottom 25px
+  right 10px
   visibility hidden
   z-index 9999
   &.active

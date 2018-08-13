@@ -7,8 +7,8 @@ header.animate_intro
 </template>
 
 <script>
-import NavMenu from '@/components/Nav.vue'
-import Pluralization from '@/components/Pluralization.vue'
+import NavMenu from '@/components/Nav'
+import Pluralization from '@/components/Pluralization'
 
 export default {
   name: 'header-app',
