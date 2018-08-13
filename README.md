@@ -1,9 +1,11 @@
 # Curriculo Grátis :page_facing_up:
 
-> Essa aplicação web tem o objetivo de ajudar a todos que precise de um curriculo, rápido, fácil e grátis.
-> Facilitando a forma que você cria seus currículos, com diversas opções de design totalmente gratuito.
+> Essa aplicativo web tem o objetivo de ajudar a todos aqueles que precisa criar um curriculo, rápido, fácil e grátis.
+> Facilitando a forma que você cria seu currículo com uma usabilidade desenhada para ser simples.
 >
-> Interface totalmente adpatavel e reativa ao tamanho da tela do dispositivo que estive sendo renderizada. :computer::iphone::tv::watch::video_game:
+> Com uma interface totalmente adpatável e reativa ao tamanho da tela do dispositivo usado.
+> :computer::iphone::tv::watch::video_game:
+# Ajude também :cloud::yin_yang::yinyang::yangyin::yang_yin::peace:
 > Se encontrar algum bug ou quiser contribuir com o projeto cria uma issue, sua ajuda será muito bem vinda.
 > A aplicação foi desenvolvida com diversos componentes interativos com transicões e animações, rico em usabilidade.
 
@@ -28,10 +30,10 @@ npm install
 # install dependencies with yarn
 yarn install
 
-# serve with hot reload at localhost:9999
+# serve with hot reload at localhost:8080
 npm run dev
 
-# serve with yarn hot reload at localhost:9999
+# serve with yarn hot reload at localhost:8080
 yarn run dev
 ```
 
