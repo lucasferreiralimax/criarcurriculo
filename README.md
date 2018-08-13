@@ -30,10 +30,17 @@ npm install
 # install dependencies with yarn
 yarn install
 
+<<<<<<< HEAD
 # serve with hot reload at localhost:8080
 npm run dev
 
 # serve with yarn hot reload at localhost:8080
+=======
+# serve with hot reload
+npm run dev
+
+# serve with yarn hot reload
+>>>>>>> 0df333da3a8731e3026dfccae960623ba0002f51
 yarn run dev
 ```
 
