@@ -46,6 +46,17 @@
     "email": "E-mail",
     "email_place": "exemplo@email.com",
     "about": "Presentación",
-    "about_place": "Hablé un poco sobre usted..."
+    "about_place": "Hablé un poco sobre usted...",
+    "cademy": "Formación Académica",
+    "cademy_now": "Actual",
+    "school": "Institución",
+    "course": "Formación",
+    "start": "Início",
+    "finish": "Final",
+    "about": "Sobre",
+    "exp": "Experiencia",
+    "exp_now": "Actual",
+    "company": "Negocio",
+    "office": "Cargo"
   }
 }
