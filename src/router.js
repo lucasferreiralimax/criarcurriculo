@@ -11,11 +11,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
-    },
-    {
-      path: '/inicio',
-      name: 'inicio',
+      component: Home,
       components: {
         default: Home,
         popup: Notice
