@@ -7,7 +7,7 @@
 > :computer::iphone::tv::watch::video_game:
 # Ajude também :cloud::yin_yang:
 > Se encontrar algum bug ou quiser contribuir com o projeto cria uma issue, sua ajuda será muito bem vinda.
-> A aplicação foi desenvolvida com diversos componentes interativos com transicões e animações, rico em usabilidade.
+> A aplicação foi desenvolvida com diversos componentes interativos com transicões e animações, rica em usabilidade.
 
 ## Status do projeto :construction:
 > Desenvolvimento constante :shipit:

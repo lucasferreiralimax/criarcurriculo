@@ -1,6 +1,6 @@
 {
   "name": "Curriculo Grátis",
-  "short_name": "Curriculo Grátis",
+  "short_name": "Curriculo",
   "icons": [
     {
       "src": "/img/icons/android-chrome-192x192.png",
@@ -15,6 +15,6 @@
   ],
   "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#3393ad",
-  "theme_color": "#15758f"
+  "background_color": "#FFFFFF",
+  "theme_color": "#fff"
 }
