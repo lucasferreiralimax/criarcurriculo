@@ -56,6 +56,10 @@
     "exp": "Experiência",
     "exp_now": "Atual",
     "company": "Empresa",
-    "office": "Cargo"
+    "office": "Cargo",
+    "about_me": "Sobre mim",
+    "from": "De",
+    "to": "até",
+    "activities": "Atividades"
   }
 }
