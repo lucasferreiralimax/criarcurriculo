@@ -5,8 +5,10 @@
     p Espera-se que esse aplicativo, ajude você de todas as maneiras portáteis possíveis para geração de seu novo curriculo profissional.
     p Criado por um rapaz simples que mesmo com as dificuldades do seu cotidiano, focou e dedicou seus estudos para elaborar esse projeto.
     p Se você deseja ajudar de alguma forma existe esse
-      a(href='https://gitlab.com/lucaslimax/curriculogratis' target='_blank' rel="noopener")  repositório no github.
-      | Ou entre em contato lucaslimay@gmail.com
+      a(href='https://github.com/lucaslimax/curriculogratis' target='_blank' rel="noopener")  repositório no github
+      | ou no
+      a(href='https://github.com/lucaslimax/curriculogratis' target='_blank' rel="noopener")  repositório no gitlab
+      | Ou ententre em contato lucaslimay@gmail.com
     br
     p Atenciosamente, Lucas Lima.
 </template>
