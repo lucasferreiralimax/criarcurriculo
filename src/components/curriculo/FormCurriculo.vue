@@ -183,7 +183,7 @@ export default {
       }
     },
     toggleBox (e) {
-      e.srcElement.parentElement.classList.toggle('active')
+      e.target.parentElement.classList.toggle('active')
     },
     updateVuex (name, e) {
       if(name == 'updateTravel') {

@@ -82,7 +82,7 @@ export default {
       this.$delete(this.user.exps, key)
     },
     toggleBox (e) {
-      e.srcElement.parentElement.classList.toggle('active')
+      e.target.parentElement.classList.toggle('active')
     }
   }
 }
