@@ -1,7 +1,13 @@
 .logo
-  max-width 300px
-  text-align center
+  animation force 3s infinite alternate
   color color1 + 10
+  cursor pointer
+  display block
+  font-size 3em
+  margin 0 auto
+  max-width 300px
+  position relative
+  text-align center
   text-shadow 0 5px color4,
               0 -2px color4,
               2px 0 color4,
@@ -10,15 +16,9 @@
               -2px 4px color4,
               0 3px 20px color4,
               0 6px 60px color5
-  font-size 3em
-  display block
-  cursor pointer
+  top 2em
   transition .3s transform, .3s color
   will-change transform color
-  margin 0 auto
-  position relative
-  top 2em
-  animation force 3s infinite alternate
   &:hover
     transform scale(1.2)
     color color2

@@ -35,12 +35,12 @@
       user-select none
       &:before
         content '-'
-        position relative
         margin-right 15px
+        position relative
     &.active
+      border-radius 6px
       height 60px
       overflow hidden
-      border-radius 6px
       & legend:first-child
         &:before
           content '+'
@@ -48,33 +48,33 @@
   display flex
   flex-wrap wrap
   flex 1
-  label[for="GET-name"],
-  label[for="GET-genero"],
-  label[for="GET-dataofbirth"],
-  label[for="GET-dataofbirth"],
-  label[for="GET-state"],
   label[for="GET-address-number"],
-  label[for="GET-telephone"],
-  label[for="GET-email"],
-  label[for="GET-school"],
   label[for="GET-course"],
   label[for="GET-coursedata"],
-  label[for="GET-school"],
+  label[for="GET-dataofbirth"],
+  label[for="GET-dataofbirth"],
+  label[for="GET-email"],
   label[for="GET-exps"],
   label[for="GET-exps"],
   label[for="GET-expsdata"],
-  .radio,
+  label[for="GET-genero"],
+  label[for="GET-name"],
+  label[for="GET-school"],
+  label[for="GET-school"],
+  label[for="GET-state"],
+  label[for="GET-telephone"],
   .address,
+  .radio,
   .select-maritals
     width 100%
     +desktop()
-      width 50%
       box-sizing border-box
+      width 50%
   label[for="GET-about"],
   label[for="GET-address"],
   label[for="GET-courseabout"],
   label[for="GET-expsabout"],
   .course_now,
   .exps_now
-    width 100%
     box-sizing border-box
+    width 100%

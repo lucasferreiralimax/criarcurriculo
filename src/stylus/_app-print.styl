@@ -1,32 +1,32 @@
 @media print
   *
+    -ms-filternone !important
     background transparent !important
     box-shadow none !important
-    text-shadow none !important
     filter none !important
-    -ms-filternone !important
+    text-shadow none !important
   header.animate_intro,
-  .header,
   .footer,
+  .header,
   .mark,
   #curriculo,
   .notice
     display none !important
   .render
-    width 100% !important
-    height 100% !important
-    display block !important
-    font-weight normal
-    color #000
-    position relative !important
-    top 0 !important
-    left 0 !important
     bottom 0 !important
-    right 0 !important
+    color #000
+    display block !important
+    filter blur(0) !important
+    font-weight normal
+    height 100% !important
+    left 0 !important
     overflow hidden !important
     pointer-events none
-    filter blur(0) !important
+    position relative !important
+    right 0 !important
+    top 0 !important
     transform scale(1) !important
+    width 100% !important
     &:after
       display none !important
     *
