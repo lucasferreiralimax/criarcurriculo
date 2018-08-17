@@ -1,5 +1,5 @@
 header.animate_intro
-  height 300px
+  position relative
 
 .header
   height 300px
@@ -26,23 +26,8 @@ header.animate_intro
     left 0
     transition .3s transform
     animation force 5s infinite alternate
-    .nav-menu.active
-      opacity 1
-      pointer-events all
-    .btn.menu
-      display block !important
     .logo
       margin 0 auto
       font-size 1.5em
       display block
       top 20px
-    +tablet()
-      .nav-menu
-        width 100%
-        position absolute
-        top 65px
-        left 0
-        opacity 0
-        pointer-events none
-        .btn
-          border-radius 0

@@ -55,6 +55,10 @@ color7_gold = red + 130
         fill color2_gold - 100
     path
       fill color1_gold
+  .nav
+    +tablet()
+      &.active.active_show .nav-menu
+        box-shadow 0 0 200px 100px color2_gold
   .nav-menu
     background linear-gradient(to bottom, color4_gold - 30 50%, rgba(color5_gold,.5))
     +tablet()

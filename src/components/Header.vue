@@ -2,8 +2,8 @@
 header.animate_intro
   .header(:class="{ 'active' : fixedHide, 'fixedFooter': fixedFooter }")
     router-link(to="/" v-scroll-to="'#start'" tag="h1").logo.text-center {{ $t('text.name1')}} {{ $t('text.name2')}}
-    nav-menu
-    pluralization
+  nav-menu(:class="{ 'active_show' : fixedHide, 'fixedFooter': fixedFooter }")
+  pluralization
 </template>
 
 <script>

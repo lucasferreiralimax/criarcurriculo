@@ -34,6 +34,10 @@ color7_full = red + 130
         fill color2_full - 100
     path
       fill color1_full
+  .nav
+    +tablet()
+      &.active.active_show .nav-menu
+        box-shadow 0 0 200px 100px color2_full
   .nav-menu
     background linear-gradient(to bottom, color4_full - 30 50%, rgba(color5_full,.5))
   .mark

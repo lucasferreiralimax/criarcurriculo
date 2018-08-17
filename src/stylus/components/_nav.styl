@@ -1,3 +1,41 @@
+.nav
+  width 100%
+  position fixed
+  left 0
+  right 0
+  top 0
+  bottom 0
+  z-index 13
+  transition .3s transform
+  &.active.active_show.fixedFooter
+    transform translateY(0px)
+  &.active_show.fixedFooter
+    transform translateY(-170px)
+  +tablet()
+    position relative
+    top auto
+    left auto
+    right auto
+    bottom auto
+    &.active_show
+      position fixed
+      &.active.fixedFooter
+        .btn.menu,
+        .nav-menu
+          transform translateY(-200px) !important
+      .nav-menu
+        transform translateY(-200px) !important
+        opacity 0
+      &.active
+        .nav-menu
+          box-shadow 0 0 200px 100px color4
+          width 80%
+          transform translateY(100px) !important
+          box-sizing border-box
+          opacity 1
+      .btn.menu
+        transform translateX(0px)
+        transition .3s transform
 .nav-menu
   background linear-gradient(to bottom, color4 - 30 50%, rgba(color5,.5))
   clear both
@@ -36,9 +74,9 @@
     opacity 1
     padding-top 0
     position relative
-    top 120px
     transform translateX(0)
     width 70%
+    border-radius 6px
     .title
       display none
     .btn

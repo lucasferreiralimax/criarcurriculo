@@ -1,10 +1,10 @@
 <template lang="pug">
-.nav
+.nav(:class="{ active: menu_show }")
   button.btn.menu(@click="menuShow")
     span
     span
     span
-  nav.nav-menu(v-bind:class="{ active: menu_show }" @click="menuShow")
+  nav.nav-menu(:class="{ active: menu_show }" @click="menuShow")
     h1.title Menu
     router-link(to="/" v-scroll-to="'#start'").btn {{ $t('nav.home')}}
     router-link(to="/sobre").btn {{ $t('nav.about')}}
