@@ -4,7 +4,11 @@
     "name2": "резюме",
     "message": "Это веб-приложение все еще находится в постоянном развитии.",
     "text1": "Создайте свой новый учебный план быстро, легко и бесплатно!",
-    "text2": "Заполните форму ниже ..."
+    "text2": "Заполните форму ниже ...",
+    "notfound_t1": "Página ainda não existe",
+    "notfound_t2": "Desculpe qualquer constrangimento",
+    "notfound_t3": "Para voltar para o inicio",
+    "notfound_click": "Clique aqui!"
   },
   "nav": {
     "home": "первый",
@@ -41,7 +45,7 @@
     "phone": "телефон",
     "email": "Электронная почта",
     "email_place": "exemplo@email.com",
-    "about": "презентация",
+    "about_me": "презентация",
     "about_place": "Расскажите нам о себе...",
     "cademy": "Академическая история",
     "cademy_now": "Текущий",
@@ -49,10 +53,29 @@
     "course": "образование",
     "start": "первый",
     "finish": "конец",
-    "about": "Sobre",
+    "about": "презентация",
     "exp": "Experiência",
     "exp_now": "Atual",
     "company": "Empresa",
-    "office": "Cargo"
+    "office": "Cargo",
+    "about_me": "Sobre mim",
+    "from": "De",
+    "to": "até",
+    "activities": "Atividades"
+  },
+  "locale": {
+    "pt": "Português",
+    "en": "English",
+    "es": "Espanhol",
+    "ru": "Russo",
+    "ja": "Japanese"
+  },
+  "themes": {
+    "default": "Padrao",
+    "jungle": "Selva",
+    "grey": "Cinza",
+    "classic": "Classico",
+    "gold": "Ouro",
+    "full": "Full Black"
   }
 }

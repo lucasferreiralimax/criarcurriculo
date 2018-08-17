@@ -45,7 +45,7 @@
     "phone": "Teléfono",
     "email": "E-mail",
     "email_place": "exemplo@email.com",
-    "about": "Presentación",
+    "about_me": "Presentación",
     "about_place": "Hablé un poco sobre usted...",
     "cademy": "Formación Académica",
     "cademy_now": "Actual",
@@ -53,10 +53,29 @@
     "course": "Formación",
     "start": "Início",
     "finish": "Final",
-    "about": "Sobre",
+    "about": "Presentación",
     "exp": "Experiencia",
     "exp_now": "Actual",
     "company": "Negocio",
-    "office": "Cargo"
+    "office": "Cargo",
+    "about_me": "Sobre mim",
+    "from": "De",
+    "to": "até",
+    "activities": "Atividades"
+  },
+  "locale": {
+    "pt": "Português",
+    "en": "Ingles",
+    "es": "Espanhol",
+    "ru": "Russo",
+    "ja": "Japones"
+  },
+  "themes": {
+    "default": "Padrao",
+    "jungle": "Selva",
+    "grey": "Cinza",
+    "classic": "Classico",
+    "gold": "Ouro",
+    "full": "Full Black"
   }
 }

@@ -2,12 +2,12 @@
 label.btn.theme_app(for="theme_app" :class="{ 'active' : isTheme}")
   transition(name="fade")
     select#theme_app(@input.stop.passive="updateThemeApp($event)" v-if="isTheme")
-      option(value="default") Padrão
-      option(value="jungle") Selva
-      option(value="cinza") Cinza
-      option(value="classic") Classic
-      option(value="gold") Gold
-      option(value="full") Full Black
+      option(value="default") {{ $t('themes.default')}}
+      option(value="jungle") {{ $t('themes.jungle')}}
+      option(value="cinza") {{ $t('themes.grey')}}
+      option(value="classic") {{ $t('themes.classic')}}
+      option(value="gold") {{ $t('themes.gold')}}
+      option(value="full") {{ $t('themes.full')}}
   svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.953 54.953" width="29" height="29" fill="#fff" @click="openThemeApp")
     circle(cx="45.021" cy="25.976" r="1")
     circle(cx="9.021" cy="25.976" r="1")
@@ -73,13 +73,12 @@ export default {
       display block
       float right
       top -8px
-      left 9px
+      right 8px
+      left auto
       height 60px
     &.active
       width auto
       padding 5px 40px 5px 5px
-      svg
-        left 110px
   .fade-enter-active, .fade-leave-active
     transition transform 1s, opacity 2s
   .fade-enter, .fade-leave-to

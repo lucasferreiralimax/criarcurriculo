@@ -45,7 +45,7 @@
     "phone": "Phone",
     "email": "E-mail",
     "email_place": "example@email.com",
-    "about": "About me",
+    "about_me": "About me",
     "about_place": "Tell me a little about you...",
     "cademy": "Academic education",
     "cademy_now": "Studying",
@@ -60,6 +60,22 @@
     "office": "Work",
     "about_me": "About me",
     "from": "From",
-    "to": "to"
+    "to": "to",
+    "activities": "Activities"
+  },
+  "locale": {
+    "pt": "Portuguese",
+    "en": "English",
+    "es": "Spanish",
+    "ru": "Russo",
+    "ja": "Japanese"
+  },
+  "themes": {
+    "default": "Default",
+    "jungle": "Jungle",
+    "grey": "Grey",
+    "classic": "Classic",
+    "gold": "Gold",
+    "full": "Full Black"
   }
 }

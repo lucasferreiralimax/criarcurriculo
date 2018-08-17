@@ -45,6 +45,7 @@
     "phone": "Telefone",
     "email": "E-mail",
     "email_place": "exemplo@email.com",
+    "about_me": "Sobre",
     "about_place": "Fale um pouco sobre você...",
     "cademy": "Formação Acadêmica",
     "cademy_now": "Cursando",
@@ -61,5 +62,20 @@
     "from": "De",
     "to": "até",
     "activities": "Atividades"
+  },
+  "locale": {
+    "pt": "Português",
+    "en": "Ingles",
+    "es": "Espanhol",
+    "ru": "Russo",
+    "ja": "Japones"
+  },
+  "themes": {
+    "default": "Padrao",
+    "jungle": "Selva",
+    "grey": "Cinza",
+    "classic": "Classico",
+    "gold": "Ouro",
+    "full": "Full Black"
   }
 }

@@ -27,7 +27,7 @@ form#curriculo(:class="{ renderActive: user.name}")
 
         // Get the About
         label(for="GET-about" v-bind:class="{ error: !this.user.about && errors.length }")
-          p {{ $t('form.about')}}:
+          p {{ $t('form.about_me')}}:
           textarea#GET-about(ref="GET_about" :placeholder="$t('form.about_place')" :value="user.about" @input="updatetextAreaHeight, updateVuex('updateAbout', $event)")
 
   .box.active

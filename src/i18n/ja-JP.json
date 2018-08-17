@@ -45,7 +45,37 @@
     "phone": "電話番号",
     "email": "電子メイル",
     "email_place": "exemplo@email.com",
+    "about_me": "ホーム",
+    "about_place": "あなた自身について教えてください...",
+    "cademy": "Formação Acadêmica",
+    "cademy_now": "Cursando",
+    "school": "Instituição",
+    "course": "Formação",
+    "start": "Início",
+    "finish": "Término",
     "about": "ホーム",
-    "about_place": "あなた自身について教えてください..."
+    "exp": "Experiência",
+    "exp_now": "Atual",
+    "company": "Empresa",
+    "office": "Cargo",
+    "about_me": "Sobre mim",
+    "from": "De",
+    "to": "até",
+    "activities": "Atividades"
+  },
+  "locale": {
+    "pt": "Português",
+    "en": "English",
+    "es": "Espanhol",
+    "ru": "Russo",
+    "ja": "Japanese"
+  },
+  "themes": {
+    "default": "Padrao",
+    "jungle": "Selva",
+    "grey": "Cinza",
+    "classic": "Classico",
+    "gold": "Ouro",
+    "full": "Full Black"
   }
 }
