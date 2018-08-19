@@ -1,5 +1,6 @@
 header.animate_intro
   position relative
+  z-index 10
 
 .header
   height 300px
@@ -10,7 +11,7 @@ header.animate_intro
   -webkit-focus-ring-color rgba(255, 255, 255, 0) !important
   outline none
   will-change opacity, translate, scale
-  z-index 9
+  z-index 1
   position relative
   &.active.fixedFooter
     transform translateY(-170px)

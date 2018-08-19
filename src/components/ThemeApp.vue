@@ -68,6 +68,7 @@ export default {
       padding 5px
       border-radius 4px
       margin 2px
+      color #333
     svg
       cursor pointer
       display block

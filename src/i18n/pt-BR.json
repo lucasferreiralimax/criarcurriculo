@@ -65,16 +65,16 @@
   },
   "locale": {
     "pt": "Português",
-    "en": "Ingles",
+    "en": "Inglês",
     "es": "Espanhol",
     "ru": "Russo",
-    "ja": "Japones"
+    "ja": "Japonês"
   },
   "themes": {
-    "default": "Padrao",
+    "default": "Padrão",
     "jungle": "Selva",
     "grey": "Cinza",
-    "classic": "Classico",
+    "classic": "Clássico",
     "gold": "Ouro",
     "full": "Full Black"
   }

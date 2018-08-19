@@ -67,7 +67,7 @@ export default {
       this.user.exps.push({
         id: ++key,
         id_sibiling: ++key,
-        name: 'Experiencia',
+        name: this.$i18n.t('form.course'),
         experience: {
           name: '',
           work: '',
@@ -77,6 +77,7 @@ export default {
           now: false
         }
       })
+      console.log(this.user.exps)
     },
     remove_component (key) {
       this.$delete(this.user.exps, key)

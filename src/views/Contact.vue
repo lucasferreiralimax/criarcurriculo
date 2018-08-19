@@ -1,7 +1,7 @@
 <template lang="pug">
   section.mark.text-center.animate_intro
     h1 {{ $t('nav.contact') }}
-    p lucaslimay@gmail.com
+    p lucasferreiralimax@gmail.com
 </template>
 
 <script>
@@ -9,7 +9,7 @@
     name: 'contact',
     head: {
       title: {
-        inner: 'Informações'
+        inner: 'Contato'
       }
     }
   }
