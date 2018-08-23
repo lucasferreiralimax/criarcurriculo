@@ -22,7 +22,6 @@ export default {
   methods: {
     menuShow () {
       this.menu_show = !this.menu_show
-      // document.body.classList.toggle('active-menu')
     }
   }
 }

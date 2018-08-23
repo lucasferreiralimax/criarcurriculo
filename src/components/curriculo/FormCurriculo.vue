@@ -130,47 +130,45 @@ export default {
     print (e) {
       console.log('Clickou para imprimir!')
 
-      this.errors = [[], 0]
+      this.errors = []
 
       if (!this.user.name) {
-        this.errors[0].push('Precisa preencher o campo nome.')
+        this.errors.push('Precisa preencher o campo nome.')
       }
 
       if (!this.user.genero) {
-        this.errors[0].push('Precisa colocar seu genero.')
+        this.errors.push('Precisa colocar seu genero.')
       }
 
       if (!this.user.maritalstatus) {
-        this.errors[0].push('Precisa colocar seu estado civil.')
+        this.errors.push('Precisa colocar seu estado civil.')
       }
 
       if (!this.user.age) {
-        this.errors[0].push('Precisa preencher o campo data de nascimento.')
+        this.errors.push('Precisa preencher o campo data de nascimento.')
       }
 
       if (!this.user.cep) {
-        this.errors[0].push('Precisa preencher o campo cep.')
+        this.errors.push('Precisa preencher o campo cep.')
       }
 
       if (!this.user.end.logradouro) {
-        this.errors[0].push('Precisa preencher o campo logradouro.')
+        this.errors.push('Precisa preencher o campo logradouro.')
       }
 
       if (!this.user.end.localidade) {
-        this.errors[0].push('Precisa preencher o campo localidade.')
+        this.errors.push('Precisa preencher o campo localidade.')
       }
 
       if (!this.user.telephone) {
-        this.errors[0].push('Precisa preencher o campo de telefone.')
+        this.errors.push('Precisa preencher o campo de telefone.')
       }
 
       if (!this.user.email) {
-        this.errors[0].push('Precisa preencher o campo de email.')
+        this.errors.push('Precisa preencher o campo de email.')
       }
 
       e.preventDefault()
-
-      console.log(this.errors, "erros")
 
       if(!this.errors[0].length) {
         let scroll_end = (document.querySelector('#app').clientHeight - document.querySelector('#app').parentElement.offsetHeight)
