@@ -12,19 +12,19 @@
       pre {{ user.about }}
     h2(v-if="user.coursers[0]") {{ $t('form.cademy')}}
     .coursers(v-for="(course, key, index) in user.coursers")
-      p(v-if="course.formation.school") {{ $t('form.school')}} {{ course.formation.school }}
+      p(v-if="course.formation.school") {{ $t('form.school')}}: {{ course.formation.school }}
       p(v-if="course.formation.name") {{ course.formation.name }}
-      p(v-if="course.formation.about") {{ $t('form.activities') }} {{ course.formation.about }}
-      p(v-if="course.formation.data_start") De {{ course.formation.data_start }} {{ course.formation.data_end ? 'até' : '' }} {{ course.formation.data_end }}
+      p(v-if="course.formation.about") {{ $t('form.activities') }}: {{ course.formation.about }}
+      p(v-if="course.formation.data_start") {{ course.formation.data_start | dateFormat }} {{ course.formation.data_end ? 'até' : '' }} {{ course.formation.data_end | dateFormat }}
       p(v-if="course.formation.now") {{ course.formation.now ? 'Cursando' : '' }}
       hr
     h2(v-if="user.exps[0]") {{ $t('form.exp')}}
     .experiencies(v-for="(exp, key, index) in user.exps")
-      p(v-if="exp.experience.name") {{ $t('form.company')}} {{ exp.experience.name }}
+      p(v-if="exp.experience.name") {{ $t('form.company')}}: {{ exp.experience.name }}
       p(v-if="exp.experience.work") {{ $t('form.office')}}: {{ exp.experience.work }}
       p(v-if="exp.experience.about") {{ exp.experience.about }}
       p(v-if="exp.experience.data_start && exp.experience.now") {{ $t('form.from')}} {{ exp.experience.data_start }}
-      p(v-if="exp.experience.data_start && !exp.experience.now") {{ $t('form.from')}} {{ exp.experience.data_start }} {{ exp.experience.data_end ? $t('form.to') : '' }} {{ exp.experience.data_end }}
+      p(v-if="exp.experience.data_start && !exp.experience.now") {{ $t('form.from')}} {{ exp.experience.data_start | dateFormat }} {{ exp.experience.data_end ? $t('form.to') : '' }} {{ exp.experience.data_end | dateFormat}}
       p(v-if="exp.experience.now") {{ exp.experience.now ? 'Atual' : '' }}
       hr
     h2(v-if="user.telephone || user.email") {{ $t('form.contact')}}
@@ -63,6 +63,52 @@ export default {
         this.fixedFooter = !(this.oldScroll > window.scrollY) && window.scrollY > 630
       }
       this.oldScroll = window.scrollY
+    }
+  },
+  filters: {
+    dateFormat (value) {
+      if (!value) return ''
+      value = value.split("-")
+      switch (value[1]) {
+        case "01":
+          value[1] = "Janeiro"
+          break
+        case "02":
+          value[1] = "Fevereiro"
+          break
+        case "03":
+          value[1] = "Março"
+          break
+        case "04":
+          value[1] = "Abril"
+          break
+        case "05":
+          value[1] = "Maio"
+          break
+        case "06":
+          value[1] = "Junho"
+          break
+        case "07":
+          value[1] = "Julho"
+          break
+        case "08":
+          value[1] = "Agosto"
+          break
+        case "09":
+          value[1] = "Setembro"
+          break
+        case "10":
+          value[1] = "Outubro"
+          break
+        case "11":
+          value[1] = "Novembro"
+          break
+        case "12":
+          value[1] = "Dezembro"
+          break
+      }
+      value = value[2] + " de " + value[1] + " de " + value[0]
+      return value
     }
   },
   created () {
