@@ -170,7 +170,7 @@ export default {
 
       e.preventDefault()
 
-      if(!this.errors[0].length) {
+      if(!this.errors.length) {
         let scroll_end = (document.querySelector('#app').clientHeight - document.querySelector('#app').parentElement.offsetHeight)
         document.querySelector('.render').classList.remove('active', 'fixed', 'fixedFooter')
         window.print()
