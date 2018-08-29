@@ -12,20 +12,23 @@ export default {
   name: 'notice-page',
   data () {
     return {
-      notice: true
+      notice: false
     }
   },
   created () {
     setTimeout(() => {
       this.close_notice()
     }, 16000)
+    let notice = window.localStorage.getItem('notice')
+    if(!notice || notice == "y") {
+      window.localStorage.setItem('notice', 'y')
+      this.notice = window.localStorage.getItem('notice') == 'y' ? true : false
+    }
   },
   methods: {
-    open_notice () {
-      this.notice = true
-    },
     close_notice () {
       this.notice = false
+      window.localStorage.setItem('notice', 'n')
     }
   }
 }
