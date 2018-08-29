@@ -1,7 +1,9 @@
 <template lang="pug">
   section.popup.animate_intro(v-if='notice' @click='close_notice()')
     article.notice
+      button(type="button") X
       p {{ $t('text.message') }}
+      .time
     .overlay
 </template>
 
@@ -10,13 +12,10 @@ export default {
   name: 'notice-page',
   data () {
     return {
-      notice: false
+      notice: true
     }
   },
   created () {
-    setTimeout(() => {
-      this.open_notice()
-    }, 9000)
     setTimeout(() => {
       this.close_notice()
     }, 16000)
@@ -53,12 +52,32 @@ export default {
   left calc(50% - 130px)
   width 260px
   padding 30px
-  transform scale(1.15)
   z-index 9999
   border-radius 6px
-  box-shadow 0 6px 13px red - 30
+  border 1px solid rgba(#fff, .5)
+  box-shadow 0 6px 13px red - 90, 0 7px 0 0px #fff
   cursor pointer
   box-sizing border-box
+  transition all .3s
+  &:hover
+    transform scale(1.1)
+    button
+      transform scale(1.5)
+  button
+    border 1px solid #fff
+    border-radius 50%
+    background rgba(#000, .6)
+    color #fff
+    padding 5px 8px
+    position absolute
+    top -10px
+    right -10px
+    transition all .3s
+    cursor pointer
+    outline none
+    &:hover
+      background #fff
+      color rgba(#000, .6)
   p
     color #fff
 </style>
