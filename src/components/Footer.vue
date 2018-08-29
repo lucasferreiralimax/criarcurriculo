@@ -1,6 +1,6 @@
 <template lang="pug">
   footer.footer.animate_intro
-    a.link_open(href='https://gitlab.com/lucaslimax/curriculogratis' target='_blank' rel="noopener")
+    a.link_open(href='https://github.com/lucaslimax/curriculogratis' target='_blank' rel="noopener")
       | Link código fonte do projeto
       svg(width="60" height="60" viewBox='0 0 60 60' fill="#000")
         path(stroke="#fff" d='M38.914 0H6.5v60h47V14.586L38.914 0zm.586 3.414L50.086 14H39.5V3.414zM8.5 58V2h29v14h14v42h-43z')
@@ -43,7 +43,7 @@
       pointer-events none
       display block
     &:after
-      content 'Projeto Open Source GitLab'
+      content 'Open Source Github'
       transition .5s opacity, 2s color, .5s transform
       width 60px
       background #333
