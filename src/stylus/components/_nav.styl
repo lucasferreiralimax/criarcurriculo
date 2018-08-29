@@ -1,98 +1,46 @@
 .nav
-  width 100%
+  position relative
+.nav-menu
+  background linear-gradient(color4, rgba(color4, .6))
+  padding 20px 10px
   position fixed
+  top 0
   left 0
   right 0
-  top 0
   bottom 0
-  transition .3s transform
-  transform translateY(0px)
-  z-index 11
-  &.active_show.fixedFooter
-    transform translateY(-170px)
-  +tablet()
-    position relative
-    top auto
-    left auto
-    right auto
-    bottom auto
-    &.active_show
-      position fixed
-      &.active.fixedFooter
-        .btn.menu,
-        .nav-menu
-          transform translateY(-200px) !important
-      .nav-menu
-        transform translateY(-200px) !important
-        opacity 0
-      &.active
-        .nav-menu
-          box-shadow 0 0 200px 100px color4
-          width 80%
-          transform translateY(100px) !important
-          box-sizing border-box
-          opacity 1
-      .btn.menu
-        transform translateX(0px)
-        transition .3s transform
-.nav-menu
-  background linear-gradient(to bottom, color4 - 30 50%, rgba(color5,.5))
-  clear both
-  display block
-  height 100%
-  left 0
-  margin 0 auto
-  opacity 0
-  position fixed
-  position relative
-  text-align center
-  top 0
-  transform translateX(-999px)
-  transition .5s all
-  user-select none
-  width 100%
-  z-index 998
+  z-index 99
+  filter blur(100px)
+  transform translate(-100vw)
+  transition all .35s
   &.active
-    transform translateX(0)
-    opacity 1
+    transform translate(0)
+    filter blur(0px)
   .title
-    color #fff
     font-size 1.5em
-    padding 15px
-  .btn
-    margin 10px auto
-    width calc(100% - 1em)
+    color color1
     +tablet()
-      margin-right 20px
-      &:last-of-type
-        margin-right 0
-  +tablet()
-    background transparent
-    box-shadow none
-    display flex
-    opacity 1
-    padding-top 0
-    position relative
-    transform translateX(0)
-    width 70%
-    border-radius 6px
-    .title
       display none
+  .title,
+  .btn
+    text-align center
+    margin-bottom 1em
+  .btn:last-of-type
+    margin-bottom 0
+  +tablet()
+    width 70%
+    background transparent
+    position relative
+    margin 0  auto
+    transform translate(0)
+    filter blur(0px)
     .btn
-      border-radius 0
+      width 33%
+      float left
       margin 0
-      z-index -1 !important
+      border-radius 0
       &:first-of-type
         border-radius 6px 0 0 6px
-        border-right 0
       &:last-of-type
         border-radius 0 6px 6px 0
-        border-left 0
-    &:after
-      clear both
-      content ''
-      display table
   +desktop()
-    width 40%
-  +ultrawide()
     width 30%
