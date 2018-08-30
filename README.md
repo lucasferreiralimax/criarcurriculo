@@ -1,22 +1,22 @@
-# Curriculo Grátis :page_facing_up:
+# Curriculo Grátis :page_with_curl:
 
 > Essa aplicativo web tem o objetivo de ajudar a todos aqueles que precisa criar um curriculo, rápido, fácil e grátis.
 > Facilitando a forma que você cria seu currículo com uma usabilidade desenhada para ser simples.
 >
 > Com uma interface totalmente adpatável e reativa ao tamanho da tela do dispositivo usado.
 > :computer::iphone::tv::watch::video_game:
-# Ajude também :cloud::yin_yang:
+# Ajude também :yin_yang:
 > Se encontrar algum bug ou quiser contribuir com o projeto cria uma issue, sua ajuda será muito bem vinda.
 > A aplicação foi desenvolvida com diversos componentes interativos com transicões e animações, rica em usabilidade.
 
-## Status do projeto :construction:
-> Desenvolvimento constante :shipit:
+## Link's :cloud:
+> :shipit:
 >
-> [curriculográtis.online](https://curriculogratis.online)
+> [curriculogratis.online](https://curriculogratis.online)
 > ou
-> [Curriculo Grátis - Firebase app](https://curriculo-gratis.firebaseapp.com)
+> [curriculo-gratis.firebaseapp.com](https://curriculo-gratis.firebaseapp.com)
 > ou
-> [Curriculo Grátis -  Heroku app](https://curriculo-gratis.herokuapp.com)
+> [curriculo-gratis.herokuapp.com](https://curriculo-gratis.herokuapp.com)
 >
 > Se você quiser contribuir de alguma forma no código siga os passos abaixo para instalar em sua máquina.
 
@@ -39,5 +39,5 @@ yarn run dev
 
 ### Com quem você pode conversar sobre o projeto? ### :performing_arts:
 
-* Criador e adiministrador do projeto @lucaslimax :ghost:
-* E-mail para contato: lucaslimay@gmail.com :email: :computer:
+* @lucasferreiralimax :ghost:
+* E-mail: lucasferreiralimax@gmail.com :email:
