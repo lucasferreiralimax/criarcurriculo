@@ -8,7 +8,7 @@ label.btn.theme_app(for="theme_app" :class="{ 'active' : isTheme}")
       option(value="classic") {{ $t('themes.classic')}}
       option(value="gold") {{ $t('themes.gold')}}
       option(value="full") {{ $t('themes.full')}}
-  svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.953 54.953" width="29" height="29" fill="#fff" @click="openThemeApp")
+  svg#openTheme(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.953 54.953" width="29" height="29" fill="#fff" @click="openThemeApp")
     circle(cx="45.021" cy="25.976" r="1")
     circle(cx="9.021" cy="25.976" r="1")
     circle(cx="12.021" cy="28.976" r="1")

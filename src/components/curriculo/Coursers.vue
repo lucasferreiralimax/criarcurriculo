@@ -33,10 +33,10 @@
         // The Course data
         label(for="GET-coursedata")
           p {{ $t('form.start')}}:
-          input#GET-coursedata(name="coursedata" type="date" placeholder="00/00/0000" v-model="course.formation.data_start")
+          input#GET-coursedata-start(name="coursedata-start" type="date" placeholder="00/00/0000" v-model="course.formation.data_start")
         label(for="GET-coursedata")
           p {{ $t('form.finish')}}:
-          input#GET-coursedata(name="coursedata" type="date" placeholder="00/00/0000" v-model="course.formation.data_end")
+          input#GET-coursedata-finish(name="coursedata-finish" type="date" placeholder="00/00/0000" v-model="course.formation.data_end")
 
         // Sobre o curso
         // The Course About

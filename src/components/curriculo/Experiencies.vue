@@ -19,9 +19,9 @@
 
         // Compania
         // The Company
-        label(for="GET-school" v-bind:class="{ error: !exp.experience.name && errors.length }")
+        label(for="GET-company" v-bind:class="{ error: !exp.experience.name && errors.length }")
           p {{ $t('form.company')}}:
-          input#GET-school(name="school" type="text" placeholder="Nome da empresa ou organização..." v-model="exp.experience.name")
+          input#GET-company(name="company" type="text" placeholder="Nome da empresa ou organização..." v-model="exp.experience.name")
 
         // Experiência
         // The experience
@@ -33,10 +33,10 @@
         // The experience data
         label(for="GET-expsdata" v-bind:class="{ error: !exp.experience.data_start && errors.length }")
           p {{ $t('form.start')}}:
-          input#GET-expsdata(name="expsdata" type="date" placeholder="00/00/0000" v-model="exp.experience.data_start")
+          input#GET-expsdata-start(name="expsdata-start" type="date" placeholder="00/00/0000" v-model="exp.experience.data_start")
         label(for="GET-expsdata" v-show="!exp.experience.now" v-bind:class="{ error: !exp.experience.data_end && errors.length }")
           p {{ $t('form.finish')}}:
-          input#GET-expsdata(name="expsdata" type="date" placeholder="00/00/0000" v-model="exp.experience.data_end")
+          input#GET-expsdata-finish(name="expsdata-finish" type="date" placeholder="00/00/0000" v-model="exp.experience.data_end")
 
         // Sobre a experiência
         // The exps About
