@@ -34,9 +34,7 @@ import { mapState } from 'vuex'
 export default {
   name: 'select-maritals',
   props: ['errors'],
-  computed: mapState({
-    user: state => state.user
-  }),
+  computed: mapState({ user: state => state.user }),
   methods: {
     updateVuex (name, e) {
       this.$store.commit(name, e.target.value)

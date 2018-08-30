@@ -21,9 +21,7 @@ export default {
     }
   },
   methods: {
-    openPluralization () {
-      this.isLocale = !this.isLocale
-    }
+    openPluralization () { this.isLocale = !this.isLocale }
   },
   watch: {
     locale (val) {
@@ -36,14 +34,14 @@ export default {
 
 <style lang="stylus">
   .pluralization
-    width 45px
-    height 45px
     border-radius 6px
-    z-index 99
-    position fixed
-    top 10px
-    right 10px
     display block
+    height 45px
+    position fixed
+    right 10px
+    top 10px
+    width 45px
+    z-index 99
     select
       background #fff
       padding 5px
@@ -54,19 +52,19 @@ export default {
       cursor pointer
       display block
       float right
-      top -8px
-      left 9px
       height 60px
+      left 9px
+      top -8px
     &.active
-      width auto
       padding 5px 40px 5px 5px
+      width auto
       svg
         left auto
         right 10px
   .fade-enter-active, .fade-leave-active
     transition transform 1s, opacity 2s
   .fade-enter, .fade-leave-to
-    transition opacity 0s
     opacity 0
     transform scale(0)
+    transition opacity 0s
 </style>

@@ -2,42 +2,42 @@
   position relative
 .nav-menu
   background linear-gradient(color4, rgba(color4, .6))
+  bottom 0
+  filter blur(100px)
+  left 0
   padding 20px 10px
   position fixed
-  top 0
-  left 0
   right 0
-  bottom 0
-  z-index 99
-  filter blur(100px)
+  top 0
   transform translate(-100vw)
   transition all .35s
+  z-index 99
   &.active
-    transform translate(0)
     filter blur(0px)
+    transform translate(0)
   .title
-    font-size 1.5em
     color color1
+    font-size 1.5em
     +tablet()
       display none
   .title,
   .btn
-    text-align center
     margin-bottom 1em
+    text-align center
   .btn:last-of-type
     margin-bottom 0
   +tablet()
-    width 70%
     background transparent
-    position relative
-    margin 0  auto
-    transform translate(0)
     filter blur(0px)
+    margin 0  auto
+    position relative
+    transform translate(0)
+    width 70%
     .btn
-      width 33%
+      border-radius 0
       float left
       margin 0
-      border-radius 0
+      width 33%
       &:first-of-type
         border-radius 6px 0 0 6px
       &:last-of-type

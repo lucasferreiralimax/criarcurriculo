@@ -8,32 +8,26 @@ a(href='#' v-scroll-to="'#app'" :class="{ 'active' : scrolled }").btn.scroll-top
 <script>
 export default {
   name: 'scroll-top',
+  created () { window.addEventListener('scroll', this.handleScroll) },
+  destroyed () { window.removeEventListener('scroll', this.handleScroll) },
   data () {
     return {
       scrolled: false
     }
   },
   methods: {
-    handleScroll () {
-      this.scrolled = window.scrollY > 265
-    }
-  },
-  created () {
-    window.addEventListener('scroll', this.handleScroll)
-  },
-  destroyed () {
-    window.removeEventListener('scroll', this.handleScroll)
+    handleScroll () { this.scrolled = window.scrollY > 265 }
   }
 }
 </script>
 
 <style lang="stylus">
 .scroll-top
+  bottom 25px
   box-sizing border-box
   opacity 0
   pointer-events none
   position fixed
-  bottom 25px
   right 10px
   visibility hidden
   z-index 9999

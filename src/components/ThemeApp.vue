@@ -30,24 +30,19 @@ import { mapState } from 'vuex'
 
 export default {
   name: 'theme-app',
-  computed: mapState({
-    theme_app: state => state.theme_app
-  }),
+  computed: mapState({ theme_app: state => state.theme_app }),
   data () {
     return {
       isTheme: false
     }
   },
   methods: {
-    openThemeApp () {
-      this.isTheme = !this.isTheme
-    },
+    openThemeApp () { this.isTheme = !this.isTheme },
     updateThemeApp (e) {
       document.querySelector('body').classList.remove(this.theme_app)
       this.$store.commit('updateThemeApp', e.target.value)
       window.localStorage.setItem('theme_app', JSON.stringify(this.theme_app))
       document.querySelector('body').classList.add(e.target.value)
-      // this.isTheme = false
     }
   }
 }
@@ -55,35 +50,35 @@ export default {
 
 <style lang="stylus">
   .theme_app
-    width 45px
-    height 45px
     border-radius 6px
-    z-index 99
-    position fixed
     bottom 25px
-    left 10px
     display block
+    height 45px
+    left 10px
+    position fixed
+    width 45px
+    z-index 99
     select
       background #fff
-      padding 5px
       border-radius 4px
-      margin 2px
       color #333
+      margin 2px
+      padding 5px
     svg
       cursor pointer
       display block
       float right
-      top -8px
-      right 8px
-      left auto
       height 60px
+      left auto
+      right 8px
+      top -8px
     &.active
-      width auto
       padding 5px 40px 5px 5px
+      width auto
   .fade-enter-active, .fade-leave-active
     transition transform 1s, opacity 2s
   .fade-enter, .fade-leave-to
-    transition opacity 0s
     opacity 0
     transform scale(0)
+    transition opacity 0s
 </style>

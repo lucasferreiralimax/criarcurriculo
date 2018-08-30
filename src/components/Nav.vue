@@ -32,9 +32,7 @@ export default {
     }
   },
   methods: {
-    menuShow () {
-      this.menu_show = !this.menu_show
-    }
+    menuShow () { this.menu_show = !this.menu_show }
   }
 }
 </script>

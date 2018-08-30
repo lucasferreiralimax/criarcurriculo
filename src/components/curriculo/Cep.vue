@@ -13,9 +13,7 @@ const HTTP = axios.create({ baseURL: 'https://viacep.com.br/ws/' })
 export default {
   name: 'cep',
   props: ['err'],
-  computed: mapState({
-    user: state => state.user
-  }),
+  computed: mapState({ user: state => state.user }),
   data () {
     return {
       errors: []

@@ -16,9 +16,7 @@ const HTTP = axios.create({ baseURL: url })
 export default {
   name: 'select-country',
   props: ['errors'],
-  computed: mapState({
-    user: state => state.user
-  }),
+  computed: mapState({ user: state => state.user }),
   data () {
     return {
       erros: [],

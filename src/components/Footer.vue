@@ -26,55 +26,55 @@
 
 <style lang="stylus">
   .link_open
-    font-size 0
-    margin 0 auto
     clear both
-    width 60px
-    margin-bottom 20px
-    transition .5s all
-    position relative
-    line-height 0
     display block
     filter grayscale(50%)
+    font-size 0
+    line-height 0
+    margin 0 auto
+    margin-bottom 20px
+    position relative
+    transition .5s all
+    width 60px
     &:after,
     &:before
       box-sizing border-box
+      display block
       opacity 0
       pointer-events none
-      display block
     &:after
-      content 'Open Source Github'
-      transition .5s opacity, 2s color, .5s transform
-      width 60px
       background #333
       border-radius 4px
-      padding 6px 6px 8px
-      font-size 7px
-      line-height 9px
-      color #fff
-      position absolute
       bottom 80px
+      color #fff
+      content 'Open Source Github'
+      font-size 7px
       left calc(50% - 30px)
+      line-height 9px
+      padding 6px 6px 8px
+      position absolute
       transform scale(0)
+      transition .5s opacity, 2s color, .5s transform
+      width 60px
     &:before
-      content ''
-      transition .1s all
-      width 1px
-      height 1px
       border 5px solid transparent
       border-top 5px solid #333
+      content ''
+      height 1px
+      left calc(50% - 5px)
       position relative
       top -11px
-      left calc(50% - 5px)
+      transition .1s all
+      width 1px
     &:hover
-      transform scale(1.3)
       filter grayscale(0%)
+      transform scale(1.3)
       &:after, &:before
-        opacity 1
         color #fff
-        transition 1s opacity
-        transform scale(1)
+        opacity 1
         pointer-events all
+        transform scale(1)
+        transition 1s opacity
       &:before
         transition 1.3s all
     svg

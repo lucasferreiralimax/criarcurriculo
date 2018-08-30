@@ -1,32 +1,36 @@
 <template lang='pug'>
   .box.coursers
-    button.btn.plus(type="button" v-if="user.coursers == 0" @click='new_component()')
+    button.btn.plus(type="button" v-if="user.coursers == 0" @click='newComponent()')
       span +
       | {{ $t('form.cademy')}}
     fieldset.course(:id="'course-' + course.id" v-for="(course, key, index) in user.coursers")
       legend(@click='toggleBox($event)')
         | {{ $t('form.cademy')}} {{ course.formation.name }}
-        button.btn.delete.right.bullet(type="button" @click='remove_component(key)')
+        button.btn.delete.right.bullet(type="button" @click='removeComponent(key)')
           i -
-        button.btn.plus.right.bullet(type="button" @click='new_component(key)' v-scroll-to="'#course-' + course.id_sibiling")
+        button.btn.plus.right.bullet(type="button" @click='newComponent(key)' v-scroll-to="'#course-' + course.id_sibiling")
           i +
       .flexbox
-        // Get the Course Now?
+        // Curso atual?
+        // The Course Now?
         label.course_now(v:for="'GET-coursenow' + course.id" v-bind:class="{ 'display-n-print': !course.formation.now }" @keyup.enter='course.formation.now = !course.formation.now')
           input(:id="'GET-coursenow' + course.id" name="'now' + course.id" type="checkbox" v-model="course.formation.now")
           | {{ $t('form.cademy_now')}}
 
-        // Get the School
+        // Escola
+        // The School
         label(for="GET-school")
           p {{ $t('form.school')}}:
           input#GET-school(name="school" type="text" placeholder="Escola, cursos, workshops..." v-model="course.formation.school")
 
-        // Get the Course
+        // Curso
+        // The Course
         label(for="GET-course")
           p {{ $t('form.course')}}:
           input#GET-course(name="course" type="text" placeholder="Nome do curso..." v-model='course.formation.name')
 
-        // Get the Course data
+        // Data do curso
+        // The Course data
         label(for="GET-coursedata")
           p {{ $t('form.start')}}:
           input#GET-coursedata(name="coursedata" type="date" placeholder="00/00/0000" v-model="course.formation.data_start")
@@ -34,7 +38,8 @@
           p {{ $t('form.finish')}}:
           input#GET-coursedata(name="coursedata" type="date" placeholder="00/00/0000" v-model="course.formation.data_end")
 
-        // Get the Course About
+        // Sobre o curso
+        // The Course About
         label(for="GET-courseabout")
           p {{ $t('form.about')}}:
           textarea#GET-courseabout(ref="GET_courseabout" placeholder="Atividades ou grade curricular..." v-model="course.formation.about" @input="updatetextAreaHeight(key)")
@@ -46,9 +51,7 @@ import { mapState } from 'vuex'
 export default {
   name: 'experiencies-data',
   props: ['errors'],
-  computed: mapState({
-    user: state => state.user
-  }),
+  computed: mapState({ user: state => state.user }),
   data () {
     return {
       erros: [],
@@ -56,14 +59,14 @@ export default {
     }
   },
   methods: {
+    toggleBox (e) { e.target.parentElement.classList.toggle('active') },
+    updatetextAreaHeight (key) { this.$refs.GET_courseabout[key].style.height = this.$refs.GET_courseabout[key].scrollHeight + 'px' },
     updateVuex (name, e) {
       this.$store.commit(name, e.target.value)
       window.localStorage.setItem('store', JSON.stringify(this.user))
     },
-    updatetextAreaHeight (key) {
-      this.$refs.GET_courseabout[key].style.height = this.$refs.GET_courseabout[key].scrollHeight + 'px'
-    },
-    new_component (key = -1) {
+    removeComponent (key) { this.$delete(this.user.coursers, key) },
+    newComponent (key = -1) {
       this.user.coursers.push({
         id: ++key,
         id_sibiling: ++key,
@@ -77,12 +80,6 @@ export default {
           now: false
         }
       })
-    },
-    remove_component (key) {
-      this.$delete(this.user.coursers, key)
-    },
-    toggleBox (e) {
-      e.target.parentElement.classList.toggle('active')
     }
   }
 }

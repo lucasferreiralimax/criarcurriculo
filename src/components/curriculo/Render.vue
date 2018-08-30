@@ -39,9 +39,9 @@
 import { mapState } from 'vuex'
 export default {
   name: 'render',
-  computed: mapState({
-    user: state => state.user
-  }),
+  computed: mapState({ user: state => state.user }),
+  created () { window.addEventListener('scroll', this.fixedRender) },
+  destroyed () { window.removeEventListener('scroll', this.fixedRender) },
   data () {
     return {
       render: false,
@@ -51,11 +51,10 @@ export default {
     }
   },
   methods: {
-    minimizeRender () {
-      this.render = !this.render
-    },
+    minimizeRender () { this.render = !this.render },
     fixedRender () {
       let el = (document.querySelector('#app').clientHeight - document.querySelector('#app').parentElement.offsetHeight) - 180
+
       this.fixed = window.scrollY > 630
       this.fixedHide = window.scrollY < 200
       this.fixedFooter = window.scrollY > el
@@ -112,12 +111,6 @@ export default {
       value = value[1] + " " + value[2] + ", " + value[0]
       return value
     }
-  },
-  created () {
-    window.addEventListener('scroll', this.fixedRender)
-  },
-  destroyed () {
-    window.removeEventListener('scroll', this.fixedRender)
   }
 }
 </script>

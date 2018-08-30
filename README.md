@@ -20,7 +20,7 @@
 >
 > La aplicación fue desarrollada con diversos componentes interactivos con transiciones y animaciones, rica en usabilidad.
 > Con una interfaz totalmente adaptable y reactiva al tamaño de la pantalla del dispositivo utilizado.
-> :computer::iphone::tv::watch::video_game:
+
 ---
 #### Свободное резюме
 > Это веб-приложение призвано помочь всем тем, кто нуждается в создании учебного плана, быстро, легко и бесплатно.
@@ -28,14 +28,14 @@
 >
 > Приложение разработано с несколькими интерактивными компонентами с переходами и анимациями, богатыми удобством использования.
 > С интерфейсом, полностью адаптируемым и реагирующим на размер экрана используемого устройства.
-> :computer::iphone::tv::watch::video_game:
+
 #### カリキュラム 無料
 >このウェブアプリケーションは、カリキュラムを作成する必要があるすべての人を迅速かつ簡単に無料で利用できるようにすることを目的としています。
 >シンプルに設計された使いやすさで履歴書を作成する方法を容易にします。
 >
 >このアプリケーションは、トランジションとアニメーションを備えた複数のインタラクティブなコンポーネントで開発されています。
 >使用するデバイスの画面サイズに完全に適応し、反応するインターフェース。
-> :computer::iphone::tv::watch::video_game:
+
 
 ## :cloud: Link's
 > Yo, ho, yo, ho :checkered_flag:
@@ -49,23 +49,23 @@
 > Escrito para diversos idiomas, ajude a melhorar nossas traduções :earth_americas::earth_africa::earth_asia:
 ---
 #### Help also
-> If you find a mistake or want to contribute an idea to the project, create a [issue](https://github.com/lucasferreiralimax/curriculogratis/issues/new), Your help will be greatly appreciated. :clap:
+> If you find a mistake or want to contribute an idea to the project, create a [issue](https://github.com/lucasferreiralimax/curriculogratis/issues/new), Your help will be greatly appreciated.
 >
-> Written for different languages, help improve our translations :earth_americas::earth_africa::earth_asia:
+> Written for different languages, help improve our translations
 ---
 #### Ayuda también
-> Si encuentras algún error o quieres contribuir con una idea para el proyecto, crea un [issue](https://github.com/lucasferreiralimax/curriculogratis/issues/new), tu ayuda será muy bienvenido desde ya gracias. :clap:
+> Si encuentras algún error o quieres contribuir con una idea para el proyecto, crea un [issue](https://github.com/lucasferreiralimax/curriculogratis/issues/new), tu ayuda será muy bienvenido desde ya gracias.
 >
-> Escrito para varios idiomas, ayude a mejorar nuestras traducciones:earth_americas::earth_africa::earth_asia:
+> Escrito para varios idiomas, ayude a mejorar nuestras traducciones
 ---
 #### Помощь также
-> Если вы обнаружили ошибку или хотите внести свой вклад в проект, создайте [вопрос](https://github.com/lucasferreiralimax/curriculogratis/issues/new), с вашей помощью ваша помощь будет очень рада. :clap:
+> Если вы обнаружили ошибку или хотите внести свой вклад в проект, создайте [вопрос](https://github.com/lucasferreiralimax/curriculogratis/issues/new), с вашей помощью ваша помощь будет очень рада.
 >
-> Написано для разных языков, помогите улучшить наши переводы:earth_americas::earth_africa::earth_asia:
+> Написано для разных языков, помогите улучшить наши переводы
 #### ヘルプ
 >エラーが見つかった場合や、プロジェクトのアイデアを投稿したい場合は、[問題](https://github.com/lucasferreiralimax/curriculogratis/issues/new), を作成してください。 ：拍手：
 >
->さまざまな言語のために書かれた、翻訳の改善に役立ちます :earth_americas::earth_africa::earth_asia:
+>さまざまな言語のために書かれた、翻訳の改善に役立ちます
 
 ## :headphones: Iniciando
 > Após clonar o projeto em sua máquina ira precisar ter instalado o [Node.js](https://nodejs.org) em sua máquina.

@@ -1,10 +1,10 @@
 #curriculo
   padding 1em 1em 0
   +tablet()
-    width 35%
-    padding 1.5em 3em 0
     float left
     min-height 100vh
+    padding 1.5em 3em 0
+    width 35%
   +desktop()
     width 40%
   .btn
@@ -14,15 +14,15 @@
   input,
   textarea,
   select
-    width 100%
-    padding 1em
-    font-size 1em
-    margin 0
-    border 0
     background color1
+    border 0
     border-radius 6px
     box-sizing border-box
     color #333
+    font-size 1em
+    margin 0
+    padding 1em
+    width 100%
   input[type='radio'],
   input[type='checkbox']
     margin-right 1em
@@ -45,8 +45,8 @@
     &:hover
       background rgba(color1, .75)
     label
-      margin-bottom .5em
       border-radius 6px
+      margin-bottom .5em
       &:hover
         background linear-gradient(-145deg, rgba(color5,.5), color2)
         padding 1.5em
@@ -57,28 +57,28 @@
   .radio
     user-select none
   fieldset
-    display block
     box-sizing border-box
+    display block
   legend
     background rgba(color1, .9)
-    width 100%
-    font-size 1.2em
-    box-sizing border-box
     border-bottom solid 1px #ccc
+    box-sizing border-box
+    font-size 1.2em
     position relative
+    width 100%
 
 .mark
-  background rgba(color4, .6)
-  color color1
-  padding 4em 2em
-  margin 2em 0
-  text-shadow 0 3px color4
-  box-shadow 0 0 60px 10px rgba(color5, .6)
-  font-weight normal
   animation force 3s infinite alternate
-  line-height 2em
+  background rgba(color4, .6)
+  box-shadow 0 0 60px 10px rgba(color5, .6)
   box-sizing border-box
-  width 100%
+  color color1
   display block
+  font-weight normal
+  line-height 2em
+  margin 2em 0
+  padding 4em 2em
+  text-shadow 0 3px color4
+  width 100%
   h1,  h2
     margin-bottom 1em

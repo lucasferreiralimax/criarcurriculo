@@ -16,6 +16,8 @@ export default {
     NavMenu,
     Pluralization
   },
+  created () { window.addEventListener('scroll', this.fixedHeader) },
+  destroyed () { window.removeEventListener('scroll', this.fixedHeader) },
   data () {
     return {
       fixed: false,
@@ -30,12 +32,6 @@ export default {
       this.fixedFooter = !(this.oldScroll > window.scrollY)
       this.oldScroll = window.scrollY
     }
-  },
-  created () {
-    window.addEventListener('scroll', this.fixedHeader)
-  },
-  destroyed () {
-    window.removeEventListener('scroll', this.fixedHeader)
   }
 }
 </script>
