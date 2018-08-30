@@ -18,6 +18,16 @@
   "actions": {
     "print": "Print"
   },
+  "view": {
+    "about": {
+      "text1": "This web application is a social action and will help you to create a professional, elegant and objective curriculum, totally free!",
+      "text2": "Created by a simple boy who even with the difficulties of his daily life, he focused and dedicated his studies to elaborate this project.",
+      "text3": "If you want to help in any way there is",
+      "text4": "repository in github",
+      "contact": "Or contact us lucasferreiralimax@gmail.com",
+      "thanks": "Thanks, Lucas Ferreira de Lima."
+    }
+  },
   "form": {
     "h1": "Personal data",
     "name": "Full name:",

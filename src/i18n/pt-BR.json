@@ -18,6 +18,16 @@
   "actions": {
     "print": "Imprimir"
   },
+  "view": {
+    "about": {
+      "text1": "Esse web aplicativo é uma ação social e auxiliará você a criar um curriculo profissional, elegante e objetivo, de uma forma totalmente gratuita!",
+      "text2": "Criado por um rapaz simples que mesmo com as dificuldades do seu cotidiano, focou e dedicou seus estudos para elaborar esse projeto.",
+      "text3": "Se você deseja ajudar de alguma forma existe esse",
+      "text4": "repositório no github",
+      "contact": "Ou entre em contato lucasferreiralimax@gmail.com",
+      "thanks": "Atenciosamente, Lucas Ferreira de Lima."
+    }
+  },
   "form": {
     "h1": "Dados Pessoais",
     "name": "Nome completo:",
