@@ -14,7 +14,8 @@
     .coursers(v-for="(course, key, index) in user.coursers")
       p(v-if="course.formation.school") {{ $t('form.school')}}: {{ course.formation.school }}
       p(v-if="course.formation.name") {{ course.formation.name }}
-      p(v-if="course.formation.about") {{ $t('form.activities') }}: {{ course.formation.about }}
+      p(v-if="course.formation.about")
+        pre {{ $t('form.activities') }}: {{ course.formation.about }}
       p(v-if="course.formation.data_start") {{ course.formation.data_start | dateFormat }} {{ course.formation.data_end ? 'até' : '' }} {{ course.formation.data_end | dateFormat }}
       p(v-if="course.formation.now") {{ course.formation.now ? 'Cursando' : '' }}
       hr
@@ -22,7 +23,8 @@
     .experiencies(v-for="(exp, key, index) in user.exps")
       p(v-if="exp.experience.name") {{ $t('form.company')}}: {{ exp.experience.name }}
       p(v-if="exp.experience.work") {{ $t('form.office')}}: {{ exp.experience.work }}
-      p(v-if="exp.experience.about") {{ exp.experience.about }}
+      p(v-if="exp.experience.about")
+        pre {{ exp.experience.about }}
       p(v-if="exp.experience.data_start && exp.experience.now") {{ $t('form.from')}} {{ exp.experience.data_start }}
       p(v-if="exp.experience.data_start && !exp.experience.now") {{ $t('form.from')}} {{ exp.experience.data_start | dateFormat }} {{ exp.experience.data_end ? $t('form.to') : '' }} {{ exp.experience.data_end | dateFormat}}
       p(v-if="exp.experience.now") {{ exp.experience.now ? 'Atual' : '' }}
@@ -107,7 +109,7 @@ export default {
           value[1] = "Dezembro"
           break
       }
-      value = value[2] + " de " + value[1] + " de " + value[0]
+      value = value[1] + " " + value[2] + ", " + value[0]
       return value
     }
   },
