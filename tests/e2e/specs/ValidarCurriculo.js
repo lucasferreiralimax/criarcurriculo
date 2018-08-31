@@ -4,7 +4,7 @@ describe('Validar curriculo simples', () => {
   it('Nome', () => {
     cy.visit('/')
     cy.get('.notice > button').click()
-    cy.get('#GET-name').clear().type('Lucas Ferreira de Lima')
+    cy.get('#GET-name').clear().type('teste')
   })
   it('Gênero', () => {
     cy.get('#GET-genero').select("Masculino")
@@ -72,11 +72,5 @@ describe('Validar Experiências', () => {
   })
   it('Sobre', () => {
     cy.get('#GET-expsabout').type('Curriculo Grátis')
-  })
-})
-
-describe('Validar temas', () => {
-  it('Tema Selva', () => {
-    cy.get('#openTheme').click({ force: true })
   })
 })

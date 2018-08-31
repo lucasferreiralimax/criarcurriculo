@@ -7,12 +7,12 @@ describe('Validar Textos', () => {
     cy.contains('#start', 'Preencha o formulário abaixo...')
   })
   it('Sobre', () => {
-    cy.visit('/sobre')
+    cy.get('[href="/sobre"]').click({ force: true })
     cy.contains('h1', 'Curriculo Grátis')
     cy.contains('.mark > h1', 'Informações')
   })
   it('Contato', () => {
-    cy.visit('/contato')
+    cy.get('[href="/contato"]').click({ force: true })
     cy.contains('h1', 'Curriculo Grátis')
     cy.contains('.mark > h1', 'Contato')
   })
