@@ -15,20 +15,6 @@
   transition .3s all
   width 100%
   z-index 1
-  &:after
-    background linear-gradient(#fff 10%, rgba(#fff,0) 80%)
-    bottom calc(40vh - 60px)
-    content ''
-    display block
-    height 60px
-    pointer-events none
-    position fixed
-    right 3em
-    transition .3s all
-    width 100%
-    z-index 99
-    +tablet()
-      width 45%
   &.fixedFooter
     filter blur(0) !important
     height 85vh !important
@@ -38,8 +24,6 @@
     filter blur(3px)
     height 70vh
     transform rotate(-35deg) translate(30vw, 300px)
-    &:after
-      bottom calc(20vh - 60px)
   &.fixedH
     pointer-events none
     transform rotate(10deg) translate(10vw, 350px)
