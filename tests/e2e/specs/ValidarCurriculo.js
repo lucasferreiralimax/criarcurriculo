@@ -4,7 +4,7 @@ describe('Validar curriculo simples', () => {
   it('Nome', () => {
     cy.visit('/')
     cy.get('.notice > button').click()
-    cy.get('#GET-name').clear().type('teste')
+    cy.get('#GET-name').clear().type('Lucas Ferreira de Lima')
   })
   it('Gênero', () => {
     cy.get('#GET-genero').select("Masculino")
