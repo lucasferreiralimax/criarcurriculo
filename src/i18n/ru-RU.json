@@ -5,10 +5,10 @@
     "message": "Это веб-приложение все еще находится в постоянном развитии.",
     "text1": "Создайте свой новый учебный план быстро, легко и бесплатно!",
     "text2": "Заполните форму ниже ...",
-    "notfound_t1": "Página ainda não existe",
-    "notfound_t2": "Desculpe qualquer constrangimento",
-    "notfound_t3": "Para voltar para o inicio",
-    "notfound_click": "Clique aqui!"
+    "notfound_t1": "Страница еще не существует",
+    "notfound_t2": "Извините за любое смущение",
+    "notfound_t3": "Для того, чтобы вернуться к началу",
+    "notfound_click": "Нажмите здесь!"
   },
   "nav": {
     "home": "первый",
@@ -26,7 +26,7 @@
       "text4": "хранилище в github",
       "contact": "Искренне ваш lucasferreiralimax@gmail.com",
       "credits": "Все мое простое спасибо Google, Github, Heroku и проекту Firebase для сохранения этого проекта жизнеспособным и онлайн",
-      "thanks": "Atenciosamente, Lucas Ferreira de Lima."
+      "thanks": "Искренне ваш, Lucas Ferreira de Lima."
     }
   },
   "form": {
@@ -65,13 +65,13 @@
     "start": "первый",
     "finish": "конец",
     "about": "презентация",
-    "exp": "Experiência",
-    "exp_now": "Atual",
-    "company": "Empresa",
-    "office": "Cargo",
-    "about_me": "Sobre mim",
-    "from": "De",
-    "to": "até",
+    "exp": "опыт",
+    "exp_now": "В настоящее время занимает эту должность",
+    "company": "бизнес",
+    "office": "офис",
+    "about_me": "Обо мне",
+    "from": "из",
+    "to": "в",
     "activities": "деятельность"
   },
   "locale": {
@@ -88,6 +88,6 @@
     "grey": "серый",
     "classic": "классический",
     "gold": "золото",
-    "full": "Full Black"
+    "full": "Полный черный"
   }
 }

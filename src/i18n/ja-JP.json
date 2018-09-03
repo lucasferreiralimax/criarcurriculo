@@ -23,10 +23,10 @@
       "text1": "このウェブアプリケーションはソーシャルアクションであり、あなたは完全に無料で、プロフェッショナルでエレガントで客観的なカリキュラムを作成するのに役立ちます！",
       "text2": "彼の日常生活の困難にもかかわらず、彼は集中し、このプロジェクトを詳述するために彼の研究を捧げたシンプルな少年によって作成されます。",
       "text3": "あなたが何らかの方法で助けたいと思うなら",
-      "text4": "repositório no github",
-      "contact": "Ou entre em contato lucasferreiralimax@gmail.com",
+      "text4": "githubのリポジトリ",
+      "contact": "または私達に連絡する lucasferreiralimax@gmail.com",
       "credits": "Google、Github、Heroku、そしてFirebaseのこのプロジェクトを実用的かつオンラインに保つプロジェクト",
-      "thanks": "Atenciosamente, Lucas Ferreira de Lima."
+      "thanks": "あなたのこと大丈夫, Lucas Ferreira de Lima."
     }
   },
   "form": {
@@ -49,7 +49,7 @@
     "number_place": "自宅の番号..",
     "city": "都市:",
     "city_place": "あなたの現在の都市の名前...",
-    "travel": "Disponibilidade para viagens",
+    "travel": "旅行の可用性",
     "yes": "はい",
     "no": "で",
     "contact": "お問い合わせ",
@@ -58,36 +58,36 @@
     "email_place": "exemplo@email.com",
     "about_me": "ホーム",
     "about_place": "あなた自身について教えてください...",
-    "cademy": "Formação Acadêmica",
-    "cademy_now": "Cursando",
-    "school": "Instituição",
-    "course": "Formação",
-    "start": "Início",
-    "finish": "Término",
+    "cademy": "学歴",
+    "cademy_now": "勉強する",
+    "school": "機関",
+    "course": "トレーニング",
+    "start": "フライト",
+    "finish": "用語",
     "about": "ホーム",
-    "exp": "Experiência",
-    "exp_now": "Atual",
-    "company": "Empresa",
-    "office": "Cargo",
-    "about_me": "Sobre mim",
-    "from": "De",
-    "to": "até",
-    "activities": "Atividades"
+    "exp": "経験",
+    "exp_now": "現在このポジションを保持しています",
+    "company": "会社",
+    "office": "ポジション",
+    "about_me": "私について",
+    "from": "〜から",
+    "to": "〜まで",
+    "activities": "アクティビティ"
   },
   "locale": {
-    "pt": "Português",
-    "en": "English",
-    "es": "Espanhol",
-    "ru": "Russo",
-    "ja": "Japanese"
+    "pt": "ホーム",
+    "en": "英語",
+    "es": "エスパンホール",
+    "ru": "ルソ",
+    "ja": "日本語"
   },
   "themes": {
-    "default": "Padrao",
+    "default": "詳細を見つける",
     "rose": "ローズ",
-    "jungle": "Selva",
-    "grey": "Cinza",
-    "classic": "Classico",
-    "gold": "Ouro",
-    "full": "Full Black"
+    "jungle": "ジャングル",
+    "grey": "グレー",
+    "classic": "ザ",
+    "gold": "ゴールド",
+    "full": "フルブラック"
   }
 }
