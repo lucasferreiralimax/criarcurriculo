@@ -1,6 +1,7 @@
 button
   border 0
   padding 0
+  outline none
 .btn
   animation force 5s infinite alternate
   background color4 + 30
@@ -46,9 +47,9 @@ button
       fill color2 - 100
   svg
     height 20px
-    left 20px
-    position absolute
     width 25px
+    margin-right 10px
+    margin-bottom -3px
   path
     fill color1
     transition .3s all
@@ -108,3 +109,14 @@ button
   +tablet()
     transform translateX(-100px)
     transition .3s transform
+
+#openTheme,
+#pluralization
+  width 42px
+  height 45px
+  position absolute
+  top 0
+  right 0
+  cursor pointer
+  svg
+    margin 0

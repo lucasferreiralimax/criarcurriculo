@@ -49,17 +49,7 @@ export default {
       border-radius 4px
       margin 2px
       color #333
-    svg
-      cursor pointer
-      display block
-      float right
-      height 60px
-      left 9px
-      top -8px
     &.active
       padding 5px 40px 5px 5px
       width auto
-      svg
-        left auto
-        right 10px
 </style>

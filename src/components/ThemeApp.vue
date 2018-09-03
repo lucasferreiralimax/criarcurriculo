@@ -66,21 +66,7 @@ export default {
       color #333
       margin 2px
       padding 5px
-    svg
-      cursor pointer
-      display block
-      float right
-      height 60px
-      left auto
-      right 8px
-      top -8px
     &.active
       padding 5px 40px 5px 5px
       width auto
-  .fade-enter-active, .fade-leave-active
-    transition transform 1s, opacity 2s
-  .fade-enter, .fade-leave-to
-    opacity 0
-    transform scale(0)
-    transition opacity 0s
 </style>
