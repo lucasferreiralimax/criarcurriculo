@@ -68,24 +68,25 @@
     "exp_now": "Actual",
     "company": "Negocio",
     "office": "Cargo",
-    "about_me": "Sobre mim",
+    "about_me": "Sobre mi",
     "from": "De",
-    "to": "até",
-    "activities": "Atividades"
+    "to": "para",
+    "activities": "Actividades"
   },
   "locale": {
-    "pt": "Português",
-    "en": "Ingles",
-    "es": "Espanhol",
-    "ru": "Russo",
-    "ja": "Japones"
+    "pt": "Portugués",
+    "en": "Inglés",
+    "es": "Español",
+    "ru": "Ruso",
+    "ja": "Japonés"
   },
   "themes": {
-    "default": "Padrao",
+    "default": "Estándar",
+    "rose": "Rosa",
     "jungle": "Selva",
     "grey": "Gris",
-    "classic": "Classico",
-    "gold": "Ouro",
+    "classic": "Clásico",
+    "gold": "Oro",
     "full": "Full Black"
   }
 }

@@ -82,6 +82,7 @@
   },
   "themes": {
     "default": "Padrao",
+    "rose": "ローズ",
     "jungle": "Selva",
     "grey": "Cinza",
     "classic": "Classico",

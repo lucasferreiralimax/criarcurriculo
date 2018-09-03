@@ -82,6 +82,7 @@
   },
   "themes": {
     "default": "Default",
+    "rose": "Rose",
     "jungle": "Jungle",
     "grey": "Grey",
     "classic": "Classic",
