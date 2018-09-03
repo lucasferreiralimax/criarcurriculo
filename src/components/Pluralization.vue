@@ -62,10 +62,4 @@ export default {
       svg
         left auto
         right 10px
-  .fade-enter-active, .fade-leave-active
-    transition transform 1s, opacity 2s
-  .fade-enter, .fade-leave-to
-    opacity 0
-    transform scale(0)
-    transition opacity 0s
 </style>
