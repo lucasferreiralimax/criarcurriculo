@@ -1,5 +1,3 @@
-// https://docs.cypress.io/api/introduction/api.html
-
 describe('Validar Textos', () => {
   it('Inicio', () => {
     cy.contains('h1', 'Curriculo Grátis')

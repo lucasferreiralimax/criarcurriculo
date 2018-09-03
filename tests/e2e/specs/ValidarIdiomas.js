@@ -1,5 +1,3 @@
-// https://docs.cypress.io/api/introduction/api.html
-
 describe('Validar Idiomas', () => {
   it('Espanhol', () => {
     cy.get('#app').scrollIntoView()

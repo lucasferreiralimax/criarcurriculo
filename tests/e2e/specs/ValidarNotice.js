@@ -1,5 +1,3 @@
-// https://docs.cypress.io/api/introduction/api.html
-
 describe('Validar popup notice', () => {
   it('Testar popup', () => {
     cy.visit('/')

@@ -1,8 +1,11 @@
-// https://docs.cypress.io/api/introduction/api.html
-
 describe('Validar temas', () => {
-  it('Tema Cinza', () => {
+  it('Tema Rosa', () => {
+    cy.get('#start').scrollIntoView()
     cy.get('#openTheme').click({ force: true })
+    cy.get('#theme_app').select('rose')
+    cy.wait(2000)
+  })
+  it('Tema Cinza', () => {
     cy.get('#theme_app').select('cinza')
     cy.wait(2000)
   })
