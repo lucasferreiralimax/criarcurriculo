@@ -9,9 +9,4 @@ describe('Validar Textos', () => {
     cy.contains('h1', 'Curriculo Grátis')
     cy.contains('.mark > h1', 'Informações')
   })
-  it('Contato', () => {
-    cy.get('[href="/contato"]').click({ force: true })
-    cy.contains('h1', 'Curriculo Grátis')
-    cy.contains('.mark > h1', 'Contato')
-  })
 })
