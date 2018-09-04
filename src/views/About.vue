@@ -17,6 +17,13 @@
       img(src="./../assets/google.svg" alt="Logo Google" width="60")
     a.credits_logo(href="https://google.com" target="_blank")
       img(src="./../assets/firebase.svg" alt="Logo Firebase" width="45")
+    article.colab
+      h1 {{ $t('view.about.colab')}}
+      .flexbox
+        a.people(href="https://github.com/lucasferreiralimax" target="_blank")
+          figure
+            img(src="https://avatars2.githubusercontent.com/u/40927839")
+            figcaption @lucasferreiralimax
 </template>
 
 <script>
