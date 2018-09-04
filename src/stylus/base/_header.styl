@@ -1,8 +1,6 @@
 header.animate_intro
   position relative
-  height 405px
   z-index 10
-
 .header
   -webkit-focus-ring-color rgba(255, 255, 255, 0) !important
   -webkit-tap-highlight-color rgba(255, 255, 255, 0) !important
@@ -14,22 +12,3 @@ header.animate_intro
   user-select none
   will-change opacity, translate, scale
   z-index 1
-  &.active.fixedFooter
-    transform translateY(-170px)
-  &.active
-    animation force 5s infinite alternate
-    background color4
-    box-shadow 0 4px 20px rgba(#000, .4), 0 3px 0 color4 + 10, 0 6px 30px rgba(color4,.3), inset 0 2px rgba(#fff,.3), inset 0 -2px 13px rgba(color4,.3)
-    height 65px
-    left 0
-    margin 0
-    padding 0
-    position fixed
-    top 0
-    transition .3s transform
-    width 100%
-    .logo
-      margin 0 auto
-      font-size 1.5em
-      display block
-      top 20px

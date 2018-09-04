@@ -1,60 +1,56 @@
 .render
-  -webkit-tap-highlight-color transparent
-  background #fff
-  bottom 0
-  box-shadow 0 -10px 40px rgba(#000,.3)
-  box-sizing border-box
-  clear both
-  color #000
-  cursor pointer
-  height 40vh
-  outline none
-  overflow auto
-  padding 3em
-  position fixed
-  transition .3s all
-  width 100%
-  z-index 1
-  &.fixedFooter
-    filter blur(0) !important
-    height 85vh !important
-    transform scale(0.6) translateY(-15vh) !important
-  &.active,
-  &.fixedH
-    filter blur(3px)
-    height 70vh
-    transform rotate(-35deg) translate(30vw, 300px)
-  &.fixedH
-    pointer-events none
-    transform rotate(10deg) translate(10vw, 350px)
-  label
+  height 60vh
+  position relative
+  .view
+    -webkit-tap-highlight-color transparent
+    background #fff
+    bottom 0
+    bottom 249px
+    box-shadow 0 -10px 40px rgba(#000,.3)
+    box-sizing border-box
+    clear both
+    color #000
     cursor pointer
-  h1, p
-    margin-bottom 1em
-  h2
-    margin 1em 0 .5em
+    height 50vh
+    left calc(50% - 40%)
+    margin 0 auto
+    outline none
+    overflow auto
+    padding 3em
+    position fixed
+    transition .3s all
+    width 80%
+    z-index 1
+    &.viewless
+      cursor pointer
+      filter blur(3px)
+      transform rotate(-35deg) translate(20%, 130%)
+    &.viewblocked
+      pointer-events none
+      opacity .7
+    label
+      cursor pointer
+    h1, p
+      margin-bottom 1em
+    h2
+      margin 1em 0 .5em
   +tablet()
-    height 85vh !important
-    position absolute
-    right 3em
-    top 300px
+    box-sizing border-box
+    float right
+    padding 1em 1em 0
+    position relative
     width 50%
-    &.active,
-    &.fixedH
-      filter blur(0)
-      overflow auto
-      transform rotate(0) translate(0, 0)
-    &.fixedFooter
-      cursor default
-      height 90vh !important
-      top 5vh !important
-      transform scale(1) !important
-    &:after
-      display none
-    &.fixed
+    &.viewfixed
       position fixed
-      top 11vh
-      transition none
-      &:after
-        display block
-        top 11vh
+      right 0
+      top 0
+    .view
+      height calc(100vh - 60px)
+      left 0
+      position absolute
+      top 30px
+      width calc(100% - 1em)
+      &.viewless
+        cursor default
+        filter none
+        transform none

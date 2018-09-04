@@ -1,8 +1,8 @@
 <template lang="pug">
 header.animate_intro
-  .header(:class="{ 'active' : fixedHide, 'fixedFooter': fixedFooter }")
+  .header
     router-link(to="/" v-scroll-to="'#start'" tag="h1").logo.text-center {{ $t('text.name1')}} {{ $t('text.name2')}}
-  nav-menu(:class="{ 'active_show' : fixedHide, 'fixedFooter': fixedFooter }")
+  nav-menu
   pluralization
 </template>
 
@@ -23,14 +23,6 @@ export default {
       fixed: false,
       fixedHide: false,
       fixedFooter: false
-    }
-  },
-  methods: {
-    fixedHeader () {
-      this.fixed = window.scrollY > 630
-      this.fixedHide = window.scrollY > 600
-      this.fixedFooter = !(this.oldScroll > window.scrollY)
-      this.oldScroll = window.scrollY
     }
   }
 }
