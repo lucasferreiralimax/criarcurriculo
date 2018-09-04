@@ -51,6 +51,8 @@ export default {
 </script>
 
 <style lang="stylus">
+  @import '../stylus/config/_mixins'
+
   .theme_app
     border-radius 6px
     bottom 25px
@@ -69,4 +71,8 @@ export default {
     &.active
       padding 5px 40px 5px 5px
       width auto
+    +tablet()
+      top 65px
+      left auto
+      right 10px
 </style>
