@@ -42,5 +42,31 @@
   transition .3s all
   &:hover
     transform scale(1.1)
+    &:after
+      color #fff
+      opacity 1
+      pointer-events all
+      transform scale(1)
+      transition 1s opacity
   &:last-of-type
     margin 0
+  &:after
+    box-sizing border-box
+    display block
+    opacity 0
+    pointer-events none
+  &:after
+    background #333
+    border-radius 4px
+    bottom -30px
+    color #fff
+    content attr(title)
+    font-size 12px
+    width 80px
+    left calc(50% - 40px)
+    line-height 9px
+    padding 8px
+    position absolute
+    transform scale(0)
+    transition .3s opacity, 1s color, .3s transform
+    text-shadow 0 2px 2px #000
