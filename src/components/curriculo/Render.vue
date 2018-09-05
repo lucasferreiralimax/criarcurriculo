@@ -26,7 +26,7 @@
         p(v-if="exp.experience.work") {{ $t('form.office')}}: {{ exp.experience.work }}
         p(v-if="exp.experience.about")
           pre {{ exp.experience.about }}
-        p(v-if="exp.experience.data_start && exp.experience.now") {{ $t('form.from')}} {{ exp.experience.data_start }}
+        p(v-if="exp.experience.data_start && exp.experience.now") {{ $t('form.from')}} {{ exp.experience.data_start | dateFormat }}
         p(v-if="exp.experience.data_start && !exp.experience.now") {{ $t('form.from')}} {{ exp.experience.data_start | dateFormat }} {{ exp.experience.data_end ? $t('form.to') : '' }} {{ exp.experience.data_end | dateFormat}}
         p(v-if="exp.experience.now") {{ exp.experience.now ? 'Atual' : '' }}
         hr
@@ -107,7 +107,7 @@ export default {
           value[1] = "Dezembro"
           break
       }
-      value = value[1] + " " + value[2] + ", " + value[0]
+      value = value[1] + " dia " + value[2] + ", " + value[0]
       return value
     }
   }
