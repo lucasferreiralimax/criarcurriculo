@@ -41,7 +41,7 @@
           label(for="GET-expsdata" v-bind:class="{ error: !exp.experience.data_end && errors.length && !exp.experience.now }")
             p(v-show="!exp.experience.now") {{ $t('form.finish')}}:
             input#GET-expsdata-finish(name="expsdata-finish" type="date" placeholder="00/00/0000" v-model="exp.experience.data_end" v-show="!exp.experience.now")
-            p.error-msg(v-show="!exp.experience.data_end && errors.length") {{ $t('form.errors.data_end') }}
+            p.error-msg(v-show="!exp.experience.data_end && errors.length && !exp.experience.now") {{ $t('form.errors.data_end') }}
           // Sobre a experiência
           // The exps About
           label(for="GET-expsabout" v-bind:class="{ error: !exp.experience.about && errors.length }")
