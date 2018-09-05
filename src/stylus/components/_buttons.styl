@@ -85,6 +85,38 @@ button
       color red - 190
     & + .plus
       margin-right 1em !important
+  &.large
+    &.active
+      width auto
+      &.pluralization,
+      &.theme_app
+        padding-left 25px
+        +desktop()
+          padding-left 35px
+    select
+      background #fff
+      border-radius 4px
+      color #333
+      padding 5px
+      position relative
+      top -13px
+      left -20px
+      +desktop()
+        top -15px
+    +desktop()
+      padding 30px
+  .icon
+    width 42px
+    height 45px
+    position absolute
+    top 0
+    right 0
+    cursor pointer
+    +desktop()
+      width 58px
+      height 62px
+    svg
+      margin 0
 .menu
   height 45px
   left 10px
@@ -110,8 +142,8 @@ button
     transform translateX(-100px)
     transition .3s transform
 
-#openTheme,
-#pluralization
+// #openTheme,
+// #pluralization
   width 42px
   height 45px
   position absolute

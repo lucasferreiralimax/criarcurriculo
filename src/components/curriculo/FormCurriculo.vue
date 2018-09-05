@@ -176,7 +176,6 @@ export default {
           if (!this.user.coursers[i].formation.about) { this.errors.push('Precisa preencher o campo sobre as atividades') }
         }
       }
-      console.log(this.errors)
       if(!this.errors.length) {
         let scroll_end = (document.querySelector('#app').clientHeight - document.querySelector('#app').parentElement.offsetHeight)
         document.querySelector('.render').classList.remove('active', 'fixed', 'fixedFooter')
