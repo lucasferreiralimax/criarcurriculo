@@ -18,3 +18,51 @@
       border-radius 10px
       transition .7s all
       width 100%
+
+.hitech
+  &:hover
+    color color2
+    background radial-gradient(ellipse 50% 50%, rgba(color2, .5), rgba(#000, 0) 80%)
+    .credits_logo
+      opacity .5
+      filter grayscale(100%)
+      &:hover
+        opacity 1
+        filter grayscale(0)
+
+.credits_logo
+  display inline-block
+  margin-right 20px
+  transition .3s all
+  &:hover
+    transform scale(1.1)
+    &:after
+      color #333
+      opacity 1
+      pointer-events all
+      transform scale(1)
+      transition 1s opacity
+  &:last-of-type
+    margin 0
+  &:after
+    box-sizing border-box
+    display block
+    opacity 0
+    pointer-events none
+  &:after
+    background #fff
+    border 1px solid #333
+    border-radius 4px
+    bottom -30px
+    box-shadow 0 2px 0 #333, 0 0 30px color2
+    color #fff
+    content attr(title)
+    font-size 12px
+    left calc(50% - 40px)
+    line-height 9px
+    padding 8px
+    position absolute
+    text-shadow 0 2px 2px rgba(#000, .5)
+    transform scale(0)
+    transition .3s opacity, 1s color, .3s transform
+    width 80px
