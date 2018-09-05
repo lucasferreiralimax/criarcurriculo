@@ -26,6 +26,7 @@
     span(v-if="user.genero == ''") {{ $t('form.married')}}
     span(v-if="user.genero == 'h'") {{ $t('form.married')}}
     span(v-if="user.genero == 'm'") {{ $t('form.married')}}
+  p.error-msg(v-show="!user.maritalstatus && errors.length") {{ $t('form.errors.maritals') }}
 </template>
 
 <script>

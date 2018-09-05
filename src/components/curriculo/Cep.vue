@@ -1,7 +1,8 @@
 <template lang="pug">
-  label(for="GET-cep" v-bind:class="{ error: !user.cep && err.length }")
+  label(for="GET-cep" v-bind:class="{ error: !user.cep && errors.length }")
     p CEP:
     input#GET-cep(name="cep" type="tel" maxlength="8" placeholder="00000-000" :value="user.cep" @keyup="search_cep" @input="updateVuex('updateCep', $event)")
+    p.error-msg(v-show="!user.cep && errors.length") {{ $t('form.errors.zip') }}
 </template>
 
 <script>
@@ -12,13 +13,8 @@ const HTTP = axios.create({ baseURL: 'https://viacep.com.br/ws/' })
 
 export default {
   name: 'cep',
-  props: ['err'],
+  props: ['errors'],
   computed: mapState({ user: state => state.user }),
-  data () {
-    return {
-      errors: []
-    }
-  },
   methods: {
     updateVuex (name, e) {
       if (e.target.value.length === 8) {

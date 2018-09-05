@@ -74,7 +74,26 @@
     "about_me": "About me",
     "from": "From",
     "to": "to",
-    "activities": "Activities"
+    "activities": "Activities",
+    "errors": {
+      "name": "You must fill in with a name.",
+      "genre": "You need to choose some genre.",
+      "maritals": "You must choose a civil status.",
+      "age": "Need to fill with your age",
+      "about": "It needs to fill with something about you, your goals and abilities.",
+      "zip": "You need to fill in the zip code field.",
+      "end": "You need to fill in the address field.",
+      "city": "Need to fill in the city field.",
+      "phone": "You need to fill in the phone field.",
+      "email": "Need to fill in the Email field",
+      "scholl": "You must fill in the name of the institution.",
+      "course": "You must fill in the name of the course.",
+      "data_start": "Must fill in with start date.",
+      "data_end": "Need to fill in with the end date.",
+      "about": "You need to fill in the field about activities.",
+      "company": "You must fill in the name of the Company.",
+      "exp": "You must fill in the name of the business."
+    }
   },
   "locale": {
     "pt": "Portuguese",

@@ -23,27 +23,31 @@
           label(for="GET-company" v-bind:class="{ error: !exp.experience.name && errors.length }")
             p {{ $t('form.company')}}:
             input#GET-company(name="company" type="text" placeholder="Nome da empresa ou organização..." v-model="exp.experience.name")
+            p.error-msg(v-show="!exp.experience.name && errors.length") {{ $t('form.errors.company') }}
 
           // Experiência
           // The experience
           label(for="GET-exps" v-bind:class="{ error: !exp.experience.work && errors.length }")
             p {{ $t('form.office')}}:
             input#GET-exps(name="exps" type="text" placeholder="Título ou cargo..." v-model="exp.experience.work")
+            p.error-msg(v-show="!exp.experience.work && errors.length") {{ $t('form.errors.exp') }}
 
           // Data da experiência
           // The experience data
           label(for="GET-expsdata" v-bind:class="{ error: !exp.experience.data_start && errors.length }")
             p {{ $t('form.start')}}:
             input#GET-expsdata-start(name="expsdata-start" type="date" placeholder="00/00/0000" v-model="exp.experience.data_start")
-          label(for="GET-expsdata" v-show="!exp.experience.now" v-bind:class="{ error: !exp.experience.data_end && errors.length }")
-            p {{ $t('form.finish')}}:
-            input#GET-expsdata-finish(name="expsdata-finish" type="date" placeholder="00/00/0000" v-model="exp.experience.data_end")
-
+            p.error-msg(v-show="!exp.experience.data_start && errors.length") {{ $t('form.errors.data_start') }}
+          label(for="GET-expsdata" v-bind:class="{ error: !exp.experience.data_end && errors.length && !exp.experience.now }")
+            p(v-show="!exp.experience.now") {{ $t('form.finish')}}:
+            input#GET-expsdata-finish(name="expsdata-finish" type="date" placeholder="00/00/0000" v-model="exp.experience.data_end" v-show="!exp.experience.now")
+            p.error-msg(v-show="!exp.experience.data_end && errors.length") {{ $t('form.errors.data_end') }}
           // Sobre a experiência
           // The exps About
           label(for="GET-expsabout" v-bind:class="{ error: !exp.experience.about && errors.length }")
             p {{ $t('form.about')}}:
             textarea#GET-expsabout(ref="GET_expsabout" placeholder="Atividades do serviço..." @input="updatetextAreaHeight(key)" v-model="exp.experience.about")
+            p.error-msg(v-show="!exp.experience.about && errors.length") {{ $t('form.errors.about') }}
 </template>
 
 <script>
@@ -55,7 +59,6 @@ export default {
   computed: mapState({ user: state => state.user }),
   data () {
     return {
-      erros: [],
       exps_now: false
     }
   },

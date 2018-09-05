@@ -3,7 +3,6 @@
   +tablet()
     box-sizing border-box
     float left
-    min-height 100vh
     width 50%
   .btn
     width 100%
@@ -30,8 +29,15 @@
     cursor pointer
     &.error
       background linear-gradient(145deg, color7, color1)
-      input, select, textarea
+      input, select, textarea, label
         box-shadow 0 0 6px 1px red
+      [type="radio"]
+        box-shadow none
+      .error-msg
+        margin 20px 0 0
+        color red - 150
+        text-shadow 0 2px 4px #fff
+        font-weight normal
   label,
   legend,
   .radio

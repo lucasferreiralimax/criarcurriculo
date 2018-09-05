@@ -74,7 +74,26 @@
     "about_me": "Sobre mim",
     "from": "De",
     "to": "até",
-    "activities": "Atividades"
+    "activities": "Atividades",
+    "errors": {
+      "name": "Precisa preencher com seu nome.",
+      "genre": "Precisa escolher algum gênero.",
+      "maritals": "Precisa escolher um estado civil.",
+      "age": "Precisa preencher com sua idade.",
+      "about": "Precisa preencher com algo sobre você, seus objetivos e habilidades.",
+      "zip": "Precisa preencher o campo de CEP.",
+      "end": "Precisa preencher o campo de endereço.",
+      "city": "Precisa preencher o campo de cidade.",
+      "phone": "Precisa preencher o campo de telefone.",
+      "email": "Precisa preencher o campo de E-mail.",
+      "scholl": "Precisa preencher com o nome da instituição.",
+      "course": "Precisa preencher com o nome do curso.",
+      "data_start": "Precisa preencher com a data de inicio.",
+      "data_end": "Precisa preencher com a data final.",
+      "about": "Precisa preencher o campo sobre as atividades.",
+      "company": "Precisa preencher com o nome da Empresa.",
+      "exp": "Precisa preencher com o nome do Cargo."
+    }
   },
   "locale": {
     "pt": "Português",
