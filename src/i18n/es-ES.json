@@ -12,8 +12,7 @@
   },
   "nav": {
     "home": "Comienzo",
-    "about": "Información",
-    "contact": "Contacto"
+    "about": "Información"
   },
   "actions": {
     "print": "Impresión"
@@ -100,7 +99,8 @@
     "en": "Inglés",
     "es": "Español",
     "ru": "Ruso",
-    "ja": "Japonés"
+    "ja": "Japonés",
+    "fr": "Francés"
   },
   "themes": {
     "default": "Estándar",

@@ -24,6 +24,12 @@ describe('Validar Idiomas', () => {
     cy.contains('h1', 'カリキュラム 無料')
     cy.wait(2000)
   })
+  it('Français', () => {
+    cy.get('#pluralization').click({ force: true })
+    cy.get('#locale').select('fr')
+    cy.contains('h1', 'Curriculo Gratuit')
+    cy.wait(2000)
+  })
   it('Português', () => {
     cy.get('#pluralization').click({ force: true })
     cy.get('#locale').select('pt')

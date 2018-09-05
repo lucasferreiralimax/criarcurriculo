@@ -12,7 +12,6 @@
 >
 > The application was developed with several interactive components with transitions and animations, rich in usability.
 > With an interface fully adaptable and reactive to the screen size of the device used.
-> :computer::iphone::tv::watch::video_game:
 ---
 #### Resume Libre
 > Esta aplicación web tiene el objetivo de ayudar a todos aquellos que necesitan crear un currículum, rápido, fácil y gratis.
@@ -28,13 +27,20 @@
 >
 > Приложение разработано с несколькими интерактивными компонентами с переходами и анимациями, богатыми удобством использования.
 > С интерфейсом, полностью адаптируемым и реагирующим на размер экрана используемого устройства.
-
+---
 #### カリキュラム 無料
 >このウェブアプリケーションは、カリキュラムを作成する必要があるすべての人を迅速かつ簡単に無料で利用できるようにすることを目的としています。
 >シンプルに設計された使いやすさで履歴書を作成する方法を容易にします。
 >
 >このアプリケーションは、トランジションとアニメーションを備えた複数のインタラクティブなコンポーネントで開発されています。
 >使用するデバイスの画面サイズに完全に適応し、反応するインターフェース。
+---
+#### Curriculum gratuit
+> Cette application Web vise à aider tous ceux qui ont besoin de créer un curriculum, rapide, facile et gratuit.
+> Faciliter la façon dont vous créez votre CV avec une facilité d'utilisation conçue pour être simple.
+>
+> L'application a été développée avec plusieurs composants interactifs avec des transitions et des animations riches en fonctionnalités.
+> Avec une interface totalement adaptable et réactive à la taille de l'écran de l'appareil utilisé.
 
 
 ## :cloud: Link's
@@ -62,10 +68,16 @@
 > Если вы обнаружили ошибку или хотите внести свой вклад в проект, создайте [вопрос](https://github.com/lucasferreiralimax/curriculogratis/issues/new), с вашей помощью ваша помощь будет очень рада.
 >
 > Написано для разных языков, помогите улучшить наши переводы
+---
 #### ヘルプ
 >エラーが見つかった場合や、プロジェクトのアイデアを投稿したい場合は、[問題](https://github.com/lucasferreiralimax/curriculogratis/issues/new), を作成してください。 ：拍手：
 >
 >さまざまな言語のために書かれた、翻訳の改善に役立ちます
+--
+#### Aide aussi
+> Si vous trouvez une erreur ou souhaitez apporter une idée au projet, créez un [issue](https://github.com/lucasferreiralimax/curriculogratis/issues/new). Votre aide sera grandement appréciée.
+>
+> Rédigé pour différentes langues, aidez à améliorer nos traductions
 
 ## :headphones: Iniciando
 > Após clonar o projeto em sua máquina ira precisar ter instalado o [Node.js](https://nodejs.org) em sua máquina.
@@ -86,10 +98,16 @@
 > После клонирования проекта на вашем компьютере вам понадобится [Node.js](https://nodejs.org), установленный на вашем компьютере.
 >
 > Откройте терминал или cmd и запустите следующие команды для установки и запуска проекта.
+---
 #### スタート
 >あなたのマシン上でプロジェクトをクローンした後、あなたのマシンに [Node.js](https://nodejs.org),をインストールする必要があります。
 >
 >ターミナルまたはcmdを開き、次のコマンドを実行してプロジェクトをインストールおよび開始します。
+---
+#### À partir de
+> Après avoir cloné le projet sur votre machine, vous devrez avoir le [Node.js](https://nodejs.org) sur votre machine.
+>
+> Ouvrez le terminal ou cmd et exécutez les commandes suivantes pour installer et démarrer le projet.
 
 ``` bash
 # install dependencies
@@ -109,6 +127,7 @@ yarn serve
 #### ¿Con quién puedes hablar sobre el proyecto?
 #### С кем вы можете поговорить о проекте?
 #### 誰がプロジェクトについて話すことができますか？
+#### À qui pouvez-vous parler du projet?
 
 * :ghost: @lucasferreiralimax
 * :email: lucasferreiralimax@gmail.com
