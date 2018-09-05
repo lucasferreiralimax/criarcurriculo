@@ -39,6 +39,8 @@
         img(src="./../assets/vue.svg" alt="Logo Vue.js" width="55")
       a.credits_logo(href="https://www.cypress.io" target="_blank" title="Cypress")
         img(src="./../assets/cypress.svg" alt="Logo Cypress" width="50")
+      a.credits_logo(href="https://codepen.io/lucaslimax" target="_blank" title="Feito com Coração")
+        img(src="./../assets/love.svg" alt="Love" width="50")
     article.colab
       h1 {{ $t('view.about.colab')}}
       .flexbox
