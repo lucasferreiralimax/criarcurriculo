@@ -69,9 +69,21 @@ color7_classic = red + 130
     label,
     legend,
     .radio
-      background rgba(color5_classic, .9)
-      box-shadow 0 0 30px color5_classic - 30
+      text-shadow 0 2px 10px rgba(#000, .5)
+      background rgba(color4_classic + 30, .95)
+      box-shadow 0 0 30px rgba(color5_classic - 30, .3)
       color color1_classic
+      &.error
+        input, select, textarea, label
+          box-shadow 0 0 0 2px red, 0 0 0 3px #fff, 0 0 30px red
+        [type="radio"]
+          box-shadow none
+      .error-msg
+        color #fff
+        text-shadow 0 2px 10px #000
+        background linear-gradient(to right, red, rgba(red,0))
+        padding 10px
+        border-radius 6px
   .mark
     background rgba(color5_classic, .9)
     box-shadow 0 0 60px 10px rgba(color5_classic, .6)
