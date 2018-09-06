@@ -11,36 +11,51 @@
     h2 {{ $t('view.about.thanks') }}
     article.hitech
       h2 {{ $t('view.about.hitech')}}
-      a.credits_logo(href="https://github.com/lucasferreiralimax/curriculogratis" target="_blank" title="Github")
+      a.credits_logo(href="https://github.com/lucasferreiralimax/curriculogratis" target="_blank")
         img(src="./../assets/github.svg" alt="Logo Github" width="60")
-      a.credits_logo(href="https://www.heroku.com" target="_blank" title="Heroku")
+        p Github
+      a.credits_logo(href="https://www.heroku.com" target="_blank")
         img(src="./../assets/heroku.svg" alt="Logo Heroku" width="40")
-      a.credits_logo(href="https://google.com" target="_blank" title="Google")
+        p Heroku
+      a.credits_logo(href="https://google.com" target="_blank")
         img(src="./../assets/google.svg" alt="Logo Google" width="60")
-      a.credits_logo(href="https://firebase.google.com" target="_blank" title="Firebase")
+        p Google
+      a.credits_logo(href="https://firebase.google.com" target="_blank")
         img(src="./../assets/firebase.svg" alt="Logo Firebase" width="45")
-      a.credits_logo(href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5" target="_blank" title="HTML5")
+        p Firebase
+      a.credits_logo(href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5" target="_blank")
         img(src="./../assets/html-5.svg" alt="Logo HTML5" width="45")
-      a.credits_logo(href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS3" target="_blank" title="CSS3")
+        p HTML5
+      a.credits_logo(href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS3" target="_blank")
         img(src="./../assets/css-3.svg" alt="Logo CSS3" width="45")
-      a.credits_logo(href="https://developer.mozilla.org/pt-BR/docs/Aprender/JavaScript" target="_blank" title="Javascript")
+        p CSS3
+      a.credits_logo(href="https://developer.mozilla.org/pt-BR/docs/Aprender/JavaScript" target="_blank")
         img(src="./../assets/javascript.svg" alt="Logo Javascript" width="55")
-      a.credits_logo(href="https://pugjs.org/api/getting-started.html" target="_blank" title="Pug.js")
+        p Javascript
+      a.credits_logo(href="https://pugjs.org/api/getting-started.html" target="_blank")
         img(src="./../assets/pug.svg" alt="Logo Pug" width="55")
-      a.credits_logo(href="http://stylus-lang.com" target="_blank" title="Stylus.js")
+        p Pug.js
+      a.credits_logo(href="http://stylus-lang.com" target="_blank")
         img(src="./../assets/stylus.svg" alt="Logo Stylus" width="85")
-      a.credits_logo(href="https://babeljs.io" target="_blank" title="Babel.js")
+        p Stylus.js
+      a.credits_logo(href="https://babeljs.io" target="_blank")
         img(src="./../assets/babel.svg" alt="Logo Babel" width="100")
-      a.credits_logo(href="https://nodejs.org" target="_blank" title="Node.js")
+        p Babel.js
+      a.credits_logo(href="https://nodejs.org" target="_blank")
         img(src="./../assets/nodejs.svg" alt="Logo node.js" width="85")
-      a.credits_logo(href="https://git-scm.com" target="_blank" title="Git")
+        p Node.js
+      a.credits_logo(href="https://git-scm.com" target="_blank")
         img(src="./../assets/git-icon.svg" alt="Logo Git" width="50")
-      a.credits_logo(href="https://vuejs.org" target="_blank" title="Vue.js")
+        p Git
+      a.credits_logo(href="https://vuejs.org" target="_blank")
         img(src="./../assets/vue.svg" alt="Logo Vue.js" width="55")
-      a.credits_logo(href="https://www.cypress.io" target="_blank" title="Cypress")
+        p Vue.js
+      a.credits_logo(href="https://www.cypress.io" target="_blank")
         img(src="./../assets/cypress.svg" alt="Logo Cypress" width="50")
-      a.credits_logo(href="https://codepen.io/lucaslimax" target="_blank" title="Feito com Coração")
+        p Cypress
+      a.credits_logo(href="https://codepen.io/lucaslimax" target="_blank")
         img(src="./../assets/love.svg" alt="Love" width="50")
+        p {{ $t('view.about.work') }}
     article.colab
       h1 {{ $t('view.about.colab')}}
       .flexbox
