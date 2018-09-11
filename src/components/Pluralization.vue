@@ -16,6 +16,9 @@ label.btn.large.pluralization(for="locale" :class="{ 'active' : isLocale}")
 <script>
 export default {
   name: 'pluralization',
+  created () {
+    this.setLocale()
+  },
   data () {
     return {
       locale: 'pt',
@@ -23,11 +26,23 @@ export default {
     }
   },
   methods: {
-    openPluralization () { this.isLocale = !this.isLocale }
+    openPluralization () { this.isLocale = !this.isLocale },
+    setLocale () {
+      let locale = localStorage.getItem('locale')
+
+      if(!locale) {
+        localStorage.setItem('locale', 'pt')
+      } else {
+        locale = locale.replace(/"/g, "")
+        this.$i18n.locale = locale
+        this.locale = locale
+      }
+    }
   },
   watch: {
     locale (val) {
       this.$i18n.locale = val
+      localStorage.setItem('locale', val)
       this.openPluralization()
     }
   }
