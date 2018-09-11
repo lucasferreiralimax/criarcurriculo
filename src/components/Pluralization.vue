@@ -28,7 +28,7 @@ export default {
   watch: {
     locale (val) {
       this.$i18n.locale = val
-      this.isLocale = !this.isLocale
+      this.openPluralization()
     }
   }
 }

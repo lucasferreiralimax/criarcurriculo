@@ -1,23 +1,18 @@
 {
-  "text": {
-    "name1": "Resumem",
-    "name2": "Libre",
-    "message": "Esta web aplicación todavía está en constante desarrollo.",
-    "text1": "¡Crea tu nuevo currículum rápido, fácil y gratis!",
-    "text2": "Rellene el siguiente formulario ...",
-    "notfound_t1": "Página aún no existe",
-    "notfound_t2": "Lo siento cualquier limitación",
-    "notfound_t3": "Para volver al inicio",
-    "notfound_click": "¡Haga clic aquí!"
-  },
   "nav": {
     "home": "Comienzo",
     "about": "Información"
   },
-  "actions": {
-    "print": "Impresión"
-  },
   "view": {
+    "home": {
+      "name1": "Resumem",
+      "name2": "Libre",
+      "message": "Esta web aplicación todavía está en constante desarrollo.",
+      "text1": "¡Crea tu nuevo currículum rápido, fácil y gratis!",
+      "text2": "Rellene el siguiente formulario ...",
+      "print": "Impresión",
+      "link_source": "Enlace código fuente del proyecto"
+    },
     "about": {
       "text1": "Esta aplicación web es una acción social y le ayudará a crear un currículum profesional, elegante y objetivo, de una manera totalmente gratuita!",
       "text2": "Creado por un chico sencillo que incluso con las dificultades de su cotidiano, se enfocó y dedicó sus estudios para elaborar ese proyecto.",
@@ -29,6 +24,12 @@
       "hitech": "Tecnologías",
       "colab": "Empleados",
       "work": "Hecho con Corazón"
+    },
+    "notfound": {
+      "text1": "Página aún no existe",
+      "text2": "Lo siento cualquier limitación",
+      "text3": "Para volver al inicio",
+      "click": "¡Haga clic aquí!"
     }
   },
   "form": {

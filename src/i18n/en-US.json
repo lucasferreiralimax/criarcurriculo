@@ -1,23 +1,18 @@
 {
-  "text": {
-    "name1": "Curriculum",
-    "name2": "Free",
-    "message": "This web application is still in constant development.",
-    "text1": "Create your new curriculum quick, easy and free!",
-    "text2": "Fill out the form below ...",
-    "notfound_t1": "Page does not exist yet",
-    "notfound_t2": "Sorry for any embarrassment",
-    "notfound_t3": "To go back to the beginning",
-    "notfound_click": "Click here!"
-  },
   "nav": {
     "home": "Home",
     "about": "About"
   },
-  "actions": {
-    "print": "Print"
-  },
   "view": {
+    "home": {
+      "name1": "Curriculum",
+      "name2": "Free",
+      "message": "This web application is still in constant development.",
+      "text1": "Create your new curriculum quick, easy and free!",
+      "text2": "Fill out the form below ...",
+      "print": "Print",
+      "link_source": "Link source code for the project"
+    },
     "about": {
       "text1": "This web application is a social action and will help you to create a professional, elegant and objective curriculum, totally free!",
       "text2": "Created by a simple boy who even with the difficulties of his daily life, he focused and dedicated his studies to elaborate this project.",
@@ -29,6 +24,12 @@
       "hitech": "Technology",
       "colab": "Contributors",
       "work": "Made with Heart"
+    },
+    "notfound": {
+      "text1": "Page does not exist yet",
+      "text2": "Sorry for any embarrassment",
+      "text3": "To go back to the beginning",
+      "click": "Click here!"
     }
   },
   "form": {

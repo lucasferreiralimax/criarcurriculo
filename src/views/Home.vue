@@ -1,8 +1,8 @@
 <template lang="pug">
   section.content.animate_intro
     .mark.text-center
-      h2 {{ $t('text.text1') }}
-      h2#start {{ $t('text.text2') }}
+      h2 {{ $t('view.home.text1') }}
+      h2#start {{ $t('view.home.text2') }}
     form-curriculo
     render
 </template>

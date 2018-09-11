@@ -1,23 +1,18 @@
 {
-  "text": {
-    "name1": "Curriculo",
-    "name2": "Gratuit",
-    "message": "Cette application web est toujours en développement constant.",
-    "text1": "Créez votre nouveau curriculum rapidement, facilement et gratuitement!",
-    "text2": "Remplissez le formulaire ci-dessous ...",
-    "notfound_t1": "La page n'existe pas encore",
-    "notfound_t2": "Désolé pour toute gêne",
-    "notfound_t3": "Revenir au début",
-    "notfound_click": "Cliquez ici!"
-  },
   "nav": {
     "home": "Commencer",
     "about": "Information"
   },
-  "actions": {
-    "print": "Impression"
-  },
   "view": {
+    "home": {
+      "name1": "Curriculo",
+      "name2": "Gratuit",
+      "message": "Cette application web est toujours en développement constant.",
+      "text1": "Créez votre nouveau curriculum rapidement, facilement et gratuitement!",
+      "text2": "Remplissez le formulaire ci-dessous ...",
+      "print": "Impression",
+      "link_source": "Lien du code source pour le projet"
+    },
     "about": {
       "text1": "Cette application web est une action sociale et vous aidera à créer un programme professionnel, élégant et objectif, totalement gratuit!",
       "text2": "Créé par un simple garçon qui, malgré les difficultés de sa vie quotidienne, s'est concentré et a consacré ses études à élaborer ce projet.",
@@ -29,6 +24,12 @@
       "hitech": "La technologie",
       "colab": "Collaborateurs",
       "work": "Fait avec du coeur"
+    },
+    "notfound": {
+      "text1": "La page n'existe pas encore",
+      "text2": "Désolé pour toute gêne",
+      "text3": "Revenir au début",
+      "click": "Cliquez ici!"
     }
   },
   "form": {

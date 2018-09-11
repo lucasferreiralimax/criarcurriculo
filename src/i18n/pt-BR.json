@@ -1,24 +1,18 @@
 {
-  "text": {
-    "name1": "Curriculo",
-    "name2": "Grátis",
-    "message": "Essa web aplicação ainda está em constante desenvolvimento.",
-    "text1": "Crie seu novo curriculo rápido, fácil e grátis!",
-    "text2": "Preencha o formulário abaixo...",
-    "notfound_t1": "Página ainda não existe",
-    "notfound_t2": "Desculpe qualquer constrangimento",
-    "notfound_t3": "Para voltar para o início",
-    "notfound_click": "Clique aqui!"
-  },
   "nav": {
     "home": "Início",
-    "about": "Informações",
-    "contact": "Contato"
-  },
-  "actions": {
-    "print": "Imprimir"
+    "about": "Informações"
   },
   "view": {
+    "home": {
+      "name1": "Curriculo",
+      "name2": "Grátis",
+      "message": "Essa web aplicação ainda está em constante desenvolvimento.",
+      "text1": "Crie seu novo curriculo rápido, fácil e grátis!",
+      "text2": "Preencha o formulário abaixo...",
+      "print": "Imprimir",
+      "link_source": "Link código fonte do projeto"
+    },
     "about": {
       "text1": "Esse web aplicativo é uma ação social e auxiliará você a criar um curriculo profissional, elegante e objetivo, de uma forma totalmente gratuita!",
       "text2": "Criado por um rapaz simples que mesmo com as dificuldades do seu cotidiano, focou e dedicou seus estudos para elaborar esse projeto.",
@@ -30,6 +24,12 @@
       "hitech": "Tecnologias",
       "colab": "Colaboradores",
       "work": "Feito com Coração"
+    },
+    "notfound": {
+      "text1": "Página ainda não existe",
+      "text2": "Desculpe qualquer constrangimento",
+      "text3": "Para voltar para o início",
+      "click": "Clique aqui!"
     }
   },
   "form": {

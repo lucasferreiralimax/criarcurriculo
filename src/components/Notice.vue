@@ -2,7 +2,7 @@
   section.popup.animate_intro(v-if='notice' @click='close_notice()')
     article.notice
       button(type="button") X
-      p {{ $t('text.message') }}
+      p {{ $t('view.home.message') }}
       .time
     .overlay
 </template>
