@@ -77,9 +77,6 @@ export default new Vuex.Store({
     },
     updateEndLocalidade (state, value) {
       state.user.end.localidade = value
-    },
-    updateThemeApp (state, value) {
-      state.theme_app = value
     }
   }
 })
