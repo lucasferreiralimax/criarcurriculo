@@ -32,6 +32,9 @@ import { mapState } from 'vuex'
 
 export default {
   name: 'theme-app',
+  created () {
+    this.setThemeApp()
+  },
   computed: mapState({ theme_app: state => state.theme_app }),
   data () {
     return {
@@ -40,11 +43,24 @@ export default {
   },
   methods: {
     openThemeApp () { this.isTheme = !this.isTheme },
+    clearBody () { document.querySelector('body').classList = "" },
     updateThemeApp (e) {
-      document.querySelector('body').classList.remove(this.theme_app)
-      this.$store.commit('updateThemeApp', e.target.value)
-      window.localStorage.setItem('theme_app', JSON.stringify(this.theme_app))
+      this.clearBody()
+      localStorage.setItem('theme_app', JSON.stringify(e.target.value))
       document.querySelector('body').classList.add(e.target.value)
+    },
+    setThemeApp () {
+      let theme = localStorage.getItem('theme_app')
+
+      if(!theme) {
+        this.clearBody()
+        document.querySelector('body').classList.add('default')
+        localStorage.setItem('theme_app', 'default')
+      } else {
+        this.clearBody()
+        theme = theme.replace(/"/g, "")
+        document.querySelector('body').classList.add(theme)
+      }
     }
   }
 }

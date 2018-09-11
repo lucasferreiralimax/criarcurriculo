@@ -27,8 +27,7 @@ export default new Vuex.Store({
       email: null,
       exps: [],
       coursers: []
-    },
-    theme_app: 'default'
+    }
   },
   mutations: {
     updateUser (state, value) {
