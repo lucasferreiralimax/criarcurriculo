@@ -3,6 +3,9 @@
   font-weight normal
   padding 40px 0
   text-align center
+  position relative
+  z-index 9
+  pointer-events none
   &.home
     +tablet()
       width 50%
@@ -13,6 +16,7 @@
   font-size 1em
   transition 2s all
   user-select none
+  pointer-events all
   i
     display inline-block
     transition 1s all
@@ -47,6 +51,8 @@
   position relative
   transition .5s all
   width 60px
+  pointer-events all
+  will-change all
   &:after,
   &:before
     box-sizing border-box
@@ -87,5 +93,8 @@
       transition 1s opacity
     &:before
       transition 1.3s all
+    & + .credits
+      letter-spacing 10px
+      transform translateY(10px)
   svg
     filter drop-shadow(0 2px 2px rgba(#fff, .5))

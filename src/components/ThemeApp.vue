@@ -62,6 +62,7 @@ export default {
     position fixed
     width 45px
     z-index 99
+    pointer-events all
     +tablet()
       top 65px
       left auto
