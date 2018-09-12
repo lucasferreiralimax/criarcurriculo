@@ -30,6 +30,18 @@ describe('Validar Idiomas', () => {
     cy.contains('h1', 'Curriculo Gratuit')
     cy.wait(2000)
   })
+  it('Türk', () => {
+    cy.get('#pluralization').click({ force: true })
+    cy.get('#locale').select('tr')
+    cy.contains('h1', 'Müfredat Ücretsiz')
+    cy.wait(2000)
+  })
+  it('中国', () => {
+    cy.get('#pluralization').click({ force: true })
+    cy.get('#locale').select('ch')
+    cy.contains('h1', '课程 信息')
+    cy.wait(2000)
+  })
   it('Português', () => {
     cy.get('#pluralization').click({ force: true })
     cy.get('#locale').select('pt')
