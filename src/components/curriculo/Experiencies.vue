@@ -22,14 +22,14 @@
           // The Company
           label(for="GET-company" v-bind:class="{ error: !exp.experience.name && errors.length }")
             p {{ $t('form.company')}}:
-            input#GET-company(name="company" type="text" placeholder="Nome da empresa ou organização..." v-model="exp.experience.name")
+            input#GET-company(name="company" type="text" :placeholder="$t('form.company_place')" placeholder="" v-model="exp.experience.name")
             p.error-msg(v-show="!exp.experience.name && errors.length") {{ $t('form.errors.company') }}
 
           // Experiência
           // The experience
           label(for="GET-exps" v-bind:class="{ error: !exp.experience.work && errors.length }")
             p {{ $t('form.office')}}:
-            input#GET-exps(name="exps" type="text" placeholder="Título ou cargo..." v-model="exp.experience.work")
+            input#GET-exps(name="exps" type="text" :placeholder="$t('form.office_place')" v-model="exp.experience.work")
             p.error-msg(v-show="!exp.experience.work && errors.length") {{ $t('form.errors.exp') }}
 
           // Data da experiência
@@ -46,7 +46,7 @@
           // The exps About
           label(for="GET-expsabout" v-bind:class="{ error: !exp.experience.about && errors.length }")
             p {{ $t('form.about')}}:
-            textarea#GET-expsabout(ref="GET_expsabout" placeholder="Atividades do serviço..." @input="updatetextAreaHeight(key)" v-model="exp.experience.about")
+            textarea#GET-expsabout(ref="GET_expsabout" :placeholder="$t('form.activities_place')" placeholder="" @input="updatetextAreaHeight(key)" v-model="exp.experience.about")
             p.error-msg(v-show="!exp.experience.about && errors.length") {{ $t('form.errors.about') }}
 </template>
 

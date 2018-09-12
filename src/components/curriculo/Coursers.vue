@@ -22,14 +22,14 @@
           // The School
           label(for="GET-school" v-bind:class="{ error: !course.formation.school && errors.length }")
             p {{ $t('form.school')}}:
-            input#GET-school(name="school" type="text" placeholder="Escola, cursos, workshops..." v-model="course.formation.school")
+            input#GET-school(name="school" type="text" :placeholder="$t('form.school_place')" v-model="course.formation.school")
             p.error-msg(v-show="!course.formation.school && errors.length") {{ $t('form.errors.scholl') }}
 
           // Curso
           // The Course
           label(for="GET-course" v-bind:class="{ error: !course.formation.name && errors.length }")
             p {{ $t('form.course')}}:
-            input#GET-course(name="course" type="text" placeholder="Nome do curso..." v-model='course.formation.name')
+            input#GET-course(name="course" type="text" :placeholder="$t('form.course_place')" v-model='course.formation.name')
             p.error-msg(v-show="!course.formation.name && errors.length") {{ $t('form.errors.course') }}
           // Data do curso
           // The Course data
@@ -45,7 +45,7 @@
           // The Course About
           label(for="GET-courseabout" v-bind:class="{ error: !course.formation.about && errors.length }")
             p {{ $t('form.about')}}:
-            textarea#GET-courseabout(ref="GET_courseabout" placeholder="Atividades ou grade curricular..." v-model="course.formation.about" @input="updatetextAreaHeight(key)")
+            textarea#GET-courseabout(ref="GET_courseabout" :placeholder="$t('form.about_course_place')" v-model="course.formation.about" @input="updatetextAreaHeight(key)")
             p.error-msg(v-show="!course.formation.about && errors.length") {{ $t('form.errors.about') }}
 </template>
 

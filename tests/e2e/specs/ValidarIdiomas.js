@@ -1,4 +1,4 @@
-describe('Validar Idiomas', () => {
+describe('Validar titulo nos Idiomas', () => {
   it('Espanhol', () => {
     cy.get('#app').scrollIntoView()
     cy.get('#pluralization').click({ force: true })
