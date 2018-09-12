@@ -127,6 +127,9 @@ Vue.mixin({
 export default {
   name: 'form-curriculo',
   computed: mapState({ user: state => state.user }),
+  created () {
+    this.setLocalStore()
+  },
   mounted () { document.querySelector('.footer').classList.add('home') },
   destroyed () { document.querySelector('.footer').classList.remove('home') },
   data () {
@@ -137,6 +140,18 @@ export default {
   },
   methods: {
     toggleBox (e) { e.target.parentElement.classList.toggle('active') },
+    setLocalStore () {
+      let store = localStorage.getItem('store')
+
+      if(!store) {
+        console.log("store clear")
+      } else {
+        store = JSON.parse(store)
+        console.log(store)
+        this.$store.commit("updateUser", store)
+        console.log("store update")
+      }
+    },
     updateVuex (name, e) {
       if(name == 'updateTravel') {
         this.$store.commit(name, e.target.checked)
