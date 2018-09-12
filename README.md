@@ -42,6 +42,20 @@
 > L'application a été développée avec plusieurs composants interactifs avec des transitions et des animations riches en fonctionnalités.
 > Avec une interface totalement adaptable et réactive à la taille de l'écran de l'appareil utilisé.
 
+#### Müfredat ücretsiz
+> Bu web uygulaması, hızlı, kolay ve ücretsiz bir müfredat oluşturmak için ihtiyaç duyan herkese yardımcı olmayı amaçlamaktadır.
+> Özgeçmişinizi yaratma şeklinizi kolaylaştırmak için tasarlanan bir kullanılabilirlik ile.
+>
+> Uygulama geçişler ve animasyonlar, kullanılabilirlik açısından zengin çeşitli etkileşimli bileşenleri ile geliştirilmiştir.
+> Kullanılan cihazın ekran boyutuna tamamen uyarlanabilir ve tepki veren bir arabirim.
+
+#### 课程免费
+>此Web应用程序旨在帮助所有需要创建课程的人，快速，轻松和免费。
+>通过简单易用的方式促进您创建简历的方式。
+>
+>该应用程序是使用具有过渡和动画的多个交互式组件开发的，具有丰富的可用性。
+>界面完全适应和反应所用设备的屏幕尺寸。
+
 
 ## :cloud: Link's
 > Yo, ho, yo, ho :checkered_flag:
@@ -79,6 +93,16 @@
 >
 > Rédigé pour différentes langues, aidez à améliorer nos traductions
 
+#### Ayrıca yardım edin
+> Bir hata bulursanız veya projeye bir fikir katmak istiyorsanız, bir  oluşturun [sorun](https://github.com/lucasferreiralimax/curriculogratis/issues/new), Yardımınız büyük ölçüde takdir edilecektir.
+>
+> Farklı diller için yazılmış, çevirilerimizi geliştirmeye yardımcı olun
+
+#### 帮助也
+>如果您发现错误或想要为项目提供想法，请创建 [问题](https://github.com/lucasferreiralimax/curriculogratis/issues/new)，我们将非常感谢您的帮助。
+>
+>针对不同语言编写，有助于改进我们的翻译
+
 ## :headphones: Iniciando
 > Após clonar o projeto em sua máquina ira precisar ter instalado o [Node.js](https://nodejs.org) em sua máquina.
 >
@@ -109,6 +133,16 @@
 >
 > Ouvrez le terminal ou cmd et exécutez les commandes suivantes pour installer et démarrer le projet.
 
+#### Başlangıç
+> Projeyi makinenizde klonladıktan sonra makinenizde [Node.js](https://nodejs.org) olması gerekir.
+>
+> Terminali veya cmd'yi açın ve projeyi kurmak ve başlatmak için aşağıdaki komutları çalıştırın.
+
+#### 开始
+>在计算机上克隆项目后，您需要在计算机上安装 [Node.js](https://nodejs.org)。
+>
+>打开终端或cmd并运行以下命令以安装和启动项目。
+
 ``` bash
 # install dependencies
 npm install
@@ -128,6 +162,8 @@ yarn serve
 #### С кем вы можете поговорить о проекте?
 #### 誰がプロジェクトについて話すことができますか？
 #### À qui pouvez-vous parler du projet?
+#### Projeyle ilgili kim konuşabilirsin?
+#### 你能谈谈这个项目吗？
 
 * :ghost: @lucasferreiralimax
 * :email: lucasferreiralimax@gmail.com

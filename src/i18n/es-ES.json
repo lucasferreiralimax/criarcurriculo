@@ -102,7 +102,9 @@
     "es": "Español",
     "ru": "Ruso",
     "ja": "Japonés",
-    "fr": "Francés"
+    "fr": "Francés",
+    "tr": "Turco",
+    "ch": "Chino"
   },
   "themes": {
     "default": "Estándar",

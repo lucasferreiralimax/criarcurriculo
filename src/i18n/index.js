@@ -7,6 +7,8 @@ import en from './en-US.json'
 import ru from './ru-RU.json'
 import jp from './ja-JP.json'
 import fr from './fr-FR.json'
+import tr from './tr-TR.json'
+import ch from './ch-ZH.json'
 
 Vue.use(VueI18n)
 
@@ -16,7 +18,9 @@ const messages = {
   'en': en,
   'ru': ru,
   'ja': jp,
-  'fr': fr
+  'fr': fr,
+  'tr': tr,
+  'ch': ch
 }
 
 const i18n = new VueI18n({
