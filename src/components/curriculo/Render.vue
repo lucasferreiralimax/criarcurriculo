@@ -8,31 +8,31 @@
         span(v-if="user.maritalstatus")  {{ user.maritalstatus }}
       p(v-if="user.end.logradouro") Endereço: {{ user.end.logradouro }}, {{ user.addressNumber }}{{ user.addressNumber ? ',' : '' }} {{ user.end.localidade }} - {{ user.end.uf }} - {{ user.cep }}
       p(v-if="user.travel") {{ user.travel ? $t('form.travel') : '' }}
-      h2(v-if="user.about") {{ $t('form.about_me')}}
+      h2(v-if="user.about") {{ $t('form.about_me') }}
       p(v-if="user.about")
         pre {{ user.about }}
       h2(v-if="user.coursers[0]") {{ $t('form.cademy')}}
       .coursers(v-for="(course, key, index) in user.coursers")
-        p(v-if="course.formation.school") {{ $t('form.school')}}: {{ course.formation.school }}
+        p(v-if="course.formation.school") {{ $t('form.school') }}: {{ course.formation.school }}
         p(v-if="course.formation.name") {{ course.formation.name }}
         p(v-if="course.formation.about")
           pre {{ $t('form.activities') }}: {{ course.formation.about }}
-        p(v-if="course.formation.data_start") {{ course.formation.data_start | dateFormat }} {{ course.formation.data_end ? 'até' : '' }} {{ course.formation.data_end | dateFormat }}
-        p(v-if="course.formation.now") {{ course.formation.now ? 'Cursando' : '' }}
+        p(v-if="course.formation.data_start") {{ course.formation.data_start | dateFormat }} {{ course.formation.data_end ? $t('form.to') : '' }} {{ course.formation.data_end | dateFormat }}
+        p(v-if="course.formation.now") {{ course.formation.now ? $t('form.cademy_now') : '' }}
         hr
       h2(v-if="user.exps[0]") {{ $t('form.exp')}}
       .experiencies(v-for="(exp, key, index) in user.exps")
-        p(v-if="exp.experience.name") {{ $t('form.company')}}: {{ exp.experience.name }}
-        p(v-if="exp.experience.work") {{ $t('form.office')}}: {{ exp.experience.work }}
+        p(v-if="exp.experience.name") {{ $t('form.company') }}: {{ exp.experience.name }}
+        p(v-if="exp.experience.work") {{ $t('form.office') }}: {{ exp.experience.work }}
         p(v-if="exp.experience.about")
           pre {{ exp.experience.about }}
-        p(v-if="exp.experience.data_start && exp.experience.now") {{ $t('form.from')}} {{ exp.experience.data_start | dateFormat }}
-        p(v-if="exp.experience.data_start && !exp.experience.now") {{ $t('form.from')}} {{ exp.experience.data_start | dateFormat }} {{ exp.experience.data_end ? $t('form.to') : '' }} {{ exp.experience.data_end | dateFormat}}
-        p(v-if="exp.experience.now") {{ exp.experience.now ? 'Atual' : '' }}
+        p(v-if="exp.experience.data_start && exp.experience.now") {{ $t('form.from') }} {{ exp.experience.data_start | dateFormat }}
+        p(v-if="exp.experience.data_start && !exp.experience.now") {{ $t('form.from') }} {{ exp.experience.data_start | dateFormat }} {{ exp.experience.data_end ? $t('form.to') : '' }} {{ exp.experience.data_end | dateFormat}}
+        p(v-if="exp.experience.now") {{ exp.experience.now ? $t('form.exp_now') : '' }}
         hr
-      h2(v-if="user.telephone || user.email") {{ $t('form.contact')}}
-      p(v-if="user.telephone") {{ $t('form.phone')}}: {{ user.telephone }}
-      p(v-if="user.email") {{ $t('form.email')}}: {{ user.email }}
+      h2(v-if="user.telephone || user.email") {{ $t('form.contact') }}
+      p(v-if="user.telephone") {{ $t('form.phone') }}: {{ user.telephone }}
+      p(v-if="user.email") {{ $t('form.email') }}: {{ user.email }}
       hr
 </template>
 
