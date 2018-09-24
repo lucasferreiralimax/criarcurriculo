@@ -8,6 +8,7 @@ label.btn.large.theme_app(for="theme_app" :class="{ 'active' : isTheme}")
       option(value="cinza") {{ $t('themes.grey')}}
       option(value="classic") {{ $t('themes.classic')}}
       option(value="gold") {{ $t('themes.gold')}}
+      option(value="red") {{ $t('themes.red')}}
       option(value="full") {{ $t('themes.full')}}
   button.icon#openTheme(type="button" @click="openThemeApp")
     svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.953 54.953" width="29" height="29" fill="#fff")
