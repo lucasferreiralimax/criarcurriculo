@@ -155,6 +155,9 @@ export default {
     updateVuex (name, e) {
       if(name == 'updateTravel') {
         this.$store.commit(name, e.target.checked)
+      } else if(name == 'updateGenero') {
+        this.$store.commit(name, e.target.value)
+        this.$store.commit('updateMaritalStatus', '')
       } else {
         this.$store.commit(name, e.target.value)
       }
