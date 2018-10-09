@@ -23,8 +23,8 @@ export default new Vuex.Store({
       travel: false,
       about: null,
       genero: '',
-      telephone: null,
-      email: null,
+      telephones: [null],
+      emails: [null],
       exps: [],
       coursers: []
     }

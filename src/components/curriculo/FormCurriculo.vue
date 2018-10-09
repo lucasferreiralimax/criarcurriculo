@@ -77,16 +77,24 @@ form#curriculo(:class="{ renderActive: user.name}")
       .flexbox
         // Telefone
         // Phone
-        label(for="GET-telephone" v-bind:class="{ error: !user.telephone && errors.length }")
+        label(v:for="'GET-telephone-'+ key" v-bind:class="{ error: !user.telephones[key] && errors.length }" v-for="(telephone, key, index) in user.telephones")
           p {{ $t('form.phone') }}:
-          input#GET-telephone(name="telephone" type="number" placeholder="(011)00000-0000" maxlength="15" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" :value="user.telephone" @input="updateVuex('updateTelephone', $event)")
-          p.error-msg(v-show="!user.telephone && errors.length") {{ $t('form.errors.phone') }}
+          input(:id="'GET-telephone'+ key" v:name="'telephone-'+ key" type="number" placeholder="(011)00000-0000" maxlength="15" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" :value="user.telephones[key]" @input="updateVuex('updateTelephone', $event)")
+          p.error-msg(v-show="!user.telephones[key] && errors.length") {{ $t('form.errors.phone') }}
+          button.btn.delete.right.bullet(type="button" @click="removeTelephone(key)")
+            i -
+          button.btn.plus.right.bullet(type="button" @click="newTelephone(key)" v-scroll-to="'#GET-telephone-' + index")
+            i +
         // Email
         // The E-mail
-        label(for="GET-email" v-bind:class="{ error: !user.email && errors.length }")
+        label(v:for="'GET-email'+ key" v-bind:class="{ error: !user.email && errors.length }" v-for="(email, key, index) in user.emails")
           p {{ $t('form.email') }}:
-          input#GET-email(name="email" type="email" :placeholder="$t('form.email_place')" :value="user.email" @input="updateVuex('updateEmail', $event)")
-          p.error-msg(v-show="!user.email && errors.length") {{ $t('form.errors.email') }}
+          input(:id="'GET-email'+ key" v:name="'email'+ key" type="email" :placeholder="$t('form.email_place')" :value="user.emails[key]" @input="updateVuex('updateEmail', $event)")
+          p.error-msg(v-show="!user.emails[key] && errors.length") {{ $t('form.errors.email') }}
+          button.btn.delete.right.bullet(type="button" @click="removeEmail(key)")
+            i -
+          button.btn.plus.right.bullet(type="button" @click="newEmail(key)" v-scroll-to="'#GET-email-' + index")
+            i +
   // Cursos
   // Coursers
   coursers-data(v-bind:errors="errors")
@@ -162,18 +170,26 @@ export default {
       }
       window.localStorage.setItem('store', JSON.stringify(this.user))
     },
+    removeTelephone (key) { this.$delete(this.user.telephones, key) },
+    newTelephone (key = -1) {
+      this.user.telephones.push(null)
+    },
+    removeEmail (key) { this.$delete(this.user.emails, key) },
+    newEmail (key = -1) {
+      this.user.emails.push(null)
+    },
     printRender () {
       this.errors = []
       if (!this.user.age) { this.errors.push('Precisa preencher o campo data de nascimento.') }
       if (!this.user.cep) { this.errors.push('Precisa preencher o campo cep.') }
-      if (!this.user.email) { this.errors.push('Precisa preencher o campo de email.') }
+      // if (!this.user.email) { this.errors.push('Precisa preencher o campo de email.') }
       if (!this.user.end.localidade) { this.errors.push('Precisa preencher o campo localidade.') }
       if (!this.user.end.logradouro) { this.errors.push('Precisa preencher o campo logradouro.') }
       if (!this.user.genero) {this.errors.push('Precisa colocar seu genero.') }
       if (!this.user.maritalstatus) { this.errors.push('Precisa colocar seu estado civil.') }
       if (!this.user.name) { this.errors.push('Precisa preencher o campo nome.') }
-      if (!this.user.telephone) { this.errors.push('Precisa preencher o campo de telefone.') }
-      if (!this.user.telephone) { this.errors.push('Precisa preencher o campo de telefone.') }
+      // if (!this.user.telephone) { this.errors.push('Precisa preencher o campo de telefone.') }
+      // if (!this.user.telephone) { this.errors.push('Precisa preencher o campo de telefone.') }
       if (this.user.exps.length) {
         for(let i = 0; this.user.exps.length > i; i++) {
           if (!this.user.exps[i].experience.name) { this.errors.push('Precisa preencher o campo nome da empresa') }
