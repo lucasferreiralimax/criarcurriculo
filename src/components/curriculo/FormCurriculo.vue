@@ -38,7 +38,6 @@ form#curriculo(:class="{ renderActive: user.name}")
         label(for="GET-about" v-bind:class="{ error: !user.about && errors.length }")
           p {{ $t('form.about_me') }}:
           textarea#GET-about(ref="GET_about" :placeholder="$t('form.about_place')" :value="user.about" @input="updatetextAreaHeight, updateVuex('updateAbout', $event)")
-          p.error-msg(v-show="!user.about && errors.length") {{ $t('form.errors.about') }}
   .box.active
     fieldset
       legend(@click='toggleBox($event)') {{ $t('form.end') }}
@@ -179,18 +178,12 @@ export default {
         for(let i = 0; this.user.exps.length > i; i++) {
           if (!this.user.exps[i].experience.name) { this.errors.push('Precisa preencher o campo nome da empresa') }
           if (!this.user.exps[i].experience.work) { this.errors.push('Precisa preencher o campo nome do cargo') }
-          if (!this.user.exps[i].experience.data_start) { this.errors.push('Precisa preencher a data de inicio') }
-          if (!this.user.exps[i].experience.data_end) { this.errors.push('Precisa preencher a data de fim') }
-          if (!this.user.exps[i].experience.about) { this.errors.push('Precisa preencher o campo sobre a experiência') }
         }
       }
       if (this.user.coursers.length) {
         for(let i = 0; this.user.coursers.length > i; i++) {
           if (!this.user.coursers[i].formation.name) { this.errors.push('Precisa preencher o campo nome da instituição') }
           if (!this.user.coursers[i].formation.school) { this.errors.push('Precisa preencher o campo nome do curso') }
-          if (!this.user.coursers[i].formation.data_start) { this.errors.push('Precisa preencher a data de inicio') }
-          if (!this.user.coursers[i].formation.data_end) { this.errors.push('Precisa preencher a data de fim') }
-          if (!this.user.coursers[i].formation.about) { this.errors.push('Precisa preencher o campo sobre as atividades') }
         }
       }
       if(!this.errors.length) {

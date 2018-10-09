@@ -34,20 +34,18 @@
 
           // Data da experiência
           // The experience data
-          label(for="GET-expsdata" v-bind:class="{ error: !exp.experience.data_start && errors.length }")
+          label(for="GET-expsdata")
             p {{ $t('form.start')}}:
             input#GET-expsdata-start(name="expsdata-start" type="date" placeholder="00/00/0000" v-model="exp.experience.data_start")
-            p.error-msg(v-show="!exp.experience.data_start && errors.length") {{ $t('form.errors.data_start') }}
-          label(for="GET-expsdata" v-bind:class="{ error: !exp.experience.data_end && errors.length && !exp.experience.now }")
+            //p.error-msg(v-show="!exp.experience.data_start && errors.length") {{ $t('form.errors.data_start') }}
+          label(for="GET-expsdata")
             p(v-show="!exp.experience.now") {{ $t('form.finish')}}:
             input#GET-expsdata-finish(name="expsdata-finish" type="date" placeholder="00/00/0000" v-model="exp.experience.data_end" v-show="!exp.experience.now")
-            p.error-msg(v-show="!exp.experience.data_end && errors.length && !exp.experience.now") {{ $t('form.errors.data_end') }}
           // Sobre a experiência
           // The exps About
           label(for="GET-expsabout" v-bind:class="{ error: !exp.experience.about && errors.length }")
             p {{ $t('form.about')}}:
             textarea#GET-expsabout(ref="GET_expsabout" :placeholder="$t('form.activities_place')" placeholder="" @input="updatetextAreaHeight(key)" v-model="exp.experience.about")
-            p.error-msg(v-show="!exp.experience.about && errors.length") {{ $t('form.errors.about') }}
 </template>
 
 <script>

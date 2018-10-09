@@ -22,7 +22,7 @@
           // The School
           label(for="GET-school" v-bind:class="{ error: !course.formation.school && errors.length }")
             p {{ $t('form.school')}}:
-            input#GET-school(name="school" type="text" :placeholder="$t('form.school_place')" v-model="course.formation.school")
+            input#GET-school(name="school" type="text" :placeholder="$t('form.school_place')" v-model="course.formation.school" @input="updateVuex('updateCoursers')")
             p.error-msg(v-show="!course.formation.school && errors.length") {{ $t('form.errors.scholl') }}
 
           // Curso
@@ -33,20 +33,17 @@
             p.error-msg(v-show="!course.formation.name && errors.length") {{ $t('form.errors.course') }}
           // Data do curso
           // The Course data
-          label(for="GET-coursedata" v-bind:class="{ error: !course.formation.data_start && errors.length }")
+          label(for="GET-coursedata")
             p {{ $t('form.start')}}:
             input#GET-coursedata-start(name="coursedata-start" type="date" placeholder="00/00/0000" v-model="course.formation.data_start")
-            p.error-msg(v-show="!course.formation.data_start && errors.length") {{ $t('form.errors.data_start') }}
-          label(for="GET-coursedata" v-bind:class="{ error: !course.formation.data_end && errors.length }")
+          label(for="GET-coursedata")
             p {{ $t('form.finish')}}:
             input#GET-coursedata-finish(name="coursedata-finish" type="date" placeholder="00/00/0000" v-model="course.formation.data_end")
-            p.error-msg(v-show="!course.formation.data_end && errors.length") {{ $t('form.errors.data_end') }}
           // Sobre o curso
           // The Course About
           label(for="GET-courseabout" v-bind:class="{ error: !course.formation.about && errors.length }")
             p {{ $t('form.about')}}:
             textarea#GET-courseabout(ref="GET_courseabout" :placeholder="$t('form.about_course_place')" v-model="course.formation.about" @input="updatetextAreaHeight(key)")
-            p.error-msg(v-show="!course.formation.about && errors.length") {{ $t('form.errors.about') }}
 </template>
 
 <script>
@@ -64,8 +61,8 @@ export default {
   methods: {
     toggleBox (e) { e.target.parentElement.classList.toggle('active') },
     updatetextAreaHeight (key) { this.$refs.GET_courseabout[key].style.height = this.$refs.GET_courseabout[key].scrollHeight + 'px' },
-    updateVuex (name, e) {
-      this.$store.commit(name, e.target.value)
+    updateVuex (name) {
+      this.$store.commit(name, this.user.coursers)
       window.localStorage.setItem('store', JSON.stringify(this.user))
     },
     removeComponent (key) { this.$delete(this.user.coursers, key) },
