@@ -171,11 +171,11 @@ export default {
       window.localStorage.setItem('store', JSON.stringify(this.user))
     },
     removeTelephone (key) { this.$delete(this.user.telephones, key) },
-    newTelephone (key = -1) {
+    newTelephone () {
       this.user.telephones.push(null)
     },
     removeEmail (key) { this.$delete(this.user.emails, key) },
-    newEmail (key = -1) {
+    newEmail () {
       this.user.emails.push(null)
     },
     printRender () {
