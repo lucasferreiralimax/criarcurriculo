@@ -77,7 +77,7 @@ form#curriculo(:class="{ renderActive: user.name}")
       .flexbox
         // Telefone
         // Phone
-        label(v:for="'GET-telephone-'+ key" v-bind:class="{ error: !user.telephones[key] && errors.length }" v-for="(telephone, key, index) in user.telephones")
+        label.input__contato(v:for="'GET-telephone-'+ key" v-bind:class="{ error: !user.telephones[key] && errors.length }" v-for="(telephone, key, index) in user.telephones")
           p {{ $t('form.phone') }}:
           input(:id="'GET-telephone'+ key" v:name="'telephone-'+ key" type="number" placeholder="(011)00000-0000" maxlength="15" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" :value="user.telephones[key]" @input="updateVuex('updateTelephone', $event)")
           p.error-msg(v-show="!user.telephones[key] && errors.length") {{ $t('form.errors.phone') }}
@@ -87,7 +87,7 @@ form#curriculo(:class="{ renderActive: user.name}")
             i +
         // Email
         // The E-mail
-        label(v:for="'GET-email'+ key" v-bind:class="{ error: !user.email && errors.length }" v-for="(email, key, index) in user.emails")
+        label.input__contato(v:for="'GET-email'+ key" v-bind:class="{ error: !user.email && errors.length }" v-for="(email, key, index) in user.emails")
           p {{ $t('form.email') }}:
           input(:id="'GET-email'+ key" v:name="'email'+ key" type="email" :placeholder="$t('form.email_place')" :value="user.emails[key]" @input="updateVuex('updateEmail', $event)")
           p.error-msg(v-show="!user.emails[key] && errors.length") {{ $t('form.errors.email') }}
@@ -182,14 +182,11 @@ export default {
       this.errors = []
       if (!this.user.age) { this.errors.push('Precisa preencher o campo data de nascimento.') }
       if (!this.user.cep) { this.errors.push('Precisa preencher o campo cep.') }
-      // if (!this.user.email) { this.errors.push('Precisa preencher o campo de email.') }
       if (!this.user.end.localidade) { this.errors.push('Precisa preencher o campo localidade.') }
       if (!this.user.end.logradouro) { this.errors.push('Precisa preencher o campo logradouro.') }
       if (!this.user.genero) {this.errors.push('Precisa colocar seu genero.') }
       if (!this.user.maritalstatus) { this.errors.push('Precisa colocar seu estado civil.') }
       if (!this.user.name) { this.errors.push('Precisa preencher o campo nome.') }
-      // if (!this.user.telephone) { this.errors.push('Precisa preencher o campo de telefone.') }
-      // if (!this.user.telephone) { this.errors.push('Precisa preencher o campo de telefone.') }
       if (this.user.exps.length) {
         for(let i = 0; this.user.exps.length > i; i++) {
           if (!this.user.exps[i].experience.name) { this.errors.push('Precisa preencher o campo nome da empresa') }

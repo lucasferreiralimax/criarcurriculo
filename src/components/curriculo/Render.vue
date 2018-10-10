@@ -31,8 +31,8 @@
         p(v-if="exp.experience.now") {{ exp.experience.now ? $t('form.exp_now') : '' }}
         hr
       h2(v-if="user.telephone || user.email") {{ $t('form.contact') }}
-      p(v-if="user.telephone") {{ $t('form.phone') }}: {{ user.telephone }}
-      p(v-if="user.email") {{ $t('form.email') }}: {{ user.email }}
+      p(v-if="user.telephones" v-for="(telephone, key, index) in user.telephones") {{ $t('form.phone') }}: {{ telephone }}
+      p(v-if="user.emails" v-for="(email, key, index) in user.emails") {{ $t('form.email') }}: {{ email }}
       hr
 </template>
 
