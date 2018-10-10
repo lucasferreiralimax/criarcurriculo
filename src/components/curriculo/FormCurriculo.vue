@@ -81,9 +81,9 @@ form#curriculo(:class="{ renderActive: user.name}")
           p {{ $t('form.phone') }}:
           input(:id="'GET-telephone'+ key" v:name="'telephone-'+ key" type="number" placeholder="(011)00000-0000" maxlength="15" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" :value="user.telephones[key]" @input="updateVuex('updateTelephone', $event)")
           p.error-msg(v-show="!user.telephones[key] && errors.length") {{ $t('form.errors.phone') }}
-          button.btn.delete.right.bullet(type="button" @click="removeTelephone(key)")
+          button.btn.delete.right.bullet.small(type="button" @click="removeTelephone(key)")
             i -
-          button.btn.plus.right.bullet(type="button" @click="newTelephone(key)" v-scroll-to="'#GET-telephone-' + index")
+          button.btn.plus.right.bullet.small(type="button" @click="newTelephone(key)" v-scroll-to="'#GET-telephone-' + index")
             i +
         // Email
         // The E-mail
@@ -91,9 +91,9 @@ form#curriculo(:class="{ renderActive: user.name}")
           p {{ $t('form.email') }}:
           input(:id="'GET-email'+ key" v:name="'email'+ key" type="email" :placeholder="$t('form.email_place')" :value="user.emails[key]" @input="updateVuex('updateEmail', $event)")
           p.error-msg(v-show="!user.emails[key] && errors.length") {{ $t('form.errors.email') }}
-          button.btn.delete.right.bullet(type="button" @click="removeEmail(key)")
+          button.btn.delete.right.bullet.small(type="button" @click="removeEmail(key)")
             i -
-          button.btn.plus.right.bullet(type="button" @click="newEmail(key)" v-scroll-to="'#GET-email-' + index")
+          button.btn.plus.right.bullet.small(type="button" @click="newEmail(key)" v-scroll-to="'#GET-email-' + index")
             i +
   // Cursos
   // Coursers
