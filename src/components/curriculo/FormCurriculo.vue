@@ -263,8 +263,10 @@ export default {
         exps: [],
         coursers: []
       }
-      this.$store.commit('updateUser', user)
-      window.localStorage.setItem('store', JSON.stringify(user))
+      if(window.confirm("Tem certeza?")) {
+        this.$store.commit('updateUser', user)
+        window.localStorage.setItem('store', JSON.stringify(user))
+      }
     },
     printRender () {
       this.errors = []
