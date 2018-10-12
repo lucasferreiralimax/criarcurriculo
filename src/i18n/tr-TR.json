@@ -35,6 +35,7 @@
   "form": {
     "h1": "Kişisel Bilgiler",
     "name": "Tam ad:",
+    "photo": "Fotoğraf:",
     "name_place": "Tam adınızı doldurun...",
     "genre": "Tür:",
     "marital_status": "Medeni durum",

@@ -35,6 +35,7 @@
   "form": {
     "h1": "Personal data",
     "name": "Full name:",
+    "photo": "Photo:",
     "name_place": "Fill in your full name...",
     "genre": "Genre:",
     "marital_status": "Marital Status",

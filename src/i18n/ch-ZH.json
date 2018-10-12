@@ -35,6 +35,7 @@
   "form": {
     "h1": "个人信息",
     "name": "全名：",
+    "photo": "照片：",
     "name_place": "填写你的全名...",
     "genre": "类型：",
     "marital_status": "婚姻状况",

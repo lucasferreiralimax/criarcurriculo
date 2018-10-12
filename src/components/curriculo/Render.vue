@@ -1,12 +1,14 @@
 <template lang="pug">
   section.render(v-if="user.name" :class="{ 'viewfixed' : viewfixed }" @click="viewMore")
     .view(:class="{ 'viewless' : viewless, 'viewblocked' : viewblocked }")
-      h1
-        label {{ user.name }}
+      img(:src="user.photo" :alt="user.name" width="100" v-if="user.photo")
+      .info
+        h1
+          label {{ user.name }}
+        p(v-if="user.maritalstatus") {{ user.age }} {{ user.age ? 'anos ' : '' }}
+          span(v-if="user.maritalstatus")  {{ user.maritalstatus }}
+        p(v-if="user.end.logradouro") {{ user.end.logradouro }}, {{ user.addressNumber }}{{ user.addressNumber ? ',' : '' }} {{ user.end.localidade }} - {{ user.end.uf }} - {{ user.cep }}
       hr
-      p(v-if="user.maritalstatus") {{ user.age }} {{ user.age ? 'anos ' : '' }}
-        span(v-if="user.maritalstatus")  {{ user.maritalstatus }}
-      p(v-if="user.end.logradouro") Endereço: {{ user.end.logradouro }}, {{ user.addressNumber }}{{ user.addressNumber ? ',' : '' }} {{ user.end.localidade }} - {{ user.end.uf }} - {{ user.cep }}
       p(v-if="user.travel") {{ user.travel ? $t('form.travel') : '' }}
       h2(v-if="user.about") {{ $t('form.about_me') }}
       p(v-if="user.about")
@@ -30,7 +32,7 @@
         p(v-if="exp.experience.data_start && !exp.experience.now") {{ $t('form.from') }} {{ exp.experience.data_start | dateFormat }} {{ exp.experience.data_end ? $t('form.to') : '' }} {{ exp.experience.data_end | dateFormat}}
         p(v-if="exp.experience.now") {{ exp.experience.now ? $t('form.exp_now') : '' }}
         hr
-      h2(v-if="user.telephone || user.email") {{ $t('form.contact') }}
+      h2(v-if="user.telephones || user.emails") {{ $t('form.contact') }}
       p(v-if="user.telephones" v-for="(telephone, key, index) in user.telephones") {{ $t('form.phone') }}: {{ telephone }}
       p(v-if="user.emails" v-for="(email, key, index) in user.emails") {{ $t('form.email') }}: {{ email }}
       hr

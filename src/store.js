@@ -7,6 +7,7 @@ export default new Vuex.Store({
   state: {
     user: {
       name: 'Lucas Lima',
+      photo: '',
       age: null,
       countrystatus: '',
       cep: null,
@@ -36,6 +37,9 @@ export default new Vuex.Store({
     updateName (state, value) {
       state.user.name = value
     },
+    updatePhoto (state, value) {
+      state.user.photo = value
+    },
     updateAge (state, value) {
       state.user.age = value
     },
@@ -55,10 +59,10 @@ export default new Vuex.Store({
       state.user.about = value
     },
     updateTelephone (state, value) {
-      state.user.telephone = value
+      state.user.telephones = value
     },
     updateEmail (state, value) {
-      state.user.email = value
+      state.user.emails = value
     },
     updateExps (state, value) {
       state.user.exps = value

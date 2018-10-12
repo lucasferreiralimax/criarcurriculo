@@ -11,27 +11,33 @@ form#curriculo(:class="{ renderActive: user.name}")
           p {{ $t('form.name') }}
           input#GET-name(name="name" type="text" :placeholder="$t('form.name_place')" :value="user.name" @input="updateVuex('updateName', $event)")
           p.error-msg(v-show="!user.name && errors.length") {{ $t('form.errors.name') }}
+        // Foto
+        // Photo
+        label(for="GET-photo")
+          p {{ $t('form.photo') }}
+          input#GET-photo(name="photo" type="file" @input="setImage($event)")
 
         // Gênero
         // Genre
-        label(for="GET-genero" v-bind:class="{ error: !user.genero && errors.length }")
-          p {{ $t('form.genre')}}
-          select#GET-genero(name='genero' :value="user.genero" @input="updateVuex('updateGenero', $event)")
-            option(value='') {{ $t('form.select_genre') }}
-            option(value='m') {{ $t('form.woman') }}
-            option(value='h') {{ $t('form.man') }}
-          p.error-msg(v-show="!user.genero && errors.length") {{ $t('form.errors.genre') }}
+        .flexbox
+          label(for="GET-genero" v-bind:class="{ error: !user.genero && errors.length }")
+            p {{ $t('form.genre')}}
+            select#GET-genero(name='genero' :value="user.genero" @input="updateVuex('updateGenero', $event)")
+              option(value='') {{ $t('form.select_genre') }}
+              option(value='m') {{ $t('form.woman') }}
+              option(value='h') {{ $t('form.man') }}
+            p.error-msg(v-show="!user.genero && errors.length") {{ $t('form.errors.genre') }}
+          // Data de nascimento
+          // Data of birth
+          label(for="GET-dataofbirth" v-bind:class="{ error: !user.age && errors.length }")
+            p {{ $t('form.born') }}
+            input#GET-dataofbirth(name="dataofbirth" type="number" min="13" :value="user.age" @input="updateVuex('updateAge', $event)")
+            p.error-msg(v-show="!user.age && errors.length") {{ $t('form.errors.age') }}
 
         // Estado Civil
         // Maristals
         select-maritals(v-bind:errors="errors")
 
-        // Data de nascimento
-        // Data of birth
-        label(for="GET-dataofbirth" v-bind:class="{ error: !user.age && errors.length }")
-          p {{ $t('form.born') }}
-          input#GET-dataofbirth(name="dataofbirth" type="number" min="13" :value="user.age" @input="updateVuex('updateAge', $event)")
-          p.error-msg(v-show="!user.age && errors.length") {{ $t('form.errors.age') }}
 
         // Sobre
         // About
@@ -79,7 +85,7 @@ form#curriculo(:class="{ renderActive: user.name}")
         // Phone
         label.input__contato(v:for="'GET-telephone-'+ key" v-bind:class="{ error: !user.telephones[key] && errors.length }" v-for="(telephone, key, index) in user.telephones")
           p {{ $t('form.phone') }}:
-          input(:id="'GET-telephone'+ key" v:name="'telephone-'+ key" type="number" placeholder="(011)00000-0000" maxlength="15" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" :value="user.telephones[key]" @input="updateVuex('updateTelephone', $event)")
+          input(:id="'GET-telephone'+ key" v:name="'telephone-'+ key" type="number" placeholder="(011)00000-0000" maxlength="15" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" @input="updateVuex('updateTelephone', $event)" v-model="user.telephones[key]")
           p.error-msg(v-show="!user.telephones[key] && errors.length") {{ $t('form.errors.phone') }}
           button.btn.delete.right.bullet.small(type="button" @click="removeTelephone(key)")
             i -
@@ -89,12 +95,18 @@ form#curriculo(:class="{ renderActive: user.name}")
         // The E-mail
         label.input__contato(v:for="'GET-email'+ key" v-bind:class="{ error: !user.email && errors.length }" v-for="(email, key, index) in user.emails")
           p {{ $t('form.email') }}:
-          input(:id="'GET-email'+ key" v:name="'email'+ key" type="email" :placeholder="$t('form.email_place')" :value="user.emails[key]" @input="updateVuex('updateEmail', $event)")
+          input(:id="'GET-email'+ key" v:name="'email'+ key" type="email" :placeholder="$t('form.email_place')" @input="updateVuex('updateEmail', $event)" v-model="user.emails[key]")
           p.error-msg(v-show="!user.emails[key] && errors.length") {{ $t('form.errors.email') }}
           button.btn.delete.right.bullet.small(type="button" @click="removeEmail(key)")
             i -
           button.btn.plus.right.bullet.small(type="button" @click="newEmail(key)" v-scroll-to="'#GET-email-' + index")
             i +
+        button.btn.plus(type="button" @click="newTelephone" v-scroll-to="'#GET-email-0'" v-if="user.telephones.length == 0")
+          span +
+          | Telefone
+        button.btn.plus(type="button" @click="newEmail" v-scroll-to="'#GET-telephone-0'" v-if="user.emails.length == 0")
+          span +
+          | E-mail
   // Cursos
   // Coursers
   coursers-data(v-bind:errors="errors")
@@ -165,18 +177,56 @@ export default {
       } else if(name == 'updateGenero') {
         this.$store.commit(name, e.target.value)
         this.$store.commit('updateMaritalStatus', '')
+      } else if(name == 'updateTelephone') {
+        this.$store.commit(name, this.user.telephones)
+        console.log(e.target.value)
+      } else if(name == 'updateEmail') {
+        this.$store.commit(name, this.user.emails)
+        console.log(e.target.value)
       } else {
         this.$store.commit(name, e.target.value)
       }
       window.localStorage.setItem('store', JSON.stringify(this.user))
     },
-    removeTelephone (key) { this.$delete(this.user.telephones, key) },
     newTelephone () {
       this.user.telephones.push(null)
+      this.$store.commit("updateTelephone", this.user.telephones)
     },
-    removeEmail (key) { this.$delete(this.user.emails, key) },
     newEmail () {
       this.user.emails.push(null)
+      this.$store.commit("updateEmail", this.user.emails)
+      console.log(this.user)
+    },
+    removeTelephone (key) {
+      this.$delete(this.user.telephones, key)
+      this.$store.commit("updateTelephone", this.user.telephones)
+      window.localStorage.setItem('store', JSON.stringify(this.user))
+    },
+    removeEmail (key) {
+      this.$delete(this.user.emails, key)
+      this.$store.commit("updateEmail", this.user.emails)
+      window.localStorage.setItem('store', JSON.stringify(this.user))
+    },
+    setImage (e) {
+      const file = e.target.files[0]
+      console.log(file)
+
+      if (!file.type.includes('image/')) {
+        alert('Please select an image file')
+        return
+      }
+
+      if (typeof FileReader === 'function') {
+        const reader = new FileReader()
+
+        reader.onload = (event) => {
+          this.imgSrc = event.target.result
+          this.$store.commit('updatePhoto', this.imgSrc)
+        }
+        reader.readAsDataURL(file)
+      } else {
+        alert('Sorry, FileReader API not supported')
+      }
     },
     printRender () {
       this.errors = []

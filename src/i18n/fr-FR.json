@@ -35,6 +35,7 @@
   "form": {
     "h1": "Informations personnelles",
     "name": "Nom complet:",
+    "photo": "Photo:",
     "name_place": "Remplissez votre nom complet ...",
     "genre": "Genre:",
     "marital_status": "État civil",
