@@ -15,6 +15,8 @@ form#curriculo(:class="{ renderActive: user.name}")
         // Photo
         label(for="GET-photo")
           p {{ $t('form.photo') }}
+          button.btn.delete.right.bullet.small.photo(type="button" @click="removeImage($event)" v-if="user.photo")
+            i -
           input#GET-photo(name="photo" type="file" @input="setImage($event)")
 
         // Gênero
@@ -37,7 +39,6 @@ form#curriculo(:class="{ renderActive: user.name}")
         // Estado Civil
         // Maristals
         select-maritals(v-bind:errors="errors")
-
 
         // Sobre
         // About
@@ -83,20 +84,18 @@ form#curriculo(:class="{ renderActive: user.name}")
       .flexbox
         // Telefone
         // Phone
-        label.input__contato(v:for="'GET-telephone-'+ key" v-bind:class="{ error: !user.telephones[key] && errors.length }" v-for="(telephone, key, index) in user.telephones")
+        label.input__contato(v:for="'GET-telephone-'+ key" v-for="(telephone, key, index) in user.telephones")
           p {{ $t('form.phone') }}:
           input(:id="'GET-telephone'+ key" v:name="'telephone-'+ key" type="number" placeholder="(011)00000-0000" maxlength="15" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" @input="updateVuex('updateTelephone', $event)" v-model="user.telephones[key]")
-          p.error-msg(v-show="!user.telephones[key] && errors.length") {{ $t('form.errors.phone') }}
           button.btn.delete.right.bullet.small(type="button" @click="removeTelephone(key)")
             i -
           button.btn.plus.right.bullet.small(type="button" @click="newTelephone(key)" v-scroll-to="'#GET-telephone-' + index")
             i +
         // Email
         // The E-mail
-        label.input__contato(v:for="'GET-email'+ key" v-bind:class="{ error: !user.email && errors.length }" v-for="(email, key, index) in user.emails")
+        label.input__contato(v:for="'GET-email'+ key" v-for="(email, key, index) in user.emails")
           p {{ $t('form.email') }}:
           input(:id="'GET-email'+ key" v:name="'email'+ key" type="email" :placeholder="$t('form.email_place')" @input="updateVuex('updateEmail', $event)" v-model="user.emails[key]")
-          p.error-msg(v-show="!user.emails[key] && errors.length") {{ $t('form.errors.email') }}
           button.btn.delete.right.bullet.small(type="button" @click="removeEmail(key)")
             i -
           button.btn.plus.right.bullet.small(type="button" @click="newEmail(key)" v-scroll-to="'#GET-email-' + index")
@@ -120,6 +119,11 @@ form#curriculo(:class="{ renderActive: user.name}")
       path(d="M10 24h10v2H10v-2zM8 2h16v4h2V2c0-1.103-.896-2-2-2H8C6.896 0 6 .896 6 2v4h2V2zm2 18h12v2H10v-2z")
       path(d="M30 8H2c-1.104 0-2 .896-2 2v12c0 1.105.896 2 2 2h4v6c0 1.105.896 2 2 2h16c1.104 0 2-.895 2-2v-6h4c1.104 0 2-.895 2-2V10c0-1.104-.897-2-2-2zm-6 22H8V18h16v12zm4-16c-1.104 0-2-.895-2-2 0-1.104.896-2 2-2s2 .896 2 2c0 1.105-.897 2-2 2z")
     | {{ $t('view.home.print') }}
+
+  button#reset.btn.left.delete(type="button" v-on:click="resetForm")
+    svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 858 858")
+      path(d="M162.2 858h533.7c11 0 20-9 20-20V283.2H142.2V838c0 11.1 8.9 20 20 20zm382-467.2c0-18 14.6-32.7 32.7-32.7h.699c18 0 32.7 14.6 32.7 32.7v359.7c0 18-14.6 32.699-32.7 32.699h-.699c-18 0-32.7-14.6-32.7-32.699V390.8zm-148.2 0c0-18 14.6-32.7 32.7-32.7h.7c18 0 32.699 14.6 32.699 32.7v359.7c0 18-14.6 32.699-32.699 32.699h-.7c-18 0-32.7-14.6-32.7-32.699V390.8zm-148.2 0c0-18 14.601-32.7 32.7-32.7h.7c18 0 32.7 14.6 32.7 32.7v359.7c0 18-14.601 32.699-32.7 32.699h-.7c-18 0-32.7-14.6-32.7-32.699V390.8zM556.9 95V50c0-27.6-22.4-50-50-50H351.1c-27.6 0-50 22.4-50 50v45h40V60c0-11 9-20 20-20h135.7c11 0 20 9 20 20v35h40.1zM117.2 155v68.2c0 11 9 20 20 20h583.6c11 0 20-9 20-20V155c0-11-9-20-20-20H137.2c-11 0-20 8.9-20 20z")
+    | Apagar Tudo!
 </template>
 
 <script>
@@ -222,11 +226,45 @@ export default {
         reader.onload = (event) => {
           this.imgSrc = event.target.result
           this.$store.commit('updatePhoto', this.imgSrc)
+          window.localStorage.setItem('store', JSON.stringify(this.user))
         }
         reader.readAsDataURL(file)
       } else {
         alert('Sorry, FileReader API not supported')
       }
+    },
+    removeImage () {
+      this.$store.commit('updatePhoto', '')
+      document.querySelector('#GET-photo').value = ''
+      window.localStorage.setItem('store', JSON.stringify(this.user))
+    },
+    resetForm () {
+      let user = {
+        name: 'Nome',
+        photo: '',
+        age: null,
+        countrystatus: '',
+        cep: null,
+        end: {
+          localidade: '',
+          logradouro: '',
+          complemento: '',
+          uf: '',
+          bairro: '',
+          cep: ''
+        },
+        maritalstatus: '',
+        addressNumber: null,
+        travel: false,
+        about: null,
+        genero: '',
+        telephones: [null],
+        emails: [null],
+        exps: [],
+        coursers: []
+      }
+      this.$store.commit('updateUser', user)
+      window.localStorage.setItem('store', JSON.stringify(user))
     },
     printRender () {
       this.errors = []

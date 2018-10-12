@@ -1,10 +1,12 @@
 <template lang="pug">
   section.render(v-if="user.name" :class="{ 'viewfixed' : viewfixed }" @click="viewMore")
     .view(:class="{ 'viewless' : viewless, 'viewblocked' : viewblocked }")
-      img(:src="user.photo" :alt="user.name" width="100" v-if="user.photo")
+      label.figure(for="GET-photo" v-if="user.photo")
+        figure
+          img(:src="user.photo" :alt="user.name" width="auto")
       .info
         h1
-          label {{ user.name }}
+          label(for="GET-name") {{ user.name }}
         p(v-if="user.maritalstatus") {{ user.age }} {{ user.age ? 'anos ' : '' }}
           span(v-if="user.maritalstatus")  {{ user.maritalstatus }}
         p(v-if="user.end.logradouro") {{ user.end.logradouro }}, {{ user.addressNumber }}{{ user.addressNumber ? ',' : '' }} {{ user.end.localidade }} - {{ user.end.uf }} - {{ user.cep }}
