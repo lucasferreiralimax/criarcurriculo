@@ -4,17 +4,20 @@ header.animate_intro
     router-link(to="/" v-scroll-to="'#start'" tag="h1").logo.text-center {{ $t('view.home.name1')}} {{ $t('view.home.name2')}}
   nav-menu
   pluralization
+  theme-app
 </template>
 
 <script>
 import NavMenu from '@/components/Nav'
 import Pluralization from '@/components/Pluralization'
+import ThemeApp from '@/components/ThemeApp'
 
 export default {
   name: 'header-app',
   components: {
     NavMenu,
-    Pluralization
+    Pluralization,
+    ThemeApp
   },
   created () { window.addEventListener('scroll', this.fixedHeader) },
   destroyed () { window.removeEventListener('scroll', this.fixedHeader) },

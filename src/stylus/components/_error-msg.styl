@@ -1,0 +1,23 @@
+label.error,
+.error label,
+.error
+  background red + 150
+  position relative
+  transition .3s all
+  .error-msg
+    background red + 50
+    color #fff
+    padding 1em
+    transition .3s all
+    &:after
+      border 10px solid transparent
+      border-bottom-color red + 50
+      content ''
+      display block
+      float right
+      height 1px
+      left 0
+      position relative
+      top -35px
+      width 1px
+      z-index 9

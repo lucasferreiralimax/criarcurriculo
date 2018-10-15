@@ -8,71 +8,22 @@ color7_red = red + 130
 
 .red
   background color4_red
-  .header
-    &.active
-      box-shadow 0 4px 20px rgba(#000, .4), 0 3px 0 color4_red + 10, 0 6px 30px rgba(color4_red,.3), inset 0 2px rgba(#fff,.3), inset 0 -2px 13px rgba(color4_red,.3)
-      background color4_red
-  .logo
-    color color1 + 10
-    text-shadow 0 5px color4_red,
-                0 -2px color4_red,
-                2px 0 color4_red,
-                -2px 0 color4_red,
-                2px 4px color4_red,
-                -2px 4px color4_red,
-                0 3px 20px color4_red,
-                0 6px 60px color5_red
-    &:hover
-      color color2
-      text-shadow 0 5px color4_red,
-                  0 -2px color4_red,
-                  2px 0 color4_red,
-                  -2px 0 color4_red,
-                  2px 4px color4_red,
-                  -2px 4px color4_red,
-                  0 3px 20px color4_red,
-                  0 6px 70px color2 _red
+  logo(color1_red, color2_red, color3_red, color4_red)
+  .nav-menu
+    background linear-gradient(color4_red, rgba(color4_red, .6))
+    +tablet()
+      background transparent
   .btn
     background color4_red + 30
     border 1px solid color4_red
-    box-shadow inset 0 2px rgba(#fff,.3), 0 3px 10px color4_red, inset 0 -2px 13px rgba(green - 22,.3) !important
-    color color1_red + 30
-    &:hover
-      background color5_red
-      border-color color5_red - 60
-      box-shadow 0 3px 0 color5_red - 60, 0 6px 30px rgba(color5_red, .6), inset 0 2px rgba(#fff,.6), inset 0 -2px 13px rgba(color4_red,.3)
-      color color1_red
-      text-shadow 0 1px 3px color2_red - 130
-      svg
-        filter drop-shadow(0px 1px color2_red - 100)
-    &:active
-      background color2_red - 20
-      border-color color2_red - 60
-      box-shadow 0 0px 0 color3_red - 60, 0 3px 10px color2_red - 100, inset 0 2px rgba(#fff,.6), inset 0 -2px 13px rgba(color3_red,.3)
-      color color2_red - 100
-      path
-        fill color2_red - 100
-    path
-      fill color1_red
-  .nav
-    +tablet()
-      &.active.active_show .nav-menu
-        box-shadow 0 0 200px 100px color2_red
-  .nav-menu
-    background linear-gradient(to bottom, color4_red - 30 50%, rgba(color5_red,.5))
-    +tablet()
-      background transparent
   .mark
     background rgba(color4_red, .6)
     box-shadow 0 0 60px 10px rgba(color5_red, .6)
     color color1_red
-    margin 2em 0
-    padding 4em 2em
     text-shadow 0 3px color4_red
-  .render
-    color color5_red
-    h1, h2
-      color color5_red - 90
+  legend
+    background rgba(color4_red, .9)
+    border 1px solid color4_red - 50
 @media print
   .red .render
     color color5_red !important

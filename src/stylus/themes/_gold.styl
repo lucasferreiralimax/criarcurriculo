@@ -8,92 +8,22 @@ color7_gold = red + 130
 
 .gold
   background color4_gold url('./assets/gold.jpg') fixed
-  .header
-    &.active
-      box-shadow 0 4px 20px rgba(#000, .4), 0 3px 0 color4_gold + 10, 0 6px 30px rgba(color4_gold,.3), inset 0 2px rgba(#fff,.3), inset 0 -2px 13px rgba(color4_gold,.3)
-      background color4_gold
-  .logo
-    color color1 + 10
-    text-shadow 0 5px color4_gold,
-                0 -2px color4_gold,
-                2px 0 color4_gold,
-                -2px 0 color4_gold,
-                2px 4px color4_gold,
-                -2px 4px color4_gold,
-                0 3px 20px color4_gold,
-                0 6px 60px color5_gold
-    &:hover
-      color color2
-      text-shadow 0 5px color4_gold,
-                  0 -2px color4_gold,
-                  2px 0 color4_gold,
-                  -2px 0 color4_gold,
-                  2px 4px color4_gold,
-                  -2px 4px color4_gold,
-                  0 3px 20px color4_gold,
-                  0 6px 70px color2 _gold
+  logo(color1_gold, color2_gold, color3_gold, color4_gold)
+  .nav-menu
+    background linear-gradient(color4_gold, rgba(color4_gold, .6))
+    +tablet()
+      background transparent
   .btn
     background color4_gold + 30
     border 1px solid color4_gold
-    box-shadow inset 0 2px rgba(#fff,.3), 0 3px 10px color4_gold, inset 0 -2px 13px rgba(green - 22,.3) !important
-    color color1_gold + 30
-    &:hover
-      background color5_gold
-      border-color color5_gold - 60
-      box-shadow 0 3px 0 color5_gold - 60, 0 6px 30px rgba(color5_gold, .6), inset 0 2px rgba(#fff,.6), inset 0 -2px 13px rgba(color4_gold,.3)
-      color color1_gold
-      text-shadow 0 1px 3px color2_gold - 130
-      svg
-        filter drop-shadow(0px 1px color2_gold - 100)
-    &:active
-      background color2_gold - 20
-      border-color color2_gold - 60
-      box-shadow 0 0px 0 color3_gold - 60, 0 3px 10px color2_gold - 100, inset 0 2px rgba(#fff,.6), inset 0 -2px 13px rgba(color3_gold,.3)
-      color color2_gold - 100
-      path
-        fill color2_gold - 100
-    path
-      fill color1_gold
-  .nav
-    +tablet()
-      &.active.active_show .nav-menu
-        box-shadow 0 0 200px 100px color2_gold
-  .nav-menu
-    background linear-gradient(to bottom, color4_gold - 30 50%, rgba(color5_gold,.5))
-    +tablet()
-      background transparent
-  #curriculo
-    legend
-      border 0
-    label,
-    legend,
-    .radio
-      background rgba(color4_gold + 30, .95)
-      box-shadow 0 0 30px rgba(#000, .3)
-      color color1_gold
-      text-shadow 0 2px 10px rgba(#000, .5)
-      &.error
-        input, select, textarea, label
-          box-shadow 0 0 0 2px red, 0 0 0 3px #fff, 0 0 30px red
-        [type="radio"]
-          box-shadow none
-      .error-msg
-        background linear-gradient(to right, red, rgba(red,0))
-        border-radius 6px
-        color #fff
-        padding 10px
-        text-shadow 0 2px 10px #000
   .mark
     background rgba(color4_gold, .6)
     box-shadow 0 0 60px 10px rgba(color5_gold, .6)
     color color1_gold
-    margin 2em 0
-    padding 4em 2em
     text-shadow 0 3px color4_gold
-  .render
-    color #333
-    h1, h2
-      color color5_gold
+  legend
+    background rgba(color4_gold, .9)
+    border 1px solid color4_gold - 50
 @media print
   .gold .render
     color rgba(color4_gold, .8) !important

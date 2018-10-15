@@ -1,5 +1,5 @@
 <template lang="pug">
-label.btn.large.theme_app(for="theme_app" :class="{ 'active' : isTheme}")
+label.btn.theme_app(for="theme_app" :class="{ 'active' : isTheme}")
   transition(name="fade")
     select#theme_app(@input.stop.passive="updateThemeApp($event)" v-if="isTheme")
       option(value="default") {{ $t('themes.default')}}
@@ -70,20 +70,12 @@ export default {
 <style lang="stylus">
   @import '../stylus/config/_mixins'
 
-  .theme_app
+   .theme_app
     border-radius 6px
-    bottom 25px
     display block
-    height 45px
-    left 10px
+    top 75px
+    right 10px
     position fixed
-    width 45px
     z-index 99
     pointer-events all
-    +tablet()
-      top 65px
-      left auto
-      right 10px
-    +desktop()
-      top 85px
 </style>

@@ -25,7 +25,7 @@ export default new Vuex.Store({
       about: null,
       genero: '',
       telephones: [null],
-      emails: [null],
+      emails: [],
       exps: [],
       coursers: []
     }

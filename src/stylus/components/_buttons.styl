@@ -7,130 +7,89 @@ button
   background color4 + 30
   border 1px solid color4
   border-radius 6px
-  box-shadow inset 0 2px rgba(#fff,.3), 0 3px 10px color4, inset 0 -2px 13px rgba(green - 22,.3)
+  box-shadow inset 0 2px rgba(#fff, .2), inset 0 -2px 4px rgba(#000, .1)
   box-sizing border-box
   color color1
   cursor pointer
   display block
-  font-size 20px
+  font-size 1.1em
   font-weight 100
   line-height 23px
+  margin-right 1em
   outline none
   padding 20px
   position relative
   text-decoration none
   transition .3s all
   user-select none
+  &:last-of-type
+    margin-right 0
   &.router-link-exact-active
     background color2 - 20
     border-color color2 - 60
-    box-shadow 0 3px 0 color2 - 60, 0 6px 10px color4, inset 0 2px rgba(#fff,.6), inset 0 -2px 13px rgba(color3,.3)
     color color1
-    text-shadow 0 1px 3px color4
-    transform translateY(-3px)
   &:hover
     background color5
     border-color color5 - 60
-    box-shadow 0 3px 0 color5 - 60, 0 6px 30px rgba(color5, .6), inset 0 2px rgba(#fff,.6), inset 0 -2px 13px rgba(color4,.3)
     color color1
-    text-shadow 0 1px 3px color2 - 130
-    transform translateY(-3px)
-    svg
-      filter drop-shadow(0px 1px color2 - 100)
-  &:active
-    background color2 - 20
-    border-color color2 - 60
-    box-shadow 0 0px 0 color3 - 60, 0 3px 10px color2 - 100, inset 0 2px rgba(#fff,.6), inset 0 -2px 13px rgba(color3,.3)
-    color color2 - 100
-    transform translateY(0)
-    path
-      fill color2 - 100
+  &.small
+    width 30px
+    height 30px
+    padding 0
+  &.large
+    width 100%
+  &.delete
+    background red - 30 !important
+    border-color red - 60 !important
+  &.plus
+    background green + 30 !important
+    border-color green - 30 !important
+  &#reset,
+  &#print
+    display inline-block
+    width calc(50% - .5em)
+  &.pluralization,
+  &.theme_app
+    margin 0
+    padding 0
+    z-index 9
+    .icon
+      display inline-block
+      float right
+      padding 1em
+      width auto
+    select
+      display inline-block
+      float left
+      font-size .8em
+      margin .5em
+      padding .5em
+      width auto
+  span
+    display inline-block
+    margin-right .5em
   svg
     height 20px
-    width 25px
-    margin-right 10px
     margin-bottom -3px
+    margin-right 10px
+    width 25px
   path
     fill color1
     transition .3s all
-  &.bullet
-    height 30px !important
-    padding 0 !important
-    position absolute
-    right 12px
-    top 3px
-    width 30px !important
-    &.small
-      height 25px !important
-      width 25px !important
-    &:last-of-type
-      right 33px
-  &.plus,
-  &.delete
-    box-shadow 0 0px 0 color3 - 60, 0 3px 10px rgba(#000, .1), inset 0 2px rgba(#fff,.6), inset 0 -2px 13px rgba(red - 22,.3)
-    color color1
-    text-shadow 0 2px 3px rgba(#000, .6)
-    span
-      font-size 2em
-      left 20px
-      position absolute
-  &.plus
-    background green + 55 !important
-    border-color green - 22 !important
-    &:active
-      background green !important
-      color green - 90
-  &.delete
-    background red + 55 !important
-    border-color red - 66 !important
-    &:active
-      background red - 50 !important
-      color red - 190
-    & + .plus
-      margin-right 1em !important
-  &.large
-    &.active
-      width auto
-      &.pluralization,
-      &.theme_app
-        padding-left 25px
-        +desktop()
-          padding-left 35px
-    select
-      background #fff
-      border-radius 4px
-      color #333
-      padding 5px
-      position relative
-      top -13px
-      left -20px
-      +desktop()
-        top -15px
-    +desktop()
-      padding 30px
-  &.photo
-    transform translate(15px, 0px)
-  &#reset
-    margin-top 25px
   .icon
-    width 42px
-    height 45px
-    position absolute
-    top 0
-    right 0
     cursor pointer
-    +desktop()
-      width 58px
-      height 62px
+    right 0
+    top 0
+    width 100%
     svg
       margin 0
 .menu
-  height 45px
+  height 50px
   left 10px
   padding 10px 0
   position fixed
   top 10px
-  width 45px
+  width 50px
   z-index 999
   &:hover span
     background color1

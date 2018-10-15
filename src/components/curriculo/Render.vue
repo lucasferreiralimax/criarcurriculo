@@ -5,23 +5,28 @@
         figure
           img(:src="user.photo" :alt="user.name" width="auto")
       .info
-        h1
-          label(for="GET-name") {{ user.name }}
+        label(for="GET-name")
+          h1 {{ user.name }}
         p(v-if="user.maritalstatus") {{ user.age }} {{ user.age ? 'anos ' : '' }}
           span(v-if="user.maritalstatus")  {{ user.maritalstatus }}
         p(v-if="user.end.logradouro") {{ user.end.logradouro }}, {{ user.addressNumber }}{{ user.addressNumber ? ',' : '' }} {{ user.end.localidade }} - {{ user.end.uf }} - {{ user.cep }}
       hr
       p(v-if="user.travel") {{ user.travel ? $t('form.travel') : '' }}
-      h2(v-if="user.about") {{ $t('form.about_me') }}
-      p(v-if="user.about")
-        pre {{ user.about }}
+      label(for="GET-about")
+        h2(v-if="user.about") {{ $t('form.about_me') }}
+        p(v-if="user.about")
+          pre {{ user.about }}
       h2(v-if="user.coursers[0]") {{ $t('form.cademy')}}
       .coursers(v-for="(course, key, index) in user.coursers")
-        p(v-if="course.formation.school") {{ $t('form.school') }}: {{ course.formation.school }}
-        p(v-if="course.formation.name") {{ course.formation.name }}
-        p(v-if="course.formation.about")
-          pre {{ $t('form.activities') }}: {{ course.formation.about }}
-        p(v-if="course.formation.data_start") {{ course.formation.data_start | dateFormat }} {{ course.formation.data_end ? $t('form.to') : '' }} {{ course.formation.data_end | dateFormat }}
+        label(for="GET-about")
+          p(v-if="course.formation.school") {{ $t('form.school') }}: {{ course.formation.school }}
+        label(for="GET-about")
+          p(v-if="course.formation.name") {{ course.formation.name }}
+        label(for="GET-about")
+          p(v-if="course.formation.about")
+            pre {{ $t('form.activities') }}: {{ course.formation.about }}
+        label(for="GET-about")
+          p(v-if="course.formation.data_start") {{ course.formation.data_start | dateFormat }} {{ course.formation.data_end ? $t('form.to') : '' }} {{ course.formation.data_end | dateFormat }}
         p(v-if="course.formation.now") {{ course.formation.now ? $t('form.cademy_now') : '' }}
         hr
       h2(v-if="user.exps[0]") {{ $t('form.exp')}}

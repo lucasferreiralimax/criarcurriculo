@@ -1,5 +1,5 @@
 <template lang="pug">
-label.btn.large.pluralization(for="locale" :class="{ 'active' : isLocale}")
+label.btn.pluralization(for="locale" :class="{ 'active' : isLocale}")
   transition(name="fade")
     select#locale(v-model="locale" v-if="isLocale")
       option(value="pt") {{ $t('locale.pt')}}
@@ -55,10 +55,8 @@ export default {
   .pluralization
     border-radius 6px
     display block
-    height 45px
     position fixed
     right 10px
     top 10px
-    width 45px
     z-index 99
 </style>

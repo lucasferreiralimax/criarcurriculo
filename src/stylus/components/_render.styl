@@ -2,7 +2,6 @@
   height 60vh
   position relative
   .view
-    -webkit-tap-highlight-color transparent
     background #fff
     bottom 0
     bottom 249px
@@ -30,6 +29,9 @@
       opacity .7
     label
       cursor pointer
+      padding 0
+      border 0
+      background transparent
     .figure
       width 100px
       height 120px
@@ -56,7 +58,9 @@
     box-sizing border-box
     float right
     padding 1em 1em 0
-    position relative
+    position absolute
+    top 270px
+    right 0
     width 50%
     &.viewfixed
       position fixed

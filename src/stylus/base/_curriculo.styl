@@ -1,81 +1,14 @@
 #curriculo
   padding 1em 1em 0
+  box-sizing border-box
   +tablet()
-    box-sizing border-box
-    float left
     width 50%
-  .btn
-    width 100%
-    &.right
-      width auto
-  input,
-  textarea,
-  select
-    background color1
-    border 0
-    border-radius 6px
-    box-sizing border-box
-    color #333
-    font-size 1em
-    margin 0
-    padding 1em
-    width 100%
-  input[type='radio'],
-  input[type='checkbox']
-    margin-right 1em
-    width auto
-  label,
-  .radio
-    cursor pointer
-    &.error
-      background linear-gradient(145deg, color7, color1)
-      input, select, textarea, label
-        box-shadow 0 0 6px 1px red
-      [type="radio"]
-        box-shadow none
-      .error-msg
-        margin 20px 0 0
-        color red - 150
-        text-shadow 0 2px 4px #fff
-        font-weight normal
-  label,
-  legend,
-  .radio
-    background rgba(color1, .6)
-    color #333
-    display block
-    padding 1em
-    transition .3s all
-    position relative
-    &:hover
-      background rgba(color1, .75)
-    label
-      border-radius 6px
-      margin-bottom .5em
-      &:hover
-        background linear-gradient(-145deg, rgba(color5,.5), color2)
-        padding 1.5em
-      &:last-of-type
-        margin-bottom 0
-    p
-      margin-bottom 1em
-  .radio
-    user-select none
-  fieldset
-    box-sizing border-box
-    display block
-  legend
-    background rgba(color1, .9)
-    border-bottom solid 1px #ccc
-    box-sizing border-box
-    font-size 1.2em
-    position relative
-    width 100%
+    max-width 50%
+
 
 .mark
   animation force 3s infinite alternate
-  background rgba(color4, .6)
-  box-shadow 0 0 60px 10px rgba(color5, .6)
+  background rgba(color4, .9)
   box-sizing border-box
   color color1
   display block
@@ -83,7 +16,6 @@
   line-height 2em
   margin 2em 0
   padding 4em 2em
-  text-shadow 0 3px color4
   width 100%
   h1,  h2
     margin-bottom 1em

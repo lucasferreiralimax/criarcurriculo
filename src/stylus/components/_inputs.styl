@@ -1,0 +1,54 @@
+input, textarea, select
+  background #fff
+  border 1px solid #fff
+  border-radius 3px
+  box-sizing border-box
+  font-size 1em
+  margin 1em auto 0
+  outline none
+  padding 1em
+  transition .3s all
+  width 100%
+  &[type="radio"],
+  &[type="checkbox"]
+    margin 0
+    margin-right 1em
+    max-width auto
+    min-width auto
+    width auto
+label,
+select,
+input[type="file"],
+input[type="radio"],
+input[type="checkbox"]
+  cursor pointer
+  user-select none
+label, legend, .radio > p
+  background rgba(#eee, .8)
+  border-bottom 1px solid rgba(#fff, .3)
+  box-sizing border-box
+  color #333
+  display block
+  padding 1em
+  transition .3s all
+label
+  &:hover
+    background rgba(#fff, .9)
+    input, textarea, select
+      box-shadow 0 0 0 4px rgba(#000, .2)
+      &[type="radio"]
+        box-shadow none
+  &:active
+    background rgba(#fff, .6)
+    input, textarea
+      box-shadow 0 0 0 2px rgba(#000, .2)
+      &[type="radio"]
+        box-shadow none
+legend
+  animation force 3s infinite alternate
+  background rgba(color4, .9)
+  border 1px solid color4 - 50
+  box-shadow inset 0 2px rgba(#fff, .2), inset 0 -2px 4px rgba(#000, .1), 0 3px 15px rgba(#000, .3)
+  color #fff
+  font-size 1.3em
+  width 100%
