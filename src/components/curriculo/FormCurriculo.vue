@@ -69,7 +69,7 @@ form#curriculo(:class="{ renderActive: user.name}")
       input(:id="'GET-email-'+ key" v:name="'email'+ key" type="email" :placeholder="$t('form.email_place')" @input="updateVuex('updateEmail', $event)" v-model="user.emails[key]")
       p.error-msg(v-show="!user.emails[key] && errors.length") {{ $t('form.errors.email') }}
   .box(v-if="user.emails.length == 0")
-    button.btn.plus.large(type="button" @click="newEmail" v-scroll-to="'#GET-telephone-0'")
+    button#newEmail.btn.plus.large(type="button" @click="newEmail" v-scroll-to="'#GET-telephone-0'")
       span +
       | E-mail
   .box
