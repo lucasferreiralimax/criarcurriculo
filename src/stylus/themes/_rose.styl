@@ -10,15 +10,13 @@ color7_rose = rose + 130
   background color4_rose url('./assets/rosa.jpg') no-repeat fixed bottom center
   background-size cover
   logo(color1_rose, color2_rose, color3_rose, color4_rose)
+  btn(color4_rose, color2_rose)
   .nav-menu
     background linear-gradient(color4_rose, rgba(color4_rose, .6))
     +tablet()
       background transparent
-  .btn
-    background color4_rose + 30
-    border 1px solid color4_rose
   .mark
-    background rgba(color4_rose, .6)
+    background rgba(color4_rose, .9)
     box-shadow 0 0 60px 10px rgba(color5_rose, .6)
     color color1_rose
     text-shadow 0 3px color4_rose

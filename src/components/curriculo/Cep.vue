@@ -1,8 +1,7 @@
 <template lang="pug">
-  label(for="GET-cep" v-bind:class="{ error: !user.cep && errors.length }")
+  label(for="GET-cep")
     p CEP:
     input#GET-cep(name="cep" type="tel" maxlength="8" placeholder="00000-000" :value="user.cep" @keyup="search_cep" @input="updateVuex('updateCep', $event)")
-    p.error-msg(v-show="!user.cep && errors.length") {{ $t('form.errors.zip') }}
 </template>
 
 <script>

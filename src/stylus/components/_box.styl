@@ -1,4 +1,28 @@
 .box
+  background rgba(#eee, .8)
+  box-shadow 0 0 0 1px rgba(#fff, .2), 0 0 10px rgba(#000, .3)
+  border-radius 6px
   margin-bottom 2em
   max-width 100%
   word-break break-all
+  overflow hidden
+  &.no-bg
+    background rgba(#fff, 0)
+    box-shadow none
+  [for^="GET-coursedata"],
+  [for^="GET-expsdata"],
+  [for="GET-address-number"],
+  [for="GET-cep"]
+    width 50%
+    display inline-block
+  +desktop()
+    [for^="GET-company"],
+    [for^="GET-course-"],
+    [for^="GET-exps-"],
+    [for^="GET-school"],
+    [for="GET-dataofbirth"],
+    [for="GET-genero"],
+    [for="GET-name"],
+    [for="GET-photo"]
+      width 50%
+      display inline-block

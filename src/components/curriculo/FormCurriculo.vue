@@ -13,9 +13,10 @@ form#curriculo(:class="{ renderActive: user.name}")
       // Foto
       // Photo
       label(for="GET-photo")
+        .right
+          button.btn.delete.bullet.small.photo.left(type="button" @click="removeImage($event)" v-if="user.photo")
+            i -
         p {{ $t('form.photo') }}
-        button.btn.delete.right.bullet.small.photo(type="button" @click="removeImage($event)" v-if="user.photo")
-          i -
         input#GET-photo(name="photo" type="file" @input="setImage($event)")
 
       // Gênero
@@ -76,8 +77,7 @@ form#curriculo(:class="{ renderActive: user.name}")
       legend {{ $t('form.end') }}
       // CEP
       // ZipCode
-      .address
-        cep(v-bind:errors="errors")
+      cep(v-bind:errors="errors")
       // Número do Lar
       // Adress Number
       label(for="GET-address-number")
@@ -112,7 +112,7 @@ form#curriculo(:class="{ renderActive: user.name}")
   // Experiencies
   experiencies-data(v-bind:errors="errors")
 
-  .box.text-center
+  .text-center
     button#reset.btn.delete(type="button" v-on:click="resetForm")
       svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 858 858")
         path(d="M162.2 858h533.7c11 0 20-9 20-20V283.2H142.2V838c0 11.1 8.9 20 20 20zm382-467.2c0-18 14.6-32.7 32.7-32.7h.699c18 0 32.7 14.6 32.7 32.7v359.7c0 18-14.6 32.699-32.7 32.699h-.699c-18 0-32.7-14.6-32.7-32.699V390.8zm-148.2 0c0-18 14.6-32.7 32.7-32.7h.7c18 0 32.699 14.6 32.699 32.7v359.7c0 18-14.6 32.699-32.699 32.699h-.7c-18 0-32.7-14.6-32.7-32.699V390.8zm-148.2 0c0-18 14.601-32.7 32.7-32.7h.7c18 0 32.7 14.6 32.7 32.7v359.7c0 18-14.601 32.699-32.7 32.699h-.7c-18 0-32.7-14.6-32.7-32.699V390.8zM556.9 95V50c0-27.6-22.4-50-50-50H351.1c-27.6 0-50 22.4-50 50v45h40V60c0-11 9-20 20-20h135.7c11 0 20 9 20 20v35h40.1zM117.2 155v68.2c0 11 9 20 20 20h583.6c11 0 20-9 20-20V155c0-11-9-20-20-20H137.2c-11 0-20 8.9-20 20z")
@@ -271,7 +271,6 @@ export default {
     printRender () {
       this.errors = []
       if (!this.user.age) { this.errors.push('Precisa preencher o campo data de nascimento.') }
-      if (!this.user.cep) { this.errors.push('Precisa preencher o campo cep.') }
       if (!this.user.end.localidade) { this.errors.push('Precisa preencher o campo localidade.') }
       if (!this.user.end.logradouro) { this.errors.push('Precisa preencher o campo logradouro.') }
       if (!this.user.genero) {this.errors.push('Precisa colocar seu genero.') }

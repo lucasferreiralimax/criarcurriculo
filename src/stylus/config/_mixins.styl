@@ -41,3 +41,26 @@ logo(cor1, cor2, cor5, cor4)
                   -2px 4px cor4,
                   0 3px 20px cor4,
                   0 6px 70px cor2
+btn(cor1, cor2)
+  .btn
+    background cor1 + 30
+    border 1px solid cor1
+    border-color cor1 - 30
+    &:hover
+      background cor1 + 60
+    &.router-link-exact-active
+      background cor2 - 20
+      border-color cor2 - 60
+      color cor1
+      svg, path, circle
+        fill cor1
+    &.delete
+      background red - 30
+      border-color red - 60
+      &:hover
+        background red + 60
+    &.plus
+      background green + 30
+      border-color green - 30
+      &:hover
+        background green + 60

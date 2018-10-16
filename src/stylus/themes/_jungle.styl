@@ -10,15 +10,13 @@ color7_jungle = red + 130
   background color4_jungle url('./assets/background-green.jpg') no-repeat fixed bottom center
   background-size cover
   logo(color1_jungle, color2_jungle, color3_jungle, color4_jungle)
+  btn(color4_jungle, color2_jungle)
   .nav-menu
     background linear-gradient(color4_jungle, rgba(color4_jungle, .6))
     +tablet()
       background transparent
-  .btn
-    background color4_jungle + 30
-    border 1px solid color4_jungle
   .mark
-    background rgba(color4_jungle, .6)
+    background rgba(color4_jungle, .9)
     box-shadow 0 0 60px 10px rgba(color5_jungle, .6)
     color color1_jungle
     text-shadow 0 3px color4_jungle

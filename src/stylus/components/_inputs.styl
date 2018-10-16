@@ -16,6 +16,10 @@ input, textarea, select
     max-width auto
     min-width auto
     width auto
+input[type="file"]
+  padding .8em
+select
+  padding .96em
 label,
 select,
 input[type="file"],
@@ -24,7 +28,6 @@ input[type="checkbox"]
   cursor pointer
   user-select none
 label, legend, .radio > p
-  background rgba(#eee, .8)
   border-bottom 1px solid rgba(#fff, .3)
   box-sizing border-box
   color #333
@@ -45,6 +48,7 @@ label
       &[type="radio"]
         box-shadow none
 legend
+  border-radius 6px 6px 0 0
   animation force 3s infinite alternate
   background rgba(color4, .9)
   border 1px solid color4 - 50
