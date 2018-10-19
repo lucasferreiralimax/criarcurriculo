@@ -59,19 +59,43 @@
     article.colab
       h1 {{ $t('view.about.colab')}}
       .flexbox
-        a.people(href="https://github.com/lucasferreiralimax" target="_blank")
+        a.people(:href="user.html_url" target="_blank" v-for="(user, key, index)  in contributors")
           figure
-            img(src="https://avatars2.githubusercontent.com/u/40927839")
-            figcaption @lucasferreiralimax
+            img(:src="user.avatar_url")
+            figcaption @{{ user.login }}
 </template>
 
 <script>
-  export default {
-    name: 'about',
-    head: {
-      title: {
-        inner: 'Sobre'
-      }
+import axios from 'axios'
+
+const HTTP = axios.create({ baseURL: 'https://api.github.com/repos/lucasferreiralimax/curriculogratis/contributors' })
+
+export default {
+  name: 'about',
+  head: {
+    title: {
+      inner: 'Sobre'
+    }
+  },
+  data() {
+    return {
+      contributors: null
+    }
+  },
+  created () {
+    this.search_contributors()
+  },
+  methods: {
+    search_contributors () {
+      HTTP.get()
+      .then(response => {
+        this.contributors = response.data
+        console.log(response.data)
+      })
+      .catch(e => {
+        this.errors.push(e)
+      })
     }
   }
+}
 </script>
