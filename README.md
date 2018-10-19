@@ -83,6 +83,13 @@
 >
 > Написано для разных языков, помогите улучшить наши переводы
 ---
+#### Cwricwlwm Am Ddim
+> Nod y cais hwn yw helpu pawb sydd angen creu cwricwlwm, yn gyflym, yn hawdd ac yn rhad ac am ddim.
+> Hwyluso'r ffordd y byddwch yn creu eich ailddechrau gyda defnyddioldeb wedi'i gynllunio i fod yn syml.
+>
+> Datblygwyd y cais gyda nifer o gydrannau rhyngweithiol gyda thrawsnewidiadau ac animeiddiadau, sy'n gyfoethog o ran defnyddioldeb.
+> Gyda rhyngwyneb yn gwbl addasadwy ac yn adweithiol i faint sgrin y ddyfais a ddefnyddir.
+---
 #### ヘルプ
 >エラーが見つかった場合や、プロジェクトのアイデアを投稿したい場合は、[問題](https://github.com/lucasferreiralimax/curriculogratis/issues/new), を作成してください。 ：拍手：
 >
