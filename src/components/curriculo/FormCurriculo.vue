@@ -188,10 +188,8 @@ export default {
         this.$store.commit('updateMaritalStatus', '')
       } else if(name == 'updateTelephone') {
         this.$store.commit(name, this.user.telephones)
-        console.log(e.target.value)
       } else if(name == 'updateEmail') {
         this.$store.commit(name, this.user.emails)
-        console.log(e.target.value)
       } else {
         this.$store.commit(name, e.target.value)
       }
@@ -204,7 +202,6 @@ export default {
     newEmail () {
       this.user.emails.push(null)
       this.$store.commit("updateEmail", this.user.emails)
-      console.log(this.user)
     },
     removeTelephone (key) {
       if(key !== 0) {
@@ -220,7 +217,6 @@ export default {
     },
     setImage (e) {
       const file = e.target.files[0]
-      console.log(file)
 
       if (!file.type.includes('image/')) {
         alert('Please select an image file')
@@ -289,11 +285,11 @@ export default {
           if (!this.user.telephones[i]) { this.errors.push('Precisa preencher o campo de telefone') }
         }
       }
-      // if (this.user.emails.length) {
-      //   for(let i = 0; this.user.telephones.length > i; i++) {
-      //     if (!this.user.telephones[i]) { this.errors.push('Precisa preencher o campo de telefone') }
-      //   }
-      // }
+      if (this.user.emails.length) {
+        for(let i = 0; this.user.emails.length > i; i++) {
+          if (!this.user.emails[i]) { this.errors.push('Precisa preencher o campo de e-mail') }
+        }
+      }
       if (this.user.exps.length) {
         for(let i = 0; this.user.exps.length > i; i++) {
           if (!this.user.exps[i].experience.name) { this.errors.push('Precisa preencher o campo nome da empresa') }
