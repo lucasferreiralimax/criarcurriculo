@@ -21,6 +21,7 @@
           pre {{ user.about }}
       h2(v-if="user.coursers[0]") {{ $t('form.cademy')}}
       .coursers(v-for="(course, key, index) in user.coursers")
+        p(v-if="course.formation.now") {{ course.formation.now ? $t('form.cademy_now') : '' }}
         label(for="GET-about")
           p(v-if="course.formation.school") {{ $t('form.school') }}: {{ course.formation.school }}
         label(for="GET-about")
@@ -30,21 +31,21 @@
             pre {{ $t('form.activities') }}: {{ course.formation.about }}
         label(for="GET-about")
           p(v-if="course.formation.data_start") {{ course.formation.data_start | dateFormat }} {{ course.formation.data_end ? $t('form.to') : '' }} {{ course.formation.data_end | dateFormat }}
-        p(v-if="course.formation.now") {{ course.formation.now ? $t('form.cademy_now') : '' }}
         hr
       h2(v-if="user.exps[0]") {{ $t('form.exp')}}
       .experiencies(v-for="(exp, key, index) in user.exps")
+        p(v-if="exp.experience.now") {{ exp.experience.now ? $t('form.exp_now') : '' }}
         p(v-if="exp.experience.name") {{ $t('form.company') }}: {{ exp.experience.name }}
         p(v-if="exp.experience.work") {{ $t('form.office') }}: {{ exp.experience.work }}
         p(v-if="exp.experience.about")
           pre {{ exp.experience.about }}
         p(v-if="exp.experience.data_start && exp.experience.now") {{ $t('form.from') }} {{ exp.experience.data_start | dateFormat }}
         p(v-if="exp.experience.data_start && !exp.experience.now") {{ $t('form.from') }} {{ exp.experience.data_start | dateFormat }} {{ exp.experience.data_end ? $t('form.to') : '' }} {{ exp.experience.data_end | dateFormat}}
-        p(v-if="exp.experience.now") {{ exp.experience.now ? $t('form.exp_now') : '' }}
         hr
-      h2(v-if="user.telephones || user.emails") {{ $t('form.contact') }}
+      h2(v-if="user.telephones || user.emails || user.sites") {{ $t('form.contact') }}
       p(v-if="user.telephones" v-for="(telephone, key, index) in user.telephones") {{ $t('form.phone') }}: {{ telephone }}
       p(v-if="user.emails" v-for="(email, key, index) in user.emails") {{ $t('form.email') }}: {{ email }}
+      p(v-if="user.sites" v-for="(site, key, index) in user.sites") {{ $t('form.site') }}: {{ site }}
       hr
 </template>
 

@@ -70,12 +70,28 @@ form#curriculo(:class="{ renderActive: user.name}")
         button.btn.plus.bullet.small.left(type="button" @click="newEmail(key)" v-scroll-to="'#GET-email-' + index")
           i +
       p {{ $t('form.email') }}:
-      input(:id="'GET-email-'+ key" v:name="'email'+ key" type="email" :placeholder="$t('form.email_place')" @input="updateVuex('updateEmail', $event)" v-model="user.emails[key]")
+      input(:id="'GET-email-'+ key" v:name="'email-'+ key" type="email" :placeholder="$t('form.email_place')" @input="updateVuex('updateEmail', $event)" v-model="user.emails[key]")
       p.error-msg(v-show="!user.emails[key] && errors.length") {{ $t('form.errors.email') }}
   .box(v-if="user.emails.length == 0")
     button#newEmail.btn.plus.large(type="button" @click="newEmail" v-scroll-to="'#GET-telephone-0'")
       span +
       | E-mail
+  .box(v-if="user.sites.length !== 0")
+    // Site
+    // The Site
+    label.input__contato(:for="'GET-site-'+ key" v-for="(site, key, index) in user.sites" v-bind:class="{ error: !user.sites[key] && errors.length }")
+      .right
+        button.btn.delete.bullet.small.left(type="button" @click="removeSite(key)")
+          i -
+        button.btn.plus.bullet.small.left(type="button" @click="newSite(key)" v-scroll-to="'#GET-site-' + index")
+          i +
+      p {{ $t('form.site') }}:
+      input(:id="'GET-site-'+ key" v:name="'site-'+ key" type="text" :placeholder="$t('form.site_place')" @input="updateVuex('updateSite', $event)" v-model="user.sites[key]")
+      p.error-msg(v-show="!user.sites[key] && errors.length") {{ $t('form.errors.site') }}
+  .box(v-if="user.sites.length == 0")
+    button#newSite.btn.plus.large(type="button" @click="newSite" v-scroll-to="'#GET-site-0'")
+      span +
+      | Site
   .box
     fieldset
       legend
@@ -190,6 +206,8 @@ export default {
         this.$store.commit(name, this.user.telephones)
       } else if(name == 'updateEmail') {
         this.$store.commit(name, this.user.emails)
+      } else if(name == 'updateSite') {
+        this.$store.commit(name, this.user.sites)
       } else {
         this.$store.commit(name, e.target.value)
       }
@@ -203,6 +221,10 @@ export default {
       this.user.emails.push(null)
       this.$store.commit("updateEmail", this.user.emails)
     },
+    newSite () {
+      this.user.sites.push(null)
+      this.$store.commit("updateSite", this.user.sites)
+    },
     removeTelephone (key) {
       if(key !== 0) {
         this.$delete(this.user.telephones, key)
@@ -213,6 +235,11 @@ export default {
     removeEmail (key) {
       this.$delete(this.user.emails, key)
       this.$store.commit("updateEmail", this.user.emails)
+      window.localStorage.setItem('store', JSON.stringify(this.user))
+    },
+    removeSite (key) {
+      this.$delete(this.user.sites, key)
+      this.$store.commit("updateSite", this.user.sites)
       window.localStorage.setItem('store', JSON.stringify(this.user))
     },
     setImage (e) {
@@ -263,6 +290,7 @@ export default {
         genero: '',
         telephones: [null],
         emails: [],
+        sites: [],
         exps: [],
         coursers: []
       }
@@ -288,6 +316,11 @@ export default {
       if (this.user.emails.length) {
         for(let i = 0; this.user.emails.length > i; i++) {
           if (!this.user.emails[i]) { this.errors.push('Precisa preencher o campo de e-mail') }
+        }
+      }
+      if (this.user.sites.length) {
+        for(let i = 0; this.user.sites.length > i; i++) {
+          if (!this.user.sites[i]) { this.errors.push('Precisa preencher o campo de sites') }
         }
       }
       if (this.user.exps.length) {

@@ -26,6 +26,7 @@ export default new Vuex.Store({
       genero: '',
       telephones: [null],
       emails: [],
+      sites: [],
       exps: [],
       coursers: []
     }
@@ -63,6 +64,9 @@ export default new Vuex.Store({
     },
     updateEmail (state, value) {
       state.user.emails = value
+    },
+    updateSite (state, value) {
+      state.user.sites = value
     },
     updateExps (state, value) {
       state.user.exps = value
