@@ -55,8 +55,8 @@ export default {
 
       if(!theme) {
         this.clearBody()
-        document.querySelector('body').classList.add('default')
-        localStorage.setItem('theme_app', 'default')
+        document.querySelector('body').classList.add('full')
+        localStorage.setItem('theme_app', 'full')
       } else {
         this.clearBody()
         theme = theme.replace(/"/g, "")

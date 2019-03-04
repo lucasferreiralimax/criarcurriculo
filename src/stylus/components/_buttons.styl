@@ -51,7 +51,15 @@ button
   &#reset,
   &#print
     display inline-block
-    width calc(50% - .5em)
+    width calc(100% - .5em)
+    margin-bottom 1em
+    margin-right 0
+    +tablet()
+      margin-right 1em
+      width calc(50% - .5em)
+  &#print
+    +tablet()
+      margin-right 0
   &.pluralization,
   &.theme_app
     margin 0
