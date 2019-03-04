@@ -25,7 +25,8 @@
       "hitech": "テクノロジー",
       "colab": "共同作業者",
       "work": "ハートで作られた",
-      "contributions": "寄付"
+      "contributions": "寄付",
+      "contribution": "寄付"
     },
     "notfound": {
       "text1": "ページはまだ存在しません",

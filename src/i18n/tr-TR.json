@@ -25,7 +25,8 @@
       "hitech": "Teknolojiler",
       "colab": "Ortak çalışanlar",
       "work": "Kalp ile Yapıldı",
-      "contributions": "katkılar"
+      "contributions": "katkılar",
+      "contribution": "katkı"
     },
     "notfound": {
       "text1": "Sayfa henüz mevcut değil",
