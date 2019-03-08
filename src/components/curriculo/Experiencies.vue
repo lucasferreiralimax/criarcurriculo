@@ -37,10 +37,10 @@
       // The experience data
       label(:for="'GET-expsdata__start-' + exp.id")
         p {{ $t('form.start')}}:
-        input(:id="'GET-expsdata__start-' + exp.id" name="expsdata-start" type="date" placeholder="00/00/0000" v-model="exp.experience.data_start")
+        input(:id="'GET-expsdata__start-' + exp.id" name="expsdata-start" type="month" v-model="exp.experience.data_start")
       label(:for="'GET-expsdata__finish' + exp.id" v-if="!exp.experience.now")
         p(v-show="!exp.experience.now") {{ $t('form.finish')}}:
-        input(:id="'GET-expsdata__finish-' + exp.id" name="expsdata-finish" type="date" placeholder="00/00/0000" v-model="exp.experience.data_end")
+        input(:id="'GET-expsdata__finish-' + exp.id" name="expsdata-finish" type="month" v-model="exp.experience.data_end")
       // Sobre a experiência
       // The exps About
       label(:for="'GET-expsabout-' + exp.id")

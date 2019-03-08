@@ -36,10 +36,10 @@
       // The Course data
       label(:for="'GET-coursedata__start-' + course.id")
         p {{ $t('form.start')}}:
-        input(:id="'GET-coursedata__start-' + course.id" name="coursedata-start" type="date" placeholder="00/00/0000" v-model="course.formation.data_start")
+        input(:id="'GET-coursedata__start-' + course.id" name="coursedata-start" type="month" v-model="course.formation.data_start")
       label(:for="'GET-coursedata__finish-' + course.id")
         p {{ $t('form.finish')}}:
-        input(:id="'GET-coursedata__finish-' + course.id" name="coursedata-finish" type="date" placeholder="00/00/0000" v-model="course.formation.data_end")
+        input(:id="'GET-coursedata__finish-' + course.id" name="coursedata-finish" type="month" v-model="course.formation.data_end")
       // Sobre o curso
       // The Course About
       label(:for="'GET-courseabout-' + course.id")
