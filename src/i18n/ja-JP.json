@@ -71,6 +71,8 @@
     "phone": "電話番号",
     "email": "電子メイル",
     "email_place": "exemplo@email.com",
+    "site": "サイト",
+    "site_place": "exemplo.jp",
     "about_me": "ホーム",
     "about_place": "あなた自身について教えてください...",
     "cademy": "学歴",

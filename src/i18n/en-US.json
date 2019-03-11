@@ -71,6 +71,8 @@
     "phone": "Phone",
     "email": "E-mail",
     "email_place": "example@email.com",
+    "site": "Site",
+    "site_place": "exemple.com",
     "about_me": "About me",
     "about_place": "Tell me a little about you...",
     "cademy": "Academic education",
