@@ -20,11 +20,16 @@ describe('Validar curriculo simples', () => {
     cy.get('#GET-travel-yes').click()
   })
   it('Telefone', () => {
+    cy.get('#newTelephone').click()
     cy.get('#GET-telephone-0').type(11951401894)
   })
   it('E-mail', () => {
     cy.get('#newEmail').click()
     cy.get('#GET-email-0').type('lucasferreiralimax@gmail.com')
+  })
+  it('Site', () => {
+    cy.get('#newSite').click()
+    cy.get('#GET-site-0').type('www.curriculo-gratis.firebaseapp.com')
   })
 })
 
@@ -69,6 +74,6 @@ describe('Validar Experiências', () => {
     cy.get('#GET-expsdata__start-0').type('2018-08')
   })
   it('Sobre', () => {
-    cy.get('#GET-expsabout-0').type('Curriculo Grátis')
+    cy.get('#GET-expsabout-0').type('Currículo Grátis')
   })
 })
