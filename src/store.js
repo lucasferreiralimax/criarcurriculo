@@ -24,7 +24,7 @@ export default new Vuex.Store({
       travel: false,
       about: null,
       genero: '',
-      telephones: [null],
+      telephones: [],
       emails: [],
       sites: [],
       exps: [],

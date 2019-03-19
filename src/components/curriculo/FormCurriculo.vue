@@ -53,13 +53,17 @@ form#curriculo(:class="{ renderActive: user.name}")
     // Phone
     label.input__contato(:for="'GET-telephone-'+ key" v-for="(telephone, key, index) in user.telephones" v-bind:class="{ error: !user.telephones[key] && errors.length }")
       .right
-        button.btn.delete.bullet.small.left(type="button" @click="removeTelephone(key)" v-show="key !== 0")
+        button.btn.delete.bullet.small.left(type="button" @click="removeTelephone(key)")
           i -
         button.btn.plus.bullet.small.left(type="button" @click="newTelephone(key)" v-scroll-to="'#GET-telephone-' + index")
           i +
       p {{ $t('form.phone') }}:
       input(:id="'GET-telephone-'+ key" v:name="'telephone-'+ key" type="number" placeholder="(011)00000-0000" maxlength="15" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" @input="updateVuex('updateTelephone', $event)" v-model="user.telephones[key]")
       p.error-msg(v-show="!user.telephones[key] && errors.length") {{ $t('form.errors.phone') }}
+  .box(v-if="user.telephones.length == 0")
+    button#newTelephone.btn.plus.large(type="button" @click="newTelephone" v-scroll-to="'#GET-telephone-0'")
+      span +
+      | {{ $t('form.phone') }}
   .box(v-if="user.emails.length !== 0")
     // Email
     // The E-mail
@@ -73,7 +77,7 @@ form#curriculo(:class="{ renderActive: user.name}")
       input(:id="'GET-email-'+ key" v:name="'email-'+ key" type="email" :placeholder="$t('form.email_place')" @input="updateVuex('updateEmail', $event)" v-model="user.emails[key]")
       p.error-msg(v-show="!user.emails[key] && errors.length") {{ $t('form.errors.email') }}
   .box(v-if="user.emails.length == 0")
-    button#newEmail.btn.plus.large(type="button" @click="newEmail" v-scroll-to="'#GET-telephone-0'")
+    button#newEmail.btn.plus.large(type="button" @click="newEmail" v-scroll-to="'#GET-email-0'")
       span +
       | E-mail
   .box(v-if="user.sites.length !== 0")
@@ -226,11 +230,9 @@ export default {
       this.$store.commit("updateSite", this.user.sites)
     },
     removeTelephone (key) {
-      if(key !== 0) {
-        this.$delete(this.user.telephones, key)
-        this.$store.commit("updateTelephone", this.user.telephones)
-        window.localStorage.setItem('store', JSON.stringify(this.user))
-      }
+      this.$delete(this.user.telephones, key)
+      this.$store.commit("updateTelephone", this.user.telephones)
+      window.localStorage.setItem('store', JSON.stringify(this.user))
     },
     removeEmail (key) {
       this.$delete(this.user.emails, key)
