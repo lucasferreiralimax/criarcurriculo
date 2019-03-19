@@ -10,14 +10,12 @@
 <script>
 import FormCurriculo from '@/components/curriculo/FormCurriculo'
 import Render from '@/components/curriculo/Render'
-import Notice from '@/components/Notice'
 
 export default {
   name: 'home',
   components: {
     FormCurriculo,
-    Render,
-    Notice
+    Render
   }
 }
 </script>

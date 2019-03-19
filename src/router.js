@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home'
-import Notice from './components/Notice'
 
 Vue.use(Router)
 
@@ -11,11 +10,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home,
-      components: {
-        default: Home,
-        popup: Notice
-      }
+      component: Home
     },
     {
       path: '/sobre',
