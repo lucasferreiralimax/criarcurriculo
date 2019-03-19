@@ -45,7 +45,7 @@
       h2(v-if="user.telephones || user.emails || user.sites") {{ $t('form.contact') }}
       p(v-if="user.telephones" v-for="(telephone, key, index) in user.telephones") {{ $t('form.phone') }}: {{ telephone }}
       p(v-if="user.emails" v-for="(email, key, index) in user.emails") {{ $t('form.email') }}: {{ email }}
-      p(v-if="user.sites" v-for="(site, key, index) in user.sites") {{ $t('form.site') }}: {{ site }}
+      p(v-if="user.sites" v-for="(site, key, index) in user.sites") {{ site }}
       hr
 </template>
 
