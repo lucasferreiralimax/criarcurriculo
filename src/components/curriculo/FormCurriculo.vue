@@ -11,7 +11,7 @@ form#curriculo(:class="{ renderActive: user.name}")
         // Nome
       // Name
       label(for="GET-name" v-bind:class="{ error: !user.name && errors.length }")
-        p {{ $t('form.name') }}
+        | {{ $t('form.name') }}
         input#GET-name(name="name" type="text" :placeholder="$t('form.name_place')" :value="user.name" @input="updateVuex('updateName', $event)")
         p.error-msg(v-show="!user.name && errors.length") {{ $t('form.errors.name') }}
       // Foto
@@ -20,13 +20,13 @@ form#curriculo(:class="{ renderActive: user.name}")
         .right
           button.btn.delete.bullet.small.photo.left(type="button" @click="removeImage($event)" v-if="user.photo")
             i -
-        p {{ $t('form.photo') }}
+        | {{ $t('form.photo') }}
         input#GET-photo(name="photo" type="file" @input="setImage($event)")
 
       // Gênero
       // Genre
       label(for="GET-genero" v-bind:class="{ error: !user.genero && errors.length }")
-        p {{ $t('form.genre')}}
+        | {{ $t('form.genre')}}
         select#GET-genero(name='genero' :value="user.genero" @input="updateVuex('updateGenero', $event)")
           option(value='') {{ $t('form.select_genre') }}
           option(value='m') {{ $t('form.woman') }}
@@ -35,7 +35,7 @@ form#curriculo(:class="{ renderActive: user.name}")
       // Data de nascimento
       // Data of birth
       label(for="GET-dataofbirth" v-bind:class="{ error: !user.age && errors.length }")
-        p {{ $t('form.born') }}
+        | {{ $t('form.born') }}
         input#GET-dataofbirth(name="dataofbirth" type="number" min="13" :value="user.age" @input="updateVuex('updateAge', $event)")
         p.error-msg(v-show="!user.age && errors.length") {{ $t('form.errors.age') }}
 
@@ -46,7 +46,7 @@ form#curriculo(:class="{ renderActive: user.name}")
       // Sobre
       // About
       label(for="GET-about")
-        p {{ $t('form.about_me') }}:
+        | {{ $t('form.about_me') }}:
         textarea#GET-about(ref="GET_about" :placeholder="$t('form.about_place')" :value="user.about" @input="updatetextAreaHeight, updateVuex('updateAbout', $event)")
   .box(v-if="user.telephones.length !== 0")
     // Telefone
@@ -57,7 +57,7 @@ form#curriculo(:class="{ renderActive: user.name}")
           i -
         button.btn.plus.bullet.small.left(type="button" @click="newTelephone(key)" v-scroll-to="'#GET-telephone-' + index")
           i +
-      p {{ $t('form.phone') }}:
+      | {{ $t('form.phone') }}:
       input(:id="'GET-telephone-'+ key" v:name="'telephone-'+ key" type="number" placeholder="(011)00000-0000" maxlength="15" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" @input="updateVuex('updateTelephone', $event)" v-model="user.telephones[key]")
       p.error-msg(v-show="!user.telephones[key] && errors.length") {{ $t('form.errors.phone') }}
   .box(v-if="user.telephones.length == 0")
@@ -73,7 +73,7 @@ form#curriculo(:class="{ renderActive: user.name}")
           i -
         button.btn.plus.bullet.small.left(type="button" @click="newEmail(key)" v-scroll-to="'#GET-email-' + index")
           i +
-      p {{ $t('form.email') }}:
+      | {{ $t('form.email') }}:
       input(:id="'GET-email-'+ key" v:name="'email-'+ key" type="email" :placeholder="$t('form.email_place')" @input="updateVuex('updateEmail', $event)" v-model="user.emails[key]")
       p.error-msg(v-show="!user.emails[key] && errors.length") {{ $t('form.errors.email') }}
   .box(v-if="user.emails.length == 0")
@@ -89,7 +89,7 @@ form#curriculo(:class="{ renderActive: user.name}")
           i -
         button.btn.plus.bullet.small.left(type="button" @click="newSite(key)" v-scroll-to="'#GET-site-' + index")
           i +
-      p {{ $t('form.site') }}:
+      | {{ $t('form.site') }}:
       input(:id="'GET-site-'+ key" v:name="'site-'+ key" type="text" :placeholder="$t('form.site_place')" @input="updateVuex('updateSite', $event)" v-model="user.sites[key]")
       p.error-msg(v-show="!user.sites[key] && errors.length") {{ $t('form.errors.site') }}
   .box(v-if="user.sites.length == 0")
@@ -109,29 +109,31 @@ form#curriculo(:class="{ renderActive: user.name}")
       // Número do Lar
       // Adress Number
       label(for="GET-address-number")
-        p  {{ $t('form.number') }}
+        | {{ $t('form.number') }}
         input#GET-address-number(name="address-number" type="number" :placeholder="$t('form.number_place')" :value="user.addressNumber" @input="updateVuex('updateAddressNumber', $event)")
 
       // O Endereço
       // The Address
       label(for="GET-address" v-bind:class="{ error: !user.end.logradouro && errors.length }")
-        p  {{ $t('form.end') }}:
+        | {{ $t('form.end') }}:
         input#GET-address(name="address" type="text" :placeholder="$t('form.end_place')" :value="user.end.logradouro" @input="updateVuex('updateEndLogradouro', $event)")
         p.error-msg(v-show="!user.end.logradouro && errors.length") {{ $t('form.errors.end') }}
       // Estado
       // State
       label(for="GET-state" v-bind:class="{ error: !user.end.localidade && errors.length }")
-        p  {{ $t('form.city') }}
+        | {{ $t('form.city') }}
         input#GET-state(name="state" type="text" :placeholder="$t('form.city_place')" :value="user.end.localidade" @input="updateVuex('updateEndLocalidade', $event)")
         p.error-msg(v-show="!user.end.localidade && errors.length") {{ $t('form.errors.city') }}
       // Viagem
       // Travel
       .radio
+        p {{ $t('form.travel') }}:
         label(for="GET-travel-yes")
-          p {{ $t('form.travel') }}:
-        label(for="GET-travel-yes")
-          input#GET-travel-yes(name="travel" type="checkbox" :checked="user.travel" @input="updateVuex('updateTravel', $event)")
-          span {{ user.travel ? $t('form.yes') : $t('form.no') }}
+          input#GET-travel-yes(name="travel" type="radio" @input="updateVuex('updateTravel', true)")
+          | {{ $t('form.yes') }}
+        label(for="GET-travel-no")
+          input#GET-travel-no(name="travel" type="radio" @input="updateVuex('updateTravel', false)")
+          | {{ $t('form.no') }}
   // Cursos
   // Coursers
   coursers-data(v-bind:errors="errors")
@@ -202,7 +204,7 @@ export default {
     },
     updateVuex (name, e) {
       if(name == 'updateTravel') {
-        this.$store.commit(name, e.target.checked)
+        this.$store.commit(name, e)
       } else if(name == 'updateGenero') {
         this.$store.commit(name, e.target.value)
         this.$store.commit('updateMaritalStatus', '')

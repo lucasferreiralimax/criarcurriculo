@@ -1,6 +1,6 @@
 <template lang="pug">
 .nav(:class="{ active: menu_show }")
-  button.btn.menu(@click="menuShow")
+  button.btn.menu(@click="menuShow" role="button" type="button")
     span
     span
     span
