@@ -15,8 +15,10 @@ describe('Validar curriculo simples', () => {
   })
   it('CEP', () => {
     cy.get('#GET-cep').type('03816130')
+    cy.get('#GET-address-number').type('1')
   })
   it('Disponivel para viagens', () => {
+    cy.get('#GET-travel-no').click()
     cy.get('#GET-travel-yes').click()
   })
   it('Telefone', () => {
