@@ -55,13 +55,13 @@ form#curriculo(:class="{ renderActive: user.name}")
       .right
         button.btn.delete.bullet.small.left(type="button" @click="removeTelephone(key)")
           i -
-        button.btn.plus.bullet.small.left(type="button" @click="newTelephone(key)" v-scroll-to="'#GET-telephone-' + index")
+        button.btn.plus.bullet.small.left(type="button" @click="newTelephone(key)")
           i +
       | {{ $t('form.phone') }}:
       input(:id="'GET-telephone-'+ key" v:name="'telephone-'+ key" type="number" placeholder="(011)00000-0000" maxlength="15" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" @input="updateVuex('updateTelephone', $event)" v-model="user.telephones[key]")
       p.error-msg(v-show="!user.telephones[key] && errors.length") {{ $t('form.errors.phone') }}
   .box(v-if="user.telephones.length == 0")
-    button#newTelephone.btn.plus.large(type="button" @click="newTelephone" v-scroll-to="'#GET-telephone-0'")
+    button#newTelephone.btn.plus.large(type="button" @click="newTelephone")
       span +
       | {{ $t('form.phone') }}
   .box(v-if="user.emails.length !== 0")
@@ -71,13 +71,13 @@ form#curriculo(:class="{ renderActive: user.name}")
       .right
         button.btn.delete.bullet.small.left(type="button" @click="removeEmail(key)")
           i -
-        button.btn.plus.bullet.small.left(type="button" @click="newEmail(key)" v-scroll-to="'#GET-email-' + index")
+        button.btn.plus.bullet.small.left(type="button" @click="newEmail(key)")
           i +
       | {{ $t('form.email') }}:
       input(:id="'GET-email-'+ key" v:name="'email-'+ key" type="email" :placeholder="$t('form.email_place')" @input="updateVuex('updateEmail', $event)" v-model="user.emails[key]")
       p.error-msg(v-show="!user.emails[key] && errors.length") {{ $t('form.errors.email') }}
   .box(v-if="user.emails.length == 0")
-    button#newEmail.btn.plus.large(type="button" @click="newEmail" v-scroll-to="'#GET-email-0'")
+    button#newEmail.btn.plus.large(type="button" @click="newEmail")
       span +
       | E-mail
   .box(v-if="user.sites.length !== 0")
@@ -87,13 +87,13 @@ form#curriculo(:class="{ renderActive: user.name}")
       .right
         button.btn.delete.bullet.small.left(type="button" @click="removeSite(key)")
           i -
-        button.btn.plus.bullet.small.left(type="button" @click="newSite(key)" v-scroll-to="'#GET-site-' + index")
+        button.btn.plus.bullet.small.left(type="button" @click="newSite(key)")
           i +
       | {{ $t('form.site') }}:
       input(:id="'GET-site-'+ key" v:name="'site-'+ key" type="text" :placeholder="$t('form.site_place')" @input="updateVuex('updateSite', $event)" v-model="user.sites[key]")
       p.error-msg(v-show="!user.sites[key] && errors.length") {{ $t('form.errors.site') }}
   .box(v-if="user.sites.length == 0")
-    button#newSite.btn.plus.large(type="button" @click="newSite" v-scroll-to="'#GET-site-0'")
+    button#newSite.btn.plus.large(type="button" @click="newSite")
       span +
       | Site
   .box
@@ -193,13 +193,10 @@ export default {
     setLocalStore () {
       let store = localStorage.getItem('store')
 
-      if(!store) {
-        console.log("store clear")
-      } else {
+      if(store) {
+        // Store Update
         store = JSON.parse(store)
-        console.log(store)
         this.$store.commit("updateUser", store)
-        console.log("store update")
       }
     },
     updateVuex (name, e) {
