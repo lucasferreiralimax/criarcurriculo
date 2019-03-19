@@ -1,7 +1,6 @@
 describe('Validar Collapso Box', () => {
   it('Validando click', () => {
     cy.visit('/')
-    cy.get('.notice > button').click()
     cy.get('.box legend').click({ multiple: true })
     cy.get('#start').scrollIntoView()
     cy.wait(2000)
