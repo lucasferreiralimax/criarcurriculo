@@ -117,24 +117,25 @@
     }
   },
   "locale": {
-    "pt": "portugiesisch",
+    "pt": "Portugiesisch",
     "en": "Englisch",
     "es": "Spanisch",
     "ru": "Russo",
-    "ja": "japanisch",
+    "ja": "Japanisch",
     "fr": "Französisch",
     "tr": "Türkisch",
     "ch": "Chinesisch",
-    "de": "Deutschland"
+    "de": "Deutschland",
+    "it": "Italienisch"
   },
   "themes": {
-    "default": "default",
+    "default": "Default",
     "rose": "Rose",
     "jungle": "Dschungel",
-    "grey": "grau",
-    "classic": "klassisch",
+    "grey": "Grau",
+    "classic": "Klassisch",
     "gold": "Gold",
     "full": "Full Black",
-    "red": "rot"
+    "red": "Rot"
   }
 }

@@ -10,6 +10,7 @@ import fr from './fr-FR.json'
 import tr from './tr-TR.json'
 import ch from './ch-ZH.json'
 import de from './al-DE.json'
+import it from './it-IT.json'
 
 Vue.use(VueI18n)
 
@@ -22,7 +23,8 @@ const messages = {
   'fr': fr,
   'tr': tr,
   'ch': ch,
-  'de': de
+  'de': de,
+  'it': it
 }
 
 const i18n = new VueI18n({
