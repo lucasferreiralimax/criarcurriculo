@@ -107,7 +107,7 @@
       "city": "Şehir alanını doldurmanız gerekiyor.",
       "phone": "Telefon alanını doldurmanız gerekiyor.",
       "email": "E-posta alanını doldurmanız gerekiyor.",
-      "scholl": "Kurumun adını doldurmalısınız.",
+      "school": "Kurumun adını doldurmalısınız.",
       "course": "Kurs adını doldurmanız gerekiyor.",
       "data_start": "Başlangıç ​​tarihi ile doldurulmalıdır.",
       "data_end": "Bitiş tarihi ile doldurulmalıdır.",
@@ -124,7 +124,8 @@
     "ja": "Japon",
     "fr": "Fransızca",
     "tr": "Türk",
-    "ch": "Çinli"
+    "ch": "Çinli",
+    "de": "Alman"
   },
   "themes": {
     "default": "Varsayılan",

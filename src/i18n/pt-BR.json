@@ -108,7 +108,7 @@
       "phone": "Precisa preencher o campo de telefone.",
       "email": "Precisa preencher o campo de E-mail.",
       "site": "Precisa preencher o campo do site.",
-      "scholl": "Precisa preencher com o nome da instituição.",
+      "school": "Precisa preencher com o nome da instituição.",
       "course": "Precisa preencher com o nome do curso.",
       "data_start": "Precisa preencher com a data de inicio.",
       "data_end": "Precisa preencher com a data final.",
@@ -125,7 +125,8 @@
     "ja": "Japonês",
     "fr": "Francês",
     "tr": "Turco",
-    "ch": "Chinês"
+    "ch": "Chinês",
+    "de": "Alemão"
   },
   "themes": {
     "default": "Padrão",

@@ -107,7 +107,7 @@
       "city": "Need to fill in the city field.",
       "phone": "You need to fill in the phone field.",
       "email": "Need to fill in the Email field",
-      "scholl": "You must fill in the name of the institution.",
+      "school": "You must fill in the name of the institution.",
       "course": "You must fill in the name of the course.",
       "data_start": "Must fill in with start date.",
       "data_end": "Need to fill in with the end date.",
@@ -124,7 +124,8 @@
     "ja": "Japanese",
     "fr": "French",
     "tr": "Turkish",
-    "ch": "Chinese"
+    "ch": "Chinese",
+    "de": "Germany"
   },
   "themes": {
     "default": "Default",

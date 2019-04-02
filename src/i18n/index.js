@@ -9,6 +9,7 @@ import jp from './ja-JP.json'
 import fr from './fr-FR.json'
 import tr from './tr-TR.json'
 import ch from './ch-ZH.json'
+import de from './al-DE.json'
 
 Vue.use(VueI18n)
 
@@ -20,7 +21,8 @@ const messages = {
   'ja': jp,
   'fr': fr,
   'tr': tr,
-  'ch': ch
+  'ch': ch,
+  'de': de
 }
 
 const i18n = new VueI18n({

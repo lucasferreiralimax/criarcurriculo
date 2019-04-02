@@ -107,7 +107,7 @@
       "city": "Vous devez remplir le champ ville",
       "phone": "Vous devez remplir le champ téléphonique",
       "email": "Vous devez remplir le champ Email",
-      "scholl": "Vous devez remplir le nom de l'institution.",
+      "school": "Vous devez remplir le nom de l'institution.",
       "course": "Vous devez remplir le nom du cours",
       "data_start": "Doit remplir avec la date de début.",
       "data_end": "Doit remplir avec la date de fin.",
@@ -124,7 +124,8 @@
     "ja": "Japonais",
     "fr": "Français",
     "tr": "Turc",
-    "ch": "Chinois"
+    "ch": "Chinois",
+    "de": "Allemagne"
   },
   "themes": {
     "default": "Trouver plus",

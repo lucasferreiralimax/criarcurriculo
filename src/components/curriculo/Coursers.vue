@@ -24,7 +24,7 @@
       label(:for="'GET-school-' + course.id" v-bind:class="{ error: !course.formation.school && errors.length }")
         p {{ $t('form.school')}}:
         input(:id="'GET-school-' + course.id" name="school" type="text" :placeholder="$t('form.school_place')" v-model="course.formation.school" @input="updateVuex('updateCoursers')")
-        p.error-msg(v-show="!course.formation.school && errors.length") {{ $t('form.errors.scholl') }}
+        p.error-msg(v-show="!course.formation.school && errors.length") {{ $t('form.errors.school') }}
 
       // Curso
       // The Course
