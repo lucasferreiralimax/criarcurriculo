@@ -1,14 +1,6 @@
 .render
   height 60vh
   position relative
-  &.abel
-    font-family 'Abel', sans-serif
-  &.cinzel
-    font-family 'Cinzel', sans-serif
-  &.kaushan
-    font-family 'Kaushan Script', sans-serif
-  &.rajdhani
-    font-family 'Rajdhani', sans-serif
   .view
     background #fff
     bottom 0
@@ -27,7 +19,20 @@
     position fixed
     transition .3s all
     width 80%
+    font-size 15px
     z-index 1
+    &.abel,
+    &.abel pre
+      font-family 'Abel', sans-serif
+    &.cinzel,
+    &.cinzel pre
+      font-family 'Cinzel', sans-serif
+    &.kaushan,
+    &.kaushan pre
+      font-family 'Kaushan Script', sans-serif
+    &.rajdhani,
+    &.rajdhani pre
+      font-family 'Rajdhani', sans-serif
     &.viewless
       cursor pointer
       filter blur(3px)

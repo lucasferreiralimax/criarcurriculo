@@ -27,7 +27,7 @@ export default {
   methods: {
     openFontSelect () { this.isFontSelect = !this.isFontSelect },
     clearRender () {
-      document.querySelector('.render').classList = "render"
+      document.querySelector('.view').classList = "view"
     },
     setFont () {
       let font = localStorage.getItem('fontSelect')
@@ -43,7 +43,7 @@ export default {
     fonttype (val) {
       this.clearRender()
       localStorage.setItem('fontSelect', val)
-      document.querySelector('.render').classList.add(val)
+      document.querySelector('.view').classList.add(val)
     }
   }
 }
