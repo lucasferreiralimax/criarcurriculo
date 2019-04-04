@@ -1,14 +1,72 @@
 .render
   height 60vh
   position relative
-  .view
+  +tablet()
+    box-sizing border-box
+    float right
+    padding 1em 1em 0
+    position absolute
+    top 270px
+    right 0
+    width 50%
+    &.viewfixed
+      position fixed
+      right 0
+      top 0
+.view
+  &.abel,
+  &.abel pre
+    font-family 'Abel', sans-serif
+  &.cinzel,
+  &.cinzel pre
+    font-family 'Cinzel', sans-serif
+  &.kaushan,
+  &.kaushan pre
+    font-family 'Kaushan Script', sans-serif
+  &.rajdhani,
+  &.rajdhani pre
+    font-family 'Rajdhani', sans-serif
+  label
+    cursor pointer
+    padding 0
+    border 0
+    background transparent
+    position relative
+  .btn
+    position absolute
+    bottom 6px
+    right 6px
+  .figure
+    width 100px
+    height 120px
+    float left
+    margin 0 20px 20px 0
+    border 1px solid #999
+    display flex
+    align-items center
+    justify-content center
+    border-radius 6px
+    overflow hidden
+    background #000
+    img
+      height 130px
+      border-radius 6px
+      transition 1s all
+  h1, p
+    margin-bottom 1em
+  h2
+    margin 1em 0 .5em
+  hr
+    clear both
+  .info
+    float left
+  .content
     background #fff
     bottom 0
-    bottom 249px
     box-shadow 0 -10px 40px rgba(#000,.3)
     box-sizing border-box
+    word-wrap break-word
     clear both
-    color #000
     cursor pointer
     height 50vh
     left calc(50% - 40%)
@@ -22,72 +80,17 @@
     font-size 15px
     font-weight normal
     z-index 1
-    &.abel,
-    &.abel pre
-      font-family 'Abel', sans-serif
-    &.cinzel,
-    &.cinzel pre
-      font-family 'Cinzel', sans-serif
-    &.kaushan,
-    &.kaushan pre
-      font-family 'Kaushan Script', sans-serif
-    &.rajdhani,
-    &.rajdhani pre
-      font-family 'Rajdhani', sans-serif
     &.viewless
       cursor pointer
       filter blur(3px)
-      transform rotate(-35deg) translate(20%, 130%)
+      transform rotate(-35deg) translate(20%, 70%)
     &.viewblocked
       pointer-events none
       opacity .7
-    label
-      cursor pointer
-      padding 0
-      border 0
-      background transparent
-      position relative
-    .btn
+    &.viewend
       position absolute
-      bottom 6px
-      right 6px
-    .figure
-      width 100px
-      height 120px
-      float left
-      margin 0 20px 20px 0
-      border 1px solid #999
-      display flex
-      align-items center
-      justify-content center
-      border-radius 6px
-      overflow hidden
-      background #000
-      img
-        height 130px
-        border-radius 6px
-        transition 1s all
-    h1, p
-      margin-bottom 1em
-    h2
-      margin 1em 0 .5em
-    hr
-      clear both
-    .info
-      float left
-  +tablet()
-    box-sizing border-box
-    float right
-    padding 1em 1em 0
-    position absolute
-    top 270px
-    right 0
-    width 50%
-    &.viewfixed
-      position fixed
-      right 0
-      top 0
-    .view
+      pointer-events none
+    +tablet()
       height calc(100vh - 60px)
       left 0
       position absolute

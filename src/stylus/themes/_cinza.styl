@@ -7,10 +7,11 @@ color6_cinza = #abc
 color7_cinza = red + 130
 
 .cinza
-  background color4_cinza url('./assets/bg-paperr.jpg') no-repeat fixed bottom center
-  background-size cover
   logo(color1_cinza, color2_cinza, color3_cinza, color4_cinza)
   btn(color4_cinza, color2_cinza)
+  &:before
+    background color4_cinza url('./assets/bg-paperr.jpg') no-repeat fixed bottom center
+    background-size cover
   .nav-menu
     background linear-gradient(color4_cinza, rgba(color4_cinza, .6))
     +tablet()
