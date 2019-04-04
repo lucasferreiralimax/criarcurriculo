@@ -53,6 +53,9 @@
       a.credits_logo(href="https://www.cypress.io" target="_blank")
         img(src="./../assets/cypress.svg" alt="Logo Cypress" width="50")
         p Cypress
+      a.credits_logo(href="https://www.cypress.io" target="_blank")
+        img(src="./../assets/firefox.svg" alt="Logo Firefox" width="50")
+        p Firefox
       a.credits_logo(href="https://codepen.io/lucaslimax" target="_blank")
         img(src="./../assets/love.svg" alt="Love" width="50")
         p {{ $t('view.about.work') }}
