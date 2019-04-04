@@ -43,6 +43,9 @@ describe('Validar Tecnologias', () => {
   it('Cypress', () => {
     cy.contains('.credits_logo p', 'Cypress')
   })
+  it('Firefox', () => {
+    cy.contains('.credits_logo p', 'Firefox')
+  })
   it('Feito com Coração', () => {
     cy.wait(1000)
     cy.get('#pluralization').click({ force: true })
