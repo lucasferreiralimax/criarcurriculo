@@ -1,35 +1,35 @@
-color1_cinza = #FCFCFC
-color2_cinza = #FFD166
-color3_cinza = #EF476F
-color4_cinza = #666
-color5_cinza = #666 + 30
-color6_cinza = #abc
-color7_cinza = red + 130
+color1_grey = #FCFCFC
+color2_grey = #FFD166
+color3_grey = #EF476F
+color4_grey = #666
+color5_grey = #666 + 30
+color6_grey = #abc
+color7_grey = red + 130
 
-.cinza
-  logo(color1_cinza, color2_cinza, color3_cinza, color4_cinza)
-  btn(color4_cinza, color2_cinza)
+.grey
+  logo(color1_grey, color2_grey, color3_grey, color4_grey)
+  btn(color4_grey, color2_grey)
   &:before
-    background color4_cinza url('./assets/bg-paperr.jpg') no-repeat fixed bottom center
+    background color4_grey url('./assets/bg-paperr.jpg') no-repeat fixed bottom center
     background-size cover
   .nav-menu
-    background linear-gradient(color4_cinza, rgba(color4_cinza, .6))
+    background linear-gradient(color4_grey, rgba(color4_grey, .6))
     +tablet()
       background transparent
   .mark
-    background rgba(color4_cinza, .6)
-    box-shadow 0 0 60px 10px rgba(color5_cinza, .6)
-    color color1_cinza
-    text-shadow 0 3px color4_cinza
+    background rgba(color4_grey, .6)
+    box-shadow 0 0 60px 10px rgba(color5_grey, .6)
+    color color1_grey
+    text-shadow 0 3px color4_grey
   legend
-    background rgba(color4_cinza, .9)
-    border 1px solid color4_cinza - 50
+    background rgba(color4_grey, .9)
+    border 1px solid color4_grey - 50
   .render
-    color color5_cinza !important
+    color color5_grey !important
     h1, h2
-      color color4_cinza !important
+      color color4_grey !important
 @media print
-  .cinza .render
-    color color5_cinza !important
+  .grey .render
+    color color5_grey !important
     h1, h2
-      color color4_cinza !important
+      color color4_grey !important

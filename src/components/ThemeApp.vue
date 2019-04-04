@@ -5,7 +5,7 @@ label.btn.theme_app(for="theme_app" :class="{ 'active' : isTheme}")
       option(value="default") {{ $t('themes.default')}}
       option(value="rose") {{ $t('themes.rose')}}
       option(value="jungle") {{ $t('themes.jungle')}}
-      option(value="cinza") {{ $t('themes.grey')}}
+      option(value="grey") {{ $t('themes.grey')}}
       option(value="classic") {{ $t('themes.classic')}}
       option(value="gold") {{ $t('themes.gold')}}
       option(value="red") {{ $t('themes.red')}}
