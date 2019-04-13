@@ -54,6 +54,18 @@ describe('Validar titulo nos Idiomas', () => {
     cy.contains('h1', 'Curriculum Gratuito')
     cy.wait(2000)
   })
+  it('Ελληνικάo', () => {
+    cy.get('#pluralization').click({ force: true })
+    cy.get('#locale').select('gr')
+    cy.contains('h1', 'Δωρεάν Συνέχιση')
+    cy.wait(2000)
+  })
+  it('ไทย', () => {
+    cy.get('#pluralization').click({ force: true })
+    cy.get('#locale').select('tl')
+    cy.contains('h1', 'หลักสูตร ฟรี')
+    cy.wait(2000)
+  })
   it('Português', () => {
     cy.get('#pluralization').click({ force: true })
     cy.get('#locale').select('pt')
