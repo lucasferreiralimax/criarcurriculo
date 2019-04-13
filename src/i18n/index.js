@@ -11,6 +11,8 @@ import tr from './tr-TR.json'
 import ch from './ch-ZH.json'
 import de from './al-DE.json'
 import it from './it-IT.json'
+import gr from './gr-GK.json'
+import tl from './tl-TD.json'
 
 Vue.use(VueI18n)
 
@@ -24,7 +26,9 @@ const messages = {
   'tr': tr,
   'ch': ch,
   'de': de,
-  'it': it
+  'it': it,
+  'gr': gr,
+  'tl': tl
 }
 
 const i18n = new VueI18n({

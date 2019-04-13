@@ -127,7 +127,9 @@
     "tr": "Turco",
     "ch": "Chinês",
     "de": "Alemão",
-    "it": "Italiano"
+    "it": "Italiano",
+    "gr": "Grego",
+    "tl": "Tailandês"
   },
   "themes": {
     "default": "Padrão",

@@ -126,7 +126,9 @@
     "tr": "Türk",
     "ch": "Çinli",
     "de": "Alman",
-    "it": "İtalya"
+    "it": "İtalya",
+    "gr": "Yunan dili",
+    "tl": "Tay dili"
   },
   "themes": {
     "default": "Varsayılan",

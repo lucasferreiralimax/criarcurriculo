@@ -126,7 +126,9 @@
     "tr": "Türkisch",
     "ch": "Chinesisch",
     "de": "Deutschland",
-    "it": "Italienisch"
+    "it": "Italienisch",
+    "gr": "Griechisch",
+    "tl": "Thailand"
   },
   "themes": {
     "default": "Default",
