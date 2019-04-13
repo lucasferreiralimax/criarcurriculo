@@ -6,7 +6,7 @@ describe('Validar temas', () => {
     cy.wait(2000)
   })
   it('Tema Cinza', () => {
-    cy.get('#theme_app').select('cinza')
+    cy.get('#theme_app').select('grey')
     cy.wait(2000)
   })
   it('Tema Classic', () => {
