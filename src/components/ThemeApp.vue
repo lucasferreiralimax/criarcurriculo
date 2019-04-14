@@ -10,7 +10,7 @@ label.btn.theme_app(for="theme_app" :class="{ 'active' : isTheme}")
       option(value="gold") {{ $t('themes.gold')}}
       option(value="red") {{ $t('themes.red')}}
       option(value="full") {{ $t('themes.full')}}
-  button.icon#openTheme(@click="openThemeApp" role="button" type="button")
+  button.icon#openTheme(@click="openThemeApp" role="button" type="button" aria-label="Theme button")
     svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.953 54.953" width="29" height="29" fill="#fff")
       circle(cx="45.021" cy="25.976" r="1")
       circle(cx="9.021" cy="25.976" r="1")
