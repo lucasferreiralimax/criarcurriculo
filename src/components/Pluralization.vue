@@ -40,6 +40,7 @@ export default {
         localStorage.setItem('locale', 'pt')
       } else {
         locale = locale.replace(/"/g, "")
+        document.documentElement.lang = locale
         this.$i18n.locale = locale
         this.locale = locale
       }
@@ -47,6 +48,7 @@ export default {
   },
   watch: {
     locale (val) {
+      document.documentElement.lang = val
       this.$i18n.locale = val
       localStorage.setItem('locale', val)
       this.openPluralization()
