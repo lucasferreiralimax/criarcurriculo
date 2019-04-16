@@ -18,7 +18,7 @@ form#curriculo(:class="{ renderActive: user.name}")
       // Photo
       label(for="GET-photo")
         .right
-          button.btn.delete.bullet.small.photo.left(type="button" @click="removeImage($event)" v-if="user.photo" aria-label="Remove Image")
+          button.btn.delete.bullet.small.photo.left(type="button" @click="removeImage($event)" v-if="user.photo" :aria-label="$t('aria-label.photo_remove')")
             i -
         | {{ $t('form.photo') }}
         input#GET-photo(name="photo" type="file" @input="setImage($event)")
@@ -53,15 +53,15 @@ form#curriculo(:class="{ renderActive: user.name}")
     // Phone
     label.input__contato(:for="'GET-telephone-'+ key" v-for="(telephone, key, index) in user.telephones" v-bind:class="{ error: !user.telephones[key] && errors.length }")
       .right
-        button.btn.delete.bullet.small.left(type="button" @click="removeTelephone(key)" aria-label="Remove telephone")
+        button.btn.delete.bullet.small.left(type="button" @click="removeTelephone(key)" :aria-label="$t('aria-label.telephone_remove')")
           i -
-        button.btn.plus.bullet.small.left(type="button" @click="newTelephone(key)" aria-label="Add new telephone")
+        button.btn.plus.bullet.small.left(type="button" @click="newTelephone(key)" :aria-label="$t('aria-label.telephone_add_new')")
           i +
       | {{ $t('form.phone') }}:
       input(:id="'GET-telephone-'+ key" v:name="'telephone-'+ key" type="number" placeholder="(011)00000-0000" maxlength="15" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" @input="updateVuex('updateTelephone', $event)" v-model="user.telephones[key]")
       p.error-msg(v-show="!user.telephones[key] && errors.length") {{ $t('form.errors.phone') }}
   .box(v-if="user.telephones.length == 0")
-    button#newTelephone.btn.plus.large(type="button" @click="newTelephone" aria-label="Add telephone")
+    button#newTelephone.btn.plus.large(type="button" @click="newTelephone" :aria-label="$t('aria-label.telephone_add')")
       span +
       | {{ $t('form.phone') }}
   .box(v-if="user.emails.length !== 0")
@@ -69,15 +69,15 @@ form#curriculo(:class="{ renderActive: user.name}")
     // The E-mail
     label.input__contato(:for="'GET-email-'+ key" v-for="(email, key, index) in user.emails" v-bind:class="{ error: !user.emails[key] && errors.length }")
       .right
-        button.btn.delete.bullet.small.left(type="button" @click="removeEmail(key)" aria-label="Remove e-mail")
+        button.btn.delete.bullet.small.left(type="button" @click="removeEmail(key)" :aria-label="$t('aria-label.email_remove')")
           i -
-        button.btn.plus.bullet.small.left(type="button" @click="newEmail(key)" aria-label="Add new e-mail")
+        button.btn.plus.bullet.small.left(type="button" @click="newEmail(key)" :aria-label="$t('aria-label.email_add_new')")
           i +
       | {{ $t('form.email') }}:
       input(:id="'GET-email-'+ key" v:name="'email-'+ key" type="email" :placeholder="$t('form.email_place')" @input="updateVuex('updateEmail', $event)" v-model="user.emails[key]")
       p.error-msg(v-show="!user.emails[key] && errors.length") {{ $t('form.errors.email') }}
   .box(v-if="user.emails.length == 0")
-    button#newEmail.btn.plus.large(type="button" @click="newEmail" aria-label="Add e-mail")
+    button#newEmail.btn.plus.large(type="button" @click="newEmail" :aria-label="$t('aria-label.email_add')")
       span +
       | E-mail
   .box(v-if="user.sites.length !== 0")
@@ -85,15 +85,15 @@ form#curriculo(:class="{ renderActive: user.name}")
     // The Site
     label.input__contato(:for="'GET-site-'+ key" v-for="(site, key, index) in user.sites" v-bind:class="{ error: !user.sites[key] && errors.length }")
       .right
-        button.btn.delete.bullet.small.left(type="button" @click="removeSite(key)" aria-label="Remove site")
+        button.btn.delete.bullet.small.left(type="button" @click="removeSite(key)" :aria-label="$t('aria-label.site_remove')")
           i -
-        button.btn.plus.bullet.small.left(type="button" @click="newSite(key)" aria-label="Add new site")
+        button.btn.plus.bullet.small.left(type="button" @click="newSite(key)" :aria-label="$t('aria-label.site_add_new')")
           i +
       | {{ $t('form.site') }}:
       input(:id="'GET-site-'+ key" v:name="'site-'+ key" type="text" :placeholder="$t('form.site_place')" @input="updateVuex('updateSite', $event)" v-model="user.sites[key]")
       p.error-msg(v-show="!user.sites[key] && errors.length") {{ $t('form.errors.site') }}
   .box(v-if="user.sites.length == 0")
-    button#newSite.btn.plus.large(type="button" @click="newSite" aria-label="Add site")
+    button#newSite.btn.plus.large(type="button" @click="newSite" :aria-label="$t('aria-label.site_add')")
       span +
       | Site
   .box
@@ -143,11 +143,11 @@ form#curriculo(:class="{ renderActive: user.name}")
   experiencies-data(v-bind:errors="errors")
 
   .text-center
-    button#reset.btn.delete(type="button" v-on:click="resetForm" aria-label="Delete all form")
+    button#reset.btn.delete(type="button" v-on:click="resetForm" :aria-label="$t('aria-label.delete_form')")
       svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 858 858")
         path(d="M162.2 858h533.7c11 0 20-9 20-20V283.2H142.2V838c0 11.1 8.9 20 20 20zm382-467.2c0-18 14.6-32.7 32.7-32.7h.699c18 0 32.7 14.6 32.7 32.7v359.7c0 18-14.6 32.699-32.7 32.699h-.699c-18 0-32.7-14.6-32.7-32.699V390.8zm-148.2 0c0-18 14.6-32.7 32.7-32.7h.7c18 0 32.699 14.6 32.699 32.7v359.7c0 18-14.6 32.699-32.699 32.699h-.7c-18 0-32.7-14.6-32.7-32.699V390.8zm-148.2 0c0-18 14.601-32.7 32.7-32.7h.7c18 0 32.7 14.6 32.7 32.7v359.7c0 18-14.601 32.699-32.7 32.699h-.7c-18 0-32.7-14.6-32.7-32.699V390.8zM556.9 95V50c0-27.6-22.4-50-50-50H351.1c-27.6 0-50 22.4-50 50v45h40V60c0-11 9-20 20-20h135.7c11 0 20 9 20 20v35h40.1zM117.2 155v68.2c0 11 9 20 20 20h583.6c11 0 20-9 20-20V155c0-11-9-20-20-20H137.2c-11 0-20 8.9-20 20z")
       | {{ $t('view.home.delete') }}
-    button#print.btn(type="button" v-on:click="printRender" aria-label="Print Curriculum")
+    button#print.btn(type="button" v-on:click="printRender" :aria-label="$t('aria-label.print_curriculum')")
       svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32")
         path(d="M10 24h10v2H10v-2zM8 2h16v4h2V2c0-1.103-.896-2-2-2H8C6.896 0 6 .896 6 2v4h2V2zm2 18h12v2H10v-2z")
         path(d="M30 8H2c-1.104 0-2 .896-2 2v12c0 1.105.896 2 2 2h4v6c0 1.105.896 2 2 2h16c1.104 0 2-.895 2-2v-6h4c1.104 0 2-.895 2-2V10c0-1.104-.897-2-2-2zm-6 22H8V18h16v12zm4-16c-1.104 0-2-.895-2-2 0-1.104.896-2 2-2s2 .896 2 2c0 1.105-.897 2-2 2z")

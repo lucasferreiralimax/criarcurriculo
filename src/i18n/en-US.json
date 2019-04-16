@@ -1,7 +1,8 @@
 {
   "nav": {
     "home": "Home",
-    "about": "About"
+    "about": "About",
+    "menu": "Menu"
   },
   "view": {
     "home": {
@@ -115,6 +116,31 @@
       "company": "You must fill in the name of the Company.",
       "exp": "You must fill in the name of the business."
     }
+  },
+  "aria-label": {
+    "pluralization": "Pluralization button",
+    "theme": "Theme button",
+    "font_select": "Font select button",
+    "course_add": "Add course",
+    "course_add_new": "Add new course",
+    "course_remove": "Remove course",
+    "exp_add": "Add experience",
+    "exp_add_new": "Add new experience",
+    "exp_remove": "Remove experience",
+    "photo_remove": "Remove photo",
+    "photo_rotate": "Rotate Image",
+    "telephone_add": "Add telephone",
+    "telephone_add_ew": "Add new telephone",
+    "telephone_remove": "Remove telephone",
+    "email_add": "Add e-mail",
+    "email_add_ew": "Add new e-mail",
+    "email_remove": "Remove e-mail",
+    "site_add": "Add site",
+    "site_add_ew": "Add new site",
+    "site_remove": "Remove site",
+    "delete_form": "Delete all form",
+    "print_curriculum": "Print Currilum",
+    "link_git": "Link to the project in Github"
   },
   "locale": {
     "pt": "Portuguese",

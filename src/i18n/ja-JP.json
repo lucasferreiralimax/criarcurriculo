@@ -1,7 +1,8 @@
 {
   "nav": {
     "home": "スタート",
-    "about": "情報"
+    "about": "情報",
+    "menu": "メニュー"
   },
   "view": {
     "home": {
@@ -38,7 +39,7 @@
   "form": {
     "h1": "個人データ",
     "name": "氏名",
-    "photo": "写真：",
+    "photo": "写真: ",
     "name_place": "あなたのフルネームを記入してください...",
     "genre": "ジャンル:",
     "marital_status": "市民の地位",
@@ -115,6 +116,31 @@
       "company": "あなたは会社の名前を記入する必要があります。",
       "exp": "貨物の名前を記入する必要があります。"
     }
+  },
+  "aria-label": {
+    "pluralization": "多元化按钮",
+    "theme": "主题按钮",
+    "font_select": "字体选择按钮",
+    "course_add": "添加课程",
+    "course_add_new": "添加新课程",
+    "course_remove": "删除课程",
+    "exp_add": "添加经验",
+    "exp_add_new": "添加新体验",
+    "exp_remove": "删除经验",
+    "photo_remove": "删除照片",
+    "photo_rotate": "旋转图像",
+    "telephone_add": "添加电话",
+    "telephone_add_ew": "添加新电话",
+    "telephone_remove": "删除电话",
+    "email_add": "添加电子邮件",
+    "email_add_ew": "添加新电子邮件",
+    "email_remove": "删除电子邮件",
+    "site_add": "添加网站",
+    "site_add_ew": "添加新网站",
+    "site_remove": "删除网站",
+    "delete_form": "删除所有表单",
+    "print_curriculum": "印刷课程",
+    "link_git": "链接到Github中的项目"
   },
   "locale": {
     "pt": "ホーム",

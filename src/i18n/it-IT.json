@@ -1,7 +1,8 @@
 {
   "nav": {
     "home": "Primo",
-    "about": "Informazioni"
+    "about": "Informazioni",
+    "menu": "Menu"
   },
   "view": {
     "home": {
@@ -115,6 +116,31 @@
       "company": "Devi inserire il nome dell'azienda.",
       "exp": "Devi inserire il nome dell'azienda."
     }
+  },
+  "aria-label": {
+    "pluralization": "pulsante di pluralizzazione",
+    "theme": "Pulsante Tema",
+    "font_select": "Pulsante di selezione dei caratteri",
+    "course_add": "Aggiungi corso",
+    "course_add_new": "Aggiungi nuovo corso",
+    "course_remove": "Rimuovi corso",
+    "exp_add": "Aggiungi esperienza",
+    "exp_add_new": "Aggiungi nuova esperienza",
+    "exp_remove": "Rimuovi esperienza",
+    "photo_remove": "Rimuovi foto",
+    "photo_rotate": "Ruota immagine",
+    "telephone_add": "Aggiungi telefono",
+    "telephone_add_ew": "Aggiungi nuovo telefono",
+    "telephone_remove": "Rimuovi telefono",
+    "email_add": "Aggiungi e-mail",
+    "email_add_ew": "Aggiungi nuova e-mail",
+    "email_remove": "Rimuovi e-mail",
+    "site_add": "Aggiungi sito",
+    "site_add_ew": "Aggiungi nuovo sito",
+    "site_remove": "Rimuovi sito",
+    "delete_form": "Elimina tutto il modulo",
+    "print_curriculum": "Stampa Currilum",
+    "link_git": "Link al progetto in Github"
   },
   "locale": {
     "pt": "Portoghese",

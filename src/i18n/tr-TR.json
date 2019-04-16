@@ -1,7 +1,8 @@
 {
   "nav": {
     "home": "Ev",
-    "about": "Bilgi"
+    "about": "Bilgi",
+    "menu": "Menü"
   },
   "view": {
     "home": {
@@ -115,6 +116,31 @@
       "company": "Şirket adını doldurmalısınız.",
       "exp": "Kargo'nın adını doldurmalısınız."
     }
+  },
+  "aria-label": {
+    "pluralization": "Çoğulculuk tuşu",
+    "theme": "Tema düğmesi",
+    "font_select": "Yazı tipi seçme düğmesi",
+    "course_add": "Kurs ekle",
+    "course_add_new": "Yeni kurs ekle",
+    "course_remove": "Dersi kaldır",
+    "exp_add": "Deneyim ekle",
+    "exp_add_new": "Yeni deneyim ekle",
+    "exp_remove": "Deneyimi kaldır",
+    "photo_remove": "Fotoğrafı kaldır",
+    "photo_rotate": "Resmi Döndür",
+    "telephone_add": "Telefon ekle",
+    "telephone_add_ew": "Yeni telefon ekle",
+    "telephone_remove": "Telefonu kaldır",
+    "email_add": "E-posta ekle",
+    "email_add_ew": "Yeni e-posta ekle",
+    "email_remove": "E-postayı kaldır",
+    "site_add": "Site ekle",
+    "site_add_ew": "Yeni site ekle",
+    "site_remove": "Siteyi kaldır",
+    "delete_form": "Tüm formu sil",
+    "print_curriculum": "Currilum Yazdır",
+    "link_git": "Github'daki projeye bağlantı"
   },
   "locale": {
     "pt": "Portekizce",

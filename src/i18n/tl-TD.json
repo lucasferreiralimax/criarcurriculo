@@ -1,7 +1,8 @@
 {
   "nav": {
     "home": "เริ่มต้น",
-    "about": "เกี่ยวกับ"
+    "about": "เกี่ยวกับ",
+    "menu": "เมนู"
   },
   "view": {
     "home": {
@@ -115,6 +116,31 @@
       "company": "คุณต้องกรอกชื่อ บริษัท ",
       "exp": "คุณต้องกรอกชื่อของธุรกิจ"
     }
+  },
+  "aria-label": {
+    "pluralization": "ปุ่มหลายฝ่าย",
+    "theme": "ปุ่มธีม",
+    "font_select": "ปุ่มเลือกแบบอักษร",
+    "course_add": "เพิ่มหลักสูตร",
+    "course_add_new": "เพิ่มหลักสูตรใหม่",
+    "course_remove": "ลบหลักสูตร",
+    "exp_add": "เพิ่มประสบการณ์",
+    "exp_add_new": "เพิ่มประสบการณ์ใหม่",
+    "exp_remove": "ลบประสบการณ์",
+    "photo_remove": "ลบรูปภาพ",
+    "photo_rotate": "หมุนรูปภาพ",
+    "phone_add": "เพิ่มโทรศัพท์",
+    "phone_add_ew": "เพิ่มโทรศัพท์ใหม่",
+    "phone_remove": "ลบโทรศัพท์",
+    "email_add": "เพิ่มอีเมล",
+    "email_add_ew": "เพิ่มอีเมลใหม่",
+    "email_remove": "ลบอีเมล",
+    "site_add": "เพิ่มเว็บไซต์",
+    "site_add_ew": "เพิ่มเว็บไซต์ใหม่",
+    "site_remove": "ลบเว็บไซต์",
+    "delete_form": "ลบฟอร์มทั้งหมด",
+    "print_curriculum": "พิมพ์ Currilum",
+    "link_git": "ลิงก์ไปยังโครงการใน Github"
   },
   "locale": {
     "pt": "โปรตุเกส",

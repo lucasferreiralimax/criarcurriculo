@@ -1,7 +1,8 @@
 {
   "nav": {
     "home": "Início",
-    "about": "Informações"
+    "about": "Informações",
+    "menu": "Menu"
   },
   "view": {
     "home": {
@@ -116,6 +117,31 @@
       "company": "Precisa preencher com o nome da Empresa.",
       "exp": "Precisa preencher com o nome do Cargo."
     }
+  },
+  "aria-label": {
+    "pluralization": "Botão de pluralização",
+    "theme": "Botão de tema",
+    "font_select": "Botão de seleção da fonte",
+    "course_add": "Adicionar curso",
+    "course_add_new": "Adicionar novo curso",
+    "course_remove": "Remover curso",
+    "exp_add": "Adicionar experiência",
+    "exp_add_new": "Adicionar nova experiência",
+    "exp_remove": "Remover experiência",
+    "photo_remove": "Remover foto",
+    "photo_rotate": "Girar a foto",
+    "telephone_add": "Adicionar telefone",
+    "telephone_add_ew": "Adicionar novo telefone",
+    "telephone_remove": "Remover telefone",
+    "email_add": "Adicionar e-mail",
+    "email_add_ew": "Adicionar novo e-mail",
+    "email_remove": "Remover e-mail",
+    "site_add": "Adicionar site",
+    "site_add_ew": "Adicionar novo site",
+    "site_remove": "Remover site",
+    "delete_form": "Excluir todo o formulário",
+    "print_curriculum": "Imprimir currículo",
+    "link_git": "Link para o projeto no Github"
   },
   "locale": {
     "pt": "Português",

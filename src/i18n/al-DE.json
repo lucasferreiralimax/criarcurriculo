@@ -1,7 +1,8 @@
 {
   "nav": {
     "home": "Zuhause",
-    "about": "About"
+    "about": "About",
+    "menu": "Speisekarte"
   },
   "view": {
     "home": {
@@ -115,6 +116,31 @@
       "company": "Sie müssen den Namen der Firma eingeben.",
       "exp": "Sie müssen den Namen des Unternehmens eingeben."
     }
+  },
+  "aria-label": {
+    "pluralization": "Pluralisierungsknopf",
+    "theme": "Theme-Schaltfläche",
+    "font_select": "Schaltfläche zum Auswählen der Schriftart",
+    "course_add": "Kurs hinzufügen",
+    "course_add_new": "Neuen Kurs hinzufügen",
+    "course_remove": "Kurs entfernen",
+    "exp_add": "Erfahrung hinzufügen",
+    "exp_add_new": "Neue Erfahrung hinzufügen",
+    "exp_remove": "Erfahrung entfernen",
+    "photo_remove": "Foto entfernen",
+    "photo_rotate": "Bild drehen",
+    "telephone_add": "Telefon hinzufügen",
+    "telephone_add_ew": "Neues Telefon hinzufügen",
+    "telephone_remove": "Telefon entfernen",
+    "email_add": "E-Mail hinzufügen",
+    "email_add_ew": "Neue E-Mail hinzufügen",
+    "email_remove": "E-Mail entfernen",
+    "site_add": "Site hinzufügen",
+    "site_add_ew": "Neue Site hinzufügen",
+    "site_remove": "Site entfernen",
+    "delete_form": "Alle Form löschen",
+    "print_curriculum": "Print Currilum",
+    "link_git": "Link zum Projekt in Github"
   },
   "locale": {
     "pt": "Portugiesisch",
