@@ -24,24 +24,24 @@
         .coursers(v-for="(course, key, index) in user.coursers")
           p(v-if="course.formation.now") {{ course.formation.now ? $t('form.cademy_now') : '' }}
           label(for="GET-about")
-            p(v-if="course.formation.school") {{ $t('form.school') }}: {{ course.formation.school }}
+            h3(v-if="course.formation.school") <!-- {{ $t('form.school') }}: --> {{ course.formation.school }}
           label(for="GET-about")
             p(v-if="course.formation.name") {{ course.formation.name }}
           label(for="GET-about")
             p(v-if="course.formation.about")
               pre {{ $t('form.activities') }}: {{ course.formation.about }}
           label(for="GET-about")
-            p(v-if="course.formation.data_start") {{ course.formation.data_start | dateFormat }} {{ course.formation.data_end ? $t('form.to') : '' }} {{ course.formation.data_end | dateFormat }}
+            p.date(v-if="course.formation.data_start") {{ course.formation.data_start | dateFormat }} {{ course.formation.data_end ? $t('form.to') : '' }} {{ course.formation.data_end | dateFormat }}
           hr
         h2(v-if="user.exps[0]") {{ $t('form.exp')}}
         .experiencies(v-for="(exp, key, index) in user.exps")
           p(v-if="exp.experience.now") {{ exp.experience.now ? $t('form.exp_now') : '' }}
-          p(v-if="exp.experience.name") {{ $t('form.company') }}: {{ exp.experience.name }}
+          h3(v-if="exp.experience.name") <!-- {{ $t('form.company') }}: --> {{ exp.experience.name }}
           p(v-if="exp.experience.work") {{ $t('form.office') }}: {{ exp.experience.work }}
           p(v-if="exp.experience.about")
-            pre {{ exp.experience.about }}
-          p(v-if="exp.experience.data_start && exp.experience.now") {{ exp.experience.data_start | dateFormat }}
-          p(v-if="exp.experience.data_start && !exp.experience.now") {{ exp.experience.data_start | dateFormat }} {{ exp.experience.data_end ? $t('form.to') : '' }} {{ exp.experience.data_end | dateFormat}}
+            pre(v-html="exp.experience.about") <!-- {{ exp.experience.about }} -->
+          p.date(v-if="exp.experience.data_start && exp.experience.now") {{ exp.experience.data_start | dateFormat }}
+          p.date(v-if="exp.experience.data_start && !exp.experience.now") {{ exp.experience.data_start | dateFormat }} {{ exp.experience.data_end ? $t('form.to') : '' }} {{ exp.experience.data_end | dateFormat}}
           hr
         h2(v-if="user.telephones || user.emails || user.sites") {{ $t('form.contact') }}
         p(v-if="user.telephones" v-for="(telephone, key, index) in user.telephones") {{ $t('form.phone') }}: {{ telephone }}
