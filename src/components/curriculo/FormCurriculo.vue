@@ -47,7 +47,7 @@ form#curriculo(:class="{ renderActive: user.name}")
       // About
       label(for="GET-about")
         | {{ $t('form.about_me') }}:
-        textarea#GET-about(ref="GET_about" :placeholder="$t('form.about_place')" :value="user.about" @input="updatetextAreaHeight, updateVuex('updateAbout', $event)")
+        textarea#GET-about(ref="GET_about" :placeholder="$t('form.about_place')" :value="user.about" @input="updatetextAreaHeight(), updateVuex('updateAbout', $event)" @click="updatetextAreaHeight")
   .box(v-if="user.telephones.length !== 0")
     // Telefone
     // Phone
@@ -169,12 +169,6 @@ Vue.component('select-maritals', SelectMaritals)
 Vue.component('experiencies-data', Experiencies)
 Vue.component('coursers-data', Coursers)
 
-Vue.mixin({
-  methods: {
-    updatetextAreaHeight () { this.$refs.GET_about.style.height = this.$refs.GET_about.scrollHeight + 'px' }
-  }
-})
-
 export default {
   name: 'form-curriculo',
   computed: mapState({ user: state => state.user }),
@@ -198,6 +192,9 @@ export default {
         store = JSON.parse(store)
         this.$store.commit("updateUser", store)
       }
+    },
+    updatetextAreaHeight () {
+      this.$refs.GET_about.style.height = this.$refs.GET_about.scrollHeight + 'px';
     },
     updateVuex (name, e) {
       if(name == 'updateTravel') {

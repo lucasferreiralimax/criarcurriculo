@@ -44,7 +44,7 @@
       // The Course About
       label(:for="'GET-courseabout-' + course.id")
         p {{ $t('form.about')}}:
-        textarea(:id="'GET-courseabout-' + course.id" ref="GET_courseabout" :placeholder="$t('form.about_course_place')" v-model="course.formation.about" @input="updatetextAreaHeight(key)")
+        textarea(:id="'GET-courseabout-' + course.id" ref="GET_courseabout" :placeholder="$t('form.about_course_place')" v-model="course.formation.about" @input="updatetextAreaHeight(key)" @click="updatetextAreaHeight(key)")
 </template>
 
 <script>
@@ -60,7 +60,9 @@ export default {
     }
   },
   methods: {
-    updatetextAreaHeight (key) { this.$refs.GET_courseabout[key].style.height = this.$refs.GET_courseabout[key].scrollHeight + 'px' },
+    updatetextAreaHeight (key) {
+      this.$refs.GET_courseabout[key].style.height = this.$refs.GET_courseabout[key].scrollHeight + 'px'
+    },
     updateVuex (name) {
       this.$store.commit(name, this.user.coursers)
       window.localStorage.setItem('store', JSON.stringify(this.user))

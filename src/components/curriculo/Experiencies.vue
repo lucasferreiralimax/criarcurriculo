@@ -45,7 +45,7 @@
       // The exps About
       label(:for="'GET-expsabout-' + exp.id")
         p {{ $t('form.about')}}:
-        textarea(:id="'GET-expsabout-' + exp.id" ref="GET_expsabout" :placeholder="$t('form.activities_place')" placeholder="" @input="updatetextAreaHeight(key)" v-model="exp.experience.about")
+        textarea(:id="'GET-expsabout-' + exp.id" ref="GET_expsabout" :placeholder="$t('form.activities_place')" placeholder="" @input="updatetextAreaHeight(key)" @click="updatetextAreaHeight(key)" v-model="exp.experience.about")
 </template>
 
 <script>
