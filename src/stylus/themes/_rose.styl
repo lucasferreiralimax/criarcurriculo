@@ -27,10 +27,14 @@ color7_rose = rose + 130
     border 1px solid color4_rose - 50
   .render
     color color4_rose !important
-    h1, h2
+    h1, h2, h3, .date
       color color5_rose !important
+    svg
+      fill color5_rose !important
 @media print
   .rose .render
     color color5_rose !important
-    h1, h2
+    h1, h2, h3, .date
       color color4_rose !important
+    svg
+      fill color4_rose !important
