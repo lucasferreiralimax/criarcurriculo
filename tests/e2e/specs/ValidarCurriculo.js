@@ -31,7 +31,7 @@ describe('Validar curriculo simples', () => {
   })
   it('Site', () => {
     cy.get('#newSite').click()
-    cy.get('#GET-site-0').type('www.curriculo-gratis.firebaseapp.com')
+    cy.get('#GET-site-0').type('www.curriculo-gratis.web.app')
   })
 })
 
