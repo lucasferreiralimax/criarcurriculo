@@ -115,7 +115,32 @@
       "company": "您必须填写公司名称。",
       "exp": "你必须填写货物的名称。"
     }
-  },  
+  },
+  "aria-label": {
+    "pluralization": "复数化按钮",
+    "theme": "主题按钮",
+    "font_select": "字体选择按钮",
+    "course_add": "添加课程",
+    "course_add_new": "添加新课程",
+    "course_remove": "删除课程",
+    "exp_add": "添加实验",
+    "exp_add_new": "添加新体验",
+    "exp_remove": "删除实验",
+    "photo_remove": "删除照片",
+    "photo_rotate": "旋转照片",
+    "telephone_add": "添加电话",
+    "telephone_add_new": "添加新手机",
+    "telephone_remove": "删除电话",
+    "email_add": "添加电子邮件",
+    "email_add_new": "添加新电子邮件",
+    "email_remove": "删除电子邮件",
+    "site_add": "添加网站",
+    "site_add_new": "添加新网站",
+    "site_remove": "删除网站",
+    "delete_form": "删除所有表单",
+    "print_curriculum": "打印简历",
+    "link_git": "链接到 Github 项目"
+  },
   "locale": {
     "pt": "葡萄牙语",
     "en": "英语",
