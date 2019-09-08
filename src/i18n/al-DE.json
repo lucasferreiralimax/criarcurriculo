@@ -108,6 +108,7 @@
       "city": "Sie müssen das Stadtfeld ausfüllen.",
       "phone": "Sie müssen das Telefonfeld ausfüllen.",
       "email": "Das E-Mail-Feld muss ausgefüllt werden",
+      "site": "Sie müssen das Feld site ausfüllen.",
       "school": "Sie müssen den Namen der Institution angeben.",
       "course": "Sie müssen den Namen des Kurses eingeben.",
       "data_start": "Muss mit Startdatum ausgefüllt werden.",

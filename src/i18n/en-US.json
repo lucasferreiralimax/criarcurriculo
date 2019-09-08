@@ -108,6 +108,7 @@
       "city": "Need to fill in the city field.",
       "phone": "You need to fill in the phone field.",
       "email": "Need to fill in the Email field",
+      "site": "You must fill in the site field.",
       "school": "You must fill in the name of the institution.",
       "course": "You must fill in the name of the course.",
       "data_start": "Must fill in with start date.",

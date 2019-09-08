@@ -108,6 +108,7 @@
       "city": "Bisogna riempire il campo cittadino.",
       "phone": "È necessario compilare il campo del telefono.",
       "email": "È necessario compilare il campo Email",
+      "site": "Devi compilare il campo del sito.",
       "school": "Devi inserire il nome dell'istituzione.",
       "course": "Devi inserire il nome del corso.",
       "data_start": "Deve compilare con la data di inizio.",

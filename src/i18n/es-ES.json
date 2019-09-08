@@ -108,6 +108,7 @@
       "city": "Necesita llenar el campo de ciudad.",
       "phone": "Necesita llenar el campo de teléfono.",
       "email": "Debe rellenar el campo de correo electrónico.",
+      "site": "Debe completar el campo del sitio.",
       "school": "Necesita llenar el nombre de la institución.",
       "course": "Necesita llenar el nombre del curso.",
       "data_start": "Necesita llenar con la fecha de inicio.",
