@@ -4,14 +4,12 @@ header.animate_intro
     router-link(to="/" v-scroll-to="'#start'" tag="h1").logo.text-center {{ $t('view.home.name1')}} {{ $t('view.home.name2')}}
   nav-menu
   pluralization
-  font-select
   theme-app
 </template>
 
 <script>
 import NavMenu from '@/components/Nav'
 import Pluralization from '@/components/Pluralization'
-import FontSelect from '@/components/FontSelect'
 import ThemeApp from '@/components/ThemeApp'
 
 export default {
@@ -19,7 +17,6 @@ export default {
   components: {
     NavMenu,
     Pluralization,
-    FontSelect,
     ThemeApp
   },
   created () { window.addEventListener('scroll', this.fixedHeader) },
