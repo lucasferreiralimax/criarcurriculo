@@ -59,7 +59,7 @@
 
 ## :cloud: Link's
 > Yo, ho, yo, ho :checkered_flag:
-* [curriculogratis.online](https://curriculogratis.online)
+* [curriculo-gratis.web.app](https://curriculo-gratis.web.app)
 * [curriculo-gratis.firebaseapp.com](https://curriculo-gratis.firebaseapp.com)
 * [curriculo-gratis.herokuapp.com](https://curriculo-gratis.herokuapp.com)
 >
