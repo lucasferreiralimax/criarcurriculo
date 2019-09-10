@@ -16,44 +16,44 @@
       // Curso atual?
       // The Course Now?
       label.course_now(:for="'GET-coursenow-' + course.id" v-bind:class="{ 'display-n-print': !course.formation.now }" @keyup.enter='course.formation.now = !course.formation.now')
-        input(:id="'GET-coursenow-' + course.id" name="'now' + course.id" type="checkbox" v-model="course.formation.now")
+        input(:id="'GET-coursenow-' + course.id" name="'now' + course.id" type="checkbox" v-model="course.formation.now" @click="updateVuex('updateCourserCheck', $event, course.id)")
         | {{ $t('form.cademy_now')}}
 
       // Escola
       // The School
       label(:for="'GET-school-' + course.id" v-bind:class="{ error: !course.formation.school && errors.length }")
         p {{ $t('form.school')}}:
-        input(:id="'GET-school-' + course.id" name="school" type="text" :placeholder="$t('form.school_place')" v-model="course.formation.school" @input="updateVuex('updateCoursers')")
+        input(:id="'GET-school-' + course.id" name="school" type="text" :placeholder="$t('form.school_place')" v-model="course.formation.school" @input="updateVuex('updateCourser', $event)")
         p.error-msg(v-show="!course.formation.school && errors.length") {{ $t('form.errors.school') }}
 
       // Curso
       // The Course
       label(:for="'GET-course-' + course.id" v-bind:class="{ error: !course.formation.name && errors.length }")
         p {{ $t('form.course')}}:
-        input(:id="'GET-course-' + course.id" name="course" type="text" :placeholder="$t('form.course_place')" v-model='course.formation.name')
+        input(:id="'GET-course-' + course.id" name="course" type="text" :placeholder="$t('form.course_place')" v-model='course.formation.name' @input="updateVuex('updateCourser', $event)")
         p.error-msg(v-show="!course.formation.name && errors.length") {{ $t('form.errors.course') }}
       // Data do curso
       // The Course data
       label(:for="'GET-coursedata__start-' + course.id")
         p {{ $t('form.start')}}:
-        input(:id="'GET-coursedata__start-' + course.id" name="coursedata-start" type="month" v-model="course.formation.data_start")
+        input(:id="'GET-coursedata__start-' + course.id" name="coursedata-start" type="month" v-model="course.formation.data_start" @input="updateVuex('updateCourser', $event)")
       label(:for="'GET-coursedata__finish-' + course.id")
         p {{ $t('form.finish')}}:
-        input(:id="'GET-coursedata__finish-' + course.id" name="coursedata-finish" type="month" v-model="course.formation.data_end")
+        input(:id="'GET-coursedata__finish-' + course.id" name="coursedata-finish" type="month" v-model="course.formation.data_end" @input="updateVuex('updateCourser', $event)")
       // Sobre o curso
       // The Course About
       label(:for="'GET-courseabout-' + course.id")
         p {{ $t('form.about')}}:
-        textarea(:id="'GET-courseabout-' + course.id" ref="GET_courseabout" :placeholder="$t('form.about_course_place')" v-model="course.formation.about" @input="updatetextAreaHeight(key)" @click="updatetextAreaHeight(key)")
+        textarea(:id="'GET-courseabout-' + course.id" ref="GET_courseabout" :placeholder="$t('form.about_course_place')" v-model="course.formation.about" @input="updatetextAreaHeight(key), updateVuex('updateCourser', $event)" @click="updatetextAreaHeight(key)")
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mixin } from '../../mixins/mixin.js'
 
 export default {
   name: 'experiencies-data',
   props: ['errors'],
-  computed: mapState({ user: state => state.user }),
+  mixins: [mixin],
   data () {
     return {
       coursers_now: false
@@ -63,11 +63,10 @@ export default {
     updatetextAreaHeight (key) {
       this.$refs.GET_courseabout[key].style.height = this.$refs.GET_courseabout[key].scrollHeight + 'px'
     },
-    updateVuex (name) {
-      this.$store.commit(name, this.user.coursers)
+    removeComponent (key) {
+      this.$delete(this.user.coursers, key)
       window.localStorage.setItem('store', JSON.stringify(this.user))
     },
-    removeComponent (key) { this.$delete(this.user.coursers, key) },
     newComponent (key = -1) {
       this.user.coursers.push({
         id: ++key,

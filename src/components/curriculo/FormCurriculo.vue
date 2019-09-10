@@ -129,10 +129,10 @@ form#curriculo(:class="{ renderActive: user.name}")
       .radio
         p {{ $t('form.travel') }}:
         label(for="GET-travel-yes")
-          input#GET-travel-yes(name="travel" type="radio" @input="updateVuex('updateTravel', true)")
+          input#GET-travel-yes(name="travel" type="radio" :checked="user.travel" @input="updateVuex('updateTravel', true)")
           | {{ $t('form.yes') }}
         label(for="GET-travel-no")
-          input#GET-travel-no(name="travel" type="radio" @input="updateVuex('updateTravel', false)")
+          input#GET-travel-no(name="travel" type="radio" :checked="!user.travel" @input="updateVuex('updateTravel', false)")
           | {{ $t('form.no') }}
   // Cursos
   // Coursers
@@ -156,7 +156,8 @@ form#curriculo(:class="{ renderActive: user.name}")
 
 <script>
 import Vue from 'vue'
-import { mapState } from 'vuex'
+import { mixin } from '../../mixins/mixin.js'
+
 import Cep from '@/components/curriculo/Cep'
 import SelectCountry from '@/components/curriculo/SelectCountry'
 import SelectMaritals from '@/components/curriculo/SelectMaritals'
@@ -171,7 +172,7 @@ Vue.component('coursers-data', Coursers)
 
 export default {
   name: 'form-curriculo',
-  computed: mapState({ user: state => state.user }),
+  mixins: [mixin],
   created () {
     this.setLocalStore()
   },
@@ -196,23 +197,6 @@ export default {
     updatetextAreaHeight () {
       this.$refs.GET_about.style.height = this.$refs.GET_about.scrollHeight + 'px';
     },
-    updateVuex (name, e) {
-      if(name == 'updateTravel') {
-        this.$store.commit(name, e)
-      } else if(name == 'updateGenero') {
-        this.$store.commit(name, e.target.value)
-        this.$store.commit('updateMaritalStatus', '')
-      } else if(name == 'updateTelephone') {
-        this.$store.commit(name, this.user.telephones)
-      } else if(name == 'updateEmail') {
-        this.$store.commit(name, this.user.emails)
-      } else if(name == 'updateSite') {
-        this.$store.commit(name, this.user.sites)
-      } else {
-        this.$store.commit(name, e.target.value)
-      }
-      window.localStorage.setItem('store', JSON.stringify(this.user))
-    },
     newTelephone () {
       this.user.telephones.push(null)
       this.$store.commit("updateTelephone", this.user.telephones)
@@ -227,17 +211,14 @@ export default {
     },
     removeTelephone (key) {
       this.$delete(this.user.telephones, key)
-      this.$store.commit("updateTelephone", this.user.telephones)
       window.localStorage.setItem('store', JSON.stringify(this.user))
     },
     removeEmail (key) {
       this.$delete(this.user.emails, key)
-      this.$store.commit("updateEmail", this.user.emails)
       window.localStorage.setItem('store', JSON.stringify(this.user))
     },
     removeSite (key) {
       this.$delete(this.user.sites, key)
-      this.$store.commit("updateSite", this.user.sites)
       window.localStorage.setItem('store', JSON.stringify(this.user))
     },
     setImage (e) {

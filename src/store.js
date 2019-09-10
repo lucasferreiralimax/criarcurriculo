@@ -68,11 +68,17 @@ export default new Vuex.Store({
     updateSite (state, value) {
       state.user.sites = value
     },
-    updateExps (state, value) {
-      state.user.exps = value
+    updateExp (state, value, id) {
+      state.user.exps[id] = value
     },
-    updateCoursers (state, value) {
-      state.user.coursers = value
+    updateCourser (state, value, id) {
+      state.user.coursers[id] = value
+    },
+    updateExpCheck (state, payload) {
+      state.user.exps[payload.id].experience.now = payload.value
+    },
+    updateCourserCheck (state, payload) {
+      state.user.coursers[payload.id].formation.now = payload.value
     },
     updateMaritalStatus (state, value) {
       state.user.maritalstatus = value

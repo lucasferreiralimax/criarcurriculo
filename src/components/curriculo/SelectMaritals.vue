@@ -38,17 +38,11 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mixin } from '../../mixins/mixin.js'
 
 export default {
   name: 'select-maritals',
   props: ['errors'],
-  computed: mapState({ user: state => state.user }),
-  methods: {
-    updateVuex (name, e) {
-      this.$store.commit(name, e.target.value)
-      window.localStorage.setItem('store', JSON.stringify(this.user))
-    }
-  }
+  mixins: [mixin],
 }
 </script>

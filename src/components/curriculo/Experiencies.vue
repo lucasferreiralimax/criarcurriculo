@@ -16,45 +16,45 @@
       // Experiência atual?
       // The exps Now?
       label.exps_now(:for="'GET-expsnow-' + exp.id" v-bind:class="{ active: exp.experience.now, 'display-n-print': !exp.experience.now }" @keyup.enter='exp.experience.now = !exp.experience.now')
-        input(:id="'GET-expsnow-' + exp.id" type="checkbox" v:name="'now' + exp.id" v-model="exp.experience.now")
+        input(:id="'GET-expsnow-' + exp.id" type="checkbox" v:name="'now' + exp.id" v-model="exp.experience.now" @click="updateVuex('updateExpCheck', $event, exp.id)")
         | {{ $t('form.exp_now')}}
 
       // Compania
       // The Company
       label(:for="'GET-company-' + exp.id" v-bind:class="{ error: !exp.experience.name && errors.length }")
         p {{ $t('form.company')}}:
-        input(:id="'GET-company-' + exp.id" name="company" type="text" :placeholder="$t('form.company_place')" placeholder="" v-model="exp.experience.name")
+        input(:id="'GET-company-' + exp.id" name="company" type="text" :placeholder="$t('form.company_place')" placeholder="" v-model="exp.experience.name" @input="updateVuex('updateExp', $event)")
         p.error-msg(v-show="!exp.experience.name && errors.length") {{ $t('form.errors.company') }}
 
       // Experiência
       // The experience
       label(:for="'GET-exps-' + exp.id" v-bind:class="{ error: !exp.experience.work && errors.length }")
         p {{ $t('form.office')}}:
-        input(:id="'GET-exps-' + exp.id" name="exps" type="text" :placeholder="$t('form.office_place')" v-model="exp.experience.work")
+        input(:id="'GET-exps-' + exp.id" name="exps" type="text" :placeholder="$t('form.office_place')" v-model="exp.experience.work" @input="updateVuex('updateExp', $event)")
         p.error-msg(v-show="!exp.experience.work && errors.length") {{ $t('form.errors.exp') }}
 
       // Data da experiência
       // The experience data
       label(:for="'GET-expsdata__start-' + exp.id")
         p {{ $t('form.start')}}:
-        input(:id="'GET-expsdata__start-' + exp.id" name="expsdata-start" type="month" v-model="exp.experience.data_start")
+        input(:id="'GET-expsdata__start-' + exp.id" name="expsdata-start" type="month" v-model="exp.experience.data_start" @input="updateVuex('updateExp', $event)")
       label(:for="'GET-expsdata__finish' + exp.id" v-if="!exp.experience.now")
         p(v-show="!exp.experience.now") {{ $t('form.finish')}}:
-        input(:id="'GET-expsdata__finish-' + exp.id" name="expsdata-finish" type="month" v-model="exp.experience.data_end")
+        input(:id="'GET-expsdata__finish-' + exp.id" name="expsdata-finish" type="month" v-model="exp.experience.data_end" @input="updateVuex('updateExp', $event)")
       // Sobre a experiência
       // The exps About
       label(:for="'GET-expsabout-' + exp.id")
         p {{ $t('form.about')}}:
-        textarea(:id="'GET-expsabout-' + exp.id" ref="GET_expsabout" :placeholder="$t('form.activities_place')" placeholder="" @input="updatetextAreaHeight(key)" @click="updatetextAreaHeight(key)" v-model="exp.experience.about")
+        textarea(:id="'GET-expsabout-' + exp.id" ref="GET_expsabout" :placeholder="$t('form.activities_place')" placeholder="" @input="updatetextAreaHeight(key), updateVuex('updateExp', $event)" @click="updatetextAreaHeight(key)" v-model="exp.experience.about")
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mixin } from '../../mixins/mixin.js'
 
 export default {
   name: 'experiencies-data',
   props: ['errors'],
-  computed: mapState({ user: state => state.user }),
+  mixins: [mixin],
   data () {
     return {
       exps_now: false
@@ -62,11 +62,10 @@ export default {
   },
   methods: {
     updatetextAreaHeight (key) { this.$refs.GET_expsabout[key].style.height = this.$refs.GET_expsabout[key].scrollHeight + 'px' },
-    updateVuex (name, e) {
-      this.$store.commit(name, e.target.value)
-      window.localStorage.setItem('store', JSON.stringify(this.user))
+    removeComponent (key) {
+      this.$delete(this.user.exps, key)
+      this.updateStore()
     },
-    removeComponent (key) { this.$delete(this.user.exps, key) },
     newComponent (key = -1) {
       this.user.exps.push({
         id: ++key,

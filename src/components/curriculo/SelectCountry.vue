@@ -8,15 +8,15 @@
 
 <script>
 import axios from 'axios'
-import { mapState } from 'vuex'
 import { url } from './api'
+import { mixin } from '../../mixins/mixin.js'
 
 const HTTP = axios.create({ baseURL: url })
 
 export default {
   name: 'select-country',
   props: ['errors'],
-  computed: mapState({ user: state => state.user }),
+  mixins: [mixin],
   data () {
     return {
       erros: [],
@@ -25,14 +25,11 @@ export default {
     }
   },
   methods: {
-    updateVuex (name, e) {
-      this.$store.commit(name, e.target.value)
-      window.localStorage.setItem('store', JSON.stringify(this.user))
-    },
     createdList () {
       HTTP.get(`countrys.json`)
       .then(response => {
         this.countrys = response.data
+        this.updateStore()
       })
       .catch(e => {
         this.errors.push(e)
