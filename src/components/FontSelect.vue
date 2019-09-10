@@ -56,5 +56,5 @@ export default {
     position fixed
     right 10px
     top 140px
-    z-index 99
+    z-index 9
 </style>
