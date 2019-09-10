@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.content.animate_intro
+  section.content
     .mark.text-center
       h2 {{ $t('view.home.text1') }}
       h2#start {{ $t('view.home.text2') }}

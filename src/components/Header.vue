@@ -1,5 +1,5 @@
 <template lang="pug">
-header.animate_intro
+header
   .header
     router-link(to="/" v-scroll-to="'#start'" tag="h1").logo.text-center {{ $t('view.home.name1')}} {{ $t('view.home.name2')}}
   nav-menu

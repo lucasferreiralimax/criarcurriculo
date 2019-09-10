@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.mark.text-center.animate_intro
+  section.mark.text-center
     h1 {{ $t('nav.about') }}
     p {{ $t('view.about.text1') }}
     p {{ $t('view.about.text2') }}

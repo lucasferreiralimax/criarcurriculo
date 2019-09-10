@@ -1,5 +1,5 @@
 <template lang="pug">
-  footer.footer.animate_intro
+  footer.footer
     a.link_open(href='https://github.com/lucaslimax/curriculogratis' target='_blank' rel="noopener")
       | {{ $t('view.home.link_source') }}
       svg(width="60" height="60" viewBox='0 0 60 60' fill="#000")

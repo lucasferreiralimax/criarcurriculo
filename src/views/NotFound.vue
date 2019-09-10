@@ -1,5 +1,5 @@
 <template lang="pug">
-section.mark.text-center.animate_intro
+section.mark.text-center
   h1 {{ $t('view.notfound.text1') }}
   p {{ $t('view.notfound.text2') }}
   h3 {{ $t('view.notfound.text3') }}
