@@ -5,19 +5,22 @@ header
   nav-menu
   pluralization
   theme-app
+  scroll-top
 </template>
 
 <script>
 import NavMenu from '@/components/Nav'
 import Pluralization from '@/components/Pluralization'
 import ThemeApp from '@/components/ThemeApp'
+import ScrollTop from '@/components/ScrollTop'
 
 export default {
   name: 'header-app',
   components: {
     NavMenu,
     Pluralization,
-    ThemeApp
+    ThemeApp,
+    ScrollTop
   },
   created () { window.addEventListener('scroll', this.fixedHeader) },
   destroyed () { window.removeEventListener('scroll', this.fixedHeader) },
