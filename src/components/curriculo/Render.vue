@@ -1,7 +1,7 @@
 <template lang="pug">
   section.render(v-if="user.name" :class="{ 'viewfixed' : viewfixed }")
     .view
-      .content(:class="{ 'viewless' : viewless, 'viewblocked' : viewblocked, 'viewend' : viewend }" @click="viewMore")
+      .content
         label.figure(for="GET-photo" v-if="user.photo")
           figure
             img#photo(:src="user.photo" :alt="user.name" width="auto")
@@ -82,14 +82,11 @@ import { mapState } from 'vuex'
 export default {
   name: 'render',
   computed: mapState({ user: state => state.user }),
-  created () { window.addEventListener('scroll', this.viewLess) },
-  destroyed () { window.removeEventListener('scroll', this.viewLess) },
+  created () { window.addEventListener('scroll', this.viewFixed) },
+  destroyed () { window.removeEventListener('scroll', this.viewFixed) },
   data () {
     return {
-      viewless: true,
-      viewblocked: true,
-      viewfixed: false,
-      viewend: false
+      viewfixed: false
     }
   },
   methods: {
@@ -112,17 +109,7 @@ export default {
           break;
       }
     },
-    viewMore () {
-      this.viewless = !this.viewless
-    },
-    viewLess () {
-      let el = (document.querySelector('#app').clientHeight - document.querySelector('#app').parentElement.offsetHeight)
-
-      this.viewless = el > window.scrollY
-      this.viewend = !(el > window.scrollY)
-      this.viewblocked = 300 > window.scrollY
-
-
+    viewFixed () {
       if (window.innerWidth >= 800) {
         this.viewfixed = 700 < window.scrollY
       } else {

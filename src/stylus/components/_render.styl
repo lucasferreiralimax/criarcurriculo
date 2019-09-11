@@ -1,5 +1,4 @@
 .render
-  height 60vh
   position relative
   +tablet()
     box-sizing border-box
@@ -90,33 +89,18 @@
     clear both
     cursor pointer
     height 50vh
-    left calc(50% - 40%)
     margin 0 auto
     outline none
     overflow auto
     padding 3em
-    position fixed
     transition .3s all
     width 80%
     font-size 15px
     font-weight normal
     z-index 1
-    &.viewless
-      cursor pointer
-      filter blur(3px)
-      transform rotate(-35deg) translate(20%, 70%)
-    &.viewblocked
-      pointer-events none
-      opacity .7
-    &.viewend
-      position absolute
     +tablet()
       height calc(100vh - 60px)
       left 0
       position absolute
       top 30px
       width calc(100% - 1em)
-      &.viewless
-        cursor default
-        filter none
-        transform none
