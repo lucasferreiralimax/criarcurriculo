@@ -7,8 +7,7 @@
     p {{ $t('view.about.text3') }}
       a(href='https://github.com/lucaslimax/curriculogratis' target='_blank' rel="noopener")  {{ $t('view.about.text4') }}
       | {{ $t('view.about.contact') }}
-    br
-    h2 {{ $t('view.about.thanks') }}
+    h3 {{ $t('view.about.thanks') }}
     article.hitech
       h2 {{ $t('view.about.hitech')}}
       a.credits_logo(href="https://github.com/lucasferreiralimax/curriculogratis" target="_blank")
