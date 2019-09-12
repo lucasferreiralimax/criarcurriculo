@@ -44,28 +44,26 @@
       // The Course About
       label(:for="'GET-courseabout-' + course.id")
         p {{ $t('form.about')}}:
-        textarea(:id="'GET-courseabout-' + course.id" ref="GET_courseabout" :placeholder="$t('form.about_course_place')" v-model="course.formation.about" @input="updatetextAreaHeight(key), updateVuex('updateCourser', $event)" @click="updatetextAreaHeight(key)")
+        textarea(:id="'GET-courseabout-' + course.id" ref="GET_courseabout" :placeholder="$t('form.about_course_place')" v-model="course.formation.about" @input="resizeTextArea('GET_courseabout', key), updateVuex('updateCourser', $event)" @click="resizeTextArea('GET_courseabout', key)")
 </template>
 
 <script>
-import { mixin } from '../../mixins/mixin.js'
+import { mixinUpdateStore } from '../../mixins/mixinUpdateStore.js'
+import { mixinResizeTextArea } from '../../mixins/mixinResizeTextArea.js'
 
 export default {
   name: 'experiencies-data',
   props: ['errors'],
-  mixins: [mixin],
+  mixins: [mixinUpdateStore, mixinResizeTextArea],
   data () {
     return {
       coursers_now: false
     }
   },
   methods: {
-    updatetextAreaHeight (key) {
-      this.$refs.GET_courseabout[key].style.height = this.$refs.GET_courseabout[key].scrollHeight + 'px'
-    },
     removeComponent (key) {
       this.$delete(this.user.coursers, key)
-      window.localStorage.setItem('store', JSON.stringify(this.user))
+      this.updateStore()
     },
     newComponent (key = -1) {
       this.user.coursers.push({

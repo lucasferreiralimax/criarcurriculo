@@ -1,6 +1,6 @@
 import { mapState } from 'vuex'
 
-export const mixin = {
+export const mixinUpdateStore = {
   computed: mapState({ user: state => state.user }),
   methods: {
     updateStore () {

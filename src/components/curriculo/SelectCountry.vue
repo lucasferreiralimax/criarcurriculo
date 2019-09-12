@@ -9,14 +9,14 @@
 <script>
 import axios from 'axios'
 import { url } from './api'
-import { mixin } from '../../mixins/mixin.js'
+import { mixinUpdateStore } from '../../mixins/mixinUpdateStore.js'
 
 const HTTP = axios.create({ baseURL: url })
 
 export default {
   name: 'select-country',
   props: ['errors'],
-  mixins: [mixin],
+  mixins: [mixinUpdateStore],
   data () {
     return {
       erros: [],

@@ -45,23 +45,23 @@
       // The exps About
       label(:for="'GET-expsabout-' + exp.id")
         p {{ $t('form.about')}}:
-        textarea(:id="'GET-expsabout-' + exp.id" ref="GET_expsabout" :placeholder="$t('form.activities_place')" placeholder="" @input="updatetextAreaHeight(key), updateVuex('updateExp', $event)" @click="updatetextAreaHeight(key)" v-model="exp.experience.about")
+        textarea(:id="'GET-expsabout-' + exp.id" ref="GET_expsabout" :placeholder="$t('form.activities_place')" placeholder="" @input="resizeTextArea('GET_expsabout', key), updateVuex('updateExp', $event)" @click="resizeTextArea('GET_expsabout', key)" v-model="exp.experience.about")
 </template>
 
 <script>
-import { mixin } from '../../mixins/mixin.js'
+import { mixinUpdateStore } from '../../mixins/mixinUpdateStore.js'
+import { mixinResizeTextArea } from '../../mixins/mixinResizeTextArea.js'
 
 export default {
   name: 'experiencies-data',
   props: ['errors'],
-  mixins: [mixin],
+  mixins: [mixinUpdateStore, mixinResizeTextArea],
   data () {
     return {
       exps_now: false
     }
   },
   methods: {
-    updatetextAreaHeight (key) { this.$refs.GET_expsabout[key].style.height = this.$refs.GET_expsabout[key].scrollHeight + 'px' },
     removeComponent (key) {
       this.$delete(this.user.exps, key)
       this.updateStore()

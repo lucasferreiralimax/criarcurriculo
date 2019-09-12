@@ -38,11 +38,11 @@
 </template>
 
 <script>
-import { mixin } from '../../mixins/mixin.js'
+import { mixinUpdateStore } from '../../mixins/mixinUpdateStore.js'
 
 export default {
   name: 'select-maritals',
   props: ['errors'],
-  mixins: [mixin],
+  mixins: [mixinUpdateStore],
 }
 </script>

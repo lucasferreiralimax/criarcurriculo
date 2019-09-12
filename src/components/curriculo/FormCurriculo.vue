@@ -47,7 +47,7 @@ form#curriculo(:class="{ renderActive: user.name}")
       // About
       label(for="GET-about")
         | {{ $t('form.about_me') }}:
-        textarea#GET-about(ref="GET_about" :placeholder="$t('form.about_place')" :value="user.about" @input="updatetextAreaHeight(), updateVuex('updateAbout', $event)" @click="updatetextAreaHeight")
+        textarea#GET-about(ref="GET_about" :placeholder="$t('form.about_place')" :value="user.about" @input="resizeTextArea('GET_about'), updateVuex('updateAbout', $event)" @click="resizeTextArea('GET_about')")
   .box(v-if="user.telephones.length !== 0")
     // Telefone
     // Phone
@@ -156,7 +156,9 @@ form#curriculo(:class="{ renderActive: user.name}")
 
 <script>
 import Vue from 'vue'
-import { mixin } from '../../mixins/mixin.js'
+import { mixinUpdateStore } from '../../mixins/mixinUpdateStore.js'
+import { mixinRender } from '../../mixins/mixinRender.js'
+import { mixinResizeTextArea } from '../../mixins/mixinResizeTextArea.js'
 
 import Cep from '@/components/curriculo/Cep'
 import SelectCountry from '@/components/curriculo/SelectCountry'
@@ -172,7 +174,7 @@ Vue.component('coursers-data', Coursers)
 
 export default {
   name: 'form-curriculo',
-  mixins: [mixin],
+  mixins: [mixinUpdateStore, mixinRender, mixinResizeTextArea],
   created () {
     this.setLocalStore()
   },
@@ -194,9 +196,6 @@ export default {
         this.$store.commit("updateUser", store)
       }
     },
-    updatetextAreaHeight () {
-      this.$refs.GET_about.style.height = this.$refs.GET_about.scrollHeight + 'px';
-    },
     newTelephone () {
       this.user.telephones.push(null)
       this.$store.commit("updateTelephone", this.user.telephones)
@@ -211,15 +210,15 @@ export default {
     },
     removeTelephone (key) {
       this.$delete(this.user.telephones, key)
-      window.localStorage.setItem('store', JSON.stringify(this.user))
+      this.updateStore()
     },
     removeEmail (key) {
       this.$delete(this.user.emails, key)
-      window.localStorage.setItem('store', JSON.stringify(this.user))
+      this.updateStore()
     },
     removeSite (key) {
       this.$delete(this.user.sites, key)
-      window.localStorage.setItem('store', JSON.stringify(this.user))
+      this.updateStore()
     },
     setImage (e) {
       const file = e.target.files[0]
@@ -235,7 +234,7 @@ export default {
         reader.onload = (event) => {
           this.imgSrc = event.target.result
           this.$store.commit('updatePhoto', this.imgSrc)
-          window.localStorage.setItem('store', JSON.stringify(this.user))
+          this.updateStore()
         }
         reader.readAsDataURL(file)
       } else {
@@ -245,84 +244,7 @@ export default {
     removeImage () {
       this.$store.commit('updatePhoto', '')
       document.querySelector('#GET-photo').value = ''
-      window.localStorage.setItem('store', JSON.stringify(this.user))
-    },
-    resetForm () {
-      let user = {
-        name: 'Nome',
-        photo: '',
-        age: null,
-        countrystatus: '',
-        cep: null,
-        end: {
-          localidade: '',
-          logradouro: '',
-          complemento: '',
-          uf: '',
-          bairro: '',
-          cep: ''
-        },
-        maritalstatus: '',
-        addressNumber: null,
-        travel: false,
-        about: null,
-        genero: '',
-        telephones: [null],
-        emails: [],
-        sites: [],
-        exps: [],
-        coursers: []
-      }
-      if(window.confirm("Tem certeza?")) {
-        this.$store.commit('updateUser', user)
-        window.localStorage.setItem('store', JSON.stringify(user))
-        this.errors = []
-      }
-    },
-    printRender () {
-      this.errors = []
-      if (!this.user.age) { this.errors.push('Precisa preencher o campo data de nascimento.') }
-      if (!this.user.end.localidade) { this.errors.push('Precisa preencher o campo localidade.') }
-      if (!this.user.end.logradouro) { this.errors.push('Precisa preencher o campo logradouro.') }
-      if (!this.user.genero) {this.errors.push('Precisa colocar seu genero.') }
-      if (!this.user.maritalstatus) { this.errors.push('Precisa colocar seu estado civil.') }
-      if (!this.user.name) { this.errors.push('Precisa preencher o campo nome.') }
-      if (this.user.telephones.length) {
-        for(let i = 0; this.user.telephones.length > i; i++) {
-          if (!this.user.telephones[i]) { this.errors.push('Precisa preencher o campo de telefone') }
-        }
-      }
-      if (this.user.emails.length) {
-        for(let i = 0; this.user.emails.length > i; i++) {
-          if (!this.user.emails[i]) { this.errors.push('Precisa preencher o campo de e-mail') }
-        }
-      }
-      if (this.user.sites.length) {
-        for(let i = 0; this.user.sites.length > i; i++) {
-          if (!this.user.sites[i]) { this.errors.push('Precisa preencher o campo de sites') }
-        }
-      }
-      if (this.user.exps.length) {
-        for(let i = 0; this.user.exps.length > i; i++) {
-          if (!this.user.exps[i].experience.name) { this.errors.push('Precisa preencher o campo nome da empresa') }
-          if (!this.user.exps[i].experience.work) { this.errors.push('Precisa preencher o campo nome do cargo') }
-        }
-      }
-      if (this.user.coursers.length) {
-        for(let i = 0; this.user.coursers.length > i; i++) {
-          if (!this.user.coursers[i].formation.name) { this.errors.push('Precisa preencher o campo nome da instituição') }
-          if (!this.user.coursers[i].formation.school) { this.errors.push('Precisa preencher o campo nome do curso') }
-        }
-      }
-      if(!this.errors.length) {
-        let scroll_end = (document.querySelector('#app').clientHeight - document.querySelector('#app').parentElement.offsetHeight)
-        document.querySelector('.render').classList.remove('active', 'fixed', 'fixedFooter')
-        window.print()
-        document.querySelector('.render').classList.add('active', 'fixed', 'fixedFooter')
-        window.scrollTo(0, scroll_end)
-      } else {
-        window.scrollTo(0, 600)
-      }
+      this.updateStore()
     }
   }
 }

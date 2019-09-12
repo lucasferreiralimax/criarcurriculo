@@ -6,14 +6,14 @@
 
 <script>
 import axios from 'axios'
-import { mixin } from '../../mixins/mixin.js'
+import { mixinUpdateStore } from '../../mixins/mixinUpdateStore.js'
 
 const HTTP = axios.create({ baseURL: 'https://viacep.com.br/ws/' })
 
 export default {
   name: 'cep',
   props: ['errors'],
-  mixins: [mixin],
+  mixins: [mixinUpdateStore],
   methods: {
     search_cep (e) {
       if (e.target.value.length === 8) {
