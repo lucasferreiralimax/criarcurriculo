@@ -8,7 +8,6 @@ label.btn.theme_app(for="theme_app" :class="{ 'active' : isTheme}")
       option(value="grey") {{ $t('themes.grey')}}
       option(value="classic") {{ $t('themes.classic')}}
       option(value="gold") {{ $t('themes.gold')}}
-      option(value="red") {{ $t('themes.red')}}
       option(value="full") {{ $t('themes.full')}}
   button.icon#openTheme(@click="openThemeApp" role="button" type="button" :aria-label="$t('aria-label.theme')")
     svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.953 54.953" width="29" height="29" fill="#fff")
@@ -55,8 +54,8 @@ export default {
 
       if(!theme) {
         this.clearBody()
-        document.querySelector('body').classList.add('full')
-        localStorage.setItem('theme_app', 'full')
+        document.querySelector('body').classList.add('default')
+        localStorage.setItem('theme_app', 'default')
       } else {
         this.clearBody()
         theme = theme.replace(/"/g, "")
@@ -68,14 +67,14 @@ export default {
 </script>
 
 <style lang="stylus">
-  @import '../stylus/config/_mixins'
 
-   .theme_app
-    border-radius 6px
-    display block
-    top 75px
-    right 10px
-    position fixed
-    z-index 99
-    pointer-events all
+.theme_app
+  border-radius 6px
+  display block
+  top 75px
+  right 10px
+  position fixed
+  z-index 99
+  pointer-events all
+
 </style>
