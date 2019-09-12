@@ -14,6 +14,11 @@ color7_full = full + 130
     background linear-gradient(color4_full, rgba(color4_full, .6))
     +tablet()
       background transparent
+  .menu
+    &:hover span
+      background color4_full - 15
+    span
+      background color4_full - 15
   .mark
     background rgba(color4_full, .6)
     box-shadow 0 0 60px 10px rgba(color5_full, .6)
@@ -23,7 +28,7 @@ color7_full = full + 130
     background rgba(color4_full, .9)
     border 1px solid color4_full - 50
   .paz
-    fill #fff
+    fill #fff !important
   .credits
     color #fff
   .render

@@ -15,6 +15,11 @@ color7_rose = rose + 130
     background linear-gradient(color4_rose, rgba(color4_rose, .6))
     +tablet()
       background transparent
+  .menu
+    &:hover span
+      background color4_rose - 15
+    span
+      background color4_rose - 15
   .mark
     background rgba(color4_rose, .9)
     box-shadow 0 0 60px 10px rgba(color5_rose, .6)
@@ -24,7 +29,8 @@ color7_rose = rose + 130
     background rgba(color4_rose, .9)
     border 1px solid color4_rose - 50
   .paz
-    fill #fff
+    fill #fff !important
+    filter drop-shadow(0 2px 2px rgba(#000, .5)) !important
   .credits
     color #fff
   .render
