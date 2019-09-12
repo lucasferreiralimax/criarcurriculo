@@ -8,9 +8,8 @@
     "home": {
       "name1": "Müfredat",
       "name2": "Ücretsiz",
-      "message": "Bu web uygulaması hâlâ sürekli geliştiriliyor.",
-      "text1": "Yeni müfredatınızı hızlı, kolay ve ücretsiz oluşturun!",
-      "text2": "Aşağıdaki formu doldurun...",
+      "text1": "Ücretsiz, hızlı ve kolay bir müfredat oluşturun",
+      "text2": "Formu bilgilerinizle doldurun",
       "print": "Yazdır",
       "delete": "Her şeyi sil!",
       "link_source": "Proje kaynak kodunu bağla"

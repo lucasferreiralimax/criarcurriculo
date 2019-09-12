@@ -6,11 +6,10 @@
   },
   "view": {
     "home": {
-      "name1": "Curriculo",
+      "name1": "Currículo",
       "name2": "Grátis",
-      "message": "Essa web aplicação ainda está em constante desenvolvimento.",
-      "text1": "Crie seu novo curriculo rápido, fácil e grátis!",
-      "text2": "Preencha o formulário abaixo...",
+      "text1": "Criar currículo grátis, rápido e fácil",
+      "text2": "Preencha o formulário com suas informações",
       "print": "Imprimir",
       "delete": "Apagar tudo!",
       "link_source": "Link código fonte do projeto"

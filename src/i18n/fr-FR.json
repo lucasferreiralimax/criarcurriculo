@@ -8,9 +8,8 @@
     "home": {
       "name1": "Curriculo",
       "name2": "Gratuit",
-      "message": "Cette application web est toujours en développement constant.",
-      "text1": "Créez votre nouveau curriculum rapidement, facilement et gratuitement!",
-      "text2": "Remplissez le formulaire ci-dessous ...",
+      "text1": "Créez curriculum gratuit, rapide et facile",
+      "text2": "Remplissez le formulaire avec vos informations",
       "print": "Impression",
       "delete": "Supprimer tout!",
       "link_source": "Lien du code source pour le projet"

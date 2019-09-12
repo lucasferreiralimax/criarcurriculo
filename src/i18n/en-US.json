@@ -8,9 +8,8 @@
     "home": {
       "name1": "Curriculum",
       "name2": "Free",
-      "message": "This web application is still in constant development.",
-      "text1": "Create your new curriculum quick, easy and free!",
-      "text2": "Fill out the form below ...",
+      "text1": "Create free curriculum, fast and easy",
+      "text2": "Fill in the form with your information",
       "print": "Print",
       "delete": "Delete everything!",
       "link_source": "Link source code for the project"
