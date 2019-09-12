@@ -3,5 +3,5 @@ module.exports = {
     name: 'Curriculo Grátis',
     themeColor: '#4A4A4A'
   },
-  outputDir: 'dist'
+  productionSourceMap: false
 }
