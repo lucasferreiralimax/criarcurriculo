@@ -1,7 +1,7 @@
 <template lang="pug">
 label.btn.theme_app(for="theme_app" :class="{ 'active' : isTheme}")
   transition(name="fade")
-    select#theme_app(@input.stop.passive="updateThemeApp($event)" v-if="isTheme")
+    select#theme_app(v-model="selectedTheme" @input.stop.passive="updateThemeApp($event)" v-if="isTheme")
       option(value="default") {{ $t('themes.default')}}
       option(value="rose") {{ $t('themes.rose')}}
       option(value="jungle") {{ $t('themes.jungle')}}
@@ -38,7 +38,8 @@ export default {
   computed: mapState({ theme_app: state => state.theme_app }),
   data () {
     return {
-      isTheme: false
+      isTheme: false,
+      selectedTheme: ''
     }
   },
   methods: {
@@ -54,11 +55,13 @@ export default {
 
       if(!theme) {
         this.clearBody()
+        this.selectedTheme = 'default'
         document.querySelector('body').classList.add('default')
         localStorage.setItem('theme_app', 'default')
       } else {
         this.clearBody()
         theme = theme.replace(/"/g, "")
+        this.selectedTheme = theme
         document.querySelector('body').classList.add(theme)
       }
     }
