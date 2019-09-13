@@ -163,7 +163,6 @@ export default {
       HTTP.get()
       .then(response => {
         this.contributors = response.data
-        console.log(response.data)
       })
       .catch(e => {
         this.errors.push(e)
