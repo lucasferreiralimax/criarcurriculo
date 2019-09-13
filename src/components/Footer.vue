@@ -25,28 +25,19 @@
 <style lang="stylus">
 
 .credits
-  color #000
+  color #fff
   cursor pointer
   font-size 1em
   transition 2s all
   user-select none
   pointer-events all
-  i
-    display inline-block
-    transition 1s all
-    width .8em
-  small, i
+  small
     font-style normal
-    text-shadow 0 2px 2px rgba(#fff,.6)
+    text-shadow 0 2px 2px rgba(#000,.6)
   &:hover
     letter-spacing 10px
     text-shadow 0 2px 2px rgba(#000,.6)
     transition 2s all
-    i
-      font-size 2em
-      margin 4px
-    svg
-      filter drop-shadow(0 2px 10px rgba(#fff, .7))
   svg
     margin-top 20px
     transition 2s all
@@ -89,10 +80,9 @@
     position absolute
     margin-left -20px
     margin-bottom 20px
-    filter drop-shadow(0 2px 2px rgba(#fff, .5))
+    filter drop-shadow(0 2px 2px rgba(#000, .5))
   .paz
     opacity 1
-    fill #000
   .brasil
     opacity 0
   &:hover
