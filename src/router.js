@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home'
 
 Vue.use(Router)
 
@@ -10,7 +9,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: () => import(/* webpackChunkName: "home" */ './views/Home.vue')
     },
     {
       path: '/sobre',
@@ -20,7 +19,7 @@ export default new Router({
     {
       path: '/*',
       name: 'notfound',
-      component: () => import(/* webpackChunkName: "about" */ './views/NotFound.vue')
+      component: () => import(/* webpackChunkName: "notfound" */ './views/NotFound.vue')
     }
   ],
   scrollBehavior () {
