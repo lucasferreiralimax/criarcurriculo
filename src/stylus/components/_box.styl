@@ -2,9 +2,22 @@
   background rgba(#eee, .8)
   box-shadow 0 0 0 1px rgba(#fff, .2), 0 0 10px rgba(#000, .3)
   border-radius 6px
-  margin-bottom 2em
+  margin-bottom 1em
   max-width 100%
   overflow hidden
+  &.coursers,
+  &.experiences
+    background transparent
+    box-shadow none
+    .course,
+    .experience
+      background rgba(#eee, .8)
+      box-shadow 0 0 0 1px rgba(#fff, .2), 0 0 10px rgba(#000, .3)
+      border-radius 6px
+      margin-top 1em
+      overflow hidden
+      &:first-of-type
+        margin-top 0
   [for^="GET-coursedata"],
   [for^="GET-expsdata"],
   [for="GET-address-number"],
