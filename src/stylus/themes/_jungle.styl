@@ -1,8 +1,8 @@
 color1_jungle = #FCFCFC
 color2_jungle = #FFD166
 color3_jungle = #EF476F
-color4_jungle = #154b28
-color5_jungle = #5b162e + 30
+color4_jungle = #285c3a
+color5_jungle = #201812
 color6_jungle = #abc
 color7_jungle = red + 130
 
@@ -26,7 +26,7 @@ color7_jungle = red + 130
     color color1_jungle
     text-shadow 0 3px color4_jungle
   legend
-    background rgba(color4_jungle, .9)
+    background color4_jungle
     border 1px solid color4_jungle - 50
   .render
     color color5_jungle !important
@@ -36,12 +36,11 @@ color7_jungle = red + 130
       color color5_jungle !important
     svg
       fill color5_jungle !important
-@media print
-  .jungle .render
-    color color5_jungle !important
-    h1, h2
-      color color4_jungle !important
-    h3, .date
+    +printRender()
       color color5_jungle !important
-    svg
-      fill color5_jungle !important
+      h1, h2
+        color color4_jungle !important
+      h3, .date
+        color color5_jungle !important
+      svg
+        fill color5_jungle !important

@@ -25,14 +25,13 @@ color7_full = full + 130
     color color1_full
     text-shadow 0 3px color4_full
   legend
-    background rgba(color4_full, .9)
+    background color4_full
     border 1px solid color4_full - 50
   .render
     color color5_full !important
     h1, h2
       color color5_full - 90 !important
-@media print
-  .full .render
-    color color5_full !important
-    h1, h2
-      color color5_full - 90 !important
+    +printRender()
+      color color5_full !important
+      h1, h2
+        color color5_full - 90 !important

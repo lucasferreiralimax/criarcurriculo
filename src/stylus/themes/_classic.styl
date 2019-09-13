@@ -1,8 +1,8 @@
 color1_classic = #FCFCFC
 color2_classic = #FFD166
 color3_classic = #EF476F
-color4_classic = #584630
-color5_classic = #584630 - 30
+color4_classic = #4d371e
+color5_classic = #342e26
 color6_classic = #abc
 color7_classic = red + 130
 
@@ -26,17 +26,17 @@ color7_classic = red + 130
     color color1_classic
     text-shadow 0 3px color4_classic
   legend
-    background rgba(color4_classic, .9)
+    background color4_classic
     border 1px solid color4_classic - 50
   .render
+    color color5_classic !important
     h1, h2,  h3, .date
-      color color4_classic + 30 !important
+      color color4_classic + 50 !important
     svg
-      fill color4_classic + 30 !important
-@media print
-  .classic .render
-    color color4_classic + 30 !important
-    h1, h2,  h3, .date
-      color color5_classic + 30 !important
-    svg
-      fill color5_classic + 30 !important
+      fill color4_classic + 50 !important
+    +printRender()
+      color color5_classic !important
+      h1, h2,  h3, .date
+        color color4_classic + 50 !important
+      svg
+        fill color4_classic + 50 !important

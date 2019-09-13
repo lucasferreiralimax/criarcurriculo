@@ -2,7 +2,7 @@ color1_rose = #FCFCFC
 color2_rose = #FFD166
 color3_rose = #EF476F
 color4_rose = #440927
-color5_rose = #cc1a58
+color5_rose = #af425c
 color6_rose = #abc
 color7_rose = rose + 130
 
@@ -26,18 +26,17 @@ color7_rose = rose + 130
     color color1_rose
     text-shadow 0 3px color4_rose
   legend
-    background rgba(color4_rose, .9)
+    background color4_rose
     border 1px solid color4_rose - 50
   .render
-    color color4_rose !important
+    color color4_rose - 60 !important
     h1, h2, h3, .date
       color color5_rose !important
     svg
       fill color5_rose !important
-@media print
-  .rose .render
-    color color5_rose !important
-    h1, h2, h3, .date
-      color color4_rose !important
-    svg
-      fill color4_rose !important
+    +printRender()
+      color color4_rose - 60 !important
+      h1, h2, h3, .date
+        color color5_rose !important
+      svg
+        fill color5_rose !important

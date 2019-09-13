@@ -1,0 +1,31 @@
+btn(cor1, cor2)
+  .btn
+    background cor1 + 110
+    border 1px solid cor1
+    color cor1 - 50
+    &:hover
+      background cor1 + 90
+    &.router-link-exact-active
+      background cor2
+      border-color cor2 - 60
+      color cor1
+      &:hover
+        background cor2 + 20
+      svg, path
+        fill cor1
+    &.delete
+      background red + 170
+      border-color red - 120
+      color red - 120
+      &:hover
+        background red + 190
+      svg, path
+        fill red - 120
+    &.plus
+      background green + 100
+      border-color green - 30
+      color green - 50
+      &:hover
+        background green + 130
+    svg, path
+      fill cor1 - 15
