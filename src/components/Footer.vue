@@ -35,7 +35,7 @@
     font-style normal
     text-shadow 0 2px 2px rgba(#000,.6)
   &:hover
-    letter-spacing 10px
+    letter-spacing 3px
     text-shadow 0 2px 2px rgba(#000,.6)
     transition 2s all
   svg
@@ -44,6 +44,7 @@
   &.curriculo
     clear both
     display block
+    width 50%
     margin 0 auto
     margin-bottom 10px
     position relative
