@@ -57,6 +57,7 @@
     "select_genre": "Sélectionnez votre genre...",
     "woman": "Femmes",
     "man": "Hommes",
+    "unisex": "Unisexe",
     "born": "L'âge:",
     "end": "Adresse de rue",
     "end_place": "Nom de la rue ou de l'avenue...",

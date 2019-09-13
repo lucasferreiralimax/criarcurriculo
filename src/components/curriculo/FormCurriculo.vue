@@ -31,6 +31,7 @@ form#curriculo(:class="{ renderActive: user.name}")
           option(value='') {{ $t('form.select_genre') }}
           option(value='m') {{ $t('form.woman') }}
           option(value='h') {{ $t('form.man') }}
+          option(value='u') {{ $t('form.unisex') }}
         p.error-msg(v-show="!user.genero && errors.length") {{ $t('form.errors.genre') }}
       // Data de nascimento
       // Data of birth

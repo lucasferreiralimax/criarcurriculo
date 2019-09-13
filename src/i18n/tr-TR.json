@@ -57,6 +57,7 @@
     "select_genre": "Türünüzü seçin...",
     "woman": "kadın",
     "man": "erkek",
+    "unisex": "üniseks",
     "born": "Yaş:",
     "end": "Adres",
     "end_place": "Sokak adı veya caddesi...",

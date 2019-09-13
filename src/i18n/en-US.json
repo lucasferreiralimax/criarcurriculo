@@ -57,6 +57,7 @@
     "select_genre": "Select your genre...",
     "woman": "Woman",
     "man": "Man",
+    "unisex": "Unisex",
     "born": "Born in:",
     "end": "Address",
     "end_place": "Name of street or avenue...",
