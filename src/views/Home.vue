@@ -1,10 +1,11 @@
 <template lang="pug">
-  section.content
+  section.home.content
     .mark.text-center
       h2 {{ $t('view.home.text1') }}
       h2#start {{ $t('view.home.text2') }}
-    form-curriculo
-    render
+    .container
+      form-curriculo
+      render
     font-select
 </template>
 
