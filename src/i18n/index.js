@@ -6,12 +6,12 @@ import pt_BR from './pt-BR.json'
 Vue.use(VueI18n)
 
 const i18n = new VueI18n({
-  locale: 'pt',
-  fallbackLocale: 'pt',
-  messages: { 'pt': pt_BR}
+  locale: 'pt-BR',
+  fallbackLocale: 'pt-BR',
+  messages: { 'pt-BR': pt_BR}
 })
 
-const loadedLanguages = ['pt'] // our default language that is preloaded
+const loadedLanguages = ['pt-BR'] // our default language that is preloaded
 
 function setI18nLanguage (lang) {
   i18n.locale = lang
