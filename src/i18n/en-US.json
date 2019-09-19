@@ -155,7 +155,9 @@
     "de": "Germany",
     "it": "Italy",
     "gr": "Greek",
-    "tl": "Thailand"
+    "tl": "Thailand",
+    "nl": "Neerlandesa",
+    "nl_n": "Norwegian"
   },
   "themes": {
     "default": "Default",

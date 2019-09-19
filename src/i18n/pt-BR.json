@@ -155,7 +155,9 @@
     "de": "Alemão",
     "it": "Italiano",
     "gr": "Grego",
-    "tl": "Tailandês"
+    "tl": "Tailandês",
+    "nl": "Holandês",
+    "nl_n": "Norueguês"
   },
   "themes": {
     "default": "Padrão",
