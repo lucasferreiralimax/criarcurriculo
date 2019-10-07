@@ -16,6 +16,8 @@ input, textarea, select
     max-width auto
     min-width auto
     width auto
+textarea
+  resize vertical
 input[type="file"]
   padding .8em
 select
@@ -34,6 +36,7 @@ label, legend, .radio > p
   padding 1em
   transition .3s all
 label
+  position: relative
   &:hover
     background rgba(#fff, .9)
     input, textarea, select
