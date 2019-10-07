@@ -23,7 +23,7 @@
       // The Company
       label(:for="'GET-company-' + exp.id" v-bind:class="{ error: !exp.experience.name && errors.length }")
         p {{ $t('form.company')}}:
-        input(:id="'GET-company-' + exp.id" name="company" type="text" :placeholder="$t('form.company_place')" placeholder="" v-model="exp.experience.name" @input="updateVuex('updateExp', $event)")
+        input(:id="'GET-company-' + exp.id" name="company" type="text" :placeholder="$t('form.company_place')" v-model="exp.experience.name" @input="updateVuex('updateExp', $event)")
         p.error-msg(v-show="!exp.experience.name && errors.length") {{ $t('form.errors.company') }}
 
       // Experiência
@@ -45,7 +45,7 @@
       // The exps About
       label(:for="'GET-expsabout-' + exp.id")
         p {{ $t('form.about')}}:
-        textarea(:id="'GET-expsabout-' + exp.id" ref="GET_expsabout" :placeholder="$t('form.activities_place')" placeholder="" @input="resizeTextArea('GET_expsabout', key), updateVuex('updateExp', $event)" @click="resizeTextArea('GET_expsabout', key)" v-model="exp.experience.about")
+        textarea(:id="'GET-expsabout-' + exp.id" ref="GET_expsabout" :placeholder="$t('form.activities_place')" @input="resizeTextArea('GET_expsabout', key), updateVuex('updateExp', $event)" @click="resizeTextArea('GET_expsabout', key)" v-model="exp.experience.about")
 </template>
 
 <script>
