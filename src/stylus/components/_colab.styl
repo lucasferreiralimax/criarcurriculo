@@ -4,26 +4,26 @@
   +ultrawide()
     max-width 50%
   .flexbox
+    align-items center
     display flex
     flex-wrap wrap
-    align-items center
     justify-content center
 
 .colab
   .people
-    cursor pointer
-    margin 0 1em 1em
-    transition .3s all
+    align-items center
     background #fff
-    text-shadow none
     border-radius 10px
-    width 230px
-    height 230px
+    cursor pointer
     display inline-flex
     flex-direction column
     flex-wrap wrap
-    align-items center
+    height 230px
     justify-content center
+    margin 0 1em 1em
+    text-shadow none
+    transition .3s all
+    width 230px
     &:hover
       transform scale(1.1)
       img
@@ -41,8 +41,8 @@
 .contributor__score
   color color2 - 100
   .icon
-    transform translate(-5px, 5px)
     fill color2 - 100
+    transform translate(-5px, 5px)
 
 .hitech
   &:hover
@@ -59,20 +59,20 @@
         z-index 9
 
 .credits_logo
+  align-items center
+  background #fff
+  border-radius 100px
   color #000
   display inline-flex
   flex-direction column
   flex-wrap wrap
-  align-items center
-  justify-content center
-  width 155px
   height 155px
-  text-shadow 0 2px 2px rgba(#000, .5)
-  transition .5s all
-  background #fff
+  justify-content center
   padding 20px
-  border-radius 100px
+  text-shadow 0 2px 2px rgba(#000, .5)
   transform scale(.9)
+  transition .5s all
+  width 155px
   &:hover
     filter grayscale(0)
     position relative

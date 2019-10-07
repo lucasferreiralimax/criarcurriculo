@@ -5,35 +5,35 @@
 @import url('https://fonts.googleapis.com/css?family=Abel|Cinzel|Kaushan+Script|Rajdhani&display=swap')
 
 *
-  background transparent
   -webkit-focus-ring-color rgba(255, 255, 255, 0) !important
   -webkit-tap-highlight-color rgba(255, 255, 255, 0) !important
+  background transparent
   box-sizing border-box
   &:after
-    content ''
     clear both
+    content ''
     display table
 
 ::selection
-  color color2 - 190
   background color2
+  color color2 - 190
 
 ::-webkit-scrollbar-track
 	background #fff
 ::-webkit-scrollbar
-	width 6px
 	background-color rgba(#fff,0)
+	width 6px
 ::-webkit-scrollbar-thumb
-	border-radius 10px
-	-webkit-box-shadow inset 0 0 6px rgba(0,0,0,0)
 	background-color rgba(#000,.2)
+	border-radius 10px
+	box-shadow inset 0 0 6px rgba(0,0,0,0)
 
 html, body
+  height 100vh
   height auto
   margin 0
   padding 0
   width 100%
-  height 100vh
 
 body
   background color4 - 20
@@ -57,8 +57,8 @@ a
 
 pre
   font-family Arial
-  white-space pre-wrap
   line-height 20px
+  white-space pre-wrap
 
 @import '_app-print'
 @import 'base/_header'

@@ -5,8 +5,8 @@
     float right
     padding 1em 1em 0
     position absolute
-    top 270px
     right 0
+    top 270px
     width 50%
     &.viewfixed
       position fixed
@@ -26,30 +26,30 @@
   &.rajdhani pre
     font-family 'Rajdhani', sans-serif
   label
+    background transparent
+    border 0
     cursor pointer
     padding 0
-    border 0
-    background transparent
     position relative
   .btn
-    position absolute
     bottom 6px
+    position absolute
     right 6px
   .figure
-    width 120px
-    height 130px
-    float left
-    margin 0 20px 20px 0
-    border 1px solid #999
-    display flex
     align-items center
-    justify-content center
-    border-radius 6px
-    overflow hidden
     background #fff
+    border 1px solid #999
+    border-radius 6px
+    display flex
+    float left
+    height 130px
+    justify-content center
+    margin 0 20px 20px 0
+    overflow hidden
+    width 120px
     img
-      height 130px
       border-radius 6px
+      height 130px
       transition 1s all
   h1, p
     margin-bottom .5em
@@ -62,8 +62,8 @@
     clear both
   .coursers .date
   .experiencies .date
-    margin-top 5px
     font-weight bold
+    margin-top 5px
   .info
     float left
     margin-bottom 20px
@@ -91,9 +91,10 @@
     bottom 0
     box-shadow 0 -10px 40px rgba(#000,.3)
     box-sizing border-box
-    word-wrap break-word
     clear both
     cursor pointer
+    font-size 15px
+    font-weight normal
     height 50vh
     margin 0 auto
     outline none
@@ -101,8 +102,7 @@
     padding 3em
     transition .3s all
     width 80%
-    font-size 15px
-    font-weight normal
+    word-wrap break-word
     z-index 1
     +tablet()
       height calc(100vh - 60px)
