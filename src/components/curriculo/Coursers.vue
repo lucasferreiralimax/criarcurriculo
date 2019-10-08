@@ -52,7 +52,7 @@ import { mixinUpdateStore } from '../../mixins/mixinUpdateStore.js'
 import { mixinResizeTextArea } from '../../mixins/mixinResizeTextArea.js'
 
 export default {
-  name: 'experiencies-data',
+  name: 'experiencies',
   props: ['errors'],
   mixins: [mixinUpdateStore, mixinResizeTextArea],
   data () {
