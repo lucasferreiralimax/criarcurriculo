@@ -44,6 +44,14 @@ export const mixinUpdateStore = {
           break
       }
       this.updateStore()
+    },
+    newInput (value, vuex) {
+      this.user[value].push(null)
+      this.$store.commit(vuex, this.user[value])
+    },
+    removeInput (value, key) {
+      this.$delete(this.user[value], key)
+      this.updateStore()
     }
   }
 }
