@@ -1,12 +1,12 @@
 describe('Validar Textos', () => {
   it('Inicio', () => {
-    cy.contains('h1', 'Curriculo Grátis')
-    cy.contains('.mark > h2', 'Crie seu novo curriculo rápido, fácil e grátis!')
-    cy.contains('#start', 'Preencha o formulário abaixo...')
+    cy.contains('h1', 'Currículo Grátis')
+    cy.contains('.mark > h2', 'Criar currículo grátis, rápido e fácil')
+    cy.contains('#start', 'Preencha o formulário com suas informações')
   })
   it('Sobre', () => {
-    cy.get('[href="/sobre"]').click({ force: true })
-    cy.contains('h1', 'Curriculo Grátis')
+    cy.get('.btn[href="/sobre"]').click({ force: true })
+    cy.contains('h1', 'Currículo Grátis')
     cy.contains('.mark > h1', 'Informações')
   })
 })
