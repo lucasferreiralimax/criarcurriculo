@@ -43,19 +43,20 @@
         input(:id="'GET-expsdata__finish-' + exp.id" name="expsdata-finish" type="month" v-model="exp.experience.data_end" @input="updateVuex('updateExp', $event)")
       // Sobre a experiência
       // The exps About
-      label(:for="'GET-expsabout-' + exp.id")
-        p {{ $t('form.about')}}:
-        textarea(:id="'GET-expsabout-' + exp.id" ref="GET_expsabout" :placeholder="$t('form.activities_place')" @input="resizeTextArea('GET_expsabout', key), updateVuex('updateExp', $event)" @click="resizeTextArea('GET_expsabout', key)" v-model="exp.experience.about")
+      textarea-app(:id="exp.id" :name="'expsabout-' + exp.id" :value="{ parent: 'exps', child: 'experience' }" translate="activities" vuex="updateExp")
 </template>
 
 <script>
 import { mixinUpdateStore } from '../../mixins/mixinUpdateStore.js'
-import { mixinResizeTextArea } from '../../mixins/mixinResizeTextArea.js'
+import TextareaApp from '@/components/forms/TextareaApp'
 
 export default {
   name: 'experiencies',
   props: ['errors'],
-  mixins: [mixinUpdateStore, mixinResizeTextArea],
+  mixins: [mixinUpdateStore],
+  components: {
+    TextareaApp
+  },
   data () {
     return {
       exps_now: false

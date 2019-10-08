@@ -22,11 +22,7 @@ form#curriculo(:class="{ renderActive: user.name}")
         p.error-msg(v-show="!user.genero && errors.length") {{ $t('form.errors.genre') }}
       input-app(name="dataofbirth" value="age" type="number" translate="age" vuex="updateAge" :errors="errors")
       select-maritals(v-bind:errors="errors")
-      // Sobre
-      // About
-      label(for="GET-about")
-        | {{ $t('form.about_me') }}:
-        textarea#GET-about(ref="GET_about" :placeholder="$t('form.about_place')" :value="user.about" @input="resizeTextArea('GET_about'), updateVuex('updateAbout', $event)" @click="resizeTextArea('GET_about')")
+      textarea-app(name="about" value="about" translate="about" vuex="updateAbout")
   .box(v-if="user.telephones.length !== 0")
     input-crud(name="telephone" value="telephones" type="number" translate="phone" vuex="updateTelephone" :errors="errors")
   .box(v-if="user.telephones.length == 0")
@@ -83,7 +79,6 @@ form#curriculo(:class="{ renderActive: user.name}")
 <script>
 import { mixinUpdateStore } from '../../mixins/mixinUpdateStore.js'
 import { mixinRender } from '../../mixins/mixinRender.js'
-import { mixinResizeTextArea } from '../../mixins/mixinResizeTextArea.js'
 
 import Cep from '@/components/curriculo/Cep'
 import SelectCountry from '@/components/curriculo/SelectCountry'
@@ -93,10 +88,11 @@ import Coursers from '@/components/curriculo/Coursers'
 import InputApp from '@/components/forms/InputApp'
 import InputPhoto from '@/components/forms/InputPhoto'
 import InputCrud from '@/components/forms/InputCrud'
+import TextareaApp from '@/components/forms/TextareaApp'
 
 export default {
   name: 'form-curriculo',
-  mixins: [mixinUpdateStore, mixinRender, mixinResizeTextArea],
+  mixins: [mixinUpdateStore, mixinRender],
   components: {
     Cep,
     SelectCountry,
@@ -105,7 +101,8 @@ export default {
     Coursers,
     InputApp,
     InputPhoto,
-    InputCrud
+    InputCrud,
+    TextareaApp
   },
   created () {
     this.setLocalStore()

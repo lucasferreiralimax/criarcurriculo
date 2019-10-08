@@ -42,19 +42,20 @@
         input(:id="'GET-coursedata__finish-' + course.id" name="coursedata-finish" type="month" v-model="course.formation.data_end" @input="updateVuex('updateCourser', $event)")
       // Sobre o curso
       // The Course About
-      label(:for="'GET-courseabout-' + course.id")
-        p {{ $t('form.about')}}:
-        textarea(:id="'GET-courseabout-' + course.id" ref="GET_courseabout" :placeholder="$t('form.about_course_place')" v-model="course.formation.about" @input="resizeTextArea('GET_courseabout', key), updateVuex('updateCourser', $event)" @click="resizeTextArea('GET_courseabout', key)")
+      textarea-app(:id="course.id" :name="'courseabout-' + course.id" :value="{ parent: 'coursers', child: 'formation'}" translate="about_course" vuex="updateCourser")
 </template>
 
 <script>
 import { mixinUpdateStore } from '../../mixins/mixinUpdateStore.js'
-import { mixinResizeTextArea } from '../../mixins/mixinResizeTextArea.js'
+import TextareaApp from '@/components/forms/TextareaApp'
 
 export default {
   name: 'experiencies',
   props: ['errors'],
-  mixins: [mixinUpdateStore, mixinResizeTextArea],
+  mixins: [mixinUpdateStore],
+  components: {
+    TextareaApp
+  },
   data () {
     return {
       coursers_now: false
