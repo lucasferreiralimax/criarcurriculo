@@ -14,6 +14,3 @@ export default {
   mixins: [mixinUpdateStore]
 }
 </script>
-
-<style lang="stylus">
-</style>
