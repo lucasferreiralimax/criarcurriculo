@@ -21,10 +21,6 @@ describe('Validar temas', () => {
     cy.get('#theme_app').select('full')
     cy.wait(2000)
   })
-  it('Tema Red', () => {
-    cy.get('#theme_app').select('red')
-    cy.wait(2000)
-  })
   it('Tema Selva', () => {
     cy.get('#theme_app').select('jungle')
     cy.wait(2000)
