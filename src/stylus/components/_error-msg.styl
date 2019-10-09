@@ -1,23 +1,41 @@
-label.error,
-.error label,
-.error
-  background red + 150
-  position relative
+input, select
+  &.error
+    box-shadow: 0 0 0 2px rgba(red + 50, .5), 0 0 20px 2px rgba(red + 50, .5)
+.radio.error label
+  background rgba(#fff, .5)
+  box-shadow inset 0 0 20px 2px rgba(red + 50, .2), 0 0 0 2px rgba(red + 50, .2), 0 0 20px 2px rgba(red + 50, .2)
+.radio label:hover
+  background #fff
+  box-shadow none
+.radio .error-msg
+  bottom -17px
+  left 3px
+.input__contato .error-msg
+  bottom: 0
+.error-msg
+  background red + 50
+  border-radius 5px
+  bottom -12px
+  color #fff
+  display inline-block !important
+  font-size .85em
+  left 12px
+  padding .5em
+  position absolute
+  text-shadow 0 2px 3px rgba(#000, .7), 0 -2px 7px rgba(#000, .3)
   transition .3s all
-  .error-msg
-    background red + 50
-    color #fff
-    padding 1em
-    transition .3s all
-    &:after
-      border 10px solid transparent
-      border-bottom-color red + 50
-      content ''
-      display block
-      float right
-      height 1px
-      left 0
-      position relative
-      top -35px
-      width 1px
-      z-index 9
+  user-select none
+  z-index 10
+  &:after
+    border 6px solid transparent
+    border-bottom-color red + 50
+    content ''
+    display block
+    float left
+    height 1px
+    left 0
+    left 12px
+    position absolute
+    top -12px
+    width 1px
+    z-index 9

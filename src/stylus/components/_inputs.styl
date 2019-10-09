@@ -29,7 +29,9 @@ input[type="radio"],
 input[type="checkbox"]
   cursor pointer
   user-select none
-label, legend, .radio > p
+.radio
+  position: relative
+label, legend, .radio > p:not(.error-msg)
   border-bottom 1px solid rgba(#fff, .3)
   box-sizing border-box
   display block
