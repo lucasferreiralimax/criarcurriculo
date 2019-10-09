@@ -23,6 +23,19 @@
 </script>
 
 <style lang="stylus">
+.footer
+  font-weight normal
+  padding 20px 0 40px
+  text-align center
+  position relative
+  z-index 9
+  pointer-events none
+  &.home
+    +tablet()
+      width 50%
+    +ultrawide()
+      width 100%
+      max-width 65%
 
 .credits
   color #fff
