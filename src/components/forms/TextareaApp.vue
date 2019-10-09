@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import { mixinUpdateStore } from '../../mixins/mixinUpdateStore.js'
-import { mixinResizeTextArea } from '../../mixins/mixinResizeTextArea.js'
+import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
+import { mixinResizeTextArea } from '@/mixins/mixinResizeTextArea.js'
 
 export default {
   name: 'textarea-app',

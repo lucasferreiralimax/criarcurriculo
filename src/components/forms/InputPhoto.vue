@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { mixinUpdateStore } from '../../mixins/mixinUpdateStore.js'
+import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
 
 export default {
   name: 'input-photo',
