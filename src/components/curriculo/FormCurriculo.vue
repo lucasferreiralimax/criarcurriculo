@@ -10,16 +10,7 @@ form#curriculo(:class="{ renderActive: user.name}")
         span {{ $t('form.h1') }}
       input-app(name="name" value="name" type="text" translate="name" vuex="updateName" :errors="errors")
       input-photo
-      // Gênero
-      // Genre
-      label(for="GET-genero" v-bind:class="{ error: !user.genero && errors.length }")
-        | {{ $t('form.genre')}}
-        select#GET-genero(name='genero' :value="user.genero" @input="updateVuex('updateGenero', $event)")
-          option(value='') {{ $t('form.select_genre') }}
-          option(value='m') {{ $t('form.woman') }}
-          option(value='h') {{ $t('form.man') }}
-          option(value='u') {{ $t('form.unisex') }}
-        p.error-msg(v-show="!user.genero && errors.length") {{ $t('form.errors.genre') }}
+      select-genre(:errors="errors")
       input-app(name="dataofbirth" value="age" type="number" translate="age" vuex="updateAge" :errors="errors")
       select-maritals(v-bind:errors="errors")
       textarea-app(name="about" value="about" translate="about" vuex="updateAbout")
@@ -48,20 +39,11 @@ form#curriculo(:class="{ renderActive: user.name}")
           path(d="M502.001 492.002h-44v-79c0-5.523-4.478-10-10-10s-10 4.477-10 10v79h-120v-190c0-5.523-4.478-10-10-10h-104c-5.522 0-10 4.477-10 10v190h-120V266.001h3.848c2.652 0 5.195-1.054 7.071-2.929L256.001 91.991l171.081 171.081a10.003 10.003 0 0 0 7.071 2.929h3.848v75c0 5.523 4.478 10 10 10s10-4.477 10-10v-75h44a10.001 10.001 0 0 0 7.071-17.071l-246-246c-3.906-3.905-10.236-3.905-14.143 0l-94 94c-3.905 3.905-3.905 10.237 0 14.142 3.906 3.906 10.238 3.906 14.143 0l86.929-86.929 221.857 221.858h-39.563L263.072 70.778c-3.906-3.905-10.236-3.905-14.143 0L73.706 246.001H34.143l78.929-78.928c3.905-3.905 3.905-10.237 0-14.143-3.905-3.904-10.237-3.905-14.143 0l-96 96a10.002 10.002 0 0 0 7.072 17.071h44v226h-44c-5.522 0-10 4.477-10 10s4.478 10 10 10h492c5.522 0 10-4.477 10-10s-4.478-9.999-10-9.999zm-204 0h-84v-180h84v180z")
           path(d="M406.001 292.002h-56c-5.522 0-10 4.477-10 10v100c0 5.523 4.478 10 10 10h56c5.522 0 10-4.477 10-10v-100c0-5.523-4.478-10-10-10zm-10 100h-36v-80h36v80zM162.001 292.002h-56c-5.522 0-10 4.477-10 10v100c0 5.523 4.478 10 10 10h56c5.522 0 10-4.477 10-10v-100c0-5.523-4.478-10-10-10zm-10 100h-36v-80h36v80zM256.001 164.322c-25.364 0-46 20.636-46 46s20.636 46 46 46 46-20.636 46-46-20.636-46-46-46zm0 72c-14.337 0-26-11.664-26-26s11.663-26 26-26 26 11.664 26 26-11.663 26-26 26zM244.07 394.932a10.073 10.073 0 0 0-7.069-2.93c-2.63 0-5.21 1.07-7.07 2.93-1.86 1.86-2.93 4.44-2.93 7.07s1.069 5.21 2.93 7.07c1.861 1.86 4.44 2.93 7.07 2.93s5.21-1.07 7.069-2.93c1.86-1.86 2.931-4.44 2.931-7.07s-1.07-5.21-2.931-7.07zM140.07 125.932c-1.859-1.86-4.439-2.93-7.069-2.93s-5.21 1.07-7.07 2.93c-1.86 1.86-2.93 4.44-2.93 7.07s1.069 5.21 2.93 7.07c1.861 1.86 4.44 2.93 7.07 2.93s5.21-1.07 7.069-2.93c1.86-1.86 2.931-4.44 2.931-7.07s-1.07-5.21-2.931-7.07zM455.07 367.261a10.078 10.078 0 0 0-7.069-2.93c-2.63 0-5.21 1.07-7.07 2.93-1.86 1.87-2.93 4.44-2.93 7.07s1.069 5.21 2.93 7.08c1.86 1.86 4.44 2.92 7.07 2.92s5.21-1.06 7.069-2.92a10.1 10.1 0 0 0 2.931-7.08c0-2.63-1.07-5.21-2.931-7.07z")
         span {{ $t('form.end') }}
-      cep(v-bind:errors="errors")
+      input-cep(v-bind:errors="errors")
       input-app(name="address-number" value="addressNumber" type="text" translate="number" vuex="updateAddressNumber")
-      input-app(name="address" value="end.logradouro" type="text" translate="end" vuex="updateEndLogradouro" :errors="errors")
-      input-app(name="state" value="end.localidade" type="text" translate="city" vuex="updateEndLocalidade" :errors="errors")
-      // Viagem
-      // Travel
-      .radio
-        p {{ $t('form.travel') }}:
-        label(for="GET-travel-yes")
-          input#GET-travel-yes(name="travel" type="radio" :checked="user.travel" @input="updateVuex('updateTravel', true)")
-          | {{ $t('form.yes') }}
-        label(for="GET-travel-no")
-          input#GET-travel-no(name="travel" type="radio" :checked="!user.travel" @input="updateVuex('updateTravel', false)")
-          | {{ $t('form.no') }}
+      input-app(name="address" :value="{ parent: 'end', child: 'logradouro'}" type="text" translate="end" vuex="updateEndLogradouro" :errors="errors")
+      input-app(name="state" :value="{ parent: 'end', child: 'localidade'}" type="text" translate="city" vuex="updateEndLocalidade" :errors="errors")
+      select-travel(:errors="errors")
   coursers(v-bind:errors="errors")
   experiencies(v-bind:errors="errors")
   .text-center
@@ -77,31 +59,35 @@ form#curriculo(:class="{ renderActive: user.name}")
 </template>
 
 <script>
-import { mixinUpdateStore } from '../../mixins/mixinUpdateStore.js'
-import { mixinRender } from '../../mixins/mixinRender.js'
+import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
+import { mixinRender } from '@/mixins/mixinRender.js'
 
-import Cep from '@/components/curriculo/Cep'
-import SelectCountry from '@/components/curriculo/SelectCountry'
-import SelectMaritals from '@/components/curriculo/SelectMaritals'
-import Experiencies from '@/components/curriculo/Experiencies'
 import Coursers from '@/components/curriculo/Coursers'
+import Experiencies from '@/components/curriculo/Experiencies'
 import InputApp from '@/components/forms/InputApp'
-import InputPhoto from '@/components/forms/InputPhoto'
+import InputCep from '@/components/forms/InputCep'
 import InputCrud from '@/components/forms/InputCrud'
+import InputPhoto from '@/components/forms/InputPhoto'
+import SelectCountry from '@/components/forms/SelectCountry'
+import SelectGenre from '@/components/forms/SelectGenre'
+import SelectMaritals from '@/components/forms/SelectMaritals'
+import SelectTravel from '@/components/forms/SelectTravel'
 import TextareaApp from '@/components/forms/TextareaApp'
 
 export default {
   name: 'form-curriculo',
   mixins: [mixinUpdateStore, mixinRender],
   components: {
-    Cep,
-    SelectCountry,
-    SelectMaritals,
-    Experiencies,
     Coursers,
+    Experiencies,
     InputApp,
-    InputPhoto,
+    InputCep,
     InputCrud,
+    InputPhoto,
+    SelectCountry,
+    SelectGenre,
+    SelectMaritals,
+    SelectTravel,
     TextareaApp
   },
   created () {
