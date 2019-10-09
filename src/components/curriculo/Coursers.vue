@@ -21,17 +21,17 @@
 
       // Escola
       // The School
-      label(:for="'GET-school-' + course.id" v-bind:class="{ error: !course.formation.school && errors.length }")
+      label(:for="'GET-school-' + course.id")
         p {{ $t('form.school')}}:
-        input(:id="'GET-school-' + course.id" name="school" type="text" :placeholder="$t('form.school_place')" v-model="course.formation.school" @input="updateVuex('updateCourser', $event)")
-        p.error-msg(v-show="!course.formation.school && errors.length") {{ $t('form.errors.school') }}
+        input(:id="'GET-school-' + course.id" name="school" type="text" :placeholder="$t('form.school_place')" v-model="course.formation.school" @input="updateVuex('updateCourser', $event)" :class="{ error: !course.formation.school && errors ? errors.length : false }")
+        p.error-msg(v-if="!course.formation.school && errors.length") {{ $t('form.errors.school') }}
 
       // Curso
       // The Course
-      label(:for="'GET-course-' + course.id" v-bind:class="{ error: !course.formation.name && errors.length }")
+      label(:for="'GET-course-' + course.id")
         p {{ $t('form.course')}}:
-        input(:id="'GET-course-' + course.id" name="course" type="text" :placeholder="$t('form.course_place')" v-model='course.formation.name' @input="updateVuex('updateCourser', $event)")
-        p.error-msg(v-show="!course.formation.name && errors.length") {{ $t('form.errors.course') }}
+        input(:id="'GET-course-' + course.id" name="course" type="text" :placeholder="$t('form.course_place')" v-model='course.formation.name' @input="updateVuex('updateCourser', $event)" :class="{ error: !course.formation.name && errors ? errors.length : false }")
+        p.error-msg(v-if="!course.formation.name && errors.length") {{ $t('form.errors.course') }}
       // Data do curso
       // The Course data
       label(:for="'GET-coursedata__start-' + course.id")
@@ -46,7 +46,7 @@
 </template>
 
 <script>
-import { mixinUpdateStore } from '../../mixins/mixinUpdateStore.js'
+import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
 import TextareaApp from '@/components/forms/TextareaApp'
 
 export default {

@@ -6,12 +6,13 @@
 
 <script>
 import axios from 'axios'
-import { mixinUpdateStore } from '../../mixins/mixinUpdateStore.js'
+import { api } from '@/api'
+import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
 
-const HTTP = axios.create({ baseURL: 'https://viacep.com.br/ws/' })
+const HTTP = axios.create({ baseURL: api.viacep })
 
 export default {
-  name: 'cep',
+  name: 'input-cep',
   props: ['errors'],
   mixins: [mixinUpdateStore],
   methods: {

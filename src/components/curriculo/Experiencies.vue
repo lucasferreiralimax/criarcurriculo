@@ -21,17 +21,17 @@
 
       // Compania
       // The Company
-      label(:for="'GET-company-' + exp.id" v-bind:class="{ error: !exp.experience.name && errors.length }")
+      label(:for="'GET-company-' + exp.id")
         p {{ $t('form.company')}}:
-        input(:id="'GET-company-' + exp.id" name="company" type="text" :placeholder="$t('form.company_place')" v-model="exp.experience.name" @input="updateVuex('updateExp', $event)")
-        p.error-msg(v-show="!exp.experience.name && errors.length") {{ $t('form.errors.company') }}
+        input(:id="'GET-company-' + exp.id" name="company" type="text" :placeholder="$t('form.company_place')" v-model="exp.experience.name" @input="updateVuex('updateExp', $event)" :class="{ error: !exp.experience.name && errors ? errors.length : false }")
+        p.error-msg(v-if="!exp.experience.name && errors.length") {{ $t('form.errors.company') }}
 
       // Experiência
       // The experience
-      label(:for="'GET-exps-' + exp.id" v-bind:class="{ error: !exp.experience.work && errors.length }")
+      label(:for="'GET-exps-' + exp.id")
         p {{ $t('form.office')}}:
-        input(:id="'GET-exps-' + exp.id" name="exps" type="text" :placeholder="$t('form.office_place')" v-model="exp.experience.work" @input="updateVuex('updateExp', $event)")
-        p.error-msg(v-show="!exp.experience.work && errors.length") {{ $t('form.errors.exp') }}
+        input(:id="'GET-exps-' + exp.id" name="exps" type="text" :placeholder="$t('form.office_place')" v-model="exp.experience.work" @input="updateVuex('updateExp', $event)" :class="{ error: !exp.experience.work && errors ? errors.length : false }")
+        p.error-msg(v-if="!exp.experience.work && errors.length") {{ $t('form.errors.exp') }}
 
       // Data da experiência
       // The experience data
@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import { mixinUpdateStore } from '../../mixins/mixinUpdateStore.js'
+import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
 import TextareaApp from '@/components/forms/TextareaApp'
 
 export default {
