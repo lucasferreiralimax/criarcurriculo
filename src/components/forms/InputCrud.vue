@@ -7,8 +7,15 @@
         button.btn.plus.bullet.small.left(type="button" @click="newInput(value, vuex)" :aria-label="$t('aria-label.email_add_new')")
           i +
       | {{ $t(`form.${translate}`) }}:
-      input(:id="`GET-${name}-` + key" :name="`${name}-` + key" :type="type" :placeholder="$t(`form.${translate}_place`)" @input="updateVuex(vuex, $event)" v-model="user[value][key]" :class="{ error: !user[value][key] && errors ? errors.length : false }")
-      p.error-msg(v-if="!user[value][key] && errors ? errors.length : false") {{ $t(`form.errors.${translate}`) }}
+      input(:id="`GET-${name}-` + key"
+            :class="{ error: !user[value][key] && errors ? errors.length : false }"
+            :name="`${name}-` + key"
+            :type="type"
+            :placeholder="$t(`form.${translate}_place`)"
+            v-model="user[value][key]"
+            @input="updateVuex(vuex, $event)")
+      p.error-msg(v-if="!user[value][key] && errors ? errors.length : false")
+        | {{ $t(`form.errors.${translate}`) }}
 </template>
 
 <script>

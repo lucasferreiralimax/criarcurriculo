@@ -34,7 +34,8 @@
     span(v-if="user.genero == '' || user.genero == 'u'") {{ $t('form.married') }}
     span(v-if="user.genero == 'h'") {{ $t('form.married_m') }}
     span(v-if="user.genero == 'm'") {{ $t('form.married_w') }}
-  p.error-msg(v-if="!user.maritalstatus && errors.length") {{ $t('form.errors.maritals') }}
+  p.error-msg(v-if="!user.maritalstatus && errors.length")
+    | {{ $t('form.errors.maritals') }}
 </template>
 
 <script>

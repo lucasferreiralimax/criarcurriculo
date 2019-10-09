@@ -1,7 +1,13 @@
 <template lang="pug">
   label(for="GET-cep")
     p CEP:
-    input#GET-cep(name="cep" type="tel" maxlength="8" placeholder="00000-000" :value="user.cep" @keyup="search_cep" @input="updateVuex('updateCep', $event)")
+    input#GET-cep(name="cep"
+                  type="tel"
+                  placeholder="00000-000"
+                  maxlength="8"
+                  :value="user.cep"
+                  @input="updateVuex('updateCep', $event)"
+                  @keyup="search_cep")
 </template>
 
 <script>

@@ -1,8 +1,20 @@
 <template lang="pug">
   label(for="`GET-${name}`")
     p {{ (id >= 0) ? $t('form.about') : $t(`form.${name}_me`) }}:
-    textarea(v-if="id >= 0" :id="`GET-${name}`" :ref="`GET_${name}`" :placeholder="$t(`form.${translate}_place`)" v-model="user[value.parent][id][value.child].about" @input="resizeTextArea(`GET_${name}`), updateVuex(vuex, $event)" @click="resizeTextArea(`GET_${name}`)")
-    textarea(v-else :id="`GET-${name}`" :ref="`GET_${name}`" :placeholder="$t(`form.${translate}_place`)" v-model="user[value]" @input="resizeTextArea(`GET_${name}`), updateVuex(vuex, $event)" @click="resizeTextArea(`GET_${name}`)")
+    textarea(v-if="id >= 0"
+            :id="`GET-${name}`"
+            :ref="`GET_${name}`"
+            :placeholder="$t(`form.${translate}_place`)"
+            v-model="user[value.parent][id][value.child].about"
+            @click="resizeTextArea(`GET_${name}`)"
+            @input="resizeTextArea(`GET_${name}`), updateVuex(vuex, $event)")
+    textarea(v-else
+            :id="`GET-${name}`"
+            :ref="`GET_${name}`"
+            :placeholder="$t(`form.${translate}_place`)"
+            v-model="user[value]"
+            @click="resizeTextArea(`GET_${name}`)"
+            @input="resizeTextArea(`GET_${name}`), updateVuex(vuex, $event)")
 </template>
 
 <script>
