@@ -117,7 +117,7 @@
       "data_end": "Precisa preencher com a data final.",
       "about": "Precisa preencher o campo sobre as atividades.",
       "company": "Precisa preencher com o nome da Empresa.",
-      "exp": "Precisa preencher com o nome do Cargo."
+      "office": "Precisa preencher com o nome do Cargo."
     }
   },
   "aria-label": {

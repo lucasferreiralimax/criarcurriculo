@@ -117,7 +117,7 @@
       "data_end": "Doit remplir avec la date de fin.",
       "about": "Vous devez remplir le champ des activités.",
       "company": "Vous devez remplir le nom de la société.",
-      "exp": "Vous devez remplir le nom de la cargaison."
+      "office": "Vous devez remplir le nom de la cargaison."
     }
   },
   "aria-label": {

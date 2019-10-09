@@ -117,7 +117,7 @@
       "data_end": "Need to fill in with the end date.",
       "about": "You need to fill in the field about activities.",
       "company": "You must fill in the name of the Company.",
-      "exp": "You must fill in the name of the business."
+      "office": "You must fill in the name of the business."
     }
   },
   "aria-label": {

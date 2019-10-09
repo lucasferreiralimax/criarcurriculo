@@ -117,7 +117,7 @@
       "data_end": "Bitiş tarihi ile doldurulmalıdır.",
       "about": "Faaliyetler hakkında alanı doldurmanız gerekiyor.",
       "company": "Şirket adını doldurmalısınız.",
-      "exp": "Kargo'nın adını doldurmalısınız."
+      "office": "Kargo'nın adını doldurmalısınız."
     }
   },
   "aria-label": {
