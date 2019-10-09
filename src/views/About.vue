@@ -140,8 +140,8 @@
 
 <script>
 import axios from 'axios'
-
-const HTTP = axios.create({ baseURL: 'https://api.github.com/repos/lucasferreiralimax/curriculogratis/contributors' })
+import { api } from '@/api'
+const HTTP = axios.create({ baseURL: api.github })
 
 export default {
   name: 'about',
