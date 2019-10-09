@@ -21,17 +21,12 @@
 
       // Escola
       // The School
-      label(:for="'GET-school-' + course.id")
-        p {{ $t('form.school')}}:
-        input(:id="'GET-school-' + course.id" name="school" type="text" :placeholder="$t('form.school_place')" v-model="course.formation.school" @input="updateVuex('updateCourser', $event)" :class="{ error: !course.formation.school && errors ? errors.length : false }")
-        p.error-msg(v-if="!course.formation.school && errors.length") {{ $t('form.errors.school') }}
+      input-app(:id="course.id" :name="'school-' + course.id" :value="{ parent: 'coursers', child: 'formation', content: 'school' }" type="text" translate="school" vuex="updateCourser" :errors="errors")
 
       // Curso
       // The Course
-      label(:for="'GET-course-' + course.id")
-        p {{ $t('form.course')}}:
-        input(:id="'GET-course-' + course.id" name="course" type="text" :placeholder="$t('form.course_place')" v-model='course.formation.name' @input="updateVuex('updateCourser', $event)" :class="{ error: !course.formation.name && errors ? errors.length : false }")
-        p.error-msg(v-if="!course.formation.name && errors.length") {{ $t('form.errors.course') }}
+      input-app(:id="course.id" :name="'course-' + course.id" :value="{ parent: 'coursers', child: 'formation', content: 'name' }" type="text" translate="course" vuex="updateCourser" :errors="errors")
+
       // Data do curso
       // The Course data
       label(:for="'GET-coursedata__start-' + course.id")
@@ -47,15 +42,14 @@
 
 <script>
 import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
+import InputApp from '@/components/forms/InputApp'
 import TextareaApp from '@/components/forms/TextareaApp'
 
 export default {
   name: 'experiencies',
   props: ['errors'],
   mixins: [mixinUpdateStore],
-  components: {
-    TextareaApp
-  },
+  components: { InputApp, TextareaApp },
   data () {
     return {
       coursers_now: false

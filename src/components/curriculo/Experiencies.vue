@@ -21,17 +21,11 @@
 
       // Compania
       // The Company
-      label(:for="'GET-company-' + exp.id")
-        p {{ $t('form.company')}}:
-        input(:id="'GET-company-' + exp.id" name="company" type="text" :placeholder="$t('form.company_place')" v-model="exp.experience.name" @input="updateVuex('updateExp', $event)" :class="{ error: !exp.experience.name && errors ? errors.length : false }")
-        p.error-msg(v-if="!exp.experience.name && errors.length") {{ $t('form.errors.company') }}
+      input-app(:id="exp.id" :name="'company-' + exp.id" :value="{ parent: 'exps', child: 'experience', content: 'name' }" type="text" translate="company" vuex="updateExp" :errors="errors")
 
       // Experiência
       // The experience
-      label(:for="'GET-exps-' + exp.id")
-        p {{ $t('form.office')}}:
-        input(:id="'GET-exps-' + exp.id" name="exps" type="text" :placeholder="$t('form.office_place')" v-model="exp.experience.work" @input="updateVuex('updateExp', $event)" :class="{ error: !exp.experience.work && errors ? errors.length : false }")
-        p.error-msg(v-if="!exp.experience.work && errors.length") {{ $t('form.errors.exp') }}
+      input-app(:id="exp.id" :name="'exps-' + exp.id" :value="{ parent: 'exps', child: 'experience', content: 'work' }" type="text" translate="office" vuex="updateExp" :errors="errors")
 
       // Data da experiência
       // The experience data
@@ -48,15 +42,14 @@
 
 <script>
 import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
+import InputApp from '@/components/forms/InputApp'
 import TextareaApp from '@/components/forms/TextareaApp'
 
 export default {
   name: 'experiencies',
   props: ['errors'],
   mixins: [mixinUpdateStore],
-  components: {
-    TextareaApp
-  },
+  components: { InputApp, TextareaApp },
   data () {
     return {
       exps_now: false
