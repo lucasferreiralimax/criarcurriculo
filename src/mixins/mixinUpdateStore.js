@@ -49,9 +49,16 @@ export const mixinUpdateStore = {
       this.user[value].push(null)
       this.$store.commit(vuex, this.user[value])
     },
-    removeInput (value, key) {
+    newComponent (value) {
+      if(value == 'exps') {
+        this.user[value].push({ experience: { name: '', work: '', data_start: '', data_end: '', about: '', now: false } })
+      } else {
+        this.user[value].push({ formation: { name: '', school: '', data_start: '', data_end: '', about: '', now: false } })
+      }
+    },
+    remove (value, key) {
       this.$delete(this.user[value], key)
       this.updateStore()
-    }
+    },
   }
 }
