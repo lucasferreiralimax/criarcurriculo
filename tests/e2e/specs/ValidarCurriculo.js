@@ -37,7 +37,7 @@ describe('Validar curriculo simples', () => {
 
 describe('Validar Formação Acadêmica', () => {
   it('Add formação', () => {
-    cy.get('.coursers > .btn').click()
+    cy.get('.coursers .btn.plus').click()
   })
   it('Curso atual', () => {
     cy.get('#GET-coursenow-0').click()
@@ -61,7 +61,7 @@ describe('Validar Formação Acadêmica', () => {
 
 describe('Validar Experiências', () => {
   it('Add experiência', () => {
-    cy.get('.experiences > .btn').click()
+    cy.get('.experiences .btn.plus').click()
   })
   it('Curso atual', () => {
     cy.get('#GET-expsnow-0').click()

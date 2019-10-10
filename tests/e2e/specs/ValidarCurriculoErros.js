@@ -28,7 +28,7 @@ describe('Validar erros curriculo simples', () => {
 
 describe('Formação Acadêmica limpa', () => {
   it('Add formação', () => {
-    cy.get('.coursers > .btn').click()
+    cy.get('.coursers .btn.plus').click()
   })
   it('Escola limpa', () => {
     cy.get('#GET-school-0').clear()
@@ -49,7 +49,7 @@ describe('Formação Acadêmica limpa', () => {
 
 describe('Experiências limpa', () => {
   it('Add experiência', () => {
-    cy.get('.experiences > .btn').click()
+    cy.get('.experiences .btn.plus').click()
   })
   it('Empresa lima', () => {
     cy.get('#GET-company-0').clear()
