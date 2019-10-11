@@ -8,7 +8,10 @@ module.exports = {
   css: {
     loaderOptions: {
       stylus: {
-        import: [path.resolve(__dirname, "src/stylus/mixins/_responsive")]
+        import: [
+          path.resolve(__dirname, "src/stylus/config/_variables"),
+          path.resolve(__dirname, "src/stylus/mixins/_responsive")
+        ]
       }
     }
   },
