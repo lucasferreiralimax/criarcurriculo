@@ -70,14 +70,14 @@ export default {
 </script>
 
 <style lang="stylus">
-
 .theme_app
   border-radius 6px
   display block
-  top 75px
-  right 10px
-  position fixed
-  z-index 99
   pointer-events all
-
+  position fixed
+  right 10px
+  top 75px
+  z-index 99
+  +tablet()
+    top 10px
 </style>

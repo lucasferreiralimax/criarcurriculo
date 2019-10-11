@@ -50,11 +50,13 @@ export default {
 </script>
 
 <style lang="stylus">
-  .fontSelect
-    border-radius 6px
-    display block
-    position fixed
-    right 10px
-    top 140px
-    z-index 9
+.fontSelect
+  border-radius 6px
+  display block
+  position fixed
+  right 10px
+  top 140px
+  z-index 9
+  +tablet()
+    top 75px
 </style>
