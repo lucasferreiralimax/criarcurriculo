@@ -76,6 +76,7 @@ export default {
   select
     background transparent
     border-radius 100px
+    border-color rgba(#fff, .3)
     color #fff
     line-height 0
     margin 0
