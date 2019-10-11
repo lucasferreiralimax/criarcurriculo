@@ -5,6 +5,25 @@ import pt_BR from './pt-BR.json'
 
 Vue.use(VueI18n)
 
+const languages = {
+  pt: "Português",
+  en: "English",
+  es: "Español",
+  ru: "русский",
+  ja: "日本語",
+  fr: "Français",
+  tr: "Türk",
+  ch: "中国",
+  de: "Deutschland",
+  it: "Italiano",
+  gr: "ελληνικά",
+  tl: "ไทย",
+  nl: "Neerlandesa",
+  nl_n: "Norsk"
+};
+
+pt_BR.locale = languages
+
 const i18n = new VueI18n({
   locale: 'pt-BR',
   fallbackLocale: 'pt-BR',
@@ -34,6 +53,7 @@ export function loadLanguageAsync(lang) {
   // If the language hasn't been loaded yet
   return import(/* webpackChunkName: "lang-[request]" */ `@/i18n/${lang}.json`).then(
     messages => {
+      messages.default.locale = languages
       i18n.setLocaleMessage(lang, messages.default)
       if(!loadedLanguages.includes(lang)) {
         loadedLanguages.push(lang)

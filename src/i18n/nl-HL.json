@@ -145,22 +145,6 @@
     "print_curriculum": "Curriculum afdrukken",
     "link_git": "Link naar het project in Github"
   },
-  "locale": {
-    "pt": "Portugees",
-    "en": "Engels",
-    "es": "Spaans",
-    "ru": "Russo",
-    "ja": "Japans",
-    "fr": "Frans",
-    "tr": "Turks",
-    "ch": "Chinese",
-    "de": "Duitsland",
-    "it": "Italië",
-    "gr": "Grieks",
-    "tl": "Thailand",
-    "nl": "Neerlandesa",
-    "nl_n": "Noors"
-  },
   "themes": {
     "default": "Standaard",
     "rose": "Roos",

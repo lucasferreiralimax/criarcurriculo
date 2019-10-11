@@ -145,22 +145,6 @@
     "print_curriculum": "Currilum Yazdır",
     "link_git": "Github'daki projeye bağlantı"
   },
-  "locale": {
-    "pt": "Portekizce",
-    "en": "İngilizce",
-    "es": "İspanyolca",
-    "ru": "Rusça",
-    "ja": "Japon",
-    "fr": "Fransızca",
-    "tr": "Türk",
-    "ch": "Çinli",
-    "de": "Alman",
-    "it": "İtalya",
-    "gr": "Yunan dili",
-    "tl": "Tay dili",
-    "nl": "Hollandalı",
-    "nl_n": "Norveçli"
-  },
   "themes": {
     "default": "Varsayılan",
     "rose": "gül",

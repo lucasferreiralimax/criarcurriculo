@@ -145,22 +145,6 @@
     "print_curriculum": "Print Currilum",
     "link_git": "Link to the project in Github"
   },
-  "locale": {
-    "pt": "Portuguese",
-    "en": "English",
-    "es": "Spanish",
-    "ru": "Russo",
-    "ja": "Japanese",
-    "fr": "French",
-    "tr": "Turkish",
-    "ch": "Chinese",
-    "de": "Germany",
-    "it": "Italy",
-    "gr": "Greek",
-    "tl": "Thailand",
-    "nl": "Neerlandesa",
-    "nl_n": "Norwegian"
-  },
   "themes": {
     "default": "Default",
     "rose": "Rose",
