@@ -121,7 +121,6 @@
     }
   },
   "aria-label": {
-    "pluralization": "Pluralization-knop",
     "theme": "Themaknop",
     "font_select": "Knop voor lettertypeselectie",
     "course_add": "Cursus toevoegen",

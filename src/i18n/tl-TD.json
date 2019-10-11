@@ -121,7 +121,6 @@
     }
   },
   "aria-label": {
-    "pluralization": "ปุ่มหลายฝ่าย",
     "theme": "ปุ่มธีม",
     "font_select": "ปุ่มเลือกแบบอักษร",
     "course_add": "เพิ่มหลักสูตร",

@@ -121,7 +121,6 @@
     }
   },
   "aria-label": {
-    "pluralization": "Botão de pluralização",
     "theme": "Botão de tema",
     "font_select": "Botão de seleção da fonte",
     "course_add": "Adicionar curso",

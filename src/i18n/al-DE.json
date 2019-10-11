@@ -121,7 +121,6 @@
     }
   },
   "aria-label": {
-    "pluralization": "Pluralisierungsknopf",
     "theme": "Theme-Schaltfläche",
     "font_select": "Schaltfläche zum Auswählen der Schriftart",
     "course_add": "Kurs hinzufügen",

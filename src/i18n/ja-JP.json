@@ -121,7 +121,6 @@
     }
   },
   "aria-label": {
-    "pluralization": "多元化按钮",
     "theme": "主题按钮",
     "font_select": "字体选择按钮",
     "course_add": "添加课程",

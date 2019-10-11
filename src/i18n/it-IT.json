@@ -121,7 +121,6 @@
     }
   },
   "aria-label": {
-    "pluralization": "pulsante di pluralizzazione",
     "theme": "Pulsante Tema",
     "font_select": "Pulsante di selezione dei caratteri",
     "course_add": "Aggiungi corso",

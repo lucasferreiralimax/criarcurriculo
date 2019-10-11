@@ -121,7 +121,6 @@
     }
   },
   "aria-label": {
-    "pluralization": "Pluralization button",
     "theme": "Theme button",
     "font_select": "Font select button",
     "course_add": "Add course",

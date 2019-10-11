@@ -121,7 +121,6 @@
     }
   },
   "aria-label": {
-    "pluralization": "Pluralization button",
     "theme": "Temaknapp",
     "font_select": "Font-valgknapp",
     "course_add": "Legg til kurs",

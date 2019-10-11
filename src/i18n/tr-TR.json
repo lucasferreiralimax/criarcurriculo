@@ -121,7 +121,6 @@
     }
   },
   "aria-label": {
-    "pluralization": "Çoğulculuk tuşu",
     "theme": "Tema düğmesi",
     "font_select": "Yazı tipi seçme düğmesi",
     "course_add": "Kurs ekle",
