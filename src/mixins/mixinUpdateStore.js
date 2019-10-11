@@ -59,6 +59,6 @@ export const mixinUpdateStore = {
     remove (value, key) {
       this.$delete(this.user[value], key)
       this.updateStore()
-    },
+    }
   }
 }
