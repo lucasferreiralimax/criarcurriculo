@@ -49,86 +49,58 @@ describe('Validar Tecnologias', () => {
   it('Feito com Coração', () => {
 
     cy.wait(1000)
-
-    cy.get('#pluralization').click({ force: true })
     cy.get('#locale').select('es-ES')
     cy.contains('.credits_logo p', 'Hecho con Corazón')
 
     cy.wait(1000)
-
-    cy.get('#pluralization').click({ force: true })
     cy.get('#locale').select('en-US')
     cy.contains('.credits_logo p', 'Made with Heart')
 
     cy.wait(1000)
-
-    cy.get('#pluralization').click({ force: true })
     cy.get('#locale').select('ru-RU')
     cy.contains('.credits_logo p', 'Сделано с сердцем')
 
     cy.wait(1000)
-
-    cy.get('#pluralization').click({ force: true })
     cy.get('#locale').select('ja-JP')
     cy.contains('.credits_logo p', 'ハートで作られた')
 
     cy.wait(1000)
-
-    cy.get('#pluralization').click({ force: true })
     cy.get('#locale').select('fr-FR')
     cy.contains('.credits_logo p', 'Fait avec du coeur')
 
     cy.wait(1000)
-
-    cy.get('#pluralization').click({ force: true })
     cy.get('#locale').select('tr-TR')
     cy.contains('.credits_logo p', 'Kalp ile Yapıldı')
 
     cy.wait(1000)
-
-    cy.get('#pluralization').click({ force: true })
     cy.get('#locale').select('ch-ZH')
     cy.contains('.credits_logo p', '用心做')
 
     cy.wait(1000)
-
-    cy.get('#pluralization').click({ force: true })
     cy.get('#locale').select('al-DE')
     cy.contains('.credits_logo p', 'Mit Herz gemacht')
 
     cy.wait(1000)
-
-    cy.get('#pluralization').click({ force: true })
     cy.get('#locale').select('it-IT')
     cy.contains('.credits_logo p', 'Fatto con il cuore')
 
     cy.wait(1000)
-
-    cy.get('#pluralization').click({ force: true })
     cy.get('#locale').select('gr-GK')
     cy.contains('.credits_logo p', 'Made with Heart')
 
     cy.wait(1000)
-
-    cy.get('#pluralization').click({ force: true })
     cy.get('#locale').select('tl-TD')
     cy.contains('.credits_logo p', 'ทำด้วยหัวใจ')
 
     cy.wait(1000)
-
-    cy.get('#pluralization').click({ force: true })
     cy.get('#locale').select('nl-HL')
     cy.contains('.credits_logo p', 'Gemaakt met hart')
 
     cy.wait(1000)
-
-    cy.get('#pluralization').click({ force: true })
     cy.get('#locale').select('nl-NL')
     cy.contains('.credits_logo p', 'Made with Heart')
 
     cy.wait(1000)
-
-    cy.get('#pluralization').click({ force: true })
     cy.get('#locale').select('pt-BR')
     cy.contains('.credits_logo p', 'Feito com Coração')
   })
