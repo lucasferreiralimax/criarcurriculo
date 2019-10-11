@@ -128,7 +128,8 @@ export default {
     },
     viewFixed () {
       if (window.innerWidth >= 800) {
-        this.viewfixed = 700 < window.scrollY
+        let target = document.querySelector('#curriculo').getBoundingClientRect()
+        this.viewfixed = target.y <= 0
       } else {
         this.viewfixed = false
       }
