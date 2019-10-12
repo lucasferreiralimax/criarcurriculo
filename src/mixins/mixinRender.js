@@ -1,7 +1,13 @@
+import { mapState } from 'vuex'
+
 export const mixinRender = {
+  computed: mapState({
+    user: state => state.user,
+    errors: state => state.errors
+  }),
   methods: {
     printRender () {
-      this.errors = []
+      this.$store.commit('updateErrors', [])
       if (!this.user.age) { this.errors.push('Precisa preencher o campo data de nascimento.') }
       if (!this.user.end.localidade) { this.errors.push('Precisa preencher o campo localidade.') }
       if (!this.user.end.logradouro) { this.errors.push('Precisa preencher o campo logradouro.') }
@@ -42,7 +48,7 @@ export const mixinRender = {
       } else {
         window.scrollTo(0, 600)
       }
-      console.log(erros)
+      this.$store.commit('updateErrors', this.errors)
     },
     resetForm () {
       let user = {
@@ -73,7 +79,6 @@ export const mixinRender = {
       if(window.confirm("Tem certeza?")) {
         this.$store.commit('updateUser', user)
         this.updateStore()
-        this.errors = []
       }
     }
   }
