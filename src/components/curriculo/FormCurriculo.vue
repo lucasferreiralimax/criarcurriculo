@@ -9,7 +9,6 @@ form#curriculo(:class="{ renderActive: user.name}")
     input-app(name="dataofbirth" value="age" type="number" translate="age" vuex="updateAge" :errors="errors")
     select-maritals(:errors="errors")
     textarea-app(name="about" value="about" translate="about" vuex="updateAbout")
-
   // Box Telephone
   box-curriculo(v-if="user.telephones.length !== 0")
     input-crud(name="telephone" value="telephones" type="number" translate="phone" vuex="updateTelephone" :errors="errors")
@@ -17,7 +16,6 @@ form#curriculo(:class="{ renderActive: user.name}")
     button#newTelephone.btn.plus.large(type="button" @click="newInput('telephones', 'updateTelephone')" :aria-label="$t('aria-label.telephone_add')")
       span +
       | {{ $t('form.phone') }}
-
   // Box Email
   box-curriculo(v-if="user.emails.length !== 0")
     input-crud(name="email" value="emails" type="email" translate="email" vuex="updateEmail" :errors="errors")
@@ -25,7 +23,6 @@ form#curriculo(:class="{ renderActive: user.name}")
     button#newEmail.btn.plus.large(type="button" @click="newInput('emails', 'updateEmail')" :aria-label="$t('aria-label.email_add')")
       span +
       | {{ $t('form.email') }}
-
   // Box Site
   box-curriculo(v-if="user.sites.length !== 0")
     input-crud(name="site" value="sites" type="text" translate="site" vuex="updateSite" :errors="errors")
@@ -33,7 +30,6 @@ form#curriculo(:class="{ renderActive: user.name}")
     button#newSite.btn.plus.large(type="button" @click="newInput('sites', 'updateSite')" :aria-label="$t('aria-label.site_add')")
       span +
       | {{ $t('form.site') }}
-
   // Box Address
   box-curriculo(title="true" type="address" translate="end")
     input-cep(v-bind:errors="errors")
@@ -41,15 +37,14 @@ form#curriculo(:class="{ renderActive: user.name}")
     input-app(name="address" :value="{ parent: 'end', child: 'logradouro'}" type="text" translate="end" vuex="updateEndLogradouro" :errors="errors")
     input-app(name="state" :value="{ parent: 'end', child: 'localidade'}" type="text" translate="city" vuex="updateEndLocalidade" :errors="errors")
     select-travel(:errors="errors")
-
   // Coursers
   coursers(:errors="errors")
-
   // Experiencies
   experiencies(:errors="errors")
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
 
 import BoxCurriculo from '@/components/curriculo/BoxCurriculo'
@@ -68,6 +63,7 @@ import TextareaApp from '@/components/forms/TextareaApp'
 export default {
   name: 'form-curriculo',
   mixins: [mixinUpdateStore],
+  computed: mapState({ errors: state => state.errors }),
   components: {
     BoxCurriculo,
     Coursers, Experiencies,
@@ -82,8 +78,7 @@ export default {
   destroyed () { document.querySelector('.footer').classList.remove('home') },
   data () {
     return {
-      form: this,
-      errors: []
+      form: this
     }
   },
   methods: {
