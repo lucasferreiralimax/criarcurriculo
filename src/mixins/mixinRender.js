@@ -42,6 +42,7 @@ export const mixinRender = {
       } else {
         window.scrollTo(0, 600)
       }
+      console.log(erros)
     },
     resetForm () {
       let user = {
