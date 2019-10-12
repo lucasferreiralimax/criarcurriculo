@@ -29,7 +29,8 @@ export default new Vuex.Store({
       sites: [],
       exps: [],
       coursers: []
-    }
+    },
+    errors: []
   },
   mutations: {
     updateUser (state, value) {
@@ -91,6 +92,9 @@ export default new Vuex.Store({
     },
     updateEndLocalidade (state, value) {
       state.user.end.localidade = value
+    },
+    updateErrors (state, value) {
+      state.errors = value
     }
   }
 })
