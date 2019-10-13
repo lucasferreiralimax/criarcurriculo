@@ -31,6 +31,4 @@ export default {
   &[for="GET-travel-yes"]
   &[for="GET-travel-no"]
     width 50%
-  &[for="GET-travel-yes"]
-    border-right 1px solid rgba(#fff, .3)
 </style>
