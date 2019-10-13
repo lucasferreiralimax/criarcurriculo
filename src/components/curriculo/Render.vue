@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.render(v-if="user.name" :class="{ 'viewfixed' : viewfixed }")
+  section.render(:class="{ 'viewfixed' : viewfixed }")
     .view
       .content
         label.figure(for="GET-photo" v-if="user.photo")
