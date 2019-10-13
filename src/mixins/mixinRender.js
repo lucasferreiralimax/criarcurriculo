@@ -52,7 +52,7 @@ export const mixinRender = {
     },
     resetForm () {
       let user = {
-        name: 'Nome',
+        name: '',
         photo: '',
         age: null,
         countrystatus: '',
