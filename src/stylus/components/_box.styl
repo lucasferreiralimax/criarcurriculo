@@ -5,33 +5,30 @@
   margin-bottom 1em
   max-width 100%
   overflow hidden
-  &.coursers,
-  &.experiences
-    background transparent
-    box-shadow none
-    .course,
-    .experience
-      background rgba(#eee, .8)
-      border-radius 6px
-      box-shadow 0 0 0 1px rgba(#fff, .2), 0 0 10px rgba(#000, .3)
-      margin-top 1em
-      overflow hidden
-      &:first-of-type
-        margin-top 0
-  [for^="GET-coursedata"],
-  [for^="GET-expsdata"],
-  [for="GET-address-number"],
-  [for="GET-cep"]
-    display inline-block
-    width 50%
-  +desktop()
-    [for^="GET-company"],
-    [for^="GET-course-"],
-    [for^="GET-exps-"],
-    [for^="GET-school"],
+  .row
+    display flex
+    flex-direction row
+    flex-wrap wrap
+    > label, div
+      width 100%
     [for="GET-dataofbirth"],
     [for="GET-genero"],
-    [for="GET-name"],
-    [for="GET-photo"]
-      display inline-block
+    [for^="GET-coursedata"],
+    [for^="GET-expsdata"],
+    [for="GET-address-number"],
+    [for="GET-cep"],
+    [for^="GET-school-"],
+    [for^="GET-company-"],
+    [for^="GET-course-"],
+    [for^="GET-exps-"]
       width 50%
+      &.large
+        width 100%
+    +tablet()
+      [for="GET-name"],
+      [for="GET-photo"],
+      [for="GET-maritalstatus-s"],
+      [for="GET-maritalstatus-c"],
+      [for="GET-maritalstatus-d"],
+      [for="GET-maritalstatus-v"]
+        width 50%
