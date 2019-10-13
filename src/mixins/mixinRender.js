@@ -78,6 +78,7 @@ export const mixinRender = {
       }
       if(window.confirm("Tem certeza?")) {
         this.$store.commit('updateUser', user)
+        this.$store.commit('updateErrors', [])
         this.updateStore()
       }
     }
