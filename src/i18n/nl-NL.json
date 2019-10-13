@@ -153,5 +153,20 @@
     "klassisk": "Klassisk",
     "gull": "Gull",
     "full": "Full Black"
+  },
+  "calendar": {
+    "january": "Januar",
+    "february": "Februar",
+    "march": "Mars",
+    "april": "April",
+    "may": "Mai",
+    "june": "Juni",
+    "july": "Juli",
+    "august": "August",
+    "september": "September",
+    "october": "Oktober",
+    "november": "November",
+    "december": "Desember",
+    "in": "i"
   }
 }

@@ -154,5 +154,20 @@
     "gold": "Gold",
     "full": "Full Black",
     "red": "Rot"
+  },
+  "calendar": {
+    "january": "Januar",
+    "february": "Februar",
+    "march": "März",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "Juli",
+    "august": "August",
+    "september": "September",
+    "october": "Oktober",
+    "november": "November",
+    "december": "Dezember",
+    "in": "in"
   }
 }

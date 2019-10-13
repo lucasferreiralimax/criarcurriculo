@@ -154,5 +154,20 @@
     "gold": "altın",
     "full": "Tam Siyah",
     "red": "kırmızı"
+  },
+  "calendar": {
+    "january": "ocak",
+    "february": "şubat",
+    "march": "mart",
+    "april": "nisan",
+    "may": "mayıs",
+    "june": "haziran",
+    "july": "temmuz",
+    "august": "ağustos",
+    "september": "eylül",
+    "october": "ekim",
+    "november": "kasım",
+    "december": "aralık",
+    "in": "içinde"
   }
 }
