@@ -39,6 +39,7 @@
     "h1": "個人データ",
     "name": "氏名",
     "photo": "写真: ",
+    "photo_button": "写真を挿入",
     "name_place": "あなたのフルネームを記入してください...",
     "genre": "ジャンル:",
     "marital_status": "市民の地位",

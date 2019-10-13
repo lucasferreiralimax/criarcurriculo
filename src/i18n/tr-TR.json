@@ -39,6 +39,7 @@
     "h1": "Kişisel Bilgiler",
     "name": "Tam ad:",
     "photo": "Fotoğraf:",
+    "photo_button": "fotoğraf ekle",
     "name_place": "Tam adınızı doldurun...",
     "genre": "Tür:",
     "marital_status": "Medeni durum",

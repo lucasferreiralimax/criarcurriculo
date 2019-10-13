@@ -39,6 +39,7 @@
     "h1": "Personal data",
     "name": "Full name:",
     "photo": "Photo:",
+    "photo_button": "Put photo",
     "name_place": "Fill in your full name...",
     "genre": "Genre:",
     "marital_status": "Marital Status",

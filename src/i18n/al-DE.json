@@ -39,6 +39,7 @@
     "h1": "Persönliche Daten",
     "name": "Vollständiger Name:",
     "photo": "Foto:",
+    "photo_button": "Foto posten",
     "name_place": "Geben Sie Ihren vollständigen Namen ein ...",
     "genre": "Genre:",
     "marital_status": "Familienstand",

@@ -39,6 +39,7 @@
     "h1": "Persoonlijke gegevens",
     "name": "Volledige naam:",
     "photo": "bilde:",
+    "photo_button": "sett bilde",
     "name_place": "Vul ditt komplette navn i ...",
     "genre": "Sjanger:",
     "marital_status": "Burgerlijke staat",

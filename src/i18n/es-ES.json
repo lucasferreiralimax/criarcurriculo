@@ -39,6 +39,7 @@
     "h1": "Datos personales",
     "name": "Nombre completo",
     "photo": "Foto:",
+    "photo_button": "Poner foto",
     "name_place": "Rellene con su nombre completo...",
     "genre": "Género:",
     "marital_status": "Estado civil",
