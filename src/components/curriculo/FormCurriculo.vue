@@ -3,12 +3,16 @@
 form#curriculo(:class="{ renderActive: user.name}")
   // Box Personal
   box-curriculo(title="true" type="personal" translate="h1")
-    input-app(name="name" value="name" type="text" translate="name" vuex="updateName" :errors="errors")
-    input-photo
-    select-genre(:errors="errors")
-    input-app(name="dataofbirth" value="age" type="number" translate="age" vuex="updateAge" :errors="errors")
-    select-maritals(:errors="errors")
-    textarea-app(name="about" value="about" translate="about" vuex="updateAbout")
+    .row
+      input-app(name="name" value="name" type="text" translate="name" vuex="updateName" :errors="errors")
+      input-photo
+    .row
+      select-genre(:errors="errors")
+      input-app(name="dataofbirth" value="age" type="number" translate="age" vuex="updateAge" :errors="errors")
+    .row
+      select-maritals(:errors="errors")
+    .row
+      textarea-app(name="about" value="about" translate="about" vuex="updateAbout")
   // Box Telephone
   box-curriculo(v-if="user.telephones.length !== 0")
     input-crud(name="telephone" value="telephones" type="number" translate="phone" vuex="updateTelephone" :errors="errors")
@@ -32,11 +36,15 @@ form#curriculo(:class="{ renderActive: user.name}")
       | {{ $t('form.site') }}
   // Box Address
   box-curriculo(title="true" type="address" translate="end")
-    input-cep(v-bind:errors="errors")
-    input-app(name="address-number" value="addressNumber" type="text" translate="number" vuex="updateAddressNumber")
-    input-app(name="address" :value="{ parent: 'end', child: 'logradouro'}" type="text" translate="end" vuex="updateEndLogradouro" :errors="errors")
-    input-app(name="state" :value="{ parent: 'end', child: 'localidade'}" type="text" translate="city" vuex="updateEndLocalidade" :errors="errors")
-    select-travel(:errors="errors")
+    .row
+      input-cep(v-bind:errors="errors")
+      input-app(name="address-number" value="addressNumber" type="text" translate="number" vuex="updateAddressNumber")
+    .row
+      input-app(name="address" :value="{ parent: 'end', child: 'logradouro'}" type="text" translate="end" vuex="updateEndLogradouro" :errors="errors")
+    .row
+      input-app(name="state" :value="{ parent: 'end', child: 'localidade'}" type="text" translate="city" vuex="updateEndLocalidade" :errors="errors")
+    .row
+      select-travel(:errors="errors")
   // Coursers
   coursers(:errors="errors")
   // Experiencies
