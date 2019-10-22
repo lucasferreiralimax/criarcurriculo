@@ -8,6 +8,7 @@
               :name="name"
               :type="type"
               :placeholder="$t(`form.${translate}_place`)"
+              v-focus-label
               v-model="user[value.parent][index][value.child][value.content]"
               @input="updateVuex(vuex, $event)")
         p.error-msg(v-if="!user[value.parent][index][value.child][value.content] && errors ? errors.length : false")
@@ -18,6 +19,7 @@
               :name="name"
               :type="type"
               :placeholder="$t(`form.${translate}_place`)"
+              v-focus-label
               v-model="user[value.parent][value.child]"
               @input="updateVuex(vuex, $event)")
         p.error-msg(v-if="!user[value.parent][value.child] && errors ? errors.length : false")
@@ -29,6 +31,7 @@
             :name="name"
             :type="type"
             :placeholder="$t(`form.${translate}_place`)"
+            v-focus-label
             v-model="user[value]"
             @input="updateVuex(vuex, $event)")
       p.error-msg(v-if="!user[value] && errors ? errors.length : false")
@@ -37,10 +40,12 @@
 
 <script>
 import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
+import { focusLabel } from '@/directive/focus.js'
 
 export default {
   name: 'input-app',
   props: ['index', 'name', 'value', 'type', 'vuex', 'translate', 'errors'],
-  mixins: [mixinUpdateStore]
+  mixins: [mixinUpdateStore],
+  directives: { 'focus-label': focusLabel }
 }
 </script>

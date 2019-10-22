@@ -12,6 +12,7 @@
             :name="`${name}-` + key"
             :type="type"
             :placeholder="$t(`form.${translate}_place`)"
+            v-focus-label
             v-model="user[value][key]"
             @input="updateVuex(vuex, $event)")
       p.error-msg(v-if="!user[value][key] && errors ? errors.length : false")
@@ -20,10 +21,12 @@
 
 <script>
 import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
+import { focusLabel } from '@/directive/focus.js'
 
 export default {
   name: 'input-crud',
   props: ['name', 'value', 'type', 'vuex', 'translate', 'errors'],
-  mixins: [mixinUpdateStore]
+  mixins: [mixinUpdateStore],
+  directives: { 'focus-label': focusLabel }
 }
 </script>
