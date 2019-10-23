@@ -110,15 +110,15 @@
       "end": "Precisa preencher o campo de endereço.",
       "city": "Precisa preencher o campo de cidade.",
       "phone": "Precisa preencher o campo de telefone.",
-      "email": "Precisa preencher o campo de E-mail.",
+      "email": "Precisa preencher o campo de e-mail.",
       "site": "Precisa preencher o campo do site.",
       "school": "Precisa preencher com o nome da instituição.",
       "course": "Precisa preencher com o nome do curso.",
       "data_start": "Precisa preencher com a data de inicio.",
       "data_end": "Precisa preencher com a data final.",
       "about": "Precisa preencher o campo sobre as atividades.",
-      "company": "Precisa preencher com o nome da Empresa.",
-      "office": "Precisa preencher com o nome do Cargo."
+      "company": "Precisa preencher com o nome da empresa.",
+      "office": "Precisa preencher com o nome do cargo."
     }
   },
   "aria-label": {
