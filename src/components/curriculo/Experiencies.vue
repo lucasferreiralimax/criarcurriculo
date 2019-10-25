@@ -22,13 +22,14 @@
     .row
       textarea-app(:index="key" :name="'expsabout-' + key" :value="{ parent: 'exps', child: 'experience' }" translate="activities" vuex="updateExp")
   box-curriculo
-    button.btn.plus.large(type="button" @click="newComponent('exps')" :aria-label="$t('aria-label.exp_add')")
+    button.btn.plus.large(v-scroll-to="'#exp-' + user.exps.length" type="button" @click="newComponent('exps')" :aria-label="$t('aria-label.exp_add')")
       span +
       | {{ $t('form.exp') }}
 </template>
 
 <script>
 import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
+import { scrollTo } from '@/directive/scroll.js'
 
 import BoxCurriculo from '@/components/curriculo/BoxCurriculo'
 import InputApp from '@/components/forms/InputApp'
@@ -39,10 +40,6 @@ export default {
   props: ['errors'],
   mixins: [mixinUpdateStore],
   components: { BoxCurriculo, InputApp, TextareaApp },
-  data () {
-    return {
-      exps_now: false
-    }
-  }
+  directives: { 'scroll-to': scrollTo }
 }
 </script>

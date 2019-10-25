@@ -1,7 +1,7 @@
 <template lang="pug">
 header
   .header
-    router-link(to="/" tag="h1").logo.text-center {{ $t('view.home.name1')}} {{ $t('view.home.name2')}}
+    router-link(to="/" tag="h1" v-scroll-to="'#curriculo'").logo.text-center {{ $t('view.home.name1')}} {{ $t('view.home.name2')}}
   nav-menu
   pluralization
   theme-app
@@ -13,10 +13,12 @@ import NavMenu from '@/components/base/Nav'
 import Pluralization from '@/components/Pluralization'
 import ThemeApp from '@/components/ThemeApp'
 import ScrollTop from '@/components/ScrollTop'
+import { scrollTo } from '@/directive/scroll.js'
 
 export default {
   name: 'header-app',
   components: { NavMenu, Pluralization, ThemeApp, ScrollTop },
+  directives: { 'scroll-to': scrollTo },
   created () { window.addEventListener('scroll', this.fixedHeader) },
   destroyed () { window.removeEventListener('scroll', this.fixedHeader) },
   data () {
