@@ -7,7 +7,7 @@
       form-curriculo
       render
       actions-curriculo
-    font-select
+        font-select
 </template>
 
 <script>
