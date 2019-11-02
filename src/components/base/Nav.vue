@@ -36,7 +36,12 @@ export default {
 </script>
 <style lang="stylus">
 .nav
-  position relative
+  position absolute
+  top 0
+  left 0
+  right 0
+  +tablet()
+    position relative
 .nav-menu
   background linear-gradient(color4, rgba(color4, .6))
   bottom 0
@@ -88,7 +93,7 @@ export default {
   height 50px
   right 10px
   padding 10px 0
-  position fixed
+  position absolute
   top 10px
   width 50px
   z-index 999

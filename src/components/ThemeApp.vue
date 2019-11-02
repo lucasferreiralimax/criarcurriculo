@@ -74,7 +74,7 @@ export default {
   border-radius 6px
   display block
   pointer-events all
-  position fixed
+  position absolute
   right 10px
   top 75px
   z-index 99
