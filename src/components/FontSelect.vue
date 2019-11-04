@@ -49,7 +49,9 @@ export default {
 <style lang="stylus">
 .fontSelect
   border-radius 6px
-  display block
+  display flex
   position relative
   z-index 9
+  &.btn select
+    width 100%
 </style>
