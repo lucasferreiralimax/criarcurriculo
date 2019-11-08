@@ -2,7 +2,6 @@ describe('Validar Fonts', () => {
   it('Font Abel', () => {
     cy.visit('/')
     cy.get('#start').scrollIntoView()
-    cy.get('#fontSelect').click({ force: true })
     cy.get('#fonttype').select('abel')
     cy.wait(2000)
   })
@@ -21,6 +20,5 @@ describe('Validar Fonts', () => {
   it('Font Normal', () => {
     cy.get('#fonttype').select('normal')
     cy.wait(2000)
-    cy.get('#fontSelect').click({ force: true })
   })
 })
