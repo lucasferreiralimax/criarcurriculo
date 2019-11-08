@@ -111,6 +111,5 @@ export default {
     &:last-of-type
       margin 0 auto
   +tablet()
-    transform translateX(100px)
-    transition .3s transform
+    display none
 </style>
