@@ -101,6 +101,7 @@ export default {
     background color4 - 80
     transform scale(1.3)
   &.active
+    position fixed
     span
       &:nth-of-type(1)
         transform rotate(45deg)
