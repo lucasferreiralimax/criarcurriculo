@@ -1,6 +1,6 @@
 <template lang="pug">
 .nav(:class="{ active: menu_show }")
-  button.btn.menu(@click="menuShow" role="button" type="button" :aria-label="$t('nav.menu')")
+  button.btn.menu(:class="{ active: menu_show }" @click="menuShow" role="button" type="button" :aria-label="$t('nav.menu')")
     span
     span
     span
@@ -100,13 +100,22 @@ export default {
   &:hover span
     background color4 - 80
     transform scale(1.3)
+  &.active
+    span
+      &:nth-of-type(1)
+        transform rotate(45deg)
+      &:nth-of-type(2)
+        opacity 0
+      &:nth-of-type(3)
+        transform rotate(-45deg)
+
   span
     background color4 - 80
     border-radius 4px
     display block
     height 2px
     margin 0 auto 6px
-    transition .3s transform
+    transition .3s transform, .1s opacity
     width 50%
     &:last-of-type
       margin 0 auto
