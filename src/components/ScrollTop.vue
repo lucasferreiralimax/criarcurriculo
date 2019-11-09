@@ -26,7 +26,7 @@ export default {
 
 <style lang="stylus">
 .scroll-top
-  bottom 25px
+  bottom 10px
   box-sizing border-box
   opacity 0
   pointer-events none
