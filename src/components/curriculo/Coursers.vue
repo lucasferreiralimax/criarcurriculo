@@ -1,6 +1,6 @@
 <template lang="pug">
 .coursers
-  box-curriculo(v-if="user.coursers.length !== 0" :id="'course-' + key" :key="key" title="true" type="coursers" :value="{ id: key, parent: 'coursers', child: 'formation'}" translate="cademy" v-for="(course, key) in user.coursers")
+  box-curriculo(v-if="user.coursers.length !== 0" :id="'course-' + key" :key="key" title="true" type="coursers" :value="{ id: key, parent: 'coursers', child: 'formation'}" translate="course" v-for="(course, key) in user.coursers")
     template(#action)
       .right.ml-1
         button.btn.delete.bullet.small.left(type="button" @click="remove('coursers', key)" :aria-label="$t('aria-label.course_remove')")
