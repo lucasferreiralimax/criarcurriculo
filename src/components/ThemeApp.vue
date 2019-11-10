@@ -79,5 +79,6 @@ export default {
   top 75px
   z-index 99
   +tablet()
+    position fixed
     top 10px
 </style>
