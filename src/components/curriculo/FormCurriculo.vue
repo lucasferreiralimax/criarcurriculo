@@ -79,9 +79,7 @@ export default {
     SelectCountry, SelectGenre, SelectMaritals, SelectTravel,
     TextareaApp
   },
-  created () {
-    this.setLocalStore()
-  },
+  created () { this.setLocalStore() },
   mounted () { document.querySelector('.footer').classList.add('home') },
   destroyed () { document.querySelector('.footer').classList.remove('home') },
   data () {

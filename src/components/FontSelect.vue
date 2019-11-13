@@ -13,9 +13,7 @@ label.btn.fontSelect(for="fonttype")
 
 <script>
 export default {
-  created () {
-    this.setFont()
-  },
+  created () { this.setFont() },
   data () {
     return {
       fonts: [],

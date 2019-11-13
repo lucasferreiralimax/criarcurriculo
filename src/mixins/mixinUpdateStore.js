@@ -3,9 +3,7 @@ import { mapState } from 'vuex'
 export const mixinUpdateStore = {
   computed: mapState({ user: state => state.user }),
   methods: {
-    updateStore () {
-      window.localStorage.setItem('store', JSON.stringify(this.user))
-    },
+    updateStore () { window.localStorage.setItem('store', JSON.stringify(this.user)) },
     updateVuex (name, e, id) {
       switch (name) {
         case 'updateCep':

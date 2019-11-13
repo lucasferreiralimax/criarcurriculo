@@ -34,9 +34,7 @@ export default {
     }
   },
   methods: {
-    boxCollapse() {
-      this.box_collapse = !this.box_collapse
-    }
+    boxCollapse() { this.box_collapse = !this.box_collapse }
   }
 }
 </script>
