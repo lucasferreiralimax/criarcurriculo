@@ -60,15 +60,14 @@ export default {
     flex-wrap wrap
     height 230px
     justify-content center
-    margin 0 1em 1em
+    margin 0 1em 1em 0
     text-shadow none
     transition .3s all
     width 230px
     &:hover
-      transform scale(1.1)
+      box-shadow 0 0 0 5px rgba(#fff, .5), 0 0 5px 10px rgba(#fff, .5)
       img
-        animation power 1s infinite alternate
-        box-shadow 0 0 0 2px #fff, 0 0 20px 10px color2
+        transform scale(1.3)
     figure
       width 200px
     figcaption

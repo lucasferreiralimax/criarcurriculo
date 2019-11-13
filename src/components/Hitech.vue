@@ -124,18 +124,6 @@ article.hitech
 <style lang="stylus">
 .hitech
   margin 3em auto 0
-  &:hover
-    color color2
-    .credits_logo
-      filter grayscale(100%)
-      opacity .8
-      transform scale(.8)
-      z-index 1
-      &:hover
-        filter grayscale(0)
-        opacity 1
-        transform scale(1)
-        z-index 9
   +ultrawide()
     max-width 50%
   .flexbox
@@ -158,11 +146,17 @@ article.hitech
   transform scale(.9)
   transition .5s all
   width 155px
-  &:hover
-    filter grayscale(0)
+  p, svg, img
     position relative
-    transform scale(1.4)
     transition .3s all
     will-change all
+  &:hover
+    box-shadow 0 0 0 5px rgba(#fff, .5), 0 0 5px 10px rgba(#fff, .5)
+  &:hover svg,
+  &:hover img
+    filter grayscale(0)
+    transform scale(1.3)
     z-index 9
+  &:hover p
+    transform translateY(10px)
 </style>
