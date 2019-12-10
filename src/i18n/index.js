@@ -7,6 +7,7 @@ Vue.use(VueI18n)
 
 const languages = {
   pt: "Português",
+  ar: "العربي",
   en: "English",
   es: "Español",
   ru: "русский",
@@ -36,6 +37,11 @@ function setI18nLanguage (lang) {
   i18n.locale = lang
   axios.defaults.headers.common['Accept-Language'] = lang
   document.querySelector('html').setAttribute('lang', lang)
+  if(lang == 'ar-SA') {
+    document.querySelector('html').setAttribute('dir', 'RTL')
+  } else {
+    document.querySelector('html').setAttribute('dir', 'LTR')
+  }
   return lang
 }
 
