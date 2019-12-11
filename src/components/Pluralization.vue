@@ -7,7 +7,9 @@ label.pluralization(for="locale")
     option(value="ar-SA") {{ $t('locale.ar')}}
     option(value="en-US") {{ $t('locale.en')}}
     option(value="es-ES") {{ $t('locale.es')}}
+    option(value="in-IN") {{ $t('locale.in')}}
     option(value="ru-RU") {{ $t('locale.ru')}}
+    option(value="in-ID") {{ $t('locale.in')}}
     option(value="ja-JP") {{ $t('locale.ja')}}
     option(value="fr-FR") {{ $t('locale.fr')}}
     option(value="tr-TR") {{ $t('locale.tr')}}
@@ -88,4 +90,12 @@ export default {
     width auto
     option
       color #000
++htmlDir()
+  .pluralization
+    left auto
+    right calc(50% - 83px)
+    svg
+      margin-left 10px
+      margin-right 0
+
 </style>
