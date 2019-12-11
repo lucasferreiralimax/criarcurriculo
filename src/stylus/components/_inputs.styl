@@ -16,6 +16,12 @@ input, textarea, select
     max-width auto
     min-width auto
     width auto
++htmlDir()
+  input, textarea, select
+    &[type="radio"],
+    &[type="checkbox"]
+      margin-right 0
+      margin-left 1em
 textarea
   resize vertical
 input[type="file"]
