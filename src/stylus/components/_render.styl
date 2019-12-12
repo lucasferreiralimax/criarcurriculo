@@ -12,15 +12,6 @@
       position fixed
       right 0
       top 0
-+htmlDir()
-  .render
-    +tablet()
-      right auto
-      left 1em
-      float left
-      &.viewfixed
-        right auto
-        left 1em
 .view
   &.abel,
   &.abel pre
@@ -121,3 +112,29 @@
       width calc(100% - 1em)
     +ultrawide()
       max-width 70%
++htmlDir()
+  .render
+    +tablet()
+      right auto
+      left 1em
+      float left
+      &.viewfixed
+        right auto
+        left 1em
+  .view
+    .info
+      float right
+    .icon-location,
+    .icon-date,
+    .icon-user
+      margin-right 0
+      margin-left 5px
+    .icon-phone,
+    .icon-email,
+    .icon-site
+      margin-right 0
+      margin-left 10px
+    .icon-course,
+    .icon-experience
+      margin-right 0
+      margin-left 10px

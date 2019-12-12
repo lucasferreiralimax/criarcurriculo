@@ -88,8 +88,7 @@
     content ''
     display table
     clear both
-  .paz,
-  .brasil
+  .paz, .brasil
     transition .3s all
     position absolute
     margin-left -20px
@@ -104,4 +103,9 @@
       opacity 0
     .brasil
       opacity 1
++htmlDir()
+  .L
+    .paz, .brasil
+      margin-left 0
+      margin-right -20px
 </style>
