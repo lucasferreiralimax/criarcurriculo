@@ -85,7 +85,7 @@ describe('Validar Mensagens com Erros', () => {
     cy.contains('[for="GET-telephone-0"] .error-msg', 'Precisa preencher o campo de telefone.')
   })
   it('Mensagem de erro e-mail', () => {
-    cy.contains('[for="GET-email-0"] .error-msg', 'Precisa preencher o campo de E-mail.')
+    cy.contains('[for="GET-email-0"] .error-msg', 'Precisa preencher o campo de e-mail.')
   })
   it('Mensagem de erro site', () => {
     cy.contains('[for="GET-site-0"] .error-msg', 'Precisa preencher o campo do site.')
@@ -103,9 +103,9 @@ describe('Validar Mensagens com Erros', () => {
     cy.contains('[for="GET-course-0"] .error-msg', 'Precisa preencher com o nome do curso.')
   })
   it('Mensagem de erro empresa', () => {
-    cy.contains('[for="GET-company-0"] .error-msg', 'Precisa preencher com o nome da Empresa.')
+    cy.contains('[for="GET-company-0"] .error-msg', 'Precisa preencher com o nome da empresa.')
   })
   it('Mensagem de erro cargo', () => {
-    cy.contains('[for="GET-exps-0"] .error-msg', 'Precisa preencher com o nome do Cargo.')
+    cy.contains('[for="GET-exps-0"] .error-msg', 'Precisa preencher com o nome do cargo.')
   })
 })
