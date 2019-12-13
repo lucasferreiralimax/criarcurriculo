@@ -101,6 +101,14 @@ describe('Validar Tecnologias', () => {
     cy.contains('.credits_logo p', 'Made with Heart')
 
     cy.wait(1000)
+    cy.get('#locale').select('ar-SA')
+    cy.contains('.credits_logo p', 'مصنوعة من القلب')
+
+    cy.wait(1000)
+    cy.get('#locale').select('in-ID')
+    cy.contains('.credits_logo p', 'दिल से बनाया गय')
+
+    cy.wait(1000)
     cy.get('#locale').select('pt-BR')
     cy.contains('.credits_logo p', 'Feito com Coração')
   })

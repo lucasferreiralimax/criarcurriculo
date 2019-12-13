@@ -65,6 +65,16 @@ describe('Validar titulo nos Idiomas', () => {
     cy.contains('h1', 'Læreplan Gratis')
     cy.wait(2000)
   })
+  it('العربي', () => {
+    cy.get('#locale').select('ar-SA')
+    cy.contains('h1', 'المناهج الدراسية حر')
+    cy.wait(2000)
+  })
+  it('भारतीय', () => {
+    cy.get('#locale').select('in-ID')
+    cy.contains('h1', 'पाठ्यक्रम मुक्त')
+    cy.wait(2000)
+  })
   it('Português', () => {
     cy.get('#locale').select('pt-BR')
     cy.contains('h1', 'Currículo Grátis')
