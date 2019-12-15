@@ -59,6 +59,15 @@ export const mixinUpdateStore = {
     remove (value, key) {
       this.$delete(this.user[value], key)
       this.updateStore()
+    },
+    setLocalStore (val) {
+      let store = localStorage.getItem(`store-${val ? val : document.documentElement.lang}`)
+
+      if(store) {
+        // Store Update
+        store = JSON.parse(store)
+        this.$store.commit("updateUser", store)
+      }
     }
   }
 }

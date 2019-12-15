@@ -86,17 +86,6 @@ export default {
     return {
       form: this
     }
-  },
-  methods: {
-    setLocalStore () {
-      let store = localStorage.getItem('store')
-
-      if(store) {
-        // Store Update
-        store = JSON.parse(store)
-        this.$store.commit("updateUser", store)
-      }
-    }
   }
 }
 </script>

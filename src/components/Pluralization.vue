@@ -23,9 +23,11 @@ label.pluralization(for="locale")
 
 <script>
 import { loadLanguageAsync } from '@/i18n'
+import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
 
 export default {
   name: 'pluralization',
+  mixins: [mixinUpdateStore],
   created () {
     this.setLocale()
   },
@@ -44,6 +46,7 @@ export default {
         locale = locale.replace(/"/g, "")
         loadLanguageAsync(locale)
         this.locale = locale
+
       }
     }
   },
@@ -51,6 +54,7 @@ export default {
     locale (val) {
       loadLanguageAsync(val)
       localStorage.setItem('locale', val)
+      this.setLocalStore(val)
     }
   }
 }
