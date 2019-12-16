@@ -8,6 +8,7 @@
       render
       actions-curriculo
         font-select
+        accounts
 </template>
 
 <script>
@@ -15,6 +16,7 @@ import FormCurriculo from '@/components/curriculo/FormCurriculo'
 import ActionsCurriculo from '@/components/curriculo/ActionsCurriculo'
 import Render from '@/components/curriculo/Render'
 import FontSelect from '@/components/FontSelect'
+import Accounts from '@/components/Accounts'
 
 export default {
   name: 'home',
@@ -22,7 +24,8 @@ export default {
     FormCurriculo,
     ActionsCurriculo,
     Render,
-    FontSelect
+    FontSelect,
+    Accounts
   }
 }
 </script>

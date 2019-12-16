@@ -4,7 +4,6 @@ header
     router-link(to="/" tag="h1" v-scroll-to="'#curriculo'").logo.text-center {{ $t('view.home.name1')}} {{ $t('view.home.name2')}}
   nav-menu
   pluralization
-  accounts
   theme-app
   scroll-top
 </template>
@@ -12,14 +11,13 @@ header
 <script>
 import NavMenu from '@/components/base/Nav'
 import Pluralization from '@/components/Pluralization'
-import Accounts from '@/components/Accounts'
 import ThemeApp from '@/components/ThemeApp'
 import ScrollTop from '@/components/ScrollTop'
 import { scrollTo } from '@/directive/scroll.js'
 
 export default {
   name: 'header-app',
-  components: { NavMenu, Pluralization, Accounts, ThemeApp, ScrollTop },
+  components: { NavMenu, Pluralization, ThemeApp, ScrollTop },
   directives: { 'scroll-to': scrollTo },
   created () { window.addEventListener('scroll', this.fixedHeader) },
   destroyed () { window.removeEventListener('scroll', this.fixedHeader) },
