@@ -4,7 +4,7 @@ export const mixinUpdateStore = {
   computed: mapState({ user: state => state.user }),
   methods: {
     updateStore () {
-      window.localStorage.setItem(`store-${document.documentElement.lang}`, JSON.stringify(this.user))
+      window.localStorage.setItem(`store_${document.documentElement.lang}`, JSON.stringify(this.user))
     },
     updateVuex (name, e, id) {
       switch (name) {
@@ -61,7 +61,7 @@ export const mixinUpdateStore = {
       this.updateStore()
     },
     setLocalStore (val) {
-      let store = localStorage.getItem(`store-${val ? val : document.documentElement.lang}`)
+      let store = localStorage.getItem(`store_${val ? val : document.documentElement.lang}`)
 
       if(store) {
         // Store Update
