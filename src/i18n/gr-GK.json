@@ -141,6 +141,7 @@
     "site_add": "Προσθήκη ιστότοπου",
     "site_add_new": "Προσθήκη νέου ιστότοπου",
     "site_remove": "Κατάργηση ιστότοπου",
+    "remove_account": "Κατάργηση συνέχισης",
     "delete_form": "Διαγραφή όλων των εντύπων",
     "print_curriculum": "Εκτύπωση Currilum",
     "link_git": "Σύνδεση με το έργο στο Github"

@@ -5,7 +5,7 @@ section.accounts(v-if="accounts.length !== 0")
     flag.flag(:type="account.s_lang")
     | {{ account.s_name }}
     span {{ account.s_time }}
-    button(@click="removeAccount(key, account.s_local)" class="btn delete bullet small right" type="button") X
+    button(@click="removeAccount(key, account.s_local)" class="btn delete bullet small right" type="button" :aria-label="$t('aria-label.remove_account') + ' ' + account.s_name + ' ' + account.s_lang") X
 </template>
 
 <script>

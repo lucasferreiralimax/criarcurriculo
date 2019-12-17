@@ -142,6 +142,7 @@
     "site_add": "เพิ่มเว็บไซต์",
     "site_add_new": "เพิ่มเว็บไซต์ใหม่",
     "site_remove": "ลบเว็บไซต์",
+    "remove_account": "ลบประวัติย่อ",
     "delete_form": "ลบฟอร์มทั้งหมด",
     "print_curriculum": "พิมพ์ Currilum",
     "link_git": "ลิงก์ไปยังโครงการใน Github"

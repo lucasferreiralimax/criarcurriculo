@@ -142,6 +142,7 @@
     "site_add": "添加网站",
     "site_add_new": "添加新网站",
     "site_remove": "删除网站",
+    "remove_account": "履歴書を削除",
     "delete_form": "删除所有表单",
     "print_curriculum": "印刷课程",
     "link_git": "链接到Github中的项目"

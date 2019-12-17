@@ -142,8 +142,9 @@
     "site_add": "साइट जोड़ें",
     "site_add_new": "नई साइट जोड़ें",
     "site_remove": "साइट निकालें",
+    "remove_account": "फिर से शुरू करें",
     "delete_form": "सभी फ़ॉर्म को हटा दें",
-      "print_curriculum": "प्रिंट फिर से शुरू",
+    "print_curriculum": "प्रिंट फिर से शुरू",
     "link_git": "गिथब पर परियोजना के लिए लिंक"
   },
   "themes": {

@@ -142,6 +142,7 @@
     "site_add": "Ajouter un site",
     "site_add_new": "Ajouter un nouveau site",
     "site_remove": "Supprimer le site",
+    "remove_account": "Supprimer le CV",
     "delete_form": "Supprimer tout le formulaire",
     "print_curriculum": "Print Currilum",
     "link_git": "Lien vers le projet dans Github"

@@ -142,6 +142,7 @@
     "site_add": "Add site",
     "site_add_new": "Add new site",
     "site_remove": "Remove site",
+    "remove_account": "Remove resume",
     "delete_form": "Delete all form",
     "print_curriculum": "Print Currilum",
     "link_git": "Link to the project in Github"
