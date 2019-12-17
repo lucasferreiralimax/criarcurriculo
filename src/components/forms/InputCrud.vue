@@ -1,10 +1,10 @@
 <template lang="pug">
   div
-    label.input__contato(:for="`GET-${name}-` + key" v-for="(email, key, index) in user[value]")
+    label.input__contato(:for="`GET-${name}-` + key" v-for="(item, key, index) in user[value]")
       .right
-        button.btn.delete.bullet.small.left(type="button" @click="remove(value, key)" :aria-label="$t('aria-label.email_remove')")
+        button.btn.delete.bullet.small.left(type="button" @click="remove(value, key)" :aria-label="$t(`aria-label.${name}_remove`) + ' ' + user[value][key]")
           i -
-        button.btn.plus.bullet.small.left(type="button" @click="newInput(value, vuex)" :aria-label="$t('aria-label.email_add_new')")
+        button.btn.plus.bullet.small.left(type="button" @click="newInput(value, vuex)" :aria-label="$t(`aria-label.${name}_add_new`)")
           i +
       | {{ $t(`form.${translate}`) }}:
       input(:id="`GET-${name}-` + key"
