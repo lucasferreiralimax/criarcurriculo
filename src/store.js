@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    accounts: [],
     user: {
       name: '',
       photo: '',
@@ -33,6 +34,12 @@ export default new Vuex.Store({
     errors: []
   },
   mutations: {
+    updateAcccount (state, value) {
+      state.accounts = value
+    },
+    insertAcccount (state, value) {
+      state.accounts.push(value)
+    },
     updateUser (state, value) {
       state.user = value
     },

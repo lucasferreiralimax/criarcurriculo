@@ -1,34 +1,36 @@
 import { mapState } from 'vuex'
 
 export const mixinUpdateStore = {
-  computed: mapState({ user: state => state.user }),
-  data () {
-    return {
-      accounts: []
-    }
-  },
+  computed: mapState({
+    user: state => state.user,
+    accounts: state => state.accounts
+  }),
   methods: {
     accountsRender () {
       let local = localStorage
+      this.$store.commit("updateAcccount", [])
 
       for(let obj in local) {
         if(/store/.test(obj)) {
           let store = JSON.parse(local[obj])
           if(store.name) {
-            this.accounts.push({
-              "s_name": store.name,
-              "s_local": obj,
-              "s_data": store,
-              "s_lang": obj.match(/\w{2}-\w{2}/ig)
-            })
+            let time = new Date(),
+                lang = obj.match(/\w{2}-\w{2}/ig),
+                store_account = {
+                  "s_name": store.name,
+                  "s_local": obj,
+                  "s_data": store,
+                  "s_time": `${time.getHours()}:${time.getMinutes()}:${time.getSeconds()} - ${time.getDate()}/${time.getMonth()}/${time.getFullYear()}`,
+                  "s_lang": lang[0]
+                };
+            this.$store.commit("insertAcccount", store_account)
           }
         }
       }
-      console.log("Account render")
-      console.log(this.accounts)
     },
     updateStore () {
       window.localStorage.setItem(`store_${document.documentElement.lang}`, JSON.stringify(this.user))
+      this.accountsRender()
     },
     updateVuex (name, e, id) {
       switch (name) {
