@@ -55,6 +55,7 @@ export default {
       loadLanguageAsync(val)
       localStorage.setItem('locale', val)
       this.setLocalStore(val)
+      this.accountsRender()
     }
   }
 }

@@ -2,7 +2,31 @@ import { mapState } from 'vuex'
 
 export const mixinUpdateStore = {
   computed: mapState({ user: state => state.user }),
+  data () {
+    return {
+      accounts: []
+    }
+  },
   methods: {
+    accountsRender () {
+      let local = localStorage
+
+      for(let obj in local) {
+        if(/store/.test(obj)) {
+          let store = JSON.parse(local[obj])
+          if(store.name) {
+            this.accounts.push({
+              "s_name": store.name,
+              "s_local": obj,
+              "s_data": store,
+              "s_lang": obj.match(/\w{2}-\w{2}/ig)
+            })
+          }
+        }
+      }
+      console.log("Account render")
+      console.log(this.accounts)
+    },
     updateStore () {
       window.localStorage.setItem(`store_${document.documentElement.lang}`, JSON.stringify(this.user))
     },
