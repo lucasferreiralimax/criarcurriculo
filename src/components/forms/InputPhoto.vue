@@ -39,11 +39,6 @@ export default {
       } else {
         alert('Sorry, FileReader API not supported')
       }
-    },
-    removeImage () {
-      this.$store.commit('updatePhoto', '')
-      document.querySelector('#GET-photo').value = ''
-      this.updateStore()
     }
   }
 }

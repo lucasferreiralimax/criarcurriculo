@@ -86,6 +86,11 @@ export const mixinUpdateStore = {
       this.$delete(this.user[value], key)
       this.updateStore()
     },
+    removeImage () {
+      this.$store.commit('updatePhoto', '')
+      document.querySelector('#GET-photo').value = ''
+      this.updateStore()
+    },
     setLocalStore (val) {
       let store = localStorage.getItem(`store_${val ? val : document.documentElement.lang}`)
 
