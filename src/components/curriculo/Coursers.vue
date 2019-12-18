@@ -3,7 +3,7 @@
   box-curriculo(v-if="user.coursers.length !== 0" :id="'course-' + key" :key="key" title="true" type="coursers" :value="{ id: key, parent: 'coursers', child: 'formation'}" translate="course" v-for="(course, key) in user.coursers")
     template(#action)
       .right.ml-1
-        button.btn.delete.bullet.small.left(type="button" @click="remove('coursers', key)" :aria-label="$t('aria-label.course_remove')")
+        button.btn.delete.bullet.small.left(type="button" @click="remove('coursers', key)" :aria-label="$t('aria-label.course_remove') + ' ' + course.formation.name")
           i -
     .row
       label.course_now(:for="'GET-coursenow-' + key" v-bind:class="{ 'display-n-print': !course.formation.now }" @keyup.enter='course.formation.now = !course.formation.now')
