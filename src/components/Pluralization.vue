@@ -16,6 +16,7 @@ label.pluralization(for="locale")
     option(value="al-DE") {{ $t('locale.de')}}
     option(value="it-IT") {{ $t('locale.it')}}
     option(value="gr-GK") {{ $t('locale.gr')}}
+    option(value="vn-VT") {{ $t('locale.vn')}}
     option(value="tl-TD") {{ $t('locale.tl')}}
     option(value="nl-HL") {{ $t('locale.nl')}}
     option(value="nl-NL") {{ $t('locale.nl_n')}}

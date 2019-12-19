@@ -19,6 +19,7 @@ const languages = {
   de: "Deutschland",
   it: "Italiano",
   gr: "ελληνικά",
+  vn: "Tiếng việt",
   tl: "ไทย",
   nl: "Neerlandesa",
   nl_n: "Norsk"

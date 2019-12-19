@@ -13,6 +13,7 @@
   img(v-if="type == 'al-DE'" src="./../assets/flags/al.svg" alt="Alemanha" width="30")
   img(v-if="type == 'it-IT'" src="./../assets/flags/it.svg" alt="Italia" width="30")
   img(v-if="type == 'gr-GK'" src="./../assets/flags/gr.svg" alt="Grecia" width="30")
+  img(v-if="type == 'vn-VT'" src="./../assets/flags/vn.svg" alt="Vietnã" width="30")
   img(v-if="type == 'tl-TD'" src="./../assets/flags/tl.svg" alt="Tailand" width="30")
   img(v-if="type == 'nl-HL'" src="./../assets/flags/nh.svg" alt="Holandes" width="30")
   img(v-if="type == 'nl-NL'" src="./../assets/flags/nl.svg" alt="Noruegues" width="30")
