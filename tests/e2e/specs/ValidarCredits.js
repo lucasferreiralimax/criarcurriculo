@@ -109,6 +109,10 @@ describe('Validar Tecnologias', () => {
     cy.contains('.credits_logo p', 'दिल से बनाया गय')
 
     cy.wait(1000)
+    cy.get('#locale').select('vn-VT')
+    cy.contains('.credits_logo p', 'Làm bằng trái tim')
+
+    cy.wait(1000)
     cy.get('#locale').select('pt-BR')
     cy.contains('.credits_logo p', 'Feito com Coração')
   })

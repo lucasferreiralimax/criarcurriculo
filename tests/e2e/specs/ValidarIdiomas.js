@@ -75,6 +75,11 @@ describe('Validar titulo nos Idiomas', () => {
     cy.contains('h1', 'पाठ्यक्रम मुक्त')
     cy.wait(2000)
   })
+  it('Tiếng việt', () => {
+    cy.get('#locale').select('vn-VT')
+    cy.contains('h1', 'Giáo trình Vận chuyển')
+    cy.wait(2000)
+  })
   it('Português', () => {
     cy.get('#locale').select('pt-BR')
     cy.contains('h1', 'Currículo Grátis')
