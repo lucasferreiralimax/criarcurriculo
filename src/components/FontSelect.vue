@@ -21,17 +21,10 @@ export default {
     }
   },
   methods: {
-    clearRender () {
-      document.querySelector('.view').classList = "view"
-    },
+    clearRender () { document.querySelector('.view').classList = "view" },
     setFont () {
-      let font = localStorage.getItem('fontSelect')
-
-      if(!font) {
-        localStorage.setItem('fontSelect', 'normal')
-      } else {
-        this.fonttype = font
-      }
+      let font = localStorage.getItem('fontSelect');
+      !font ? localStorage.setItem('fontSelect', 'normal') : this.fonttype = font;
     }
   },
   watch: {
