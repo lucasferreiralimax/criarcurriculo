@@ -29,9 +29,7 @@ export default {
       menu_show: false
     }
   },
-  methods: {
-    menuShow () { this.menu_show = !this.menu_show }
-  }
+  methods: { menuShow () { this.menu_show = !this.menu_show } }
 }
 </script>
 <style lang="stylus">

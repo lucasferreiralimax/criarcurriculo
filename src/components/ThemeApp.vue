@@ -32,9 +32,7 @@ import { mapState } from 'vuex'
 
 export default {
   name: 'theme-app',
-  created () {
-    this.setThemeApp()
-  },
+  created () { this.setThemeApp() },
   computed: mapState({ theme_app: state => state.theme_app }),
   data () {
     return {

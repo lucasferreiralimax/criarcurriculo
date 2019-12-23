@@ -29,9 +29,7 @@ import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
 export default {
   name: 'pluralization',
   mixins: [mixinUpdateStore],
-  created () {
-    this.setLocale()
-  },
+  created () { this.setLocale() },
   data () {
     return {
       locale: 'pt-BR'

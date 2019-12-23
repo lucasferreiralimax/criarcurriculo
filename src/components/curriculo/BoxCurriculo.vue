@@ -33,9 +33,7 @@ export default {
       box_collapse: false
     }
   },
-  methods: {
-    boxCollapse() { this.box_collapse = !this.box_collapse }
-  }
+  methods: { boxCollapse() { this.box_collapse = !this.box_collapse } }
 }
 </script>
 <style lang="stylus">

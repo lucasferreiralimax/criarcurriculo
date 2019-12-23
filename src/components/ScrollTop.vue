@@ -18,9 +18,7 @@ export default {
       scrolled: false
     }
   },
-  methods: {
-    handleScroll () { this.scrolled = window.scrollY > 265 }
-  }
+  methods: { handleScroll () { this.scrolled = window.scrollY > 265 } }
 }
 </script>
 

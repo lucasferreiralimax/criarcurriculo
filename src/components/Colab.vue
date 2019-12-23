@@ -24,9 +24,7 @@ export default {
       contributors: null
     }
   },
-  created () {
-    this.search_contributors()
-  },
+  created () { this.search_contributors() },
   methods: {
     search_contributors () {
       HTTP.get()
