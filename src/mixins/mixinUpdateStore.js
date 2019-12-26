@@ -40,12 +40,6 @@ export const mixinUpdateStore = {
         case 'updateTravel':
           this.$store.commit(name, e)
           break
-        case 'updateCountryStatus':
-          this.$store.commit(name, e.target.value)
-          break
-        case 'updateMaritalStatus':
-          this.$store.commit(name, e.target.value)
-          break
         case 'updateGenero':
           this.$store.commit(name, e.target.value)
           this.$store.commit('updateMaritalStatus', '')
@@ -60,10 +54,12 @@ export const mixinUpdateStore = {
           this.$store.commit(name, this.user.sites)
           break
         case 'updateExpCheck':
-          this.$store.commit(name, { id: id, value: e.target.checked })
-          break
         case 'updateCourserCheck':
           this.$store.commit(name, { id: id, value: e.target.checked })
+          break
+        case 'updateExp':
+        case 'updateCourser':
+          this.$store.commit(name, { id: id, value: e })
           break
         default:
           this.$store.commit(name, e.target.value)
