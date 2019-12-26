@@ -147,48 +147,50 @@ export default {
     translateDate (date) {
       if (!date) return ''
 
-      date = date.split("-")
+      let value = new Date(date),
+          month = value.getMonth(),
+          year = value.getFullYear()
 
-      switch (date[1]) {
-        case "01":
-          date[1] = this.$t('calendar.january')
+      switch (++month) {
+        case 1:
+          month = this.$t('calendar.january')
           break
-        case "02":
-          date[1] = this.$t('calendar.february')
+        case 2:
+          month = this.$t('calendar.february')
           break
-        case "03":
-          date[1] = this.$t('calendar.march')
+        case 3:
+          month = this.$t('calendar.march')
           break
-        case "04":
-          date[1] = this.$t('calendar.april')
+        case 4:
+          month = this.$t('calendar.april')
           break
-        case "05":
-          date[1] = this.$t('calendar.may')
+        case 5:
+          month = this.$t('calendar.may')
           break
-        case "06":
-          date[1] = this.$t('calendar.june')
+        case 6:
+          month = this.$t('calendar.june')
           break
-        case "07":
-          date[1] = this.$t('calendar.july')
+        case 7:
+          month = this.$t('calendar.july')
           break
-        case "08":
-          date[1] = this.$t('calendar.august')
+        case 8:
+          month = this.$t('calendar.august')
           break
-        case "09":
-          date[1] = this.$t('calendar.september')
+        case 9:
+          month = this.$t('calendar.september')
           break
-        case "10":
-          date[1] = this.$t('calendar.october')
+        case 10:
+          month = this.$t('calendar.october')
           break
-        case "11":
-          date[1] = this.$t('calendar.november')
+        case 11:
+          month = this.$t('calendar.november')
           break
-        case "12":
-          date[1] = this.$t('calendar.december')
+        case 12:
+          month = this.$t('calendar.december')
           break
       }
 
-      return `${date[1]} ${this.$t('calendar.in')} ${date[0]}`
+      return `${month} ${this.$t('calendar.in')} ${year}`
     }
   }
 }
