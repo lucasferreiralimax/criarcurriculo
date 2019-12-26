@@ -49,13 +49,13 @@ describe('Validar Formação Acadêmica', () => {
     cy.get('#GET-course-0').type('Front-end')
   })
   it('Inicio do curso', () => {
-    cy.get('#GET-coursedata__start-0').type('2018-12')
+    cy.get('#GET-coursedata__start-0').type('2018-12{enter}')
   })
   it('Término do curso', () => {
-    cy.get('#GET-coursedata__finish-0').type('2081-12')
+    cy.get('#GET-coursedata__finish-0').type('2018-12{enter}')
   })
   it('Sobre', () => {
-    cy.get('#GET-courseabout-0').type('Desenvolver aplicação e soluções para ajudar os seres vivos.')
+    cy.get('#GET-courseabout-0').type('Desenvolver aplicação e soluções para ajudar os seres vivos.', {force: true})
   })
 })
 
@@ -73,9 +73,9 @@ describe('Validar Experiências', () => {
     cy.get('#GET-exps-0').type('Front-end')
   })
   it('Inicio do trabalho', () => {
-    cy.get('#GET-expsdata__start-0').type('2018-08')
+    cy.get('#GET-expsdata__start-0').type('2018-08{enter}')
   })
   it('Sobre', () => {
-    cy.get('#GET-expsabout-0').type('Currículo Grátis')
+    cy.get('#GET-expsabout-0').type('Currículo Grátis', {force: true})
   })
 })

@@ -43,7 +43,7 @@ describe('Formação Acadêmica limpa', () => {
     cy.get('#GET-coursedata__finish-0').clear()
   })
   it('Sobre limpo', () => {
-    cy.get('#GET-courseabout-0').clear()
+    cy.get('#GET-courseabout-0').clear({force: true})
   })
 })
 
@@ -61,7 +61,7 @@ describe('Experiências limpa', () => {
     cy.get('#GET-expsdata__start-0').clear()
   })
   it('Sobre limpo', () => {
-    cy.get('#GET-expsabout-0').clear()
+    cy.get('#GET-expsabout-0').clear({force: true})
   })
 })
 
