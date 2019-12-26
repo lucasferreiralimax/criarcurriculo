@@ -15,10 +15,10 @@
     .row
       label(:for="'GET-coursedata__start-' + key")
         p {{ $t('form.start')}}:
-        input(:id="'GET-coursedata__start-' + key" name="coursedata-start" type="month" v-model="course.formation.data_start" @input="updateVuex('updateCourser', $event)")
+        el-date-picker(:id="'GET-coursedata__start-' + key" name="coursedata-start" v-model="course.formation.data_start" type="month" :placeholder="$t('form.data_place')" @change="updateVuex('updateCourser', $event, key)")
       label(:for="'GET-coursedata__finish-' + key")
         p {{ $t('form.finish')}}:
-        input(:id="'GET-coursedata__finish-' + key" name="coursedata-finish" type="month" v-model="course.formation.data_end" @input="updateVuex('updateCourser', $event)")
+        el-date-picker(:id="'GET-coursedata__finish-' + key" name="coursedata-finish" type="month" v-model="course.formation.data_end" :placeholder="$t('form.data_place')" @change="updateVuex('updateCourser', $event, key)")
     .row
       textarea-app(:index="key" :name="'courseabout-' + key" :value="{ parent: 'coursers', child: 'formation'}" translate="about_course" vuex="updateCourser")
   box-curriculo

@@ -15,10 +15,10 @@
     .row
       label(:for="'GET-expsdata__start-' + key" v-bind:class="{ large: exp.experience.now }")
         p {{ $t('form.start')}}:
-        input(:id="'GET-expsdata__start-' + key" name="expsdata-start" type="month" v-model="exp.experience.data_start" @input="updateVuex('updateExp', $event)")
+        el-date-picker(:id="'GET-expsdata__start-' + key" name="expsdata-start" type="month" v-model="exp.experience.data_start" :placeholder="$t('form.data_place')" @change="updateVuex('updateExp', $event, key)")
       label(:for="'GET-expsdata__finish' + key" v-if="!exp.experience.now")
         p(v-show="!exp.experience.now") {{ $t('form.finish')}}:
-        input(:id="'GET-expsdata__finish-' + key" name="expsdata-finish" type="month" v-model="exp.experience.data_end" @input="updateVuex('updateExp', $event)")
+        el-date-picker(:id="'GET-expsdata__finish-' + key" name="expsdata-finish" type="month" v-model="exp.experience.data_end" :placeholder="$t('form.data_place')" @change="updateVuex('updateExp', $event, key)")
     .row
       textarea-app(:index="key" :name="'expsabout-' + key" :value="{ parent: 'exps', child: 'experience' }" translate="activities" vuex="updateExp")
   box-curriculo
