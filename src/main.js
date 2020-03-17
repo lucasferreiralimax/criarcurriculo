@@ -8,6 +8,7 @@ import './registerServiceWorker'
 
 import VueHead from 'vue-head'
 import { DatePicker } from 'element-ui'
+import VueTheMask from 'vue-the-mask'
 import 'element-ui/lib/theme-chalk/icon.css'
 import 'element-ui/lib/theme-chalk/date-picker.css'
 import HeaderApp from '@/components/base/Header.vue'
@@ -21,6 +22,7 @@ Vue.use(VueHead)
 Vue.component('header-app', HeaderApp)
 Vue.component('footer-app', FooterApp)
 Vue.component(DatePicker.name, DatePicker)
+Vue.use(VueTheMask)
 
 Vue.config.productionTip = false
 

@@ -4,8 +4,9 @@
     input#GET-cep(name="cep"
                   type="tel"
                   placeholder="00000-000"
-                  maxlength="8"
+                  maxlength="9"
                   :value="user.cep"
+                  v-mask="'#####-###'"
                   @input="updateVuex('updateCep', $event)"
                   @keyup="search_cep")
 </template>
@@ -23,7 +24,7 @@ export default {
   mixins: [mixinUpdateStore],
   methods: {
     search_cep (e) {
-      if (e.target.value.length === 8) {
+      if (e.target.value.length === 9) {
         HTTP.get(this.user.cep + '/json/')
         .then(response => {
           this.user.end = response.data

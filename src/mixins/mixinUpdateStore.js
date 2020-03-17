@@ -35,7 +35,7 @@ export const mixinUpdateStore = {
     updateVuex (name, e, id) {
       switch (name) {
         case 'updateCep':
-          e.target.value.length == 8 ? this.$store.commit(name, e.target.value) : ''
+          e.target.value.length == 9 ? this.$store.commit(name, e.target.value.replace(/\D+/g, '')) : ''
           break
         case 'updateTravel':
           this.$store.commit(name, e)
