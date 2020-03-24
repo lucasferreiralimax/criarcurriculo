@@ -15,7 +15,7 @@ form#curriculo(:class="{ renderActive: user.name}")
       textarea-app(name="about" value="about" translate="about" vuex="updateAbout")
   // Box Telephone
   box-curriculo(v-if="user.telephones.length !== 0")
-    input-crud(name="telephone" value="telephones" type="number" translate="phone" vuex="updateTelephone" :errors="errors")
+    input-crud(name="telephone" value="telephones" type="tel" translate="phone" vuex="updateTelephone" :errors="errors")
   box-curriculo(v-if="user.telephones.length == 0")
     button#newTelephone.btn.plus.large(type="button" @click="newInput('telephones', 'updateTelephone')" :aria-label="$t('aria-label.telephone_add')")
       span +

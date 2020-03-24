@@ -1,5 +1,13 @@
 .render
   position relative
+  label
+    &[for^='GET-telephone'],
+    &[for^='GET-email']
+      margin-right 1em
+    &[for^='GET-telephone'],
+    &[for^='GET-email'],
+    &[for^='GET-site']
+      display inline-flex
   +tablet()
     box-sizing border-box
     float right
@@ -82,6 +90,8 @@
   .icon-date,
   .icon-user
     margin-right 5px
+  .icon-email
+    transform scale(1.3)
   .icon-phone,
   .icon-email,
   .icon-site
