@@ -25,7 +25,7 @@ export default {
   methods: {
     search_cep (e) {
       if (e.target.value.length === 9) {
-        HTTP.get(this.user.cep + '/json/')
+        HTTP.get(e.target.value.replace(/\D+/g, '') + '/json/')
         .then(response => {
           this.user.end = response.data
           this.updateStore()
