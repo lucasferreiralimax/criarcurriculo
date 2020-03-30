@@ -7,7 +7,6 @@
                   maxlength="9"
                   :value="user.cep"
                   v-mask="'#####-###'"
-                  @input="updateVuex('updateCep', $event)"
                   @keyup="search_cep")
 </template>
 
