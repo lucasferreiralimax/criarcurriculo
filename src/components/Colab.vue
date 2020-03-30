@@ -40,7 +40,7 @@ export default {
 </script>
 <style lang="stylus">
 .colab
-  margin 3em auto 0
+  margin 0 auto
   +ultrawide()
     max-width 50%
   .flexbox
