@@ -45,7 +45,7 @@ label, legend, .radio > p:not(.error-msg)
   border-bottom 1px solid rgba(#fff, .3)
   box-sizing border-box
   display block
-  padding 1em
+  padding .77em
   transition .3s background
 label
   position: relative
@@ -71,17 +71,21 @@ legend
   font-size 1em
   position relative
   width 100%
+  padding 1em
   &:hover
     background rgba(color4 + 50, 1)
   +tablet()
     font-size 1.3em
+    padding .5em
   span
     display block
     left 5px
     position relative
     text-shadow 0 2px 1px rgba(#000, .4)
-    top 3px
+    top 4px
     width calc(100% - 90px)
+    +tablet()
+      top 7px
   .icon
     fill #fff
     filter drop-shadow(0 2px 1px rgba(#000, .4))
