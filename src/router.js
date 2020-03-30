@@ -17,6 +17,11 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     },
     {
+      path: '/colaboradores',
+      name: 'colaboradores',
+      component: () => import(/* webpackChunkName: "colab" */ './views/Colab.vue')
+    },
+    {
       path: '/*',
       name: 'notfound',
       component: () => import(/* webpackChunkName: "notfound" */ './views/NotFound.vue')
