@@ -157,6 +157,12 @@
     "gull": "Gull",
     "full": "Full Black"
   },
+  "layout": {
+    "title": "Oppsett",
+    "default": "Misligholde",
+    "circle": "Sirkel",
+    "mirror": "Speil"
+  },
   "calendar": {
     "january": "Januar",
     "february": "Februar",

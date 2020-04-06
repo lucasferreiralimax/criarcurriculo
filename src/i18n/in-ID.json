@@ -157,6 +157,12 @@
     "gold": "सोना",
     "full": "पूरा काला"
   },
+  "layout": {
+    "title": "ख़ाका",
+    "default": "चूक",
+    "circle": "वृत्त",
+    "mirror": "आईना"
+  },
   "calendar": {
     "january": "जनवरी",
     "february": "फरवरी",

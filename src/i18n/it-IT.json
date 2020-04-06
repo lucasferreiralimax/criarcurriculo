@@ -157,6 +157,12 @@
     "gold": "Oro",
     "full": "Full Black"
   },
+  "layout": {
+    "title": "Disposizione",
+    "default": "il difetto",
+    "circle": "Cerchio",
+    "mirror": "Specchio"
+  },
   "calendar": {
     "january": "Gennaio",
     "february": "Febbraio",

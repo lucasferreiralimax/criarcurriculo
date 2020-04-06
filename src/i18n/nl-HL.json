@@ -157,6 +157,12 @@
     "gold": "Goud",
     "full": "Volledig zwart"
   },
+  "layout": {
+    "title": "Indeling",
+    "default": "Standaard",
+    "circle": "Cirkel",
+    "mirror": "Speil"
+  },
   "calendar": {
     "january": "Januari",
     "february": "Februari",

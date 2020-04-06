@@ -157,6 +157,12 @@
     "gold": "ゴールド",
     "full": "フルブラック"
   },
+  "layout": {
+    "title": "設計",
+    "default": "デフォルト",
+    "circle": "サークル",
+    "mirror": "鏡"
+  },
   "calendar": {
     "january": "一月",
     "february": "二月",

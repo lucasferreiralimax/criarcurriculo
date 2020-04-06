@@ -157,6 +157,12 @@
     "gold": "Vàng",
     "full": "Đầy đủ màu đen"
   },
+  "layout": {
+    "title": "bố trí",
+    "default": "Mặc định",
+    "circle": "Vòng tròn",
+    "mirror": "Gương"
+  },
   "calendar": {
     "january": "Tháng giêng",
     "february": "Tháng hai",

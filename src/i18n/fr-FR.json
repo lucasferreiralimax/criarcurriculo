@@ -157,6 +157,12 @@
     "gold": "Or",
     "full": "Noir complet"
   },
+  "layout": {
+    "title": "Disposition",
+    "default": "Standard",
+    "circle": "Circulaire",
+    "mirror": "Miroir"
+  },
   "calendar": {
     "january": "Janvier",
     "february": "Février",

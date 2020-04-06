@@ -157,6 +157,12 @@
     "gold": "ذهب",
     "full": "اسود بلكامل"
   },
+  "layout": {
+    "title": "نسق",
+    "default": "قياسي",
+    "circle": "الدائرة",
+    "mirror": "مرآة"
+  },
   "calendar": {
     "january": "كانون الثاني",
     "february": "شهر فبراير",

@@ -157,6 +157,12 @@
     "gold": "Gold",
     "full": "Full Black"
   },
+  "layout": {
+    "title": "Layout",
+    "default": "Standard",
+    "circle": "Kreis",
+    "mirror": "Reflector"
+  },
   "calendar": {
     "january": "Januar",
     "february": "Februar",

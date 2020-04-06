@@ -157,6 +157,12 @@
     "gold": "黄金",
     "full": "全黑"
   },
+  "layout": {
+    "title": "布局",
+    "default": "默认",
+    "circle": "圈",
+    "mirror": "镜子"
+  },
   "calendar": {
     "january": "一月",
     "february": "二月",

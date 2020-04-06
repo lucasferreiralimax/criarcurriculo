@@ -157,6 +157,12 @@
     "gold": "Ouro",
     "full": "Full Black"
   },
+  "layout": {
+    "title": "Formato",
+    "default": "Padrão",
+    "circle": "Circular",
+    "mirror": "Espelho"
+  },
   "calendar": {
     "january": "Janeiro",
     "february": "Fevereiro",

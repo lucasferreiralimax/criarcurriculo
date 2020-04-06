@@ -157,6 +157,12 @@
     "gold": "золото",
     "full": "Полный черный"
   },
+  "layout": {
+    "title": "макет",
+    "default": "стандарт",
+    "circle": "круглый",
+    "mirror": "зеркало"
+  },
   "calendar": {
     "january": "январь",
     "february": "февраль",

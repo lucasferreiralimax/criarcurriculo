@@ -1,15 +1,15 @@
 <template lang="pug">
 section.layout
-  h2 Layout
+  h2 {{ $t('layout.title') }}
   .options
     button.btn.m-0(type="button" @click="setLayout('')")
-      | Padrao
+      | {{ $t('layout.default') }}
       .layout-grid.layout-example-1
     button.btn.m-0(type="button" @click="setLayout('layout_1')")
-      | Circular
+      | {{ $t('layout.circle') }}
       .layout-grid.layout-example-2
     button.btn.m-0(type="button" @click="setLayout('layout_2')")
-      | Espelho
+      | {{ $t('layout.mirror') }}
       .layout-grid.layout-example-3
 </template>
 
@@ -31,7 +31,18 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
+.layout_1
+  .figure
+    height 120px
+    width 120px
+    border-radius 100%
+    .btn
+      bottom 0
+      transform translateY(calc(-100% - 15px)) scale(.9)
+.layout_2
+  .figure
+    float right
 .layout
   background transparent
   padding 0 0 1em
@@ -45,8 +56,12 @@ export default {
     grid-template-columns repeat(3, 1fr)
     grid-column-gap 1em
     grid-row-gap 1em
+  .btn
+    background #fff
+    &:hover
+      background #fff
 .layout-grid
-  background repeating-linear-gradient(to top, #000 15%, #000 18%,  transparent  18%, transparent 25%)
+  background repeating-linear-gradient(to top, #999 15%, #999 18%,  transparent  18%, transparent 25%)
   width 100%
   height 100px
   margin-top 1em
@@ -54,38 +69,56 @@ export default {
   position relative
   &:before,
   &:after
-    background #7f7f7f
+    background #fff
     content ''
     display flex
     width 30px
     height 30px
   &:after
-    width calc(100% - 105px)
+    width 30%
     height 40px
     position absolute
     right 0
-    top 40px
+    top 0
 .layout-example-1
   &:before
-    border 3px solid #111
-    outline 3px solid #7f7f7f
+    border 3px solid #999
+    outline 3px solid #fff
 .layout-example-2
   &:before
-    border 3px solid #111
+    border 3px solid #999
     border-radius 100%
-    box-shadow 0 0 0 6px #7f7f7f
+    box-shadow 0 0 0 6px #fff
   &:after
     height 30px
-    top 0
 .layout-example-3
   &:before
-    border 3px solid #111
-    box-shadow 0 0 0 6px #7f7f7f
+    border 3px solid #999
+    box-shadow 0 0 0 6px #fff
     position absolute
     right 0
   &:after
     top 0
     left 0
     height 20px
-
++htmlDir()
+  .layout_2
+    text-align left
+    .info
+      float left
+      text-align left
+    .figure
+      margin 0 20px 20px 0
+      float left
+  .layout-grid
+    &:after
+      right auto
+      left 0
+  .layout-example-3
+    &:before
+      right auto
+      left 0
+    &:after
+      left auto
+      right 0
 </style>

@@ -8,6 +8,7 @@
       render
       actions-curriculo
         font-select
+        layout-app
         accounts
 </template>
 
@@ -16,6 +17,7 @@ import FormCurriculo from '@/components/curriculo/FormCurriculo'
 import ActionsCurriculo from '@/components/curriculo/ActionsCurriculo'
 import Render from '@/components/curriculo/Render'
 import FontSelect from '@/components/FontSelect'
+import LayoutApp from '@/components/Layout'
 import Accounts from '@/components/Accounts'
 
 export default {
@@ -25,6 +27,7 @@ export default {
     ActionsCurriculo,
     Render,
     FontSelect,
+    LayoutApp,
     Accounts
   }
 }

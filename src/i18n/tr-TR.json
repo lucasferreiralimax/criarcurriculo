@@ -157,6 +157,12 @@
     "gold": "altın",
     "full": "Tam Siyah"
   },
+  "layout": {
+    "title": "Yerleşim",
+    "default": "Varsayılan",
+    "circle": "Daire",
+    "mirror": "Ayna"
+  },
   "calendar": {
     "january": "ocak",
     "february": "şubat",

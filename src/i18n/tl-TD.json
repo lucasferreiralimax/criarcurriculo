@@ -157,6 +157,12 @@
     "gold": "ทอง",
     "full": "สีดำเต็ม"
   },
+  "layout": {
+    "title": "แบบ",
+    "default": "ค่าเริ่มต้น",
+    "circle": "วงกลม",
+    "mirror": "กระจกเงา"
+  },
   "calendar": {
     "january": "มกราคม",
     "february": "กุมภาพันธ์",
