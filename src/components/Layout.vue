@@ -49,6 +49,12 @@ export default {
   .figure
     float right
     margin 0 0 20px 20px
+  label
+    &[for^='GET-telephone'],
+    &[for^='GET-email'],
+    &[for^='GET-site']
+      margin-right 0
+      margin-left 1em
 .layout
   background transparent
   padding 0 0 1em
@@ -119,6 +125,12 @@ export default {
     .figure
       margin 0 20px 20px 0
       float left
+    label
+      &[for^='GET-telephone'],
+      &[for^='GET-email'],
+      &[for^='GET-site']
+        margin-right 1em !important
+        margin-left 0 !important
   .layout-grid
     &:after
       right auto
