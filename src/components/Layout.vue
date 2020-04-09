@@ -41,8 +41,14 @@ export default {
       bottom 0
       transform translateY(calc(-100% - 15px)) scale(.9)
 .layout_2
+  .info,
+  .exps,
+  .cademy,
+  label[for="GET-about"]
+    text-align right
   .figure
     float right
+    margin 0 0 20px 20px
 .layout
   background transparent
   padding 0 0 1em
@@ -104,7 +110,10 @@ export default {
 +htmlDir()
   .layout_2
     text-align left
-    .info
+    .info,
+    .exps,
+    .cademy,
+    label[for="GET-about"]
       float left
       text-align left
     .figure
