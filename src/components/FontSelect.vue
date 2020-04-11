@@ -3,7 +3,7 @@ label.btn.fontSelect(for="fonttype")
   select#fonttype(v-model="fonttype")
     option(value="normal") Normal
     option(value="abel") Abel
-    option(value="cinzel") Cinzel
+    option(value="play") Play
     option(value="kaushan") Kaushan
     option(value="rajdhani") Rajdhani
   i.icon

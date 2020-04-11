@@ -5,8 +5,8 @@ describe('Validar Fonts', () => {
     cy.get('#fonttype').select('abel')
     cy.wait(2000)
   })
-  it('Font Cinzel', () => {
-    cy.get('#fonttype').select('cinzel')
+  it('Font Play', () => {
+    cy.get('#fonttype').select('play')
     cy.wait(2000)
   })
   it('Font Kaushan', () => {
