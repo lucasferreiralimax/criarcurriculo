@@ -7,10 +7,13 @@ import store from './store'
 import './registerServiceWorker'
 
 import VueHead from 'vue-head'
-import { DatePicker } from 'element-ui'
+import { DatePicker, Tag, Input, Button } from 'element-ui'
 import VueTheMask from 'vue-the-mask'
 import 'element-ui/lib/theme-chalk/icon.css'
 import 'element-ui/lib/theme-chalk/date-picker.css'
+import 'element-ui/lib/theme-chalk/tag.css'
+import 'element-ui/lib/theme-chalk/input.css'
+import 'element-ui/lib/theme-chalk/button.css'
 import HeaderApp from '@/components/base/Header.vue'
 import FooterApp from '@/components/base/Footer.vue'
 
@@ -22,6 +25,9 @@ Vue.use(VueHead)
 Vue.component('header-app', HeaderApp)
 Vue.component('footer-app', FooterApp)
 Vue.component(DatePicker.name, DatePicker)
+Vue.use(Tag)
+Vue.use(Input)
+Vue.use(Button)
 Vue.use(VueTheMask)
 
 Vue.config.productionTip = false

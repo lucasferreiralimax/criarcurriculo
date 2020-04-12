@@ -13,6 +13,8 @@ form#curriculo(:class="{ renderActive: user.name}")
       select-maritals(:errors="errors")
     .row
       textarea-app(name="about" value="about" translate="about" vuex="updateAbout")
+    .row
+      select-hobbie(:errors="errors")
   // Box Telephone
   box-curriculo(v-if="user.telephones.length !== 0")
     input-crud(name="telephone" value="telephones" type="tel" translate="phone" vuex="updateTelephone" :errors="errors")
@@ -71,6 +73,7 @@ import InputPhoto from '@/components/forms/InputPhoto'
 import SelectCountry from '@/components/forms/SelectCountry'
 import SelectGenre from '@/components/forms/SelectGenre'
 import SelectMaritals from '@/components/forms/SelectMaritals'
+import SelectHobbie from '@/components/forms/SelectHobbie'
 import SelectTravel from '@/components/forms/SelectTravel'
 import TextareaApp from '@/components/forms/TextareaApp'
 
@@ -82,7 +85,7 @@ export default {
     BoxCurriculo,
     Coursers, Experiencies,
     InputApp, InputCep, InputCrud, InputPhoto,
-    SelectCountry, SelectGenre, SelectMaritals, SelectTravel,
+    SelectCountry, SelectGenre, SelectMaritals, SelectHobbie, SelectTravel,
     TextareaApp
   },
   created () {
