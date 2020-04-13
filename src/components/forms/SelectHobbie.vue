@@ -1,10 +1,10 @@
 <template lang="pug">
 .select-hobbie
-  h2.title Hobbies ou atividades
+  h2.title {{ user.hobbies.length <= 1 ? $tc('form.hobbie', 1) : $tc('form.hobbie', 2) }}
   el-tag(:key='tag' v-for='tag in dynamicTags' closable :disable-transitions='false'  @close='handleClose(tag)')
     | {{ tag }}
   el-input.input-new-tag(v-if='inputVisible' v-model='inputValue' ref='saveTagInput' size='mini' @keyup.enter.native='handleInputConfirm' @blur="handleInputConfirm")
-  button.btn.plus.bullet.small(v-else type="button" @click="showInput")
+  button.btn.plus.bullet.small(v-else type="button" @click="showInput" :aria-label="$t('aria-label.hobbie')")
     i +
 </template>
 
