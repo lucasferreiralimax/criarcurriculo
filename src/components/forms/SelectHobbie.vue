@@ -1,6 +1,6 @@
 <template lang="pug">
 .select-hobbie
-  h2.title Hobbies
+  h2.title Hobbies ou atividades
   el-tag(:key='tag' v-for='tag in dynamicTags' closable :disable-transitions='false'  @close='handleClose(tag)')
     | {{ tag }}
   el-input.input-new-tag(v-if='inputVisible' v-model='inputValue' ref='saveTagInput' size='mini' @keyup.enter.native='handleInputConfirm' @blur="handleInputConfirm")
@@ -15,6 +15,7 @@ export default {
   name: 'select-hobbie',
   props: ['errors'],
   mixins: [mixinUpdateStore],
+  created () { this.setHobbies() },
   data() {
     return {
       dynamicTags: ['Ajudar'],
@@ -24,7 +25,8 @@ export default {
   },
   methods: {
     handleClose(tag) {
-      this.dynamicTags.splice(this.dynamicTags.indexOf(tag), 1);
+      this.dynamicTags.splice(this.dynamicTags.indexOf(tag), 1)
+      this.updateVuex('updateHobbies', this.dynamicTags)
     },
 
     showInput() {
@@ -36,9 +38,14 @@ export default {
       let inputValue = this.inputValue;
       if ( !this.dynamicTags.includes(inputValue) && inputValue ) {
         this.dynamicTags.push(inputValue);
+        this.updateVuex('updateHobbies', this.dynamicTags)
       }
       this.inputVisible = false;
       this.inputValue = '';
+    },
+    setHobbies () {
+      this.setLocalStore()
+      this.dynamicTags = this.user.hobbies
     }
   }
 }

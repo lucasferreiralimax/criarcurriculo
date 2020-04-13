@@ -25,6 +25,7 @@ export default new Vuex.Store({
       travel: false,
       about: null,
       genero: '',
+      hobbies: [],
       telephones: [],
       emails: [],
       sites: [],
@@ -66,6 +67,9 @@ export default new Vuex.Store({
     },
     updateAbout (state, value) {
       state.user.about = value
+    },
+    updateHobbies (state, value) {
+      state.user.hobbies = value
     },
     updateTelephone (state, value) {
       state.user.telephones = value
