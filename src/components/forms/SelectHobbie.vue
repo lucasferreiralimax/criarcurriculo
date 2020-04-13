@@ -1,11 +1,11 @@
 <template lang="pug">
-div.teste
+.select-hobbie
   h2.title Hobbies
   el-tag(:key='tag' v-for='tag in dynamicTags' closable :disable-transitions='false'  @close='handleClose(tag)')
     | {{ tag }}
   el-input.input-new-tag(v-if='inputVisible' v-model='inputValue' ref='saveTagInput' size='mini' @keyup.enter.native='handleInputConfirm' @blur="handleInputConfirm")
-  el-button.button-new-tag(v-else size="small" @click="showInput")
-    | +
+  button.btn.plus.bullet.small(v-else type="button" @click="showInput")
+    i +
 </template>
 
 <script>
@@ -45,34 +45,35 @@ export default {
 </script>
 
 <style lang="stylus">
-.teste
+.select-hobbie
   padding 10px
-  background #aaa
   color #fff
   position relative
   h2
     font-size 1em
     color #000
 
-.el-tag,
-.button-new-tag,
-.input-new-tag input
-  height auto !important
-  padding 0.5em 1em !important
-  border-radius 100px !important
-.el-tag
-  font-size 0.8em
-  margin-top 10px
-  margin-right 10px
+  .el-tag,
+  .button-new-tag,
+  .input-new-tag input
+    height auto !important
+    padding 0.5em 1em !important
+    border-radius 100px !important
+  .el-tag
+    font-size 0.8em
+    margin-top 10px
+    margin-right 10px
 
-.button-new-tag
-  line-height 30px
-  padding-top 0 !important
-  padding-bottom 0 !important
-  margin-top 10px
+  .btn.plus.bullet.small
+    line-height 30px
+    padding-top 0 !important
+    padding-bottom 0 !important
+    margin 10px 0 5px
+    display inline-block
+    transform translateY(4px)
 
-.input-new-tag
-  width 90px !important
-  vertical-align bottom
-  margin-top 10px
+  .input-new-tag
+    width 90px !important
+    vertical-align bottom
+    margin-top 10px
 </style>
