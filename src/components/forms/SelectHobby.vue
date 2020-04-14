@@ -1,25 +1,25 @@
 <template lang="pug">
-.select-hobbie
-  h2.title {{ user.hobbies.length <= 1 ? $tc('form.hobbie', 1) : $tc('form.hobbie', 2) }}
+.select-hobby
+  h2.title {{ user.hobbies.length <= 1 ? $tc('form.hobby', 1) : $tc('form.hobby', 2) }}
   el-tag(:key='tag' v-for='tag in dynamicTags' closable :disable-transitions='false'  @close='handleClose(tag)')
     | {{ tag }}
   el-input.input-new-tag(v-if='inputVisible' v-model='inputValue' ref='saveTagInput' size='mini' @keyup.enter.native='handleInputConfirm' @blur="handleInputConfirm")
-  button.btn.plus(v-else :class="{'small bullet': user.hobbies.length, 'large': !user.hobbies.length }" type="button" @click="showInput" :aria-label="$t('aria-label.hobbie')")
+  button.btn.plus(v-else :class="{'small bullet': user.hobbies.length, 'large': !user.hobbies.length }" type="button" @click="showInput" :aria-label="$t('aria-label.hobby')")
     i +
-    |   {{ user.hobbies.length == 0 ? $t('aria-label.hobbie') : '' }}
+    |   {{ user.hobbies.length == 0 ? $t('aria-label.hobby') : '' }}
 </template>
 
 <script>
 import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
 
 export default {
-  name: 'select-hobbie',
+  name: 'select-hobby',
   props: ['errors'],
   mixins: [mixinUpdateStore],
   created () { this.setHobbies() },
   data() {
     return {
-      dynamicTags: ['Ajudar'],
+      dynamicTags: [],
       inputVisible: false,
       inputValue: ''
     };
@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style lang="stylus">
-.select-hobbie
+.select-hobby
   padding 10px
   color #fff
   position relative
