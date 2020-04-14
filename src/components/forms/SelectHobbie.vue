@@ -4,8 +4,9 @@
   el-tag(:key='tag' v-for='tag in dynamicTags' closable :disable-transitions='false'  @close='handleClose(tag)')
     | {{ tag }}
   el-input.input-new-tag(v-if='inputVisible' v-model='inputValue' ref='saveTagInput' size='mini' @keyup.enter.native='handleInputConfirm' @blur="handleInputConfirm")
-  button.btn.plus.bullet.small(v-else type="button" @click="showInput" :aria-label="$t('aria-label.hobbie')")
+  button.btn.plus(v-else :class="{'small bullet': user.hobbies.length, 'large': !user.hobbies.length }" type="button" @click="showInput" :aria-label="$t('aria-label.hobbie')")
     i +
+    |   {{ user.hobbies.length == 0 ? $t('aria-label.hobbie') : '' }}
 </template>
 
 <script>
@@ -70,14 +71,15 @@ export default {
     font-size 0.8em
     margin-top 10px
     margin-right 10px
-
-  .btn.plus.bullet.small
-    line-height 30px
-    padding-top 0 !important
-    padding-bottom 0 !important
+  .btn.plus
     margin 10px 0 5px
-    display inline-block
-    transform translateY(4px)
+    transition .3s background
+    &.bullet.small
+      line-height 30px
+      padding-top 0 !important
+      padding-bottom 0 !important
+      display inline-block
+      transform translateY(4px)
 
   .input-new-tag
     width 90px !important
