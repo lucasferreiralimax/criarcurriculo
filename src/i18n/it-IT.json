@@ -80,6 +80,7 @@
     "site_place": "exemple.com",
     "about_me": "Informazioni su di me",
     "about_place": "Raccontami un po 'di te ...",
+    "hobby": "Hobby | Hobbies",
     "cademy": "Educazione accademica",
     "cademy_now": "Studiare",
     "school": "Istituzione",
@@ -124,6 +125,8 @@
     }
   },
   "aria-label": {
+    "add": "Aggiungere",
+    "hobby": "@:aria-label.add attività o hobby",
     "theme": "Pulsante Tema",
     "font_select": "Pulsante di selezione dei caratteri",
     "course_add": "Aggiungi corso",

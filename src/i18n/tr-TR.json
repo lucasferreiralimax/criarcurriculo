@@ -80,6 +80,7 @@
     "site_place": "exemple.tr",
     "about_me": "Hakkında",
     "about_place": "Kendiniz hakkında biraz konuşun...",
+    "hobby": "hobi | Hobiler",
     "cademy": "Akademik Arkaplan",
     "cademy_now": "Katılıyor",
     "school": "Kurum",
@@ -124,6 +125,8 @@
     }
   },
   "aria-label": {
+    "add": "eklemek",
+    "hobby": "aktivite veya hobi ekle",
     "theme": "Tema düğmesi",
     "font_select": "Yazı tipi seçme düğmesi",
     "course_add": "Kurs ekle",

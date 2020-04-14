@@ -80,6 +80,7 @@
     "site_place": "exemplo.com.br",
     "about_me": "Giới thiệu",
     "about_place": "Hãy cho chúng tôi biết một chút về bản thân bạn ...",
+    "hobby": "sở thích | sở thích",
     "cademy": "Hình thành học tập",
     "cademy_now": "Học tập",
     "school": "Tổ chức giáo dục",
@@ -124,6 +125,8 @@
     }
   },
   "aria-label": {
+    "add": "thêm",
+    "hobby": "@:aria-label.add hoạt động hoặc sở thích",
     "theme": "Nút chủ đề",
     "font_select": "Nút chọn nút",
     "course_add": "Thêm khóa học",

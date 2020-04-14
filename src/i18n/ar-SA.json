@@ -80,6 +80,7 @@
     "site_place": "exemple.com",
     "about_me": "عني",
     "about_place": "أخبرني عنك قليلا...",
+    "hobby": "هواية | الهوايات",
     "cademy": "التعليم الأكاديمي",
     "cademy_now": "دراسة عربي",
     "school": "المعهد",
@@ -124,6 +125,8 @@
     }
   },
   "aria-label": {
+    "add": "أضف",
+    "hobby": " @:aria-label.add نشاطًا أو هواية",
     "theme": "زر الموضوع",
     "font_select": "اختيار زر الخط",
     "course_add": "إضافة بالطبع",

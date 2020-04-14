@@ -80,7 +80,7 @@
     "site_place": "exemplo.com.br",
     "about_me": "Sobre",
     "about_place": "Fale um pouco sobre você...",
-    "hobbie": "Hobbie | Hobbies",
+    "hobby": "Hobby | Hobbies",
     "cademy": "Formação Acadêmica",
     "cademy_now": "Cursando",
     "school": "Instituição",
@@ -126,7 +126,7 @@
   },
   "aria-label": {
     "add": "Adicionar",
-    "hobbie": "@:aria-label.add atividade ou hobbie",
+    "hobby": "@:aria-label.add atividade ou hobbie",
     "theme": "Botão de tema",
     "font_select": "Botão de seleção da fonte",
     "course_add": "@:aria-label.add curso",

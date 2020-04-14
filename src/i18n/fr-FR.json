@@ -80,6 +80,7 @@
     "site_place": "exemple.fr",
     "about_me": "À propos du wiki",
     "about_place": "Parlez-nous de vous...",
+    "hobby": "Passe-temps | Hobbies",
     "cademy": "Contexte académique",
     "cademy_now": "Étudier",
     "school": "Institution",
@@ -124,6 +125,8 @@
     }
   },
   "aria-label": {
+    "add": "Ajouter",
+    "hobby": "@:aria-label.add des activités ou un passe-temps",
     "theme": "bouton de thème",
     "font_select": "bouton de sélection de police",
     "course_add": "Ajouter un cours",

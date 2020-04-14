@@ -80,6 +80,7 @@
     "site_place": "exemplo.com.br",
     "about_me": "पर",
     "about_place": "अपने बारे में थोड़ा बताइए ...",
+    "hobby": "शौक | शौक",
     "cademy": "शैक्षणिक गठन",
     "cademy_now": "दौड़",
     "school": "संस्था",
@@ -124,6 +125,8 @@
     }
   },
   "aria-label": {
+    "add": "जोड़ना",
+    "hobby": "गतिविधियों या शौक जोड़ें",
     "theme": "थीम बटन",
     "font_select": "फ़ॉन्ट का चयन करें बटन",
     "course_add": "पाठ्यक्रम जोड़ें",

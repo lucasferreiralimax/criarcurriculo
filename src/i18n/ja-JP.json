@@ -80,6 +80,7 @@
     "site_place": "exemplo.jp",
     "about_me": "ホーム",
     "about_place": "あなた自身について教えてください...",
+    "hobby": "趣味 | 趣味",
     "cademy": "学歴",
     "cademy_now": "勉強する",
     "school": "機関",
@@ -124,6 +125,8 @@
     }
   },
   "aria-label": {
+    "add": "追加する",
+    "hobby": "アクティビティや趣味を追加",
     "theme": "主题按钮",
     "font_select": "字体选择按钮",
     "course_add": "添加课程",

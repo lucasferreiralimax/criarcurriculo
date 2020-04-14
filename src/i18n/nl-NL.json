@@ -80,6 +80,7 @@
     "site_place": "exemple.com",
     "about_me": "Over mij",
     "about_place": "Vertell meg en beetje over jou ...",
+    "hobby": "Hobby | Hobbyer",
     "cademy": "Academisch onderwijs",
     "cademy_now": "Studeren",
     "school": "Instelling",
@@ -124,6 +125,8 @@
     }
   },
   "aria-label": {
+    "add": "Legg",
+    "hobby": "@:aria-label.add til aktivitet eller hobby",
     "theme": "Temaknapp",
     "font_select": "Font-valgknapp",
     "course_add": "Legg til kurs",

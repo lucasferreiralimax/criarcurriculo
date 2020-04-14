@@ -80,6 +80,7 @@
     "site_place": "exemple.cn",
     "about_me": "关于",
     "about_place": "谈谈你自己...",
+    "hobby": "嗜好 | 兴趣爱好",
     "cademy": "学术背景",
     "cademy_now": "参加",
     "school": "机构",
@@ -124,6 +125,8 @@
     }
   },
   "aria-label": {
+    "add": "加",
+    "hobby": "增@:aria-label.add活动或爱好",
     "theme": "主题按钮",
     "font_select": "字体选择按钮",
     "course_add": "添加课程",

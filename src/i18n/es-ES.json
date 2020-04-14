@@ -80,6 +80,7 @@
     "site_place": "exemplo.es",
     "about_me": "Presentación",
     "about_place": "Hablé un poco sobre usted...",
+    "hobby": "Pasatiempo | Pasatiempos",
     "cademy": "Formación Académica",
     "cademy_now": "Actual",
     "school": "Institución",
@@ -124,6 +125,8 @@
     }
   },
   "aria-label": {
+    "add": "Agregar",
+    "hobby": "@:aria-label.add activities o pasatiempos",
     "theme": "botón de tema",
     "font_select": "Botón de selección de fuente",
     "course_add": "Agregar curso",
