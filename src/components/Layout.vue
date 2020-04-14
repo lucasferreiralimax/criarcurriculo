@@ -44,6 +44,7 @@ export default {
   .info,
   .exps,
   .cademy,
+  .hobbie,
   label[for="GET-about"]
     text-align right
   .figure
@@ -119,6 +120,7 @@ export default {
     .info,
     .exps,
     .cademy,
+    .hobbie,
     label[for="GET-about"]
       float left
       text-align left

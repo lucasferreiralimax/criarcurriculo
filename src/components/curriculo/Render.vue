@@ -53,8 +53,8 @@
             pre {{ user.about }}
         label.hobbie(v-if="user.hobbies[0]")
           h2 {{ user.hobbies.length <= 1 ? $tc('form.hobbie', 1) : $tc('form.hobbie', 2) }}
-          ul.ml-1
-            li.ml-1(v-for="hobbie in user.hobbies") {{ hobbie }}
+          ul
+            li(v-for="hobbie in user.hobbies") {{ hobbie }}
         .cademy
           h2(v-if="user.coursers[0]") {{ $t('form.cademy')}}
           .coursers(v-for="(course, key, index) in user.coursers")
