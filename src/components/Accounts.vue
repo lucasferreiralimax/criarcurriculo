@@ -76,5 +76,8 @@ export default {
       display inline-block
 +htmlDir()
   .flag
-    transform translate(5px, 5px)
+    transform translate(5px, 5px) scale(1.5)
+  .name,
+  .date
+    transform translateX(10px)
 </style>
