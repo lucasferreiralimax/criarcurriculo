@@ -51,7 +51,7 @@
           h2(v-if="user.about") {{ $t('form.about_me') }}
           p(v-if="user.about")
             pre {{ user.about }}
-        label.hobby(v-if="user.hobbies[0]")
+        label.hobby(v-if="user.hobbies[0] && user.name")
           h2 {{ user.hobbies.length <= 1 ? $tc('form.hobby', 1) : $tc('form.hobby', 2) }}
           ul
             li(v-for="hobby in user.hobbies") {{ hobby }}
