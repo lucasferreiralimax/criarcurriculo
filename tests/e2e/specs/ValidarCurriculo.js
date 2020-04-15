@@ -13,6 +13,10 @@ describe('Validar curriculo simples', () => {
   it('Idade', () => {
     cy.get('#GET-dataofbirth').type(23)
   })
+  it('Hobbies', () => {
+    cy.get('.select-hobby .btn.plus.bullet.small').click()
+    cy.get('.select-hobby input').type('teste')
+  })
   it('CEP', () => {
     cy.get('#GET-cep').type('03816130')
     cy.get('#GET-address-number').type('1')
