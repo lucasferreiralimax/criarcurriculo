@@ -25,7 +25,7 @@
 <style lang="stylus">
 .footer
   font-weight normal
-  padding 20px 0 40px
+  padding 20px 0 100px
   text-align center
   position relative
   z-index 9
@@ -38,7 +38,8 @@
     +ultrawide()
       width 100%
       max-width 65%
-
+  +tablet()
+    padding 20px 0 50px
 .credits
   color #fff
   cursor pointer

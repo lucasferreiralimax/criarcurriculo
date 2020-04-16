@@ -29,7 +29,8 @@ export default {
   opacity 0
   pointer-events none
   position fixed
-  right 10px
+  right 50%
+  transform translateX(50%)
   visibility hidden
   z-index 9999
   padding 25px
