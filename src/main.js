@@ -9,6 +9,7 @@ import './registerServiceWorker'
 import VueHead from 'vue-head'
 import { DatePicker, Tag, Input, Button } from 'element-ui'
 import VueTheMask from 'vue-the-mask'
+import draggable from 'vuedraggable'
 import 'element-ui/lib/theme-chalk/icon.css'
 import 'element-ui/lib/theme-chalk/date-picker.css'
 import 'element-ui/lib/theme-chalk/tag.css'
@@ -25,6 +26,7 @@ Vue.use(VueHead)
 Vue.component('header-app', HeaderApp)
 Vue.component('footer-app', FooterApp)
 Vue.component(DatePicker.name, DatePicker)
+Vue.component(draggable.name, draggable)
 Vue.use(Tag)
 Vue.use(Input)
 Vue.use(Button)

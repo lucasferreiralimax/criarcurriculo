@@ -1,7 +1,23 @@
 <template lang="pug">
-.experiences
-  box-curriculo(v-if="user.exps.length !== 0" :id="'exp-' + key" :key="key" title="true" type="exps" :value="{ id: key, parent: 'exps', child: 'experience' }" translate="exp" v-for="(exp, key) in user.exps")
+draggable(:list="user.exps"
+  class="experiences"
+  ghost-class="ghost"
+  handle=".handle"
+  @start="dragging = true"
+  @end="dragging = false"
+  @change="updateVuex('updateExp', $event)")
+  box-curriculo(v-if="user.exps.length !== 0"
+                :id="'exp-' + key"
+                :key="key"
+                title="true"
+                type="exps"
+                :value="{ id: key, parent: 'exps', child: 'experience' }"
+                translate="exp"
+                v-for="(exp, key) in user.exps")
     template(#action)
+      .right.ml-1
+        button.handle.btn.bullet.small.left(type="button" :aria-label="$t('aria-label.exp_remove') + ' ' + exp.experience.name")
+          i =
       .right.ml-1
         button.btn.delete.bullet.small.left(type="button" @click="remove('exps', key)" :aria-label="$t('aria-label.exp_remove') + ' ' + exp.experience.name")
           i -
@@ -42,6 +58,11 @@ export default {
   props: ['errors'],
   mixins: [mixinUpdateStore],
   components: { BoxCurriculo, InputApp, TextareaApp },
-  directives: { 'scroll-to': scrollTo }
+  directives: { 'scroll-to': scrollTo },
+  data () {
+    return {
+      dragging: false
+    }
+  }
 }
 </script>

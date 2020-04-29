@@ -1,5 +1,9 @@
 <template lang="pug">
-  div
+  draggable(:list="user[value]"
+            ghost-class="ghost"
+            @start="dragging = true"
+            @end="dragging = false"
+            @change="updateVuex(vuex, $event)")
     label.input__contato(:for="`GET-${name}-` + key" v-for="(item, key, index) in user[value]")
       .right
         button.btn.delete.bullet.small.left(type="button" @click="remove(value, key)" :aria-label="$t(`aria-label.${name}_remove`) + ' ' + user[value][key]")
@@ -38,6 +42,11 @@ export default {
   name: 'input-crud',
   props: ['name', 'value', 'type', 'vuex', 'translate', 'errors'],
   mixins: [mixinUpdateStore],
-  directives: { 'focus-label': focusLabel }
+  directives: { 'focus-label': focusLabel },
+  data () {
+    return {
+      dragging: false
+    }
+  }
 }
 </script>

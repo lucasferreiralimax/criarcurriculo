@@ -1,11 +1,15 @@
 <template lang="pug">
 section.accounts(v-if="accounts.length !== 0")
   h2 {{ $t('view.home.cache')}}
-  p(v-for="(account, key) in accounts" @click="toggleAccount(account)")
-    flag.flag(:type="account.s_lang")
-    span.name {{ account.s_name }}
-    span.date {{ account.s_time }}
-    button(@click="removeAccount(key, account.s_local)" class="btn delete bullet small right" type="button" :aria-label="$t('aria-label.remove_account') + ' ' + account.s_name + ' ' + account.s_lang") X
+  draggable(:list="accounts"
+    ghost-class="ghost"
+    @start="dragging = true"
+    @end="dragging = false")
+    p(v-for="(account, key) in accounts" @click="toggleAccount(account)")
+      flag.flag(:type="account.s_lang")
+      span.name {{ account.s_name }}
+      span.date {{ account.s_time }}
+      button(@click="removeAccount(key, account.s_local)" class="btn delete bullet small right" type="button" :aria-label="$t('aria-label.remove_account') + ' ' + account.s_name + ' ' + account.s_lang") X
 </template>
 
 <script>
@@ -19,6 +23,11 @@ export default {
   mixins: [mixinUpdateStore],
   components: { Flag },
   created () { this.accountsRender() },
+  data () {
+    return {
+      dragging: false
+    }
+  },
   methods: {
     toggleAccount (store) {
       this.$store.commit("updateUser", store.s_data)

@@ -1,7 +1,23 @@
 <template lang="pug">
-.coursers
-  box-curriculo(v-if="user.coursers.length !== 0" :id="'course-' + key" :key="key" title="true" type="coursers" :value="{ id: key, parent: 'coursers', child: 'formation'}" translate="course" v-for="(course, key) in user.coursers")
+draggable(:list="user.coursers"
+  class="coursers"
+  ghost-class="ghost"
+  handle=".handle"
+  @start="dragging = true"
+  @end="dragging = false"
+  @change="updateVuex('updateCourser', $event)")
+  box-curriculo(v-if="user.coursers.length !== 0"
+                :id="'course-' + key"
+                :key="key"
+                title="true"
+                type="coursers"
+                :value="{ id: key, parent: 'coursers', child: 'formation'}"
+                translate="course"
+                v-for="(course, key) in user.coursers")
     template(#action)
+      .right.ml-1
+        button.handle.btn.bullet.small.left(type="button" :aria-label="$t('aria-label.course_remove') + ' ' + course.formation.name")
+          i =
       .right.ml-1
         button.btn.delete.bullet.small.left(type="button" @click="remove('coursers', key)" :aria-label="$t('aria-label.course_remove') + ' ' + course.formation.name")
           i -
@@ -42,6 +58,11 @@ export default {
   props: ['errors'],
   mixins: [mixinUpdateStore],
   components: { BoxCurriculo, InputApp, TextareaApp },
-  directives: { 'scroll-to': scrollTo }
+  directives: { 'scroll-to': scrollTo },
+  data () {
+    return {
+      dragging: false
+    }
+  }
 }
 </script>
