@@ -51,13 +51,12 @@
     border 1px solid #999
     border-radius 6px
     display flex
-    float left
     height 130px
     justify-content center
-    margin 0 20px 20px 0
     overflow hidden
     width 100px
     transition 1s all
+    position absolute
     img
       border-radius 6px
       height 130px
@@ -84,6 +83,16 @@
     margin-top 5px
   .info
     margin-bottom 20px
+    min-height 157px
+    width 100%
+    border-bottom 1px solid #c4c4c4
+    transition .3s all
+    &:after
+      content ''
+      display table
+      clear both
+    &.photo
+      padding-left 120px
     p
       line-height 20px
   .contact-info
@@ -164,10 +173,10 @@
         right auto
         left 1em
   .view
-    .figure
-      float right
-      margin 0 0 20px 20px
-    .info
+    .info.photo
+      padding-left 0
+      padding-right 120px
+    .contact-info
       float right
     label[for="GET-about"],
     .cademy,

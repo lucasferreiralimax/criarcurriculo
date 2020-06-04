@@ -40,6 +40,8 @@ export default {
     .btn
       bottom 0
       transform translateY(calc(-100% - 15px)) scale(.9)
+  .info.photo
+    padding-left 140px
 .layout_2
   .info,
   .exps,
@@ -47,9 +49,13 @@ export default {
   .hobby,
   label[for="GET-about"]
     text-align right
-  .figure
+  .contact-info
     float right
-    margin 0 0 20px 20px
+  .figure
+    right 3em
+  .info.photo
+    padding-left 0
+    padding-right 140px
   label
     &[for^='GET-telephone'],
     &[for^='GET-email'],
@@ -115,6 +121,9 @@ export default {
     left 0
     height 20px
 +htmlDir()
+  .layout_1
+    .info.photo
+      padding-right 140px
   .layout_2
     text-align left
     .info,
@@ -124,9 +133,14 @@ export default {
     label[for="GET-about"]
       float left
       text-align left
-    .figure
-      margin 0 20px 20px 0
+    .contact-info
       float left
+    .figure
+      left 3em
+      right auto
+    .info.photo
+      padding-left 120px
+      padding-right 0
     label
       &[for^='GET-telephone'],
       &[for^='GET-email'],
