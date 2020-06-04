@@ -37,6 +37,8 @@ draggable(:list="user.coursers"
         el-date-picker(:id="'GET-coursedata__finish-' + key" name="coursedata-finish" type="month" v-model="course.formation.data_end" :placeholder="$t('form.data_place')" @change="updateVuex('updateCourser', $event, key)")
     .row
       textarea-app(:index="key" :name="'courseabout-' + key" :value="{ parent: 'coursers', child: 'formation'}" translate="about_course" vuex="updateCourser")
+    .row
+      input-app(:index="key" :name="'schoolLink-' + key" :value="{ parent: 'coursers', child: 'formation', content: 'link' }" type="text" translate="link" vuex="updateCourser")
   box-curriculo
     button.btn.plus.large(v-scroll-to="'#course-' + user.coursers.length" type="button" @click="newComponent('coursers')" :aria-label="$t('aria-label.course_add')")
       svg.icon(viewBox="0 -35 512 512" width="20" xmlns="http://www.w3.org/2000/svg")
