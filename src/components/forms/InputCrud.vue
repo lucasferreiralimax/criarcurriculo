@@ -8,7 +8,7 @@
       .right
         button.btn.delete.bullet.small.left(type="button" @click="remove(value, key)" :aria-label="$t(`aria-label.${name}_remove`) + ' ' + user[value][key]")
           i -
-        button.btn.plus.bullet.small.left(type="button" @click="newInput(value, vuex)" :aria-label="$t(`aria-label.${name}_add_new`)")
+        button.btn.plus.bullet.small.left.ml-1(type="button" @click="newInput(value, vuex)" :aria-label="$t(`aria-label.${name}_add_new`)")
           i +
       | {{ $t(`form.${translate}`) }}:
       template(v-if="type == 'tel'")

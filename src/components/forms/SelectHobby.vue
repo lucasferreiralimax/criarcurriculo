@@ -85,4 +85,12 @@ export default {
     width 90px !important
     vertical-align bottom
     margin-top 10px
++htmlDir()
+  .select-hobby
+    .el-tag
+      margin-left 15px
+      margin-right auto
+      .el-icon-close
+        left -5px
+        right auto
 </style>

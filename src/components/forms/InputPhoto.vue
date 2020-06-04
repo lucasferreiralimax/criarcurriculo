@@ -54,4 +54,8 @@ export default {
   position absolute
   right 17px
   top 10px
++htmlDir()
+  .btn.delete.bullet.small.photo
+    left 17px
+    right auto
 </style>

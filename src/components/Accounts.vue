@@ -84,9 +84,18 @@ export default {
     button
       display inline-block
 +htmlDir()
-  .flag
-    transform translate(5px, 5px) scale(1.5)
-  .name,
-  .date
-    transform translateX(10px)
+  .accounts
+    p
+      text-align right
+    .flag
+      transform translate(5px, 5px) scale(1.5)
+    .name,
+    .date
+      transform translateX(10px)
+    .name
+      left auto
+      right 60px
+    .date
+      left auto
+      right 58px
 </style>
