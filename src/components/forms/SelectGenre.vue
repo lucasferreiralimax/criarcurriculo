@@ -1,6 +1,6 @@
 <template lang='pug'>
   label(for="GET-genero")
-    | {{ $t('form.genre')}}
+    | {{ $t('form.genre')}}:
     select#GET-genero(name='genero'
                       :class="{ error: !user.genero && errors ? errors.length : false }"
                       :value="user.genero"

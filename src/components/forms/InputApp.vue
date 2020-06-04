@@ -1,7 +1,7 @@
 <template lang="pug">
   label(:for="`GET-${name}`")
     template(v-if="value.parent")
-      | {{ $t(`form.${translate}`) }}
+      | {{ $t(`form.${translate}`) }}:
       template(v-if="value.content")
         input(:id="`GET-${name}`"
               :class="{ error: !user[value.parent][index][value.child][value.content] && errors ? errors.length : false }"
@@ -25,7 +25,7 @@
         p.error-msg(v-if="!user[value.parent][value.child] && errors ? errors.length : false")
           | {{ $t(`form.errors.${translate}`) }}
     template(v-else)
-      | {{ $t(`form.${translate}`) }}
+      | {{ $t(`form.${translate}`) }}:
       input(:id="`GET-${name}`"
             :class="{ error: !user[value] && errors ? errors.length : false }"
             :name="name"
