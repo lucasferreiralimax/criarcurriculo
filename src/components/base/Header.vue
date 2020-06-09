@@ -5,19 +5,19 @@ header
   nav-menu
   pluralization
   theme-app
-  scroll-top
+  scroll-page
 </template>
 
 <script>
 import NavMenu from '@/components/base/Nav'
 import Pluralization from '@/components/Pluralization'
 import ThemeApp from '@/components/ThemeApp'
-import ScrollTop from '@/components/ScrollTop'
+import ScrollPage from '@/components/ScrollPage'
 import { scrollTo } from '@/directive/scroll.js'
 
 export default {
   name: 'header-app',
-  components: { NavMenu, Pluralization, ThemeApp, ScrollTop },
+  components: { NavMenu, Pluralization, ThemeApp, ScrollPage },
   directives: { 'scroll-to': scrollTo },
   created () { window.addEventListener('scroll', this.fixedHeader) },
   destroyed () { window.removeEventListener('scroll', this.fixedHeader) },
