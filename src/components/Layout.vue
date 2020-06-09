@@ -130,10 +130,10 @@ export default {
     &:after
       right auto
       left 0
-  .layout-1
+  .layout-circle
     .info.photo
       padding-right 140px
-  .layout-2
+  .layout-mirror
     text-align left
     .info,
     .exps,
