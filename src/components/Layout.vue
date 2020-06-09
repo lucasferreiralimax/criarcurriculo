@@ -16,15 +16,9 @@ section.layout
 <script>
 export default {
   name: 'layout',
-  data () {
-    return {
-      layout: 'normal'
-    }
-  },
   mounted () {
-    if(localStorage.getItem('layoutType')) {
-      this.setLayout(localStorage.getItem('layoutType'))
-    }
+    let layoutType = localStorage.getItem('layoutType')
+    if(layoutType) { this.setLayout(layoutType) }
   },
   methods: {
     setLayout (type) {
