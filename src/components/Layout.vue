@@ -2,7 +2,7 @@
 section.layout
   h2 {{ $t('layout.title') }}
   .options
-    button.btn.m-0(type="button" @click="setLayout('')")
+    button.btn.m-0(type="button" @click="setLayout()")
       | {{ $t('layout.default') }}
       .layout-grid.layout-example-1
     button.btn.m-0(type="button" @click="setLayout('layout_1')")
@@ -21,11 +21,20 @@ export default {
       layout: 'normal'
     }
   },
+  mounted () {
+    if(localStorage.getItem('layoutType')) {
+      this.setLayout(localStorage.getItem('layoutType'))
+    }
+  },
   methods: {
     setLayout (type) {
-      // localStorage.setItem('layoutType', type)
+      localStorage.removeItem('layoutType')
       document.querySelector('.view .content').classList = 'content'
-      document.querySelector('.view .content').classList.add(type)
+
+      if(type) {
+        localStorage.setItem('layoutType', type)
+        document.querySelector('.view .content').classList.add(type)
+      }
     }
   }
 }
