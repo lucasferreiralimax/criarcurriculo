@@ -27,6 +27,7 @@ export default {
   methods: {
     handleScroll () {
       this.scrolledTop = window.scrollY > 265
+      this.scrolledBottom = window.scrollY < (document.documentElement.scrollHeight - window.innerHeight - 25)
     }
   }
 }
