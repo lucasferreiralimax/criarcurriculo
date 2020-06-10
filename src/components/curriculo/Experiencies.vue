@@ -15,10 +15,9 @@ draggable(:list="user.exps"
                 translate="exp"
                 v-for="(exp, key) in user.exps")
     template(#action)
-      .right.ml-1
+      .actions
         button.handle.btn.bullet.small.left(type="button" :aria-label="$t('aria-label.exp_remove') + ' ' + exp.experience.name")
           i =
-      .right.ml-1
         button.btn.delete.bullet.small.left(type="button" @click="remove('exps', key)" :aria-label="$t('aria-label.exp_remove') + ' ' + exp.experience.name")
           i -
     .row

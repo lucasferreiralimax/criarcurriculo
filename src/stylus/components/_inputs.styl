@@ -93,12 +93,12 @@ legend
     margin-right .5em
     +tablet()
       width 30px
-  .right
+  .actions
     position absolute
     right 15px
     top calc(50% - 15px)
-    &:nth-of-type(2)
-      right 55px
+    .btn:last-of-type
+      margin-left 10px
 
 +htmlDir()
   legend
@@ -106,6 +106,9 @@ legend
       float right
       margin-left .5em
       margin-right auto
-    .right
+    .actions
       left 15px
       right auto
+      .btn:last-of-type
+        margin-left 0
+        margin-right 10px
