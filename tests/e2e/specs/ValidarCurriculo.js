@@ -61,6 +61,9 @@ describe('Validar Formação Acadêmica', () => {
   it('Sobre', () => {
     cy.get('#GET-courseabout-0').type('Desenvolver aplicação e soluções para ajudar os seres vivos.', {force: true})
   })
+  it('Referência', () => {
+    cy.get('#GET-schoolLink-0').type('https://curriculo-gratis.web.app')
+  })
 })
 
 describe('Validar Experiências', () => {
@@ -81,5 +84,8 @@ describe('Validar Experiências', () => {
   })
   it('Sobre', () => {
     cy.get('#GET-expsabout-0').type('Currículo Grátis', {force: true})
+  })
+  it('Referência', () => {
+    cy.get('#GET-companyLink-0').type('https://curriculo-gratis.web.app')
   })
 })
