@@ -1,0 +1,37 @@
+@import '_color'
+
+.rose
+  btn(color4_rose, color2_rose)
+  background color4_rose url('./assets/bg-rosa.jpg') no-repeat fixed top center
+  background-size cover
+  a
+    color color4_rose !important
+  .nav-menu
+    background linear-gradient(color4_rose, rgba(color4_rose, .6))
+    +tablet()
+      background transparent
+  .menu
+    &:hover span
+      background color4_rose - 15
+    span
+      background color4_rose - 15
+  .mark
+    background rgba(color4_rose, .9)
+    box-shadow 0 0 60px 10px rgba(color5_rose, .6)
+    color color1_rose
+    text-shadow 0 3px color4_rose
+  legend
+    background color4_rose
+    border 1px solid color4_rose - 50
+  .render
+    color color4_rose - 60 !important
+    h1, h2, h3, .date
+      color color5_rose !important
+    svg
+      fill color5_rose !important
+    +printRender()
+      color color4_rose - 60 !important
+      h1, h2, h3, .date
+        color color5_rose !important
+      svg
+        fill color5_rose !important

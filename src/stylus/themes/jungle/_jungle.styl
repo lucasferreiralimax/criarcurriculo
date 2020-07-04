@@ -1,0 +1,45 @@
+@import '_color'
+
+.jungle
+  btn(color4_jungle, color2_jungle)
+  background color4_jungle url('./assets/bg-green.jpg') no-repeat fixed bottom center
+  background-size cover
+  #locale
+    background rgba(color4_jungle, .6)
+    option
+      background #fff
+  a
+    color color4_jungle !important
+  .nav-menu
+    background linear-gradient(color4_jungle, rgba(color4_jungle, .6))
+    +tablet()
+      background transparent
+  .menu
+    &:hover span
+      background color4_jungle - 15
+    span
+      background color4_jungle - 15
+  .mark
+    background rgba(color4_jungle, .9)
+    box-shadow 0 0 60px 10px rgba(color5_jungle, .6)
+    color color1_jungle
+    text-shadow 0 3px color4_jungle
+  legend
+    background color4_jungle
+    border 1px solid color4_jungle - 50
+  .render
+    color color5_jungle !important
+    h1, h2
+      color color4_jungle !important
+    h3, .date
+      color color5_jungle !important
+    svg
+      fill color5_jungle !important
+    +printRender()
+      color color5_jungle !important
+      h1, h2
+        color color4_jungle !important
+      h3, .date
+        color color5_jungle !important
+      svg
+        fill color5_jungle !important
