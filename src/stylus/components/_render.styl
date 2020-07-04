@@ -18,6 +18,7 @@
       position fixed
       left 1em
       top 0
+
 .view
   &.abel,
   &.abel pre
@@ -77,10 +78,11 @@
     margin 1em 0 .5em
   hr
     clear both
-  .coursers .date
-  .experiencies .date
-    font-weight bold
-    margin-top 5px
+  .coursers,
+  .experiencies
+    .date
+      font-weight bold
+      margin-top 5px
   .info
     margin-bottom 20px
     min-height 157px
@@ -157,6 +159,7 @@
       width calc(100% - 1em)
     +ultrawide()
       max-width 70%
+
 +htmlDir()
   .render
     label
@@ -172,23 +175,23 @@
       &.viewfixed
         right auto
         left 1em
+
   .view
     .info.photo
       padding-left 0
       padding-right 120px
     .contact-info
       float right
-    label[for="GET-about"],
-    .cademy,
     .exps,
-    .hobby
+    .hobby,
+    .cademy,
+    label[for="GET-about"]
       clear both
-    .hobby
-      li
-        margin-right 0
-        margin-left 5px
-        &:last-of-type
-          margin-left 0
+    .hobby li
+      margin-right 0
+      margin-left 5px
+      &:last-of-type
+        margin-left 0
     .icon-location,
     .icon-date,
     .icon-user

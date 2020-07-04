@@ -18,35 +18,43 @@ input, textarea, select
     width auto
   &.el-input__inner
     margin 0
+
 .el-date-editor
   margin 1em auto 0
+
 +htmlDir()
   input, textarea, select
     &[type="radio"],
     &[type="checkbox"]
       margin-right 0
       margin-left 1em
+
 textarea
   resize vertical
+
 input[type="file"]
   padding .8em
+
 select
   padding .96em
-label,
-select,
+
+label, select,
 input[type="file"],
 input[type="radio"],
 input[type="checkbox"]
   cursor pointer
   user-select none
+
 .radio
   position: relative
+
 label, legend, .radio > p:not(.error-msg)
   border-bottom 1px solid rgba(#fff, .3)
   box-sizing border-box
   display block
   padding .77em
   transition .3s background
+
 label
   position: relative
   &:hover,
@@ -62,6 +70,7 @@ label
       box-shadow 0 0 0 2px rgba(#000, .2)
       &[type="radio"]
         box-shadow none
+
 legend
   background rgba(color4, 1)
   border 1px solid color4 - 50

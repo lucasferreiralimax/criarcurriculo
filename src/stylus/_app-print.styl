@@ -5,24 +5,27 @@
     box-shadow none !important
     filter none !important
     text-shadow none !important
+
   body
     &:before
       display none
-  header,
-  .footer,
-  .header,
-  .mark,
+
   #curriculo,
+  header,
+  .header,
   .btn,
+  .mark,
   .notice,
   .accounts,
-  .layout
+  .layout,
+  .footer
     display none !important
     opacity 0 !important
+
   .viewblocked
     opacity 1 !important
-  .render,
-  .view
+
+  .render, .view
     bottom 0 !important
     left 0 !important
     right 0 !important
@@ -33,6 +36,8 @@
     *
       display block
     svg
+      display inline
+    span
       display inline
     .content
       bottom 0 !important
@@ -48,5 +53,3 @@
       top 0 !important
       transform scale(1) !important
       width 100% !important
-    span
-      display inline

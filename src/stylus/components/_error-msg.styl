@@ -1,17 +1,22 @@
 input, select
   &.error
     box-shadow: 0 0 0 2px rgba(red + 50, .5), 0 0 20px 2px rgba(red + 50, .5)
-.radio.error label
-  background rgba(#fff, .5)
-  box-shadow inset 0 0 20px 2px rgba(red + 50, .2), 0 0 0 2px rgba(red + 50, .2), 0 0 20px 2px rgba(red + 50, .2)
-.radio label:hover
-  background #fff
-  box-shadow none
-.radio .error-msg
-  bottom -17px
-  left 3px
+
+.radio
+  &.error label
+    background rgba(#fff, .5)
+    box-shadow inset 0 0 20px 2px rgba(red + 50, .2), 0 0 0 2px rgba(red + 50, .2), 0 0 20px 2px rgba(red + 50, .2)
+  label
+    &:hover
+      background #fff
+      box-shadow none
+  .error-msg
+    bottom -17px
+    left 3px
+
 .input__contato .error-msg
   bottom: 0
+
 .error-msg
   background red + 50
   border-radius 5px
