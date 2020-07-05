@@ -40,7 +40,7 @@ export default {
 </script>
 <style lang="stylus">
 .colab
-  margin 0 auto
+  margin 0 auto 2em
   +ultrawide()
     max-width 50%
   .flexbox
@@ -56,25 +56,25 @@ export default {
     display inline-flex
     flex-direction column
     flex-wrap wrap
-    height 230px
     justify-content center
-    margin 0 1em 1em 0
+    margin .5em
+    padding 2.5em .5em 1.5em
     text-shadow none
     transition .3s all
-    width 230px
     &:hover
       box-shadow 0 0 0 5px rgba(#fff, .5), 0 0 5px 10px rgba(#fff, .5)
       img
-        transform scale(1.3)
+        transform scale(1.1)
     figure
-      width 200px
+      width 300px
     figcaption
       color #000
     img
-      border-radius 50%
+      border-radius 10%
       box-shadow 0 0 0 3px rgba(#fff, .8), 0 0 20px 10px rgba(color2, 1)
       transition .7s all
-      width 30%
+      width 50%
+      margin-bottom .5em
 .contributor__score
   color color2 - 100
   .icon

@@ -54,14 +54,12 @@
     text-shadow 0 2px 2px rgba(#000,.6)
     transition 2s all
   svg
-    margin-top 20px
     transition 2s all
   &.curriculo
     clear both
     display block
     width 50%
-    margin 0 auto
-    margin-bottom 10px
+    margin 25px auto
     position relative
     transition .5s all
     pointer-events all

@@ -58,6 +58,10 @@ export default {
   transform translate(150vw)
   transition all .35s
   z-index 991
+  &:after
+    content ''
+    display table
+    clear both
   &.active
     filter blur(0px)
     transform translate(0)
