@@ -19,12 +19,12 @@ label.btn.theme_app(for="theme_app" :class="{ 'active' : isTheme}")
   transition(name="fade")
     select#theme_app(v-model="selectedTheme" @input.stop.passive="updateThemeApp($event)" v-if="isTheme")
       option(value="default") {{ $t('themes.default')}}
-      option(value="rose") {{ $t('themes.rose')}}
-      option(value="jungle") {{ $t('themes.jungle')}}
-      option(value="grey") {{ $t('themes.grey')}}
       option(value="classic") {{ $t('themes.classic')}}
-      option(value="gold") {{ $t('themes.gold')}}
       option(value="full") {{ $t('themes.full')}}
+      option(value="gold") {{ $t('themes.gold')}}
+      option(value="grey") {{ $t('themes.grey')}}
+      option(value="jungle") {{ $t('themes.jungle')}}
+      option(value="rose") {{ $t('themes.rose')}}
 </template>
 
 <script>
