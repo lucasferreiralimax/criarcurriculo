@@ -32,14 +32,13 @@
   pointer-events none
   &.home
     +tablet()
+      padding 20px 0 50px
       width 50%
       float right
       clear both
     +ultrawide()
       width 100%
       max-width 65%
-  +tablet()
-    padding 20px 0 50px
 .credits
   color #fff
   cursor pointer
