@@ -60,7 +60,7 @@ export default {
   &:hover
     animation .5s scroll_top infinite alternate
   &.center
-    left calc(50% - 50px)
+    left calc(50% - 52px)
 .scroll-bottom
   left calc(50% + 30px)
   transform rotate(180deg) translateX(50%)
