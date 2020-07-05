@@ -15,7 +15,9 @@ export default new Vuex.Store({
       state.accounts = value
     },
     insertAcccount (state, value) {
-      state.accounts.push(value)
+      value.s_lang == 'pt-BR' ?
+        state.accounts.unshift(value) :
+        state.accounts.push(value)
     },
     updateUser (state, value) {
       state.user = value
