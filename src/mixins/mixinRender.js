@@ -1,4 +1,5 @@
 import { mapState } from 'vuex'
+import { user } from '../user'
 
 export const mixinRender = {
   computed: mapState({
@@ -51,31 +52,6 @@ export const mixinRender = {
       this.$store.commit('updateErrors', this.errors)
     },
     resetForm () {
-      let user = {
-        name: '',
-        photo: '',
-        age: null,
-        countrystatus: '',
-        cep: null,
-        end: {
-          localidade: '',
-          logradouro: '',
-          complemento: '',
-          uf: '',
-          bairro: '',
-          cep: ''
-        },
-        maritalstatus: '',
-        addressNumber: null,
-        travel: false,
-        about: null,
-        genero: '',
-        telephones: [],
-        emails: [],
-        sites: [],
-        exps: [],
-        coursers: []
-      }
       if(window.confirm("Tem certeza?")) {
         this.$store.commit('updateUser', user)
         this.$store.commit('updateErrors', [])

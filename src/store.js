@@ -1,37 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import { user } from './user'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
     accounts: [],
-    user: {
-      name: '',
-      photo: '',
-      age: null,
-      countrystatus: '',
-      cep: null,
-      end: {
-        localidade: '',
-        logradouro: '',
-        complemento: '',
-        uf: '',
-        bairro: '',
-        cep: ''
-      },
-      maritalstatus: '',
-      addressNumber: null,
-      travel: false,
-      about: null,
-      genero: '',
-      hobbies: ['Ajudar'],
-      telephones: [],
-      emails: [],
-      sites: [],
-      exps: [],
-      coursers: []
-    },
+    user: user,
     errors: []
   },
   mutations: {
