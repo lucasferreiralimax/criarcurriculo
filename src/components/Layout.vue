@@ -63,6 +63,7 @@ export default {
     color #fff
     font-size 1em
     margin-bottom 1em
+    text-shadow 0 2px 1px rgba(0,0,0,0.4)
   .options
     display grid
     grid-template-columns repeat(3, 1fr)
