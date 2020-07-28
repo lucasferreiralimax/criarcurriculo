@@ -37,10 +37,12 @@ export default {
 
 <style lang="stylus">
 .carousel
-  margin-top 2em
+  margin 2em auto 0
   display none
   +tablet()
     display block
+  +desktop()
+    max-width 50%
   .el-carousel__arrow
     background #fff
     color #000

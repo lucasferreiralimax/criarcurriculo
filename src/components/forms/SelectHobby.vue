@@ -29,12 +29,10 @@ export default {
       this.dynamicTags.splice(this.dynamicTags.indexOf(tag), 1)
       this.updateVuex('updateHobbies', this.dynamicTags)
     },
-
     showInput() {
       this.inputVisible = true;
       this.$nextTick(() => this.$refs.saveTagInput.$refs.input.focus());
     },
-
     handleInputConfirm() {
       let inputValue = this.inputValue;
       if ( !this.dynamicTags.includes(inputValue) && inputValue ) {
