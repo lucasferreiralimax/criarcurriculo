@@ -4,8 +4,6 @@
   btn(color4_grey, color2_grey)
   background color4_grey url('./assets/bg-grey.jpg') no-repeat fixed top center
   background-size cover
-  a
-    color color4_grey !important
   .nav-menu
     background linear-gradient(color4_grey, rgba(color4_grey, .6))
     +tablet()
@@ -20,6 +18,8 @@
     box-shadow 0 0 60px 10px rgba(color5_grey, .6)
     color color1_grey
     text-shadow 0 3px color4_grey
+  .user-banner
+    filter grayscale(1)
   legend
     background color4_grey
     border 1px solid color4_grey - 50

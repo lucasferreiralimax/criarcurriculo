@@ -41,13 +41,14 @@ export default {
   display none
   +tablet()
     display block
-  +desktop()
-    max-width 50%
   .el-carousel__arrow
     background #fff
     color #000
 .carousel-item
   border-radius 10px
+  h2
+    color #fff
+    font-size 1.5em !important
   &.help,
   &.colab
     background #fff

@@ -1,6 +1,7 @@
 <template lang="pug">
 // Form get the data info person
 form#curriculo(:class="{ renderActive: user.name}")
+  slot
   // Box Personal
   box-curriculo(title="true" type="personal" translate="h1")
     .row

@@ -41,8 +41,6 @@ export default {
 <style lang="stylus">
 .colab
   margin 0 auto 2em
-  +ultrawide()
-    max-width 50%
   .flexbox
     align-items center
     display flex

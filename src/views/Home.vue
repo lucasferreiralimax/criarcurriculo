@@ -1,14 +1,17 @@
 <template lang="pug">
   section.home.content
-    .mark.text-center
-      h2 {{ $t('view.home.text1') }}
-      h2#start {{ $t('view.home.text2') }}
+    .mark.center
+      figure.user-banner
+        img(src="../assets/banner.png" alt="User banner")
+      div
+        h2 {{ $t('view.home.text1') }}
+        h2#start {{ $t('view.home.text2') }}
     .container
       form-curriculo
-      render
-      actions-curriculo
         font-select
         layout-app
+      render
+      actions-curriculo
         accounts
 </template>
 
@@ -32,3 +35,20 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus">
+.user-banner
+  float left
+  width 100%
+  display flex
+  justify-content center
+  +tablet()
+    width auto
+    margin-right 2em
+.center
+  text-align center
+  +tablet()
+    display flex
+    justify-content center
+    align-items center
+</style>

@@ -73,9 +73,10 @@ export default {
   display block
   pointer-events all
   position absolute
-  left 10px
-  top 10px
+  left 20px
+  bottom -75px
   z-index 99
   +tablet()
     position fixed
+    bottom 20px
 </style>
