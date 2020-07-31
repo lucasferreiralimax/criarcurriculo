@@ -60,7 +60,7 @@ export default {
     text-shadow none
     transition .3s all
     &:hover
-      box-shadow 0 0 0 5px rgba(#fff, .5), 0 0 5px 10px rgba(#fff, .5)
+      box-shadow 0 0 0 5px rgba(#fff, .5), 0 0 0 10px rgba(#fff, .5)
       img
         transform scale(1.1)
     figure
@@ -69,7 +69,7 @@ export default {
       color #000
     img
       border-radius 10%
-      box-shadow 0 0 0 3px rgba(#fff, .8), 0 0 20px 10px rgba(color2, 1)
+      box-shadow 0 0 0 6px rgba(#fff, .8), 0 0 0 10px rgba(color2, .5)
       transition .7s all
       width 50%
       margin-bottom .5em
