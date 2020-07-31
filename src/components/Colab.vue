@@ -49,7 +49,7 @@ export default {
   .people
     align-items center
     background #fff
-    border-radius 10px
+    border-radius 20px
     cursor pointer
     display inline-flex
     flex-direction column

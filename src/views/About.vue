@@ -45,7 +45,7 @@ export default {
     background #fff
     color #000
 .carousel-item
-  border-radius 10px
+  border-radius 20px
   h2
     color #fff
     font-size 1.5em !important

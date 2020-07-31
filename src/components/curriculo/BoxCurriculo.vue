@@ -30,7 +30,7 @@ export default {
   mixins: [mixinUpdateStore],
   data () {
     return {
-      box_collapse: false
+      box_collapse: true
     }
   },
   methods: { boxCollapse() { this.box_collapse = !this.box_collapse } }
@@ -39,8 +39,8 @@ export default {
 <style lang="stylus">
 .box
   background rgba(#eee, .8)
-  border-radius 6px
-  box-shadow 0 0 0 1px rgba(#fff, .2), 0 0 10px rgba(#000, .3)
+  border-radius 15px
+  // box-shadow 0 0 0 1px rgba(#fff, .2), 0 0 10px rgba(#000, .3)
   margin-bottom 1em
   max-width 100%
   overflow hidden
@@ -53,7 +53,7 @@ export default {
     legend *
       display block
     legend
-      border-radius 6px
+      border-radius 15px
   .row
     display flex
     flex-direction row

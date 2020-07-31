@@ -138,7 +138,7 @@ article.hitech
 .credits_logo
   align-items center
   background #fff
-  border-radius 10px
+  border-radius 20px
   color #000
   display inline-flex
   flex-direction column

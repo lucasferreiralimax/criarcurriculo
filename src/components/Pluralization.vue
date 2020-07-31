@@ -80,7 +80,7 @@ export default {
     background transparent
     svg
       animation world 2s infinite linear
-      filter drop-shadow(0 0 2px #000) drop-shadow(0 0 8px #000)
+      // filter drop-shadow(0 0 2px #000) drop-shadow(0 0 8px #000)
   svg
     margin-left 10px
     transition 2s all
