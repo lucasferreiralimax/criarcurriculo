@@ -47,6 +47,7 @@ export default {
       this.clearBody()
       localStorage.setItem('theme_app', JSON.stringify(e.target.value))
       document.querySelector('body').classList.add(e.target.value)
+      this.openThemeApp()
     },
     setThemeApp () {
       let theme = localStorage.getItem('theme_app')
