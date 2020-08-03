@@ -8,10 +8,10 @@
         h2#start {{ $t('view.home.text2') }}
     .container
       form-curriculo
-        font-select
-        layout-app
       render
       actions-curriculo
+        font-select
+        layout-app
         accounts
 </template>
 
