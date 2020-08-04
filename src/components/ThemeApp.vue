@@ -52,6 +52,16 @@ export default {
     },
     setThemeApp () {
       let theme = localStorage.getItem('theme_app')
+      let temaUrl = window.location.search
+
+      if(/tema/.test(temaUrl)) {
+        let temaRegex = temaUrl.match(/(tema=)([\w._-]+)?/ig)
+        let temaValor = temaRegex[0].split('=')
+        this.$store.commit("updateTheme", temaValor[1])
+        this.selectedTheme = temaValor[1]
+        document.querySelector('body').classList.add(temaValor[1])
+        localStorage.setItem('theme_app', temaValor[1])
+      }
 
       if(!theme) {
         this.clearBody()
