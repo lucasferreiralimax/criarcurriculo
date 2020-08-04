@@ -47,7 +47,7 @@ export default {
         }
       }
 
-      if(event.srcElement) {
+      if(event) {
         this.cleanBtns()
         let actived = event.srcElement.querySelector('.layout-grid').classList[1]
         document.querySelector(`.${actived}`).parentElement.classList.toggle('actived')

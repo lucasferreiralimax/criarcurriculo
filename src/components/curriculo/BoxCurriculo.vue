@@ -52,8 +52,6 @@ export default {
     legend,
     legend *
       display block
-    legend
-      border-radius 15px
   .row
     display flex
     flex-direction row

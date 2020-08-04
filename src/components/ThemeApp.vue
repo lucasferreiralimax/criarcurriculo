@@ -37,7 +37,7 @@ export default {
   data () {
     return {
       isTheme: false,
-      selectedTheme: ''
+      selectedTheme: 'default'
     }
   },
   methods: {
@@ -47,6 +47,7 @@ export default {
       this.clearBody()
       localStorage.setItem('theme_app', JSON.stringify(e.target.value))
       document.querySelector('body').classList.add(e.target.value)
+      this.$store.commit("updateTheme", e.target.value)
       this.openThemeApp()
     },
     setThemeApp () {
@@ -54,12 +55,14 @@ export default {
 
       if(!theme) {
         this.clearBody()
+        this.$store.commit("updateTheme", 'default')
         this.selectedTheme = 'default'
         document.querySelector('body').classList.add('default')
         localStorage.setItem('theme_app', 'default')
       } else {
         this.clearBody()
         theme = theme.replace(/"/g, "")
+        this.$store.commit("updateTheme", theme)
         this.selectedTheme = theme
         document.querySelector('body').classList.add(theme)
       }

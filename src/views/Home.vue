@@ -2,7 +2,8 @@
   section.home.content
     .mark.center
       figure.user-banner
-        img(src="../assets/banner.png" alt="User banner")
+        img(v-if="theme_app !== 'rose' && theme_app !== 'classic' && theme_app !== 'gold'" src="../assets/banner_boy.svg" alt="User banner")
+        img(v-else src="../assets/banner_girl.svg" alt="User banner")
       div
         h2 {{ $t('view.home.text1') }}
         h2#start {{ $t('view.home.text2') }}
@@ -16,6 +17,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 import FormCurriculo from '@/components/curriculo/FormCurriculo'
 import ActionsCurriculo from '@/components/curriculo/ActionsCurriculo'
 import Render from '@/components/curriculo/Render'
@@ -25,6 +28,7 @@ import Accounts from '@/components/Accounts'
 
 export default {
   name: 'home',
+  computed: mapState({ theme_app: state => state.theme_app }),
   components: {
     FormCurriculo,
     ActionsCurriculo,
@@ -42,6 +46,8 @@ export default {
   width 100%
   display flex
   justify-content center
+  img
+    width 100%
   +tablet()
     width auto
     margin-right 2em
