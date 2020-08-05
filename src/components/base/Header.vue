@@ -50,6 +50,6 @@ header
     border-radius 100px
   +desktop()
     max-width 70%
-    margin 2em auto
-    padding 0
+    margin 0 auto
+    padding 2em 0
 </style>
