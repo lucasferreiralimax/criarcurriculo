@@ -21,7 +21,10 @@ export default {
     }
   },
   methods: {
-    clearRender () { document.querySelector('.view').classList = "view" },
+    clearRender () {
+      document.querySelector('.view').classList = "view"
+      document.querySelector('.fontSelect').classList = "btn fontSelect"
+    },
     setFont () {
       let font = localStorage.getItem('fontSelect');
       !font ? localStorage.setItem('fontSelect', 'normal') : this.fonttype = font;
@@ -32,6 +35,7 @@ export default {
       this.clearRender()
       localStorage.setItem('fontSelect', val)
       document.querySelector('.view').classList.add(val)
+      document.querySelector('.fontSelect').classList.add(val)
     }
   }
 }
@@ -45,4 +49,12 @@ export default {
   z-index 9
   &.btn select
     width 100%
+  &.abel select
+    font-family 'Abel', sans-serif
+  &.play select
+    font-family 'Play', sans-serif
+  &.kaushan select
+    font-family 'Macondo Swash Caps', sans-serif
+  &.rajdhani select
+    font-family 'Rajdhani', sans-serif
 </style>
