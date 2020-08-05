@@ -4,7 +4,6 @@ label.btn.fontSelect(for="fonttype")
     option(value="normal") Normal
     option(value="abel") Abel
     option(value="play") Play
-    option(value="kaushan") Kaushan
     option(value="rajdhani") Rajdhani
   i.icon
     svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 573.852 573.852" width="29" height="29" fill="#fff")
@@ -53,8 +52,6 @@ export default {
     font-family 'Abel', sans-serif
   &.play select
     font-family 'Play', sans-serif
-  &.kaushan select
-    font-family 'Macondo Swash Caps', sans-serif
   &.rajdhani select
     font-family 'Rajdhani', sans-serif
 </style>
