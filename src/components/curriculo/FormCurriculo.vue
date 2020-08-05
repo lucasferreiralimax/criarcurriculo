@@ -58,6 +58,7 @@ form#curriculo(:class="{ renderActive: user.name}")
   coursers(:errors="errors")
   // Experiencies
   experiencies(:errors="errors")
+  notification-alert
 </template>
 
 <script>
@@ -77,6 +78,7 @@ import SelectMaritals from '@/components/forms/SelectMaritals'
 import SelectHobby from '@/components/forms/SelectHobby'
 import SelectTravel from '@/components/forms/SelectTravel'
 import TextareaApp from '@/components/forms/TextareaApp'
+import NotificationAlert from '@/components/NotificationAlert'
 
 export default {
   name: 'form-curriculo',
@@ -87,7 +89,7 @@ export default {
     Coursers, Experiencies,
     InputApp, InputCep, InputCrud, InputPhoto,
     SelectCountry, SelectGenre, SelectMaritals, SelectHobby, SelectTravel,
-    TextareaApp
+    TextareaApp, NotificationAlert
   },
   created () {
     this.setLocalStore()
