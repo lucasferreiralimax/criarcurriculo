@@ -61,6 +61,10 @@ export default {
     align-items center
   &.github
     background url('../assets/bg-grey.jpg')
+    svg
+      transform translateY(-10px)
+    path
+      fill #fff
     a
       color #fff
   &.help
