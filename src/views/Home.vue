@@ -49,7 +49,7 @@ export default {
   img
     width 100%
   +tablet()
-    width auto
+    width 330px
     margin-right 2em
 .center
   text-align center

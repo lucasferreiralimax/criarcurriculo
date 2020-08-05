@@ -40,7 +40,6 @@ export default {
 .box
   background rgba(#eee, .8)
   border-radius 15px
-  // box-shadow 0 0 0 1px rgba(#fff, .2), 0 0 10px rgba(#000, .3)
   margin-bottom 1em
   max-width 100%
   overflow hidden
@@ -51,13 +50,15 @@ export default {
       display none
     legend,
     legend *
-      display block
+      display inline-block
   .row
     display flex
     flex-direction row
     flex-wrap wrap
-    > label:first-of-type
-      border-right 1px solid rgba(#fff, .3)
+    > label
+      border-top 1px solid rgba(255,255,255,0.3)
+      &:first-of-type
+        border-right 1px solid rgba(#fff, .3)
     > label, div
       width 100%
     [for="GET-dataofbirth"],

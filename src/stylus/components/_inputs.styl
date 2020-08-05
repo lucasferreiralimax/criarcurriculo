@@ -17,7 +17,10 @@ input, textarea, select
     min-width auto
     width auto
   &.el-input__inner
+    padding 25px 0
     margin 0
+    border-radius 15px
+    color #aaa
 
 .el-date-editor
   margin 1em auto 0
@@ -49,7 +52,6 @@ input[type="checkbox"]
   position: relative
 
 label, legend, .radio > p:not(.error-msg)
-  // border-bottom 1px solid rgba(#fff, .3)
   box-sizing border-box
   display block
   padding .77em
@@ -60,7 +62,7 @@ label
   &:hover,
   &.active
     background rgba(#fff, .9)
-    input, textarea, select
+    input, textarea, select, .photo
       box-shadow 0 0 0 4px rgba(#000, .2)
       &[type="radio"]
         box-shadow none
@@ -73,9 +75,6 @@ label
 
 legend
   background rgba(color2, 1)
-  // border 1px solid color4 - 50
-  // border-radius 6px 6px 0 0
-  // box-shadow inset 0 2px rgba(#fff, .2), inset 0 -2px 4px rgba(#000, .1), 0 3px 15px rgba(#000, .3)
   color color4
   font-size 1em
   position relative
@@ -90,14 +89,12 @@ legend
     display block
     left 5px
     position relative
-    // text-shadow 0 2px 1px rgba(#000, .4)
     top 4px
     width calc(100% - 90px)
     +tablet()
       top 7px
   .icon
     fill color4
-    // filter drop-shadow(0 2px 1px rgba(#000, .4))
     float left
     margin-right .5em
     +tablet()
@@ -106,8 +103,11 @@ legend
     position absolute
     right 15px
     top calc(50% - 15px)
-    .btn:last-of-type
-      margin-left 10px
+    .btn
+      &:last-of-type
+        margin-left 10px
+      svg
+        transform translateY(-3px)
 
 +htmlDir()
   legend

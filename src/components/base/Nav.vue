@@ -108,6 +108,7 @@ export default {
         border-radius 0 6px 6px 0
       &.router-link-exact-active
         color color2
+        background transparent
         &:hover
           color color2
         svg, path, circle

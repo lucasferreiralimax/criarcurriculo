@@ -10,7 +10,9 @@ section.accounts(v-if="accounts.length !== 0")
       flag.flag.handle(:type="account.s_lang")
       span.name {{ account.s_name }}
       span.date {{ account.s_time }}
-      button(@click="removeAccount(key, account.s_local)" class="btn delete bullet small right" type="button" :aria-label="$t('aria-label.remove_account') + ' ' + account.s_name + ' ' + account.s_lang") X
+      button(@click="removeAccount(key, account.s_local)" class="btn delete bullet small right" type="button" :aria-label="$t('aria-label.remove_account') + ' ' + account.s_name + ' ' + account.s_lang")
+        svg(viewBox="0 0 329.269 329" xmlns="http://www.w3.org/2000/svg")
+          path(d="M194.8 164.77L323.013 36.555c8.343-8.34 8.343-21.825 0-30.164-8.34-8.34-21.825-8.34-30.164 0L164.633 134.605 36.422 6.391c-8.344-8.34-21.824-8.34-30.164 0-8.344 8.34-8.344 21.824 0 30.164l128.21 128.215L6.259 292.984c-8.344 8.34-8.344 21.825 0 30.164a21.266 21.266 0 0015.082 6.25c5.46 0 10.922-2.09 15.082-6.25l128.21-128.214 128.216 128.214a21.273 21.273 0 0015.082 6.25c5.46 0 10.922-2.09 15.082-6.25 8.343-8.34 8.343-21.824 0-30.164zm0 0")
 </template>
 
 <script>
@@ -85,6 +87,9 @@ export default {
     span,
     button
       display inline-block
+  .btn svg
+    margin-right 0
+    height 15px
 +htmlDir()
   .accounts
     p
