@@ -4,8 +4,8 @@
   btn(color4_rose, color2_rose)
   background color4_rose url('./assets/bg-rosa.jpg') no-repeat fixed top center
   background-size cover
-  a
-    color color4_rose !important
+  #app
+    background linear-gradient(color5_rose, transparent)
   .nav-menu
     background linear-gradient(color4_rose, rgba(color4_rose, .6))
     +tablet()
@@ -17,12 +17,15 @@
       background color4_rose - 15
   .mark
     background rgba(color4_rose, .9)
-    box-shadow 0 0 60px 10px rgba(color5_rose, .6)
     color color1_rose
     text-shadow 0 3px color4_rose
+  .user-banner
+    filter hue-rotate(88deg)
   legend
     background color4_rose
-    border 1px solid color4_rose - 50
+    color #fff
+    svg
+      fill #fff
   .render
     color color4_rose - 60 !important
     h1, h2, h3, .date

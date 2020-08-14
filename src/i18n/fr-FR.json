@@ -27,7 +27,10 @@
       "colab": "Collaborateurs",
       "work": "Fait avec du coeur",
       "contributions": "contributions",
-      "contribution": "contribution"
+      "contribution": "contribution",
+      "slide1": "Collaborer sur Github",
+      "slide2": "Aider les gens avec la technologie",
+      "slide3": "Collaborez aussi"
     },
     "notfound": {
       "text1": "La page n'existe pas encore",
@@ -41,6 +44,7 @@
     "name": "Nom complet",
     "photo": "Photo",
     "photo_button": "Mettre photo",
+    "photo_button-trade": "Changer la photo",
     "name_place": "Remplissez votre nom complet...",
     "genre": "Genre",
     "marital_status": "État civil",
@@ -105,11 +109,14 @@
     "activities_place": "Activités du service...",
     "link": "Référence",
     "link_place": "Référence ou lien...",
+    "choice": "Êtes-vous sûr?",
     "errors": {
+      "attention": "Attention",
       "name": "Vous devez remplir votre nom.",
       "genre": "Vous devez choisir un genre..",
       "maritals": "Vous devez choisir un état civil.",
       "age": "Doit remplir avec votre âge.",
+      "age-min": "Le travail des enfants est strictement interdit jusqu'à l'âge de 14 ans.",
       "about": "Vous devez remplir quelque chose sur vous-même, vos objectifs et vos capacités.",
       "zip": "Vous devez remplir le champ code postal",
       "end": "Vous devez remplir le champ d'adresse.",
@@ -163,7 +170,8 @@
     "full": "Noir complet"
   },
   "layout": {
-    "title": "Disposition",
+    "title": "Choisissez un format pour la mise en page",
+    "title_font": "Choisissez une police pour la lettre",
     "default": "Standard",
     "circle": "Circulaire",
     "mirror": "Miroir"

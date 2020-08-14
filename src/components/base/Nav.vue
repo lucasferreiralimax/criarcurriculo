@@ -58,6 +58,7 @@ export default {
   transform translate(150vw)
   transition all .35s
   z-index 991
+  float left
   &:after
     content ''
     display table
@@ -80,15 +81,24 @@ export default {
   +tablet()
     background transparent
     filter blur(0px)
-    margin 0  auto
     position relative
     transform translate(0)
-    width 80%
+    padding 0
     .btn
       border-radius 0
+      color #fff
       float left
+      background transparent
+      border 0
+      box-shadow none
       margin 0
-      width 33.3%
+      text-shadow 0 2px 1px rgba(#000, .3)
+      font-size 0.9em
+      font-weight 400
+      padding 1.2em 0.5em
+      &:hover,
+      &:active
+        background transparent
       &:first-of-type
         border-radius 6px 0 0 6px
       &:first-of-type,
@@ -96,8 +106,21 @@ export default {
         border-right 0
       &:last-of-type
         border-radius 0 6px 6px 0
+      &.router-link-exact-active
+        color color2
+        background transparent
+        &:hover
+          color color2
+        svg, path, circle
+          fill color2
+      svg, path, circle
+        fill #fff
   +desktop()
-    width 50%
+    width 60%
+    .btn
+      font-size 1.2em
+      font-weight 400
+      padding 1em
 .menu
   height 50px
   right 10px

@@ -30,6 +30,12 @@ export default {
       HTTP.get()
       .then(response => {
         this.contributors = response.data
+        this.contributors.push({
+          avatar_url: 'https://media-exp1.licdn.com/dms/image/C4D03AQH76qstMKmYDA/profile-displayphoto-shrink_200_200/0?e=1602115200&v=beta&t=ynlnhNvAw0A8qNpGivS-pQaOSs3nIsoW4rEDy__UvPQ',
+          login: 'Denise Monteiro',
+          contributions: 1,
+          html_url: 'https://www.denimon.info'
+        })
       })
       .catch(e => {
         this.errors.push(e)
@@ -41,8 +47,6 @@ export default {
 <style lang="stylus">
 .colab
   margin 0 auto 2em
-  +ultrawide()
-    max-width 50%
   .flexbox
     align-items center
     display flex
@@ -51,7 +55,7 @@ export default {
   .people
     align-items center
     background #fff
-    border-radius 10px
+    border-radius 20px
     cursor pointer
     display inline-flex
     flex-direction column
@@ -62,7 +66,7 @@ export default {
     text-shadow none
     transition .3s all
     &:hover
-      box-shadow 0 0 0 5px rgba(#fff, .5), 0 0 5px 10px rgba(#fff, .5)
+      box-shadow 0 0 0 5px rgba(#fff, .5), 0 0 0 10px rgba(#fff, .5)
       img
         transform scale(1.1)
     figure
@@ -71,7 +75,7 @@ export default {
       color #000
     img
       border-radius 10%
-      box-shadow 0 0 0 3px rgba(#fff, .8), 0 0 20px 10px rgba(color2, 1)
+      box-shadow 0 0 0 6px rgba(#fff, .8), 0 0 0 10px rgba(color2, .5)
       transition .7s all
       width 50%
       margin-bottom .5em

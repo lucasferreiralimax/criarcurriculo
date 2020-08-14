@@ -4,6 +4,7 @@
   img(v-if="type == 'ar-SA'" src="./../assets/flags/sa.svg" alt="Arábia" width="30")
   img(v-if="type == 'en-US'" src="./../assets/flags/us.svg" alt="United States" width="30")
   img(v-if="type == 'es-ES'" src="./../assets/flags/es.svg" alt="Spain" width="30")
+  img(v-if="type == 'es-CA'" src="./../assets/flags/ca.svg" alt="Català" width="30")
   img(v-if="type == 'ru-RU'" src="./../assets/flags/ru.svg" alt="Russia" width="30")
   img(v-if="type == 'in-ID'" src="./../assets/flags/in.svg" alt="India" width="30")
   img(v-if="type == 'ja-JP'" src="./../assets/flags/jp.svg" alt="Japan" width="30")

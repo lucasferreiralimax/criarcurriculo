@@ -27,7 +27,10 @@
       "colab": "Medewerkers",
       "work": "Gemaakt met hart",
       "contributions": "bijdragen",
-      "contribution": "bijdrage"
+      "contribution": "bijdrage",
+      "slide1": "Samenwerken aan Github",
+      "slide2": "Mensen helpen met technologie",
+      "slide3": "Ook samenwerken"
     },
     "notfound": {
       "text1": "Pagina bestaat nog niet",
@@ -41,6 +44,7 @@
     "name": "Volledige naam",
     "photo": "Foto",
     "photo_button": "Foto invoegen",
+    "photo_button-trade": "Verander foto",
     "name_place": "Vul uw volledige naam in...",
     "genre": "Genre",
     "marital_status": "Burgerlijke staat",
@@ -105,11 +109,14 @@
     "activities_place": "Activiteiten van de service...",
     "link": "Referentie",
     "link_place": "Referentie of link...",
+    "choice": "Weet je het zeker?",
     "errors": {
+      "attention": "Aandacht",
       "name": "U moet een naam invullen.",
       "genre": "U moet een genre kiezen.",
       "maritals": "U moet een burgerlijke staat kiezen.",
       "age": "Moet invullen met uw leeftijd",
+      "age-min": "Kinderarbeid is ten strengste verboden tot de leeftijd van 14 jaar.",
       "about": "Het moet vullen met iets over jou, je doelen en mogelijkheden.",
       "zip": "U moet het postcode veld invullen.",
       "end": "U moet het adresveld invullen.",
@@ -163,7 +170,8 @@
     "full": "Volledig zwart"
   },
   "layout": {
-    "title": "Indeling",
+    "title": "Kies een indeling voor de lay-out",
+    "title_font": "Kies een lettertype voor de letter",
     "default": "Standaard",
     "circle": "Cirkel",
     "mirror": "Speil"

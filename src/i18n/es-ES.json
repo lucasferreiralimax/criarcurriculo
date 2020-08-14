@@ -27,7 +27,10 @@
       "colab": "Empleados",
       "work": "Hecho con Corazón",
       "contributions": "contribuciones",
-      "contribution": "contribución"
+      "contribution": "contribución",
+      "slide1": "Colabore en Github",
+      "slide2": "Ayudando las personas con la tecnología",
+      "slide3": "Colabore también"
     },
     "notfound": {
       "text1": "Página aún no existe",
@@ -41,6 +44,7 @@
     "name": "Nombre completo",
     "photo": "Foto",
     "photo_button": "Poner foto",
+    "photo_button-trade": "Cambiar foto",
     "name_place": "Rellene con su nombre completo...",
     "genre": "Género",
     "marital_status": "Estado civil",
@@ -65,7 +69,7 @@
     "end": "Dirección",
     "end_place": "Nombre de la calle o avenida...",
     "number": "Número",
-    "number_place": "Número do casa...",
+    "number_place": "Número de casa...",
     "city": "Ciudad",
     "city_place": "Nombre de su ciudad actual...",
     "travel": "Disponibilidade para viagens",
@@ -105,11 +109,14 @@
     "activities_place": "Actividades del servicio...",
     "link": "Referencia",
     "link_place": "Referencia o enlace...",
+    "choice": "¿Está seguro?",
     "errors": {
+      "attention": "Atención",
       "name": "Necesita llenar con su nombre.",
       "genre": "Necesita elegir algún género.",
       "maritals": "Necesita elegir un estado civil.",
-      "age": "Necesita llenar su edad..",
+      "age": "Necesita llenar su edad.",
+      "age-min": "El trabajo infantil está estrictamente prohibido hasta los 14 años.",
       "about": "Necesita llenar con algo sobre usted, sus objetivos y habilidades.",
       "zip": "Necesita llenar el campo de CEP.",
       "end": "Debe rellenar el campo de dirección.",
@@ -149,8 +156,8 @@
     "site_add_new": "Agregar nuevo sitio",
     "site_remove": "Eliminar sitio",
     "remove_account": "Eliminar currículum",
-    "delete_form": "Delete all form",
-    "print_curriculum": "Print Currilum",
+    "delete_form": "Eliminar todo formulario",
+    "print_curriculum": "Imprimir currículum",
     "link_git": "Enlace al proyecto en Github"
   },
   "themes": {
@@ -163,7 +170,8 @@
     "full": "Full Black"
   },
   "layout": {
-    "title": "Diseño",
+    "title": "Elija un formato para el diseño",
+    "title_font": "Elige una fuente para la letra",
     "default": "Padrón",
     "circle": "Circular",
     "mirror": "Espejo"
@@ -180,7 +188,7 @@
     "september": "Septiembre",
     "october": "Octubre",
     "november": "Noviembre",
-    "december": "Ddiciembre",
+    "december": "Diciembre",
     "in": "en",
     "years": "años"
   }

@@ -128,8 +128,6 @@ article.hitech
 <style lang="stylus">
 .hitech
   margin 3em auto 0
-  +ultrawide()
-    max-width 50%
   .flexbox
     align-items center
     display flex
@@ -138,7 +136,7 @@ article.hitech
 .credits_logo
   align-items center
   background #fff
-  border-radius 10px
+  border-radius 20px
   color #000
   display inline-flex
   flex-direction column
@@ -150,12 +148,15 @@ article.hitech
   transform scale(.9)
   transition .5s all
   width 155px
+  +desktop()
+    height 220px
+    width 220px
   p, svg, img
     position relative
     transition .3s all
     will-change all
   &:hover
-    box-shadow 0 0 0 5px rgba(#fff, .5), 0 0 5px 10px rgba(#fff, .5)
+    box-shadow 0 0 0 5px rgba(#fff, .5), 0 0 0 10px rgba(#fff, .5)
   &:hover svg,
   &:hover img
     filter grayscale(0)

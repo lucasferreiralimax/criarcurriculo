@@ -27,7 +27,10 @@
       "colab": "Bidragsytere",
       "work": "Made with Heart",
       "contributions": "bidragene",
-      "contribution": "bidrag"
+      "contribution": "bidrag",
+      "slide1": "Samarbeid på Github",
+      "slide2": "Hjelpe mennesker med teknologi",
+      "slide3": "Samarbeid også"
     },
     "notfound": {
       "text1": "Siden eksisterer ikke ennå",
@@ -41,6 +44,7 @@
     "name": "Volledige naam",
     "photo": "bilde",
     "photo_button": "sett bilde",
+    "photo_button-trade": "Endre Foto",
     "name_place": "Vul ditt komplette navn i...",
     "genre": "Sjanger",
     "marital_status": "Burgerlijke staat",
@@ -105,11 +109,14 @@
     "activities_place": "Activiteiten van de service...",
     "link": "Referanse",
     "link_place": "Referanse eller lenke...",
+    "choice": "Er du sikker?",
     "errors": {
+      "attention": "Merk følgende",
       "name": "U må et navn invullen.",
       "genre": "U må en sjanger velge.",
       "maritals": "Du må ha en burgerlig statlig valg.",
       "age": "Moet invullen met uw leeftijd",
+      "age-min": "Barnearbeid er strengt forbudt til 14 år.",
       "about": "Het må vullen med noe over jou, je doelen og muligheden.",
       "zip": "Du må ha postnummerfeltet invullen.",
       "end": "U må het adresveld invullen.",
@@ -163,7 +170,8 @@
     "full": "Full Black"
   },
   "layout": {
-    "title": "Oppsett",
+    "title": "Velg et format for oppsettet",
+    "title_font": "Velg en skrift for bokstaven",
     "default": "Misligholde",
     "circle": "Sirkel",
     "mirror": "Speil"

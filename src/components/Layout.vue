@@ -2,7 +2,7 @@
 section.layout
   h2 {{ $t('layout.title') }}
   .options
-    button.btn.m-0(type="button" @click="setLayout()")
+    button.btn.m-0.actived(type="button" @click="setLayout()")
       | {{ $t('layout.default') }}
       .layout-grid.layout-1
     button.btn.m-0(type="button" @click="setLayout('layout-circle')")
@@ -21,20 +21,48 @@ export default {
     if(layoutType) { this.setLayout(layoutType) }
   },
   methods: {
+    cleanBtns () {
+      let btns = document.querySelectorAll('.options .btn')
+
+      for(let item of btns) {
+        item.classList = 'btn m-0'
+      }
+    },
     setLayout (type) {
       localStorage.removeItem('layoutType')
       document.querySelector('.view .content').classList = 'content'
 
+      this.cleanBtns()
+      document.querySelectorAll('.options .btn')[0].classList.add('actived')
+
       if(type) {
         localStorage.setItem('layoutType', type)
         document.querySelector('.view .content').classList.add(type)
+        if(type == 'layout-circle') {
+          this.cleanBtns()
+          document.querySelectorAll('.options .btn')[1].classList.add('actived')
+        } else {
+          this.cleanBtns()
+          document.querySelectorAll('.options .btn')[2].classList.add('actived')
+        }
       }
+
+      if(event) {
+        this.cleanBtns()
+        let actived = event.srcElement.querySelector('.layout-grid').classList[1]
+        document.querySelector(`.${actived}`).parentElement.classList.toggle('actived')
+        console.log(event.srcElement.querySelector('.layout-grid').classList[1])
+      }
+
     }
   }
 }
 </script>
 
 <style lang="stylus">
+.options .actived
+  filter invert()
+  opacity .5
 .layout-grid
   background repeating-linear-gradient(to top, #999 15%, #999 18%,  transparent  18%, transparent 25%)
   width 100%
@@ -42,6 +70,7 @@ export default {
   margin-top 1em
   display flex
   position relative
+  pointer-events none
   &:before,
   &:after
     background #fff
@@ -64,6 +93,7 @@ export default {
     font-size 1em
     margin-bottom 1em
     text-shadow 0 2px 1px rgba(0,0,0,0.4)
+    text-align center
   .options
     display grid
     grid-template-columns repeat(3, 1fr)

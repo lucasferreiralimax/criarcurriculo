@@ -13,24 +13,47 @@
     padding-top 0
 
 .home .container
-  +ultrawide()
+  +desktop()
     width 100%
     max-width 70%
     margin 0 auto
     position relative
 
 .mark
-  background rgba(color4, .9)
+  background linear-gradient(rgba(color4 - 50, .9), rgba(#fff, 0))
   box-sizing border-box
   color color1
   display block
   font-weight normal
   line-height 2em
-  margin 0
-  padding 2em 2em
-  width 100%
+  margin 1em 11px
+  padding 5em 2em 2em
   position relative
+  border-radius 25px
+  +tablet()
+    padding 2em
+  +desktop()
+    max-width 70%
+    margin 1em auto
+  &:after
+    content ''
+    display table
+    clear both
   h1
     margin-bottom .5em
   h2
-    font-size 1.2em
+    font-size 1.5em
+    line-height 1em
+    color color2
+    margin-bottom 0.5em
+    +desktop()
+      font-size 2em
+    &:first-of-type
+      font-size 2em
+      +tablet()
+        font-size 2.5em
+        padding 8px 10px
+        border-radius 10px
+        display inline-block
+      +desktop()
+        font-size 3em

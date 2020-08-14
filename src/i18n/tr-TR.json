@@ -27,7 +27,10 @@
       "colab": "Ortak çalışanlar",
       "work": "Kalp ile Yapıldı",
       "contributions": "katkılar",
-      "contribution": "katkı"
+      "contribution": "katkı",
+      "slide1": "Github'da İşbirliği Yapın",
+      "slide2": "İnsanlara teknolojiyle yardım etme",
+      "slide3": "Siz de ortak çalışın"
     },
     "notfound": {
       "text1": "Sayfa henüz mevcut değil",
@@ -41,6 +44,7 @@
     "name": "Tam ad",
     "photo": "Fotoğraf",
     "photo_button": "fotoğraf ekle",
+    "photo_button-trade": "Fotoğrafı değiştir",
     "name_place": "Tam adınızı doldurun...",
     "genre": "Tür",
     "marital_status": "Medeni durum",
@@ -105,11 +109,14 @@
     "activities_place": "Hizmet etkinlikleri...",
     "link": "Referans",
     "link_place": "Referans veya bağlantı...",
+    "choice": "Emin misiniz?",
     "errors": {
+      "attention": "Dikkat",
       "name": "Adınızı yazmalı.",
       "genre": "Biraz tür seçmelisiniz.",
       "maritals": "Bir sivil statü seçmelisiniz.",
       "age": "Yaşını doldurmalı.",
+      "age-min": "14 yaşına kadar çocuk işçiliği kesinlikle yasaktır.",
       "about": "Kendiniz, hedefleriniz ve yetenekleriniz hakkında bir şeyler doldurmanız gerekiyor.",
       "zip": "Posta kodu alanını doldurmanız gerekiyor.",
       "end": "Adres alanını doldurmanız gerekiyor.",
@@ -163,7 +170,8 @@
     "full": "Tam Siyah"
   },
   "layout": {
-    "title": "Yerleşim",
+    "title": "Düzen için bir biçim seçin",
+    "title_font": "Harf için bir yazı tipi seçin",
     "default": "Varsayılan",
     "circle": "Daire",
     "mirror": "Ayna"

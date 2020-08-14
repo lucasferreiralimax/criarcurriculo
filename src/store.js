@@ -8,9 +8,13 @@ export default new Vuex.Store({
   state: {
     accounts: [],
     user: user,
-    errors: []
+    errors: [],
+    theme_app: 'default'
   },
   mutations: {
+    updateTheme (state, value) {
+      state.theme_app = value
+    },
     updateAcccount (state, value) {
       state.accounts = value
     },

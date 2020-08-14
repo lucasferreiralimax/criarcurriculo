@@ -27,7 +27,10 @@
       "colab": "合作者",
       "work": "用心做",
       "contributions": "贡献",
-      "contribution": "贡献"
+      "contribution": "贡献",
+      "slide1": "在Github上合作",
+      "slide2": "用技術幫助人們",
+      "slide3": "也要合作"
     },
     "notfound": {
       "text1": "页面尚不存在",
@@ -41,6 +44,7 @@
     "name": "全名",
     "photo": "照片",
     "photo_button": "发布照片",
+    "photo_button-trade": "更改照片",
     "name_place": "填写你的全名...",
     "genre": "类型",
     "marital_status": "婚姻状况",
@@ -105,11 +109,14 @@
     "activities_place": "服务活动...",
     "link": "参考",
     "link_place": "参考或链接...",
+    "choice": "你確定嗎？",
     "errors": {
+      "attention": "注意",
       "name": "必须填写您的姓名。",
       "genre": "你必须选择某种类型。",
       "maritals": "你必须选择一个公民身份。",
       "age": "必须填写您的年龄。",
+      "age-min": "嚴禁童工，直到14歲。",
       "about": "你需要填写一些关于你自己,你的目标和能力的东西。",
       "zip": "您需要填写邮政编码字段。",
       "end": "你需要填写地址栏。",
@@ -163,7 +170,8 @@
     "full": "全黑"
   },
   "layout": {
-    "title": "布局",
+    "title": "选择布局格式",
+    "title_font": "为字母选择字体",
     "default": "默认",
     "circle": "圈",
     "mirror": "镜子"

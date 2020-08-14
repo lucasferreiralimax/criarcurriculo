@@ -1,6 +1,7 @@
 <template lang="pug">
   draggable(:list="user[value]"
             ghost-class="ghost"
+            handle=".handle"
             @start="dragging = true"
             @end="dragging = false"
             @change="updateVuex(vuex, $event)")
@@ -12,7 +13,7 @@
           i +
       | {{ $t(`form.${translate}`) }}:
       template(v-if="type == 'tel'")
-        input(:id="`GET-${name}-` + key"
+        input.handle(:id="`GET-${name}-` + key"
               :class="{ error: !user[value][key] && errors ? errors.length : false }"
               :name="`${name}-` + key"
               :type="type"
@@ -22,7 +23,7 @@
               v-model="user[value][key]"
               @input="updateVuex(vuex, $event)")
       template(v-else)
-        input(:id="`GET-${name}-` + key"
+        input.handle(:id="`GET-${name}-` + key"
               :class="{ error: !user[value][key] && errors ? errors.length : false }"
               :name="`${name}-` + key"
               :type="type"

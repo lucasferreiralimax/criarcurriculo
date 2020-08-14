@@ -25,9 +25,6 @@
   &.play,
   &.play pre
     font-family 'Play', sans-serif
-  &.kaushan,
-  &.kaushan pre
-    font-family 'Macondo Swash Caps', sans-serif
   &.rajdhani,
   &.rajdhani pre
     font-family 'Rajdhani', sans-serif
@@ -45,6 +42,9 @@
       margin 0
       left 6px
       right auto
+      svg
+        margin-right 0
+        height 15px
   .figure
     align-items center
     background #fff
@@ -57,6 +57,8 @@
     width 100px
     transition 1s all
     position absolute
+    svg
+      margin-right 0
     img
       border-radius 6px
       height 130px
@@ -135,8 +137,9 @@
   .content
     background #fff
     bottom 0
-    box-shadow 0 -10px 40px rgba(#000,.3)
+    // box-shadow 0 -10px 40px rgba(#000,.3)
     box-sizing border-box
+    border-radius 7px
     clear both
     cursor pointer
     font-size 15px

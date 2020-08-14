@@ -38,7 +38,7 @@ export default {
 <style lang="stylus">
 .scroll-top,
 .scroll-bottom
-  bottom 10px
+  bottom 20px
   box-sizing border-box
   opacity 0
   pointer-events none

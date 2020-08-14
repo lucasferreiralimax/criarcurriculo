@@ -37,7 +37,7 @@ export default {
   data () {
     return {
       isTheme: false,
-      selectedTheme: ''
+      selectedTheme: 'default'
     }
   },
   methods: {
@@ -47,18 +47,32 @@ export default {
       this.clearBody()
       localStorage.setItem('theme_app', JSON.stringify(e.target.value))
       document.querySelector('body').classList.add(e.target.value)
+      this.$store.commit("updateTheme", e.target.value)
+      this.openThemeApp()
     },
     setThemeApp () {
       let theme = localStorage.getItem('theme_app')
+      let temaUrl = window.location.search
+
+      if(/tema/.test(temaUrl)) {
+        let temaRegex = temaUrl.match(/(tema=)([\w._-]+)?/ig)
+        let temaValor = temaRegex[0].split('=')
+        this.$store.commit("updateTheme", temaValor[1])
+        this.selectedTheme = temaValor[1]
+        document.querySelector('body').classList.add(temaValor[1])
+        localStorage.setItem('theme_app', temaValor[1])
+      }
 
       if(!theme) {
         this.clearBody()
+        this.$store.commit("updateTheme", 'default')
         this.selectedTheme = 'default'
         document.querySelector('body').classList.add('default')
         localStorage.setItem('theme_app', 'default')
       } else {
         this.clearBody()
         theme = theme.replace(/"/g, "")
+        this.$store.commit("updateTheme", theme)
         this.selectedTheme = theme
         document.querySelector('body').classList.add(theme)
       }
@@ -73,9 +87,10 @@ export default {
   display block
   pointer-events all
   position absolute
-  left 10px
-  top 10px
+  left 20px
+  bottom -75px
   z-index 99
   +tablet()
     position fixed
+    bottom 20px
 </style>
