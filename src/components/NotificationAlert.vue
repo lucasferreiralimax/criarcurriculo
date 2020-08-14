@@ -35,9 +35,12 @@ export default {
   border-radius 25px
   position fixed
   bottom 1em
+  left 1em
   right 1em
   z-index 99
   box-shadow 0 0 0 3px rgba(#000, .2)
+  +tablet()
+    left auto
   h2
     font-size 1.2em
     margin-bottom .8em
