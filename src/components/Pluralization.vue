@@ -66,10 +66,10 @@ export default {
   background transparent
   border 0
   display block
-  right 35px
+  right 25px
   padding 0
   position absolute
-  top 115px
+  top 110px
   width auto
   z-index 99
   +tablet()
