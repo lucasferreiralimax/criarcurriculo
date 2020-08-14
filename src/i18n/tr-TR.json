@@ -116,6 +116,7 @@
       "genre": "Biraz tür seçmelisiniz.",
       "maritals": "Bir sivil statü seçmelisiniz.",
       "age": "Yaşını doldurmalı.",
+      "age-min": "14 yaşına kadar çocuk işçiliği kesinlikle yasaktır.",
       "about": "Kendiniz, hedefleriniz ve yetenekleriniz hakkında bir şeyler doldurmanız gerekiyor.",
       "zip": "Posta kodu alanını doldurmanız gerekiyor.",
       "end": "Adres alanını doldurmanız gerekiyor.",

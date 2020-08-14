@@ -116,6 +116,7 @@
       "genre": "Necesita elegir algún género.",
       "maritals": "Necesita elegir un estado civil.",
       "age": "Necesita llenar su edad..",
+      "age-min": "El trabajo infantil está estrictamente prohibido hasta los 14 años.",
       "about": "Necesita llenar con algo sobre usted, sus objetivos y habilidades.",
       "zip": "Necesita llenar el campo de CEP.",
       "end": "Debe rellenar el campo de dirección.",

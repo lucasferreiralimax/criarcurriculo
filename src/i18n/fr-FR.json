@@ -116,6 +116,7 @@
       "genre": "Vous devez choisir un genre..",
       "maritals": "Vous devez choisir un état civil.",
       "age": "Doit remplir avec votre âge.",
+      "age-min": "Le travail des enfants est strictement interdit jusqu'à l'âge de 14 ans.",
       "about": "Vous devez remplir quelque chose sur vous-même, vos objectifs et vos capacités.",
       "zip": "Vous devez remplir le champ code postal",
       "end": "Vous devez remplir le champ d'adresse.",
