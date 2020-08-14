@@ -10,6 +10,7 @@ const languages = {
   ar: "العربي",
   en: "English",
   es: "Español",
+  ca: "Català",
   in: "भारतीय",
   ru: "русский",
   ja: "日本語",

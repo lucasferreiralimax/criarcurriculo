@@ -69,7 +69,7 @@
     "end": "Dirección",
     "end_place": "Nombre de la calle o avenida...",
     "number": "Número",
-    "number_place": "Número do casa...",
+    "number_place": "Número de casa...",
     "city": "Ciudad",
     "city_place": "Nombre de su ciudad actual...",
     "travel": "Disponibilidade para viagens",
@@ -115,7 +115,7 @@
       "name": "Necesita llenar con su nombre.",
       "genre": "Necesita elegir algún género.",
       "maritals": "Necesita elegir un estado civil.",
-      "age": "Necesita llenar su edad..",
+      "age": "Necesita llenar su edad.",
       "age-min": "El trabajo infantil está estrictamente prohibido hasta los 14 años.",
       "about": "Necesita llenar con algo sobre usted, sus objetivos y habilidades.",
       "zip": "Necesita llenar el campo de CEP.",
@@ -156,8 +156,8 @@
     "site_add_new": "Agregar nuevo sitio",
     "site_remove": "Eliminar sitio",
     "remove_account": "Eliminar currículum",
-    "delete_form": "Delete all form",
-    "print_curriculum": "Print Currilum",
+    "delete_form": "Eliminar todo formulario",
+    "print_curriculum": "Imprimir currículum",
     "link_git": "Enlace al proyecto en Github"
   },
   "themes": {
@@ -188,7 +188,7 @@
     "september": "Septiembre",
     "october": "Octubre",
     "november": "Noviembre",
-    "december": "Ddiciembre",
+    "december": "Diciembre",
     "in": "en",
     "years": "años"
   }

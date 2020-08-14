@@ -5,6 +5,7 @@ label.pluralization(for="locale")
     option(value="ar-SA") {{ $t('locale.ar')}}
     option(value="en-US") {{ $t('locale.en')}}
     option(value="es-ES") {{ $t('locale.es')}}
+    option(value="es-CA") {{ $t('locale.ca')}}
     option(value="ru-RU") {{ $t('locale.ru')}}
     option(value="in-ID") {{ $t('locale.in')}}
     option(value="ja-JP") {{ $t('locale.ja')}}
