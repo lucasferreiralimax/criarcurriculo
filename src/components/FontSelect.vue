@@ -1,6 +1,6 @@
 <template lang="pug">
 section.fontType
-  h2 Escolha uma fonte para a letra
+  h2 {{ $t('layout.title_font') }}
   label.btn.fontSelect(for="fonttype")
     select#fonttype(v-model="fonttype")
       option(value="normal") Normal

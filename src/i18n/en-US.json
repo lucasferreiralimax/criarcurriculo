@@ -169,7 +169,8 @@
     "full": "Full Black"
   },
   "layout": {
-    "title": "Layout",
+    "title": "Choose a format for the layout",
+    "title_font": "Choose a font for the letter",
     "default": "Default",
     "circle": "Circle",
     "mirror": "Mirror"

@@ -169,7 +169,8 @@
     "full": "Volledig zwart"
   },
   "layout": {
-    "title": "Indeling",
+    "title": "Kies een indeling voor de lay-out",
+    "title_font": "Kies een lettertype voor de letter",
     "default": "Standaard",
     "circle": "Cirkel",
     "mirror": "Speil"

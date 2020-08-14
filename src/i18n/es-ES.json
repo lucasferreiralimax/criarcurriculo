@@ -169,7 +169,8 @@
     "full": "Full Black"
   },
   "layout": {
-    "title": "Diseño",
+    "title": "Elija un formato para el diseño",
+    "title_font": "Elige una fuente para la letra",
     "default": "Padrón",
     "circle": "Circular",
     "mirror": "Espejo"

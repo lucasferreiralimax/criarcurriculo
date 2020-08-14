@@ -169,7 +169,8 @@
     "full": "Tam Siyah"
   },
   "layout": {
-    "title": "Yerleşim",
+    "title": "Düzen için bir biçim seçin",
+    "title_font": "Harf için bir yazı tipi seçin",
     "default": "Varsayılan",
     "circle": "Daire",
     "mirror": "Ayna"

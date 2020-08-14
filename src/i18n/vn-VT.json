@@ -169,7 +169,8 @@
     "full": "Đầy đủ màu đen"
   },
   "layout": {
-    "title": "bố trí",
+    "title": "Chọn định dạng cho bố cục",
+    "title_font": "Chọn phông chữ cho chữ cái",
     "default": "Mặc định",
     "circle": "Vòng tròn",
     "mirror": "Gương"

@@ -169,7 +169,8 @@
     "full": "Full Black"
   },
   "layout": {
-    "title": "Oppsett",
+    "title": "Velg et format for oppsettet",
+    "title_font": "Velg en skrift for bokstaven",
     "default": "Misligholde",
     "circle": "Sirkel",
     "mirror": "Speil"

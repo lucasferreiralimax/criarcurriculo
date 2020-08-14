@@ -169,7 +169,8 @@
     "full": "Noir complet"
   },
   "layout": {
-    "title": "Disposition",
+    "title": "Choisissez un format pour la mise en page",
+    "title_font": "Choisissez une police pour la lettre",
     "default": "Standard",
     "circle": "Circulaire",
     "mirror": "Miroir"

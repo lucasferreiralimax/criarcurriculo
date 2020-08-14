@@ -169,7 +169,8 @@
     "full": "Full Black"
   },
   "layout": {
-    "title": "Layout",
+    "title": "Wählen Sie ein Format für das Layout",
+    "title_font": "Wählen Sie eine Schriftart für den Buchstaben",
     "default": "Standard",
     "circle": "Kreis",
     "mirror": "Reflector"

@@ -171,6 +171,7 @@
   },
   "layout": {
     "title": "Escolha um formato para o layout",
+    "title_font": "Escolha uma fonte para a letra",
     "default": "Padrão",
     "circle": "Circular",
     "mirror": "Espelho"

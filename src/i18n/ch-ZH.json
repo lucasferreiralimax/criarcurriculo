@@ -169,7 +169,8 @@
     "full": "全黑"
   },
   "layout": {
-    "title": "布局",
+    "title": "选择布局格式",
+    "title_font": "为字母选择字体",
     "default": "默认",
     "circle": "圈",
     "mirror": "镜子"
