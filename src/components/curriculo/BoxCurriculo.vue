@@ -30,7 +30,7 @@ export default {
   mixins: [mixinUpdateStore],
   data () {
     return {
-      box_collapse: true
+      box_collapse: false
     }
   },
   methods: { boxCollapse() { this.box_collapse = !this.box_collapse } }

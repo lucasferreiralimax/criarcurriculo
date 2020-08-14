@@ -116,6 +116,7 @@
       "genre": "Precisa escolher algum gênero.",
       "maritals": "Precisa escolher um estado civil.",
       "age": "Precisa preencher com sua idade.",
+      "age-min": "Trabalho infantil é totalmente proibido até os 14 anos de idade.",
       "about": "Precisa preencher com algo sobre você, seus objetivos e habilidades.",
       "zip": "Precisa preencher o campo de CEP.",
       "end": "Precisa preencher o campo de endereço.",
@@ -169,7 +170,7 @@
     "full": "Full Black"
   },
   "layout": {
-    "title": "Formato",
+    "title": "Escolha um formato para o layout",
     "default": "Padrão",
     "circle": "Circular",
     "mirror": "Espelho"

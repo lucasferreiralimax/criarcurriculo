@@ -6,10 +6,16 @@ export const mixinRender = {
     user: state => state.user,
     errors: state => state.errors
   }),
+  // created () { this.errorsCheck() },
   methods: {
-    printRender () {
+    errorsCheck () {
       this.$store.commit('updateErrors', [])
-      if (!this.user.age) { this.errors.push(this.$t('form.errors.age')) }
+      if (!this.user.age) {
+        this.errors.push(this.$t('form.errors.age'))
+      }
+      if (this.user.age && this.user.age < 14) {
+        this.errors.push(this.$t('form.errors.age-min'))
+      }
       if (!this.user.end.localidade) { this.errors.push(this.$t('form.errors.city')) }
       if (!this.user.end.logradouro) { this.errors.push(this.$t('form.errors.end')) }
       if (!this.user.genero) {this.errors.push(this.$t('form.errors.genre')) }
@@ -42,17 +48,24 @@ export const mixinRender = {
           if (!this.user.coursers[i].formation.school) { this.errors.push(this.$t('form.errors.school')) }
         }
       }
-      if(!this.errors.length) {
+      this.$store.commit('updateErrors', this.errors)
+      return this.errors
+    },
+    printRender () {
+      if(!this.errorsCheck().length) {
         let scroll_end = (document.querySelector('#app').clientHeight - document.querySelector('#app').parentElement.offsetHeight)
         window.print()
         window.scrollTo(0, scroll_end)
       } else {
         window.scrollTo(0, 600)
       }
-      this.$store.commit('updateErrors', this.errors)
     },
     resetForm () {
       if(window.confirm(this.$t('form.choice'))) {
+        user.name = ''
+        user.age = null
+        user.maritalstatus = ''
+        user.genero = ''
         this.$store.commit('updateUser', user)
         this.$store.commit('updateErrors', [])
         this.updateStore()

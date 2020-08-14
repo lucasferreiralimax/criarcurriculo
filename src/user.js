@@ -1,7 +1,7 @@
 export let user = {
-  name: '',
+  name: 'Ayrton Senna',
   photo: '',
-  age: null,
+  age: 18,
   countrystatus: '',
   cep: null,
   end: {
@@ -12,11 +12,11 @@ export let user = {
     bairro: '',
     cep: ''
   },
-  maritalstatus: '',
+  maritalstatus: 'Solteiro',
   addressNumber: null,
   travel: false,
   about: null,
-  genero: '',
+  genero: 'h',
   hobbies: ['Ajudar'],
   telephones: [],
   emails: [],

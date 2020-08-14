@@ -36,6 +36,8 @@
             @input="updateVuex(vuex, $event)")
       p.error-msg(v-if="!user[value] && errors ? errors.length : false")
         | {{ $t(`form.errors.${translate}`) }}
+      p.error-msg.top(v-if="user[value] && user[value] < 14 && errors ? errors.length : false")
+        | {{ $t(`form.errors.${translate}-min`) }}
 </template>
 
 <script>
@@ -46,6 +48,11 @@ export default {
   name: 'input-app',
   props: ['index', 'name', 'value', 'type', 'vuex', 'translate', 'errors'],
   mixins: [mixinUpdateStore],
-  directives: { 'focus-label': focusLabel }
+  directives: { 'focus-label': focusLabel },
+  mounted () {
+    if(this.type == 'number') {
+      document.querySelector("[name='dataofbirth']").setAttribute("min", "14")
+    }
+  },
 }
 </script>

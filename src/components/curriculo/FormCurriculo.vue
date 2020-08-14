@@ -96,11 +96,6 @@ export default {
     this.accountsRender()
   },
   mounted () { document.querySelector('.footer').classList.add('home') },
-  destroyed () { document.querySelector('.footer').classList.remove('home') },
-  data () {
-    return {
-      form: this
-    }
-  }
+  destroyed () { document.querySelector('.footer').classList.remove('home') }
 }
 </script>
