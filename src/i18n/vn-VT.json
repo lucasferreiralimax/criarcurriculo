@@ -27,7 +27,10 @@
       "colab": "Cộng tác viên",
       "work": "Làm bằng trái tim",
       "contributions": "đóng góp",
-      "contribution": "đóng góp"
+      "contribution": "đóng góp",
+      "slide1": "Cộng tác trên Github",
+      "slide2": "Giúp đỡ mọi người về công nghệ",
+      "slide3": "Cũng cộng tác"
     },
     "notfound": {
       "text1": "Trang chưa tồn tại",
@@ -41,6 +44,7 @@
     "name": "Tên đầy đủ",
     "photo": "Ảnh",
     "photo_button": "Chèn ảnh",
+    "photo_button-trade": "Thay đổi hình ảnh",
     "name_place": "Điền vào tên đầy đủ của bạn...",
     "genre": "Thể loại",
     "marital_status": "Tình trạng hôn nhân",
@@ -105,7 +109,9 @@
     "activities_place": "Hoạt động dịch vụ...",
     "link": "Tài liệu tham khảo",
     "link_place": "Tham khảo hoặc liên kết...",
+    "choice": "Bạn có chắc không?",
     "errors": {
+      "attention": "chú ý",
       "name": "Cần điền vào tên của bạn.",
       "genre": "Bạn cần chọn một số thể loại.",
       "maritals": "Bạn cần chọn một tình trạng hôn nhân.",

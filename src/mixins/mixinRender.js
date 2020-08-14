@@ -9,37 +9,37 @@ export const mixinRender = {
   methods: {
     printRender () {
       this.$store.commit('updateErrors', [])
-      if (!this.user.age) { this.errors.push('Precisa preencher o campo data de nascimento.') }
-      if (!this.user.end.localidade) { this.errors.push('Precisa preencher o campo localidade.') }
-      if (!this.user.end.logradouro) { this.errors.push('Precisa preencher o campo logradouro.') }
-      if (!this.user.genero) {this.errors.push('Precisa colocar seu genero.') }
-      if (!this.user.maritalstatus) { this.errors.push('Precisa colocar seu estado civil.') }
-      if (!this.user.name) { this.errors.push('Precisa preencher o campo nome.') }
+      if (!this.user.age) { this.errors.push(this.$t('form.errors.age')) }
+      if (!this.user.end.localidade) { this.errors.push(this.$t('form.errors.city')) }
+      if (!this.user.end.logradouro) { this.errors.push(this.$t('form.errors.end')) }
+      if (!this.user.genero) {this.errors.push(this.$t('form.errors.genre')) }
+      if (!this.user.maritalstatus) { this.errors.push(this.$t('form.errors.maritals')) }
+      if (!this.user.name) { this.errors.push(this.$t('form.errors.name')) }
       if (this.user.telephones.length) {
         for(let i = 0; this.user.telephones.length > i; i++) {
-          if (!this.user.telephones[i]) { this.errors.push('Precisa preencher o campo de telefone') }
+          if (!this.user.telephones[i]) { this.errors.push(this.$t('form.errors.phone')) }
         }
       }
       if (this.user.emails.length) {
         for(let i = 0; this.user.emails.length > i; i++) {
-          if (!this.user.emails[i]) { this.errors.push('Precisa preencher o campo de e-mail') }
+          if (!this.user.emails[i]) { this.errors.push(this.$t('form.errors.email')) }
         }
       }
       if (this.user.sites.length) {
         for(let i = 0; this.user.sites.length > i; i++) {
-          if (!this.user.sites[i]) { this.errors.push('Precisa preencher o campo de sites') }
+          if (!this.user.sites[i]) { this.errors.push(this.$t('form.errors.site')) }
         }
       }
       if (this.user.exps.length) {
         for(let i = 0; this.user.exps.length > i; i++) {
-          if (!this.user.exps[i].experience.name) { this.errors.push('Precisa preencher o campo nome da empresa') }
-          if (!this.user.exps[i].experience.work) { this.errors.push('Precisa preencher o campo nome do cargo') }
+          if (!this.user.exps[i].experience.name) { this.errors.push(this.$t('form.errors.company')) }
+          if (!this.user.exps[i].experience.work) { this.errors.push(this.$t('form.errors.office')) }
         }
       }
       if (this.user.coursers.length) {
         for(let i = 0; this.user.coursers.length > i; i++) {
-          if (!this.user.coursers[i].formation.name) { this.errors.push('Precisa preencher o campo nome da instituição') }
-          if (!this.user.coursers[i].formation.school) { this.errors.push('Precisa preencher o campo nome do curso') }
+          if (!this.user.coursers[i].formation.name) { this.errors.push(this.$t('form.errors.course')) }
+          if (!this.user.coursers[i].formation.school) { this.errors.push(this.$t('form.errors.school')) }
         }
       }
       if(!this.errors.length) {
@@ -52,7 +52,7 @@ export const mixinRender = {
       this.$store.commit('updateErrors', this.errors)
     },
     resetForm () {
-      if(window.confirm("Tem certeza?")) {
+      if(window.confirm(this.$t('form.choice'))) {
         this.$store.commit('updateUser', user)
         this.$store.commit('updateErrors', [])
         this.updateStore()

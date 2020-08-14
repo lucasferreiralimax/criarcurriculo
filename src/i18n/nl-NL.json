@@ -27,7 +27,10 @@
       "colab": "Bidragsytere",
       "work": "Made with Heart",
       "contributions": "bidragene",
-      "contribution": "bidrag"
+      "contribution": "bidrag",
+      "slide1": "Samarbeid på Github",
+      "slide2": "Hjelpe mennesker med teknologi",
+      "slide3": "Samarbeid også"
     },
     "notfound": {
       "text1": "Siden eksisterer ikke ennå",
@@ -41,6 +44,7 @@
     "name": "Volledige naam",
     "photo": "bilde",
     "photo_button": "sett bilde",
+    "photo_button-trade": "Endre Foto",
     "name_place": "Vul ditt komplette navn i...",
     "genre": "Sjanger",
     "marital_status": "Burgerlijke staat",
@@ -105,7 +109,9 @@
     "activities_place": "Activiteiten van de service...",
     "link": "Referanse",
     "link_place": "Referanse eller lenke...",
+    "choice": "Er du sikker?",
     "errors": {
+      "attention": "Merk følgende",
       "name": "U må et navn invullen.",
       "genre": "U må en sjanger velge.",
       "maritals": "Du må ha en burgerlig statlig valg.",

@@ -27,7 +27,10 @@
       "colab": "Contributors",
       "work": "Made with Heart",
       "contributions": "contributions",
-      "contribution": "contribution"
+      "contribution": "contribution",
+      "slide1": "Collaborate on Github",
+      "slide2": "Helping people with technology",
+      "slide3": "Collaborate too"
     },
     "notfound": {
       "text1": "Page does not exist yet",
@@ -41,6 +44,7 @@
     "name": "Full name",
     "photo": "Photo",
     "photo_button": "Put photo",
+    "photo_button-trade": "Change photo",
     "name_place": "Fill in your full name...",
     "genre": "Genre",
     "marital_status": "Marital Status",
@@ -105,7 +109,9 @@
     "activities_place": "Activities of the service...",
     "link": "Reference",
     "link_place": "Reference or link...",
+    "choice": "Are you sure?",
     "errors": {
+      "attention": "Attention",
       "name": "You must fill in with a name.",
       "genre": "You need to choose some genre.",
       "maritals": "You must choose a civil status.",

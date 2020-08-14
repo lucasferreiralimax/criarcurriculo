@@ -27,7 +27,10 @@
       "colab": "Ortak çalışanlar",
       "work": "Kalp ile Yapıldı",
       "contributions": "katkılar",
-      "contribution": "katkı"
+      "contribution": "katkı",
+      "slide1": "Github'da İşbirliği Yapın",
+      "slide2": "İnsanlara teknolojiyle yardım etme",
+      "slide3": "Siz de ortak çalışın"
     },
     "notfound": {
       "text1": "Sayfa henüz mevcut değil",
@@ -41,6 +44,7 @@
     "name": "Tam ad",
     "photo": "Fotoğraf",
     "photo_button": "fotoğraf ekle",
+    "photo_button-trade": "Fotoğrafı değiştir",
     "name_place": "Tam adınızı doldurun...",
     "genre": "Tür",
     "marital_status": "Medeni durum",
@@ -105,7 +109,9 @@
     "activities_place": "Hizmet etkinlikleri...",
     "link": "Referans",
     "link_place": "Referans veya bağlantı...",
+    "choice": "Emin misiniz?",
     "errors": {
+      "attention": "Dikkat",
       "name": "Adınızı yazmalı.",
       "genre": "Biraz tür seçmelisiniz.",
       "maritals": "Bir sivil statü seçmelisiniz.",

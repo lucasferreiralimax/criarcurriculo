@@ -27,7 +27,10 @@
       "colab": "Colaboradores",
       "work": "Feito com Coração",
       "contributions": "contribuições",
-      "contribution": "contribuição"
+      "contribution": "contribuição",
+      "slide1": "Colabore no Github",
+      "slide2": "Ajudando pessoas com tecnologia",
+      "slide3": "Colabore também"
     },
     "notfound": {
       "text1": "Página ainda não existe",
@@ -41,6 +44,7 @@
     "name": "Nome completo",
     "photo": "Foto",
     "photo_button": "Inserir foto",
+    "photo_button-trade": "Trocar foto",
     "name_place": "Preencha com seu nome completo...",
     "genre": "Gênero",
     "marital_status": "Estado civil",
@@ -105,7 +109,9 @@
     "activities_place": "Atividades do serviço...",
     "link": "Referência",
     "link_place": "Referência ou link...",
+    "choice": "Tem certeza?",
     "errors": {
+      "attention": "Atenção",
       "name": "Precisa preencher com seu nome.",
       "genre": "Precisa escolher algum gênero.",
       "maritals": "Precisa escolher um estado civil.",

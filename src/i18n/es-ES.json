@@ -27,7 +27,10 @@
       "colab": "Empleados",
       "work": "Hecho con Corazón",
       "contributions": "contribuciones",
-      "contribution": "contribución"
+      "contribution": "contribución",
+      "slide1": "Colabore en Github",
+      "slide2": "Ayudando las personas con la tecnología",
+      "slide3": "Colabore también"
     },
     "notfound": {
       "text1": "Página aún no existe",
@@ -41,6 +44,7 @@
     "name": "Nombre completo",
     "photo": "Foto",
     "photo_button": "Poner foto",
+    "photo_button-trade": "Cambiar foto",
     "name_place": "Rellene con su nombre completo...",
     "genre": "Género",
     "marital_status": "Estado civil",
@@ -105,7 +109,9 @@
     "activities_place": "Actividades del servicio...",
     "link": "Referencia",
     "link_place": "Referencia o enlace...",
+    "choice": "¿Está seguro?",
     "errors": {
+      "attention": "Atención",
       "name": "Necesita llenar con su nombre.",
       "genre": "Necesita elegir algún género.",
       "maritals": "Necesita elegir un estado civil.",

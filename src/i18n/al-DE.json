@@ -27,7 +27,10 @@
       "colab": "Mitwirkende",
       "work": "Mit Herz gemacht",
       "contributions": "Beiträge",
-      "contribution": "Beitrag"
+      "contribution": "Beitrag",
+      "slide1": "Auf Github zusammenarbeiten",
+      "slide2": "Menschen mit Technologie helfen",
+      "slide3": "Auch zusammenarbeiten"
     },
     "notfound": {
       "text1": "Seite existiert noch nicht",
@@ -41,6 +44,7 @@
     "name": "Vollständiger Name",
     "photo": "Foto",
     "photo_button": "Foto posten",
+    "photo_button-trade": "Foto ändern",
     "name_place": "Geben Sie Ihren vollständigen Namen ein...",
     "genre": "Genre",
     "marital_status": "Familienstand",
@@ -105,7 +109,9 @@
     "activities_place": "Aktivitäten des Dienstes...",
     "link": "Referenz",
     "link_place": "Referenz oder Link...",
+    "choice": "Bist du sicher?",
     "errors": {
+      "attention": "Beachtung",
       "name": "Sie müssen einen Namen eingeben.",
       "genre": "Sie müssen ein Genre auswählen.",
       "maritals": "Sie müssen einen Zivilstand wählen.",
