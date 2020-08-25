@@ -18,6 +18,8 @@
   img(v-if="type == 'tl-TD'" src="./../assets/flags/tl.svg" alt="Tailand" width="30")
   img(v-if="type == 'nl-HL'" src="./../assets/flags/nh.svg" alt="Holandes" width="30")
   img(v-if="type == 'nl-NL'" src="./../assets/flags/nl.svg" alt="Noruegues" width="30")
+  img(v-if="type == 'hu-RV'" src="./../assets/flags/hu.svg" alt="Ungáiris" width="30")
+  img(v-if="type == 'ir-IS'" src="./../assets/flags/ir.svg" alt="Ireland" width="30")
 </template>
 
 <script>

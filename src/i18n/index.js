@@ -23,7 +23,9 @@ const languages = {
   vn: "Tiếng việt",
   tl: "ไทย",
   nl: "Neerlandesa",
-  nl_n: "Norsk"
+  nl_n: "Norsk",
+  hu: "Ungáiris",
+  ir: "Ireland"
 };
 
 pt_BR.locale = languages
