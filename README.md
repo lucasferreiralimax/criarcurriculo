@@ -12,7 +12,7 @@
 * [curriculo-gratis.firebaseapp.com](https://curriculo-gratis.firebaseapp.com)
 * [curriculo-gratis.herokuapp.com](https://curriculo-gratis.herokuapp.com)
 >
-![Currículo Grátis](https://raw.githubusercontent.com/lucasferreiralimax/curriculogratis/master/src/assets/screenshot.jpg)
+![Currículo Grátis](https://lucas-x.web.app/assets/projects/boasorte.jpg)
 # :yin_yang: Ajude também
 > Se encontrar algum erro ou quiser contribuir com uma ideia para o projeto crie uma [issue](https://github.com/lucasferreiralimax/curriculogratis/issues/new), sua ajuda será muito bem-vinda desde já agradeço. :clap:
 >
@@ -124,7 +124,7 @@
 > Projeyi makinenizde klonladıktan sonra makinenizde [Node.js](https://nodejs.org) olması gerekir.  
 > Terminali veya cmd'yi açın ve projeyi kurmak ve başlatmak için aşağıdaki komutları çalıştırın.
 #### スタート
->あなたのマシン上でプロジェクトをクローンした後、あなたのマシンに [Node.js](https://nodejs.org),をインストールする必要があります。 
+>あなたのマシン上でプロジェクトをクローンした後、あなたのマシンに [Node.js](https://nodejs.org),をインストールする必要があります。
 >ターミナルまたはcmdを開き、次のコマンドを実行してプロジェクトをインストールおよび開始します。
 #### 开始
 >在计算机上克隆项目后，您需要在计算机上安装 [Node.js](https://nodejs.org)。  
