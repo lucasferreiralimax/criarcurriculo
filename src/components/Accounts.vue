@@ -6,7 +6,7 @@ section.accounts(v-if="accounts.length !== 0")
     handle=".handle"
     @start="dragging = true"
     @end="dragging = false")
-    p(v-for="(account, key) in accounts" @click="toggleAccount(account)")
+    p.account(:class="{ 'active' : account.s_active }" v-for="(account, key) in accounts" @click="toggleAccount(account); activeAccount($event)")
       flag.flag.handle(:type="account.s_lang")
       span.name {{ account.s_name }}
       span.date {{ account.s_time }}
@@ -36,6 +36,15 @@ export default {
       this.$store.commit("updateUser", store.s_data)
       loadLanguageAsync(store.s_lang)
       localStorage.setItem('locale', store.s_lang)
+    },
+    activeAccount (e) {
+      let accounts = document.querySelectorAll('.account')
+      if(accounts) {
+        for(let item of accounts) {
+          item.classList.remove('active')
+        }
+        e.target.classList.add('active')
+      }
     },
     removeAccount (key, store) {
       if(window.confirm("Tem certeza?")) {
@@ -67,8 +76,16 @@ export default {
     border-radius 6px
     cursor pointer
     position relative
+    *
+      pointer-events none
     &:last-of-type
       margin-bottom 0
+    &.active
+      filter invert()
+      background rgba(#fff, .4)
+      .flag,
+      button
+        filter invert()
     .flag
       transform translate(-5px, 5px) scale(1.5)
     .name,
@@ -87,6 +104,8 @@ export default {
     span,
     button
       display inline-block
+    button
+      pointer-events all
   .btn svg
     margin-right 0
     height 15px

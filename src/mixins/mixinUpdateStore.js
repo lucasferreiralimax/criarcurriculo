@@ -21,7 +21,8 @@ export const mixinUpdateStore = {
                   "s_local": obj,
                   "s_data": store,
                   "s_time": moment().locale(lang[0]).format('LLL'),
-                  "s_lang": lang[0]
+                  "s_lang": lang[0],
+                  "s_active": lang[0] == localStorage.getItem('locale')
                 };
             this.$store.commit("insertAcccount", store_account)
           }
