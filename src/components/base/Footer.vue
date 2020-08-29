@@ -36,8 +36,10 @@ export default {
     +tablet()
       padding 20px 0 50px
       width 50%
-      float right
+      margin-left 50%
       clear both
+    +desktop()
+      width 33%
 .credits
   transition 2s all
   user-select none
