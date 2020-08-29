@@ -2,23 +2,23 @@ describe('Validar Fonts', () => {
   it('Font Abel', () => {
     cy.visit('/')
     cy.get('#start').scrollIntoView()
-    cy.get('#fonttype').select('abel')
+    cy.get('#fonttype').click()
+    cy.get('.el-select-dropdown__item').contains('Abel').click({ multiple: true, force: true })
     cy.wait(2000)
   })
   it('Font Play', () => {
-    cy.get('#fonttype').select('play')
-    cy.wait(2000)
-  })
-  it('Font Kaushan', () => {
-    cy.get('#fonttype').select('kaushan')
+    cy.get('#fonttype').click()
+    cy.get('.el-select-dropdown__item').contains('Play').click({ multiple: true, force: true })
     cy.wait(2000)
   })
   it('Font Rajdhani', () => {
-    cy.get('#fonttype').select('rajdhani')
+    cy.get('#fonttype').click()
+    cy.get('.el-select-dropdown__item').contains('Rajdhani').click({ multiple: true, force: true })
     cy.wait(2000)
   })
   it('Font Normal', () => {
-    cy.get('#fonttype').select('normal')
+    cy.get('#fonttype').click()
+    cy.get('.el-select-dropdown__item').contains('Normal').click({ multiple: true, force: true })
     cy.wait(2000)
   })
 })

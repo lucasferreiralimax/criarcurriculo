@@ -5,7 +5,8 @@ describe('Validar Formatos - Basico', () => {
     cy.get('#GET-name').clear().type('Lucas Ferreira de Lima')
   })
   it('Gênero', () => {
-    cy.get('#GET-genero').select("Masculino")
+    cy.get('#GET-genero').click()
+    cy.get('.el-select-dropdown__item').eq(2).click({ multiple: true, force: true })
     cy.get('#start').scrollIntoView()
   })
   it('Estado Civil', () => {

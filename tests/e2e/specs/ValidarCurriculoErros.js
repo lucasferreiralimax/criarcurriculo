@@ -3,6 +3,11 @@ describe('Validar erros curriculo simples', () => {
     cy.visit('/')
     cy.get('#GET-name').clear()
   })
+  it('Gênero limpo', () => {
+    cy.get('#GET-genero').click()
+    cy.get('.el-select-dropdown__item').contains('Selecione seu gênero...').click({ multiple: true, force: true })
+    cy.get('#start').scrollIntoView()
+  })
   it('Idade limpa', () => {
     cy.get('#GET-dataofbirth').clear()
   })
