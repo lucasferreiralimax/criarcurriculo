@@ -1,4 +1,5 @@
 import { mapState } from 'vuex'
+import moment from 'moment'
 
 export const mixinUpdateStore = {
   computed: mapState({
@@ -14,13 +15,12 @@ export const mixinUpdateStore = {
         if(/store/.test(obj)) {
           let store = JSON.parse(local[obj])
           if(store.name) {
-            let time = new Date(),
-                lang = obj.match(/\w{2}-\w{2}/ig),
+            let lang = obj.match(/\w{2}-\w{2}/ig),
                 store_account = {
                   "s_name": store.name,
                   "s_local": obj,
                   "s_data": store,
-                  "s_time": `${time.getHours()}:${time.getMinutes()}:${time.getSeconds()} - ${time.getDate()}/${time.getMonth()}/${time.getFullYear()}`,
+                  "s_time": moment().locale(lang[0]).format('LLL'),
                   "s_lang": lang[0]
                 };
             this.$store.commit("insertAcccount", store_account)
