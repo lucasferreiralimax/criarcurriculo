@@ -41,15 +41,24 @@ export default {
 </script>
 
 <style lang="stylus">
+.home.content .mark
+  display flex
+  justify-content center
+  align-items center
+  flex-direction column
+  +tablet()
+    flex-direction row
 .user-banner
   float left
   width 100%
+  max-width 330px
   display flex
   justify-content center
   img
     width 100%
   +tablet()
     width 330px
+    min-width 330px
     margin-right 2em
 .center
   text-align center
