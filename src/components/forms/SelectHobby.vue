@@ -66,9 +66,15 @@ export default {
     padding 0.5em 1em !important
     border-radius 100px !important
   .el-tag
+    color #000
     font-size 0.8em
     margin-top 10px
     margin-right 10px
+  .el-tag__close
+    color #000
+    transition .3s all
+    &:hover
+      background color3
   .btn.plus
     margin 10px 0 5px
     transition .3s background

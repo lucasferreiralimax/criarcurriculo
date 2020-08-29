@@ -42,7 +42,7 @@ export const mixinUpdateStore = {
           this.$store.commit(name, e)
           break
         case 'updateGenero':
-          this.$store.commit(name, e.target.value)
+          this.$store.commit(name, e)
           this.$store.commit('updateMaritalStatus', '')
           break
         case 'updateHobbies':

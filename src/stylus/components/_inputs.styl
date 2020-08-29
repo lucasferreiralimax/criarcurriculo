@@ -25,6 +25,51 @@ input, textarea, select
 .el-date-editor
   margin 1em auto 0
 
+.el-select-dropdown.el-popper
+  min-width auto !important
+
+.el-input.is-focus .el-input__inner
+  border-color rgba(#000, 0) !important
+
+.el-input__inner:focus
+  color #000 !important
+  border-color rgba(#000, 0) !important
+
+.el-select
+  .el-input__suffix
+    right 0
+    top 2px
+    pointer-events none
+    *
+      pointer-events none
+  .el-input__inner
+    height 30px
+    padding 2px 2px 2px 10px
+    margin-top 8px
+    box-sizing border-box
+    width calc(100% - 10px)
+    color #000
+    font-size 1em
+    &:focus
+      border-color rgba(#000, 0) !important
+
+.el-select-dropdown__item
+  font-weight normal
+  &.selected
+    color #000 !important
+    font-weight bold
+
+[for='GET-genero']
+  .el-input__inner
+    height 52px
+    margin-top 15px
+    width 100%
+    padding-left 1em
+    font-size 1.2em
+  .el-input__suffix
+    right 10px
+    top 5px
+
 +htmlDir()
   input, textarea, select
     &[type="radio"],
