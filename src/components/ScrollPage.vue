@@ -55,7 +55,7 @@ export default {
     top calc(50% - 12.5px)
     left calc(50% - 12.5px)
 .scroll-top
-  left calc(50% - 85px)
+  left calc(50% - 80px)
   transform translateX(50%)
   &:hover
     animation .5s scroll_top infinite alternate
