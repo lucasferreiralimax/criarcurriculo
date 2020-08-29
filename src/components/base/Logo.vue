@@ -40,4 +40,11 @@ export default {
   svg
     float left
     margin-right 10px
+  +break(370px)
+    width auto
+    box-sizing border-box
+    h1, small
+      font-size 15px
+    svg
+      width 40px
 </style>

@@ -9,6 +9,8 @@ input, textarea, select
   text-overflow ellipsis
   transition .3s all
   width 100%
+  +break(370px)
+    padding 10px
   &[type="radio"],
   &[type="checkbox"]
     margin 0
@@ -66,6 +68,8 @@ input, textarea, select
     width 100%
     padding-left 1em
     font-size 1.2em
+    +break(370px)
+      height 41px
   .el-input__suffix
     right 10px
     top 5px
@@ -127,6 +131,8 @@ legend
   padding 1em
   &:hover
     background rgba(color2 + 20, 1)
+  +break(370px)
+    font-size .8em
   +tablet()
     font-size 1.3em
     padding .5em
@@ -136,6 +142,8 @@ legend
     position relative
     top 4px
     width calc(100% - 90px)
+    +break(370px)
+      width calc(100% - 30px)
     +tablet()
       top 7px
   .icon

@@ -70,6 +70,9 @@ export default {
   display flex
   position relative
   pointer-events none
+  +break(370px)
+    height
+    margin-top 0
   &:before,
   &:after
     background #fff
@@ -83,6 +86,8 @@ export default {
     position absolute
     right 0
     top 0
+    +break(370px)
+      width 20%
 .layout
   background transparent
   padding 0 0 1em
@@ -98,10 +103,14 @@ export default {
     grid-template-columns repeat(3, 1fr)
     grid-column-gap 1em
     grid-row-gap 1em
+    +break(300px)
+      grid-template-columns 1fr
   .btn
     background #fff
     &:hover
       background #fff
+    +break(370px)
+      padding 6px
 .layout-1,
 .layout-2,
 .layout-3

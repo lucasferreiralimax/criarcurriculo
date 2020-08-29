@@ -32,6 +32,8 @@ export default {
   display flex
   align-items center
   justify-content center
+  +break(370px)
+    flex-direction column
   &.home
     +tablet()
       padding 20px 0 50px
@@ -66,6 +68,8 @@ export default {
     content ''
     display table
     clear both
+  +break(370px)
+    transform translate(-20px, 15px)
   .paz, .brasil
     transition .3s all
     position absolute

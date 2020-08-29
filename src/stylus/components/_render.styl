@@ -137,7 +137,6 @@
   .content
     background #fff
     bottom 0
-    // box-shadow 0 -10px 40px rgba(#000,.3)
     box-sizing border-box
     border-radius 7px
     clear both
@@ -148,17 +147,22 @@
     margin 0 auto
     outline none
     overflow auto
-    padding 3em
+    padding 2em
     transition .3s all
     width calc(100% - 20px)
     word-wrap break-word
     z-index 1
+    +break(370px)
+      height 80vh
+      padding 1em
     +tablet()
       height calc(100vh - 30px)
       left 0
       position absolute
       top 15px
       width calc(100% - 1em)
+    +desktop()
+      padding 3em
 
 +htmlDir()
   .render

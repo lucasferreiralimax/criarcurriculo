@@ -48,6 +48,9 @@ header
   z-index 99
   .btn
     border-radius 100px
+  +break(370px)
+    .logo
+      width 100%
   +desktop()
     max-width 70%
     margin 0 auto
