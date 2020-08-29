@@ -20,9 +20,7 @@ export default {
 
     for(let item of fontSelectNode.querySelectorAll('.el-select-dropdown__item')) {
       item.setAttribute('id', item.innerHTML.toLowerCase())
-      console.log(item);
     }
-    console.log(fontSelectNode.querySelectorAll('.el-select-dropdown__item'));
   },
   data () {
     return {
