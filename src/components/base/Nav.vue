@@ -49,23 +49,24 @@ export default {
   background linear-gradient(color4, rgba(color4, .6))
   bottom 0
   box-sizing border-box
-  filter blur(100px)
   left 0
   padding 20px 10px
   position fixed
   right 0
   top 0
   transform translate(150vw)
-  transition all .35s
+  transition all 1s
   z-index 991
   float left
+  opacity 0
   &:after
     content ''
     display table
     clear both
   &.active
-    filter blur(0px)
+    opacity 1
     transform translate(0)
+    transition all .5s
   .title
     color color1
     font-size 1.5em
@@ -80,7 +81,7 @@ export default {
     margin-bottom 0
   +tablet()
     background transparent
-    filter blur(0px)
+    opacity 1
     position relative
     transform translate(0)
     padding 0
