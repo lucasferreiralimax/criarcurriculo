@@ -74,6 +74,7 @@ export default {
     padding 10px
     margin-bottom .5em
     border-radius 6px
+    border 1px solid rgba(#000, .2)
     cursor pointer
     position relative
     *
