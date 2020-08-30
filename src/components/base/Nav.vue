@@ -54,19 +54,18 @@ export default {
   position fixed
   right 0
   top 0
-  transform translate(150vw)
-  transition all 1s
+  transition all .3s
   z-index 991
   float left
   opacity 0
+  pointer-events none
   &:after
     content ''
     display table
     clear both
   &.active
+    pointer-events all
     opacity 1
-    transform translate(0)
-    transition all .5s
   .title
     color color1
     font-size 1.5em
@@ -83,8 +82,8 @@ export default {
     background transparent
     opacity 1
     position relative
-    transform translate(0)
     padding 0
+    pointer-events all
     .btn
       border-radius 0
       color #fff
@@ -137,11 +136,11 @@ export default {
     position fixed
     span
       &:nth-of-type(1)
-        transform rotate(45deg)
+        transform rotate(45deg) translate(6px, 5px)
       &:nth-of-type(2)
         opacity 0
       &:nth-of-type(3)
-        transform rotate(-45deg)
+        transform rotate(-45deg) translate(6px, -5px)
 
   span
     background color4 - 80
