@@ -1,7 +1,7 @@
 describe('Validar Formatos - Basico', () => {
   it('Nome', () => {
     cy.visit('/')
-    cy.wait(7000)
+    cy.wait(1000)
     cy.get('#GET-name').clear().type('Lucas Ferreira de Lima')
   })
   it('Gênero', () => {
@@ -30,23 +30,5 @@ describe('Validar Formatos - Basico', () => {
   it('Site', () => {
     cy.get('#newSite').click()
     cy.get('#GET-site-0').type('www.curriculo-gratis.web.app')
-  })
-})
-
-describe('Validar Formatos', () => {
-  it('Formato 1', () => {
-    cy.get('#start').scrollIntoView()
-    cy.get('.layout .btn:nth-of-type(1)').click()
-    cy.wait(2000)
-  })
-  it('Formato 2', () => {
-    cy.get('.layout .btn:nth-of-type(2)').click()
-    cy.wait(2000)
-  })
-  it('Formato 3', () => {
-    cy.get('.layout .btn:nth-of-type(3)').click()
-    cy.wait(2000)
-
-    cy.get('.layout .btn:nth-of-type(1)').click()
   })
 })

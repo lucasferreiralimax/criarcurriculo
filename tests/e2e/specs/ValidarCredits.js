@@ -1,3 +1,9 @@
+function testeMakeHeart(name, lang) {
+  cy.wait(500)
+  cy.get('#locale').select(lang)
+  cy.contains('.credits_logo p', name)
+}
+
 describe('Validar Tecnologias', () => {
   it('Github', () => {
     cy.visit('/sobre')
@@ -46,74 +52,29 @@ describe('Validar Tecnologias', () => {
   it('Firefox', () => {
     cy.contains('.credits_logo p', 'Firefox')
   })
+  it('Element', () => {
+    cy.contains('.credits_logo p', 'Element')
+  })
   it('Feito com Coração', () => {
-
-    cy.wait(1000)
-    cy.get('#locale').select('es-ES')
-    cy.contains('.credits_logo p', 'Hecho con Corazón')
-
-    cy.wait(1000)
-    cy.get('#locale').select('en-US')
-    cy.contains('.credits_logo p', 'Made with Heart')
-
-    cy.wait(1000)
-    cy.get('#locale').select('ru-RU')
-    cy.contains('.credits_logo p', 'Сделано с сердцем')
-
-    cy.wait(1000)
-    cy.get('#locale').select('ja-JP')
-    cy.contains('.credits_logo p', 'ハートで作られた')
-
-    cy.wait(1000)
-    cy.get('#locale').select('fr-FR')
-    cy.contains('.credits_logo p', 'Fait avec du coeur')
-
-    cy.wait(1000)
-    cy.get('#locale').select('tr-TR')
-    cy.contains('.credits_logo p', 'Kalp ile Yapıldı')
-
-    cy.wait(1000)
-    cy.get('#locale').select('ch-ZH')
-    cy.contains('.credits_logo p', '用心做')
-
-    cy.wait(1000)
-    cy.get('#locale').select('al-DE')
-    cy.contains('.credits_logo p', 'Mit Herz gemacht')
-
-    cy.wait(1000)
-    cy.get('#locale').select('it-IT')
-    cy.contains('.credits_logo p', 'Fatto con il cuore')
-
-    cy.wait(1000)
-    cy.get('#locale').select('gr-GK')
-    cy.contains('.credits_logo p', 'Made with Heart')
-
-    cy.wait(1000)
-    cy.get('#locale').select('tl-TD')
-    cy.contains('.credits_logo p', 'ทำด้วยหัวใจ')
-
-    cy.wait(1000)
-    cy.get('#locale').select('nl-HL')
-    cy.contains('.credits_logo p', 'Gemaakt met hart')
-
-    cy.wait(1000)
-    cy.get('#locale').select('nl-NL')
-    cy.contains('.credits_logo p', 'Made with Heart')
-
-    cy.wait(1000)
-    cy.get('#locale').select('ar-SA')
-    cy.contains('.credits_logo p', 'مصنوعة من القلب')
-
-    cy.wait(1000)
-    cy.get('#locale').select('in-ID')
-    cy.contains('.credits_logo p', 'दिल से बनाया गय')
-
-    cy.wait(1000)
-    cy.get('#locale').select('vn-VT')
-    cy.contains('.credits_logo p', 'Làm bằng trái tim')
-
-    cy.wait(1000)
-    cy.get('#locale').select('pt-BR')
-    cy.contains('.credits_logo p', 'Feito com Coração')
+    testeMakeHeart('Hecho con Corazón', 'es-ES')
+    testeMakeHeart('Fet amb Cor', 'es-CA')
+    testeMakeHeart('Made with Heart', 'en-US')
+    testeMakeHeart('Сделано с сердцем', 'ru-RU')
+    testeMakeHeart('ハートで作られた', 'ja-JP')
+    testeMakeHeart('Fait avec du coeur', 'fr-FR')
+    testeMakeHeart('Kalp ile Yapıldı', 'tr-TR')
+    testeMakeHeart('用心做', 'ch-ZH')
+    testeMakeHeart('Mit Herz gemacht', 'al-DE')
+    testeMakeHeart('Fatto con il cuore', 'it-IT')
+    testeMakeHeart('Made with Heart', 'gr-GK')
+    testeMakeHeart('ทำด้วยหัวใจ', 'tl-TD')
+    testeMakeHeart('Gemaakt met hart', 'nl-HL')
+    testeMakeHeart('Made with Heart', 'nl-NL')
+    testeMakeHeart('مصنوعة من القلب', 'ar-SA')
+    testeMakeHeart('दिल से बनाया गय', 'in-ID')
+    testeMakeHeart('Làm bằng trái tim', 'vn-VT')
+    testeMakeHeart('Szívvel készült', 'hu-RV')
+    testeMakeHeart('Déanta le Croí', 'ir-IS')
+    testeMakeHeart('Feito com Coração', 'pt-BR')
   })
 })

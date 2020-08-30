@@ -1,88 +1,76 @@
+function testeTitle(name, lang) {
+  cy.get('#locale').select(lang)
+  cy.wait(500)
+  cy.get('.logo h1').then((theElement) => {
+    return theElement.text()
+  }).then(logo => {
+    expect(logo).to.contain(name)
+    cy.log(`Logo title is ${logo}`);
+  })
+  cy.wait(500)
+}
+
 describe('Validar titulo nos Idiomas', () => {
   it('Espanhol', () => {
+    cy.visit('/')
     cy.get('#app').scrollIntoView()
-    cy.get('#locale').select('es-ES')
-    cy.contains('h1', 'Resumem Libre')
-    cy.wait(2000)
+    testeTitle('Resumem Libre', 'es-ES')
+  })
+  it('Català', () => {
+    testeTitle('Resum LLiure', 'es-CA')
   })
   it('English', () => {
-    cy.get('#locale').select('en-US')
-    cy.contains('h1', 'Curriculum Free')
-    cy.wait(2000)
+    testeTitle('Curriculum Free', 'en-US')
   })
   it('русский', () => {
-    cy.get('#locale').select('ru-RU')
-    cy.contains('h1', 'Свободное резюме')
-    cy.wait(2000)
+    testeTitle('Свободное резюме', 'ru-RU')
   })
   it('Japanese', () => {
-    cy.get('#locale').select('ja-JP')
-    cy.contains('h1', 'カリキュラム 無料')
-    cy.wait(2000)
+    testeTitle('カリキュラム 無料', 'ja-JP')
   })
   it('Français', () => {
-    cy.get('#locale').select('fr-FR')
-    cy.contains('h1', 'Curriculo Gratuit')
-    cy.wait(2000)
+    testeTitle('Curriculo Gratuit', 'fr-FR')
   })
   it('Türk', () => {
-    cy.get('#locale').select('tr-TR')
-    cy.contains('h1', 'Müfredat Ücretsiz')
-    cy.wait(2000)
+    testeTitle('Müfredat Ücretsiz', 'tr-TR')
   })
   it('中国', () => {
-    cy.get('#locale').select('ch-ZH')
-    cy.contains('h1', '课程 免费')
-    cy.wait(2000)
+    testeTitle('课程 免费', 'ch-ZH')
   })
   it('Deutsch', () => {
-    cy.get('#locale').select('al-DE')
-    cy.contains('h1', 'Curriculum Free')
-    cy.wait(2000)
+    testeTitle('Curriculum Free', 'al-DE')
   })
   it('Italiano', () => {
-    cy.get('#locale').select('it-IT')
-    cy.contains('h1', 'Curriculum Gratuito')
-    cy.wait(2000)
+    testeTitle('Curriculum Gratuito', 'it-IT')
   })
   it('Ελληνικάo', () => {
-    cy.get('#locale').select('gr-GK')
-    cy.contains('h1', 'Δωρεάν Συνέχιση')
-    cy.wait(2000)
+    testeTitle('Δωρεάν Συνέχιση', 'gr-GK')
   })
   it('ไทย', () => {
-    cy.get('#locale').select('tl-TD')
-    cy.contains('h1', 'หลักสูตร ฟรี')
-    cy.wait(2000)
+    testeTitle('หลักสูตร ฟรี', 'tl-TD')
   })
   it('Neerlandesa', () => {
-    cy.get('#locale').select('nl-HL')
-    cy.contains('h1', 'Leerplan Vrij')
-    cy.wait(2000)
+    testeTitle('Leerplan Vrij', 'nl-HL')
   })
   it('Norsk', () => {
-    cy.get('#locale').select('nl-NL')
-    cy.contains('h1', 'Læreplan Gratis')
-    cy.wait(2000)
+    testeTitle('Læreplan Gratis', 'nl-NL')
   })
   it('العربي', () => {
-    cy.get('#locale').select('ar-SA')
-    cy.contains('h1', 'المناهج الدراسية حر')
-    cy.wait(2000)
+    testeTitle('المناهج الدراسية حر', 'ar-SA')
   })
   it('भारतीय', () => {
-    cy.get('#locale').select('in-ID')
-    cy.contains('h1', 'पाठ्यक्रम मुक्त')
-    cy.wait(2000)
+    testeTitle('पाठ्यक्रम मुक्त', 'in-ID')
   })
   it('Tiếng việt', () => {
-    cy.get('#locale').select('vn-VT')
-    cy.contains('h1', 'Giáo trình Vận chuyển')
-    cy.wait(2000)
+    testeTitle('Giáo trình Vận chuyển', 'vn-VT')
+  })
+  it('Ungáiris', () => {
+    testeTitle('Resume Szabad', 'hu-RV')
+  })
+  it('Ireland', () => {
+    testeTitle('Curaclam Open', 'ir-IS')
   })
   it('Português', () => {
-    cy.get('#locale').select('pt-BR')
-    cy.contains('h1', 'Currículo Grátis')
-    cy.wait(2000)
+    testeTitle('Currículo Grátis', 'pt-BR')
   })
 })

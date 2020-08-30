@@ -1,29 +1,30 @@
+function testeTema(name) {
+  cy.get('#theme_app').click()
+  cy.get('.el-select-dropdown__item').contains(name).click({ multiple: true, force: true })
+  cy.wait(500)
+}
+
 describe('Validar temas', () => {
   it('Tema Rosa', () => {
+    cy.visit('/')
     cy.get('#start').scrollIntoView()
     cy.get('#openTheme').click({ force: true })
-    cy.get('#theme_app').select('rose')
-    cy.wait(2000)
+    testeTema('Rosa')
   })
   it('Tema Cinza', () => {
-    cy.get('#theme_app').select('grey')
-    cy.wait(2000)
+    testeTema('Cinza')
   })
   it('Tema Classic', () => {
-    cy.get('#theme_app').select('classic')
-    cy.wait(2000)
+    testeTema('Clássico')
   })
   it('Tema Gold', () => {
-    cy.get('#theme_app').select('gold')
-    cy.wait(2000)
+    testeTema('Ouro')
   })
   it('Tema FullBlack', () => {
-    cy.get('#theme_app').select('full')
-    cy.wait(2000)
+    testeTema('Full Black')
   })
   it('Tema Selva', () => {
-    cy.get('#theme_app').select('jungle')
-    cy.wait(2000)
+    testeTema('Selva')
     cy.get('#openTheme').click({ force: true })
   })
 })
