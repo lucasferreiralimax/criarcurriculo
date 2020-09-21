@@ -53,7 +53,27 @@ export default {
   &.curriculo
     position relative
     transition .5s all
+    &:after
+      content 'Virtus Junxit Mors Non Separabit'
+      display block
+      background #222
+      padding 21px
+      font-size 13px
+      border-radius 10px
+      box-shadow 0 0 15px 3px rgba(#fff, .5)
+      z-index 99
+      text-shadow none
+      position absolute
+      top 0
+      text-align center
+      opacity 0
+      transition .5s all
+      transform translateY(-7px)
+      +break(370px)
+        padding 10px
     &:hover
+      &:after
+        opacity 1
       ~ .L
         .paz
           opacity 0
