@@ -6,7 +6,6 @@ export const mixinRender = {
     user: state => state.user,
     errors: state => state.errors
   }),
-  // created () { this.errorsCheck() },
   methods: {
     errorsCheck () {
       this.$store.commit('updateErrors', [])

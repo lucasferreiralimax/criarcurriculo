@@ -48,7 +48,6 @@ export default {
       localStorage.setItem('theme_app', JSON.stringify(value))
       document.querySelector('body').classList.add(value)
       this.$store.commit("updateTheme", value)
-      // this.openThemeApp()
     },
     setThemeApp () {
       let theme = localStorage.getItem('theme_app')

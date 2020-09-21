@@ -39,7 +39,6 @@ export default {
       padding 20px 0 50px
       width 50%
       transform translateX(100%)
-      // margin-left 50%
       clear both
     +desktop()
       width 33%
