@@ -38,10 +38,12 @@ export default {
     +tablet()
       padding 20px 0 50px
       width 50%
-      margin-left 50%
+      transform translateX(100%)
+      // margin-left 50%
       clear both
     +desktop()
       width 33%
+      transform translateX(150%)
 .credits
   transition 2s all
   user-select none
@@ -83,4 +85,10 @@ export default {
       opacity 0
     .brasil
       opacity 1
++htmlDir()
+  .footer.home
+    +tablet()
+      transform translateX(0)
+    +desktop()
+      transform translateX(-50%)
 </style>
