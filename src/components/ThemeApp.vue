@@ -91,8 +91,13 @@ export default {
   bottom -75px
   z-index 99
   .el-select
-    width 130px
+    max-width 130px
   +tablet()
     position fixed
     bottom 20px
++htmlDir()
+  .theme_app .el-input
+    transform translateX(-10px)
+    .el-input__suffix
+      right -8px
 </style>

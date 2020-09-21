@@ -74,13 +74,6 @@ input, textarea, select
     right 10px
     top 5px
 
-+htmlDir()
-  input, textarea, select
-    &[type="radio"],
-    &[type="checkbox"]
-      margin-right 0
-      margin-left 1em
-
 textarea
   resize vertical
 
@@ -174,3 +167,10 @@ legend
       .btn:last-of-type
         margin-left 0
         margin-right 10px
+  input, textarea, select
+    &[type="radio"],
+    &[type="checkbox"]
+      margin-right 0
+      margin-left 1em
+  .el-popper .popper__arrow::after
+    left 0
