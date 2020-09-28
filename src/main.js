@@ -7,7 +7,7 @@ import store from './store'
 import './registerServiceWorker'
 
 import VueHead from 'vue-head'
-import { DatePicker, Tag, Input, Button, Carousel, Select, Option, CarouselItem } from 'element-ui'
+import { DatePicker, Tag, Input, Button, Carousel, Select, Option, CarouselItem, Switch } from 'element-ui'
 import VueTheMask from 'vue-the-mask'
 import draggable from 'vuedraggable'
 import 'element-ui/lib/theme-chalk/icon.css'
@@ -19,6 +19,7 @@ import 'element-ui/lib/theme-chalk/select.css'
 import 'element-ui/lib/theme-chalk/option.css'
 import 'element-ui/lib/theme-chalk/carousel.css'
 import 'element-ui/lib/theme-chalk/carousel-item.css'
+import 'element-ui/lib/theme-chalk/switch.css'
 import HeaderApp from '@/components/base/Header.vue'
 import FooterApp from '@/components/base/Footer.vue'
 
@@ -38,6 +39,7 @@ Vue.use(Select)
 Vue.use(Option)
 Vue.use(Carousel)
 Vue.use(CarouselItem)
+Vue.use(Switch)
 Vue.use(VueTheMask)
 
 Vue.config.productionTip = false
