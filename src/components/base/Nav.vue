@@ -34,7 +34,18 @@ export default {
       menu_show: false
     }
   },
-  methods: { menuShow () { this.menu_show = !this.menu_show } }
+  mounted () {
+    let nav_links = document.querySelectorAll('.nav-menu .btn')
+    for(let item of nav_links) {
+      item.addEventListener('focus', this.focusOpenMenu)
+      item.addEventListener('focusout', this.focusExitMenu)
+    }
+  },
+  methods: {
+    menuShow () { this.menu_show = !this.menu_show },
+    focusOpenMenu () { this.menu_show = true },
+    focusExitMenu () { this.menu_show = false }
+  }
 }
 </script>
 <style lang="stylus">
