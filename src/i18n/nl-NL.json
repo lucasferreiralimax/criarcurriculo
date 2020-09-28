@@ -137,6 +137,7 @@
     "add": "Legg",
     "hobby": "@:aria-label.add til aktivitet eller hobby",
     "theme": "Temaknapp",
+    "icones": "Deaktiver og aktiver ikoner-knappen",
     "font_select": "Font-valgknapp",
     "course_add": "Legg til kurs",
     "course_add_new": "Legg til nytt kurs",
@@ -174,7 +175,8 @@
     "title_font": "Velg en skrift for bokstaven",
     "default": "Misligholde",
     "circle": "Sirkel",
-    "mirror": "Speil"
+    "mirror": "Speil",
+    "icones": "Synlighetsikoner"
   },
   "calendar": {
     "january": "Januar",

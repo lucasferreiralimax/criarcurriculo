@@ -137,6 +137,7 @@
     "add": "Cuir leis",
     "hobby": "@:aria-label.add gníomhaíochtaí nó caitheamh aimsire",
     "theme": "Cnaipe Téama",
+    "icones": "Cnaipe deilbhíní a dhíchumasú agus a chumasú",
     "font_select": "Cló roghnaigh cnaipe",
     "course_add": "Cuir cúrsa leis",
     "course_add_new": "Cuir cúrsa nua leis",
@@ -174,7 +175,8 @@
     "title_font": "Roghnaigh cló don litir",
     "default": "Réamhshocrú",
     "circle": "Ciorcal",
-    "mirror": "Scáthán"
+    "mirror": "Scáthán",
+    "icones": "Deilbhíní Infheictheachta"
   },
   "calendar": {
     "january": "Eanáir",

@@ -137,6 +137,7 @@
     "add": "eklemek",
     "hobby": "aktivite veya hobi ekle",
     "theme": "Tema düğmesi",
+    "icones": "Simgeler düğmesini devre dışı bırakın ve etkinleştirin",
     "font_select": "Yazı tipi seçme düğmesi",
     "course_add": "Kurs ekle",
     "course_add_new": "Yeni kurs ekle",
@@ -174,7 +175,8 @@
     "title_font": "Harf için bir yazı tipi seçin",
     "default": "Varsayılan",
     "circle": "Daire",
-    "mirror": "Ayna"
+    "mirror": "Ayna",
+    "icones": "Görünürlük Simgeleri"
   },
   "calendar": {
     "january": "ocak",

@@ -137,6 +137,7 @@
     "add": "加",
     "hobby": "增@:aria-label.add活动或爱好",
     "theme": "主题按钮",
+    "icones": "禁用和启用图标按钮",
     "font_select": "字体选择按钮",
     "course_add": "添加课程",
     "course_add_new": "添加新课程",
@@ -174,7 +175,8 @@
     "title_font": "为字母选择字体",
     "default": "默认",
     "circle": "圈",
-    "mirror": "镜子"
+    "mirror": "镜子",
+    "icones": "可见性图标"
   },
   "calendar": {
     "january": "一月",

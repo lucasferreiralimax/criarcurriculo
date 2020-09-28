@@ -137,6 +137,7 @@
     "add": "Ajouter",
     "hobby": "@:aria-label.add des activités ou un passe-temps",
     "theme": "bouton de thème",
+    "icones": "Bouton Désactiver et activer les icônes",
     "font_select": "bouton de sélection de police",
     "course_add": "Ajouter un cours",
     "course_add_new": "Ajouter un nouveau cours",
@@ -174,7 +175,8 @@
     "title_font": "Choisissez une police pour la lettre",
     "default": "Standard",
     "circle": "Circulaire",
-    "mirror": "Miroir"
+    "mirror": "Miroir",
+    "icones": "Icônes de visibilité"
   },
   "calendar": {
     "january": "Janvier",

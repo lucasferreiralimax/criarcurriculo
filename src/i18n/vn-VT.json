@@ -137,6 +137,7 @@
     "add": "thêm",
     "hobby": "@:aria-label.add hoạt động hoặc sở thích",
     "theme": "Nút chủ đề",
+    "icones": "Nút tắt và bật biểu tượng",
     "font_select": "Nút chọn nút",
     "course_add": "Thêm khóa học",
     "course_add_new": "Thêm khóa học mới",
@@ -174,7 +175,8 @@
     "title_font": "Chọn phông chữ cho chữ cái",
     "default": "Mặc định",
     "circle": "Vòng tròn",
-    "mirror": "Gương"
+    "mirror": "Gương",
+    "icones": "Biểu tượng khả năng hiển thị"
   },
   "calendar": {
     "january": "Tháng giêng",

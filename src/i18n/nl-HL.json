@@ -137,6 +137,7 @@
     "add": "Toevoegen",
     "hobby": "activiteit of hobby @:aria-label.add",
     "theme": "Themaknop",
+    "icones": "Knop Pictogrammen in- en uitschakelen",
     "font_select": "Knop voor lettertypeselectie",
     "course_add": "Cursus toevoegen",
     "course_add_new": "Nieuwe cursus toevoegen",
@@ -174,7 +175,8 @@
     "title_font": "Kies een lettertype voor de letter",
     "default": "Standaard",
     "circle": "Cirkel",
-    "mirror": "Speil"
+    "mirror": "Speil",
+    "icones": "Zichtbaarheid pictogrammen"
   },
   "calendar": {
     "january": "Januari",

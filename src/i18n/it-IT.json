@@ -137,6 +137,7 @@
     "add": "Aggiungere",
     "hobby": "@:aria-label.add attività o hobby",
     "theme": "Pulsante Tema",
+    "icones": "Disabilita e abilita il pulsante delle icone",
     "font_select": "Pulsante di selezione dei caratteri",
     "course_add": "Aggiungi corso",
     "course_add_new": "Aggiungi nuovo corso",
@@ -174,7 +175,8 @@
     "title_font": "Scegli un carattere per la lettera",
     "default": "il difetto",
     "circle": "Cerchio",
-    "mirror": "Specchio"
+    "mirror": "Specchio",
+    "icones": "Icone di visibilità"
   },
   "calendar": {
     "january": "Gennaio",

@@ -137,6 +137,7 @@
     "add": "Afegir",
     "hobby": "@:aria-label.add activities o passatemps",
     "theme": "botó de tema",
+    "icones": "Desactiva i activa el botó d'icones",
     "font_select": "Botó de selecció de font",
     "course_add": "@:aria-label.add curso",
     "course_add_new": "@:aria-label.add nou curs",
@@ -174,7 +175,8 @@
     "title_font": "Tria una font per la lletra",
     "default": "Padró",
     "circle": "Circular",
-    "mirror": "Mirall"
+    "mirror": "Mirall",
+    "icones": "Icones de visibilitat"
   },
   "calendar": {
     "january": "Gener",

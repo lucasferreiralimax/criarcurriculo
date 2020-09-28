@@ -137,6 +137,7 @@
     "add": "Add",
     "hobby": "@:aria-label.add tevékenység vagy hobbi",
     "theme": "Téma gombra",
+    "icones": "Az ikonok letiltása és engedélyezése gomb",
     "font_select": "Forrásválasztó gomb",
     "course_add": "@:aria-label.add tanfolyam",
     "course_add_new": "@:aria-label.add új tanfolyam",
@@ -174,7 +175,8 @@
     "title_font": "Válasszon betűtípust a levélhez",
     "default": "Minta",
     "circle": "Kör alakú",
-    "mirror": "Tükör"
+    "mirror": "Tükör",
+    "icones": "Láthatósági ikonok"
   },
   "calendar": {
     "january": "Január",

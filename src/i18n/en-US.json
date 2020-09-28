@@ -137,6 +137,7 @@
     "add": "Add",
     "hobby": "@:aria-label.add activities or hobby",
     "theme": "Theme button",
+    "icones": "Disable and enable icons button",
     "font_select": "Font select button",
     "course_add": "Add course",
     "course_add_new": "Add new course",
@@ -174,7 +175,8 @@
     "title_font": "Choose a font for the letter",
     "default": "Default",
     "circle": "Circle",
-    "mirror": "Mirror"
+    "mirror": "Mirror",
+    "icones": "Visibility Icons"
   },
   "calendar": {
     "january": "January",

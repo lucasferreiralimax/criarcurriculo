@@ -137,6 +137,7 @@
     "add": "أضف",
     "hobby": " @:aria-label.add نشاطًا أو هواية",
     "theme": "زر الموضوع",
+    "icones": "زر تعطيل وتمكين الرموز",
     "font_select": "اختيار زر الخط",
     "course_add": "إضافة بالطبع",
     "course_add_new": "إضافة دورة جديدة",
@@ -174,7 +175,8 @@
     "title_font": "اختر خطًا للحرف",
     "default": "قياسي",
     "circle": "الدائرة",
-    "mirror": "مرآة"
+    "mirror": "مرآة",
+    "icones": "رموز الرؤية"
   },
   "calendar": {
     "january": "كانون الثاني",

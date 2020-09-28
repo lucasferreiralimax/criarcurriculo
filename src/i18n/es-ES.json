@@ -137,6 +137,7 @@
     "add": "Agregar",
     "hobby": "@:aria-label.add activities o pasatiempos",
     "theme": "botón de tema",
+    "icones": "Botón de deshabilitar y habilitar iconos",
     "font_select": "Botón de selección de fuente",
     "course_add": "Agregar curso",
     "course_add_new": "Agregar nuevo curso",
@@ -174,7 +175,8 @@
     "title_font": "Elige una fuente para la letra",
     "default": "Padrón",
     "circle": "Circular",
-    "mirror": "Espejo"
+    "mirror": "Espejo",
+    "icones": "Iconos de visibilidad"
   },
   "calendar": {
     "january": "Enero",

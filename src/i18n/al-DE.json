@@ -137,6 +137,7 @@
     "add": "Hinzufügen",
     "hobby": "Aktivität oder Hobby @:aria-label.add",
     "theme": "Theme-Schaltfläche",
+    "icones": "Schaltfläche Symbole deaktivieren und aktivieren",
     "font_select": "Schaltfläche zum Auswählen der Schriftart",
     "course_add": "Kurs hinzufügen",
     "course_add_new": "Neuen Kurs hinzufügen",
@@ -174,7 +175,8 @@
     "title_font": "Wählen Sie eine Schriftart für den Buchstaben",
     "default": "Standard",
     "circle": "Kreis",
-    "mirror": "Reflector"
+    "mirror": "Reflector",
+    "icones": "Sichtbarkeit Symbole"
   },
   "calendar": {
     "january": "Januar",

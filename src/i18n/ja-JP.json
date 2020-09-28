@@ -137,6 +137,7 @@
     "add": "追加する",
     "hobby": "アクティビティや趣味を追加",
     "theme": "主题按钮",
+    "icones": "アイコンボタンを無効または有効にする",
     "font_select": "字体选择按钮",
     "course_add": "添加课程",
     "course_add_new": "添加新课程",
@@ -174,7 +175,8 @@
     "title_font": "文字のフォントを選択してください",
     "default": "デフォルト",
     "circle": "サークル",
-    "mirror": "鏡"
+    "mirror": "鏡",
+    "icones": "可視性アイコン"
   },
   "calendar": {
     "january": "一月",
