@@ -6,8 +6,8 @@
   },
   "view": {
     "home": {
-      "name1": "Currículo",
-      "name2": "Grátis",
+      "name1": "Criar",
+      "name2": "Currículo",
       "text1": "Criar currículo grátis, rápido e fácil",
       "text2": "Preencha o formulário com suas informações",
       "print": "Imprimir",
@@ -16,8 +16,8 @@
       "link_source": "Link código fonte do projeto"
     },
     "about": {
-      "text1": "Esse web aplicativo é uma ação social e auxiliará você a criar um curriculo profissional, elegante e objetivo, de uma forma totalmente gratuita!",
-      "text2": "Criado por um rapaz simples que mesmo com as dificuldades do seu cotidiano, focou e dedicou seus estudos para elaborar esse projeto.",
+      "text1": "Esse web aplicativo é uma ação social e auxiliará você a criar um curriculo profissional, elegante e objetivo, de uma forma simples e objetiva!",
+      "text2": "Criado por um rapaz simples onde mesmo com as dificuldades do seu cotidiano, focou e dedicou seus estudos para elaborar e realizar esse projeto.",
       "text3": "Se você deseja ajudar de alguma forma existe esse",
       "text4": "repositório no github",
       "contact": "Ou entre em contato lucasferreiralimax@gmail.com",

@@ -6,9 +6,9 @@
   },
   "view": {
     "home": {
-      "name1": "Müfredat",
-      "name2": "Ücretsiz",
-      "text1": "Ücretsiz, hızlı ve kolay bir müfredat oluşturun",
+      "name1": "Oluşturmak",
+      "name2": "Müfredat",
+      "text1": "Oluşturmak Müfredat Ücretsiz, hızlı ve kolay bir müfredat oluşturun",
       "text2": "Formu bilgilerinizle doldurun",
       "print": "Yazdır",
       "delete": "Her şeyi sil!",
