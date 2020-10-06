@@ -61,10 +61,6 @@ export const mixinRender = {
     },
     resetForm () {
       if(window.confirm(this.$t('form.choice'))) {
-        user.name = ''
-        user.age = null
-        user.maritalstatus = ''
-        user.genero = ''
         this.$store.commit('updateUser', user)
         this.$store.commit('updateErrors', [])
         this.updateStore()
