@@ -8,7 +8,7 @@
 ---
 ## :cloud: Link's
 > Yo, ho, yo, ho :checkered_flag:
-* [criar-curriculo.web.app](https://criar-curriculo.web.app)
+* Infelizmente não tenho condições para manter o projeto online e toda estrutura ficara offline desculpe não poder ajudar o Mundo não precisa de projetos como esse me desculpe qualquer inconveniência
 >
 ![Currículo Grátis](https://lucasferreiralimax-dev.web.app/assets/projects/boasorte.jpg)
 # :yin_yang: Ajude também
