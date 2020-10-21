@@ -14,63 +14,63 @@ describe('Validar titulo nos Idiomas', () => {
   it('Espanhol', () => {
     cy.visit('/')
     cy.get('#app').scrollIntoView()
-    testeTitle('Resumem Libre', 'es-ES')
+    testeTitle('Crear Resumem', 'es-ES')
   })
   it('Català', () => {
-    testeTitle('Resum LLiure', 'es-CA')
+    testeTitle('Crear Resum', 'es-CA')
   })
   it('English', () => {
-    testeTitle('Curriculum Free', 'en-US')
+    testeTitle('Create Curriculum', 'en-US')
   })
   it('русский', () => {
-    testeTitle('Свободное резюме', 'ru-RU')
+    testeTitle('Создайте Свободное', 'ru-RU')
   })
   it('Japanese', () => {
-    testeTitle('カリキュラム 無料', 'ja-JP')
+    testeTitle('作成する カリキュラム', 'ja-JP')
   })
   it('Français', () => {
-    testeTitle('Curriculo Gratuit', 'fr-FR')
+    testeTitle('Créer Curriculo', 'fr-FR')
   })
   it('Türk', () => {
-    testeTitle('Müfredat Ücretsiz', 'tr-TR')
+    testeTitle('Oluşturmak Müfredat', 'tr-TR')
   })
   it('中国', () => {
-    testeTitle('课程 免费', 'ch-ZH')
+    testeTitle('创造 课程', 'ch-ZH')
   })
   it('Deutsch', () => {
-    testeTitle('Curriculum Free', 'al-DE')
+    testeTitle('Erstellen Curriculum', 'al-DE')
   })
   it('Italiano', () => {
-    testeTitle('Curriculum Gratuito', 'it-IT')
+    testeTitle('Creare Curriculum', 'it-IT')
   })
   it('Ελληνικάo', () => {
-    testeTitle('Δωρεάν Συνέχιση', 'gr-GK')
+    testeTitle('δημιουργώ Δωρεάν', 'gr-GK')
   })
   it('ไทย', () => {
-    testeTitle('หลักสูตร ฟรี', 'tl-TD')
+    testeTitle('สร้าง หลักสูตร', 'tl-TD')
   })
   it('Neerlandesa', () => {
-    testeTitle('Leerplan Vrij', 'nl-HL')
+    testeTitle('Creëren Leerplan', 'nl-HL')
   })
   it('Norsk', () => {
-    testeTitle('Læreplan Gratis', 'nl-NL')
+    testeTitle('Skape Læreplan', 'nl-NL')
   })
   it('العربي', () => {
-    testeTitle('المناهج الدراسية حر', 'ar-SA')
+    testeTitle('خلق منهاج دراسي', 'ar-SA')
   })
   it('भारतीय', () => {
-    testeTitle('पाठ्यक्रम मुक्त', 'in-ID')
+    testeTitle('सृजन करना पाठ्यक्रम', 'in-ID')
   })
   it('Tiếng việt', () => {
-    testeTitle('Giáo trình Vận chuyển', 'vn-VT')
+    testeTitle('Tạo nên Giáo trình', 'vn-VT')
   })
   it('Ungáiris', () => {
-    testeTitle('Resume Szabad', 'hu-RV')
+    testeTitle('Teremt Resume', 'hu-RV')
   })
   it('Ireland', () => {
-    testeTitle('Curaclam Open', 'ir-IS')
+    testeTitle('Cruthaigh Curaclam', 'ir-IS')
   })
   it('Português', () => {
-    testeTitle('Currículo Grátis', 'pt-BR')
+    testeTitle('Criar Currículo', 'pt-BR')
   })
 })

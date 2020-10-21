@@ -28,7 +28,6 @@ describe('Validar Formatos - Basico', () => {
     cy.get('#GET-email-0').type('lucasferreiralimax@gmail.com')
   })
   it('Site', () => {
-    cy.get('#newSite').click()
-    cy.get('#GET-site-0').type('www.curriculo-gratis.web.app')
+    cy.get('#GET-site-0').type('criar-curriculo.web.app')
   })
 })

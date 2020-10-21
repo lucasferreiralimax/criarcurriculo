@@ -35,8 +35,7 @@ describe('Validar curriculo simples', () => {
     cy.get('#GET-email-0').type('lucasferreiralimax@gmail.com')
   })
   it('Site', () => {
-    cy.get('#newSite').click()
-    cy.get('#GET-site-0').type('www.curriculo-gratis.web.app')
+    cy.get('#GET-site-0').type('criar-curriculo.web.app')
   })
 })
 
@@ -63,7 +62,7 @@ describe('Validar Formação Acadêmica', () => {
     cy.get('#GET-courseabout-0').type('Desenvolver aplicação e soluções para ajudar os seres vivos.', {force: true})
   })
   it('Referência', () => {
-    cy.get('#GET-schoolLink-0').type('https://curriculo-gratis.web.app')
+    cy.get('#GET-schoolLink-0').type('https://criar-curriculo.web.app')
   })
 })
 
@@ -87,6 +86,6 @@ describe('Validar Experiências', () => {
     cy.get('#GET-expsabout-0').type('Currículo Grátis', {force: true})
   })
   it('Referência', () => {
-    cy.get('#GET-companyLink-0').type('https://curriculo-gratis.web.app')
+    cy.get('#GET-companyLink-0').type('https://criar-curriculo.web.app')
   })
 })

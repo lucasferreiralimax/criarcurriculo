@@ -26,7 +26,6 @@ describe('Validar erros curriculo simples', () => {
     cy.get('#GET-email-0').clear()
   })
   it('Site limpo', () => {
-    cy.get('#newSite').click()
     cy.get('#GET-site-0').clear()
   })
 })
