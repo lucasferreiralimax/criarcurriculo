@@ -57,6 +57,9 @@ export const mixinUpdateStore = {
         case 'updateSite':
           this.$store.commit(name, this.user.sites)
           break
+        case 'updateLanguage':
+          this.$store.commit(name, this.user.languages)
+          break
         case 'updateExpCheck':
         case 'updateCourserCheck':
           this.$store.commit(name, { id: id, value: e.target.checked })

@@ -62,6 +62,9 @@ export default new Vuex.Store({
     updateSite (state, value) {
       state.user.sites = value
     },
+    updateLanguage (state, value) {
+      state.user.languages = value
+    },
     updateExp (state, value, id) {
       state.user.exps[id] = value
     },
