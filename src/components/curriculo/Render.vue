@@ -66,6 +66,17 @@
           h2 {{ $t('form.about_me') }}
           p
             pre {{ user.about }}
+        .languages(v-if="user.languages.length !== 0")
+          h2 {{ user.languages.length <= 1 ? $tc('form.language', 1) : $tc('form.language', 2) }}
+          draggable(tag="ul"
+                    :list="user.languages"
+                    ghost-class="ghost"
+                    @start="dragging = true"
+                    @end="dragging = false"
+                    @change="updateVuex('updateSite', $event)")
+            li(v-if="user.languages" v-for="(language, key, index) in user.languages")
+              label(:for="'GET-language-' + key" v-if="language")
+                | {{ language }}
         label.hobby(v-if="user.hobbies[0] && user.name")
           h2 {{ user.hobbies.length <= 1 ? $tc('form.hobby', 1) : $tc('form.hobby', 2) }}
           draggable(tag="ul"
