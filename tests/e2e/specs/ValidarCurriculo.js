@@ -34,6 +34,20 @@ describe('Validar curriculo simples', () => {
     cy.get('#newEmail').click()
     cy.get('#GET-email-0').type('lucasferreiralimax@gmail.com')
   })
+  it('Idiomas', () => {
+    // clean languages
+    cy.get('[for^=GET-language] input').each(($li, index, $lis) => {
+      cy.wrap($li).clear()
+    })
+    // new input languages
+    cy.get('#GET-language-0').type('Fluente Português Brasileiro')
+    cy.get('[for=GET-language-0] .btn.plus').click()
+    cy.get('#GET-language-1').type('Speak Basic English')
+    cy.get('[for=GET-language-1] .btn.plus').click()
+    cy.get('#GET-language-2').type('Hablo español básico')
+    cy.get('[for=GET-language-2] .btn.plus').click()
+    cy.get('#GET-language-3').type('Je parle les bases du Français')
+  })
   it('Site', () => {
     cy.get('#GET-site-0').type('criar-curriculo.web.app')
   })

@@ -28,6 +28,11 @@ describe('Validar erros curriculo simples', () => {
   it('Site limpo', () => {
     cy.get('#GET-site-0').clear()
   })
+  it('Idiomas limpo', () => {
+    cy.get('[for^=GET-language] input').each(($li, index, $lis) => {
+      cy.wrap($li).clear()
+    })
+  })
 })
 
 describe('Formação Acadêmica limpa', () => {
