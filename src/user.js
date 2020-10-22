@@ -21,6 +21,7 @@ export let user = {
   telephones: [],
   emails: [],
   sites: ['www.ayrtonsenna.com.br'],
+  languages: ['Fluente Português Brasileiro', 'Speak Basic English', 'Hablo español básico', 'Je parle les bases du Français'],
   exps: [],
   coursers: []
 }
