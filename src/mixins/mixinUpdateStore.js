@@ -100,6 +100,8 @@ export const mixinUpdateStore = {
       if(store) {
         // Store Update
         store = JSON.parse(store)
+        // avoiding data break localStorage new component languages
+        store.languages = []
         this.$store.commit("updateUser", store)
       }
     }
