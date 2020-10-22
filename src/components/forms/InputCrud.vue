@@ -11,7 +11,7 @@
           i -
         button.btn.plus.bullet.small.left.ml-1(type="button" @click="newInput(value, vuex)" :aria-label="$t(`aria-label.${name}_add_new`)")
           i +
-      | {{ $t(`form.${translate}`) }}:
+      | {{ language ? $tc(`form.${translate}`, 1) : $t(`form.${translate}`) }}:
       template(v-if="type == 'tel'")
         input.handle(:id="`GET-${name}-` + key"
               :class="{ error: !user[value][key] && errors ? errors.length : false }"
@@ -41,7 +41,7 @@ import { focusLabel } from '@/directive/focus.js'
 
 export default {
   name: 'input-crud',
-  props: ['name', 'value', 'type', 'vuex', 'translate', 'errors'],
+  props: ['name', 'value', 'type', 'vuex', 'translate', 'language', 'errors'],
   mixins: [mixinUpdateStore],
   directives: { 'focus-label': focusLabel },
   data () {
