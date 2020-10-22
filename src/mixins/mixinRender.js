@@ -35,6 +35,11 @@ export const mixinRender = {
           if (!this.user.sites[i]) { this.errors.push(this.$t('form.errors.site')) }
         }
       }
+      if (this.user.languages.length) {
+        for(let i = 0; this.user.languages.length > i; i++) {
+          if (!this.user.languages[i]) { this.errors.push(this.$t('form.errors.language')) }
+        }
+      }
       if (this.user.exps.length) {
         for(let i = 0; this.user.exps.length > i; i++) {
           if (!this.user.exps[i].experience.name) { this.errors.push(this.$t('form.errors.company')) }
