@@ -5,6 +5,11 @@ module.exports = {
     'json',
     'vue'
   ],
+  globals: {
+    'vue-jest': {
+      pug: { doctype: 'html' }
+    }
+  },
   transform: {
     '^.+\\.vue$': 'vue-jest',
     '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
