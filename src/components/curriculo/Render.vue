@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.render(:class="{ 'viewfixed' : viewfixed }")
+  section.render(:class="{ 'viewfixed' : viewfixed, 'no-icon' : !icon_render }")
     .view
       .content
         label.figure(for="GET-photo" v-if="user.photo")
@@ -158,7 +158,10 @@ import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
 
 export default {
   name: 'render',
-  computed: mapState({ user: state => state.user }),
+  computed: mapState({
+    user: state => state.user,
+    icon_render: state => state.icon_render
+  }),
   mixins: [mixinUpdateStore],
   created () { window.addEventListener('scroll', this.viewFixed) },
   destroyed () { window.removeEventListener('scroll', this.viewFixed) },

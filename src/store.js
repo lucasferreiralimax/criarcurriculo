@@ -9,9 +9,13 @@ export default new Vuex.Store({
     accounts: [],
     user: user,
     errors: [],
+    icon_render: true,
     theme_app: 'default'
   },
   mutations: {
+    updateIconRender (state, value) {
+      state.icon_render = value
+    },
     updateTheme (state, value) {
       state.theme_app = value
     },

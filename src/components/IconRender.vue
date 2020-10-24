@@ -5,42 +5,33 @@
       path(d="M271 226c0-15.09 7.491-28.365 18.887-36.53C279.661 184.235 268.255 181 256 181c-41.353 0-75 33.647-75 75s33.647 75 75 75c37.024 0 67.668-27.034 73.722-62.358C299.516 278.367 271 255.522 271 226z")
     | {{ $t('layout.icones') }}
     el-switch(
-      v-model="iconShow"
+      v-model="icon_render"
       active-color="#13ce66"
       inactive-color="#ff4949")
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'icon-render',
-  data () {
-    return {
-      iconShow: true
-    }
-  },
+  computed: mapState({ icon_render: state => state.icon_render }),
   mounted () {
-    let iconRender = localStorage.getItem('icon_render_app')
-    if(iconRender) {
-      this.iconShow = true
+    if(localStorage.getItem('icon_render_app')) {
+      this.$store.commit("updateIconRender", true)
     } else {
-      this.iconShow = false
+      this.$store.commit("updateIconRender", false)
     }
-    this.iconRender()
   },
   methods: {
-    iconRender () {
-      let render = document.querySelector('.render')
-      if(this.iconShow) {
-        localStorage.setItem('icon_render_app', true)
-        render.classList.remove('no-icon')
-      } else {
-        localStorage.removeItem('icon_render_app')
-        render.classList.add('no-icon')
-      }
-    },
     iconToggle () {
-      this.iconShow = !this.iconShow
-      this.iconRender()
+      if(this.icon_render) {
+        this.$store.commit("updateIconRender", false)
+        localStorage.removeItem('icon_render_app')
+      } else {
+        this.$store.commit("updateIconRender", true)
+        localStorage.setItem('icon_render_app', true)
+      }
     }
   }
 }
