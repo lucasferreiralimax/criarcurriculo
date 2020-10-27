@@ -18,8 +18,10 @@ export default {
   mounted () {
     let fontSelectNode = document.querySelector('.fontSelect')
 
-    for(let item of fontSelectNode.querySelectorAll('.el-select-dropdown__item')) {
-      item.setAttribute('id', item.innerHTML.toLowerCase())
+    if(fontSelectNode) {
+      for(let item of fontSelectNode.querySelectorAll('.el-select-dropdown__item')) {
+        item.setAttribute('id', item.innerHTML.toLowerCase())
+      }
     }
   },
   data () {
