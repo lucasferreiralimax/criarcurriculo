@@ -1,7 +1,5 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 
-import { mutations } from '@/mutations'
-import Vuex from 'vuex'
 import FontSelect from './FontSelect.vue'
 import { Select, Option } from 'element-ui'
 
