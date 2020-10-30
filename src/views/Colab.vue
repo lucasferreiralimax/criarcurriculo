@@ -13,8 +13,10 @@ import Colab from '@/components/Colab'
 export default {
   name: 'about',
   head: {
-    title: {
-      inner: 'Colaboradores'
+    title: function () {
+      return {
+        inner: this.$t('view.about.colab')
+      }
     }
   },
   components: { Colab }

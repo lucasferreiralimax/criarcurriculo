@@ -31,8 +31,10 @@ import Hitech from '@/components/Hitech'
 export default {
   name: 'about',
   head: {
-    title: {
-      inner: 'Sobre'
+    title: function () {
+      return {
+        inner: this.$t('nav.about')
+      }
     }
   },
   components: { Hitech }

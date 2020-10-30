@@ -10,8 +10,10 @@ section.mark.text-center
 export default {
   name: 'not-found',
   head: {
-    title: {
-      inner: 'Página não encontrada'
+    title: function () {
+      return {
+        inner: this.$t('view.notfound.text1')
+      }
     }
   }
 }
