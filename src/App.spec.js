@@ -22,4 +22,13 @@ describe('App', () => {
   it('is App a vue instance', () => {
     expect(wrapper.isVueInstance()).toBe(true)
   })
+  it('App contains HeaderApp', () => {
+    expect(wrapper.contains(HeaderApp)).toBe(true)
+  })
+  it('App contains Main', () => {
+    expect(wrapper.contains('main')).toBe(true)
+  })
+  it('App contains FooterApp', () => {
+    expect(wrapper.contains(FooterApp)).toBe(true)
+  })
 })
