@@ -1,5 +1,5 @@
 <template lang="pug">
-section.accounts(v-if="accounts.length !== 0")
+section.accounts(v-if="accounts[0]")
   h2 {{ $t('view.home.cache')}}
   draggable(:list="accounts"
     ghost-class="ghost"
