@@ -14,18 +14,18 @@ describe('Header', () => {
     expect(wrapper.exists()).toBeTruthy()
   })
   it('Header contains LogoApp', () => {
-    expect(wrapper.contains(LogoApp)).toBe(true)
+    expect(wrapper.findComponent(LogoApp).exists()).toBeTruthy()
   })
   it('Header contains NavMenu', () => {
-    expect(wrapper.contains(NavMenu)).toBe(true)
+    expect(wrapper.findComponent(NavMenu).exists()).toBeTruthy()
   })
   it('Header contains Pluralization', () => {
-    expect(wrapper.contains(Pluralization)).toBe(true)
+    expect(wrapper.findComponent(Pluralization).exists()).toBeTruthy()
   })
   it('Header contains ThemeApp', () => {
-    expect(wrapper.contains(ThemeApp)).toBe(true)
+    expect(wrapper.findComponent(ThemeApp).exists()).toBeTruthy()
   })
   it('Header contains ScrollPage', () => {
-    expect(wrapper.contains(ScrollPage)).toBe(true)
+    expect(wrapper.findComponent(ScrollPage).exists()).toBeTruthy()
   })
 })

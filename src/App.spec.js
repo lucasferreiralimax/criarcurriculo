@@ -23,12 +23,12 @@ describe('App', () => {
     expect(wrapper.exists()).toBeTruthy()
   })
   it('App contains HeaderApp', () => {
-    expect(wrapper.contains(HeaderApp)).toBe(true)
+    expect(wrapper.findComponent(HeaderApp).exists()).toBeTruthy()
   })
   it('App contains Main', () => {
-    expect(wrapper.contains('main')).toBe(true)
+    expect(wrapper.get('main')).toBeTruthy()
   })
   it('App contains FooterApp', () => {
-    expect(wrapper.contains(FooterApp)).toBe(true)
+    expect(wrapper.findComponent(FooterApp).exists()).toBeTruthy()
   })
 })

@@ -11,9 +11,9 @@ describe('Footer', () => {
     expect(wrapper.exists()).toBeTruthy()
   })
   it('Footer contains LogoApp', () => {
-    expect(wrapper.contains(LogoApp)).toBe(true)
+    expect(wrapper.findComponent(LogoApp).exists()).toBeTruthy()
   })
   it('Footer contains credits L', () => {
-    expect(credits.exists()).toBe(true)
+    expect(credits.exists()).toBeTruthy()
   })
 })
