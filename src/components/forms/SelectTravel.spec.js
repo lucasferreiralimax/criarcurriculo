@@ -18,6 +18,6 @@ const wrapper = shallowMount(SelectTravel, { localVue, store })
 
 describe('SelectTravel', () => {
   it('is SelectTravel a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
 })

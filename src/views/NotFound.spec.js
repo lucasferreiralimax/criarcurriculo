@@ -10,6 +10,6 @@ const wrapper = shallowMount(NotFound, {
 
 describe('NotFound', () => {
   it('is NotFound a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
 })

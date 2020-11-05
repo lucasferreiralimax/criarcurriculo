@@ -18,6 +18,6 @@ const wrapper = shallowMount(InputPhoto, { localVue, store })
 
 describe('InputPhoto', () => {
   it('is InputPhoto a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
 })

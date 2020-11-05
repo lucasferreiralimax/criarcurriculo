@@ -21,6 +21,6 @@ const wrapper = shallowMount(SelectGenre, { localVue, store })
 
 describe('SelectGenre', () => {
   it('is SelectGenre a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
 })

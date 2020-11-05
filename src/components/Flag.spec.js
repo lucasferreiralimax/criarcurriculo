@@ -6,7 +6,7 @@ const wrapper = shallowMount(Flag)
 
 describe('Flag', () => {
   it('is Flag a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
   it('Flag Brasil', async () => {
     await wrapper.setProps({ type: 'pt-BR' })

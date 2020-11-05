@@ -21,6 +21,6 @@ const wrapper = shallowMount(IconRender, { store, localVue })
 
 describe('IconRender', () => {
   it('is IconRender a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
 })

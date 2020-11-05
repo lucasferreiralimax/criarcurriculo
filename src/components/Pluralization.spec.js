@@ -6,6 +6,6 @@ const wrapper = shallowMount(Pluralization)
 
 describe('Pluralization', () => {
   it('is Pluralization a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
 })

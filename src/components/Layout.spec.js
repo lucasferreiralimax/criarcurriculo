@@ -6,6 +6,6 @@ const wrapper = shallowMount(Layout)
 
 describe('Layout', () => {
   it('is Layout a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
 })

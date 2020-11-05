@@ -12,6 +12,6 @@ const wrapper = shallowMount(FontSelect, { localVue })
 
 describe('FontSelect', () => {
   it('is FontSelect a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
 })

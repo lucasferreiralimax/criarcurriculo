@@ -6,6 +6,6 @@ const wrapper = shallowMount(ScrollPage)
 
 describe('ScrollPage', () => {
   it('is ScrollPage a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
 })

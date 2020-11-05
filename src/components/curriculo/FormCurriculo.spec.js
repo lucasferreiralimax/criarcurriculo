@@ -21,6 +21,6 @@ const wrapper = shallowMount(FormCurriculo, { store, localVue })
 
 describe('FormCurriculo', () => {
   it('is FormCurriculo a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
 })

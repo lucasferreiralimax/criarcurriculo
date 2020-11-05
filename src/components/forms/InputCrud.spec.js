@@ -20,6 +20,6 @@ const wrapper = shallowMount(InputCrud, { localVue, store })
 
 describe('InputCrud', () => {
   it('is InputCrud a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
 })

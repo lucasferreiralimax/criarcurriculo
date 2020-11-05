@@ -8,7 +8,7 @@ const credits = wrapper.find('.credits.L')
 
 describe('Footer', () => {
   it('is Footer a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
   it('Footer contains LogoApp', () => {
     expect(wrapper.contains(LogoApp)).toBe(true)

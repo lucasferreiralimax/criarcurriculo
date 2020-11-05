@@ -18,6 +18,6 @@ const wrapper = shallowMount(TextareaApp, { localVue, store })
 
 describe('TextareaApp', () => {
   it('is TextareaApp a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
 })

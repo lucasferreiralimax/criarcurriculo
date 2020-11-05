@@ -18,6 +18,6 @@ const wrapper = shallowMount(NotificationAlert, { store, localVue })
 
 describe('NotificationAlert', () => {
   it('is NotificationAlert a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
 })

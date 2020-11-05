@@ -21,6 +21,6 @@ const wrapper = shallowMount(Render, { store, localVue })
 
 describe('Render', () => {
   it('is Render a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
 })

@@ -19,6 +19,6 @@ const wrapper = shallowMount(ThemeApp, { store, localVue })
 
 describe('ThemeApp', () => {
   it('is ThemeApp a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
 })

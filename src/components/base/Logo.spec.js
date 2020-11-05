@@ -6,6 +6,6 @@ const wrapper = shallowMount(Logo)
 
 describe('Logo', () => {
   it('is Logo a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
 })

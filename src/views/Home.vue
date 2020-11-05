@@ -56,6 +56,7 @@ export default {
   .carousel    
     margin 1em 0 2em
     padding 0 11px
+    overflow hidden
     +desktop()
       margin 1em auto 2em
       padding 0
@@ -65,6 +66,8 @@ export default {
     +tablet()
       height 300px
   .carousel-item
+    position absolute
+    top 0
     &.github
     &.help
       background #fff

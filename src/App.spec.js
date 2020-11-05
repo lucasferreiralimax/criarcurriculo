@@ -20,7 +20,7 @@ const wrapper = shallowMount(App, {
 
 describe('App', () => {
   it('is App a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
   it('App contains HeaderApp', () => {
     expect(wrapper.contains(HeaderApp)).toBe(true)

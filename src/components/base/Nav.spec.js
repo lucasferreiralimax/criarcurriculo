@@ -10,7 +10,7 @@ const wrapper = shallowMount(Nav, {
 
 describe('Nav', () => {
   it('is Nav a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
   it('Nav contains itens menu', () => {
     expect(wrapper.findAll('a.btn').exists()).toBe(true)

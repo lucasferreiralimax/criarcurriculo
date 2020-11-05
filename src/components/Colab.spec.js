@@ -6,6 +6,6 @@ const wrapper = shallowMount(Colab)
 
 describe('Colab', () => {
   it('is Colab a vue instance', () => {
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.exists()).toBeTruthy()
   })
 })
