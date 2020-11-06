@@ -22,4 +22,10 @@ describe('Home', () => {
   it('is Home a vue instance', () => {
     expect(wrapper.exists()).toBeTruthy()
   })
+  it('is Home with Carousel component', () => {
+    expect(wrapper.findComponent(Carousel).exists()).toBeTruthy()
+  })
+  it('is Home with Carousel component itens', () => {
+    expect(wrapper.findComponent(CarouselItem).exists()).toBeTruthy()
+  })
 })
