@@ -16,7 +16,7 @@ describe('Nav', () => {
     expect(wrapper.findAll('a.btn').exists()).toBeTruthy()
   })
   it('Nav show menu hidden or disable', () => {
-    expect(wrapper.vm.menu_show).toBe(false)
+    expect(wrapper.vm.menu_show).toBeFalsy()
   })
   it('Nav show menu', () => {
     wrapper.find('.btn.menu').trigger('click')
