@@ -147,6 +147,7 @@ export default {
   .info,
   .exps,
   .cademy,
+  .languages,
   .hobby,
   label[for="GET-about"]
     text-align right
