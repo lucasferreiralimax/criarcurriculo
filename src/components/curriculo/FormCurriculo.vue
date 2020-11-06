@@ -104,14 +104,6 @@ export default {
   created () {
     this.setLocalStore()
     this.accountsRender()
-  },
-  mounted () {
-    let footer = document.querySelector('.footer')
-    if(footer) { footer.classList.add('home') }
-  },
-  destroyed () {
-    let footer = document.querySelector('.footer')
-    if(footer) { footer.classList.add('home') }
   }
 }
 </script>

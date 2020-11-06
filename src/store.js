@@ -11,7 +11,8 @@ export default new Vuex.Store({
     user: user,
     errors: [],
     icon_render: true,
-    theme_app: 'default'
+    theme_app: 'default',
+    home_app: false
   },
   mutations: mutations
 })

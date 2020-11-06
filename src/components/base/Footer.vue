@@ -1,5 +1,5 @@
 <template lang="pug">
-  footer.footer
+  footer.footer(:class="{ 'home': home_app }")
     logo-app.credits.curriculo
     div.credits.L
       svg#paz.paz(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="40" height="40" fill="#fff")
@@ -13,10 +13,13 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 import LogoApp from '@/components/base/Logo'
 
 export default {
   name: 'footer-app',
+  computed: mapState({ home_app: state => state.home_app }),
   components: { LogoApp },
 }
 </script>

@@ -38,7 +38,10 @@ import Accounts from '@/components/Accounts'
 
 export default {
   name: 'home',
-  computed: mapState({ theme_app: state => state.theme_app }),
+  computed: mapState({
+    theme_app: state => state.theme_app,
+    home_app: state => state.home_app
+  }),
   components: {
     FormCurriculo,
     ActionsCurriculo,
@@ -47,7 +50,9 @@ export default {
     IconRender,
     LayoutApp,
     Accounts
-  }
+  },
+  mounted () { this.$store.commit("updateHome", true) },
+  destroyed () { this.$store.commit("updateHome", false) }
 }
 </script>
 
