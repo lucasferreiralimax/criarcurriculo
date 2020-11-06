@@ -31,7 +31,7 @@ export default {
       .then(response => {
         this.contributors = response.data
         this.contributors.push({
-          avatar_url: 'https://media-exp1.licdn.com/dms/image/C4D03AQH76qstMKmYDA/profile-displayphoto-shrink_200_200/0?e=1602115200&v=beta&t=ynlnhNvAw0A8qNpGivS-pQaOSs3nIsoW4rEDy__UvPQ',
+          avatar_url: 'https://mir-s3-cdn-cf.behance.net/user/115/98114c14142593.5e397f7be38d6.png',
           login: 'Denise Monteiro',
           contributions: 1,
           html_url: 'https://www.denimon.info'
