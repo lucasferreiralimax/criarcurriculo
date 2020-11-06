@@ -1,5 +1,6 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 
+import { mutations } from '@/mutations'
 import Vuex from 'vuex'
 import Home from './Home.vue'
 import { Carousel, CarouselItem } from 'element-ui'
@@ -12,8 +13,10 @@ localVue.use(CarouselItem)
 
 let store = new Vuex.Store({
   state: {
-    theme_app: 'default'
-  }
+    theme_app: 'default',
+    home_app: false
+  },
+  mutations: mutations
 })
 
 const wrapper = shallowMount(Home, { store, localVue })
