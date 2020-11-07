@@ -26,5 +26,5 @@ module.exports = {
     '**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
   ],
   testURL: 'http://localhost/',
-  setupFiles: ["<rootDir>/tests/unit/jest.config.js"]
+  setupFiles: ["<rootDir>/tests/unit/config.js"]
 }
