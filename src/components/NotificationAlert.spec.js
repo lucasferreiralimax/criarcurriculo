@@ -1,6 +1,5 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 
-import { mutations } from '@/mutations'
 import Vuex from 'vuex'
 import NotificationAlert from './NotificationAlert.vue'
 

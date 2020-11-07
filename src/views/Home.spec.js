@@ -8,8 +8,6 @@ import { Carousel, CarouselItem } from 'element-ui'
 const localVue = createLocalVue()
 
 localVue.use(Vuex)
-localVue.use(Carousel)
-localVue.use(CarouselItem)
 
 let store = new Vuex.Store({
   state: {

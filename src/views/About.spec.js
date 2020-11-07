@@ -5,9 +5,6 @@ import { Carousel, CarouselItem } from 'element-ui'
 
 const localVue = createLocalVue()
 
-localVue.use(Carousel)
-localVue.use(CarouselItem)
-
 const wrapper = shallowMount(About, {
   localVue
 })

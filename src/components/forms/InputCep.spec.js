@@ -3,12 +3,10 @@ import { shallowMount, createLocalVue } from '@vue/test-utils'
 import { user } from '@/user'
 import Vuex from 'vuex'
 import InputCep from './InputCep.vue'
-import VueTheMask from 'vue-the-mask'
 
 const localVue = createLocalVue()
 
 localVue.use(Vuex)
-localVue.use(VueTheMask)
 
 let store = new Vuex.Store({
   state: {

@@ -4,10 +4,8 @@ import { user } from '@/user'
 import { mutations } from '@/mutations'
 import Vuex from 'vuex'
 import Accounts from './Accounts.vue'
-import draggable from 'vuedraggable'
 
 const localVue = createLocalVue()
-localVue.component(draggable.name, draggable)
 
 localVue.use(Vuex)
 

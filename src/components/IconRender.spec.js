@@ -3,12 +3,10 @@ import { shallowMount, createLocalVue } from '@vue/test-utils'
 import { mutations } from '@/mutations'
 import Vuex from 'vuex'
 import IconRender from './IconRender.vue'
-import { Switch } from 'element-ui'
 
 const localVue = createLocalVue()
 
 localVue.use(Vuex)
-localVue.use(Switch)
 
 let store = new Vuex.Store({
   state: {
