@@ -133,7 +133,9 @@
       "data_end": "Necessita omplir amb la data final.",
       "about": "Necessita omplir el camp sobre les activitats.",
       "company": "Necessita omplir el nom de l'empresa.",
-      "office": "Necessita omplir el nom de l'Càrrec."
+      "office": "Necessita omplir el nom de l'Càrrec.",
+      "cep_invalid": "El codi postal no és vàlid; proveu de tornar a escriure",
+      "cep_erro": "L'API CEP no respon"
     }
   },
   "aria-label": {

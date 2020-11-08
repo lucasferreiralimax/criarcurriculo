@@ -133,7 +133,9 @@
       "data_end": "Doit remplir avec la date de fin.",
       "about": "Vous devez remplir le champ des activités.",
       "company": "Vous devez remplir le nom de la société.",
-      "office": "Vous devez remplir le nom de la cargaison."
+      "office": "Vous devez remplir le nom de la cargaison.",
+      "cep_invalid": "Code postal non valide, réessayez",
+      "cep_erro": "L'API CEP ne répond pas"
     }
   },
   "aria-label": {

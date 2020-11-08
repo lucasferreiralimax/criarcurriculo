@@ -133,7 +133,9 @@
       "data_end": "Necesita llenar con la fecha final.",
       "about": "Necesita llenar el campo sobre las actividades.",
       "company": "Necesita llenar el nombre de la empresa.",
-      "office": "Necesita llenar el nombre del Cargo."
+      "office": "Necesita llenar el nombre del Cargo.",
+      "cep_invalid": "Código postal no válido, intente escribir de nuevo",
+      "cep_erro": "CEP API no responde"
     }
   },
   "aria-label": {

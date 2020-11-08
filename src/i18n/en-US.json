@@ -133,7 +133,9 @@
       "data_end": "Need to fill in with the end date.",
       "about": "You need to fill in the field about activities.",
       "company": "You must fill in the name of the Company.",
-      "office": "You must fill in the name of the business."
+      "office": "You must fill in the name of the business.",
+      "cep_invalid": "Invalid zip code, try typing again",
+      "cep_erro": "CEP API is not responding"
     }
   },
   "aria-label": {

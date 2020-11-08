@@ -133,7 +133,9 @@
       "data_end": "Bitiş tarihi ile doldurulmalıdır.",
       "about": "Faaliyetler hakkında alanı doldurmanız gerekiyor.",
       "company": "Şirket adını doldurmalısınız.",
-      "office": "Kargo'nın adını doldurmalısınız."
+      "office": "Kargo'nın adını doldurmalısınız.",
+      "cep_invalid": "Geçersiz posta kodu, tekrar yazmayı deneyin",
+      "cep_erro": "CEP API yanıt vermiyor"
     }
   },
   "aria-label": {

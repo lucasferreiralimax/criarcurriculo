@@ -133,7 +133,9 @@
       "data_end": "Moet de einddatum invullen.",
       "about": "U moet het veld over activiteiten invullen.",
       "company": "U moet de naam van het bedrijf invullen.",
-      "office": "U moet de naam van het bedrijf invullen."
+      "office": "U moet de naam van het bedrijf invullen.",
+      "cep_invalid": "Ongeldige postcode, typ opnieuw",
+      "cep_erro": "CEP API reageert niet"
     }
   },
   "aria-label": {

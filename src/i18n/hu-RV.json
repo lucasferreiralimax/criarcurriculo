@@ -133,7 +133,9 @@
       "data_end": "Töltse ki a befejezési dátumot.",
       "about": "Töltse ki a tevékenységek mezőjét.",
       "company": "Meg kell adnia a cég nevét.",
-      "office": "Meg kell adnia a pozíció nevét."
+      "office": "Meg kell adnia a pozíció nevét.",
+      "cep_invalid": "Érvénytelen irányítószám, próbálja újra beírni",
+      "cep_erro": "A CEP API nem válaszol"
     }
   },
   "aria-label": {

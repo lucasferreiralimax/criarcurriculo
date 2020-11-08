@@ -133,7 +133,9 @@
       "data_end": "È necessario compilare la data di fine.",
       "about": "Devi compilare il campo relativo alle attività.",
       "company": "Devi inserire il nome dell'azienda.",
-      "office": "Devi inserire il nome dell'azienda."
+      "office": "Devi inserire il nome dell'azienda.",
+      "cep_invalid": "Codice postale non valido, prova a digitare di nuovo",
+      "cep_erro": "L'API CEP non risponde"
     }
   },
   "aria-label": {

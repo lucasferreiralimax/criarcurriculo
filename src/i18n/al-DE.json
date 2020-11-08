@@ -133,7 +133,9 @@
       "data_end": "Sie müssen das Enddatum eingeben.",
       "about": "Sie müssen das Feld über Aktivitäten ausfüllen.",
       "company": "Sie müssen den Namen der Firma eingeben.",
-      "office": "Sie müssen den Namen des Unternehmens eingeben."
+      "office": "Sie müssen den Namen des Unternehmens eingeben.",
+      "cep_invalid": "Ungültige Postleitzahl, versuchen Sie es erneut",
+      "cep_erro": "Die CEP-API antwortet nicht"
     }
   },
   "aria-label": {

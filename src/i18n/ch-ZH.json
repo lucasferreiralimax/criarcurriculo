@@ -133,7 +133,9 @@
       "data_end": "必须填写结束日期。",
       "about": "你需要填写有关活动的领域。",
       "company": "您必须填写公司名称。",
-      "office": "你必须填写货物的名称。"
+      "office": "你必须填写货物的名称。",
+      "cep_invalid": "邮政编码无效，请重新输入",
+      "cep_erro": "CEP API没有响应"
     }
   },
   "aria-label": {

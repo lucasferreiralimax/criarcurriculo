@@ -133,7 +133,9 @@
       "data_end": "Moet de einddatum invullen.",
       "about": "U må het felt over activiteiten invullen.",
       "company": "Du må navnet på selskapet invullen.",
-      "office": "Du må navnet på selskapet invullen."
+      "office": "Du må navnet på selskapet invullen.",
+      "cep_invalid": "Ugyldig postnummer, prøv å skrive igjen",
+      "cep_erro": "CEP API svarer ikke"
     }
   },
   "aria-label": {

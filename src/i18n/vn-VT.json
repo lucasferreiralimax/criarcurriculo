@@ -133,7 +133,9 @@
       "data_end": "Cần điền vào ngày kết thúc.",
       "about": "Bạn cần điền vào các lĩnh vực về các hoạt động.",
       "company": "Phải điền tên công ty.",
-      "office": "Phải điền tên công việc."
+      "office": "Phải điền tên công việc.",
+      "cep_invalid": "Mã zip không hợp lệ, hãy thử nhập lại",
+      "cep_erro": "API CEP không phản hồi"
     }
   },
   "aria-label": {
