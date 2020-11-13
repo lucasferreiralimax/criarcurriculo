@@ -2,7 +2,7 @@
   section.render(:class="{ 'viewfixed' : viewfixed, 'no-icon' : !icon_render }")
     .view
       .content
-        label.figure(for="GET-photo" v-if="user.photo")
+        label.figure(for="GET-photo" v-if="user.photo" :style="(user.name || user.maritalstatus) ? 'position: absolute;' : 'position: relative;'")
           figure
             img#photo(:src="user.photo" :alt="user.name" width="auto")
           button.btn.delete.small.photo(type="button" @click="removeImage($event)" v-if="user.photo" :aria-label="$t('aria-label.photo_remove')")
