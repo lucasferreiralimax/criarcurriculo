@@ -11,6 +11,15 @@ section.layout
     button.btn.m-0(type="button" @click="setLayout('layout-mirror')")
       | {{ $t('layout.mirror') }}
       .layout-grid.layout-3
+    button.btn.m-0(type="button" @click="setLayout('layout-sidebar')")
+      | {{ $t('layout.sidebar') }}
+      .layout-grid.layout-4
+    button.btn.m-0(type="button" @click="setLayout('layout-sidebar-circle')")
+      | {{ $t('layout.circle') }}
+      .layout-grid.layout-5
+    button.btn.m-0(type="button" @click="setLayout('layout-sidebar-mirror')")
+      | {{ $t('layout.mirror') }}
+      .layout-grid.layout-6
 </template>
 
 <script>
@@ -103,6 +112,10 @@ export default {
     grid-template-columns repeat(3, 1fr)
     grid-column-gap 1em
     grid-row-gap 1em
+    button:nth-of-type(4),
+    button:nth-of-type(5),
+    button:nth-of-type(6)
+      position relative
     +break(300px)
       grid-template-columns 1fr
   .btn
@@ -133,6 +146,32 @@ export default {
     top 0
     left 0
     height 20px
+.layout-4,
+.layout-5,
+.layout-6
+  &:before
+    position absolute
+    border 3px solid #999
+    top 0
+  &:after
+    top 0
+    left 36px
+    width 10px
+    height 100px
+.layout-5
+  &:before
+    border-radius 100%
+    box-shadow 0 0 0 6px #fff
+.layout-6
+  &:before
+    right 0
+  &:after
+    top 0
+    left auto
+    right 36px
+    width 10px
+    height 100px
+
 .layout-circle
   .figure
     height 120px
@@ -164,6 +203,94 @@ export default {
     &[for^='GET-site']
       margin-right 0
       margin-left 1em
+.layout-sidebar.content
+.layout-sidebar-circle.content
+  .figure
+    width 140px
+    height 140px
+    img
+      height 140px
+  .info
+    transform translateX(188px)
+    padding-left 0
+    border 0
+    &.photo 
+      max-width calc(100% - 188px)
+  [for="GET-about"],
+  .languages,
+  .hobby,
+  .cademy,
+  .exps
+    padding-left 188px
+    position relative
+    border 0
+    margin-top 1em
+    padding-top 1em
+    border-top 1px solid #ccc
+    h2
+      font-size 1em
+      position absolute
+      left 0px
+      margin 0
+      width 170px
+      text-align right
+      display block
+  .coursers,
+  .experiencies
+    h3
+      margin-top 0
+    &:last-of-type
+      hr
+        display none    
+.layout-sidebar-mirror.content
+  .figure
+    width 140px
+    height 140px
+    position absolute
+    right 2em
+    img
+      height 140px
+  .contact-info
+    float right
+  .info
+    transform translateX(0)
+    padding-left 0
+    border 0    
+    text-align right
+    max-width calc(100% - 188px)      
+  [for="GET-about"],
+  .languages,
+  .hobby,
+  .cademy,
+  .exps
+    padding-right 188px
+    position relative
+    border 0    
+    margin-top 1em
+    padding-top 1em
+    border-top 1px solid #ccc
+    text-align right
+    h2
+      font-size 1em
+      position absolute
+      right 0
+      margin 0
+      width 170px
+      text-align left
+      display block
+  .coursers,
+  .experiencies
+    h3
+      margin-top 0
+    &:last-of-type
+      hr
+        display none    
+.layout-sidebar-circle
+  .figure
+    border-radius 100%
+    .btn
+      bottom 0
+      transform translateY(calc(-100% - 26px)) scale(.9)
 
 +htmlDir()
   .layout-grid
@@ -178,6 +305,7 @@ export default {
     .info,
     .exps,
     .cademy,
+    .languages,
     .hobby,
     label[for="GET-about"]
       float left
@@ -203,4 +331,58 @@ export default {
     &:after
       left auto
       right 0
+  .layout-4,
+  .layout-5,
+  .layout-6
+    &:after
+      right 36px
+  .layout-6
+    &:before
+      right auto
+      left 0
+    &:after
+      right auto
+      left 36px
+  .layout-sidebar.content,
+  .layout-sidebar-circle.content
+    .info
+      transform translateX(-188px)
+      padding-left 0
+      padding-right 0
+      &.photo 
+        max-width calc(100% - 188px)
+    [for="GET-about"],
+    .languages,
+    .hobby,
+    .cademy,
+    .exps
+      padding-left 0
+      padding-right 188px
+      text-align right
+      h2
+        right 0
+        text-align left
+  .layout-sidebar-mirror.content
+    .figure
+      left 2em
+      right auto
+    .contact-info
+      float left
+    .info
+      transform translateX(0)
+      padding-left 0
+      text-align left
+      max-width calc(100% - 188px)      
+    [for="GET-about"],
+    .languages,
+    .hobby,
+    .cademy,
+    .exps
+      padding-left 188px
+      padding-right 0
+      text-align left
+      h2
+        left 0
+        right auto
+        text-align right
 </style>
