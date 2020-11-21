@@ -27,7 +27,11 @@ export default {
   name: 'layout',
   mounted () {
     let layoutType = localStorage.getItem('layoutType')
-    if(layoutType) { this.setLayout(layoutType) }
+    if(layoutType) {
+      this.setLayout(layoutType)
+    } else {
+      this.setLayout('layout-sidebar-circle')
+    }
   },
   methods: {
     cleanBtns () {
@@ -47,12 +51,26 @@ export default {
       if(type) {
         localStorage.setItem('layoutType', type)
         document.querySelector('.view .content').classList.add(type)
-        if(type == 'layout-circle') {
-          this.cleanBtns()
-          document.querySelectorAll('.options .btn')[1].classList.add('actived')
-        } else {
-          this.cleanBtns()
-          document.querySelectorAll('.options .btn')[2].classList.add('actived')
+        this.cleanBtns()
+        switch(type) {
+          case 'layout-circle':
+            document.querySelectorAll('.options .btn')[1].classList.add('actived')
+            break
+          case 'layout-mirror':
+            document.querySelectorAll('.options .btn')[2].classList.add('actived')
+            break
+          case 'layout-sidebar':
+            document.querySelectorAll('.options .btn')[3].classList.add('actived')
+            break
+          case 'layout-sidebar-circle':
+            document.querySelectorAll('.options .btn')[4].classList.add('actived')
+            break
+          case 'layout-sidebar-mirror':
+            document.querySelectorAll('.options .btn')[5].classList.add('actived')
+            break
+          default:
+            document.querySelectorAll('.options .btn')[6].classList.add('actived')
+            break
         }
       }
 
