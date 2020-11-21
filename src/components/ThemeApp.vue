@@ -67,7 +67,7 @@ export default {
   data () {
     return {
       isTheme: false,
-      selectedTheme: 'default'
+      selectedTheme: 'full'
     }
   },
   methods: {
@@ -94,10 +94,10 @@ export default {
 
       if(!theme) {
         this.clearBody()
-        this.$store.commit("updateTheme", 'default')
-        this.selectedTheme = 'default'
-        document.querySelector('body').classList.add('default')
-        localStorage.setItem('theme_app', 'default')
+        this.$store.commit("updateTheme", 'full')
+        this.selectedTheme = 'full'
+        document.querySelector('body').classList.add('full')
+        localStorage.setItem('theme_app', 'full')
       } else {
         this.clearBody()
         theme = theme.replace(/"/g, "")
