@@ -181,6 +181,7 @@
   "layout": {
     "title": "Wählen Sie ein Format für das Layout",
     "title_font": "Wählen Sie eine Schriftart für den Buchstaben",
+    "title_theme": "Wähle ein Thema",
     "default": "Standard",
     "circle": "Kreis",
     "mirror": "Reflector",

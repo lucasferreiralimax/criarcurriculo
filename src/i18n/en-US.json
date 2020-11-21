@@ -181,6 +181,7 @@
   "layout": {
     "title": "Choose a format for the layout",
     "title_font": "Choose a font for the letter",
+    "title_theme": "Choose a theme",
     "default": "Default",
     "circle": "Circle",
     "mirror": "Mirror",

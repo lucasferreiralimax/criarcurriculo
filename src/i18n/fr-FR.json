@@ -181,6 +181,7 @@
   "layout": {
     "title": "Choisissez un format pour la mise en page",
     "title_font": "Choisissez une police pour la lettre",
+    "title_theme": "Choisissez un thème",
     "default": "Standard",
     "circle": "Circulaire",
     "mirror": "Miroir",

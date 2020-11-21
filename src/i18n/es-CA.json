@@ -181,6 +181,7 @@
   "layout": {
     "title": "Tria un format per al disseny",
     "title_font": "Tria una font per la lletra",
+    "title_theme": "Trieu un tema",
     "default": "Padró",
     "circle": "Circular",
     "mirror": "Mirall",

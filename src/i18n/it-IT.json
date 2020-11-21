@@ -181,6 +181,7 @@
   "layout": {
     "title": "Scegli un formato per il layout",
     "title_font": "Scegli un carattere per la lettera",
+    "title_theme": "Scegli un tema",
     "default": "il difetto",
     "circle": "Cerchio",
     "mirror": "Specchio",

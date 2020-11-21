@@ -181,6 +181,7 @@
   "layout": {
     "title": "选择布局格式",
     "title_font": "为字母选择字体",
+    "title_theme": "選擇一個主題",
     "default": "默认",
     "circle": "圈",
     "mirror": "镜子",

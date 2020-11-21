@@ -181,6 +181,7 @@
   "layout": {
     "title": "Roghnaigh formáid don leagan amach",
     "title_font": "Roghnaigh cló don litir",
+    "title_theme": "Roghnaigh téama",
     "default": "Réamhshocrú",
     "circle": "Ciorcal",
     "mirror": "Scáthán",

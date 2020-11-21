@@ -181,6 +181,7 @@
   "layout": {
     "title": "Velg et format for oppsettet",
     "title_font": "Velg en skrift for bokstaven",
+    "title_theme": "Velg et tema",
     "default": "Misligholde",
     "circle": "Sirkel",
     "mirror": "Speil",

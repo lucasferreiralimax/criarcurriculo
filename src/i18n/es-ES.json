@@ -181,6 +181,7 @@
   "layout": {
     "title": "Elija un formato para el diseño",
     "title_font": "Elige una fuente para la letra",
+    "title_theme": "Elige un tema",
     "default": "Padrón",
     "circle": "Circular",
     "mirror": "Espejo",

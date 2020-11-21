@@ -181,6 +181,7 @@
   "layout": {
     "title": "Kies een indeling voor de lay-out",
     "title_font": "Kies een lettertype voor de letter",
+    "title_theme": "Kies een thema",
     "default": "Standaard",
     "circle": "Cirkel",
     "mirror": "Speil",

@@ -181,6 +181,7 @@
   "layout": {
     "title": "Düzen için bir biçim seçin",
     "title_font": "Harf için bir yazı tipi seçin",
+    "title_theme": "Bir tema seç",
     "default": "Varsayılan",
     "circle": "Daire",
     "mirror": "Ayna",

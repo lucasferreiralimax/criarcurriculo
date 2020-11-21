@@ -181,6 +181,7 @@
   "layout": {
     "title": "Válassza ki az elrendezés formátumát",
     "title_font": "Válasszon betűtípust a levélhez",
+    "title_theme": "Válasszon témát",
     "default": "Minta",
     "circle": "Kör alakú",
     "mirror": "Tükör",

@@ -181,6 +181,7 @@
   "layout": {
     "title": "Chọn định dạng cho bố cục",
     "title_font": "Chọn phông chữ cho chữ cái",
+    "title_theme": "Chọn một chủ đề",
     "default": "Mặc định",
     "circle": "Vòng tròn",
     "mirror": "Gương",
