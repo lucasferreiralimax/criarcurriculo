@@ -20,6 +20,7 @@
       actions-curriculo
         font-select
         icon-render
+        theme-app(:actions="true")        
         layout-app
         accounts
       render
@@ -34,6 +35,7 @@ import Render from '@/components/curriculo/Render'
 import FontSelect from '@/components/FontSelect'
 import IconRender from '@/components/IconRender'
 import LayoutApp from '@/components/Layout'
+import ThemeApp from '@/components/ThemeApp'
 import Accounts from '@/components/Accounts'
 
 export default {
@@ -49,6 +51,7 @@ export default {
     FontSelect,
     IconRender,
     LayoutApp,
+    ThemeApp,
     Accounts
   },
   mounted () { this.$store.commit("updateHome", true) },
