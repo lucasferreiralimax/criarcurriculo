@@ -17,20 +17,18 @@ export default {
   name: 'icon-render',
   computed: mapState({ icon_render: state => state.icon_render }),
   mounted () {
-    if(localStorage.getItem('icon_render_app')) {
-      this.$store.commit("updateIconRender", true)
-    } else {
-      this.$store.commit("updateIconRender", false)
-    }
+    let icon_render_app = JSON.parse(localStorage.getItem('icon_render_app'))
+    typeof icon_render_app === 'object' || icon_render_app ? this.iconSet(true) : this.iconSet(false)
   },
   methods: {
-    iconToggle () {
-      if(this.icon_render) {
-        this.$store.commit("updateIconRender", false)
-        localStorage.removeItem('icon_render_app')
-      } else {
+    iconToggle () { this.icon_render ? this.iconSet(false) : this.iconSet(true) },
+    iconSet(status) {
+      if(status) {
         this.$store.commit("updateIconRender", true)
         localStorage.setItem('icon_render_app', true)
+      } else {
+        this.$store.commit("updateIconRender", false)
+        localStorage.setItem('icon_render_app', false)
       }
     }
   }
