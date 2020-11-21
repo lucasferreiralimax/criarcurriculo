@@ -13,16 +13,22 @@
   +tablet()
     box-sizing border-box
     float right
-    padding 1em 1em 0
+    padding 1em 1em 0 0
     position absolute
-    left 1em
+    left 10px
     width 50%
     &.viewfixed
       position fixed
-      left 1em
       top 0
 
 .view
+  border-radius 10px
+  width calc(100% - 20px)
+  position relative
+  overflow auto
+  margin 0 auto
+  +tablet()
+    width 100%
   &.abel,
   &.abel pre
     font-family 'Abel', sans-serif
@@ -156,7 +162,8 @@
     overflow auto
     padding 2em
     transition .3s all
-    width calc(100% - 20px)
+    width 100%
+    min-width 600px
     word-wrap break-word
     z-index 1
     +break(370px)
@@ -164,10 +171,6 @@
       padding 1em
     +tablet()
       height calc(100vh - 30px)
-      left 0
-      position absolute
-      top 15px
-      width calc(100% - 1em)
     +desktop()
       padding 3em
 
