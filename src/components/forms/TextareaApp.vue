@@ -1,6 +1,6 @@
 <template lang="pug">
   label(:for="`GET-${name}`")
-    p {{ (index >= 0) ? $t('form.about') : $t(`form.${name}_me`) }}:
+    p {{ (index || index >= 0) ? $t('form.about_activities') : $t(`form.${name}_me`) }}:
     textarea(v-if="index >= 0"
             :id="`GET-${name}`"
             :placeholder="$t(`form.${translate}_place`)"
