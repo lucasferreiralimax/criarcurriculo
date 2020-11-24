@@ -2,29 +2,32 @@
 section.layout
   h2 {{ $t('layout.title') }}
   .options
-    button.btn.m-0.actived(type="button" @click="setLayout()")
+    button.btn.m-0(type="button" @click="setLayout()" :class="[ layout_render == 'layout-default' ? 'actived' : '' ]")
       | {{ $t('layout.default') }}
       .layout-grid.layout-1
-    button.btn.m-0(type="button" @click="setLayout('layout-circle')")
+    button.btn.m-0(type="button" @click="setLayout('layout-circle')" :class="[ layout_render == 'layout-circle' ? 'actived' : '' ]")
       | {{ $t('layout.circle') }}
       .layout-grid.layout-2
-    button.btn.m-0(type="button" @click="setLayout('layout-mirror')")
+    button.btn.m-0(type="button" @click="setLayout('layout-mirror')" :class="[ layout_render == 'layout-mirror' ? 'actived' : '' ]")
       | {{ $t('layout.mirror') }}
       .layout-grid.layout-3
-    button.btn.m-0(type="button" @click="setLayout('layout-sidebar')")
+    button.btn.m-0(type="button" @click="setLayout('layout-sidebar')" :class="[ layout_render == 'layout-sidebar' ? 'actived' : '' ]")
       | {{ $t('layout.sidebar') }}
       .layout-grid.layout-4
-    button.btn.m-0(type="button" @click="setLayout('layout-sidebar-circle')")
+    button.btn.m-0(type="button" @click="setLayout('layout-sidebar-circle')" :class="[ layout_render == 'layout-sidebar-circle' ? 'actived' : '' ]")
       | {{ $t('layout.circle') }}
       .layout-grid.layout-5
-    button.btn.m-0(type="button" @click="setLayout('layout-sidebar-mirror')")
+    button.btn.m-0(type="button" @click="setLayout('layout-sidebar-mirror')" :class="[ layout_render == 'layout-sidebar-mirror' ? 'actived' : '' ]")
       | {{ $t('layout.mirror') }}
       .layout-grid.layout-6
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'layout',
+  computed: mapState({ layout_render: state => state.layout_render }),
   mounted () {
     let layoutType = localStorage.getItem('layoutType')
     if(layoutType) {
@@ -34,52 +37,9 @@ export default {
     }
   },
   methods: {
-    cleanBtns () {
-      let btns = document.querySelectorAll('.options .btn')
-
-      for(let item of btns) {
-        item.classList = 'btn m-0'
-      }
-    },
     setLayout (type) {
-      localStorage.removeItem('layoutType')
-      document.querySelector('.view .content').classList = 'content'
-
-      this.cleanBtns()
-      document.querySelectorAll('.options .btn')[0].classList.add('actived')
-
-      if(type) {
-        localStorage.setItem('layoutType', type)
-        document.querySelector('.view .content').classList.add(type)
-        this.cleanBtns()
-        switch(type) {
-          case 'layout-circle':
-            document.querySelectorAll('.options .btn')[1].classList.add('actived')
-            break
-          case 'layout-mirror':
-            document.querySelectorAll('.options .btn')[2].classList.add('actived')
-            break
-          case 'layout-sidebar':
-            document.querySelectorAll('.options .btn')[3].classList.add('actived')
-            break
-          case 'layout-sidebar-circle':
-            document.querySelectorAll('.options .btn')[4].classList.add('actived')
-            break
-          case 'layout-sidebar-mirror':
-            document.querySelectorAll('.options .btn')[5].classList.add('actived')
-            break
-          default:
-            document.querySelectorAll('.options .btn')[6].classList.add('actived')
-            break
-        }
-      }
-
-      if(event) {
-        this.cleanBtns()
-        let actived = event.srcElement.querySelector('.layout-grid').classList[1]
-        document.querySelector(`.${actived}`).parentElement.classList.toggle('actived')
-      }
-
+      localStorage.setItem('layoutType', type ? type : 'layout-default')
+      this.$store.commit("updateLayout", type ? type : 'layout-default')
     }
   }
 }
