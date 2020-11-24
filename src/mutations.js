@@ -5,6 +5,9 @@ export let mutations = {
   updateTheme (state, value) {
     state.theme_app = value
   },
+  updateLayout (state, value) {
+    state.layout_render = value
+  },
   updateHome (state, value) {
     state.home_app = value
   },

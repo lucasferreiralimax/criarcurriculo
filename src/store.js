@@ -12,6 +12,7 @@ export default new Vuex.Store({
     errors: [],
     icon_render: true,
     theme_app: 'default',
+    layout_render: 'layout-default',
     home_app: false
   },
   mutations: mutations
