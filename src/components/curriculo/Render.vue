@@ -1,7 +1,7 @@
 <template lang="pug">
   section.render(:class="{ 'viewfixed' : viewfixed, 'no-icon' : !icon_render }")
     .view
-      .content
+      .content(:class="layout_render")
         label.figure(for="GET-photo" v-if="user.photo" :style="(user.name || user.maritalstatus) ? 'position: absolute;' : 'position: relative;'")
           figure
             img#photo(:src="user.photo" :alt="user.name" width="auto")
@@ -160,7 +160,8 @@ export default {
   name: 'render',
   computed: mapState({
     user: state => state.user,
-    icon_render: state => state.icon_render
+    icon_render: state => state.icon_render,
+    layout_render: state => state.layout_render
   }),
   mixins: [mixinUpdateStore],
   created () { window.addEventListener('scroll', this.viewFixed) },
