@@ -1,8 +1,21 @@
-import { shallowMount } from '@vue/test-utils'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
 
+import { mutations } from '@/mutations'
+import Vuex from 'vuex'
 import Layout from './Layout.vue'
 
-const wrapper = shallowMount(Layout)
+const localVue = createLocalVue()
+
+localVue.use(Vuex)
+
+let store = new Vuex.Store({
+  state: {
+    layout_render: 'layout-default'
+  },
+  mutations: mutations
+})
+
+const wrapper = shallowMount(Layout, { store, localVue })
 
 describe('Layout', () => {
   it('is Layout a vue instance', () => {
