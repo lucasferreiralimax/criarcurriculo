@@ -167,7 +167,9 @@
     "remove_account": "Удалить резюме",
     "delete_form": "Удалить все формы",
     "print_curriculum": "Print Currilum",
-    "link_git": "Ссылка на проект в Github"
+    "link_git": "Ссылка на проект в Github",
+    "scroll_start": "В начало страницы",
+    "scroll_end": "Прокрутить страницу вниз"
   },
   "themes": {
     "default": "Найти больше",

@@ -167,7 +167,9 @@
     "remove_account": "Xóa sơ yếu lý lịch",
     "delete_form": "Xóa tất cả các hình thức",
     "print_curriculum": "In sơ yếu lý lịch",
-    "link_git": "Liên kết đến dự án trên Github"
+    "link_git": "Liên kết đến dự án trên Github",
+    "scroll_start": "Chuyển đến đầu trang",
+    "scroll_end": "Cuộn xuống cuối trang"
   },
   "themes": {
     "default": "Mặc định",

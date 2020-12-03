@@ -167,7 +167,9 @@
     "remove_account": "Bain atosú",
     "delete_form": "Scrios gach foirm",
     "print_curriculum": "Curaclam Priontála",
-    "link_git": "Nasc leis an tionscadal i Github"
+    "link_git": "Nasc leis an tionscadal i Github",
+    "scroll_start": "Scrollaigh go barr an leathanaigh",
+    "scroll_end": "Scrollaigh go bun an leathanaigh"
   },
   "themes": {
     "default": "Réamhshocrú",

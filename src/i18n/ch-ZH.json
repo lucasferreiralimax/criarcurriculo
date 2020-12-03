@@ -167,7 +167,9 @@
     "remove_account": "删除简历",
     "delete_form": "删除所有表单",
     "print_curriculum": "打印简历",
-    "link_git": "链接到 Github 项目"
+    "link_git": "链接到 Github 项目",
+    "scroll_start": "转到页面顶部",
+    "scroll_end": "滚动到页面底部"
   },
   "themes": {
     "default": "默认",

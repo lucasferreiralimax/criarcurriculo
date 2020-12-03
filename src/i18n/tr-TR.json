@@ -167,7 +167,9 @@
     "remove_account": "Özgeçmişi kaldır",
     "delete_form": "Tüm formu sil",
     "print_curriculum": "Currilum Yazdır",
-    "link_git": "Github'daki projeye bağlantı"
+    "link_git": "Github'daki projeye bağlantı",
+    "scroll_start": "Sayfanın en üstüne git",
+    "scroll_end": "Sayfanın altına kaydır"
   },
   "themes": {
     "default": "Varsayılan",

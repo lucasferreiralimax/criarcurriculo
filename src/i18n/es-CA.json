@@ -167,7 +167,9 @@
     "remove_account": "Eliminar currículum",
     "delete_form": "Suprimiu tot el formulari",
     "print_curriculum": "Resum d'impressió",
-    "link_git": "Enllaç al projecte de Github"
+    "link_git": "Enllaç al projecte de Github",
+    "scroll_start": "Anar a la part superior de la pàgina",
+    "scroll_end": "Desplaceu-vos a la part inferior de la pàgina"
   },
   "themes": {
     "default": "Estàndard",

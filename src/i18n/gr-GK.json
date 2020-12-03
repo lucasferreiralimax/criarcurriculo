@@ -166,7 +166,9 @@
     "remove_account": "Κατάργηση συνέχισης",
     "delete_form": "Διαγραφή όλων των εντύπων",
     "print_curriculum": "Εκτύπωση Currilum",
-    "link_git": "Σύνδεση με το έργο στο Github"
+    "link_git": "Σύνδεση με το έργο στο Github",
+    "scroll_start": "Μεταβείτε στην κορυφή της σελίδας",
+    "scroll_end": "Μεταβείτε στο κάτω μέρος της σελίδας"
   },
   "themes": {
     "default": "Προεπιλογή",

@@ -167,7 +167,9 @@
     "remove_account": "إزالة السيرة الذاتية",
     "delete_form": "حذف كل النموذج",
     "print_curriculum": "منهج الطباعة",
-    "link_git": "رابط للمشروع في جيثب"
+    "link_git": "رابط للمشروع في جيثب",
+    "scroll_start": "اذهب إلى أعلى الصفحة",
+    "scroll_end": "انتقل إلى أسفل الصفحة"
   },
   "themes": {
     "default": "افتراضي",

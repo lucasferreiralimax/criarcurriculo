@@ -167,7 +167,9 @@
     "remove_account": "Fjern CV",
     "delete_form": "Slett all form",
     "print_curriculum": "Print Currilum",
-    "link_git": "Link til prosjektet i Github"
+    "link_git": "Link til prosjektet i Github",
+    "scroll_start": "Gå til toppen av siden",
+    "scroll_end": "Bla til bunnen av siden"
   },
   "themes": {
     "default": "Standard",

@@ -167,7 +167,9 @@
     "remove_account": "Rimuovi curriculum",
     "delete_form": "Elimina tutto il modulo",
     "print_curriculum": "Stampa Currilum",
-    "link_git": "Link al progetto in Github"
+    "link_git": "Link al progetto in Github",
+    "scroll_start": "Vai all'inizio della pagina",
+    "scroll_end": "Scorri fino alla fine della pagina"
   },
   "themes": {
     "default": "Default",

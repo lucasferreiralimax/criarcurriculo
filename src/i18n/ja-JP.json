@@ -167,7 +167,9 @@
     "remove_account": "履歴書を削除",
     "delete_form": "删除所有表单",
     "print_curriculum": "印刷课程",
-    "link_git": "链接到Github中的项目"
+    "link_git": "链接到Github中的项目",
+    "scroll_start": "ページの先頭に移動",
+    "scroll_end": "ページの一番下までスクロール"
   },
   "themes": {
     "default": "詳細を見つける",

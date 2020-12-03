@@ -167,7 +167,9 @@
     "remove_account": "Remove resume",
     "delete_form": "Delete all form",
     "print_curriculum": "Print Currilum",
-    "link_git": "Link to the project in Github"
+    "link_git": "Link to the project in Github",
+    "scroll_start": "Scroll to top of the page",
+    "scroll_end": "Scroll to bottom of page"
   },
   "themes": {
     "default": "Default",

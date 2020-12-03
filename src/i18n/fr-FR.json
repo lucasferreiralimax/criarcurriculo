@@ -167,7 +167,9 @@
     "remove_account": "Supprimer le CV",
     "delete_form": "Supprimer tout le formulaire",
     "print_curriculum": "Print Currilum",
-    "link_git": "Lien vers le projet dans Github"
+    "link_git": "Lien vers le projet dans Github",
+    "scroll_start": "Aller en haut de la page",
+    "scroll_end": "Faire défiler jusqu'en bas de page"
   },
   "themes": {
     "default": "Trouver plus",

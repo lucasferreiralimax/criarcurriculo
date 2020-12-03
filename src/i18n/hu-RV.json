@@ -167,7 +167,9 @@
     "remove_account": "Eltávolítani tanterv",
     "delete_form": "Törölje a teljes űrlapot",
     "print_curriculum": "A nyomtatás folytatása",
-    "link_git": "Link a Github projekthez"
+    "link_git": "Link a Github projekthez",
+    "scroll_start": "Ugrás az oldal tetejére",
+    "scroll_end": "Lapozás az oldal aljára"
   },
   "themes": {
     "default": "Minta",

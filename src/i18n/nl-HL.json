@@ -167,7 +167,9 @@
     "remove_account": "CV verwijderen",
     "delete_form": "Verwijder alle formulier",
     "print_curriculum": "Curriculum afdrukken",
-    "link_git": "Link naar het project in Github"
+    "link_git": "Link naar het project in Github",
+    "scroll_start": "Scroll naar de bovenkant van de pagina",
+    "scroll_end": "Scroll naar de onderkant van de pagina"
   },
   "themes": {
     "default": "Standaard",

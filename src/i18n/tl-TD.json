@@ -167,7 +167,9 @@
     "remove_account": "ลบประวัติย่อ",
     "delete_form": "ลบฟอร์มทั้งหมด",
     "print_curriculum": "พิมพ์ Currilum",
-    "link_git": "ลิงก์ไปยังโครงการใน Github"
+    "link_git": "ลิงก์ไปยังโครงการใน Github",
+    "scroll_start": "ไปที่ด้านบนสุดของหน้า",
+    "scroll_end": "เลื่อนไปที่ด้านล่างของหน้า"
   },
   "themes": {
     "default": "ค่าเริ่มต้น",

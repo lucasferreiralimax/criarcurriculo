@@ -167,7 +167,9 @@
     "remove_account": "Lebenslauf entfernen",
     "delete_form": "Alle Form löschen",
     "print_curriculum": "Print Currilum",
-    "link_git": "Link zum Projekt in Github"
+    "link_git": "Link zum Projekt in Github",
+    "scroll_start": "Gehe zum Anfang der Seite",
+    "scroll_end": "Zum Ende der Seite scrollen"
   },
   "themes": {
     "default": "Default",
