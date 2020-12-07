@@ -1,11 +1,25 @@
-import { shallowMount, RouterLinkStub } from '@vue/test-utils'
+import { shallowMount, RouterLinkStub, createLocalVue } from '@vue/test-utils'
 
+import { mutations } from '@/mutations'
+import Vuex from 'vuex'
 import Nav from './Nav.vue'
 
+const localVue = createLocalVue()
+
+localVue.use(Vuex)
+
+let store = new Vuex.Store({
+  state: {
+    lang: 'pt-BR'
+  },
+  mutations: mutations
+})
+
 const wrapper = shallowMount(Nav, {
+  store, localVue,
   stubs: {
     RouterLink: RouterLinkStub
-  }
+  },
 })
 
 describe('Nav', () => {
