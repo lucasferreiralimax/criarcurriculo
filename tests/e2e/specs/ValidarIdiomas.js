@@ -1,4 +1,6 @@
-function testeTitle(name, lang) {
+import { list_languages } from '../../../src/i18n/list_languages'
+
+function testeTitle(lang, name) {
   cy.get('#locale').select(lang)
   cy.wait(500)
   cy.get('.logo h1').then((theElement) => {
@@ -11,66 +13,13 @@ function testeTitle(name, lang) {
 }
 
 describe('Validar titulo nos Idiomas', () => {
-  it('Espanhol', () => {
+  it('Home page visit scroll #app', () => {
     cy.visit('/')
     cy.get('#app').scrollIntoView()
-    testeTitle('Crear Resumem', 'es-ES')
   })
-  it('Català', () => {
-    testeTitle('Crear Resum', 'es-CA')
-  })
-  it('English', () => {
-    testeTitle('Create Curriculum', 'en-US')
-  })
-  it('русский', () => {
-    testeTitle('Создайте Свободное', 'ru-RU')
-  })
-  it('Japanese', () => {
-    testeTitle('作成する カリキュラム', 'ja-JP')
-  })
-  it('Français', () => {
-    testeTitle('Créer Curriculo', 'fr-FR')
-  })
-  it('Türk', () => {
-    testeTitle('Oluşturmak Müfredat', 'tr-TR')
-  })
-  it('中国', () => {
-    testeTitle('创造 课程', 'ch-ZH')
-  })
-  it('Deutsch', () => {
-    testeTitle('Erstellen Curriculum', 'al-DE')
-  })
-  it('Italiano', () => {
-    testeTitle('Creare Curriculum', 'it-IT')
-  })
-  it('Ελληνικάo', () => {
-    testeTitle('δημιουργώ Δωρεάν', 'gr-GK')
-  })
-  it('ไทย', () => {
-    testeTitle('สร้าง หลักสูตร', 'tl-TD')
-  })
-  it('Neerlandesa', () => {
-    testeTitle('Creëren Leerplan', 'nl-HL')
-  })
-  it('Norsk', () => {
-    testeTitle('Skape Læreplan', 'nl-NL')
-  })
-  it('العربي', () => {
-    testeTitle('خلق منهاج دراسي', 'ar-SA')
-  })
-  it('भारतीय', () => {
-    testeTitle('सृजन करना पाठ्यक्रम', 'in-ID')
-  })
-  it('Tiếng việt', () => {
-    testeTitle('Tạo nên Giáo trình', 'vn-VT')
-  })
-  it('Ungáiris', () => {
-    testeTitle('Teremt Resume', 'hu-RV')
-  })
-  it('Ireland', () => {
-    testeTitle('Cruthaigh Curaclam', 'ir-IS')
-  })
-  it('Português', () => {
-    testeTitle('Criar Currículo', 'pt-BR')
-  })
+  for(let language in list_languages) {
+    it(`Language ${list_languages[language][0]}`, () => {
+      testeTitle(list_languages[language][1], list_languages[language][2])
+    })
+  }
 })
