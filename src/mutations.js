@@ -1,4 +1,7 @@
 export let mutations = {
+  updateLang (state, value) {
+    state.lang = value
+  },
   updateIconRender (state, value) {
     state.icon_render = value
   },

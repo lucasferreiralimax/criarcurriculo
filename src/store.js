@@ -13,7 +13,8 @@ export default new Vuex.Store({
     icon_render: true,
     theme_app: 'default',
     layout_render: 'layout-default',
-    home_app: false
+    home_app: false,
+    lang: 'pt-BR'
   },
   mutations: mutations
 })
