@@ -1,5 +1,6 @@
 import { mapState } from 'vuex'
 import moment from 'moment'
+import { loadLanguageAsync } from '@/i18n'
 
 export const mixinUpdateStore = {
   data () {
@@ -16,6 +17,13 @@ export const mixinUpdateStore = {
     $route (){ this.setLangParams(this.lang) } 
   },
   methods: {
+    setLang (lang) {
+      this.$store.commit('updateLang', lang)
+      loadLanguageAsync(lang)
+      localStorage.setItem('lang', lang)
+      this.langParams.set('lang', lang)
+      this.setLangParams(lang)
+    },
     setLangParams (val) {
       window.history.replaceState({}, '', `${window.location.pathname}?lang=${val}`);
     },

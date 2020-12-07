@@ -8,7 +8,6 @@ label.pluralization(for="locale")
 
 <script>
 import { list_languages } from '@//i18n/list_languages'
-import { loadLanguageAsync } from '@/i18n'
 import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
 
 export default {
@@ -22,30 +21,20 @@ export default {
   },
   methods: {    
     updateLocale (event) {
-      this.$store.commit('updateLang', event.target.value)
-      loadLanguageAsync(event.target.value)
-      localStorage.setItem('lang', event.target.value)
-      this.langParams.set('lang', event.target.value)
-      this.setLangParams(event.target.value)
+      this.setLang(event.target.value)
     },
     setLocale () {
       let lang = localStorage.getItem('lang')
 
       if(this.langParams.get('lang')) {
-        this.$store.commit('updateLang', this.langParams.get('lang'))
-        localStorage.setItem('lang', this.langParams.get('lang'))
-        loadLanguageAsync(this.langParams.get('lang'))
+        this.setLang(this.langParams.get('lang'))
       } else {        
         if(!lang) {
           localStorage.setItem('lang', 'pt-BR')
-          this.langParams.set('lang', 'pt-BR')
-          this.setLangParams('pt-BR')
+          this.setLang('pt-BR')
         } else {
           lang = lang.replace(/"/g, "")
-          loadLanguageAsync(lang)
-          this.$store.commit('updateLang', lang)
-          this.langParams.set('lang', lang)
-          this.setLangParams(lang)
+          this.setLang(lang)
         }      
       }
     }

@@ -16,7 +16,6 @@ section.accounts(v-if="accounts[0]")
 </template>
 
 <script>
-import { loadLanguageAsync } from '@/i18n'
 import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
 
 import Flag from '@/components/Flag'
@@ -34,11 +33,7 @@ export default {
   methods: {
     toggleAccount (store) {
       this.$store.commit("updateUser", store.s_data)
-      this.$store.commit('updateLang', store.s_lang)
-      loadLanguageAsync(store.s_lang)
-      localStorage.setItem('lang', store.s_lang)
-      this.langParams.set('lang', store.s_lang)
-      this.setLangParams(store.s_lang)
+      this.setLang(store.s_lang)
     },
     activeAccount (e) {
       let accounts = document.querySelectorAll('.account')
