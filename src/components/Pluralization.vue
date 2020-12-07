@@ -35,31 +35,44 @@ export default {
   created () { this.setLocale() },
   data () {
     return {
-      locale: 'pt-BR'
+      locale: 'pt-BR',
+      langParams: (new URL(window.location)).searchParams
     }
   },
   methods: {
+    setLangParams () {
+      window.history.replaceState({}, '', `${window.location.pathname}?${this.langParams.toString()}`);
+    },
     setLocale () {
       let locale = localStorage.getItem('locale')
 
       if(!locale) {
         localStorage.setItem('locale', 'pt-BR')
+        this.langParams.set('lang', 'pt-BR')        
+      } else if(this.langParams.get('lang')) {
+        this.locale = this.langParams.get('lang')
+        loadLanguageAsync(locale)        
+        this.langParams.set('lang', locale)
       } else {
         locale = locale.replace(/"/g, "")
         loadLanguageAsync(locale)
         this.locale = locale
-
-      }
+        this.langParams.set('lang', locale)
+        this.setLangParams()
+      }      
     }
   },
   watch: {
     locale (val) {
       loadLanguageAsync(val)
       localStorage.setItem('locale', val)
+      this.langParams.set('lang', val)
       this.setLocalStore(val)
       this.accountsRender()
-    }
-  }
+      this.setLangParams()
+    },
+    $route (){ this.setLangParams() } 
+  }  
 }
 </script>
 
