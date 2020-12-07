@@ -36,6 +36,8 @@ export default {
       this.$store.commit("updateUser", store.s_data)
       loadLanguageAsync(store.s_lang)
       localStorage.setItem('locale', store.s_lang)
+      this.langParams.set('lang', store.s_lang)
+      this.setLangParams()
     },
     activeAccount (e) {
       let accounts = document.querySelectorAll('.account')

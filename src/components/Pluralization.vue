@@ -35,14 +35,10 @@ export default {
   created () { this.setLocale() },
   data () {
     return {
-      locale: 'pt-BR',
-      langParams: (new URL(window.location)).searchParams
+      locale: 'pt-BR'      
     }
   },
-  methods: {
-    setLangParams () {
-      window.history.replaceState({}, '', `${window.location.pathname}?${this.langParams.toString()}`);
-    },
+  methods: {    
     setLocale () {
       let locale = localStorage.getItem('locale')
 

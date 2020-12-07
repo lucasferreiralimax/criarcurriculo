@@ -2,11 +2,19 @@ import { mapState } from 'vuex'
 import moment from 'moment'
 
 export const mixinUpdateStore = {
+  data () {
+    return {
+      langParams: (new URL(window.location)).searchParams
+    }
+  },
   computed: mapState({
     user: state => state.user,
     accounts: state => state.accounts
   }),
   methods: {
+    setLangParams () {
+      window.history.replaceState({}, '', `${window.location.pathname}?${this.langParams.toString()}`);
+    },
     accountsRender () {
       let local = localStorage
       this.$store.commit("updateAcccount", [])
