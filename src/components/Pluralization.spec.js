@@ -1,6 +1,5 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 
-import { user } from '@/user'
 import { mutations } from '@/mutations'
 import Vuex from 'vuex'
 import Pluralization from './Pluralization.vue'
@@ -11,7 +10,7 @@ localVue.use(Vuex)
 
 let store = new Vuex.Store({
   state: {
-    user: user
+    lang: 'pt-BR'
   },
   mutations: mutations
 })
@@ -26,8 +25,8 @@ describe('Pluralization', () => {
   })
   for(let language of list_language) {
     it(`Language ${language}`, async () => {
-      await wrapper.setData({ locale: language })
-      expect(wrapper.vm.locale).toContain(language)
+      await store.commit('updateLang', language)
+      expect(wrapper.vm.lang).toContain(language)
     })
   }
 })
