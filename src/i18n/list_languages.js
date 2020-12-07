@@ -1,0 +1,22 @@
+export const list_languages = {
+    pt: ["Português", "pt-BR", "Criar Currículo", "Feito com Coração"],
+    ar: ["العربي", "ar-SA", "خلق منهاج دراسي", "مصنوعة من القلب"],
+    en: ["English", "en-US", "Create Curriculum", "Made with Heart"],
+    es: ["Español", "es-ES", "Crear Resumem", "Hecho con Corazón"],
+    ca: ["Català", "ca-ES", "Crear Resum", "Fet amb Cor"],
+    hi: ["भारतीय", "hi-IN", "सृजन करना पाठ्यक्रम", "दिल से बनाया गय"],
+    ru: ["русский", "ru-RU", "Создайте Свободное", "Сделано с сердцем"],
+    ja: ["日本語", "ja-JP", "作成する カリキュラム", "ハートで作られた"],
+    fr: ["Français", "fr-FR", "Créer Curriculo", "Fait avec du coeur"],
+    tr: ["Türk", "tr-TR", "Oluşturmak Müfredat", "Kalp ile Yapıldı"],
+    zh: ["中国", "zh-CN", "创造 课程", "用心做"],
+    de: ["Deutschland", "de-DE", "Erstellen Curriculum", "Mit Herz gemacht"],
+    it: ["Italiano", "it-IT", "Creare Curriculum", "Fatto con il cuore"],
+    el: ["ελληνικά", "el-GR", "δημιουργώ Δωρεάν", "Made with Heart"],
+    vi: ["Tiếng việt", "vi-VT", "Tạo nên Giáo trình", "Làm bằng trái tim"],
+    th: ["ไทย", "th-TH", "สร้าง หลักสูตร", "ทำด้วยหัวใจ"],
+    nl: ["Neerlandesa", "nl-NL", "Creëren Leerplan", "Gemaakt met hart"],
+    no: ["Norsk", "no-NO", "Skape Læreplan", "Made with Heart"],
+    hu: ["Ungáiris", "hu-HU", "Teremt Resume", "Szívvel készült"],
+    ga: ["Ireland", "ga-IE", "Cruthaigh Curaclam", "Déanta le Croí"]
+}
