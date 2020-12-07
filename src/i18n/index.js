@@ -2,31 +2,14 @@ import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 import axios from 'axios'
 import pt_BR from './pt-BR.json'
+import { list_languages } from './list_languages'
 
 Vue.use(VueI18n)
 
-const languages = {
-  pt: "Português",
-  ar: "العربي",
-  en: "English",
-  es: "Español",
-  ca: "Català",
-  in: "भारतीय",
-  ru: "русский",
-  ja: "日本語",
-  fr: "Français",
-  tr: "Türk",
-  ch: "中国",
-  de: "Deutschland",
-  it: "Italiano",
-  gr: "ελληνικά",
-  vn: "Tiếng việt",
-  tl: "ไทย",
-  nl: "Neerlandesa",
-  nl_n: "Norsk",
-  hu: "Ungáiris",
-  ir: "Ireland"
-};
+let list = Object.getOwnPropertyNames(list_languages)
+let languages = {}
+
+list.map((item) => languages[item] = list_languages[item][0] );
 
 pt_BR.locale = languages
 
