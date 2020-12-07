@@ -6,7 +6,7 @@ function testeMakeHeart(name, lang) {
 
 describe('Validar Tecnologias', () => {
   it('Github', () => {
-    cy.visit('/sobre')
+    cy.visit('/about')
     cy.get('.hitech').scrollIntoView()
     cy.contains('.credits_logo p', 'Github')
   })
