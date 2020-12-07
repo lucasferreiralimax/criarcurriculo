@@ -1,6 +1,6 @@
 <template lang="pug">
 label.pluralization(for="locale")
-  select#locale(v-model="locale")
+  select#locale(:value="lang" @input="updateLocale")
     option(value="pt-BR") {{ $t('locale.pt')}}
     option(value="ar-SA") {{ $t('locale.ar')}}
     option(value="en-US") {{ $t('locale.en')}}
@@ -33,41 +33,32 @@ export default {
   name: 'pluralization',
   mixins: [mixinUpdateStore],
   created () { this.setLocale() },
-  data () {
-    return {
-      locale: 'pt-BR'      
-    }
-  },
   methods: {    
+    updateLocale (event) {
+      this.$store.commit('updateLang', event.target.value)
+      loadLanguageAsync(event.target.value)
+      localStorage.setItem('lang', event.target.value)
+      this.langParams.set('lang', event.target.value)
+      this.setLangParams(event.target.value)
+    },
     setLocale () {
-      let locale = localStorage.getItem('locale')
+      let lang = localStorage.getItem('lang')
 
-      if(!locale) {
-        localStorage.setItem('locale', 'pt-BR')
-        this.langParams.set('lang', 'pt-BR')        
+      if(!lang) {
+        localStorage.setItem('lang', 'pt-BR')
+        this.langParams.set('lang', 'pt-BR')
+        this.setLangParams('pt-BR')        
       } else if(this.langParams.get('lang')) {
-        this.locale = this.langParams.get('lang')
-        loadLanguageAsync(locale)        
-        this.langParams.set('lang', locale)
+        this.$store.commit('updateLang', this.langParams.get('lang'))
+        loadLanguageAsync(this.langParams.get('lang'))
       } else {
-        locale = locale.replace(/"/g, "")
-        loadLanguageAsync(locale)
-        this.locale = locale
-        this.langParams.set('lang', locale)
-        this.setLangParams()
+        lang = lang.replace(/"/g, "")
+        loadLanguageAsync(lang)
+        this.$store.commit('updateLang', lang)
+        this.langParams.set('lang', lang)
+        this.setLangParams(lang)
       }      
     }
-  },
-  watch: {
-    locale (val) {
-      loadLanguageAsync(val)
-      localStorage.setItem('locale', val)
-      this.langParams.set('lang', val)
-      this.setLocalStore(val)
-      this.accountsRender()
-      this.setLangParams()
-    },
-    $route (){ this.setLangParams() } 
   }  
 }
 </script>
