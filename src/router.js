@@ -12,13 +12,13 @@ export default new VueRouter({
       component: () => import(/* webpackChunkName: "home" */ './views/Home.vue')
     },
     {
-      path: '/sobre',
-      name: 'sobre',
+      path: '/about',
+      name: 'about',
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     },
     {
-      path: '/colaboradores',
-      name: 'colaboradores',
+      path: '/contributors',
+      name: 'contributors',
       component: () => import(/* webpackChunkName: "colab" */ './views/Colab.vue')
     },
     {
