@@ -9,11 +9,15 @@ export const mixinUpdateStore = {
   },
   computed: mapState({
     user: state => state.user,
-    accounts: state => state.accounts
+    accounts: state => state.accounts,
+    lang: state => state.lang
   }),
+  watch: {
+    $route (){ this.setLangParams(this.lang) } 
+  },
   methods: {
-    setLangParams () {
-      window.history.replaceState({}, '', `${window.location.pathname}?${this.langParams.toString()}`);
+    setLangParams (val) {
+      window.history.replaceState({}, '', `${window.location.pathname}?lang=${val}`);
     },
     accountsRender () {
       let local = localStorage
@@ -30,7 +34,7 @@ export const mixinUpdateStore = {
                   "s_data": store,
                   "s_time": moment().locale(lang[0]).format('LLL'),
                   "s_lang": lang[0],
-                  "s_active": lang[0] == localStorage.getItem('locale')
+                  "s_active": lang[0] == localStorage.getItem('lang')
                 };
             this.$store.commit("insertAcccount", store_account)
           }
