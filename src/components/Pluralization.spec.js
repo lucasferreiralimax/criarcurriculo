@@ -1,5 +1,6 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 
+import { list_languages } from '@/i18n/list_languages'
 import { mutations } from '@/mutations'
 import Vuex from 'vuex'
 import Pluralization from './Pluralization.vue'
@@ -17,16 +18,14 @@ let store = new Vuex.Store({
 
 const wrapper = shallowMount(Pluralization, { store, localVue })
 
-const list_language = [ "pt-BR", "ar-SA", "en-US", "es-ES", "es-CA", "ru-RU", "in-ID", "ja-JP", "fr-FR", "tr-TR", "ch-ZH", "al-DE", "it-IT", "gr-GK", "vn-VT", "tl-TD", "nl-HL", "nl-NL", "hu-RV", "ir-IS" ]
-
 describe('Pluralization', () => {
   it('is Pluralization a vue instance', () => {
     expect(wrapper.exists()).toBeTruthy()
   })
-  for(let language of list_language) {
-    it(`Language ${language}`, async () => {
-      await store.commit('updateLang', language)
-      expect(wrapper.vm.lang).toContain(language)
+  for(let language in list_languages) {
+    it(`Language ${list_languages[language][0]}`, async () => {
+      await store.commit('updateLang', list_languages[language][1])
+      expect(wrapper.vm.lang).toContain(list_languages[language][1])
     })
   }
 })
