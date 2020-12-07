@@ -31,20 +31,23 @@ export default {
     setLocale () {
       let lang = localStorage.getItem('lang')
 
-      if(!lang) {
-        localStorage.setItem('lang', 'pt-BR')
-        this.langParams.set('lang', 'pt-BR')
-        this.setLangParams('pt-BR')        
-      } else if(this.langParams.get('lang')) {
+      if(this.langParams.get('lang')) {
         this.$store.commit('updateLang', this.langParams.get('lang'))
+        localStorage.setItem('lang', this.langParams.get('lang'))
         loadLanguageAsync(this.langParams.get('lang'))
-      } else {
-        lang = lang.replace(/"/g, "")
-        loadLanguageAsync(lang)
-        this.$store.commit('updateLang', lang)
-        this.langParams.set('lang', lang)
-        this.setLangParams(lang)
-      }      
+      } else {        
+        if(!lang) {
+          localStorage.setItem('lang', 'pt-BR')
+          this.langParams.set('lang', 'pt-BR')
+          this.setLangParams('pt-BR')
+        } else {
+          lang = lang.replace(/"/g, "")
+          loadLanguageAsync(lang)
+          this.$store.commit('updateLang', lang)
+          this.langParams.set('lang', lang)
+          this.setLangParams(lang)
+        }      
+      }
     }
   }  
 }
