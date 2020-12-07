@@ -34,10 +34,11 @@ export default {
   methods: {
     toggleAccount (store) {
       this.$store.commit("updateUser", store.s_data)
+      this.$store.commit('updateLang', store.s_lang)
       loadLanguageAsync(store.s_lang)
-      localStorage.setItem('locale', store.s_lang)
+      localStorage.setItem('lang', store.s_lang)
       this.langParams.set('lang', store.s_lang)
-      this.setLangParams()
+      this.setLangParams(store.s_lang)
     },
     activeAccount (e) {
       let accounts = document.querySelectorAll('.account')
