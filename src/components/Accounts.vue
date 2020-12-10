@@ -6,7 +6,12 @@ section.accounts(v-if="accounts[0]")
     handle=".handle"
     @start="dragging = true"
     @end="dragging = false")
-    p.account(:class="{ 'active' : account.s_active }" v-for="(account, key) in accounts" @click="toggleAccount(account); activeAccount($event)")
+    p.account(
+      v-for="(account, key) in accounts"
+      :class="{ 'active' : account.s_active }"
+      :aria-checked="account.s_active"
+      @click="toggleAccount(account); activeAccount($event)"
+    )
       flag.flag.handle(:type="account.s_lang")
       span.name {{ account.s_name }}
       span.date {{ account.s_time }}
