@@ -2,24 +2,15 @@
 section.layout
   h2 {{ $t('layout.title') }}
   .options
-    button.btn.m-0(type="button" @click="setLayout()" :class="[ layout_render == 'layout-default' ? 'actived' : '' ]")
-      | {{ $t('layout.default') }}
-      .layout-grid.layout-1
-    button.btn.m-0(type="button" @click="setLayout('layout-circle')" :class="[ layout_render == 'layout-circle' ? 'actived' : '' ]")
-      | {{ $t('layout.circle') }}
-      .layout-grid.layout-2
-    button.btn.m-0(type="button" @click="setLayout('layout-mirror')" :class="[ layout_render == 'layout-mirror' ? 'actived' : '' ]")
-      | {{ $t('layout.mirror') }}
-      .layout-grid.layout-3
-    button.btn.m-0(type="button" @click="setLayout('layout-sidebar')" :class="[ layout_render == 'layout-sidebar' ? 'actived' : '' ]")
-      | {{ $t('layout.sidebar') }}
-      .layout-grid.layout-4
-    button.btn.m-0(type="button" @click="setLayout('layout-sidebar-circle')" :class="[ layout_render == 'layout-sidebar-circle' ? 'actived' : '' ]")
-      | {{ $t('layout.circle') }}
-      .layout-grid.layout-5
-    button.btn.m-0(type="button" @click="setLayout('layout-sidebar-mirror')" :class="[ layout_render == 'layout-sidebar-mirror' ? 'actived' : '' ]")
-      | {{ $t('layout.mirror') }}
-      .layout-grid.layout-6
+    button.btn.m-0(
+      v-for="(layout, index) of layouts" :key="index"
+      :class="[ layout_render == layout.name ? 'actived' : '' ]"      
+      :aria-checked="layout_render == layout.name"
+      @click="setLayout(layout.name)"
+      type="button"
+    )
+      | {{ $t(`layout.${layout.type}`) }}
+      .layout-grid(class=`layout-${index}`)
 </template>
 
 <script>
@@ -28,6 +19,18 @@ import { mapState } from 'vuex'
 export default {
   name: 'layout',
   computed: mapState({ layout_render: state => state.layout_render }),
+  data() {
+    return {
+      layouts: [
+        { name: 'layout-default',        type: 'default' },
+        { name: 'layout-circle',         type: 'circle'  },
+        { name: 'layout-mirror',         type: 'mirror'  },
+        { name: 'layout-sidebar',        type: 'sidebar' },
+        { name: 'layout-sidebar-circle', type: 'circle'  },
+        { name: 'layout-sidebar-mirror', type: 'mirror'  }
+      ]
+    }
+  },
   mounted () {
     let layoutType = localStorage.getItem('layoutType')
     if(layoutType) {
