@@ -1,6 +1,11 @@
 {
   "name": "criarcurriculo",
   "version": "2.0.1",
+  "author": "lucasferreiralimax (https://github.com/lucasferreiralimax)",
+  "repository": "https://github.com/lucasferreiralimax/criarcurriculo",
+  "bugs": {
+    "url": "https://github.com/lucasferreiralimax/criarcurriculo/issues"
+  },
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
