@@ -1,21 +1,18 @@
 {
   "name": "criarcurriculo",
   "version": "2.0.1",
-  "author": "lucasferreiralimax (https://github.com/lucasferreiralimax)",
-  "repository": "https://github.com/lucasferreiralimax/criarcurriculo",
-  "bugs": {
-    "url": "https://github.com/lucasferreiralimax/criarcurriculo/issues"
-  },
   "private": true,
+  "author": "lucasferreiralimax (https://github.com/lucasferreiralimax)",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e"
+    "test:e2e": "vue-cli-service test:e2e",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "axios": "^0.18.1",
+    "core-js": "^3.6.5",
     "element-ui": "^2.14.0",
     "moment": "^2.29.1",
     "register-service-worker": "^1.7.1",
@@ -28,15 +25,18 @@
     "vuex": "^3.5.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.5.0",
-    "@vue/cli-plugin-e2e-cypress": "^3.5.0",
-    "@vue/cli-plugin-eslint": "^3.5.0",
-    "@vue/cli-plugin-pwa": "^3.0.0-rc.10",
-    "@vue/cli-plugin-unit-jest": "^4.5.8",
-    "@vue/cli-service": "^4.5.8",
+    "@vue/cli-plugin-babel": "^4.5.9",
+    "@vue/cli-plugin-e2e-cypress": "^4.5.9",
+    "@vue/cli-plugin-eslint": "^4.5.9",
+    "@vue/cli-plugin-pwa": "^4.5.9",
+    "@vue/cli-plugin-unit-jest": "^4.5.9",
+    "@vue/cli-service": "^4.5.9",
     "@vue/test-utils": "^1.1.1",
     "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
     "babel-jest": "^25.5.1",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
     "stylus": "^0.54.8",
@@ -47,5 +47,9 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/lucasferreiralimax/criarcurriculo/issues"
+  },
+  "repository": "https://github.com/lucasferreiralimax/criarcurriculo"
 }
