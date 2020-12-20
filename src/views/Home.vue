@@ -3,8 +3,8 @@
     el-carousel.carousel(:interval="5000")
       el-carousel-item.carousel-item.mark.center        
         figure.user-banner
-          img(v-if="theme_app !== 'rose' && theme_app !== 'classic' && theme_app !== 'gold'" src="../assets/banner_boy.svg" alt="User banner")
-          img(v-else src="../assets/banner_girl.svg" alt="User banner")
+          img(v-if="theme_app !== 'rose' && theme_app !== 'classic' && theme_app !== 'gold'" src="../assets/banner_boy.svg" alt="User banner" width="300" height="300")
+          img(v-else src="../assets/banner_girl.svg" alt="User banner" width="300" height="300")
         div
           h2 {{ $t('view.home.text1') }}
           h2#start {{ $t('view.home.text2') }}
