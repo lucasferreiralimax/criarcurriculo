@@ -5,6 +5,7 @@ section.layout
     button.btn.m-0(
       v-for="(layout, index) of layouts" :key="index"
       :class="[ layout_render == layout.name ? 'actived' : '' ]"      
+      role="checkbox"
       :aria-checked="layout_render == layout.name"
       @click="setLayout(layout.name)"
       type="button"
