@@ -1,5 +1,6 @@
 <template lang="pug">
 label.pluralization(for="locale")
+  span {{ $t('layout.language') }}
   select#locale(:value="lang" @input="updateLocale")
     option(v-for="(language, key) in list_languages" :value="language[1]") {{ $t(`locale.${language[1].substring(0,2)}`) }}
   svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.1 480.1" width="29" height="29" fill="#fff")
@@ -62,6 +63,8 @@ export default {
     background transparent
     svg
       animation world 2s infinite linear
+  span
+    font-size 0
   svg
     margin-left 10px
     transition 2s all

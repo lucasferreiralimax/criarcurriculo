@@ -188,7 +188,8 @@
     "circle": "Circular",
     "mirror": "Espejo",
     "sidebar": "Lado",
-    "icones": "Iconos de visibilidad"
+    "icones": "Iconos de visibilidad",
+    "language": "Selecciona un idioma"
   },
   "calendar": {
     "january": "Enero",
