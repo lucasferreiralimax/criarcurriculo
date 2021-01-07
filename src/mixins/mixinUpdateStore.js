@@ -14,7 +14,7 @@ export const mixinUpdateStore = {
     lang: state => state.lang
   }),
   watch: {
-    $route (){ this.setLangParams(this.lang) } 
+    $route (){ this.setLangParams(this.lang) }
   },
   methods: {
     setLang (lang) {

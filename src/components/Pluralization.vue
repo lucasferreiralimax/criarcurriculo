@@ -20,26 +20,30 @@ export default {
       list_languages: list_languages
     }
   },
-  methods: {    
+  methods: {
     updateLocale (event) {
       this.setLang(event.target.value)
+      this.setLocalStore(event.target.value)
     },
     setLocale () {
       let lang = localStorage.getItem('lang')
 
       if(this.langParams.get('lang')) {
         this.setLang(this.langParams.get('lang'))
-      } else {        
+        this.setLocalStore(this.langParams.get('lang'))
+      } else {
         if(!lang) {
           localStorage.setItem('lang', 'pt-BR')
           this.setLang('pt-BR')
+          this.setLocalStore('pt-BR')
         } else {
           lang = lang.replace(/"/g, "")
           this.setLang(lang)
-        }      
+          this.setLocalStore(lang)
+        }
       }
     }
-  }  
+  }
 }
 </script>
 
