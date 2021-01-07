@@ -124,6 +124,7 @@ export const mixinUpdateStore = {
         store.languages = []
         this.$store.commit("updateUser", store)
       }
+      this.accountsRender()
     }
   }
 }
