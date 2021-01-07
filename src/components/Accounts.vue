@@ -50,7 +50,7 @@ export default {
       }
     },
     removeAccount (key, store) {
-      if(window.confirm("Tem certeza?")) {
+      if(window.confirm(this.$t('form.choice'))) {
         this.$delete(this.accounts, key)
         localStorage.removeItem(`${store}`)
       }
