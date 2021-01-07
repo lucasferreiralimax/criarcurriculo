@@ -1,5 +1,5 @@
 export const list_languages = {
-    pt: ["Português", "pt-BR", "Criar Currículo", "Feito com Coração"],
+    pt: ["Português Brasil", "pt-BR", "Criar Currículo", "Feito com Coração"],
     ar: ["العربي", "ar-SA", "خلق منهاج دراسي", "مصنوعة من القلب"],
     en: ["English", "en-US", "Create Curriculum", "Made with Heart"],
     es: ["Español", "es-ES", "Crear Resumem", "Hecho con Corazón"],
