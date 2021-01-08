@@ -4,7 +4,7 @@ section.layout
   .options
     button.btn.m-0(
       v-for="(layout, index) of layouts" :key="index"
-      :class="[ layout_render == layout.name ? 'actived' : '' ]"      
+      :class="[ layout_render == layout.name ? 'actived' : '' ]"
       role="checkbox"
       :aria-checked="layout_render == layout.name"
       @click="setLayout(layout.name)"
@@ -185,6 +185,9 @@ export default {
     &[for^='GET-site']
       margin-right 0
       margin-left 1em
+  .btn.handle.move
+    left 0
+    right auto
 .layout-sidebar.content
 .layout-sidebar-circle.content
   .figure
@@ -196,7 +199,7 @@ export default {
     transform translateX(188px)
     padding-left 0
     border 0
-    &.photo 
+    &.photo
       max-width calc(100% - 188px)
   [for="GET-about"],
   .languages,
@@ -223,7 +226,7 @@ export default {
       margin-top 0
     &:last-of-type
       hr
-        display none    
+        display none
 .layout-sidebar-mirror.content
   .figure
     width 140px
@@ -237,9 +240,9 @@ export default {
   .info
     transform translateX(0)
     padding-left 0
-    border 0    
+    border 0
     text-align right
-    max-width calc(100% - 188px)      
+    max-width calc(100% - 188px)
   [for="GET-about"],
   .languages,
   .hobby,
@@ -247,7 +250,7 @@ export default {
   .exps
     padding-right 188px
     position relative
-    border 0    
+    border 0
     margin-top 1em
     padding-top 1em
     border-top 1px solid #ccc
@@ -266,7 +269,10 @@ export default {
       margin-top 0
     &:last-of-type
       hr
-        display none    
+        display none
+  .btn.handle.move
+    left 0
+    right auto
 .layout-sidebar-circle
   .figure
     border-radius 100%
@@ -279,9 +285,16 @@ export default {
     &:after
       right auto
       left 0
+  .layout-default
+    .btn.handle.move
+      left 0
+      right auto
   .layout-circle
     .info.photo
       padding-right 140px
+    .btn.handle.move
+      left 0
+      right auto
   .layout-mirror
     text-align left
     .info,
@@ -290,7 +303,6 @@ export default {
     .languages,
     .hobby,
     label[for="GET-about"]
-      float left
       text-align left
     .contact-info
       float left
@@ -306,6 +318,9 @@ export default {
       &[for^='GET-site']
         margin-right 1em !important
         margin-left 0 !important
+    .btn.handle.move
+      left 0
+      left auto
   .layout-3
     &:before
       right auto
@@ -331,7 +346,7 @@ export default {
       transform translateX(-188px)
       padding-left 0
       padding-right 0
-      &.photo 
+      &.photo
         max-width calc(100% - 188px)
     [for="GET-about"],
     .languages,
@@ -344,6 +359,9 @@ export default {
       h2
         right 0
         text-align left
+    .btn.handle.move
+      left 0
+      right auto
   .layout-sidebar-mirror.content
     .figure
       left 2em
@@ -354,7 +372,7 @@ export default {
       transform translateX(0)
       padding-left 0
       text-align left
-      max-width calc(100% - 188px)      
+      max-width calc(100% - 188px)
     [for="GET-about"],
     .languages,
     .hobby,
@@ -367,4 +385,7 @@ export default {
         left 0
         right auto
         text-align right
+    .btn.handle.move
+      right 0
+      left auto
 </style>
