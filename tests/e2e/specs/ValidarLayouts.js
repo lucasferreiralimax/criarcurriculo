@@ -25,4 +25,8 @@ describe('Validar Layouts', () => {
     cy.get('.layout .btn:nth-of-type(6)').click()
     cy.wait(1000)
   })
+  it('Layout 5', () => {
+    cy.get('.layout .btn:nth-of-type(5)').click()
+    cy.wait(1000)
+  })
 })
