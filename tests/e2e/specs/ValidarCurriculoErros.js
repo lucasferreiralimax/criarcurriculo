@@ -11,6 +11,9 @@ describe('Validar erros curriculo simples', () => {
   it('Idade limpa', () => {
     cy.get('#GET-dataofbirth').clear()
   })
+  it('Sobre mim limpa', () => {
+    cy.get('#GET-about').clear()
+  })
   it('Endereço limpo', () => {
     cy.get('#GET-cep').clear()
     cy.get('#GET-address-number').clear()
@@ -22,7 +25,6 @@ describe('Validar erros curriculo simples', () => {
     cy.get('#GET-telephone-0').clear()
   })
   it('E-mail limpo', () => {
-    cy.get('#newEmail').click()
     cy.get('#GET-email-0').clear()
   })
   it('Site limpo', () => {
