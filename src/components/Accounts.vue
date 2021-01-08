@@ -12,7 +12,7 @@ section.accounts(v-if="accounts[0]")
       :aria-checked="account.s_active"
       @click="toggleAccount(account); activeAccount($event)"
     )
-      flag.flag.handle(:type="account.s_lang")
+      flag.handle(:type="account.s_lang")
       span.name {{ account.s_name }}
       span.date {{ account.s_time }}
       button(@click="removeAccount(key, account.s_local)" class="btn delete bullet small right" type="button" :aria-label="$t('aria-label.remove_account') + ' ' + account.s_name + ' ' + account.s_lang")
