@@ -11,6 +11,13 @@ function testeTemaLayout(name) {
 }
 
 describe('Validar temas', () => {
+  beforeEach(() => {
+    cy.restoreLocalStorage();
+  });
+
+  afterEach(() => {
+    cy.saveLocalStorage();
+  });
   it('Tema Rosa', () => {
     cy.visit('/')
     cy.get('#start').scrollIntoView()
@@ -36,6 +43,13 @@ describe('Validar temas', () => {
 })
 
 describe('Validar temas layout', () => {
+  beforeEach(() => {
+    cy.restoreLocalStorage();
+  });
+
+  afterEach(() => {
+    cy.saveLocalStorage();
+  });
   it('Tema Rosa', () => {
     cy.visit('/')
     cy.get('#start').scrollIntoView()
@@ -57,5 +71,8 @@ describe('Validar temas layout', () => {
   it('Tema Selva', () => {
     testeTemaLayout('Selva')
     cy.get('#openTheme').click({ force: true })
+  })
+  it('Tema Default', () => {
+    testeTemaLayout('Padrão')
   })
 })
