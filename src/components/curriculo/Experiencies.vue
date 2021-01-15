@@ -16,7 +16,7 @@ draggable(:list="user.exps"
                 v-for="(exp, key) in user.exps")
     template(#action)
       .actions
-        button.handle.btn.bullet.small.left(type="button" :aria-label="$t('aria-label.exp_remove') + ' ' + exp.experience.name")
+        button.handle.btn.bullet.small.left(type="button" :aria-label="$t('aria-label.move') + ' ' + exp.experience.name")
           i =
         button.btn.delete.bullet.small.left(type="button" @click="remove('exps', key)" :aria-label="$t('aria-label.exp_remove') + ' ' + exp.experience.name")
           svg(viewBox="0 0 329.269 329" xmlns="http://www.w3.org/2000/svg")

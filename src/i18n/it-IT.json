@@ -140,6 +140,7 @@
   },
   "aria-label": {
     "add": "Aggiungere",
+    "move": "Trascina e sposta",
     "hobby": "@:aria-label.add attività o hobby",
     "theme": "Pulsante Tema",
     "icones": "Disabilita e abilita il pulsante delle icone",

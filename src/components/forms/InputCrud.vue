@@ -11,9 +11,11 @@
           i -
         button.btn.plus.bullet.small.left.ml-1(type="button" @click="newInput(value, vuex)" :aria-label="$t(`aria-label.${name}_add_new`)")
           i +
+        button.handle.btn.bullet.small.left.ml-1(type="button" :aria-label="$t('aria-label.move') + ' ' + user[value][key]")
+          i =
       | {{ language ? $tc(`form.${translate}`, 1) : $t(`form.${translate}`) }}:
       template(v-if="type == 'tel'")
-        input.handle(:id="`GET-${name}-` + key"
+        input(:id="`GET-${name}-` + key"
               :class="{ error: !user[value][key] && errors ? errors.length : false }"
               :name="`${name}-` + key"
               :type="type"
@@ -23,7 +25,7 @@
               v-model="user[value][key]"
               @input="updateVuex(vuex, $event)")
       template(v-else)
-        input.handle(:id="`GET-${name}-` + key"
+        input(:id="`GET-${name}-` + key"
               :class="{ error: !user[value][key] && errors ? errors.length : false }"
               :name="`${name}-` + key"
               :type="type"

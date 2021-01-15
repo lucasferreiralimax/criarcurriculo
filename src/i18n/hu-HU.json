@@ -140,6 +140,7 @@
   },
   "aria-label": {
     "add": "Add",
+    "move": "Húzza és mozgassa",
     "hobby": "@:aria-label.add tevékenység vagy hobbi",
     "theme": "Téma gombra",
     "icones": "Az ikonok letiltása és engedélyezése gomb",

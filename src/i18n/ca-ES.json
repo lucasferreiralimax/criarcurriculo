@@ -140,6 +140,7 @@
   },
   "aria-label": {
     "add": "Afegir",
+    "move": "Arrossega i mou",
     "hobby": "@:aria-label.add activities o passatemps",
     "theme": "botó de tema",
     "icones": "Desactiva i activa el botó d'icones",

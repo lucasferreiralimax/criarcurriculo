@@ -140,6 +140,7 @@
   },
   "aria-label": {
     "add": "eklemek",
+    "move": "Sürükle ve taşı",
     "hobby": "aktivite veya hobi ekle",
     "theme": "Tema düğmesi",
     "icones": "Simgeler düğmesini devre dışı bırakın ve etkinleştirin",

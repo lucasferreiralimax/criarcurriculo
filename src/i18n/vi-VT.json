@@ -140,6 +140,7 @@
   },
   "aria-label": {
     "add": "thêm",
+    "move": "Kéo và di chuyển",
     "hobby": "@:aria-label.add hoạt động hoặc sở thích",
     "theme": "Nút chủ đề",
     "icones": "Nút tắt và bật biểu tượng",

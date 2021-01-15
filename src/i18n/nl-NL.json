@@ -140,6 +140,7 @@
   },
   "aria-label": {
     "add": "Toevoegen",
+    "move": "slepen en verplaatsen",
     "hobby": "activiteit of hobby @:aria-label.add",
     "theme": "Themaknop",
     "icones": "Knop Pictogrammen in- en uitschakelen",

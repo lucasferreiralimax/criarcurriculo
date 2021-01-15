@@ -140,6 +140,7 @@
   },
   "aria-label": {
     "add": "加",
+    "move": "拖移",
     "hobby": "增@:aria-label.add活动或爱好",
     "theme": "主题按钮",
     "icones": "禁用和启用图标按钮",

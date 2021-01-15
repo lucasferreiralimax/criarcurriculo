@@ -140,6 +140,7 @@
   },
   "aria-label": {
     "add": "Ajouter",
+    "move": "Faites glisser et déplacez",
     "hobby": "@:aria-label.add des activités ou un passe-temps",
     "theme": "bouton de thème",
     "icones": "Bouton Désactiver et activer les icônes",

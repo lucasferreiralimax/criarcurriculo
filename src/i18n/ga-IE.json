@@ -140,6 +140,7 @@
   },
   "aria-label": {
     "add": "Cuir leis",
+    "move": "Tarraing agus bog",
     "hobby": "@:aria-label.add gníomhaíochtaí nó caitheamh aimsire",
     "theme": "Cnaipe Téama",
     "icones": "Cnaipe deilbhíní a dhíchumasú agus a chumasú",

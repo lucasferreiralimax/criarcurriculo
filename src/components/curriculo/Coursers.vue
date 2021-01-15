@@ -16,7 +16,7 @@ draggable(:list="user.coursers"
                 v-for="(course, key) in user.coursers")
     template(#action)
       .actions
-        button.handle.btn.bullet.small.left(type="button" :aria-label="$t('aria-label.course_remove') + ' ' + course.formation.name")
+        button.handle.btn.bullet.small.left(type="button" :aria-label="$t('aria-label.move') + ' ' + course.formation.name")
           i =
         button.btn.delete.bullet.small.left(type="button" @click="remove('coursers', key)" :aria-label="$t('aria-label.course_remove') + ' ' + course.formation.name")
           svg(viewBox="0 0 329.269 329" xmlns="http://www.w3.org/2000/svg")

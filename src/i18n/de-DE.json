@@ -140,6 +140,7 @@
   },
   "aria-label": {
     "add": "Hinzufügen",
+    "move": "Ziehen und verschieben",
     "hobby": "Aktivität oder Hobby @:aria-label.add",
     "theme": "Theme-Schaltfläche",
     "icones": "Schaltfläche Symbole deaktivieren und aktivieren",

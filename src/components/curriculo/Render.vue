@@ -91,15 +91,15 @@
             ghost-class="ghost"
             .handle=".handle"
             @start="dragging = true"
-            @end="dragging = false"            
+            @end="dragging = false"
             @change="updateVuex('updateCourser', $event)")
-            .coursers(v-for="(course, key, index) in user.coursers")              
+            .coursers(v-for="(course, key, index) in user.coursers")
               label(:for="'GET-school-' + key" v-if="course.formation.school")
                 h3
                   svg.icon-course(viewBox="0 -35 512 512" width="20" xmlns="http://www.w3.org/2000/svg")
                     path(d="M512 135.5c0-13.242-8.941-25.305-24.531-33.102L302.074 9.703C289.56 3.445 273.195 0 255.996 0c-17.203 0-33.57 3.445-46.086 9.703L24.531 102.398C8.941 110.195 0 122.262 0 135.504s8.941 25.305 24.531 33.098l40.383 20.191V293.98c0 29.883 20.934 63.758 47.66 77.125l97.348 48.668c12.922 6.461 29.5 9.692 46.082 9.692s33.164-3.23 46.086-9.692l97.332-48.668c26.726-13.367 47.664-47.242 47.664-77.125V188.797l34.91-17.457v254.707c0 8.285 6.715 15 15 15s15-6.715 15-15V135.57c0-.023.004-.047.004-.07zm-481.965 0c.34-.805 2.25-3.441 7.914-6.273l185.38-92.688C231.636 32.383 243.542 30 255.995 30c12.45 0 24.356 2.383 32.664 6.535L456.59 120.5H312.328c-7.515-20.387-29.922-35.215-56.332-35.215-32.539 0-59.02 22.528-59.02 50.215 0 27.691 26.477 50.219 59.02 50.219 26.41 0 48.82-14.832 56.332-35.219h144.27l-167.926 83.96c-8.313 4.157-20.215 6.54-32.664 6.54h-.004c-12.45 0-24.356-2.383-32.664-6.535L37.95 141.77c-5.665-2.833-7.575-5.465-7.915-6.27zm254.985 0c0 10.96-13.29 20.219-29.024 20.219-15.726 0-29.02-9.258-29.02-20.219 0-10.957 13.294-20.215 29.02-20.215 15.734 0 29.024 9.258 29.024 20.215zm132.066 158.48c0 18.512-14.524 42.012-31.082 50.293l-97.332 48.668c-17.402 8.7-47.934 8.7-65.332 0l-97.348-48.668c-16.555-8.28-31.082-31.78-31.082-50.293v-90.187l115.012 57.504C222.437 267.555 238.8 271 256.004 271s33.566-3.45 46.082-9.707l115-57.5zm0 0")
                   |{{ course.formation.school }}
-                button.handle.btn.bullet.small.left.move(type="button")
+                button.handle.btn.bullet.small.left.move(type="button" :aria-label="$t('aria-label.move') + ' ' + course.formation.name")
                   i =
               label(:for="'GET-course-' + key" v-if="course.formation.name")
                 p {{ course.formation.name }}
@@ -125,15 +125,15 @@
             ghost-class="ghost"
             handle=".handle"
             @start="dragging = true"
-            @end="dragging = false"            
+            @end="dragging = false"
             @change="updateVuex('updateExp', $event)")
-            .experiencies(v-for="(exp, key, index) in user.exps")              
+            .experiencies(v-for="(exp, key, index) in user.exps")
               label(:for="'GET-company-' + key" v-if="exp.experience.name")
                 h3
                   svg.icon-experience(viewBox="0 -31 512 512" xmlns="http://www.w3.org/2000/svg" width="20")
                     path(d="M497.094 60.004c-.031 0-.063-.004-.094-.004H361V45c0-24.813-20.188-45-45-45H196c-24.813 0-45 20.188-45 45v15H15C6.648 60 0 66.844 0 75v330c0 24.813 20.188 45 45 45h422c24.813 0 45-20.188 45-45V75.316v-.058c-.574-9.852-6.633-15.2-14.906-15.254zM181 45c0-8.27 6.73-15 15-15h120c8.27 0 15 6.73 15 15v15H181zm295.188 45l-46.583 139.742A14.975 14.975 0 0 1 415.38 240H331v-15c0-8.285-6.715-15-15-15H196c-8.285 0-15 6.715-15 15v15H96.621a14.975 14.975 0 0 1-14.226-10.258L35.813 90zM301 240v30h-90v-30zm181 165c0 8.27-6.73 15-15 15H45c-8.27 0-15-6.73-15-15V167.434l23.934 71.796A44.935 44.935 0 0 0 96.62 270H181v15c0 8.285 6.715 15 15 15h120c8.285 0 15-6.715 15-15v-15h84.379a44.935 44.935 0 0 0 42.687-30.77L482 167.434zm0 0")
                   | {{ exp.experience.name }}
-                  button.handle.btn.bullet.small.left.move(type="button")
+                  button.handle.btn.bullet.small.left.move(type="button" :aria-label="$t('aria-label.move') + ' ' + exp.experience.name")
                     i =
               label(:for="'GET-exps-' + key" v-if="exp.experience.work")
                 p {{ $t('form.office') }}: {{ exp.experience.work }}

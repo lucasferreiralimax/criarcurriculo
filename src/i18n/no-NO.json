@@ -140,6 +140,7 @@
   },
   "aria-label": {
     "add": "Legg",
+    "move": "dra og flytt",
     "hobby": "@:aria-label.add til aktivitet eller hobby",
     "theme": "Temaknapp",
     "icones": "Deaktiver og aktiver ikoner-knappen",

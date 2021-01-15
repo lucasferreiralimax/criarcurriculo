@@ -140,6 +140,7 @@
   },
   "aria-label": {
     "add": "Add",
+    "move": "Drag and move",
     "hobby": "@:aria-label.add activities or hobby",
     "theme": "Theme button",
     "icones": "Disable and enable icons button",

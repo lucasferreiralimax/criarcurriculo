@@ -140,6 +140,7 @@
   },
   "aria-label": {
     "add": "Agregar",
+    "move": "Arrastrar y mover",
     "hobby": "@:aria-label.add activities o pasatiempos",
     "theme": "botón de tema",
     "icones": "Botón de deshabilitar y habilitar iconos",
