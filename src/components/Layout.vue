@@ -220,13 +220,6 @@ export default {
       width 170px
       text-align right
       display block
-  .coursers,
-  .experiencies
-    h3
-      margin-top 0
-    &:last-of-type
-      hr
-        display none
 .layout-sidebar-mirror.content
   .figure
     width 140px
@@ -263,13 +256,6 @@ export default {
       width 170px
       text-align left
       display block
-  .coursers,
-  .experiencies
-    h3
-      margin-top 0
-    &:last-of-type
-      hr
-        display none
   .btn.handle.move
     left 0
     right auto
