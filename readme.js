@@ -1,4 +1,9 @@
-# :page_with_curl: Criar Currículo
+const fs = require("fs");
+
+const urlHosting = 'https://criar-curriculo.web.app'
+import { list_languages } from './src/i18n/list_languages.js'
+
+let readme = `# :page_with_curl: Criar Currículo
 > Essa aplicativo web tem o objetivo de ajudar a todos aqueles que precisa criar um currículo, rápido, fácil e grátis.
 > Facilitando a forma que você cria seu currículo com uma usabilidade desenhada para ser simples.
 >
@@ -10,28 +15,17 @@
 ---
 ## :cloud: Link's
 > Yo, ho, yo, ho :checkered_flag:
-#### <a href="https://criar-curriculo.web.app/?lang=pt-BR" target="_blank"><img alt="Criar Currículo - Português Brasil" width="20px" src="./src/assets/flags/pt-BR.svg" /></a> [Criar Currículo - Português Brasil](https://criar-curriculo.web.app/?lang=pt-BR)
-#### <a href="https://criar-curriculo.web.app/?lang=ar-SA" target="_blank"><img alt="خلق منهاج دراسي - العربي" width="20px" src="./src/assets/flags/ar-SA.svg" /></a> [خلق منهاج دراسي - العربي](https://criar-curriculo.web.app/?lang=ar-SA)
-#### <a href="https://criar-curriculo.web.app/?lang=en-US" target="_blank"><img alt="Create Curriculum - English" width="20px" src="./src/assets/flags/en-US.svg" /></a> [Create Curriculum - English](https://criar-curriculo.web.app/?lang=en-US)
-#### <a href="https://criar-curriculo.web.app/?lang=es-ES" target="_blank"><img alt="Crear Resumem - Español" width="20px" src="./src/assets/flags/es-ES.svg" /></a> [Crear Resumem - Español](https://criar-curriculo.web.app/?lang=es-ES)
-#### <a href="https://criar-curriculo.web.app/?lang=ca-ES" target="_blank"><img alt="Crear Resum - Català" width="20px" src="./src/assets/flags/ca-ES.svg" /></a> [Crear Resum - Català](https://criar-curriculo.web.app/?lang=ca-ES)
-#### <a href="https://criar-curriculo.web.app/?lang=hi-IN" target="_blank"><img alt="सृजन करना पाठ्यक्रम - भारतीय" width="20px" src="./src/assets/flags/hi-IN.svg" /></a> [सृजन करना पाठ्यक्रम - भारतीय](https://criar-curriculo.web.app/?lang=hi-IN)
-#### <a href="https://criar-curriculo.web.app/?lang=ru-RU" target="_blank"><img alt="Создайте Свободное - русский" width="20px" src="./src/assets/flags/ru-RU.svg" /></a> [Создайте Свободное - русский](https://criar-curriculo.web.app/?lang=ru-RU)
-#### <a href="https://criar-curriculo.web.app/?lang=ja-JP" target="_blank"><img alt="作成する カリキュラム - 日本語" width="20px" src="./src/assets/flags/ja-JP.svg" /></a> [作成する カリキュラム - 日本語](https://criar-curriculo.web.app/?lang=ja-JP)
-#### <a href="https://criar-curriculo.web.app/?lang=fr-FR" target="_blank"><img alt="Créer Curriculo - Français" width="20px" src="./src/assets/flags/fr-FR.svg" /></a> [Créer Curriculo - Français](https://criar-curriculo.web.app/?lang=fr-FR)
-#### <a href="https://criar-curriculo.web.app/?lang=tr-TR" target="_blank"><img alt="Oluşturmak Müfredat - Türk" width="20px" src="./src/assets/flags/tr-TR.svg" /></a> [Oluşturmak Müfredat - Türk](https://criar-curriculo.web.app/?lang=tr-TR)
-#### <a href="https://criar-curriculo.web.app/?lang=zh-CN" target="_blank"><img alt="创造 课程 - 中国" width="20px" src="./src/assets/flags/zh-CN.svg" /></a> [创造 课程 - 中国](https://criar-curriculo.web.app/?lang=zh-CN)
-#### <a href="https://criar-curriculo.web.app/?lang=de-DE" target="_blank"><img alt="Erstellen Curriculum - Deutschland" width="20px" src="./src/assets/flags/de-DE.svg" /></a> [Erstellen Curriculum - Deutschland](https://criar-curriculo.web.app/?lang=de-DE)
-#### <a href="https://criar-curriculo.web.app/?lang=it-IT" target="_blank"><img alt="Creare Curriculum - Italiano" width="20px" src="./src/assets/flags/it-IT.svg" /></a> [Creare Curriculum - Italiano](https://criar-curriculo.web.app/?lang=it-IT)
-#### <a href="https://criar-curriculo.web.app/?lang=el-GR" target="_blank"><img alt="δημιουργώ Δωρεάν - ελληνικά" width="20px" src="./src/assets/flags/el-GR.svg" /></a> [δημιουργώ Δωρεάν - ελληνικά](https://criar-curriculo.web.app/?lang=el-GR)
-#### <a href="https://criar-curriculo.web.app/?lang=vi-VT" target="_blank"><img alt="Tạo nên Giáo trình - Tiếng việt" width="20px" src="./src/assets/flags/vi-VT.svg" /></a> [Tạo nên Giáo trình - Tiếng việt](https://criar-curriculo.web.app/?lang=vi-VT)
-#### <a href="https://criar-curriculo.web.app/?lang=th-TH" target="_blank"><img alt="สร้าง หลักสูตร - ไทย" width="20px" src="./src/assets/flags/th-TH.svg" /></a> [สร้าง หลักสูตร - ไทย](https://criar-curriculo.web.app/?lang=th-TH)
-#### <a href="https://criar-curriculo.web.app/?lang=nl-NL" target="_blank"><img alt="Creëren Leerplan - Neerlandesa" width="20px" src="./src/assets/flags/nl-NL.svg" /></a> [Creëren Leerplan - Neerlandesa](https://criar-curriculo.web.app/?lang=nl-NL)
-#### <a href="https://criar-curriculo.web.app/?lang=no-NO" target="_blank"><img alt="Skape Læreplan - Norsk" width="20px" src="./src/assets/flags/no-NO.svg" /></a> [Skape Læreplan - Norsk](https://criar-curriculo.web.app/?lang=no-NO)
-#### <a href="https://criar-curriculo.web.app/?lang=hu-HU" target="_blank"><img alt="Teremt Resume - Ungáiris" width="20px" src="./src/assets/flags/hu-HU.svg" /></a> [Teremt Resume - Ungáiris](https://criar-curriculo.web.app/?lang=hu-HU)
-#### <a href="https://criar-curriculo.web.app/?lang=ga-IE" target="_blank"><img alt="Cruthaigh Curaclam - Ireland" width="20px" src="./src/assets/flags/ga-IE.svg" /></a> [Cruthaigh Curaclam - Ireland](https://criar-curriculo.web.app/?lang=ga-IE)
+`;
 
-___
+for(let language in list_languages) {
+  let name = `${list_languages[language][2]} - ${list_languages[language][0]}`
+  let asset = `./src/assets/flags/${list_languages[language][1]}.svg`
+  let url = `${urlHosting}/?lang=${list_languages[language][1]}`
+
+  readme += `#### <a href="${url}" target="_blank"><img alt="${name}" width="20px" src="${asset}" /></a> [${name}](${url})\n`
+}
+
+readme += `\n___
 # :love_letter: Ajude também
 > Se encontrar algum erro ou quiser contribuir com uma ideia para o projeto crie uma [issue](https://github.com/lucasferreiralimax/criarcurriculo/issues/new), sua ajuda será muito bem-vinda desde já agradeço. :clap:
 >
@@ -150,7 +144,7 @@ ___
 >打开终端或cmd并运行以下命令以安装和启动项目。
 
 ---
-``` bash
+\`\`\` bash
 # install dependencies
 npm install
 
@@ -162,7 +156,7 @@ npm run serve
 
 # serve with yarn hot reload at localhost:8080
 yarn serve
-```
+\`\`\`
 ---
 
 ### :performing_arts: Com quem você pode conversar sobre o projeto?
@@ -176,4 +170,6 @@ yarn serve
 #### 你能谈谈这个项目吗？
 
 * :ghost: @lucasferreiralimax
-* :email: lucasferreiralimax@gmail.com
+* :email: lucasferreiralimax@gmail.com`
+
+fs.writeFileSync('README.md', readme);
