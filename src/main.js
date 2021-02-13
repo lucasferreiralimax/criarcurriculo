@@ -22,6 +22,7 @@ import 'element-ui/lib/theme-chalk/carousel-item.css'
 import 'element-ui/lib/theme-chalk/switch.css'
 import HeaderApp from '@/components/base/Header.vue'
 import FooterApp from '@/components/base/Footer.vue'
+import VueAgile from 'vue-agile'
 
 import lang from 'element-ui/lib/locale/lang/pt-br'
 import locale from 'element-ui/lib/locale'
@@ -41,6 +42,7 @@ Vue.use(Carousel)
 Vue.use(CarouselItem)
 Vue.use(Switch)
 Vue.use(VueTheMask)
+Vue.use(VueAgile)
 
 Vue.config.productionTip = false
 
