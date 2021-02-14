@@ -3,7 +3,7 @@ import { shallowMount, createLocalVue } from '@vue/test-utils'
 import { mutations } from '@/mutations'
 import Vuex from 'vuex'
 import Home from './Home.vue'
-import { Carousel, CarouselItem } from 'element-ui'
+import { Hooper, Slide, Pagination as HooperPagination, Navigation as HooperNavigation } from 'hooper';
 
 const localVue = createLocalVue()
 
@@ -24,9 +24,15 @@ describe('Home', () => {
     expect(wrapper.exists()).toBeTruthy()
   })
   it('is Home with Carousel component', () => {
-    expect(wrapper.findComponent(Carousel).exists()).toBeTruthy()
+    expect(wrapper.findComponent(Hooper).exists()).toBeTruthy()
   })
-  it('is Home with Carousel component itens', () => {
-    expect(wrapper.findComponent(CarouselItem).exists()).toBeTruthy()
+  it('is Home with Carousel component item', () => {
+    expect(wrapper.findComponent(Slide).exists()).toBeTruthy()
+  })
+  it('is Home with Carousel component Pagination', () => {
+    expect(wrapper.findComponent(HooperPagination).exists()).toBeTruthy()
+  })
+  it('is Home with Carousel component Navigation', () => {
+    expect(wrapper.findComponent(HooperNavigation).exists()).toBeTruthy()
   })
 })
