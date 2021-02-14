@@ -93,9 +93,13 @@ export default {
     border-radius 50px
     margin 0 10px
     outline none
-    &:hover, &.is-active
+    transition .4s all
+    &.is-active
       background green
       box-shadow 0 0 0 2px #fff
+    &:hover
+      background green + 100
+      box-shadow 0 0 0 2px green
   .hooper-navigation
     button
       width 50px
@@ -108,8 +112,9 @@ export default {
       align-items center
       justify-content center
       transition .3s all
+      transform-origin top
       &:active
-        transform scale(.8)
+        transform scale(.8) translateY(-50%)
       &.is-disabled
         pointer-events none
         opacity 0
