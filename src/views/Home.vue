@@ -1,6 +1,6 @@
 <template lang="pug">
   section.home.content
-    hooper.mark(:autoPlay="false")
+    hooper.mark(:autoPlay="true" :infiniteScroll="true")
       slide(:index='0').center
         figure.user-banner
           img(v-if="theme_app !== 'rose' && theme_app !== 'classic' && theme_app !== 'gold'" src="../assets/banner_boy.svg" alt="User banner" width="300" height="300")
