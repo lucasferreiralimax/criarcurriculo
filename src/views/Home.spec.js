@@ -32,7 +32,8 @@ describe('Home', () => {
   it('is Home with Carousel component Pagination', () => {
     expect(wrapper.findComponent(HooperPagination).exists()).toBeTruthy()
   })
-  it('is Home with Carousel component Navigation', () => {
-    expect(wrapper.findComponent(HooperNavigation).exists()).toBeTruthy()
+  it('is Home with iframe facebook', () => {
+    expect(wrapper.findAll('iframe.facebook').at(0).exists()).toBeTruthy()
+    expect(wrapper.findAll('iframe.facebook').at(1).exists()).toBeTruthy()
   })
 })

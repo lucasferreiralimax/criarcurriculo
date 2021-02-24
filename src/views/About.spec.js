@@ -19,4 +19,7 @@ describe('About', () => {
   it('is About with Carousel component itens', () => {
     expect(wrapper.findComponent(CarouselItem).exists()).toBeTruthy()
   })
+  it('is About with iframe facebook', () => {
+    expect(wrapper.get('iframe.facebook').exists()).toBeTruthy()
+  })
 })
