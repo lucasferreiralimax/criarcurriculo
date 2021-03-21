@@ -1,29 +1,31 @@
-export let user_empty = {
-  name: '',
-  photo: '',
-  age: null,
-  countrystatus: '',
-  cep: null,
-  end: {
-    localidade: '',
-    logradouro: '',
-    complemento: '',
-    uf: '',
-    bairro: '',
-    cep: ''
-  },
-  maritalstatus: '',
-  addressNumber: null,
-  travel: false,
-  about: null,
-  genero: '',
-  hobbies: ['Ajudar'],
-  telephones: [],
-  emails: [],
-  sites: [],
-  languages: [],
-  exps: [],
-  coursers: []
+export function userEmpty() {
+  return {
+    name: '',
+    photo: '',
+    age: null,
+    countrystatus: '',
+    cep: null,
+    end: {
+      localidade: '',
+      logradouro: '',
+      complemento: '',
+      uf: '',
+      bairro: '',
+      cep: ''
+    },
+    maritalstatus: '',
+    addressNumber: null,
+    travel: false,
+    about: null,
+    genero: '',
+    hobbies: ['Ajudar'],
+    telephones: [],
+    emails: [],
+    sites: [],
+    languages: [],
+    exps: [],
+    coursers: []
+  }
 }
 
 export let user = {

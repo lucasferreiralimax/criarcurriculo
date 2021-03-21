@@ -50,7 +50,10 @@ export const mixinUpdateStore = {
       }
     },
     updateStore () {
-      window.localStorage.setItem(`store_${document.documentElement.lang}`, JSON.stringify(this.user))
+      localStorage.setItem(
+        `store_${document.documentElement.lang}`,
+        JSON.stringify(this.user),
+      )
       this.accountsRender()
     },
     updateVuex (name, e, id) {

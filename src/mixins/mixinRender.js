@@ -1,5 +1,5 @@
 import { mapState } from 'vuex'
-import { user_empty } from '../user'
+import { userEmpty } from '../user'
 
 export const mixinRender = {
   computed: mapState({
@@ -66,7 +66,7 @@ export const mixinRender = {
     },
     resetForm () {
       if(window.confirm(this.$t('form.choice'))) {
-        this.$store.commit('updateUser', user_empty)
+        this.$store.commit('updateUser', userEmpty())
         this.$store.commit('updateErrors', [])
         this.updateStore()
       }
