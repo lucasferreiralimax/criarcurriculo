@@ -76,19 +76,20 @@ export default {
     margin 1rem 0
     border 0
     overflow hidden
-  .content-banner    
+  .content-banner
+    width 100%
     display flex    
     flex-direction column
     margin 0 auto
-    align-items center
     h2
       margin 0
       padding 0
       width 100%
     +tablet()
-      flex-direction row
+      flex-direction row-reverse
+      align-items center
     +desktop()
-      max-width 80%
+      max-width calc(80% - 10rem)
 
 .user-banner
   float left
