@@ -89,7 +89,7 @@ export default {
       flex-direction row-reverse
       align-items center
     +desktop()
-      max-width calc(80% - 10rem)
+      max-width calc(70% - 10rem)
 
 .user-banner
   float left

@@ -83,8 +83,11 @@ export default {
     position absolute
     text-align-last center
     top 0
-    left -130px
-    width auto
+    left -140px
+    width auto    
     option
       color #000
++htmlDir()
+  .pluralization select
+    left -150px
 </style>
