@@ -82,7 +82,6 @@ import InputApp from '@/components/forms/InputApp'
 import InputCep from '@/components/forms/InputCep'
 import InputCrud from '@/components/forms/InputCrud'
 import InputPhoto from '@/components/forms/InputPhoto'
-import SelectCountry from '@/components/forms/SelectCountry'
 import SelectGenre from '@/components/forms/SelectGenre'
 import SelectMaritals from '@/components/forms/SelectMaritals'
 import SelectHobby from '@/components/forms/SelectHobby'
@@ -96,9 +95,11 @@ export default {
   computed: mapState({ errors: state => state.errors }),
   components: {
     BoxCurriculo,
+    InputApp, InputCep,
+    InputCrud, InputPhoto,
     Coursers, Experiencies,
-    InputApp, InputCep, InputCrud, InputPhoto,
-    SelectCountry, SelectGenre, SelectMaritals, SelectHobby, SelectTravel,
+    SelectHobby, SelectTravel,
+    SelectGenre, SelectMaritals,
     TextareaApp, NotificationAlert
   },
   created () {
