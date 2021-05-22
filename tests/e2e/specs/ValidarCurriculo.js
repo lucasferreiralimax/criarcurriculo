@@ -35,7 +35,7 @@ describe('Validar curriculo simples', () => {
   })
   it('Idiomas', () => {
     // clean languages
-    cy.get('[for^=GET-language] input').each(($li, index, $lis) => {
+    cy.get('[for^=GET-language] input').each(($li) => {
       cy.wrap($li).clear()
     })
     // new input languages

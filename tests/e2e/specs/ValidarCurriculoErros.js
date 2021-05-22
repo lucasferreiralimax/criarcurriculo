@@ -31,7 +31,7 @@ describe('Validar erros curriculo simples', () => {
     cy.get('#GET-site-0').clear()
   })
   it('Idiomas limpo', () => {
-    cy.get('[for^=GET-language] input').each(($li, index, $lis) => {
+    cy.get('[for^=GET-language] input').each(($li) => {
       cy.wrap($li).clear()
     })
   })
