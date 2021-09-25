@@ -12,7 +12,7 @@
     "readme": "node -r esm readme.js"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.4",
     "core-js": "^3.12.1",
     "element-ui": "^2.15.1",
     "moment": "^2.29.1",
