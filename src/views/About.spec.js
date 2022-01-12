@@ -27,4 +27,9 @@ describe('About', () => {
       expect(wrapper.attributes('href')).toBe('https://github.com/lucasferreiralimax/criarcurriculo')
     })
   })
+  wrapper.findAll('.countrys li').wrappers.forEach((wrapper, index) => {
+    it(`Country ${index}`, () => {
+      expect(wrapper.get('img').exists()).toBeTruthy()
+    })
+  })
 })
