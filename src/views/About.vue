@@ -21,8 +21,8 @@
     section.countrys
       h2 {{ countrys.length }} {{ $t('view.about.countrys') }}
       ul
-        li(v-for="(country, key) in countrys")
-          | {{ key++ }}
+        li(v-for="(country, key) in countrys" :class="`country-${key + 1}`")
+          | {{ key + 1 }}
           img(v-if="country.flag" :src="require(`@/assets/flags/${country.flag}.svg`)" :alt="country.name" width="30")
           | {{ country.name }}
     iframe.facebook(src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcurriculonovo&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share")
@@ -98,7 +98,7 @@ export default {
   display block
   width 100%
   img
-    margin-right 1rem
+    margin 0 1rem
   li
     display inline-flex
     margin .25rem
