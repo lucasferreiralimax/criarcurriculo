@@ -139,22 +139,27 @@ article.hitech
   border-radius 20px
   color #000
   display inline-flex
-  flex-direction column
+  flex-direction row
   flex-wrap wrap
-  height 155px
+  height 100px
   justify-content center
   padding 20px
   text-shadow 0 2px 2px rgba(#000, .5)
   transform scale(.9)
   transition .5s all
-  width 155px
+  width 100px
   +desktop()
-    height 220px
-    width 220px
+    height 120px
+    width 120px
+  svg, img
+    height 40px
   p, svg, img
     position relative
     transition .3s all
     will-change all
+  p
+    font-size 12px
+    line-height 15px
   &:hover
     box-shadow 0 0 0 5px rgba(#fff, .5), 0 0 0 10px rgba(#fff, .5)
   &:hover svg,
