@@ -147,15 +147,28 @@ readme += `\n___
 \`\`\` bash
 # install dependencies
 npm install
-
-# install dependencies with yarn
 yarn install
 
-# serve with hot reload at localhost:8080
+# serve compiles and hot-reloads for development localhost:8080
 npm run serve
-
-# serve with yarn hot reload at localhost:8080
 yarn serve
+
+# compiles and minifies for production
+npm run build
+yarn build
+
+# run our unit tests
+npm run test:unit
+yarn test:unit
+
+# run our end-to-end tests
+npm run test:e2e
+yarn test:e2e
+
+# lints and fixes files
+npm run lint
+yarn lint
+
 \`\`\`
 ---
 
