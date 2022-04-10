@@ -15,7 +15,7 @@
     "axios": "^0.24.0",
     "core-js": "^3.20.2",
     "element-ui": "^2.15.1",
-    "moment": "^2.29.1",
+    "moment": "^2.29.2",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.12",
     "vue-head": "^2.0.12",
