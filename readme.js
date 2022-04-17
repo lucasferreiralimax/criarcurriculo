@@ -1,7 +1,7 @@
 const fs = require("fs");
 
-const urlHosting = 'https://criar-curriculo.web.app'
-import { list_languages } from './src/i18n/list_languages.js'
+const urlHosting = "https://criar-curriculo.web.app";
+import { list_languages } from "./src/i18n/list_languages.js";
 
 let readme = `# :page_with_curl: Criar Currículo
 > Essa aplicativo web tem o objetivo de ajudar a todos aqueles que precisa criar um currículo, rápido, fácil e grátis.
@@ -17,12 +17,12 @@ let readme = `# :page_with_curl: Criar Currículo
 > Yo, ho, yo, ho :checkered_flag:
 `;
 
-for(let language in list_languages) {
-  let name = `${list_languages[language][2]} - ${list_languages[language][0]}`
-  let asset = `./src/assets/flags/${list_languages[language][1]}.svg`
-  let url = `${urlHosting}/?lang=${list_languages[language][1]}`
+for (let language in list_languages) {
+  let name = `${list_languages[language][2]} - ${list_languages[language][0]}`;
+  let asset = `./src/assets/flags/${list_languages[language][1]}.svg`;
+  let url = `${urlHosting}/?lang=${list_languages[language][1]}`;
 
-  readme += `#### <a href="${url}" target="_blank"><img alt="${name}" width="20px" src="${asset}" /></a> [${name}](${url})\n`
+  readme += `#### <a href="${url}" target="_blank"><img alt="${name}" width="20px" src="${asset}" /></a> [${name}](${url})\n`;
 }
 
 readme += `\n___
@@ -183,6 +183,6 @@ yarn lint
 #### 你能谈谈这个项目吗？
 
 * :ghost: @lucasferreiralimax
-* :email: lucasferreiralimax@gmail.com`
+* :email: lucasferreiralimax@gmail.com`;
 
-fs.writeFileSync('README.md', readme);
+fs.writeFileSync("README.md", readme);
