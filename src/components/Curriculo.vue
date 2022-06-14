@@ -1,4 +1,6 @@
 <script setup>
+import axios from 'axios'
+import { api } from '@/api'
 import { ref } from "vue";
 import Box from "./Box.vue";
 import DocumentationIcon from "./icons/IconDocumentation.vue";
@@ -6,6 +8,7 @@ import HomeIcon from "./icons/IconHome.vue";
 import UserIcon from "./icons/IconUser.vue";
 import { useCurriculoStore } from "@/stores/curriculo";
 
+const HTTP = axios.create({ baseURL: api.viacep })
 const curriculo = useCurriculoStore();
 const genderSelect = ref();
 const maritialSelect = ref();
@@ -21,6 +24,24 @@ const languages = ref([
   "Chinês",
   "Árabe",
 ]);
+
+function search_cep(e) {
+  if (e.target.value.length >= 8) {
+    HTTP.get(e.target.value.replace(/\D+/g, '') + '/json/')
+      .then(({ data: { bairro, localidade, logradouro, uf }}) => {         
+        console.log(bairro);          
+        console.log(localidade);          
+        console.log(logradouro);          
+        console.log(uf);
+        curriculo.address.city = localidade;
+        curriculo.address.country = uf;
+        curriculo.address.street = logradouro;
+      })
+      .catch(e => {
+        console.error(e);
+      })
+  }
+}
 </script>
 
 <template lang="pug">
@@ -44,7 +65,7 @@ Box.address
   template(#heading) Endereço
   v-row
     v-col(cols="12" sm="6")
-      v-text-field(label="CEP" v-model="curriculo.address.cep" type="number" hide-details="auto")
+      v-text-field(@keyup="search_cep" label="CEP" v-model="curriculo.address.cep" type="tel" hide-details="auto" maxlength="9")
     v-col(cols="12" sm="6" v-if="curriculo.address.cep || curriculo.address.number")
       v-text-field(label="Número" v-model="curriculo.address.number" type="number" hide-details="auto")
   v-row
