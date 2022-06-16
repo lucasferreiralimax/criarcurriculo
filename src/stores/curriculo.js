@@ -5,6 +5,8 @@ export const useCurriculoStore = defineStore({
   state: () => ({
     name: "Lucas",
     age: 27,
+    gender: '',
+    maritial: '',
     address: {
       cep: null,
       number: null,
@@ -12,5 +14,6 @@ export const useCurriculoStore = defineStore({
       city: null,
       country: null,
     },
+    languages: [],
   }),
 });

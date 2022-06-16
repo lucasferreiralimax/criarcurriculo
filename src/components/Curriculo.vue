@@ -10,29 +10,14 @@ import { useCurriculoStore } from "@/stores/curriculo";
 
 const HTTP = axios.create({ baseURL: api.viacep })
 const curriculo = useCurriculoStore();
-const genderSelect = ref();
-const maritialSelect = ref();
-const languageSelect = ref([]);
 const genders = ref(["Mulher", "Homem", "Unisex"]);
 const maritials = ref(["Solteiro", "Casado", "Divorciado", "Viuvo"]);
-const languages = ref([
-  "Português Brasileiro",
-  "Português Portugal",
-  "Espanhol",
-  "Inglês",
-  "Russo",
-  "Chinês",
-  "Árabe",
-]);
+const languages = ref(["Português Brasileiro", "Português Portugal", "Espanhol", "Inglês", "Russo", "Chinês", "Árabe"]);
 
 function search_cep(e) {
   if (e.target.value.length >= 8) {
     HTTP.get(e.target.value.replace(/\D+/g, '') + '/json/')
-      .then(({ data: { bairro, localidade, logradouro, uf }}) => {         
-        console.log(bairro);          
-        console.log(localidade);          
-        console.log(logradouro);          
-        console.log(uf);
+      .then(({ data: { localidade, logradouro, uf }}) => {
         curriculo.address.city = localidade;
         curriculo.address.country = uf;
         curriculo.address.street = logradouro;
@@ -55,10 +40,10 @@ Box.personal
     v-col(cols="12" sm="6" v-if="curriculo.name || curriculo.age")
       v-text-field(label="Idade" v-model="curriculo.age" type="number" hide-details="auto")
   v-row
-    v-col(cols="12" sm="6" v-if="(curriculo.name && curriculo.age) || genderSelect")
-      v-combobox(v-model="genderSelect" :items="genders" label="Genero" outlined dense hide-details="auto")
-    v-col(cols="12" sm="6" v-if="(curriculo.name && curriculo.age && genderSelect) || maritialSelect")
-      v-combobox(v-model="maritialSelect" :items="maritials" label="Estado civil" outlined dense hide-details="auto")
+    v-col(cols="12" sm="6" v-if="(curriculo.name && curriculo.age) || curriculo.gender")
+      v-combobox(v-model="curriculo.gender" :items="genders" label="Genero" outlined dense hide-details="auto")
+    v-col(cols="12" sm="6" v-if="(curriculo.name && curriculo.age && curriculo.gender) || curriculo.maritial")
+      v-combobox(v-model="curriculo.maritial" :items="maritials" label="Estado civil" outlined dense hide-details="auto")
 Box.address
   template(#icon)
     HomeIcon
@@ -81,8 +66,8 @@ Box.languages
     DocumentationIcon
   template(#heading) Idiomas
   v-row
-    v-col(cols="12" sm="6")
-      v-combobox(v-model="languageSelect" :items="languages" label="Idioma" outlined dense hide-details="auto" multiple)
+    v-col(cols="12")
+      v-combobox(v-model="curriculo.languages" :items="languages" label="Idioma" outlined dense hide-details="auto" multiple)
 Box.academy
   template(#icon)
     DocumentationIcon
