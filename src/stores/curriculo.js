@@ -1,8 +1,8 @@
 import { defineStore } from "pinia";
 
-export const useCurriculoStore = defineStore({
-  id: "curriculo",
-  state: () => ({
+const state = localStorage.getItem('curriculo')
+  ? JSON.parse(localStorage.getItem('curriculo'))
+  : {
     name: "Lucas",
     age: 27,
     gender: '',
@@ -15,5 +15,12 @@ export const useCurriculoStore = defineStore({
       country: null,
     },
     languages: [],
-  }),
+  };
+
+export const useCurriculoStore = defineStore({
+  id: "curriculo",
+  state: () => state,
+  getters: {
+    getCurriculo: () => state,
+  }
 });

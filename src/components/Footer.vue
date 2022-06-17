@@ -12,4 +12,5 @@ footer
 footer
   text-align center
   line-height 1.5
+  margin-top 3rem
 </style>

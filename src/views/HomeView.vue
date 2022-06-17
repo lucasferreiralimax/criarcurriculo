@@ -6,6 +6,6 @@ const curriculo = useCurriculoStore();
 
 <template lang="pug">
 Curriculo
-h1 {{ curriculo.name }}
-h2 {{ curriculo.age }}
+//- h1 {{ curriculo.name }}
+//- h2 {{ curriculo.age }}
 </template>

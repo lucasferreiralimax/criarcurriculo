@@ -1,7 +1,7 @@
 <script setup>
 import axios from 'axios'
 import { api } from '@/api'
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import Box from "./Box.vue";
 import DocumentationIcon from "./icons/IconDocumentation.vue";
 import HomeIcon from "./icons/IconHome.vue";
@@ -13,6 +13,12 @@ const curriculo = useCurriculoStore();
 const genders = ref(["Mulher", "Homem", "Unisex"]);
 const maritials = ref(["Solteiro", "Casado", "Divorciado", "Viuvo"]);
 const languages = ref(["Português Brasileiro", "Português Portugal", "Espanhol", "Inglês", "Russo", "Chinês", "Árabe"]);
+
+watch(curriculo, () => {
+  localStorage.setItem('curriculo', JSON.stringify(curriculo.getCurriculo));
+  console.log(curriculo.getCurriculo);
+  console.log('testes');
+})
 
 function search_cep(e) {
   if (e.target.value.length >= 8) {
