@@ -15,12 +15,13 @@ const collapse = ref(false);
 
 <style lang="stylus">
 .box
-  padding 1rem
   min-height 60px
   user-select none
+  border 1px solid rgba(#fff, .1)
+  border-radius 10px
+  margin 1rem 0
   &:hover
     background rgba(#fff, .1)
-    border-radius 10px
     .title
       & > i
         border-color var(--vt-c-green)
@@ -30,6 +31,7 @@ const collapse = ref(false);
     display flex
     align-items center
     cursor pointer
+    padding 1rem
     & > i
       display inline-flex
       place-boxs center
@@ -44,6 +46,7 @@ const collapse = ref(false);
         transition .5s all
   .details
     margin-bottom 1rem
+    padding 1rem
 
   h3
     font-size 1.2rem
@@ -55,16 +58,12 @@ const collapse = ref(false);
 
 @media (min-width 1024px)
   .box
-    padding 1rem 1rem 1rem 5.5rem
-    margin 0 -0.7rem
     min-height 80px
     .title
       margin-top 0.4rem
+      padding .5rem
       & > i
-        top -7px
-        left -70px
-        margin 0
-        position absolute
+        margin 0 1rem 0 -2rem
         border 1px solid var(--color-border)
         background var(--color-background)
         border-radius 8px
