@@ -82,12 +82,36 @@ Box.academy
   template(#heading) Formação
   v-row
     v-col(cols="12" sm="6")
-      v-text-field(label="Nome completo" v-model="curriculo.name" hide-details="auto" clearable)
+      v-text-field(label="Instituição" v-model="curriculo.formation.institute" hide-details="auto" clearable)
+    v-col(cols="12" sm="6")
+      v-text-field(label="Curso" v-model="curriculo.formation.course" hide-details="auto" clearable)
+  v-row
+    v-col(cols="12" sm="6")
+      v-text-field(label="Data Inicio" v-model="curriculo.formation.dateFirst" hide-details="auto" clearable)
+    v-col(cols="12" sm="6")
+      v-text-field(label="Data Conclusão" v-model="curriculo.formation.dateEnd" hide-details="auto" clearable)
+  v-row
+    v-col(cols="12" sm="6")
+      v-text-field(label="Atividades" v-model="curriculo.formation.about" hide-details="auto" clearable)
+    v-col(cols="12" sm="6")
+      v-text-field(label="Referencia" v-model="curriculo.formation.ref" hide-details="auto" clearable)
 Box.experience
   template(#icon)
     ToolingIcon
   template(#heading) Experiência
   v-row
     v-col(cols="12" sm="6")
-      v-text-field(label="Nome completo" v-model="curriculo.name" hide-details="auto" clearable)
+      v-text-field(label="Cargo" v-model="curriculo.experience.work" hide-details="auto" clearable)
+    v-col(cols="12" sm="6")
+      v-text-field(label="Empresa" v-model="curriculo.experience.company" hide-details="auto" clearable)
+  v-row
+    v-col(cols="12" sm="6")
+      v-text-field(label="Data Inicio" v-model="curriculo.experience.dateFirst" hide-details="auto" clearable)
+    v-col(cols="12" sm="6")
+      v-text-field(label="Data Conclusão" v-model="curriculo.experience.dateEnd" hide-details="auto" clearable)
+  v-row
+    v-col(cols="12" sm="6")
+      v-text-field(label="Atividades" v-model="curriculo.experience.about" hide-details="auto" clearable)
+    v-col(cols="12" sm="6")
+      v-text-field(label="Referencia" v-model="curriculo.experience.ref" hide-details="auto" clearable)
 </template>

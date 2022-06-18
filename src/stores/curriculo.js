@@ -14,6 +14,22 @@ const state = localStorage.getItem('curriculo')
       city: null,
       country: null,
     },
+    formation: {
+      institute: null,
+      course: null,
+      dateFirst: null,
+      dateEnd: null,
+      about: null,
+      ref: null,
+    },
+    experience: {
+      work: null,
+      company: null,
+      dateFirst: null,
+      dateEnd: null,
+      about: null,
+      ref: null,
+    },
     languages: [],
   };
 
