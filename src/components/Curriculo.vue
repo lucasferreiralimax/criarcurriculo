@@ -4,6 +4,8 @@ import { api } from '@/api'
 import { ref, watch } from "vue";
 import Box from "./Box.vue";
 import DocumentationIcon from "./icons/IconDocumentation.vue";
+import ToolingIcon from "./icons/IconTooling.vue";
+import CommunityIcon from "./icons/IconCommunity.vue";
 import HomeIcon from "./icons/IconHome.vue";
 import UserIcon from "./icons/IconUser.vue";
 import { useCurriculoStore } from "@/stores/curriculo";
@@ -69,7 +71,7 @@ Box.address
       v-text-field(label="Local" v-model="curriculo.address.street" type="text" hide-details="auto" clearable)
 Box.languages
   template(#icon)
-    DocumentationIcon
+    CommunityIcon
   template(#heading) Idiomas
   v-row
     v-col(cols="12")
@@ -83,7 +85,7 @@ Box.academy
       v-text-field(label="Nome completo" v-model="curriculo.name" hide-details="auto" clearable)
 Box.experience
   template(#icon)
-    DocumentationIcon
+    ToolingIcon
   template(#heading) Experiência
   v-row
     v-col(cols="12" sm="6")
