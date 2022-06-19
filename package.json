@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@mdi/font": "^6.7.96",
+    "firebase": "^9.8.3",
     "pinia": "^2.0.13",
     "roboto-fontface": "*",
     "stylus": "^0.57.0",

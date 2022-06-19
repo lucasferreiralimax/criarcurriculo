@@ -87,9 +87,9 @@ Box.academy
       v-text-field(label="Curso" v-model="curriculo.formation.course" hide-details="auto" clearable)
   v-row
     v-col(cols="12" sm="6")
-      v-text-field(label="Data Inicio" v-model="curriculo.formation.dateFirst" hide-details="auto" clearable)
+      v-text-field(label="Data Inicio" v-model="curriculo.formation.dateFirst" hide-details="auto" clearable type="date")
     v-col(cols="12" sm="6")
-      v-text-field(label="Data Conclusão" v-model="curriculo.formation.dateEnd" hide-details="auto" clearable)
+      v-text-field(label="Data Conclusão" v-model="curriculo.formation.dateEnd" hide-details="auto" clearable type="date")
   v-row
     v-col(cols="12" sm="6")
       v-text-field(label="Atividades" v-model="curriculo.formation.about" hide-details="auto" clearable)
@@ -106,9 +106,9 @@ Box.experience
       v-text-field(label="Empresa" v-model="curriculo.experience.company" hide-details="auto" clearable)
   v-row
     v-col(cols="12" sm="6")
-      v-text-field(label="Data Inicio" v-model="curriculo.experience.dateFirst" hide-details="auto" clearable)
+      v-text-field(label="Data Inicio" v-model="curriculo.experience.dateFirst" hide-details="auto" clearable type="date")
     v-col(cols="12" sm="6")
-      v-text-field(label="Data Conclusão" v-model="curriculo.experience.dateEnd" hide-details="auto" clearable)
+      v-text-field(label="Data Conclusão" v-model="curriculo.experience.dateEnd" hide-details="auto" clearable type="date")
   v-row
     v-col(cols="12" sm="6")
       v-text-field(label="Atividades" v-model="curriculo.experience.about" hide-details="auto" clearable)
