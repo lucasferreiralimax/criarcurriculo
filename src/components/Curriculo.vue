@@ -14,12 +14,27 @@ const HTTP = axios.create({ baseURL: api.viacep })
 const curriculo = useCurriculoStore();
 const genders = ref(["Mulher", "Homem", "Unisex"]);
 const maritials = ref(["Solteiro", "Casado", "Divorciado", "Viuvo"]);
-const languages = ref(["Português Brasileiro", "Português Portugal", "Espanhol", "Inglês", "Russo", "Chinês", "Árabe"]);
+const languages = ref([
+  { name: "Português Brasileiro", percent: 0 },
+  { name: "Português Portugal", percent: 0 },
+  { name: "Espanhol", percent: 0 },
+  { name: "Inglês", percent: 0 },
+  { name: "Russo", percent: 0 },
+  { name: "Chinês", percent: 0 },
+  { name: "Árabe", percent: 0 },
+  ]);
+const languagesArray = ref([
+  ...languages.value.map(item => item.name)
+]);
+
+console.log(curriculo.languages);
+console.log(languages.value);
+console.log(languagesArray.value);  
 
 watch(curriculo, () => {
   localStorage.setItem('curriculo', JSON.stringify(curriculo.getCurriculo));
-  console.log(curriculo.getCurriculo);
-  console.log('testes');
+  // console.log(curriculo.getCurriculo);
+  // console.log('testes');
 })
 
 function search_cep(e) {
@@ -34,6 +49,16 @@ function search_cep(e) {
         console.error(e);
       })
   }
+}
+
+function StaytoUpperCase({ target: { value } }) {
+  curriculo.address.country = value.toUpperCase();
+}
+function StayLanguages(e) {
+  console.log('StayLanguages');
+  console.log(e);
+  console.log('StayLanguages dsds');
+  console.log(curriculo.languages);
 }
 </script>
 
@@ -65,7 +90,14 @@ Box.address
     v-col(cols="12" sm="6" v-if="(curriculo.address.cep && curriculo.address.number) || curriculo.address.city")
       v-text-field(label="Cidade" v-model="curriculo.address.city" type="text" hide-details="auto" clearable)
     v-col(cols="12" sm="6" v-if="(curriculo.address.cep && curriculo.address.number && curriculo.address.city) || curriculo.address.country")
-      v-text-field(label="Estado" v-model="curriculo.address.country" type="text" hide-details="auto" clearable)
+      v-text-field(
+        label="Estado"
+        v-model="curriculo.address.country"
+        type="text"
+        hide-details="auto"
+        clearable
+        @input="StaytoUpperCase"
+      )
   v-row
     v-col(cols="12" sm="6" v-if="(curriculo.address.cep && curriculo.address.number && curriculo.address.city && curriculo.address.country) || curriculo.address.street")
       v-text-field(label="Local" v-model="curriculo.address.street" type="text" hide-details="auto" clearable)
@@ -74,8 +106,14 @@ Box.languages
     CommunityIcon
   template(#heading) Idiomas
   v-row
+    v-col(cols="11")
+      v-text-field(label="Idioma" type="text" hide-details="auto" clearable)
+    v-col(cols="1")
+      v-btn(label="Adicionar novo idioma" @click="StayLanguages" color="secondary") +
+  v-row
     v-col(cols="12")
-      v-combobox(label="Languages" v-model="curriculo.languages" :items="languages" outlined dense :label="false" hide-details="auto" multiple chips clearable)
+      //- v-combobox(label="Languages" @input="StayLanguages($event)" :items="languagesArray" outlined dense :label="false" hide-details="auto" multiple chips clearable)
+      v-slider(v-for="[language, index] in curriculo.languages" :label="index" @input="StayLanguages($event)" step="10" color="green" track-color="#000" thumb-label="always")
 Box.academy
   template(#icon)
     DocumentationIcon
