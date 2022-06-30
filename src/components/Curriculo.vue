@@ -12,6 +12,7 @@ import { useCurriculoStore } from "@/stores/curriculo";
 
 const HTTP = axios.create({ baseURL: api.viacep })
 const curriculo = useCurriculoStore();
+const languageInput = ref([]);
 const genders = ref(["Mulher", "Homem", "Unisex"]);
 const maritials = ref(["Solteiro", "Casado", "Divorciado", "Viuvo"]);
 const languages = ref([
@@ -27,14 +28,19 @@ const languagesArray = ref([
   ...languages.value.map(item => item.name)
 ]);
 
-console.log(curriculo.languages);
-console.log(languages.value);
-console.log(languagesArray.value);  
+// console.log(curriculo.languages);
+// console.log(languages.value);
+// console.log(languagesArray.value);  
 
 watch(curriculo, () => {
   localStorage.setItem('curriculo', JSON.stringify(curriculo.getCurriculo));
   // console.log(curriculo.getCurriculo);
   // console.log('testes');
+  // console.log('testes');
+})
+
+watch(languageInput.value, () => {
+  console.log('languageInput')
 })
 
 function search_cep(e) {
@@ -54,11 +60,12 @@ function search_cep(e) {
 function StaytoUpperCase({ target: { value } }) {
   curriculo.address.country = value.toUpperCase();
 }
-function StayLanguages(e) {
+function StayLanguages(test) {
   console.log('StayLanguages');
-  console.log(e);
-  console.log('StayLanguages dsds');
-  console.log(curriculo.languages);
+  console.log(test);
+}
+function newLanguage(test) {
+  console.log(test);
 }
 </script>
 
@@ -73,10 +80,10 @@ Box.personal
     v-col(cols="12" sm="6" v-if="curriculo.name || curriculo.age")
       v-text-field(label="Idade" v-model="curriculo.age" type="number" hide-details="auto" clearable)
   v-row
-    v-col(cols="12" sm="6" v-if="(curriculo.name && curriculo.age) || curriculo.gender")
-      v-combobox(v-model="curriculo.gender" :items="genders" label="Genero" outlined dense hide-details="auto" clearable)
     v-col(cols="12" sm="6" v-if="(curriculo.name && curriculo.age && curriculo.gender) || curriculo.maritial")
       v-combobox(v-model="curriculo.maritial" :items="maritials" label="Estado civil" outlined dense hide-details="auto" clearable)
+    v-col(cols="12" sm="6" v-if="(curriculo.name && curriculo.age) || curriculo.gender")
+      v-combobox(v-model="curriculo.gender" :items="genders" label="Genero" outlined dense hide-details="auto" clearable)
 Box.address
   template(#icon)
     HomeIcon
@@ -107,13 +114,14 @@ Box.languages
   template(#heading) Idiomas
   v-row
     v-col(cols="11")
-      v-text-field(label="Idioma" type="text" hide-details="auto" clearable)
-    v-col(cols="1")
-      v-btn(label="Adicionar novo idioma" @click="StayLanguages" color="secondary") +
-  v-row
+      pre {{languageInput}}
+      v-autocomplete(label="Languages" v-model="languageInput" :items="languagesArray" outlined dense multiple chips clearable)
+      //- v-text-field(v-model="languageInput" label="Idioma" type="text" hide-details="auto" clearable)
+    //- v-col(cols="1")
+    //-   v-btn(label="Adicionar novo idioma" @click="newLanguage" color="secondary") +
+  v-row(v-for="[language, index] in curriculo.languages")
     v-col(cols="12")
-      //- v-combobox(label="Languages" @input="StayLanguages($event)" :items="languagesArray" outlined dense :label="false" hide-details="auto" multiple chips clearable)
-      v-slider(v-for="[language, index] in curriculo.languages" :label="index" @input="StayLanguages($event)" step="10" color="green" track-color="#000" thumb-label="always")
+      v-slider(:label="index" @input="StayLanguages({ language, index })" step="10" color="green" track-color="#000" thumb-label="always")
 Box.academy
   template(#icon)
     DocumentationIcon
