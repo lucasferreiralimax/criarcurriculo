@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
-const collapse = ref(false);
+const props = defineProps(['collapse']);
+const collapse = ref(props.collapse);
 </script>
 <template lang="pug">
 .box
