@@ -32,15 +32,18 @@ const analytics = getAnalytics(app);
 
 <template>
   <main>
-    <Box>
+    <Box collapse="true">
       <template #icon>
         <BitcoinIcon />
       </template>
       <template #heading>Bitcoin</template>
-      Faça uma doação em bitcoin
-      <img width="250" src="@/assets/bitcoin.png" alt="bitcoin:BC1QA0X77Z9FT6RPNVQ2FF780WT5JRMC6FWCNCQDT3">
+      <p>Faça uma doação em bitcoin</p>
+      <p>Carteira para doações
+        <a href="bitcoin:BC1QYRKAGKLQAJSF64MJGJ0L99WSUHVY9CNHHYSA82?message=doa%C3%A7%C3%A3o">bc1qyrkagklqajsf64mjgj0l99wsuhvy9cnhhysa82</a>
+      </p>
+      <img width="250" src="@/assets/bitcoin.png" alt="bitcoin:BC1QYRKAGKLQAJSF64MJGJ0L99WSUHVY9CNHHYSA82?message=doa%C3%A7%C3%A3o">
     </Box>
-    <Box>
+    <Box collapse="true">
       <template #icon>
         <DonateIcon />
       </template>
