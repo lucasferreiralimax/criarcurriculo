@@ -78,3 +78,7 @@ body {
 input:-webkit-autofill { 
   -webkit-background-clip: text;
 }
+
+input[type="date" i]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
