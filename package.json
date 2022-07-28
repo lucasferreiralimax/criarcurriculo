@@ -7,12 +7,13 @@
     "url": "https://github.com/lucasferreiralimax/criarcurriculo/issues"
   },
   "scripts": {
+    "start": "vite",
+    "dev": "vite",
     "serve": "vite preview",
     "build": "vite build",
     "test:unit": "vitest --environment jsdom",
     "test:e2e": "start-server-and-test preview http://127.0.0.1:5050/ 'cypress open'",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "dev": "vite",
     "preview": "vite preview --port 5050",
     "readme": "node -r esm readme.js",
     "test:e2e:ci": "start-server-and-test preview http://127.0.0.1:5050/ 'cypress run'"
