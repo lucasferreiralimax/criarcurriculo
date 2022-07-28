@@ -21,7 +21,6 @@ nav
     &:first-of-type
       margin-left 0
     &.router-link-exact-active
-      color var(--color-text)
-      &:hover
-        background-color transparent
+      color hsla(160, 100%, 37%, 1)
+      background-color hsla(160, 100%, 37%, 0.2)
 </style>
