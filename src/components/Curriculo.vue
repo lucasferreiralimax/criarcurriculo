@@ -113,7 +113,7 @@ Box.languages
     CommunityIcon
   template(#heading) Idiomas
   v-row
-    v-col(cols="11")
+    v-col(cols="12")
       pre {{languageInput}}
       v-autocomplete(label="Languages" v-model="languageInput" :items="languagesArray" outlined dense multiple chips clearable)
       //- v-text-field(v-model="languageInput" label="Idioma" type="text" hide-details="auto" clearable)
