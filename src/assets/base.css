@@ -59,6 +59,7 @@
   margin: 0;
   position: relative;
   font-weight: normal;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -75,10 +76,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-input:-webkit-autofill { 
-  -webkit-background-clip: text;
+input[type="date" i]::-webkit-calendar-picker-indicator {
+  opacity: 0;
 }
 
-input[type="date" i]::-webkit-calendar-picker-indicator {
-  filter: invert(1);
+.v-autocomplete__selection {
+  padding: .2rem .1rem;
 }

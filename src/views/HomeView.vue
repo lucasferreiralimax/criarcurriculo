@@ -2,6 +2,7 @@
 import Curriculo from "@/components/Curriculo.vue";
 import Preview from "@/components/Preview.vue";
 import { useCurriculoStore } from "@/stores/curriculo";
+
 const curriculo = useCurriculoStore();
 
 function magicLuffy() {
@@ -35,9 +36,11 @@ function magicLuffy() {
       },
       languages: ['test'],
     };
+    
     console.log(curriculo);
     console.log(lucas);
-    curriculo.name = 'Abraham Lincoln';
+
+    curriculo.name = 'Lucas Ferreira de Lima';
     localStorage.setItem('curriculo', JSON.stringify(lucas));
 }
 </script>

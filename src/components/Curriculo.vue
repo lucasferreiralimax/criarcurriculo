@@ -80,10 +80,10 @@ Box.personal
     v-col(cols="12" sm="6" v-if="curriculo.name || curriculo.age")
       v-text-field(label="Idade" v-model="curriculo.age" type="number" hide-details="auto" clearable)
   v-row
-    v-col(cols="12" sm="6" v-if="(curriculo.name && curriculo.age && curriculo.gender) || curriculo.maritial")
-      v-combobox(v-model="curriculo.maritial" :items="maritials" label="Estado civil" outlined dense hide-details="auto" clearable)
     v-col(cols="12" sm="6" v-if="(curriculo.name && curriculo.age) || curriculo.gender")
       v-combobox(v-model="curriculo.gender" :items="genders" label="Genero" outlined dense hide-details="auto" clearable)
+    v-col(cols="12" sm="6" v-if="(curriculo.name && curriculo.age && curriculo.gender) || curriculo.maritial")
+      v-combobox(v-model="curriculo.maritial" :items="maritials" label="Estado civil" outlined dense hide-details="auto" clearable)
 Box.address
   template(#icon)
     HomeIcon
