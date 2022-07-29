@@ -32,7 +32,7 @@ const analytics = getAnalytics(app);
 
 <template>
   <main>
-    <Box collapse="true">
+    <Box collapse="true" select="true">
       <template #icon>
         <BitcoinIcon />
       </template>
@@ -43,12 +43,12 @@ const analytics = getAnalytics(app);
       </p>
       <img width="250" src="@/assets/bitcoin.png" alt="bitcoin:BC1QYRKAGKLQAJSF64MJGJ0L99WSUHVY9CNHHYSA82?message=doa%C3%A7%C3%A3o">
     </Box>
-    <Box collapse="true">
+    <Box collapse="true" select="true">
       <template #icon>
         <DonateIcon />
       </template>
       <template #heading>Pix</template>
-      Faça uma doação em pix para <strong>2lembre@gmail.com</strong>
+      Faça uma doação em pix para <strong>2lembre@gmail.com</strong> ou <strong>lucasferreiralimax@gmail.com</strong>
     </Box>
   </main>
 </template>

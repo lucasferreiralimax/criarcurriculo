@@ -31,7 +31,7 @@ import { RouterLink } from "vue-router";
       </a>.
     </Box>
   
-    <Box collapse="true">
+    <Box collapse="true" select="true">
       <template #icon>
         <SupportIcon />
       </template>

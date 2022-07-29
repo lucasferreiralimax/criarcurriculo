@@ -1,10 +1,10 @@
 <script setup>
 import { ref } from "vue";
-const props = defineProps(['collapse']);
+const props = defineProps(['collapse', 'select']);
 const collapse = ref(props.collapse);
 </script>
 <template lang="pug">
-.box
+.box(:class="{ 'no-select': !select }")
   .title(@click="collapse = !collapse")
     i
       slot(name="icon")
@@ -17,10 +17,11 @@ const collapse = ref(props.collapse);
 <style lang="stylus">
 .box
   min-height 60px
-  user-select none
   border 1px solid rgba(#fff, .1)
   border-radius 10px
   margin 1rem 0
+  &.no-select
+    user-select none
   &:hover
     background rgba(#fff, .1)
     .title
