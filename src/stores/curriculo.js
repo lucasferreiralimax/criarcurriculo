@@ -30,7 +30,7 @@ const state = localStorage.getItem('curriculo')
       about: null,
       ref: null,
     },
-    languages: ['test'],
+    languages: [],
   };
 
 export const useCurriculoStore = defineStore({

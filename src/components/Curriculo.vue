@@ -114,14 +114,21 @@ Box.languages
   template(#heading) Idiomas
   v-row
     v-col(cols="12")
-      pre {{languageInput}}
-      v-autocomplete(label="Languages" v-model="languageInput" :items="languagesArray" outlined dense multiple chips clearable)
+      v-autocomplete(label="Languages" v-model="curriculo.languages" :items="languagesArray" outlined dense multiple chips clearable)
       //- v-text-field(v-model="languageInput" label="Idioma" type="text" hide-details="auto" clearable)
     //- v-col(cols="1")
     //-   v-btn(label="Adicionar novo idioma" @click="newLanguage" color="secondary") +
-  v-row(v-for="[language, index] in curriculo.languages")
+  v-row(v-for="(language, index) in curriculo.languages")
     v-col(cols="12")
-      v-slider(:label="index" @input="StayLanguages({ language, index })" step="10" color="green" track-color="#000" thumb-label="always")
+      v-slider(
+        @input="StayLanguages({ language, index })"
+        step="10"
+        color="green"
+        track-color="#000"
+        thumb-label
+      )
+        template(v-slot:prepend)
+          p {{language}}
 Box.academy
   template(#icon)
     DocumentationIcon
