@@ -91,8 +91,8 @@ function addFormation() {
     id: uniqueid('formation_'),
     institute: null,
     course: null,
-    dateFirst: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
-    dateEnd: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
+    dateFirst: null,
+    dateEnd: null,
     about: null,
     ref: null,
   });
