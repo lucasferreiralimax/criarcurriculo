@@ -8,8 +8,6 @@ const stateCurriculo = {
     maritial: '',
     address: {
       cep: null,
-      number: null,
-      street: null,
       city: null,
       country: null,
     },

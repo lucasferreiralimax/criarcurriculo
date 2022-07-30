@@ -63,10 +63,9 @@ watch(store, () => {
 function search_cep(e) {
   if (e.target.value.length >= 8) {
     HTTP.get(e.target.value.replace(/\D+/g, '') + '/json/')
-      .then(({ data: { localidade, logradouro, uf }}) => {
+      .then(({ data: { localidade, uf }}) => {
         store.curriculo.address.city = localidade;
         store.curriculo.address.country = uf;
-        store.curriculo.address.street = logradouro;
       })
       .catch(e => {
         console.error(e);
