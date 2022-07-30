@@ -2,8 +2,8 @@ import uniqueid from "lodash/uniqueid";
 
 const stateCurriculo = {
   curriculo: {
-    name: "Lucas",
-    age: 27,
+    name: "",
+    age: 18,
     gender: '',
     maritial: '',
     address: {
@@ -13,28 +13,8 @@ const stateCurriculo = {
       city: null,
       country: null,
     },
-    formation: [
-      {
-        id: uniqueid('formation_'),
-        institute: null,
-        course: null,
-        dateFirst: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
-        dateEnd: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
-        about: null,
-        ref: null,
-      },
-    ],
-    experience: [
-      {
-        id: uniqueid('experience_'),
-        work: null,
-        company: null,
-        dateFirst: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
-        dateEnd: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
-        about: null,
-        ref: null,
-      }
-    ],
+    formation: [],
+    experience: [],
     languages: [],
   }
 };

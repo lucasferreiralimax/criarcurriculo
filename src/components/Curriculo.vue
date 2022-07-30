@@ -10,6 +10,7 @@ import CommunityIcon from "./icons/IconCommunity.vue";
 import HomeIcon from "./icons/IconHome.vue";
 import UserIcon from "./icons/IconUser.vue";
 import { useCurriculoStore } from "@/stores/curriculo";
+import stateCurriculo from "../stores/state_curriculo";
 
 const HTTP = axios.create({ baseURL: api.viacep })
 const store = useCurriculoStore();
@@ -59,10 +60,6 @@ watch(store, () => {
   localStorage.setItem('curriculo-store', JSON.stringify(store.getCurriculo));
 })
 
-watch(languageInput.value, () => {
-  console.log('languageInput')
-})
-
 function search_cep(e) {
   if (e.target.value.length >= 8) {
     HTTP.get(e.target.value.replace(/\D+/g, '') + '/json/')
@@ -80,19 +77,15 @@ function search_cep(e) {
 function StaytoUpperCase({ target: { value } }) {
   store.curriculo.address.country = value.toUpperCase();
 }
-function StayLanguages(test) {
-  console.log('StayLanguages');
-  console.log(test);
-}
-function newLanguage(test) {
-  console.log(test);
-}
+
 function removeFormation(id) {
   store.curriculo.formation = store.curriculo.formation.filter((item) => item.id !== id);
 }
+
 function removeExperience(id) {
   store.curriculo.experience = store.curriculo.experience.filter((item) => item.id !== id);
 }
+
 function addFormation() {
   store.curriculo.formation.push({
     id: uniqueid('formation_'),
@@ -104,6 +97,7 @@ function addFormation() {
     ref: null,
   });
 }
+
 function addExperience() {
   store.curriculo.experience.push({
     id: uniqueid('experience_'),
@@ -114,6 +108,11 @@ function addExperience() {
     about: null,
     ref: null,
   });
+}
+
+function magicLuffy() {
+  store.curriculo = stateCurriculo.curriculo;
+  localStorage.setItem('curriculo-store', JSON.stringify(store.getCurriculo));
 }
 </script>
 
@@ -225,8 +224,9 @@ v-btn.btn.my-5(
   block
   type="button" @click="addFormation()"
   color="success"
+  variant="outlined"
 )
-  v-icon.icon mdi-plus-box
+  v-icon.icon mdi-plus-circle
   | Adicionar formação
 Box.experience(v-for="(experience, index) in store.curriculo.experience")
   template(#actions)
@@ -263,9 +263,13 @@ v-btn.btn(
   block
   type="button" @click="addExperience()"
   color="success"
+  variant="outlined"
 )
-  v-icon.icon mdi-plus-box
+  v-icon.icon mdi-plus-circle
   | Adicionar experiência
+v-btn.btn.my-5(block @click="magicLuffy" color="error" variant="outlined")
+  v-icon.icon mdi-delete
+  | Apagar Tudo!
 </template>
 
 <style lang="stylus">
@@ -283,6 +287,7 @@ v-btn.btn(
   padding 1.5rem 1rem
   .icon 
     margin-right 1rem
+    transform scale(1.5)
 .btn-delete
   position absolute
   top 12px

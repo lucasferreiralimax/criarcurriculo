@@ -10,5 +10,5 @@ const curriculo = useCurriculoStore();
 
 <template lang="pug">
 section.preview
-  pre {{ curriculo }}
+  //- pre {{ curriculo }}
 </template>
