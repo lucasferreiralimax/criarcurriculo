@@ -24,14 +24,17 @@ const stateCurriculo = {
         ref: null,
       },
     ],
-    experience: {
-      work: null,
-      company: null,
-      dateFirst: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
-      dateEnd: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
-      about: null,
-      ref: null,
-    },
+    experience: [
+      {
+        id: uniqueid('experience_'),
+        work: null,
+        company: null,
+        dateFirst: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
+        dateEnd: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
+        about: null,
+        ref: null,
+      }
+    ],
     languages: [],
   }
 };

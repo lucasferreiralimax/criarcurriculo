@@ -37,7 +37,7 @@ const levelLabels = {
 };
 
 watch(store, () => {
-  localStorage.setItem('curriculo', JSON.stringify(store.getCurriculo));
+  localStorage.setItem('curriculo-store', JSON.stringify(store.getCurriculo));
 })
 
 watch(languageInput.value, () => {
@@ -71,11 +71,25 @@ function newLanguage(test) {
 function removeFormation(id) {
   store.curriculo.formation = store.curriculo.formation.filter((item) => item.id !== id);
 }
+function removeExperience(id) {
+  store.curriculo.experience = store.curriculo.experience.filter((item) => item.id !== id);
+}
 function addFormation() {
   store.curriculo.formation.push({
     id: uniqueid('formation_'),
     institute: null,
     course: null,
+    dateFirst: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
+    dateEnd: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
+    about: null,
+    ref: null,
+  });
+}
+function addExperience() {
+  store.curriculo.experience.push({
+    id: uniqueid('experience_'),
+    work: null,
+    company: null,
     dateFirst: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
     dateEnd: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
     about: null,
@@ -188,32 +202,51 @@ Box.academy(v-for="(formation, index) in store.curriculo.formation")
       v-text-field(label="Atividades" v-model="formation.about" hide-details="auto" clearable)
     v-col(cols="12" sm="6")
       v-text-field(label="Referencia" v-model="formation.ref" hide-details="auto" clearable)
-v-btn.btn(
+v-btn.btn.my-5(
   block
   type="button" @click="addFormation()"
   color="success"
 )
   v-icon.icon mdi-plus-box
   | Adicionar formação
-Box.experience
+Box.experience(v-for="(experience, index) in store.curriculo.experience")
+  template(#actions)
+    v-btn.btn-delete(
+      @click="removeExperience(experience.id)"
+      color="error"
+      icon
+      small
+    )
+      v-icon mdi-close
+      v-tooltip(
+        activator="parent"
+        location="top"
+      ) Excluir
   template(#icon)
     ToolingIcon
   template(#heading) Experiência
   v-row
     v-col(cols="12" sm="6")
-      v-text-field(label="Cargo" v-model="store.curriculo.experience.work" hide-details="auto" clearable)
+      v-text-field(label="Cargo" v-model="experience.work" hide-details="auto" clearable)
     v-col(cols="12" sm="6")
-      v-text-field(label="Empresa" v-model="store.curriculo.experience.company" hide-details="auto" clearable)
+      v-text-field(label="Empresa" v-model="experience.company" hide-details="auto" clearable)
   v-row
     v-col(cols="12" sm="6")
-      v-text-field(label="Data Inicio" v-model="store.curriculo.experience.dateFirst" hide-details="auto" clearable type="date")
+      v-text-field(label="Data Inicio" v-model="experience.dateFirst" hide-details="auto" clearable type="date")
     v-col(cols="12" sm="6")
-      v-text-field(label="Data Conclusão" v-model="store.curriculo.experience.dateEnd" hide-details="auto" clearable type="date")
+      v-text-field(label="Data Conclusão" v-model="experience.dateEnd" hide-details="auto" clearable type="date")
   v-row
     v-col(cols="12" sm="6")
-      v-text-field(label="Atividades" v-model="store.curriculo.experience.about" hide-details="auto" clearable)
+      v-text-field(label="Atividades" v-model="experience.about" hide-details="auto" clearable)
     v-col(cols="12" sm="6")
-      v-text-field(label="Referencia" v-model="store.curriculo.experience.ref" hide-details="auto" clearable)
+      v-text-field(label="Referencia" v-model="experience.ref" hide-details="auto" clearable)
+v-btn.btn(
+  block
+  type="button" @click="addExperience()"
+  color="success"
+)
+  v-icon.icon mdi-plus-box
+  | Adicionar experiência
 </template>
 
 <style lang="stylus">

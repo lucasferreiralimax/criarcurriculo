@@ -10,7 +10,7 @@ const store = useCurriculoStore();
 function magicLuffy() {
   console.log(stateCurriculo);
   store.curriculo = stateCurriculo;
-  localStorage.setItem('curriculo', JSON.stringify(store.getCurriculo));
+  localStorage.setItem('curriculo-store', JSON.stringify(store.getCurriculo));
 }
 </script>
 
