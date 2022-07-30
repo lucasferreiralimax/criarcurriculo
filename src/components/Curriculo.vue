@@ -136,14 +136,9 @@ Box.address
     HomeIcon
   template(#heading) Endereço
   v-row
-    v-col(cols="12" sm="6")
+    v-col(cols="12" sm="12" md="3")
       v-text-field(@keyup="search_cep" label="CEP" v-model="store.curriculo.address.cep" type="tel" hide-details="auto" maxlength="9" clearable)
-    v-col(cols="12" sm="6" v-if="store.curriculo.address.cep || store.curriculo.address.number")
-      v-text-field(label="Número" v-model="store.curriculo.address.number" type="number" hide-details="auto" clearable)
-  v-row
-    v-col(cols="12" sm="6" v-if="(store.curriculo.address.cep && store.curriculo.address.number) || store.curriculo.address.city")
-      v-text-field(label="Cidade" v-model="store.curriculo.address.city" type="text" hide-details="auto" clearable)
-    v-col(cols="12" sm="6" v-if="(store.curriculo.address.cep && store.curriculo.address.number && store.curriculo.address.city) || store.curriculo.address.country")
+    v-col(cols="12" sm="6" md="3" v-if="(store.curriculo.address.cep && store.curriculo.address.number && store.curriculo.address.city) || store.curriculo.address.country")
       v-text-field(
         label="Estado"
         v-model="store.curriculo.address.country"
@@ -152,9 +147,8 @@ Box.address
         clearable
         @input="StaytoUpperCase"
       )
-  v-row
-    v-col(cols="12" sm="6" v-if="(store.curriculo.address.cep && store.curriculo.address.number && store.curriculo.address.city && store.curriculo.address.country) || store.curriculo.address.street")
-      v-text-field(label="Local" v-model="store.curriculo.address.street" type="text" hide-details="auto" clearable)
+    v-col(cols="12" sm="6" md="6" v-if="(store.curriculo.address.cep && store.curriculo.address.number) || store.curriculo.address.city")
+      v-text-field(label="Cidade" v-model="store.curriculo.address.city" type="text" hide-details="auto" clearable)
 Box.languages
   template(#icon)
     CommunityIcon
