@@ -219,7 +219,7 @@ Box.academy(v-for="(formation, index) in store.curriculo.formation")
     v-col(cols="12" sm="6")
       v-text-field(label="Atividades" v-model="formation.about" hide-details="auto" clearable)
     v-col(cols="12" sm="6")
-      v-text-field(label="Referencia" v-model="formation.ref" hide-details="auto" clearable)
+      v-text-field(label="Referência" v-model="formation.ref" hide-details="auto" clearable)
 v-btn.btn.my-5(
   block
   type="button" @click="addFormation()"
@@ -258,7 +258,7 @@ Box.experience(v-for="(experience, index) in store.curriculo.experience")
     v-col(cols="12" sm="6")
       v-text-field(label="Atividades" v-model="experience.about" hide-details="auto" clearable)
     v-col(cols="12" sm="6")
-      v-text-field(label="Referencia" v-model="experience.ref" hide-details="auto" clearable)
+      v-text-field(label="Referência" v-model="experience.ref" hide-details="auto" clearable)
 v-btn.btn(
   block
   type="button" @click="addExperience()"
