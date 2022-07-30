@@ -18,13 +18,32 @@ const genders = ref(["Mulher", "Homem", "Unisex"]);
 const maritials = ref(["Solteiro", "Casado", "Divorciado", "Viuvo"]);
 const languages = ref([
   { name: "Português Brasileiro", percent: 0 },
+  { name: "Latim", percent: 0 },
+  { name: "Hebraico", percent: 0 },
+  { name: "Egípcio", percent: 0 },
   { name: "Português Portugal", percent: 0 },
+  { name: "Italiano", percent: 0 },
   { name: "Espanhol", percent: 0 },
+  { name: "Catalão", percent: 0 },
+  { name: "Castelhano", percent: 0 },
   { name: "Inglês", percent: 0 },
   { name: "Russo", percent: 0 },
-  { name: "Chinês", percent: 0 },
+  { name: "Bielorusso", percent: 0 },
+  { name: "Mandarim - Chinês", percent: 0 },
   { name: "Árabe", percent: 0 },
   { name: "Japonês", percent: 0 },
+  { name: "Turco", percent: 0 },
+  { name: "Tailandês", percent: 0 },
+  { name: "Grego", percent: 0 },
+  { name: "Holandês", percent: 0 },
+  { name: "Islandês", percent: 0 },
+  { name: "Amárico", percent: 0 },
+  { name: "Aramaico", percent: 0 },
+  { name: "Vietnamita", percent: 0 },
+  { name: "Persa", percent: 0 },
+  { name: "Coreano", percent: 0 },
+  { name: "Francês", percent: 0 },
+  { name: "Alemão", percent: 0 },
   ]);
 const languagesArray = ref([
   ...languages.value.map(item => item.name)
@@ -110,7 +129,7 @@ Box.personal
       v-text-field(label="Idade" v-model="store.curriculo.age" type="number" hide-details="auto" clearable)
   v-row
     v-col(cols="12" sm="6" v-if="(store.curriculo.name && store.curriculo.age) || store.curriculo.gender")
-      v-combobox(v-model="store.curriculo.gender" :items="genders" label="Genero" outlined dense hide-details="auto" clearable)
+      v-combobox(v-model="store.curriculo.gender" :items="genders" label="Gênero" outlined dense hide-details="auto" clearable)
     v-col(cols="12" sm="6" v-if="(store.curriculo.name && store.curriculo.age && store.curriculo.gender) || store.curriculo.maritial")
       v-combobox(v-model="store.curriculo.maritial" :items="maritials" label="Estado civil" outlined dense hide-details="auto" clearable)
 Box.address
@@ -144,7 +163,7 @@ Box.languages
   v-row
     v-col(cols="12")
       v-autocomplete(
-        label="Languages"
+        label="Escolha o idioma"
         hide-details="auto"
         v-model="store.curriculo.languages"
         :items="languages"
@@ -224,7 +243,7 @@ Box.experience(v-for="(experience, index) in store.curriculo.experience")
       ) Excluir
   template(#icon)
     ToolingIcon
-  template(#heading) Experiência
+  template(#heading) Experiência {{ experience.company }}
   v-row
     v-col(cols="12" sm="6")
       v-text-field(label="Cargo" v-model="experience.work" hide-details="auto" clearable)
