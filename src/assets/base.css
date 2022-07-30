@@ -89,6 +89,7 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
   bottom: 0;
   right: 0;
   left: 0;
+  cursor: pointer;
 }
 
 .v-autocomplete__selection {
