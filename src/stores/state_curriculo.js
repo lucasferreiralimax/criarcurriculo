@@ -3,7 +3,7 @@ import uniqueid from "lodash/uniqueid";
 const stateCurriculo = {
   curriculo: {
     name: "",
-    age: 18,
+    age: null,
     gender: '',
     maritial: '',
     address: {
