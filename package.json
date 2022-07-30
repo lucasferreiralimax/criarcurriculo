@@ -20,7 +20,9 @@
   },
   "dependencies": {
     "@mdi/font": "^7.0.96",
+    "crypto-js": "^4.1.1",
     "firebase": "^9.9.1",
+    "lodash": "^4.17.21",
     "pinia": "^2.0.17",
     "roboto-fontface": "*",
     "stylus": "^0.58.1",

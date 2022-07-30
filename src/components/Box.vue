@@ -5,6 +5,8 @@ const collapse = ref(props.collapse);
 </script>
 <template lang="pug">
 .box(:class="{ 'no-select': !select }")
+  .actions
+    slot(name="actions")
   .title(@click="collapse = !collapse")
     i
       slot(name="icon")
@@ -28,7 +30,15 @@ const collapse = ref(props.collapse);
       & > i
         border-color var(--vt-c-green)
       h3, & > i svg
-        color var(--vt-c-green)
+        color var(--vt-c-green)    
+    .actions
+      opacity 1
+      filter blur(0px)
+  .actions
+    opacity 0
+    filter blur(10px)
+    transition .5s opacity
+    z-index 99
   .title
     display flex
     align-items center

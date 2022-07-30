@@ -2,6 +2,7 @@
 import axios from 'axios'
 import { api } from '@/api'
 import { ref, watch } from "vue";
+import uniqueid from "lodash/uniqueid";
 import Box from "./Box.vue";
 import DocumentationIcon from "./icons/IconDocumentation.vue";
 import ToolingIcon from "./icons/IconTooling.vue";
@@ -11,7 +12,7 @@ import UserIcon from "./icons/IconUser.vue";
 import { useCurriculoStore } from "@/stores/curriculo";
 
 const HTTP = axios.create({ baseURL: api.viacep })
-const curriculo = useCurriculoStore();
+const store = useCurriculoStore();
 const languageInput = ref([]);
 const genders = ref(["Mulher", "Homem", "Unisex"]);
 const maritials = ref(["Solteiro", "Casado", "Divorciado", "Viuvo"]);
@@ -35,15 +36,8 @@ const levelLabels = {
   2: 'Fluente',
 };
 
-// console.log(curriculo.languages);
-// console.log(languages.value);
-// console.log(languagesArray.value);  
-
-watch(curriculo, () => {
-  localStorage.setItem('curriculo', JSON.stringify(curriculo.getCurriculo));
-  // console.log(curriculo.getCurriculo);
-  // console.log('testes');
-  // console.log('testes');
+watch(store, () => {
+  localStorage.setItem('curriculo', JSON.stringify(store.getCurriculo));
 })
 
 watch(languageInput.value, () => {
@@ -54,9 +48,9 @@ function search_cep(e) {
   if (e.target.value.length >= 8) {
     HTTP.get(e.target.value.replace(/\D+/g, '') + '/json/')
       .then(({ data: { localidade, logradouro, uf }}) => {
-        curriculo.address.city = localidade;
-        curriculo.address.country = uf;
-        curriculo.address.street = logradouro;
+        store.curriculo.address.city = localidade;
+        store.curriculo.address.country = uf;
+        store.curriculo.address.street = logradouro;
       })
       .catch(e => {
         console.error(e);
@@ -65,7 +59,7 @@ function search_cep(e) {
 }
 
 function StaytoUpperCase({ target: { value } }) {
-  curriculo.address.country = value.toUpperCase();
+  store.curriculo.address.country = value.toUpperCase();
 }
 function StayLanguages(test) {
   console.log('StayLanguages');
@@ -73,6 +67,20 @@ function StayLanguages(test) {
 }
 function newLanguage(test) {
   console.log(test);
+}
+function removeFormation(id) {
+  store.curriculo.formation = store.curriculo.formation.filter((item) => item.id !== id);
+}
+function addFormation() {
+  store.curriculo.formation.push({
+    id: uniqueid('formation_'),
+    institute: null,
+    course: null,
+    dateFirst: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
+    dateEnd: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
+    about: null,
+    ref: null,
+  });
 }
 </script>
 
@@ -83,38 +91,38 @@ Box.personal
   template(#heading) Dados pessoais
   v-row
     v-col(cols="12" sm="6")
-      v-text-field(label="Nome completo" v-model="curriculo.name" hide-details="auto" clearable)
-    v-col(cols="12" sm="6" v-if="curriculo.name || curriculo.age")
-      v-text-field(label="Idade" v-model="curriculo.age" type="number" hide-details="auto" clearable)
+      v-text-field(label="Nome completo" v-model="store.curriculo.name" hide-details="auto" clearable)
+    v-col(cols="12" sm="6" v-if="store.curriculo.name || store.curriculo.age")
+      v-text-field(label="Idade" v-model="store.curriculo.age" type="number" hide-details="auto" clearable)
   v-row
-    v-col(cols="12" sm="6" v-if="(curriculo.name && curriculo.age) || curriculo.gender")
-      v-combobox(v-model="curriculo.gender" :items="genders" label="Genero" outlined dense hide-details="auto" clearable)
-    v-col(cols="12" sm="6" v-if="(curriculo.name && curriculo.age && curriculo.gender) || curriculo.maritial")
-      v-combobox(v-model="curriculo.maritial" :items="maritials" label="Estado civil" outlined dense hide-details="auto" clearable)
+    v-col(cols="12" sm="6" v-if="(store.curriculo.name && store.curriculo.age) || store.curriculo.gender")
+      v-combobox(v-model="store.curriculo.gender" :items="genders" label="Genero" outlined dense hide-details="auto" clearable)
+    v-col(cols="12" sm="6" v-if="(store.curriculo.name && store.curriculo.age && store.curriculo.gender) || store.curriculo.maritial")
+      v-combobox(v-model="store.curriculo.maritial" :items="maritials" label="Estado civil" outlined dense hide-details="auto" clearable)
 Box.address
   template(#icon)
     HomeIcon
   template(#heading) Endereço
   v-row
     v-col(cols="12" sm="6")
-      v-text-field(@keyup="search_cep" label="CEP" v-model="curriculo.address.cep" type="tel" hide-details="auto" maxlength="9" clearable)
-    v-col(cols="12" sm="6" v-if="curriculo.address.cep || curriculo.address.number")
-      v-text-field(label="Número" v-model="curriculo.address.number" type="number" hide-details="auto" clearable)
+      v-text-field(@keyup="search_cep" label="CEP" v-model="store.curriculo.address.cep" type="tel" hide-details="auto" maxlength="9" clearable)
+    v-col(cols="12" sm="6" v-if="store.curriculo.address.cep || store.curriculo.address.number")
+      v-text-field(label="Número" v-model="store.curriculo.address.number" type="number" hide-details="auto" clearable)
   v-row
-    v-col(cols="12" sm="6" v-if="(curriculo.address.cep && curriculo.address.number) || curriculo.address.city")
-      v-text-field(label="Cidade" v-model="curriculo.address.city" type="text" hide-details="auto" clearable)
-    v-col(cols="12" sm="6" v-if="(curriculo.address.cep && curriculo.address.number && curriculo.address.city) || curriculo.address.country")
+    v-col(cols="12" sm="6" v-if="(store.curriculo.address.cep && store.curriculo.address.number) || store.curriculo.address.city")
+      v-text-field(label="Cidade" v-model="store.curriculo.address.city" type="text" hide-details="auto" clearable)
+    v-col(cols="12" sm="6" v-if="(store.curriculo.address.cep && store.curriculo.address.number && store.curriculo.address.city) || store.curriculo.address.country")
       v-text-field(
         label="Estado"
-        v-model="curriculo.address.country"
+        v-model="store.curriculo.address.country"
         type="text"
         hide-details="auto"
         clearable
         @input="StaytoUpperCase"
       )
   v-row
-    v-col(cols="12" sm="6" v-if="(curriculo.address.cep && curriculo.address.number && curriculo.address.city && curriculo.address.country) || curriculo.address.street")
-      v-text-field(label="Local" v-model="curriculo.address.street" type="text" hide-details="auto" clearable)
+    v-col(cols="12" sm="6" v-if="(store.curriculo.address.cep && store.curriculo.address.number && store.curriculo.address.city && store.curriculo.address.country) || store.curriculo.address.street")
+      v-text-field(label="Local" v-model="store.curriculo.address.street" type="text" hide-details="auto" clearable)
 Box.languages
   template(#icon)
     CommunityIcon
@@ -124,7 +132,7 @@ Box.languages
       v-autocomplete(
         label="Languages"
         hide-details="auto"
-        v-model="curriculo.languages"
+        v-model="store.curriculo.languages"
         :items="languages"
         outlined
         dense
@@ -135,10 +143,7 @@ Box.languages
         item-title="name"
         return-object
       )
-      //- v-text-field(v-model="languageInput" label="Idioma" type="text" hide-details="auto" clearable)
-    //- v-col(cols="1")
-    //-   v-btn(label="Adicionar novo idioma" @click="newLanguage" color="secondary") +
-  v-row(v-for="(language, index) in curriculo.languages")
+  v-row(v-for="(language, index) in store.curriculo.languages")
     v-col(cols="12")
       v-divider(class="divider")
       v-slider(
@@ -148,59 +153,87 @@ Box.languages
         :max="2"
         step="1"
         show-ticks="always"
-        v-model="curriculo.languages[index].percent"
+        v-model="store.curriculo.languages[index].percent"
       )
         template(v-slot:prepend)
-          p.title-languange {{language.name}}
-Box.academy
+          p.title-languange {{language.name}}        
+Box.academy(v-for="(formation, index) in store.curriculo.formation")
+  template(#actions)
+    v-btn.btn-delete(
+      @click="removeFormation(formation.id)"
+      color="error"
+      icon
+      small
+    )
+      v-icon mdi-close
+      v-tooltip(
+        activator="parent"
+        location="top"
+      ) Excluir
   template(#icon)
     DocumentationIcon
-  template(#heading) Formação
+  template(#heading) Formação {{ formation.course }} 
   v-row
     v-col(cols="12" sm="6")
-      v-text-field(label="Instituição" v-model="curriculo.formation.institute" hide-details="auto" clearable)
+      v-text-field(label="Instituição" v-model="formation.institute" hide-details="auto" clearable)
     v-col(cols="12" sm="6")
-      v-text-field(label="Curso" v-model="curriculo.formation.course" hide-details="auto" clearable)
+      v-text-field(label="Curso" v-model="formation.course" hide-details="auto" clearable)
   v-row
     v-col(cols="12" sm="6")
-      v-text-field(label="Data Inicio" v-model="curriculo.formation.dateFirst" hide-details="auto" clearable type="date")
+      v-text-field(label="Data Inicio" v-model="formation.dateFirst" hide-details="auto" clearable type="date")
     v-col(cols="12" sm="6")
-      v-text-field(label="Data Conclusão" v-model="curriculo.formation.dateEnd" hide-details="auto" clearable type="date")
+      v-text-field(label="Data Conclusão" v-model="formation.dateEnd" hide-details="auto" clearable type="date")
   v-row
     v-col(cols="12" sm="6")
-      v-text-field(label="Atividades" v-model="curriculo.formation.about" hide-details="auto" clearable)
+      v-text-field(label="Atividades" v-model="formation.about" hide-details="auto" clearable)
     v-col(cols="12" sm="6")
-      v-text-field(label="Referencia" v-model="curriculo.formation.ref" hide-details="auto" clearable)
+      v-text-field(label="Referencia" v-model="formation.ref" hide-details="auto" clearable)
+v-btn.btn(
+  block
+  type="button" @click="addFormation()"
+  color="success"
+)
+  v-icon.icon mdi-plus-box
+  | Adicionar formação
 Box.experience
   template(#icon)
     ToolingIcon
   template(#heading) Experiência
   v-row
     v-col(cols="12" sm="6")
-      v-text-field(label="Cargo" v-model="curriculo.experience.work" hide-details="auto" clearable)
+      v-text-field(label="Cargo" v-model="store.curriculo.experience.work" hide-details="auto" clearable)
     v-col(cols="12" sm="6")
-      v-text-field(label="Empresa" v-model="curriculo.experience.company" hide-details="auto" clearable)
+      v-text-field(label="Empresa" v-model="store.curriculo.experience.company" hide-details="auto" clearable)
   v-row
     v-col(cols="12" sm="6")
-      v-text-field(label="Data Inicio" v-model="curriculo.experience.dateFirst" hide-details="auto" clearable type="date")
+      v-text-field(label="Data Inicio" v-model="store.curriculo.experience.dateFirst" hide-details="auto" clearable type="date")
     v-col(cols="12" sm="6")
-      v-text-field(label="Data Conclusão" v-model="curriculo.experience.dateEnd" hide-details="auto" clearable type="date")
+      v-text-field(label="Data Conclusão" v-model="store.curriculo.experience.dateEnd" hide-details="auto" clearable type="date")
   v-row
     v-col(cols="12" sm="6")
-      v-text-field(label="Atividades" v-model="curriculo.experience.about" hide-details="auto" clearable)
+      v-text-field(label="Atividades" v-model="store.curriculo.experience.about" hide-details="auto" clearable)
     v-col(cols="12" sm="6")
-      v-text-field(label="Referencia" v-model="curriculo.experience.ref" hide-details="auto" clearable)
+      v-text-field(label="Referencia" v-model="store.curriculo.experience.ref" hide-details="auto" clearable)
 </template>
 
-<style>
-.title-languange {
-  display: block;
-  position: absolute;
-  top: -50px;
-  min-width: 300px;
-}
-.divider {
-  margin-bottom: 3rem;
-  filter: invert(1);
-}
+<style lang="stylus">
+.title-languange 
+  display block
+  position absolute
+  top -50px
+  min-width 300px
+
+.divider 
+  margin-bottom 3rem
+  filter invert(1)
+
+.btn
+  padding 1.5rem 1rem
+  .icon 
+    margin-right 1rem
+.btn-delete
+  position absolute
+  top 12px
+  right 12px
+  transform scale(.8)
 </style>

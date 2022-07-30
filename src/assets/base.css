@@ -76,6 +76,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.w-full {
+  width: 100%;
+}
+
 input[type="date" i]::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
