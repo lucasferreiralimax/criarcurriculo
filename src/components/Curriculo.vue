@@ -23,6 +23,7 @@ const languages = ref([
   { name: "Russo", percent: 0 },
   { name: "Chinês", percent: 0 },
   { name: "Árabe", percent: 0 },
+  { name: "Japonês", percent: 0 },
   ]);
 const languagesArray = ref([
   ...languages.value.map(item => item.name)
@@ -120,12 +121,26 @@ Box.languages
   template(#heading) Idiomas
   v-row
     v-col(cols="12")
-      v-autocomplete(label="Languages" v-model="curriculo.languages" :items="languagesArray" outlined dense multiple chips clearable)
+      v-autocomplete(
+        label="Languages"
+        hide-details="auto"
+        v-model="curriculo.languages"
+        :items="languages"
+        outlined
+        dense
+        multiple
+        chips
+        clearable
+        closable-chips
+        item-title="name"
+        return-object
+      )
       //- v-text-field(v-model="languageInput" label="Idioma" type="text" hide-details="auto" clearable)
     //- v-col(cols="1")
     //-   v-btn(label="Adicionar novo idioma" @click="newLanguage" color="secondary") +
   v-row(v-for="(language, index) in curriculo.languages")
     v-col(cols="12")
+      v-divider(class="divider")
       v-slider(
         color="green"
         track-color="#000"
@@ -133,9 +148,10 @@ Box.languages
         :max="2"
         step="1"
         show-ticks="always"
+        v-model="curriculo.languages[index].percent"
       )
         template(v-slot:prepend)
-          p.title-languange {{language}}
+          p.title-languange {{language.name}}
 Box.academy
   template(#icon)
     DocumentationIcon
@@ -182,5 +198,9 @@ Box.experience
   position: absolute;
   top: -50px;
   min-width: 300px;
+}
+.divider {
+  margin-bottom: 3rem;
+  filter: invert(1);
 }
 </style>
