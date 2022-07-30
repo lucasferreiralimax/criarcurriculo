@@ -28,6 +28,12 @@ const languagesArray = ref([
   ...languages.value.map(item => item.name)
 ]);
 
+const levelLabels = {
+  0: 'Básico',
+  1: 'Intermediário',
+  2: 'Fluente',
+};
+
 // console.log(curriculo.languages);
 // console.log(languages.value);
 // console.log(languagesArray.value);  
@@ -121,14 +127,15 @@ Box.languages
   v-row(v-for="(language, index) in curriculo.languages")
     v-col(cols="12")
       v-slider(
-        @input="StayLanguages({ language, index })"
-        step="10"
         color="green"
         track-color="#000"
-        thumb-label
+        :ticks="levelLabels"
+        :max="2"
+        step="1"
+        show-ticks="always"
       )
         template(v-slot:prepend)
-          p {{language}}
+          p.title-languange {{language}}
 Box.academy
   template(#icon)
     DocumentationIcon
@@ -168,3 +175,12 @@ Box.experience
     v-col(cols="12" sm="6")
       v-text-field(label="Referencia" v-model="curriculo.experience.ref" hide-details="auto" clearable)
 </template>
+
+<style>
+.title-languange {
+  display: block;
+  position: absolute;
+  top: -50px;
+  min-width: 300px;
+}
+</style>
