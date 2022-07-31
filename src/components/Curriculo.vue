@@ -10,10 +10,12 @@ import CommunityIcon from "./icons/IconCommunity.vue";
 import HomeIcon from "./icons/IconHome.vue";
 import UserIcon from "./icons/IconUser.vue";
 import { useCurriculoStore } from "@/stores/curriculo";
+import { useCheckPreview } from '@/helpers/useCheckPreview.js'
 import stateCurriculo from "../stores/state_curriculo";
 
 const HTTP = axios.create({ baseURL: api.viacep })
 const store = useCurriculoStore();
+const { checkPreview } = useCheckPreview();
 const languageInput = ref([]);
 const genders = ref(["Mulher", "Homem", "Unisex"]);
 const maritials_man = ref(["Solteiro", "Casado", "Divorciado", "Viuvo"]);
@@ -47,7 +49,7 @@ const languages = ref([
   { name: "Coreano", percent: 0 },
   { name: "Francês", percent: 0 },
   { name: "Alemão", percent: 0 },
-  ]);
+]);
 
 const levelLabels = {
   0: 'Básico',
@@ -274,7 +276,7 @@ v-btn.btn(
 )
   v-icon.icon mdi-plus-circle
   | Adicionar experiência
-v-btn.btn.my-5(block @click="magicLuffy" color="error" variant="flat")
+v-btn.btn.my-5(block @click="magicLuffy" color="error" variant="flat" v-if="checkPreview")
   v-icon.icon mdi-delete
   | Apagar Tudo!
 </template>

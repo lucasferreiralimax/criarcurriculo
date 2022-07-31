@@ -1,7 +1,9 @@
 <script setup>
 import { useCurriculoStore } from "@/stores/curriculo";
+import { useCheckPreview } from '@/helpers/useCheckPreview.js'
 
 const store = useCurriculoStore();
+const { checkPreview } = useCheckPreview();
 
 const levelLabels = {
   0: 'Básico',
@@ -11,7 +13,7 @@ const levelLabels = {
 </script>
 
 <template lang="pug">
-section.preview
+section.preview(v-if="checkPreview")
   h2(v-if="store.curriculo.name") {{ store.curriculo.name }}
   template(v-if="store.curriculo.maritial || store.curriculo.age || store.curriculo.address.city || store.curriculo.address.country")
     p.my-5.mt-1
