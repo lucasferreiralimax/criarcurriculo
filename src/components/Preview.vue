@@ -1,23 +1,19 @@
 <script setup>
-import axios from 'axios'
-import { api } from '@/api'
-import { ref, watch } from "vue";
 import { useCurriculoStore } from "@/stores/curriculo";
 
-const HTTP = axios.create({ baseURL: api.viacep })
 const store = useCurriculoStore();
 </script>
 
 <template lang="pug">
 section.preview
-  //- pre {{ curriculo }}
   h2 {{ store.curriculo.name }}
-  p(v-if="store.curriculo.maritial || store.curriculo.age")
-    |  {{ store.curriculo.maritial ? `${store.curriculo.maritial}` : `` }}
-    | {{ store.curriculo.age ? `${store.curriculo.age} anos` : `` }}
-  p(v-if="store.curriculo.address.city || store.curriculo.address.country || store.curriculo.address.country")
-    |  {{ store.curriculo.maritial ? `${store.curriculo.maritial}` : `` }}
-    | {{ store.curriculo.age ? `${store.curriculo.age} anos` : `` }}
+  p
+    template(v-if="store.curriculo.maritial || store.curriculo.age")
+      |  {{ store.curriculo.maritial ? `${store.curriculo.maritial}` : `` }}
+      | {{ store.curriculo.age ? `${store.curriculo.age} anos` : `` }}
+    template(v-if="store.curriculo.address.city || store.curriculo.address.country")
+      | {{ store.curriculo.address.country ? ` ${store.curriculo.address.country}` : `` }}
+      | {{ store.curriculo.address.city ? `${store.curriculo.address.city}` : `` }}
 </template>
 
 <style lang="stylus">
