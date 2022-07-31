@@ -22,6 +22,7 @@ const collapse = ref(props.collapse);
   border 1px solid rgba(#fff, .1)
   border-radius 10px
   margin 1rem 0
+  transition .5s background
   &.no-select
     user-select none
   &:hover
