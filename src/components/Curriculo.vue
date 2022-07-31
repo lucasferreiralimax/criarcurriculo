@@ -143,7 +143,7 @@ Box.personal
       )
   v-row
     v-col(cols="12")
-      v-textarea(label="Sobre" v-model="store.curriculo.about")
+      v-textarea.mt-2(label="Sobre mim" v-model="store.curriculo.about" auto-grow variant="outlined" hide-details="auto")
 Box.address
   template(#icon)
     HomeIcon
