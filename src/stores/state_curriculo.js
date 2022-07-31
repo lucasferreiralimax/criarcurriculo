@@ -1,5 +1,3 @@
-import uniqueid from "lodash/uniqueid";
-
 const stateCurriculo = {
   curriculo: {
     name: "",

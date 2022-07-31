@@ -2,7 +2,7 @@
 import axios from 'axios'
 import { api } from '@/api'
 import { ref, watch } from "vue";
-import uniqueid from "lodash/uniqueid";
+import { uniqueid } from "lodash";
 import Box from "./Box.vue";
 import DocumentationIcon from "./icons/IconDocumentation.vue";
 import ToolingIcon from "./icons/IconTooling.vue";
