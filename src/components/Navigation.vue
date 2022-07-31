@@ -10,10 +10,18 @@ v-btn.nav-btn(color="primary" @click="menuStatus = !menuStatus" icon)
   v-icon(v-if="!menuStatus") mdi-menu
   v-icon(v-if="menuStatus") mdi-close
 nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
-  RouterLink.btn-curriculo(to="/") Criar Currículo
-  RouterLink(to="/about") Informações
-  RouterLink(to="/hash") Hash
-  RouterLink(to="/help") Ajude
+  RouterLink.btn-curriculo(to="/")
+    v-icon.mr-3 mdi-plus
+    | Criar Currículo
+  RouterLink(to="/about")
+    v-icon.mr-3 mdi-information
+    | Informações
+  RouterLink(to="/hash")
+    v-icon.mr-3 mdi-pound
+    | Hash
+  RouterLink(to="/help")
+    v-icon.mr-3 mdi-heart
+    | Ajude
 </template>
 
 <style scoped lang="stylus">
