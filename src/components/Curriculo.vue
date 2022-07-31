@@ -2,7 +2,7 @@
 import axios from 'axios'
 import { api } from '@/api'
 import { ref, watch } from "vue";
-import { uniqueid } from "lodash";
+import { uniqueId } from "lodash";
 import Box from "./Box.vue";
 import DocumentationIcon from "./icons/IconDocumentation.vue";
 import ToolingIcon from "./icons/IconTooling.vue";
@@ -96,7 +96,7 @@ function removeExperience(id) {
 
 function addFormation() {
   store.curriculo.formation.push({
-    id: uniqueid('formation_'),
+    id: uniqueId('formation_'),
     institute: null,
     course: null,
     dateFirst: null,
@@ -108,7 +108,7 @@ function addFormation() {
 
 function addExperience() {
   store.curriculo.experience.push({
-    id: uniqueid('experience_'),
+    id: uniqueId('experience_'),
     work: null,
     company: null,
     dateFirst: null,
@@ -236,7 +236,7 @@ Box.academy(v-for="(formation, index) in store.curriculo.formation")
       v-text-field(label="Atividades" v-model="formation.about" hide-details="auto" clearable)
     v-col(cols="12" sm="6")
       v-text-field(label="Referência" v-model="formation.ref" hide-details="auto" clearable)
-v-btn.btn.my-5(
+v-btn.btn.my-5.py-8(
   block
   type="button" @click="addFormation()"
   color="success"
@@ -275,7 +275,7 @@ Box.experience(v-for="(experience, index) in store.curriculo.experience")
       v-text-field(label="Atividades" v-model="experience.about" hide-details="auto" clearable)
     v-col(cols="12" sm="6")
       v-text-field(label="Referência" v-model="experience.ref" hide-details="auto" clearable)
-v-btn.btn(
+v-btn.btn.py-8(
   block
   type="button" @click="addExperience()"
   color="success"
