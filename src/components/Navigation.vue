@@ -9,7 +9,7 @@ const menuStatus = ref(false);
 v-btn.nav-btn(color="primary" @click="menuStatus = !menuStatus")
   v-icon(v-if="!menuStatus") mdi-menu
   v-icon(v-if="menuStatus") mdi-close
-nav.nav(:class="{ active: menuStatus }" @click="menuStatus = true")
+nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
   RouterLink(to="/about") Informações
   RouterLink(to="/hash") Hash
   RouterLink(to="/help") Ajude
