@@ -102,3 +102,7 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
 .wd-break {
   word-break: break-word;
 }
+
+.menu-active {
+  overflow: hidden;
+}
