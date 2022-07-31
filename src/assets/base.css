@@ -99,3 +99,6 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
 .ws-wrap {
   white-space: pre-wrap;
 }
+.wd-break {
+  word-break: break-word;
+}

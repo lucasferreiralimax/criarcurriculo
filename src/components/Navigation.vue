@@ -5,6 +5,7 @@ import { RouterLink } from "vue-router";
 <template lang="pug">
 nav
   RouterLink(to="/about") Informações
+  RouterLink(to="/hash") Hash
   RouterLink(to="/help") Ajude
 </template>
 
