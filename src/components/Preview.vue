@@ -21,6 +21,10 @@ section.preview
       | {{ store.curriculo.address.country ? ` ${store.curriculo.address.country}` : `` }}
       | {{ store.curriculo.address.city ? `${store.curriculo.address.city}` : `` }}
   v-divider
+  h3.my-2 Sobre mim
+  p.my-5.mt-1.ws-wrap
+    | {{ store.curriculo.about }}
+  v-divider
   h3.my-2 Formação
   template(v-for="(formation, index) in store.curriculo.formation")
     p.my-5.mb-0

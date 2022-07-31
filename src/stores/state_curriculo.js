@@ -6,6 +6,7 @@ const stateCurriculo = {
     age: null,
     gender: '',
     maritial: '',
+    about: '',
     address: {
       cep: null,
       city: null,

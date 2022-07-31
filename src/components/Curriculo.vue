@@ -141,6 +141,9 @@ Box.personal
         hide-details="auto"
         clearable
       )
+  v-row
+    v-col(cols="12")
+      v-textarea(label="Sobre" v-model="store.curriculo.about")
 Box.address
   template(#icon)
     HomeIcon
@@ -228,7 +231,7 @@ v-btn.btn.my-5(
   block
   type="button" @click="addFormation()"
   color="success"
-  variant="outlined"
+  variant="tonal"
 )
   v-icon.icon mdi-plus-circle
   | Adicionar formação
@@ -267,11 +270,11 @@ v-btn.btn(
   block
   type="button" @click="addExperience()"
   color="success"
-  variant="outlined"
+  variant="tonal"
 )
   v-icon.icon mdi-plus-circle
   | Adicionar experiência
-v-btn.btn.my-5(block @click="magicLuffy" color="error" variant="outlined")
+v-btn.btn.my-5(block @click="magicLuffy" color="error" variant="flat")
   v-icon.icon mdi-delete
   | Apagar Tudo!
 </template>

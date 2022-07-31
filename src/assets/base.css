@@ -95,3 +95,7 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
 .v-autocomplete__selection {
   padding: .2rem .1rem;
 }
+
+.ws-wrap {
+  white-space: pre-wrap;
+}
