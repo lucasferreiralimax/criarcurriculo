@@ -141,9 +141,9 @@ Box.personal
         hide-details="auto"
         clearable
       )
-  v-row
+  v-row(v-if="(store.curriculo.name && store.curriculo.age && store.curriculo.gender && store.curriculo.maritial)")
     v-col(cols="12")
-      v-textarea.mt-2(label="Sobre mim" v-model="store.curriculo.about" auto-grow variant="outlined" hide-details="auto")
+      v-textarea.mt-2(label="Escreva sobre você..." v-model="store.curriculo.about" auto-grow variant="outlined" hide-details="auto")
 Box.address
   template(#icon)
     HomeIcon
