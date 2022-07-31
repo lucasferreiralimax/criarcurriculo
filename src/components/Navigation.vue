@@ -18,7 +18,7 @@ nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
 
 <style scoped lang="stylus">
 .btn-curriculo
-  display none
+  display none !important
 .nav-btn
   display none
 .nav
@@ -33,11 +33,11 @@ nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
     &:first-of-type
       margin-left 0
     &.router-link-exact-active
-      color hsla(160, 100%, 37%, 1)
-      background-color hsla(160, 100%, 37%, 0.2)
+      color #fff
+      background-color hsla(160, 100%, 37%, 0.8)
 @media (max-width 640px)
   .btn-curriculo
-    display block
+    display block !important
   .nav-btn
     display block
     z-index 9999
@@ -54,13 +54,15 @@ nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
     opacity 0
     transition .5s opacity
     filter blur(10px)
-    padding 5rem 1rem 1rem
+    padding 6rem 1rem 1rem
     pointer-events none
     backdrop-filter blur(10px) grayscale(1)
     a
       width calc(100% - 2rem)
       background #fff
       margin .5rem 1rem !important
+      background #fff
+      font-weight bold
     &.active
       opacity 1
       filter blur(0px)
