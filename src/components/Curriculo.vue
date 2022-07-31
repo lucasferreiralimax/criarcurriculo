@@ -119,8 +119,11 @@ function addExperience() {
 }
 
 function magicLuffy() {
+  localStorage.removeItem('curriculo-store');
   store.curriculo = stateCurriculo.curriculo;
-  localStorage.setItem('curriculo-store', JSON.stringify(store.getCurriculo));
+
+  const words = encodeHash(JSON.stringify(store.getCurriculo));
+  localStorage.setItem('curriculo-store', words?.toString());
 }
 </script>
 
