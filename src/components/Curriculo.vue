@@ -11,11 +11,14 @@ import HomeIcon from "./icons/IconHome.vue";
 import UserIcon from "./icons/IconUser.vue";
 import { useCurriculoStore } from "@/stores/curriculo";
 import { useCheckPreview } from '@/helpers/useCheckPreview.js'
+import { useHash } from '@/helpers/useHash.js'
 import stateCurriculo from "../stores/state_curriculo";
+import CryptoJS from 'crypto-js';
 
 const HTTP = axios.create({ baseURL: api.viacep })
 const store = useCurriculoStore();
 const { checkPreview } = useCheckPreview();
+const { encodeHash } = useHash();
 const languageInput = ref([]);
 const genders = ref(["Mulher", "Homem", "Unisex"]);
 const maritials_man = ref(["Solteiro", "Casado", "Divorciado", "Viuvo"]);
@@ -58,7 +61,8 @@ const levelLabels = {
 };
 
 watch(store, () => {
-  localStorage.setItem('curriculo-store', JSON.stringify(store.getCurriculo));
+  const words = encodeHash(JSON.stringify(store.getCurriculo));
+  localStorage.setItem('curriculo-store', words?.toString());
 })
 
 watch(store.curriculo.gender, () => {
