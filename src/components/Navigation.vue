@@ -6,16 +6,19 @@ const menuStatus = ref(false);
 </script>
 
 <template lang="pug">
-v-btn.nav-btn(color="primary" @click="menuStatus = !menuStatus")
+v-btn.nav-btn(color="primary" @click="menuStatus = !menuStatus" icon)
   v-icon(v-if="!menuStatus") mdi-menu
   v-icon(v-if="menuStatus") mdi-close
 nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
+  RouterLink.btn-curriculo(to="/") Criar Currículo
   RouterLink(to="/about") Informações
   RouterLink(to="/hash") Hash
   RouterLink(to="/help") Ajude
 </template>
 
 <style scoped lang="stylus">
+.btn-curriculo
+  display none
 .nav-btn
   display none
 .nav
@@ -33,6 +36,8 @@ nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
       color hsla(160, 100%, 37%, 1)
       background-color hsla(160, 100%, 37%, 0.2)
 @media (max-width 640px)
+  .btn-curriculo
+    display block
   .nav-btn
     display block
     z-index 9999
@@ -40,7 +45,6 @@ nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
     right 0
     top 0
   .nav
-    background #fff
     position fixed
     top 0
     bottom 0
@@ -51,9 +55,14 @@ nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
     transition .5s opacity
     filter blur(10px)
     padding 5rem 1rem 1rem
+    pointer-events none
+    backdrop-filter blur(10px) grayscale(1)
     a
-      width 100%
+      width calc(100% - 2rem)
+      background #fff
+      margin .5rem 1rem !important
     &.active
       opacity 1
       filter blur(0px)
+      pointer-events all
 </style>
