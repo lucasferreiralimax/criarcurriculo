@@ -42,6 +42,8 @@ nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
 .nav
   width 100%
   font-size 12px
+  display flex
+  justify-content flex-end
   a
     display inline-block
     padding 1rem
@@ -75,6 +77,8 @@ nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
     padding 6rem 1rem 1rem
     pointer-events none
     backdrop-filter blur(10px) grayscale(1)
+    justify-content flex-start
+    flex-flow column
     a
       width calc(100% - 2rem)
       background #fff
