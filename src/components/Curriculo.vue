@@ -16,7 +16,9 @@ const HTTP = axios.create({ baseURL: api.viacep })
 const store = useCurriculoStore();
 const languageInput = ref([]);
 const genders = ref(["Mulher", "Homem", "Unisex"]);
-const maritials = ref(["Solteiro", "Casado", "Divorciado", "Viuvo"]);
+const maritials_man = ref(["Solteiro", "Casado", "Divorciado", "Viuvo"]);
+const maritials_woman = ref(["Solteira", "Casada", "Divorciada", "Viuva"]);
+const maritials_unix = ref(["Solteiro(a)", "Casado(a)", "Divorciado(a)", "Viuvo(a)"]);
 const languages = ref([
   { name: "Português Brasileiro", percent: 0 },
   { name: "Latim", percent: 0 },
@@ -46,9 +48,6 @@ const languages = ref([
   { name: "Francês", percent: 0 },
   { name: "Alemão", percent: 0 },
   ]);
-const languagesArray = ref([
-  ...languages.value.map(item => item.name)
-]);
 
 const levelLabels = {
   0: 'Básico',
@@ -58,6 +57,10 @@ const levelLabels = {
 
 watch(store, () => {
   localStorage.setItem('curriculo-store', JSON.stringify(store.getCurriculo));
+})
+
+watch(store.curriculo.gender, () => {
+  store.curriculo.maritial = '';
 })
 
 function search_cep(e) {
@@ -127,9 +130,17 @@ Box.personal
       v-text-field(label="Idade" v-model="store.curriculo.age" type="number" hide-details="auto" clearable)
   v-row
     v-col(cols="12" sm="6" v-if="(store.curriculo.name && store.curriculo.age) || store.curriculo.gender")
-      v-combobox(v-model="store.curriculo.gender" :items="genders" label="Gênero" outlined dense hide-details="auto" clearable)
+      v-select(v-model="store.curriculo.gender" :items="genders" label="Gênero" outlined dense hide-details="auto" clearable)
     v-col(cols="12" sm="6" v-if="(store.curriculo.name && store.curriculo.age && store.curriculo.gender) || store.curriculo.maritial")
-      v-combobox(v-model="store.curriculo.maritial" :items="maritials" label="Estado civil" outlined dense hide-details="auto" clearable)
+      v-select(
+        v-model="store.curriculo.maritial"
+        :items="store.curriculo.gender == 'Homem' ? maritials_man : store.curriculo.gender == 'Mulher' ? maritials_woman : maritials_unix"
+        label="Estado civil"
+        outlined
+        dense
+        hide-details="auto"
+        clearable
+      )
 Box.address
   template(#icon)
     HomeIcon
