@@ -8,6 +8,12 @@ watch(menuStatus, () => {
   document.body.classList.toggle('menu-active');
   document.documentElement.classList.toggle('menu-active');
 })
+
+function loginLogout() {
+  console.log('testes logout')
+  localStorage.removeItem('login');
+  window.location.reload();
+}
 </script>
 
 <template lang="pug">
@@ -27,6 +33,9 @@ nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
   RouterLink(to="/help")
     v-icon.mr-3 mdi-heart
     | Ajude
+  v-btn(outlined color="#222" @click="loginLogout")
+    v-icon.mr-3 mdi-logout
+    | Logout
 </template>
 
 <style scoped lang="stylus">
