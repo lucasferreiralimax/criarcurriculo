@@ -200,7 +200,7 @@ Box.languages
       )
   v-row
     v-col(cols="12")
-      v-expansion-panels.rounded-lg.overflow-hidden
+      v-expansion-panels.rounded-lg.overflow-hidden(theme="dark")
         v-expansion-panel(:title="language.name" v-for="(language, index) in store.curriculo.languages")
           v-expansion-panel-text
             v-slider.mb-3(

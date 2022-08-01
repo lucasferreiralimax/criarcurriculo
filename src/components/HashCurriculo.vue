@@ -35,6 +35,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
+const snackbar = ref(false);
 const hashInput = ref('');
 const hashOnly = localStorage.getItem('curriculo-store');
 // console.log(app)
@@ -42,19 +43,22 @@ const hashOnly = localStorage.getItem('curriculo-store');
 
 function hashRender() {
   if (hashInput) {
-    const words_decode = decodeHash(hashInput.value);
-    const words_parse = JSON.parse(words_decode?.toString(CryptoJS.enc.Utf8));
-
-    if (words_parse) {
-      store.curriculo = words_parse.curriculo;
-      localStorage.setItem('curriculo-store', hashInput.value);
-
-      router.push('/');
-
-      console.log(hashInput.value);
-      console.log(JSON.parse(words_decode?.toString(CryptoJS.enc.Utf8)));
+    try {
+      const words_decode = decodeHash(hashInput.value);
+      const words_parse = JSON.parse(words_decode?.toString(CryptoJS.enc.Utf8));
+  
+      if (words_parse) {
+        store.curriculo = words_parse.curriculo;
+        localStorage.setItem('curriculo-store', hashInput.value);
+  
+        router.push('/');
+  
+        console.log(hashInput.value);
+        console.log(JSON.parse(words_decode?.toString(CryptoJS.enc.Utf8)));
+      }
+    } catch (error) {
+      snackbar.value = true;
     }
-
   }
 }
 </script>
@@ -83,6 +87,21 @@ function hashRender() {
       <span class="hash wd-break">{{ hashOnly }}</span>
     </p>
   </Box>
+  <v-snackbar
+    v-model="snackbar"
+    color="error"
+  >
+    Por gentileza coloque uma hash válida
+    <template v-slot:actions>
+      <v-btn
+        color="black"
+        variant="text"
+        @click="snackbar = false"
+      >
+        Fechar
+      </v-btn>
+    </template>
+  </v-snackbar>
 </template>
 
 <style lang="stylus">
