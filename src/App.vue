@@ -3,7 +3,7 @@ import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 </script>
 <template lang="pug">
-v-app#app
+v-app
   Header
   v-main
     router-view
@@ -13,14 +13,17 @@ v-app#app
 <style lang="stylus">
 @import '@/assets/base.css'
 
+#app,
+.v-application
+  background transparent
+  color var(--color-text)
+  font-weight normal
+
 #app
-  max-width 1280px
+  max-width 960px
   min-height calc(100vh - 4rem)
   margin 0 auto
   padding 1rem
-  font-weight normal
-  background transparent
-  color var(--color-text)
 
 a
   text-decoration none
