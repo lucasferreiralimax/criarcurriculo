@@ -23,6 +23,7 @@ section.preview(v-if="checkPreview")
       template(v-if="store.curriculo.address.city || store.curriculo.address.country")
         | moro em {{ store.curriculo.address.city ? ` ${store.curriculo.address.city}` : `` }}
         | {{ store.curriculo.address.country ? `${store.curriculo.address.country}` : `` }}
+      template(v-if="store.curriculo.address.travel") , disponível para viagens
     v-divider
   template(v-if="store.curriculo.about")
     h3.my-2 Sobre mim

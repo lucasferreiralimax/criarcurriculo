@@ -9,6 +9,7 @@ const stateCurriculo = {
       cep: null,
       city: null,
       country: null,
+      travel: null,
     },
     formation: [],
     experience: [],

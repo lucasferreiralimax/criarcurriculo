@@ -158,6 +158,13 @@ Box.address
     HomeIcon
   template(#heading) Endereço
   v-row
+    v-col(cols="12")
+      v-checkbox(
+        v-model="store.curriculo.address.travel"
+        label="Disponível para viagem?"
+        hide-details="auto"
+      )
+  v-row
     v-col(cols="12" sm="12" md="3")
       v-text-field(@keyup="search_cep" label="CEP" v-model="store.curriculo.address.cep" type="tel" hide-details="auto" maxlength="9" clearable)
     v-col(cols="12" sm="6" md="3" v-if="(store.curriculo.address.cep && store.curriculo.address.number && store.curriculo.address.city) || store.curriculo.address.country")
