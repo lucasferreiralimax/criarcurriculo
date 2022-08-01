@@ -12,12 +12,9 @@ header
 <style scoped lang="stylus">
 header
   display flex
-  margin-bottom 2rem
-
+  margin 1rem 0
+  line-height 1.5
 h1
   font-weight 500
   font-size 2rem
-
-header
-  line-height 1.5
 </style>

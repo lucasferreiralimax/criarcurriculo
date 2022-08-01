@@ -243,7 +243,7 @@ Box.academy(v-for="(formation, index) in store.curriculo.formation")
       v-text-field(label="Atividades" v-model="formation.about" hide-details="auto" clearable)
     v-col(cols="12" sm="6")
       v-text-field(label="Referência" v-model="formation.ref" hide-details="auto" clearable)
-v-btn.btn.my-5.py-8(
+v-btn.btn.my-5.py-8.rounded-lg(
   block
   type="button" @click="addFormation()"
   color="success"
@@ -282,7 +282,7 @@ Box.experience(v-for="(experience, index) in store.curriculo.experience")
       v-text-field(label="Atividades" v-model="experience.about" hide-details="auto" clearable)
     v-col(cols="12" sm="6")
       v-text-field(label="Referência" v-model="experience.ref" hide-details="auto" clearable)
-v-btn.btn.py-8(
+v-btn.btn.py-8.rounded-lg(
   block
   type="button" @click="addExperience()"
   color="success"
@@ -290,7 +290,7 @@ v-btn.btn.py-8(
 )
   v-icon.icon mdi-plus-circle
   | Adicionar experiência
-v-btn.btn.my-5(block @click="magicLuffy" color="error" variant="flat" v-if="checkPreview")
+v-btn.btn.my-5.rounded-lg(block @click="magicLuffy" color="error" variant="flat" v-if="checkPreview")
   v-icon.icon mdi-delete
   | Apagar Tudo!
 </template>
