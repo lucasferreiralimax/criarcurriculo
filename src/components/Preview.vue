@@ -19,10 +19,10 @@ section.preview(v-if="checkPreview")
     p.my-5.mt-1
       template(v-if="store.curriculo.maritial || store.curriculo.age")
         |  {{ store.curriculo.maritial ? `${store.curriculo.maritial}` : `` }}
-        | {{ store.curriculo.age ? `${store.curriculo.age} anos` : `` }}
+        | {{ store.curriculo.age ? `${store.curriculo.age} anos ` : `` }}
       template(v-if="store.curriculo.address.city || store.curriculo.address.country")
-        | {{ store.curriculo.address.country ? ` ${store.curriculo.address.country}` : `` }}
-        | {{ store.curriculo.address.city ? `${store.curriculo.address.city}` : `` }}
+        | moro em {{ store.curriculo.address.city ? ` ${store.curriculo.address.city}` : `` }}
+        | {{ store.curriculo.address.country ? `${store.curriculo.address.country}` : `` }}
     v-divider
   template(v-if="store.curriculo.about")
     h3.my-2 Sobre mim
