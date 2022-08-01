@@ -5,13 +5,8 @@ import { ref, watch } from "vue";
 const menuStatus = ref(false);
 
 watch(menuStatus, () => {
-  if (menuStatus) {
-    document.body.classList.add('menu-active');
-    document.documentElement.classList.add('menu-active');
-  } else {
-    document.body.classList.remove('menu-active');
-    document.documentElement.classList.remove('menu-active');
-  }
+  document.body.classList.toggle('menu-active');
+  document.documentElement.classList.toggle('menu-active');
 })
 </script>
 
