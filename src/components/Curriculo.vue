@@ -198,20 +198,21 @@ Box.languages
         item-title="name"
         return-object
       )
-  v-row(v-for="(language, index) in store.curriculo.languages")
+  v-row
     v-col(cols="12")
-      v-divider(class="divider")
-      v-slider(
-        color="green"
-        track-color="#000"
-        :ticks="levelLabels"
-        :max="2"
-        step="1"
-        show-ticks="always"
-        v-model="store.curriculo.languages[index].percent"
-      )
-        template(v-slot:prepend)
-          p.title-languange {{language.name}}        
+      v-expansion-panels.rounded-lg.overflow-hidden
+        v-expansion-panel(:title="language.name" v-for="(language, index) in store.curriculo.languages")
+          v-expansion-panel-text
+            v-slider.mb-3(
+              color="green"
+              track-color="#000"
+              :ticks="levelLabels"
+              :max="2"
+              step="1"
+              show-ticks="always"
+              hide-details="auto"
+              v-model="store.curriculo.languages[index].percent"
+            )     
 Box.academy(v-for="(formation, index) in store.curriculo.formation")
   template(#actions)
     v-btn.btn-delete(
