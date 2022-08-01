@@ -15,9 +15,9 @@ v-app
 
 #app,
 .v-application
-  background transparent
-  color var(--color-text)
-  font-weight normal
+  background transparent !important
+  color var(--color-text) !important
+  font-weight normal !important
 
 #app
   max-width 960px
