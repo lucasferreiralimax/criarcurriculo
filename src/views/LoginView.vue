@@ -42,8 +42,8 @@ function login() {
         <BitcoinIcon />
       </template>
       <template #heading>Login</template>
-      <v-text-field class="mb-3" label="E-mail" type="text" hide-details="auto" clearable />
-      <v-text-field class="mb-3" label="Senha" type="password" hide-details="auto" clearable />
+      <!-- <v-text-field class="mb-3" label="E-mail" type="text" hide-details="auto" clearable />
+      <v-text-field class="mb-3" label="Senha" type="password" hide-details="auto" clearable /> -->
       <v-btn color="success" block @click="login">Entrar</v-btn>
     </Box>
   </main>

@@ -14,6 +14,10 @@ const state = localStorage.getItem('curriculo-store')
   ? JSON.parse(words_decode?.toString(CryptoJS.enc.Utf8))
   : stateCurriculo;
 
+Object.assign(state, {
+  shanks: Boolean(localStorage.getItem('login'))
+})
+
 export const useCurriculoStore = defineStore({
   id: "curriculo",
   state: () => state,

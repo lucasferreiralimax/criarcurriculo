@@ -1,7 +1,9 @@
 <script setup>
+import { useCurriculoStore } from "@/stores/curriculo";
 import { RouterLink } from "vue-router";
 import { ref, watch } from "vue";
 
+const store = useCurriculoStore();
 const menuStatus = ref(false);
 
 watch(menuStatus, () => {
@@ -21,21 +23,21 @@ v-btn.nav-btn(color="#222" @click="menuStatus = !menuStatus" icon)
   v-icon(v-if="!menuStatus") mdi-menu
   v-icon(v-if="menuStatus") mdi-close
 nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
-  RouterLink.btn-curriculo(to="/")
+  RouterLink.btn-curriculo(to="/" v-if="store.shanks")
     v-icon.mr-3 mdi-plus
     | Criar Currículo
   RouterLink(to="/about")
     v-icon.mr-3 mdi-information
     | Informações
-  RouterLink(to="/hash")
+  RouterLink(to="/hash" v-if="store.shanks")
     v-icon.mr-3 mdi-pound
     | Hash
   RouterLink(to="/help")
     v-icon.mr-3 mdi-heart
     | Ajude
-  v-btn(outlined color="#222" @click="loginLogout")
+  v-btn.btn-logout(outlined color="#222" @click="loginLogout" v-if="store.shanks")
     v-icon.mr-3 mdi-logout
-    | Logout
+    span Logout
 </template>
 
 <style scoped lang="stylus">
@@ -59,6 +61,14 @@ nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
     &.router-link-exact-active
       color #fff
       background-color hsla(160, 100%, 37%, 0.8)
+@media (min-width 640px)
+  .btn-logout
+    padding 2rem 1rem
+    span
+      display none
+    .v-icon
+      margin 0 !important
+      padding 0 !important  
 @media (max-width 640px)
   .btn-curriculo
     display block !important
