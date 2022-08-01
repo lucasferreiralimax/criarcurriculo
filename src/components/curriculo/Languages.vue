@@ -1,8 +1,9 @@
 <script setup>
-import { ref, watch } from "vue";
+import { ref } from "vue";
 import Box from "@/components/Box.vue";
 import CommunityIcon from "@/components/icons/IconCommunity.vue";
 import { useCurriculoStore } from "@/stores/curriculo";
+import languagesLevel from './helpers/languagesLevel';
 
 const store = useCurriculoStore();
 const languageInput = ref([]);
@@ -35,12 +36,6 @@ const languages = ref([
   { name: "Francês", percent: 0 },
   { name: "Alemão", percent: 0 },
 ]);
-
-const levelLabels = {
-  0: 'Básico',
-  1: 'Intermediário',
-  2: 'Fluente',
-};
 </script>
 
 <template lang="pug">
@@ -72,7 +67,7 @@ Box.languages
             v-slider.mb-3(
               color="green"
               track-color="#000"
-              :ticks="levelLabels"
+              :ticks="languagesLevel"
               :max="2"
               step="1"
               show-ticks="always"

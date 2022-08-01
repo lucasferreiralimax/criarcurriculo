@@ -1,15 +1,10 @@
 <script setup>
 import { useCurriculoStore } from "@/stores/curriculo";
-import { useCheckPreview } from '@/helpers/useCheckPreview.js'
+import { useCheckPreview } from '@/helpers/useCheckPreview';
+import languagesLevel from './helpers/languagesLevel';
 
 const store = useCurriculoStore();
 const { checkPreview } = useCheckPreview();
-
-const levelLabels = {
-  0: 'Básico',
-  1: 'Intermediário',
-  2: 'Fluente',
-};
 </script>
 
 <template lang="pug">
@@ -46,7 +41,7 @@ section.preview(v-if="checkPreview")
     h3.my-2 Idiomas
     p.my-5.mt-0
       span.mr-1(v-for="(language, index) in store.curriculo.languages")
-        | {{ language.name }} {{ levelLabels[language.percent] }} {{store.curriculo.languages.length !== index + 1 ? '•' : '' }}
+        | {{ language.name }} {{ languagesLevel[language.percent] }} {{store.curriculo.languages.length !== index + 1 ? '•' : '' }}
     v-divider.my-5
   template(v-if="store.curriculo.experience.length > 0")
     h3.my-2 Experiências
