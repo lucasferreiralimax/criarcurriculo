@@ -36,6 +36,10 @@ nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
     v-icon.mr-3 mdi-heart
     | Ajude
   v-btn.btn-logout(outlined color="#222" @click="loginLogout" v-if="store.shanks")
+    v-tooltip(
+      activator="parent"
+      location="top"
+    ) Logout
     v-icon.mr-3 mdi-logout
     span Logout
 </template>
@@ -63,7 +67,9 @@ nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
       background-color hsla(160, 100%, 37%, 0.8)
 @media (min-width 640px)
   .btn-logout
-    padding 2rem 1rem
+    padding 1.8rem 1rem
+    margin 0.2rem
+    border-radius 100px
     span
       display none
     .v-icon
