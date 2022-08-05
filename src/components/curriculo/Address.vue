@@ -33,7 +33,7 @@ Box.address
     HomeIcon
   template(#heading) Endereço
   v-row
-    v-col(cols="12")
+    v-col.pt-0(cols="12")
       v-checkbox(
         v-model="store.curriculo.address.travel"
         label="Disponível para viagem?"
