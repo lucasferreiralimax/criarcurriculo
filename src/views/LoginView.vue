@@ -29,10 +29,21 @@ const analytics = getAnalytics(app);
 // console.log(app)
 // console.log(analytics)
 
-function login() {
+function login(response) {
+  console.log(response)
   localStorage.setItem('login', 'test');
   window.location = '/';
+  
+  console.log('testestes');
 }
+
+google.accounts.id.initialize({
+  client_id: '509374940310-45boijq03lio03gmv3cprn31i72h7jgs.apps.googleusercontent.com',
+  callback: login
+});
+
+google.accounts.id.prompt();
+
 </script>
 
 <template>
