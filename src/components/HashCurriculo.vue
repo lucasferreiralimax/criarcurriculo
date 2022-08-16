@@ -116,4 +116,5 @@ function copyHash({target: {textContent}}) {
   border-radius 6px
   margin 1rem 0
   display inline-block
+  cursor pointer
 </style>

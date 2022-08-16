@@ -28,6 +28,14 @@ const analytics = getAnalytics(app);
 
 // console.log(app)
 // console.log(analytics)
+
+function copyValue({target: {textContent}}) {
+  navigator.clipboard.writeText(textContent);
+}
+
+function copyBitcoin({target}) {
+  navigator.clipboard.writeText(target.alt);
+}
 </script>
 
 <template>
@@ -39,16 +47,16 @@ const analytics = getAnalytics(app);
       <template #heading>Bitcoin</template>
       <p>Faça uma doação em bitcoin</p>
       <p>Carteira para doações
-        <a href="bitcoin:BC1QYRKAGKLQAJSF64MJGJ0L99WSUHVY9CNHHYSA82?message=doa%C3%A7%C3%A3o">bc1qyrkagklqajsf64mjgj0l99wsuhvy9cnhhysa82</a>
+        <a class="pointer" @click="copyValue" href="bitcoin:BC1QYRKAGKLQAJSF64MJGJ0L99WSUHVY9CNHHYSA82?message=doa%C3%A7%C3%A3o">bc1qyrkagklqajsf64mjgj0l99wsuhvy9cnhhysa82</a>
       </p>
-      <img width="250" src="@/assets/bitcoin.png" alt="bitcoin:BC1QYRKAGKLQAJSF64MJGJ0L99WSUHVY9CNHHYSA82?message=doa%C3%A7%C3%A3o">
+      <img class="pointer" @click="copyBitcoin" width="250" src="@/assets/bitcoin.png" alt="bitcoin:BC1QYRKAGKLQAJSF64MJGJ0L99WSUHVY9CNHHYSA82?message=doa%C3%A7%C3%A3o">
     </Box>
     <Box collapse="true" select="true">
       <template #icon>
         <DonateIcon />
       </template>
       <template #heading>Pix</template>
-      Faça uma doação em pix para <strong>2lembre@gmail.com</strong> ou <strong>lucasferreiralimax@gmail.com</strong>
+      Faça uma doação em pix para <strong @click="copyValue" class="pointer">2lembre@gmail.com</strong> ou <strong @click="copyValue" class="pointer">lucasferreiralimax@gmail.com</strong>
     </Box>
   </main>
 </template>
@@ -60,4 +68,7 @@ img
   display block
   margin-top 1rem
   border-radius 10px
+
+.pointer
+  cursor pointer
 </style>
