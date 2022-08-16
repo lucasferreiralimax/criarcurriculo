@@ -22,19 +22,19 @@ v-btn.nav-btn(color="#222" @click="menuStatus = !menuStatus" icon)
   v-icon(v-if="!menuStatus") mdi-menu
   v-icon(v-if="menuStatus") mdi-close
 nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
-  RouterLink.btn-curriculo(to="/" v-if="store.shanks")
+  RouterLink.btn-curriculo(to="/")
     v-icon.mr-3 mdi-plus
     | Criar Currículo
   RouterLink(to="/about")
     v-icon.mr-3 mdi-information
     | Informações
-  RouterLink(to="/hash" v-if="store.shanks")
+  RouterLink(to="/hash")
     v-icon.mr-3 mdi-pound
     | Hash
   RouterLink(to="/help")
     v-icon.mr-3 mdi-heart
     | Ajude
-  v-btn.btn-logout(outlined color="#222" @click="loginLogout" v-if="store.shanks")
+  v-btn.btn-logout(outlined color="#222" @click="loginLogout")
     v-tooltip(
       activator="parent"
       location="top"
