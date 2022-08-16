@@ -4,9 +4,9 @@ import Logo from "@/components/Logo.vue";
 
 <template lang="pug">
 footer
-  Logo
-  span
-    | 2015 - 2022
+  Logo(style="transform: translateX(-30px)")
+    span
+      | 2015 - 2022
 </template>
 
 <style scoped lang="stylus">
@@ -17,4 +17,6 @@ footer
   span
     position absolute
     top 20px
+    width 80px
+    margin-left 2rem
 </style>

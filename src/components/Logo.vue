@@ -18,6 +18,7 @@ RouterLink(to="/").logo
       | Criar
       br
       | Currículo
+  slot
 </template>
 
 <style lang="stylus">
