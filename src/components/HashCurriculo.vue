@@ -61,6 +61,10 @@ function hashRender() {
     }
   }
 }
+
+function copyHash({target: {textContent}}) {
+  navigator.clipboard.writeText(textContent);
+}
 </script>
 
 <template>
@@ -84,7 +88,7 @@ function hashRender() {
     <p class="mt-5">
       <b>Sua Hash atual:</b>
       <br>
-      <span class="hash wd-break">{{ hashOnly }}</span>
+      <span class="hash wd-break" @click="copyHash">{{ hashOnly }}</span>
     </p>
   </Box>
   <v-snackbar
