@@ -37,7 +37,7 @@ import { RouterLink } from "vue-router";
       </template>
       <template #heading>Colabore</template>
       <p>Para colaborar com o projeto entre na página de <RouterLink to="/help"> doações.</RouterLink></p>
-      <p>Envie um email para <a href="malito:contato@criar.art" target="_blank">contato@criar.art</a></p>
+      <p>Envie um email para <a href="mailto:contato@criar.art" target="_blank">contato@criar.art</a></p>
     </Box>
   </main>
 </template>
