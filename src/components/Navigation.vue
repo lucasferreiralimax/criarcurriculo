@@ -12,8 +12,7 @@ watch(menuStatus, () => {
 })
 
 function loginLogout() {
-  console.log('testes logout')
-  localStorage.removeItem('login');
+  localStorage.removeItem('curriculo-auth');
   window.location.reload();
 }
 </script>

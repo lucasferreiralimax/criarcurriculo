@@ -15,7 +15,7 @@ const state = localStorage.getItem('curriculo-store')
   : stateCurriculo;
 
 Object.assign(state, {
-  shanks: Boolean(localStorage.getItem('login'))
+  shanks: Boolean(localStorage.getItem('curriculo-auth'))
 })
 
 export const useCurriculoStore = defineStore({
