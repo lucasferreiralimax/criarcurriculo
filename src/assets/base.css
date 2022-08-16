@@ -92,6 +92,10 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
+.v-application__wrap {
+  min-height: calc(100vh - 4rem);
+}
+
 .v-autocomplete__selection {
   padding: .2rem .1rem;
 }
