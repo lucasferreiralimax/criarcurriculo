@@ -46,21 +46,18 @@ const router = createRouter({
   ],
 });
 
-router.beforeEach(async (to, from) => {
-  console.log(to);
-  console.log(from);
-  console.log(localStorage.getItem('login'));
-  if (
+// router.beforeEach(async (to, from) => {
+  // if (
     // make sure the user is authenticated
-    !localStorage.getItem('login') &&
+    // !localStorage.getItem('curriculo-auth') &&
     // ❗️ Avoid an infinite redirect
-    to.name !== 'login' &&
-    to.name !== 'help' &&
-    to.name !== 'about'
-  ) {
+    // to.name !== 'login' &&
+    // to.name !== 'help' &&
+    // to.name !== 'about'
+  // ) {
     // redirect the user to the login page
-    return { name: 'login' }
-  }
-});
+    // return { name: 'login' }
+  // }
+// });
 
 export default router;
