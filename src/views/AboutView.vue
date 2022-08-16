@@ -28,7 +28,7 @@ import { RouterLink } from "vue-router";
       Este projeto é desenvolvido com 
       <a href="https://github.com/lucasferreiralimax/criarcurriculo" target="_blank">
         Vue.js, Vite, Pinia, Vue Router, Vue Test Utils, Cypress.io, Vuetify, Pug.js e Stylus.
-      </a>.
+      </a>
     </Box>
   
     <Box collapse="true" select="true">
