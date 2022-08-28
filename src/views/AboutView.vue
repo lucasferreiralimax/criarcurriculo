@@ -15,8 +15,8 @@ import { RouterLink } from "vue-router";
         <DocumentationIcon />
       </template>
       <template #heading>O que é esse projeto?</template>
-      Esse projeto foi idealizado para ajudar na criação de um currículo
-      profissional
+      Esse projeto foi idealizado para ajudar na criação de um currículo vivo e
+      profissional, para você conquistar seus sonhos e objetivos conforme sua evolução
     </Box>
   
     <Box>
@@ -37,7 +37,7 @@ import { RouterLink } from "vue-router";
       </template>
       <template #heading>Colabore</template>
       <p>Para colaborar com o projeto entre na página de <RouterLink to="/help"> doações.</RouterLink></p>
-      <p>Envie um email para <a href="mailto:contato@criar.art" target="_blank">contato@criar.art</a></p>
+      <p>Se quiser envie um email para <a href="mailto:2virgulinoferreirasilva@gmail.com" target="_blank">2virgulinoferreirasilva@gmail.com</a></p>
     </Box>
   </main>
 </template>
