@@ -22,7 +22,17 @@ const stateCurriculo = {
         ref: 'Sertão brasileiro',
       }
     ],
-    experience: [],
+    experience: [
+      {
+        id: 'experience_cangaço_1',
+        work: 'Cangaceiro',
+        company: 'Cangaço',
+        dateFirst: null,
+        dateEnd: null,
+        about: 'Revolucionário nordestino brasileiro, lutando por causas sociais por um Brasil mais igualitário e com equidade',
+        ref: 'Selvas brasileiras',
+      }
+    ],
     languages: [
       { name: "Português Brasileiro", percent: 3 },
       { name: "Latim", percent: 0 },
