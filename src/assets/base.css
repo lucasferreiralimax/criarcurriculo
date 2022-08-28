@@ -24,7 +24,7 @@
 }
 
 /* semantic color variables for this project */
-:root {
+/* :root {
   --color-background: var(--vt-c-white);
   --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);
@@ -36,9 +36,9 @@
   --color-text: var(--vt-c-text-light-1);
 
   --section-gap: 160px;
-}
+} */
 
-/* @media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) { */
   :root {
     --color-background: var(--vt-c-black);
     --color-background-soft: var(--vt-c-black-soft);
@@ -50,7 +50,7 @@
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
   }
-} */
+/* } */
 
 *,
 *::before,
