@@ -31,6 +31,7 @@ RouterLink(to="/").logo
     font-size 20px
     line-height 30px
     font-weight 400
+    margin-top 2rem
   svg
     float left
     margin-right 10px
