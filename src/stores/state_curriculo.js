@@ -11,7 +11,17 @@ const stateCurriculo = {
       country: 'Paraíba',
       travel: true,
     },
-    formation: [],
+    formation: [
+      {
+        id: 'formation_cangaço_1',
+        institute: 'Savana Caatinga',
+        course: 'Sobrevivência',
+        dateFirst: null,
+        dateEnd: null,
+        about: 'Conhecimentos da natureza silvestre do Brasil',
+        ref: 'Sertão brasileiro',
+      }
+    ],
     experience: [],
     languages: [
       { name: "Português Brasileiro", percent: 3 },
