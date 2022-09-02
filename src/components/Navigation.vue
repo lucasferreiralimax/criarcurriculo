@@ -34,13 +34,13 @@ nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
   RouterLink(to="/help")
     v-icon.mr-3 mdi-heart
     | Ajude
-  v-btn.btn-logout(outlined color="#222" @click="loginLogout")
-    v-tooltip(
-      activator="parent"
-      location="top"
-    ) Logout
-    v-icon.mr-3 mdi-logout
-    span Logout
+  //- v-btn.btn-logout(outlined color="#222" @click="loginLogout")
+  //-   v-tooltip(
+  //-     activator="parent"
+  //-     location="top"
+  //-   ) Logout
+  //-   v-icon.mr-3 mdi-logout
+  //-   span Logout
 </template>
 
 <style scoped lang="stylus">
