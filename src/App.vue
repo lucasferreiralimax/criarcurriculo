@@ -31,7 +31,8 @@ a
 
 @media (hover:hover)
   a:hover
-    background-color var(--vt-c-red-light)
+    color #fff
+    background-color var(--vt-c-red)
 
 @media (min-width 1024px)
   #app
