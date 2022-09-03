@@ -1,3 +1,22 @@
+export const stateEmpety = {
+  curriculo: {
+    name: '',
+    age: null,
+    gender: '',
+    maritial: '',
+    about: '',
+    address: {
+      cep: '',
+      city: '',
+      country: '',
+      travel: null,
+    },
+    formation: [],
+    experience: [],
+    languages: [],
+  }
+};
+
 const stateCurriculo = {
   curriculo: {
     name: "Virgulino Ferreira da Silva",

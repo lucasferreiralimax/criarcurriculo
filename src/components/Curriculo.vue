@@ -8,7 +8,7 @@ import Experience from "./curriculo/Experience.vue";
 import { useCurriculoStore } from "@/stores/curriculo";
 import { useCheckPreview } from '@/helpers/useCheckPreview.js'
 import { useHash } from '@/helpers/useHash.js'
-import stateCurriculo from "../stores/state_curriculo";
+import stateCurriculo, { stateEmpety } from "../stores/state_curriculo";
 
 const store = useCurriculoStore();
 const { checkPreview } = useCheckPreview();
@@ -23,12 +23,12 @@ watch(store.curriculo.gender, () => {
   store.curriculo.maritial = '';
 })
 
-function magicLuffy() {
+function magicLucas() {
   localStorage.removeItem('curriculo-store');
-  store.curriculo = stateCurriculo.curriculo;
+  store.curriculo = stateEmpety.curriculo;
 
-  const words = encodeHash(JSON.stringify(store.getCurriculo));
-  localStorage.setItem('curriculo-store', words?.toString());
+  // const words = encodeHash(JSON.stringify(store.getCurriculo));
+  // localStorage.setItem('curriculo-store', words?.toString());
 }
 </script>
 
@@ -38,7 +38,7 @@ Address
 Languages
 Formation
 Experience
-v-btn.btn.my-5.rounded-lg(block @click="magicLuffy" color="error" variant="flat" v-if="checkPreview")
+v-btn.btn.my-5.rounded-lg(block @click="magicLucas" color="error" variant="flat" v-if="checkPreview")
   v-icon.icon mdi-delete
   | Apagar Tudo!
 </template>
