@@ -13,6 +13,22 @@ v-app
 <style lang="stylus">
 @import '@/assets/base.css'
 
+::selection
+  background var(--vt-c-red)
+  color #fff
+
+::-webkit-scrollbar-track
+	background #fff
+
+::-webkit-scrollbar
+	background-color rgba(#fff,0)
+	width 6px
+
+::-webkit-scrollbar-thumb
+	background-color rgba(#000,.2)
+	border-radius 10px
+	box-shadow inset 0 0 6px rgba(0,0,0,0)
+
 #app, .v-application
   background transparent !important
   color var(--color-text) !important
