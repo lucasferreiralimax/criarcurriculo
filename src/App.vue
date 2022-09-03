@@ -13,8 +13,7 @@ v-app
 <style lang="stylus">
 @import '@/assets/base.css'
 
-#app,
-.v-application
+#app, .v-application
   background transparent !important
   color var(--color-text) !important
   font-weight normal !important
@@ -27,12 +26,12 @@ v-app
 
 a
   text-decoration none
-  color hsla(160, 100%, 37%, 1)
+  color var(--vt-c-red)
   transition 0.4s
 
 @media (hover:hover)
   a:hover
-    background-color hsla(160, 100%, 37%, 0.2)
+    background-color var(--vt-c-red-light)
 
 @media (min-width 1024px)
   #app

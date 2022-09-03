@@ -23,13 +23,22 @@ RouterLink(to="/").logo
   min-width 200px
   text-align left
   display inline-block
+  svg, path
+    transition .2s all
   &:hover
     background transparent
+    svg, path
+      fill var(--vt-c-red)
+      stroke var(--vt-c-red)
   h1, small
     font-size 20px
     line-height 30px
     font-weight 400
+  h1
     margin-top 1rem
+  small
+    transform translateY(1rem)
+    position absolute
   svg
     float left
     margin-right 10px

@@ -29,9 +29,9 @@ const collapse = ref(props.collapse);
     background rgba(#fff, .1)
     .title
       & > i
-        border-color var(--vt-c-green)
+        border-color var(--vt-c-red)
       h3, & > i svg
-        color var(--vt-c-green)    
+        color var(--vt-c-red)
     .actions
       opacity 1
       filter blur(0px)

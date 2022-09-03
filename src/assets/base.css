@@ -8,8 +8,8 @@
   --vt-c-black-soft: #222222;
   --vt-c-black-mute: #282828;
 
-  --vt-c-green: hsla(160, 100%, 37%, 1);
-
+  --vt-c-red: #ee2828;
+  --vt-c-red-light: #421717;
   --vt-c-indigo: #f00;
 
   --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);

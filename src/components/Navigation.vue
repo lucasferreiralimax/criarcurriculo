@@ -63,7 +63,7 @@ nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
       margin-left 0
     &.router-link-exact-active
       color #fff
-      background-color hsla(160, 100%, 37%, 0.8)
+      background-color var(--vt-c-red-light)
 @media (min-width 640px)
   .btn-logout
     padding 1.8rem 1rem

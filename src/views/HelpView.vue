@@ -63,7 +63,9 @@ function copyBitcoin({target}) {
 
 <style lang="stylus" scoped>
 strong
-  color hsla(160, 100%, 37%, 1)
+  color var(--vt-c-red)
+  &:hover
+    background-color var(--vt-c-red-light)
 img
   display block
   margin-top 1rem

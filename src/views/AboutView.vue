@@ -10,13 +10,14 @@ import { RouterLink } from "vue-router";
 
 <template>
   <main>
-    <Box>
+    <Box collapse="true">
       <template #icon>
         <DocumentationIcon />
       </template>
       <template #heading>O que é esse projeto?</template>
-      Esse projeto foi idealizado para ajudar na criação de um currículo vivo e
-      profissional, para você conquistar seus sonhos e objetivos conforme sua evolução
+      Esse projeto foi idealizado para ajudar na criação de um Currículo Vivo
+      <br>
+      Totalmente profissional, para você conquistar seus sonhos e objetivos conforme sua disposição
     </Box>
   
     <Box>
