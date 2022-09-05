@@ -2,8 +2,6 @@
 import CryptoJS from 'crypto-js';
 import Box from "@/components/Box.vue";
 import BitcoinIcon from "@/components/icons/IconBitcoin.vue";
-import DonateIcon from "@/components/icons/IconDonate.vue";
-
 import { useHash } from '@/helpers/useHash.js'
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -39,7 +37,6 @@ function login(response) {
   window.location = '/';
 }
 
-
 setTimeout(() => {
   google.accounts.id.initialize({
     client_id: '509374940310-45boijq03lio03gmv3cprn31i72h7jgs.apps.googleusercontent.com',
@@ -52,27 +49,17 @@ setTimeout(() => {
   );
   google.accounts.id.prompt();
 }, 2000);
-
-
 </script>
 
-<template>
-  <main>
-    <Box collapse="true" select="true">
-      <template #icon>
-        <BitcoinIcon />
-      </template>
-      <template #heading>Login</template>
-      <!-- <v-text-field class="mb-3" label="E-mail" type="text" hide-details="auto" clearable />
-      <v-text-field class="mb-3" label="Senha" type="password" hide-details="auto" clearable /> -->
-      <!-- <v-btn class="google-button" color="success" block>Entrar</v-btn> -->
-      <div id="google-button">
-        <v-progress-circular
-          :width="3"
-          color="green"
-          indeterminate
-        ></v-progress-circular>
-      </div>
-    </Box>
-  </main>
+<template lang="pug">
+main
+  Box(collapse="true" select="true")
+    template(#icon)
+      BitcoinIcon
+    template(#heading) Login
+    v-text-field.mb-3(label="E-mail" type="text" hide-details="auto" clearable)
+    v-text-field.mb-3(label="Senha" type="password" hide-details="auto" clearable)
+    v-btn.google-button(color="success" block) Entrar
+    div#google-button
+      v-progress-circular(:width="3" color="green" indeterminate)
 </template>

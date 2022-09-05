@@ -67,45 +67,29 @@ function copyHash({target: {textContent}}) {
 }
 </script>
 
-<template>
-  <Box collapse="true" select="true">
-    <template #icon>
-      <BitcoinIcon />
-    </template>
-    <template #heading>Atualizar HASH</template>
-    Insira a hash para atualizar o aplicativo
+<template lang="pug">
+Box(collapse="true" select="true")
+  template(#icon)
+    BitcoinIcon
+  template(#heading) Atualizar HASH
+  | Insira a hash para atualizar o aplicativo
+  v-text-field.mt-5(label="Hash code" v-model="hashInput" hide-details="auto" clearable)
+  v-btn.mt-5(v-if="hashInput" color="success" variant="tonal" block @click="hashRender")
+    | Atualizar
 
-    <v-text-field label="Hash code" class="mt-5" v-model="hashInput" hide-details="auto" clearable></v-text-field>
-    <v-btn v-if="hashInput" color="success" variant="tonal" block class="mt-5" @click="hashRender">Atualizar</v-btn>
-  </Box>
-  <Box v-if="hashOnly" select="true">
-    <template #icon>
-      <DocumentationIcon />
-    </template>
-    <template #heading>Atual HASH</template>
-    Essa hash pode ser usada para atualizar o aplicativo futuramente
-    
-    <p class="mt-5">
-      <b>Sua Hash atual:</b>
-      <br>
-      <span class="hash wd-break" @click="copyHash">{{ hashOnly }}</span>
-    </p>
-  </Box>
-  <v-snackbar
-    v-model="snackbar"
-    color="error"
-  >
-    Por gentileza coloque uma hash válida
-    <template v-slot:actions>
-      <v-btn
-        color="black"
-        variant="text"
-        @click="snackbar = false"
-      >
-        Fechar
-      </v-btn>
-    </template>
-  </v-snackbar>
+Box(v-if="hashOnly" select="true")
+  template(#icon)
+    DocumentationIcon
+  template(#heading) Atual HASH
+  | Essa hash pode ser usada para atualizar o aplicativo futuramente
+  p.mt-5
+    b Sua Hash atual:
+    br
+    span.hash.wd-break(@click="copyHash") {{ hashOnly }}
+v-snackbar(v-model="snackbar" color="error")
+  | Por gentileza coloque uma hash válida
+  template(v-slot:actions)
+    v-btn(color="black" variant="text" @click="snackbar = false") Fechar
 </template>
 
 <style lang="stylus">

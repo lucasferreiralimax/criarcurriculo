@@ -2,8 +2,7 @@
 import HashCurriculo from "@/components/HashCurriculo.vue";
 </script>
 
-<template>
-  <main>
-    <HashCurriculo></HashCurriculo>
-  </main>
+<template lang="pug">
+main
+  HashCurriculo
 </template>

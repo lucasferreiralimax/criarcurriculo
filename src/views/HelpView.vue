@@ -38,39 +38,30 @@ function copyBitcoin({target}) {
 }
 </script>
 
-<template>
-  <main>
-    <Box collapse="true" select="true">
-      <template #icon>
-        <BitcoinIcon />
-      </template>
-      <template #heading>Bitcoin</template>
-      <p>Faça uma doação em bitcoin</p>
-      <p>Carteira para doações
-        <a class="pointer" @click="copyValue" href="bitcoin:BC1QYRKAGKLQAJSF64MJGJ0L99WSUHVY9CNHHYSA82?message=doa%C3%A7%C3%A3o">bc1qyrkagklqajsf64mjgj0l99wsuhvy9cnhhysa82</a>
-      </p>
-      <img class="pointer" @click="copyBitcoin" width="250" src="@/assets/bitcoin.png" alt="bitcoin:BC1QYRKAGKLQAJSF64MJGJ0L99WSUHVY9CNHHYSA82?message=doa%C3%A7%C3%A3o">
-    </Box>
-    <Box collapse="true" select="true">
-      <template #icon>
-        <DonateIcon />
-      </template>
-      <template #heading>Pix</template>
-      Faça uma doação em pix para <strong @click="copyValue" class="pointer">2lembre@gmail.com</strong> ou <strong @click="copyValue" class="pointer">lucasferreiralimax@gmail.com</strong>
-    </Box>
-  </main>
+<template lang="pug">
+main
+  Box(collapse="true" select="true")
+    template(#icon)
+      BitcoinIcon
+    template(#heading) Bitcoin
+    p Faça uma doação em bitcoin
+    p Carteira para doações &nbsp;
+      a.pointer( @click="copyValue" href="bitcoin:BC1QYRKAGKLQAJSF64MJGJ0L99WSUHVY9CNHHYSA82?message=doa%C3%A7%C3%A3o")
+        strong.pointer bc1qyrkagklqajsf64mjgj0l99wsuhvy9cnhhysa82
+    img.pointer(@click="copyBitcoin" width="250" src="@/assets/bitcoin.png" alt="bitcoin:BC1QYRKAGKLQAJSF64MJGJ0L99WSUHVY9CNHHYSA82?message=doa%C3%A7%C3%A3o")
+  Box(collapse="true" select="true")
+    template(#icon)
+      DonateIcon
+    template(#heading) Pix
+    | Faça uma doação em pix para &nbsp;
+    strong.pointer(@click="copyValue") 2lembre@gmail.com &nbsp;
+    | ou &nbsp;
+    strong.pointer(@click="copyValue") lucasferreiralimax@gmail.com
 </template>
 
 <style lang="stylus" scoped>
-strong
-  color var(--vt-c-red)
-  &:hover
-    background-color var(--vt-c-red-light)
 img
   display block
   margin-top 1rem
   border-radius 10px
-
-.pointer
-  cursor pointer
 </style>
