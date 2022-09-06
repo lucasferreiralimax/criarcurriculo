@@ -5,6 +5,10 @@ import languagesLevel from './helpers/languagesLevel';
 
 const store = useCurriculoStore();
 const { checkPreview } = useCheckPreview();
+
+function magicLucas() {
+  window.print()
+}
 </script>
 
 <template lang="pug">
@@ -54,6 +58,9 @@ section.preview(v-if="checkPreview")
         | Referência: 
         a.my-5.mt-0.ml-1(:href="experience.ref" target="_blank")
           | {{ experience.ref }}
+v-btn.btn.my-5.rounded-lg(block @click="magicLucas" color="info" variant="flat" v-if="checkPreview")
+  v-icon.icon mdi-printer
+  | Imprimir
 </template>
 
 <style lang="stylus">
@@ -61,4 +68,25 @@ section.preview(v-if="checkPreview")
   background #fff
   color #000
   padding 1.5rem 2rem
+
+@media print
+  *
+    -ms-filternone !important
+    background transparent !important
+    box-shadow none !important
+    filter none !important
+    text-shadow none !important
+
+  header, footer
+  .v-main__wrap .box,
+  .v-main__wrap .v-btn
+    display none !important
+
+  .preview p,
+  .preview a,
+    display inline-block !important
+  .preview h2,
+  .preview h3,
+  .preview hr
+    display block !important
 </style>
