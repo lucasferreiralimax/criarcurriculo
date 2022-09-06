@@ -68,6 +68,8 @@ v-btn.btn.my-5.rounded-lg(block @click="magicLucas" color="info" variant="flat" 
   background #fff
   color #000
   padding 1.5rem 2rem
+  a
+    color #000
 
 @media print
   *
