@@ -23,7 +23,7 @@ watch(store.curriculo.gender, () => {
   store.curriculo.maritial = '';
 })
 
-function magicLucas() {
+function deleteAll() {
   localStorage.removeItem('curriculo-store');
   store.curriculo = stateEmpety.curriculo;
 
@@ -38,7 +38,7 @@ Address
 Languages
 Formation
 Experience
-v-btn.btn.my-5.rounded-lg(block @click="magicLucas" color="error" variant="flat" v-if="checkPreview")
+v-btn.btn.my-5.rounded-lg(block @click="deleteAll" color="error" variant="flat" v-if="checkPreview")
   v-icon.icon mdi-delete
   | Apagar Tudo!
 </template>
