@@ -34,6 +34,9 @@ Box.personal
         hide-details="auto"
         clearable
       )
+  v-row
+    v-col(cols="12")
+      v-file-input.pointer(label="Foto" accept="image/*" filled prepend-icon="" append-inner-icon="mdi-camera" hide-details="auto" clearable)
   v-row(v-if="(store.curriculo.name && store.curriculo.age && store.curriculo.gender && store.curriculo.maritial)")
     v-col(cols="12")
       v-textarea.mt-2(label="Escreva sobre você..." v-model="store.curriculo.about" auto-grow variant="outlined" hide-details="auto")
