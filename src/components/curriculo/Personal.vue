@@ -69,7 +69,7 @@ Box.personal
   v-row(v-if="(store.curriculo.name && store.curriculo.age && store.curriculo.gender && store.curriculo.maritial)")
     v-col(cols="12")
       v-textarea.mt-2(label="Escreva sobre você..." v-model="store.curriculo.about" auto-grow variant="outlined" hide-details="auto")
-  v-row
+  v-row(v-if="(store.curriculo.name && store.curriculo.age && store.curriculo.gender && store.curriculo.maritial)")
     v-col(cols="12" sm="6")
       v-btn.btn.rounded-lg(block @click="focusInputPhoto" color="success" variant="flat")
         v-icon.icon mdi-photo
