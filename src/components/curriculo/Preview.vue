@@ -13,17 +13,22 @@ function magicLucas() {
 
 <template lang="pug">
 section.preview(v-if="checkPreview")
-  h2(v-if="store.curriculo.name") {{ store.curriculo.name }}
-  template(v-if="store.curriculo.maritial || store.curriculo.age || store.curriculo.address.city || store.curriculo.address.country")
-    p.my-5.mt-1
-      template(v-if="store.curriculo.maritial || store.curriculo.age")
-        |  {{ store.curriculo.maritial ? `${store.curriculo.maritial}` : `` }}
-        | {{ store.curriculo.age ? `${store.curriculo.age} anos ` : `` }}
-      template(v-if="store.curriculo.address.city || store.curriculo.address.country")
-        | moro em {{ store.curriculo.address.city ? ` ${store.curriculo.address.city}` : `` }}
-        | {{ store.curriculo.address.country ? `${store.curriculo.address.country}` : `` }}
-      template(v-if="store.curriculo.address.travel") , disponível para viagens
-    v-divider
+  .box-personal
+    div
+      figure.photo-preview(v-if="store.curriculo.photo.data")
+        img(:src="store.curriculo.photo.data" :alt="store.curriculo.name" width="200")
+    div.v-center
+      h2(v-if="store.curriculo.name") {{ store.curriculo.name }}
+      template(v-if="store.curriculo.maritial || store.curriculo.age || store.curriculo.address.city || store.curriculo.address.country")
+        p.my-5.mt-1
+          template(v-if="store.curriculo.maritial || store.curriculo.age")
+            |  {{ store.curriculo.maritial ? `${store.curriculo.maritial}` : `` }}
+            | {{ store.curriculo.age ? `${store.curriculo.age} anos ` : `` }}
+          template(v-if="store.curriculo.address.city || store.curriculo.address.country")
+            | moro em {{ store.curriculo.address.city ? ` ${store.curriculo.address.city}` : `` }}
+            | {{ store.curriculo.address.country ? `${store.curriculo.address.country}` : `` }}
+          template(v-if="store.curriculo.address.travel") , disponível para viagens
+  v-divider.mt-5
   template(v-if="store.curriculo.about")
     h3.my-2 Sobre mim
     p.my-5.mt-1.ws-wrap
@@ -71,6 +76,25 @@ v-btn.btn.my-5.rounded-lg(block @click="magicLucas" color="info" variant="flat" 
   a
     color #000
 
+.box-personal
+  display grid
+  grid-template-columns 170px 1fr
+  .v-center
+    display flex
+    flex-direction column
+    justify-content center
+
+.photo-preview
+  width 150px
+  height 150px
+  overflow hidden
+  border-radius 100%
+  box-shadow 0 0 0 2px #222
+  border 2px solid #fff
+  img
+    width 100%
+    height 100%
+
 @media print
   *
     -ms-filternone !important
@@ -89,6 +113,9 @@ v-btn.btn.my-5.rounded-lg(block @click="magicLucas" color="info" variant="flat" 
     display inline-block !important
   .preview h2,
   .preview h3,
-  .preview hr
+  .preview hr,
+  .preview figure
     display block !important
+  .photo-preview
+    box-shadow 0 0 0 2px #222 !important
 </style>

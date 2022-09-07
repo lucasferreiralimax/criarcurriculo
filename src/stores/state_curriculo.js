@@ -1,6 +1,12 @@
+import { photo } from './photo_data'
+
 export const stateEmpety = {
   curriculo: {
     name: '',
+    photo: {
+      name: '',
+      data: ''
+    },
     age: null,
     gender: '',
     maritial: '',
@@ -20,6 +26,10 @@ export const stateEmpety = {
 const stateCurriculo = {
   curriculo: {
     name: "Virgulino Ferreira da Silva",
+    photo: {
+      name: 'Virgulino.jpg',
+      data: photo
+    },
     age: 40,
     gender: 'Masculino',
     maritial: 'Casado',

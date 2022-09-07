@@ -157,6 +157,9 @@ input[type="date" i]::-webkit-calendar-picker-indicator
 .pointer
   cursor pointer
 
+.center
+  text-align center
+
 strong
   color var(--vt-c-red)
   &:hover
