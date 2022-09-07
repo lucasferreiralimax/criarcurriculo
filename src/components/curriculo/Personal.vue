@@ -81,12 +81,10 @@ Box.personal
     v-col(cols="12" v-if="store.curriculo.photo.data")
       figure.photo-form
         img(:src="store.curriculo.photo.data" :alt="store.curriculo.name" width="200")
-    v-file-input.photo.pointer(@input="setImage($event)" label="Foto" accept="image/*")
+    v-file-input.d-none.pointer(@input="setImage($event)" label="Foto" accept="image/*")
 </template>
 
 <style lang="stylus">
-.photo
-  display none
 .photo-form
   width 150px
   height 150px
