@@ -13,9 +13,9 @@ function magicLucas() {
 
 <template lang="pug">
 section.preview(v-if="checkPreview")
-  .box-personal
-    div
-      figure.photo-preview(v-if="store.curriculo.photo.data")
+  .box-personal(:class="{ 'no-photo': !store.curriculo.photo.data }")
+    div(v-if="store.curriculo.photo.data")
+      figure.photo-preview
         img(:src="store.curriculo.photo.data" :alt="store.curriculo.name" width="200")
     div.v-center
       h2(v-if="store.curriculo.name") {{ store.curriculo.name }}
@@ -28,7 +28,7 @@ section.preview(v-if="checkPreview")
             | moro em {{ store.curriculo.address.city ? ` ${store.curriculo.address.city}` : `` }}
             | {{ store.curriculo.address.country ? `${store.curriculo.address.country}` : `` }}
           template(v-if="store.curriculo.address.travel") , disponível para viagens
-  v-divider.mt-5
+  v-divider
   template(v-if="store.curriculo.about")
     h3.my-2 Sobre mim
     p.my-5.mt-1.ws-wrap
@@ -79,6 +79,10 @@ v-btn.btn.my-5.rounded-lg(block @click="magicLucas" color="info" variant="flat" 
 .box-personal
   display grid
   grid-template-columns 170px 1fr
+  margin-bottom 1rem
+  &.no-photo
+    grid-template-columns 1fr
+    margin-bottom 0
   .v-center
     display flex
     flex-direction column
