@@ -106,6 +106,12 @@ v-btn.btn.my-5.rounded-lg(block @click="magicLucas" color="info" variant="flat" 
     box-shadow none !important
     filter none !important
     text-shadow none !important
+  
+  body,
+  #app,
+  .v-application__wrap
+    min-height auto !important
+    padding 0 !important
 
   header, footer
   .v-main__wrap .box,
