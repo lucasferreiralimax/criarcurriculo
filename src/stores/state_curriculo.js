@@ -25,41 +25,59 @@ export const stateEmpety = {
 
 const stateCurriculo = {
   curriculo: {
-    name: "Virgulino Ferreira da Silva",
+    name: "Carlos Marighella",
     photo: {
-      name: 'Virgulino.jpg',
+      name: 'marighella.jpg',
       data: photo
     },
-    age: 40,
+    age: 57,
     gender: 'Masculino',
     maritial: 'Casado',
-    about: 'Vulgo Lampião, o Rei do Cangaço foi um cangaceiro (herói e contraventor) brasileiro que atuou na região do sertão nordestino do Brasil. O apelido "Lampião" foi lhe dado devido ter facilidade em manejar o rifle, "que, de tanto atirar, mais parecia um candeeiro aceso nas escuras noites da caatinga”.',
+    about: `Político, escritor e guerrilheiro brasileiro. Um dos principais organizadores da luta contra a ditadura militar brasileira (1964–1985), cheguei a ser considerado o inimigo "número um" do regime. Fui cofundador da Ação Libertadora Nacional, organização de caráter revolucionário brasileiro.`,
     address: {
       cep: '58840-000',
-      city: 'Pombal',
-      country: 'Paraíba',
+      city: 'São Paulo',
+      country: 'SP',
       travel: true,
     },
     formation: [
       {
         id: 'formation_cangaço_1',
-        institute: 'Savana Caatinga',
-        course: 'Sobrevivência',
+        institute: 'Escola Politécnica da Bahia',
+        course: 'Engenhario Civil ',
         dateFirst: null,
         dateEnd: null,
-        about: 'Conhecimentos da natureza silvestre do Brasil',
-        ref: 'Sertão brasileiro',
+        about: 'Planejo, projeto, executo e gerencio obras e empreendimentos. Transformo e adapto a natureza, com o objetivo de otimizar a qualidade de vida das pessoas. Desta forma, dedico-me à construção de edifícios, pontes, túneis, usinas geradoras de energia, indústrias e inúmeros outros tipos de estruturas, utilizando como ferramentas as ciências, a matemática, tecnologias e técnicas diversas, experiências anteriores, levando em conta os contextos social, econômico e ambiental.',
+        ref: '',
       }
     ],
     experience: [
       {
         id: 'experience_cangaço_1',
+        work: 'Deputado Federal',
+        company: 'Brasil',
+        dateFirst: null,
+        dateEnd: null,
+        about: 'Trabalhando para desenvolver um Brasil melhor para todos, lutando por causas sociais com os recursos disponíveis no poder legislativo federal do Brasil',
+        ref: 'Palácio do Congresso Nacional',
+      },
+      {
+        id: 'experience_cangaço_2',
+        work: 'Fundador',
+        company: 'Ação Libertadora Nacional',
+        dateFirst: null,
+        dateEnd: null,
+        about: 'Formada no ano de 1967 uma organização brasileira que enfrentou a ditadura militar instaurada em 1964.',
+        ref: 'Selvas Brasileiras',
+      },
+      {
+        id: 'experience_cangaço_2',
         work: 'Cangaceiro',
         company: 'Cangaço',
         dateFirst: null,
         dateEnd: null,
-        about: 'Revolucionário nordestino brasileiro, lutando por causas sociais por um Brasil mais igualitário e com equidade',
-        ref: 'Selvas brasileiras',
+        about: 'Revolucionário nordestino brasileiro, que lutar por causas sociais por um Brasil mais igualitário e com equidade. Ajudando as pessoas humildes e vulneráveis',
+        ref: 'Selvas Brasileiras',
       }
     ],
     languages: [
