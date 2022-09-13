@@ -31,62 +31,48 @@ export function userEmpty() {
 }
 
 export let user = {
-  name: 'Mauro Mateus dos Santos',
+  name: 'Manuel Francisco dos Anjos Ferreira',
   photo: photoBase,
-  age: 29,
+  age: 56,
   countrystatus: '',
   cep: null,
   end: {
     cep: '',
-    logradouro: 'Favela do Canão',
+    logradouro: 'Coroatá',
     complemento: '',
-    bairro: 'Jardim Matarazzo',
-    localidade: 'São Paulo',
-    uf: 'SP'
+    bairro: 'Caxias',
+    localidade: 'Maranhão',
+    uf: 'MA'
   },
   maritalstatus: 'Casado',
   addressNumber: null,
   travel: true,
-  about: `Discografia:
-2001 - Rap É Compromisso!
-2002 - Uma Luz Que Nunca Irá se Apagar
-2008 - Rap é o Hino que Me Mantém Vivo
-2016 - Sabotage
-
-Filmes:
-2002 - O Invasor
-2003 - Carandiru
-
-Prêmios:
-2002 - Revelação
-2002 - Personalidade do Ano
-2009 - Maiores revelações da década
-2009 - Maiores artistas solo da década
-
-Documentários:
-Sabotage - Nós
-Sabotage - O Maestro do Canão`,
+  about: `Também conhecido como Manuel Balaio
+  Foi um artesão fabricante de cestos de palha (ou balaios)
+  se tornou um dos mais importantes líderes da Balaiada
+  Revolução regencial ocorrida de 1838 até 1841 no estado do Maranhão.
+  Apelido dado devido aos balaios que vendia entre as cidades de Coroatá e Itapecuru-Mirim.`,
   genero: 'h',
-  hobbies: ['Rimar', 'Ajudar', 'Vencer'],
+  hobbies: ['Revolucionar', 'Ajudar', 'Vencer'],
   telephones: [],
-  emails: ['canalsabotage@gmail.com'],
-  sites: ['youtube.com/sabotagerap','instagram.com/sabotageoficial', 'facebook.com/sabotagemaestrodocanaooficial'],
+  emails: ['2virgulinoferreiradasilva'],
+  sites: ['criar-curriculo.web.app'],
   languages: ['Fluente Português Brasileiro', 'Speak Basic English', 'Hablo español básico', 'Je parle les bases du Français'],
   exps: [{
     'experience': {
-      'name': 'Rap Nacional',
-      'work': 'Rapper',
-      'data_start': '1973-04-01T03:00:00.000Z',
-      'data_end': '2022-12-01T03:00:00.000Z',
-      'about': 'Em toda sua carreira, compôs dezenas de trabalhos e alguns deles se tornaram hino para jovens da periferia.\nSabotage é uma rica expressão da constante luta que o pobre enfrenta diariamente para viver dignamente e isso fez com que vários outros artistas usassem suas obras como samples, colagens e scratches de seus trabalhos.',
+      'name': 'Artesão e Vendedor',
+      'work': 'Fabricante de balaio',
+      'data_start': '1800-04-01T03:00:00.000Z',
+      'data_end': '1840-12-01T03:00:00.000Z',
+      'about': 'Criacão e venda de balaios nas cidades do Maranhão.',
       'now': true
     }
   }],
   coursers: [{
     "formation": {
-      "name": "Programado pra rimar",
-      "school": "Instituto",
-      "data_start": "1985-01-01T03:00:00.000Z",
+      "name": "Programado pra revolucionar",
+      "school": "Nordeste",
+      "data_start": "1784-01-01T03:00:00.000Z",
       "data_end": null,
       "about": "",
       "now": true
