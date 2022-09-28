@@ -52,4 +52,5 @@ export const list_country = [
   { name: "Kenya", flag: "sw-KE" },
   { name: "South Korea", flag: "ko-KR" },
   { name: "Netherlands", flag: "nl-NL" },
+  { name: "Suécia", flag: "se-SW" },
 ];
