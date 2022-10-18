@@ -15,6 +15,6 @@ Box.personal
   v-row
     v-col(cols="12" sm="6")
       v-text-field(label="Email" v-model="store.curriculo.contact.email" type="email" hide-details="auto" clearable)
-    v-col(cols="12" sm="6" v-if="store.curriculo.contact.email || store.curriculo.contact.phone")
+    v-col(cols="12" sm="6")
       v-text-field(label="Telefone" v-model="store.curriculo.contact.phone" type="text" hide-details="auto" clearable)
 </template>
