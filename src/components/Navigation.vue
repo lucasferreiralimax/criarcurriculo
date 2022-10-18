@@ -28,9 +28,9 @@ nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
   RouterLink(to="/about")
     v-icon.mr-3 mdi-information
     | Informações
-  RouterLink(to="/hash")
-    v-icon.mr-3 mdi-pound
-    | Hash
+  //- RouterLink(to="/hash")
+  //-   v-icon.mr-3 mdi-pound
+  //-   | Hash
   RouterLink(to="/help")
     v-icon.mr-3 mdi-heart
     | Ajude
@@ -73,7 +73,7 @@ nav.nav(:class="{ active: menuStatus }" @click="menuStatus = false")
       display none
     .v-icon
       margin 0 !important
-      padding 0 !important  
+      padding 0 !important
 @media (max-width 640px)
   .btn-curriculo
     display block !important
