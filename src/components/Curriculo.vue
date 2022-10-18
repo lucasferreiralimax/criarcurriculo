@@ -1,6 +1,7 @@
 <script setup>
 import { watch } from "vue";
 import Personal from "./curriculo/Personal.vue";
+import Contact from "./curriculo/Contact.vue";
 import Address from "./curriculo/Address.vue";
 import Languages from "./curriculo/Languages.vue";
 import Formation from "./curriculo/Formation.vue";
@@ -34,6 +35,7 @@ function deleteAll() {
 
 <template lang="pug">
 Personal
+Contact
 Address
 Languages
 Formation
@@ -44,13 +46,13 @@ v-btn.btn.my-5.rounded-lg(block @click="deleteAll" color="error" variant="flat" 
 </template>
 
 <style lang="stylus">
-.divider 
+.divider
   margin-bottom 3rem
   filter invert(1)
 
 .btn
   padding 1.5rem 1rem
-  .icon 
+  .icon
     margin-right 1rem
     transform scale(1.5)
 
