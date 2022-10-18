@@ -15,6 +15,7 @@ module.exports = {
     '.+\\.(svg|css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
     '^.+\\.jsx?$': 'babel-jest'
   },
+  transformIgnorePatterns: ["node_modules/(?!axios)"],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1'
   },
