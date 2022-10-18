@@ -34,6 +34,16 @@ section.preview(v-if="checkPreview")
             b.mr-2(v-if="store.curriculo.contact.email") {{ store.curriculo.contact.email }}
             | {{ store.curriculo.contact.phone ? `Telefone: ` : `` }}
             b(v-if="store.curriculo.contact.phone") {{ store.curriculo.contact.phone }}
+        p.mt-1
+          template(v-if="store.curriculo.contact.site")
+            | {{ store.curriculo.contact.site ? `Site: ` : `` }}
+            a.mr-2(v-if="store.curriculo.contact.site" :href="store.curriculo.contact.site" target="_blank")
+              b {{ store.curriculo.contact.site }}
+        p.mt-1
+          template(v-if="store.curriculo.contact.linkedin")
+            | {{ store.curriculo.contact.linkedin ? `Linkedin: ` : `` }}
+            a.mr-2(v-if="store.curriculo.contact.linkedin" :href="store.curriculo.contact.linkedin" target="_blank")
+              b {{ store.curriculo.contact.linkedin }}
   v-divider
   template(v-if="store.curriculo.about")
     h3.my-2 Sobre mim

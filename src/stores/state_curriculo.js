@@ -13,7 +13,9 @@ export const stateEmpety = {
     about: '',
     contact: {
       email: '',
-      phone: ''
+      phone: '',
+      site: '',
+      linkedin: ''
     },
     address: {
       cep: '',
@@ -40,7 +42,9 @@ const stateCurriculo = {
     about: `Político, escritor e guerrilheiro brasileiro. Um dos principais organizadores da luta contra a ditadura militar brasileira (1964–1985), cheguei a ser considerado o inimigo "número um" do regime. Fui cofundador da Ação Libertadora Nacional, organização de caráter revolucionário brasileiro.`,
     contact: {
       email: 'contato@criar.art',
-      phone: '(82) 9 9931 9097'
+      phone: '(82) 9 9931 9097',
+      site: 'https://curriculo-vivo.web.app',
+      linkedin: ''
     },
     address: {
       cep: '58840-000',
