@@ -78,15 +78,6 @@ const stateCurriculo = {
         about: 'Formada no ano de 1967 uma organização brasileira que enfrentou a ditadura militar instaurada em 1964.',
         ref: 'Selvas Brasileiras',
       },
-      {
-        id: 'experience_cangaço_2',
-        work: 'Cangaceiro',
-        company: 'Cangaço',
-        dateFirst: null,
-        dateEnd: null,
-        about: 'Revolucionário nordestino brasileiro, que lutar por causas sociais por um Brasil mais igualitário e com equidade. Ajudando as pessoas humildes e vulneráveis',
-        ref: 'Selvas Brasileiras',
-      }
     ],
     languages: [
       { name: "Português Brasileiro", percent: 3 },

@@ -30,8 +30,10 @@ section.preview(v-if="checkPreview")
           template(v-if="store.curriculo.address.travel") , disponível para viagens
         p.mt-1
           template(v-if="store.curriculo.contact.email || store.curriculo.contact.phone")
-            | {{ store.curriculo.contact.email ? `Email: ${store.curriculo.contact.email}` : `` }}
-            | {{ store.curriculo.contact.phone ? `Telefone: ${store.curriculo.contact.phone}` : `` }}
+            | {{ store.curriculo.contact.email ? `Email: ` : `` }}
+            b.mr-2(v-if="store.curriculo.contact.email") {{ store.curriculo.contact.email }}
+            | {{ store.curriculo.contact.phone ? `Telefone: ` : `` }}
+            b(v-if="store.curriculo.contact.phone") {{ store.curriculo.contact.phone }}
   v-divider
   template(v-if="store.curriculo.about")
     h3.my-2 Sobre mim
