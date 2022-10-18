@@ -20,7 +20,7 @@ section.preview(v-if="checkPreview")
     div.v-center
       h2(v-if="store.curriculo.name") {{ store.curriculo.name }}
       template(v-if="store.curriculo.maritial || store.curriculo.age || store.curriculo.address.city || store.curriculo.address.country")
-        p.my-5.mt-1
+        p.mt-1
           template(v-if="store.curriculo.maritial || store.curriculo.age")
             |  {{ store.curriculo.maritial ? `${store.curriculo.maritial}` : `` }}
             | {{ store.curriculo.age ? `${store.curriculo.age} anos ` : `` }}
@@ -28,6 +28,10 @@ section.preview(v-if="checkPreview")
             | moro em {{ store.curriculo.address.city ? ` ${store.curriculo.address.city}` : `` }}
             | {{ store.curriculo.address.country ? `${store.curriculo.address.country}` : `` }}
           template(v-if="store.curriculo.address.travel") , disponível para viagens
+        p.mt-1
+          template(v-if="store.curriculo.contact.email || store.curriculo.contact.phone")
+            | {{ store.curriculo.contact.email ? `Email: ${store.curriculo.contact.email}` : `` }}
+            | {{ store.curriculo.contact.phone ? `Telefone: ${store.curriculo.contact.phone}` : `` }}
   v-divider
   template(v-if="store.curriculo.about")
     h3.my-2 Sobre mim
@@ -42,7 +46,7 @@ section.preview(v-if="checkPreview")
       p.my-5.mt-0.mb-0
         | {{ formation.about }}
       p(v-if="formation.ref")
-        | Referência: 
+        | Referência:
         a.my-5.mt-0.ml-1(:href="formation.ref" target="_blank")
           | {{ formation.ref }}
     v-divider.my-5
@@ -60,7 +64,7 @@ section.preview(v-if="checkPreview")
       p.my-5.mt-0.mb-0
         | {{ experience.about }}
       p(v-if="experience.ref")
-        | Referência: 
+        | Referência:
         a.my-5.mt-0.ml-1(:href="experience.ref" target="_blank")
           | {{ experience.ref }}
 v-btn.btn.my-5.rounded-lg(block @click="magicLucas" color="info" variant="flat" v-if="checkPreview")
@@ -106,7 +110,7 @@ v-btn.btn.my-5.rounded-lg(block @click="magicLucas" color="info" variant="flat" 
     box-shadow none !important
     filter none !important
     text-shadow none !important
-  
+
   body,
   #app,
   .v-application__wrap
