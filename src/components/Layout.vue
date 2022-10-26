@@ -175,7 +175,7 @@ export default {
   .contact-info
     float right
   .figure
-    right 3em
+    right 2rem
   .info.photo
     padding-left 0
     padding-right 140px
