@@ -31,48 +31,57 @@ export function userEmpty() {
 }
 
 export let user = {
-  name: 'Manuel Francisco dos Anjos Ferreira',
+  name: 'Paulo Reglus Neves Freire',
   photo: photoBase,
-  age: 56,
-  countrystatus: '',
+  age: 75,
+  countrystatus: 'Casado',
   cep: null,
   end: {
     cep: '',
-    logradouro: 'Coroatá',
+    logradouro: 'Sitio Trindade',
     complemento: '',
-    bairro: 'Caxias',
-    localidade: 'Maranhão',
-    uf: 'MA'
+    bairro: 'Sitio Trindade',
+    localidade: 'Recife',
+    uf: 'PE'
   },
   maritalstatus: 'Casado',
   addressNumber: null,
   travel: true,
-  about: `Também conhecido como Manuel Balaio
-  Foi um artesão fabricante de cestos de palha (ou balaios)
-  se tornou um dos mais importantes líderes da Balaiada
-  Revolução regencial ocorrida de 1838 até 1841 no estado do Maranhão.
-  Apelido dado devido aos balaios que vendia entre as cidades de Coroatá e Itapecuru-Mirim.`,
+  about: `Educador e filósofo brasileiro, inspiração para gerações de professores, especialmente na América Latina e na África.
+O talento como escritor ajudou a conquistar um amplo público de pedagogos, cientistas sociais, teólogos e militantes políticos
+Desenvolveu um método inovador de alfabetização
+Adotado primeiramente em Pernambuco
+Seu projeto educacional estava vinculado ao nacionalismo desenvolvimentista`,
   genero: 'h',
   hobbies: ['Revolucionar', 'Ajudar', 'Vencer'],
   telephones: [],
-  emails: ['2virgulinoferreiradasilva'],
+  emails: ['2virgulinoferreiradasilva@gmail.com'],
   sites: ['criar-curriculo.web.app'],
   languages: ['Fluente Português Brasileiro', 'Speak Basic English', 'Hablo español básico', 'Je parle les bases du Français'],
   exps: [{
     'experience': {
-      'name': 'Artesão e Vendedor',
-      'work': 'Fabricante de balaio',
-      'data_start': '1800-04-01T03:00:00.000Z',
-      'data_end': '1840-12-01T03:00:00.000Z',
-      'about': 'Criacão e venda de balaios nas cidades do Maranhão.',
+      'name': 'Educação de Jovens e Adultos',
+      'work': 'Professor',
+      'data_start': '1980-04-01T03:00:00.000Z',
+      'data_end': '1986-12-01T03:00:00.000Z',
+      'about': 'Criação do Movimento de Alfabetização de Jovens e Adultos (MOVA), um modelo de programa público de apoio a salas comunitárias de Educação de Jovens e Adultos que até hoje é adotado no Mundo todo.',
       'now': true
     }
   }],
   coursers: [{
     "formation": {
+      "name": "Faculdade de Direito",
+      "school": "Universidade do Recife",
+      "data_start": "1943-01-01T03:00:00.000Z",
+      "data_end": null,
+      "about": "",
+      "now": false
+    }
+  }, {
+    "formation": {
       "name": "Programado pra revolucionar",
       "school": "Nordeste",
-      "data_start": "1784-01-01T03:00:00.000Z",
+      "data_start": "1921-01-01T03:00:00.000Z",
       "data_end": null,
       "about": "",
       "now": true
