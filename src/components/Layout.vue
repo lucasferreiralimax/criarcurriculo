@@ -11,7 +11,7 @@ section.layout
       type="button"
     )
       | {{ $t(`layout.${layout.type}`) }}
-      .layout-grid(class=`layout-${index}`)
+      .layout-grid(:class="`layout-${++index}`")
 </template>
 
 <script>
