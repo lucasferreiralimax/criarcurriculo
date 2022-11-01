@@ -67,9 +67,6 @@ export default {
     border-radius 0
     display flex
     max-width 100%
-    margin 1rem 0 0
-    +desktop()
-      margin 0
     +tablet()
       flex-direction row
   .facebook
@@ -78,7 +75,7 @@ export default {
     overflow hidden
   .content-banner
     width 100%
-    display flex    
+    display flex
     flex-direction column
     margin 0 auto
     h2

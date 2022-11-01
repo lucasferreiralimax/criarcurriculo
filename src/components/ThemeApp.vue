@@ -135,7 +135,7 @@ export default {
     z-index 99
     padding 0
     +desktop()
-      top 140px
+      top 135px
       left 10px
     .el-select
       max-width 130px
