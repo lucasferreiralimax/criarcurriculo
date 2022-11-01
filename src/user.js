@@ -41,7 +41,8 @@ export let user = {
   },
   maritalstatus: 'Casado',
   travel: true,
-  about: `Educador e filósofo brasileiro, inspiração para gerações de professores, especialmente na América Latina e na África.
+  about: `Educador e filósofo brasileiro, inspiração para gerações de professores
+Especialmente na América Latina e na África.
 O talento como escritor ajudou a conquistar um amplo público de pedagogos, cientistas sociais, teólogos e militantes políticos
 Desenvolveu um método inovador de alfabetização
 Adotado primeiramente em Pernambuco
@@ -58,7 +59,7 @@ Seu projeto educacional estava vinculado ao nacionalismo desenvolvimentista`,
       'work': 'Professor',
       'data_start': '1980-04-01T03:00:00.000Z',
       'data_end': '1986-12-01T03:00:00.000Z',
-      'about': 'Criação do Movimento de Alfabetização de Jovens e Adultos (MOVA), um modelo de programa público de apoio a salas comunitárias de Educação de Jovens e Adultos que até hoje é adotado no Mundo todo.',
+      'about': 'Criação do Movimento de Alfabetização de Jovens e Adultos (MOVA), um modelo de programa público de apoio a salas comunitárias de Educação de Jovens e Adultos que até hoje é adotado no Mundo.',
       'now': true
     }
   }],
