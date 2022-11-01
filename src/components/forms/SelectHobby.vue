@@ -55,6 +55,8 @@ export default {
   padding 10px
   color #fff
   position relative
+  cursor default
+  border-top 1px solid rgba(255,255,255,0.3)
   h2
     font-size 1em
     color #000
