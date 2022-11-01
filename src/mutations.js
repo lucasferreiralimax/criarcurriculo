@@ -34,9 +34,6 @@ export let mutations = {
   updateAge (state, value) {
     state.user.age = value
   },
-  updateAddressNumber (state, value) {
-    state.user.addressNumber = value
-  },
   updateCep (state, value) {
     state.user.cep = value
   },
@@ -84,6 +81,9 @@ export let mutations = {
   },
   updateEndLogradouro (state, value) {
     state.user.end.logradouro = value
+  },
+  updateEndUF (state, value) {
+    state.user.end.uf = value
   },
   updateEndLocalidade (state, value) {
     state.user.end.localidade = value

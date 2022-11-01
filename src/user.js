@@ -10,13 +10,10 @@ export function userEmpty() {
     end: {
       localidade: '',
       logradouro: '',
-      complemento: '',
       uf: '',
-      bairro: '',
       cep: ''
     },
     maritalstatus: '',
-    addressNumber: null,
     travel: false,
     about: null,
     genero: '',
@@ -31,21 +28,18 @@ export function userEmpty() {
 }
 
 export let user = {
-  name: 'Paulo Reglus Neves Freire',
+  name: 'Paulo Freire',
   photo: photoBase,
   age: 75,
   countrystatus: 'Casado',
   cep: null,
   end: {
-    cep: '',
     logradouro: 'Sitio Trindade',
-    complemento: '',
-    bairro: 'Sitio Trindade',
     localidade: 'Recife',
-    uf: 'PE'
+    uf: 'Pernambuco',
+    cep: ''
   },
   maritalstatus: 'Casado',
-  addressNumber: null,
   travel: true,
   about: `Educador e filósofo brasileiro, inspiração para gerações de professores, especialmente na América Latina e na África.
 O talento como escritor ajudou a conquistar um amplo público de pedagogos, cientistas sociais, teólogos e militantes políticos

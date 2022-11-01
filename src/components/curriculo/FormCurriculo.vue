@@ -57,11 +57,10 @@ form#curriculo(:class="{ renderActive: user.name}")
   box-curriculo(title="true" type="address" translate="end")
     .row
       input-cep(v-bind:errors="errors")
-      input-app(name="address-number" value="addressNumber" type="text" translate="number" vuex="updateAddressNumber")
+      input-app(name="state" :value="{ parent: 'end', child: 'uf'}" type="text" translate="state" vuex="updateEndUF")
     .row
+      input-app(name="country" :value="{ parent: 'end', child: 'localidade'}" type="text" translate="city" vuex="updateEndLocalidade" :errors="errors")
       input-app(name="address" :value="{ parent: 'end', child: 'logradouro'}" type="text" translate="end" vuex="updateEndLogradouro" :errors="errors")
-    .row
-      input-app(name="state" :value="{ parent: 'end', child: 'localidade'}" type="text" translate="city" vuex="updateEndLocalidade" :errors="errors")
     .row
       select-travel(:errors="errors")
   // Coursers
