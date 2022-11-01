@@ -112,6 +112,7 @@ export default {
   .btn svg
     margin-right 0
     height 15px
+    transform scale(.7)
 +htmlDir()
   .accounts
     p
