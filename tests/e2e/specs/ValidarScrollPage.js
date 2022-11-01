@@ -1,7 +1,7 @@
 describe('Validar ScrollPage', () => {
   it('ScrollTop Component', () => {
     cy.visit('/')
-    cy.get('.footer').scrollIntoView()
+    cy.get('#final').scrollIntoView()
     cy.wait(1000)
     cy.get('.scroll-top').click({ force: true })
   })

@@ -39,8 +39,7 @@ describe('Validar Formatos - Basico', () => {
     cy.get('#GET-email-0').clear().type('lucasferreiralimax@gmail.com')
   })
   it('Site', () => {
-    cy.get('#GET-site-1').clear().type('criar-curriculo.web.app')
-    cy.get('#GET-site-2').clear()
+    cy.get('#GET-site-0').clear().type('criar-curriculo.web.app')
   })
   it('Idiomas', () => {
     cy.get('#GET-language-0').clear().type('Fluente Português Brasileiro')
