@@ -22,7 +22,6 @@
       top 0
 
 .view
-  border-radius 10px
   width calc(100% - 20px)
   position relative
   overflow auto
@@ -157,7 +156,6 @@
     background #fff
     bottom 0
     box-sizing border-box
-    border-radius 7px
     clear both
     cursor pointer
     font-size 15px
@@ -172,6 +170,10 @@
     min-width 600px
     word-wrap break-word
     z-index 1
+    &::-webkit-scrollbar
+      width 10px
+    &::-webkit-scrollbar-thumb
+      border-radius 0
     +break(370px)
       height 80vh
       padding 1em
