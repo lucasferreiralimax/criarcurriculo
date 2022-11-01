@@ -127,12 +127,14 @@ article.hitech
 </script>
 <style lang="stylus">
 .hitech
-  margin 3em auto 0
+  margin 2rem auto 0
   .flexbox
     align-items center
     display flex
     flex-wrap wrap
     justify-content center
+    +tablet()
+      justify-content flex-start
 .credits_logo
   align-items center
   background #fff

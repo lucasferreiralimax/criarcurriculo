@@ -28,8 +28,9 @@
           | {{ key + 1 }}
           img(v-if="country.flag" :src="require(`@/assets/flags/${country.flag}.svg`)" :alt="country.name" width="30")
           | {{ country.name }}
-    iframe.facebook(src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcurriculonovo&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share")
-    hitech
+    section.tech
+      hitech
+      iframe.facebook(src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcurriculonovo&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share")
 </template>
 
 <script>
@@ -55,8 +56,16 @@ export default {
 </script>
 
 <style lang="stylus">
++tablet()
+  .tech
+    display flex
+    text-align left
+
 .facebook
+  margin-top 2rem
   border-radius 10px
+  min-width 340px
+
 .carousel
   margin 2em auto 0
   display none
@@ -94,7 +103,7 @@ export default {
     svg
       fill #fff
 .countrys
-  padding 1rem
+  margin-top 2rem
   display block
   width 100%
   img
@@ -106,4 +115,7 @@ export default {
     padding .5rem .7rem
     background rgba(#000, .2)
     border-radius 6px
+  +tablet()
+    ul
+      text-align left
 </style>

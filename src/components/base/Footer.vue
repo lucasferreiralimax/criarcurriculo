@@ -1,6 +1,6 @@
 <template lang="pug">
 footer#final(:class="{ 'home': home_app }")
-  logo-app.credits.curriculo      
+  logo-app.credits.curriculo
 </template>
 
 <script>
@@ -35,8 +35,10 @@ export default {
       transform translateX(100%)
       clear both
     +desktop()
-      width 33%
+      width 38%
       transform translateX(150%)
+    +ultrawide()
+      width 34.5%
 +htmlDir()
   #final.home
     +tablet()
