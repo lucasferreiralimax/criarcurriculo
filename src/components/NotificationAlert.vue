@@ -32,7 +32,7 @@ export default {
 .notification
   background #fff
   padding 1em
-  border-radius 25px
+  border-radius 6px
   position fixed
   bottom 1em
   left 1em

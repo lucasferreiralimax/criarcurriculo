@@ -63,7 +63,7 @@ export default {
 
 .facebook
   margin-top 2rem
-  border-radius 10px
+  border-radius 6px
   min-width 340px
 
 .carousel

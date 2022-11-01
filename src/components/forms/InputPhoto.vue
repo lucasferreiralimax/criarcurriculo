@@ -63,7 +63,7 @@ export default {
     top 0
 .btn.large.photo
   margin .9em 0 0
-  padding .8em 0
+  padding 1em 0
   pointer-events none
   background #eee
   border 0

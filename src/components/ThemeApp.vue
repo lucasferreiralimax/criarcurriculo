@@ -126,6 +126,8 @@ export default {
   padding 5px 10px 15px
   .el-select
     width calc(100% - 50px)
+  .el-input__inner
+    border-radius 100px
   &.fixed
     display block
     pointer-events all

@@ -64,11 +64,15 @@ export default {
 <style lang="stylus">
 .home.content
   .mark
-    border-radius 0
+    border-radius 20px
     display flex
     max-width 100%
     +tablet()
       flex-direction row
+      margin 1rem auto 0
+      border-radius 0
+    +desktop()
+      margin 0 auto 0
   .facebook
     margin 1rem 0
     border 0

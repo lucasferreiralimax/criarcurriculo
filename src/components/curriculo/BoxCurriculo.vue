@@ -39,7 +39,7 @@ export default {
 <style lang="stylus">
 .box
   background rgba(#eee, .8)
-  border-radius 15px
+  border-radius 6px
   margin-bottom 1em
   max-width 100%
   overflow hidden

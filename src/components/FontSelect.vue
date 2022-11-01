@@ -9,7 +9,7 @@ section.fontType
       el-option(value="normal") Normal
       el-option(value="abel") Abel
       el-option(value="play") Play
-      el-option(value="rajdhani") Rajdhani    
+      el-option(value="rajdhani") Rajdhani
 </template>
 
 <script>
@@ -70,6 +70,8 @@ export default {
   z-index 9
   .el-select
     width 100%
+  .el-input__inner
+    border-radius 100px
   &.btn select
     width 100%
   .el-select-dropdown__item
