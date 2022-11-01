@@ -85,11 +85,10 @@ export default {
     &:last-of-type
       margin-bottom 0
     &.active
-      filter invert()
+      filter invert(1)
       background rgba(#fff, .4)
-      .flag,
-      button
-        filter invert()
+      .flag, button
+        filter invert(1)
     .flag
       transform translate(-5px, 5px) scale(1.5)
     .name,

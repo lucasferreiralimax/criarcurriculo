@@ -51,8 +51,9 @@ export default {
 
 <style lang="stylus">
 .options .actived
-  filter invert()
+  filter invert(1)
   opacity .5
+
 .layout-grid
   background repeating-linear-gradient(to top, #999 15%, #999 18%,  transparent  18%, transparent 25%)
   width 100%
