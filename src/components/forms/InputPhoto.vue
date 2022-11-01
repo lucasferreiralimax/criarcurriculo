@@ -76,6 +76,7 @@ export default {
   svg
     margin-right 0
     height 15px
+    transform scale(.7)
 +htmlDir()
   .btn.delete.bullet.small.photo
     left 17px
