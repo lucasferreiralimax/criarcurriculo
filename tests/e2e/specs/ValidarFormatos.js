@@ -33,7 +33,7 @@ describe('Validar Formatos - Basico', () => {
   it('CEP', () => {
     cy.get('#GET-cep').clear().type('03816130')
     cy.get('#GET-address').clear().type('Favela das Crianças')
-    cy.get('#GET-address-number').clear().type('1')
+    cy.get('#GET-state').clear().type('Paraíba')
   })
   it('E-mail', () => {
     cy.get('#GET-email-0').clear().type('lucasferreiralimax@gmail.com')

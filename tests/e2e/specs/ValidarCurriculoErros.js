@@ -16,9 +16,9 @@ describe('Validar erros curriculo simples', () => {
   })
   it('Endereço limpo', () => {
     cy.get('#GET-cep').clear()
-    cy.get('#GET-address-number').clear()
-    cy.get('#GET-address').clear()
     cy.get('#GET-state').clear()
+    cy.get('#GET-address').clear()
+    cy.get('#GET-country').clear()
   })
   it('Telefone limpo', () => {
     cy.get('#newTelephone').click()
@@ -105,7 +105,7 @@ describe('Validar Mensagens com Erros', () => {
     cy.contains('[for="GET-address"] .error-msg', 'Precisa preencher o campo de endereço.')
   })
   it('Mensagem de erro cidade', () => {
-    cy.contains('[for="GET-state"] .error-msg', 'Precisa preencher o campo de cidade.')
+    cy.contains('[for="GET-country"] .error-msg', 'Precisa preencher o campo de cidade.')
   })
   it('Mensagem de erro instituição', () => {
     cy.contains('[for="GET-school-0"] .error-msg', 'Precisa preencher com o nome da instituição.')

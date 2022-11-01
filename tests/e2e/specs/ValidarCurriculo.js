@@ -20,7 +20,7 @@ describe('Validar curriculo simples', () => {
   })
   it('CEP', () => {
     cy.get('#GET-cep').clear().type('03816130')
-    cy.get('#GET-address-number').clear().type('1')
+    cy.get('#GET-state').clear().type('Paraíba')
   })
   it('Disponivel para viagens', () => {
     cy.get('#GET-travel-no').click()
