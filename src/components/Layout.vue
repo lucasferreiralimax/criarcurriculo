@@ -229,6 +229,12 @@ export default {
     right 2em
     img
       height 140px
+  label
+    &[for^='GET-telephone'],
+    &[for^='GET-email'],
+    &[for^='GET-site']
+      margin-right 0
+      margin-left 1em
   .contact-info
     float right
   .info
