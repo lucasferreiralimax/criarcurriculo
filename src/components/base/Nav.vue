@@ -61,6 +61,7 @@ export default {
     position relative
 .nav-menu
   background linear-gradient(color4, rgba(color4, .6))
+  backdrop-filter blur(5px)
   bottom 0
   box-sizing border-box
   left 0
@@ -94,6 +95,7 @@ export default {
     margin-bottom 0
   +tablet()
     background transparent
+    backdrop-filter blur(0)
     opacity 1
     position relative
     padding 0
