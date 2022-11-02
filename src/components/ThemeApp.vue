@@ -4,7 +4,7 @@ section.themeApp
     label.btn.theme_app.fixed(for="theme_app" :class="{ 'active' : isTheme }")
       button.icon#openTheme(
         @click="openThemeApp"
-        v-click-outside="openThemeApp"
+        v-click-outside="closeThemeApp"
         role="button"
         type="button"
         :aria-label="$t('aria-label.theme')"
@@ -79,6 +79,7 @@ export default {
   },
   methods: {
     openThemeApp () { this.isTheme = !this.isTheme },
+    closeThemeApp () { this.isTheme = false },
     clearBody () { document.querySelector('body').classList = "" },
     updateThemeApp (value) {
       this.clearBody()
