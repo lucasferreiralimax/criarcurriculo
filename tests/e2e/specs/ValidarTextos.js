@@ -2,7 +2,7 @@ describe('Validar Textos', () => {
   it('Inicio', () => {
     cy.visit('/')
     cy.contains('h1', 'Criar Currículo')
-    cy.contains('.mark h2', 'Criar currículo grátis, rápido e fácil')
+    cy.contains('.mark h2', 'Grátis, rápido e fácil')
     cy.contains('#start', 'Preencha o formulário com suas informações')
   })
   it('Sobre', () => {
