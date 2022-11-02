@@ -1,17 +1,19 @@
 <template lang="pug">
 footer#final(:class="{ 'home': home_app }")
   logo-app.credits.curriculo
+  version-app
 </template>
 
 <script>
 import { mapState } from 'vuex'
 
 import LogoApp from '@/components/base/Logo'
+import VersionApp from '@/components/base/Version'
 
 export default {
   name: 'footer-app',
   computed: mapState({ home_app: state => state.home_app }),
-  components: { LogoApp },
+  components: { LogoApp, VersionApp },
 }
 </script>
 
