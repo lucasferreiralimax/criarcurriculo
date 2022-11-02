@@ -173,6 +173,11 @@ export default {
   .hobby,
   label[for="GET-about"]
     text-align right
+  .contact-personal,
+  .contact-address
+    float right
+    text-align right
+    justify-content flex-end
   .contact-info
     float right
   .figure
@@ -235,6 +240,11 @@ export default {
     &[for^='GET-site']
       margin-right 0
       margin-left 1em
+  .contact-personal,
+  .contact-address
+    float right
+    text-align right
+    justify-content flex-end
   .contact-info
     float right
   .info
@@ -297,6 +307,11 @@ export default {
     .hobby,
     label[for="GET-about"]
       text-align left
+    .contact-personal,
+    .contact-address
+      float right
+      text-align right
+      justify-content flex-end
     .contact-info
       float left
     .figure
@@ -359,8 +374,16 @@ export default {
     .figure
       left 2em
       right auto
+    .contact-personal,
+    .contact-address
+      float right
+      text-align right
+      justify-content flex-end
     .contact-info
       float left
+      label
+        margin-left 0
+        margin-right 1rem
     .info
       transform translateX(0)
       padding-left 0
