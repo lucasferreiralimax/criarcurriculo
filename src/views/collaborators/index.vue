@@ -11,7 +11,7 @@ section.mark.text-center
 import Colab from '@/components/lab/colab'
 
 export default {
-  name: 'about',
+  name: 'collaborators',
   head: {
     title: function () {
       return {
