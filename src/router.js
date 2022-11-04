@@ -18,13 +18,13 @@ export default new VueRouter({
     },
     {
       path: '/contributors',
-      name: 'contributors',
-      component: () => import(/* webpackChunkName: "colab" */ './views/collaborators/index.vue')
+      name: 'collaborators',
+      component: () => import(/* webpackChunkName: "collaborators" */ './views/collaborators/index.vue')
     },
     {
       path: '/*',
-      name: 'notfound',
-      component: () => import(/* webpackChunkName: "notfound" */ './views/not-found/index.vue')
+      name: 'not-found',
+      component: () => import(/* webpackChunkName: "not-found" */ './views/not-found/index.vue')
     }
   ],
   scrollBehavior () {
