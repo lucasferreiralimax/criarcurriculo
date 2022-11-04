@@ -1,8 +1,8 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 
 import App from './App.vue'
-import HeaderApp from './components/base/Header.vue'
-import FooterApp from './components/base/Footer.vue'
+import HeaderApp from './components/base/Header'
+import FooterApp from './components/base/Footer'
 import VueRouter from 'vue-router'
 
 const localVue = createLocalVue()
