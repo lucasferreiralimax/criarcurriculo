@@ -21,7 +21,7 @@ function testeTitle(lang, name) {
   cy.get('.logo h1').then((theElement) => {
     return theElement.text()
   }).then(logo => {
-    expect(logo).to.contain(name)
+    expect(logo.replace('\n', ' ')).to.contain(name)
     cy.log(`Logo title is ${logo}`);
   })
   cy.wait(500)
