@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import i18n from './i18n'
-import App from './App.vue'
+import app from './app.vue'
 import router from './router'
 import store from './store'
 
@@ -20,16 +20,16 @@ import 'element-ui/lib/theme-chalk/option.css'
 import 'element-ui/lib/theme-chalk/carousel.css'
 import 'element-ui/lib/theme-chalk/carousel-item.css'
 import 'element-ui/lib/theme-chalk/switch.css'
-import HeaderApp from '@/components/base/Header'
-import FooterApp from '@/components/base/Footer'
+import AppHeader from '@/components/base/app-header'
+import AppFooter from '@/components/base/app-footer'
 
 import lang from 'element-ui/lib/locale/lang/pt-br'
 import locale from 'element-ui/lib/locale'
 locale.use(lang)
 
 Vue.use(VueHead)
-Vue.component('header-app', HeaderApp)
-Vue.component('footer-app', FooterApp)
+Vue.component('app-header', AppHeader)
+Vue.component('app-footer', AppFooter)
 Vue.component(DatePicker.name, DatePicker)
 Vue.component(draggable.name, draggable)
 Vue.use(Tag)
@@ -48,5 +48,5 @@ new Vue({
   i18n,
   router,
   store,
-  render: h => h(App)
+  render: h => h(app)
 }).$mount('#app')

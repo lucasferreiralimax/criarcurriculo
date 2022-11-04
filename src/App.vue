@@ -1,9 +1,9 @@
 <template lang="pug">
 #app
-  header-app
+  app-header
   main
     router-view
-  footer-app
+  app-footer
 </template>
 
 <style lang="stylus">

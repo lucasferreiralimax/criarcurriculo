@@ -22,8 +22,8 @@ section.home.content
     actions
       font-select
       icon-render
-      theme-app(:actions="true")
-      layout-app
+      theme(:actions="true")
+      layout
       accounts
     render
 </template>
@@ -31,14 +31,14 @@ section.home.content
 <script>
 import { mapState } from 'vuex'
 
-import FormCurriculo from '@/components/curriculo/FormCurriculo'
-import Actions from '@/components/curriculo/Actions'
-import Render from '@/components/curriculo/Render'
-import FontSelect from '@/components/lab/FontSelect'
-import IconRender from '@/components/lab/IconRender'
-import LayoutApp from '@/components/lab/Layout'
-import ThemeApp from '@/components/lab/ThemeApp'
-import Accounts from '@/components/lab/Accounts'
+import FormCurriculo from '@/components/curriculo/form-curriculo'
+import Actions from '@/components/curriculo/actions'
+import Render from '@/components/curriculo/render'
+import FontSelect from '@/components/lab/font-select'
+import IconRender from '@/components/lab/icon-render'
+import Layout from '@/components/lab/layout'
+import Theme from '@/components/lab/theme'
+import Accounts from '@/components/lab/accounts'
 
 export default {
   name: 'home',
@@ -52,8 +52,8 @@ export default {
     Render,
     FontSelect,
     IconRender,
-    LayoutApp,
-    ThemeApp,
+    Layout,
+    Theme,
     Accounts
   },
   mounted () { this.$store.commit("updateHome", true) },

@@ -23,7 +23,7 @@ section.accounts(v-if="accounts[0]")
 <script>
 import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
 
-import Flag from '@/components/lab/Flag'
+import Flag from '@/components/lab/flag'
 
 export default {
   name: 'accounts',

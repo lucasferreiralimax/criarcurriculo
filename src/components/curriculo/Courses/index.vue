@@ -1,19 +1,23 @@
 <template lang="pug">
-draggable(:list="user.coursers"
+draggable(
+  :list="user.coursers"
   class="coursers"
   ghost-class="ghost"
   handle=".handle"
   @start="dragging = true"
   @end="dragging = false"
-  @change="updateVuex('updateCourser', $event)")
-  box(v-if="user.coursers.length !== 0"
-                :id="'course-' + key"
-                :key="key"
-                title="true"
-                type="coursers"
-                :value="{ id: key, parent: 'coursers', child: 'formation'}"
-                translate="course"
-                v-for="(course, key) in user.coursers")
+  @change="updateVuex('updateCourser', $event)"
+)
+  box(
+    v-if="user.coursers.length !== 0"
+    :id="'course-' + key"
+    :key="key"
+    title="true"
+    type="coursers"
+    :value="{ id: key, parent: 'coursers', child: 'formation'}"
+    translate="course"
+    v-for="(course, key) in user.coursers"
+  )
     template(#action)
       .actions
         button.handle.btn.bullet.small.left(type="button" :aria-label="$t('aria-label.move') + ' ' + course.formation.name")
@@ -26,8 +30,8 @@ draggable(:list="user.coursers"
         input(:id="'GET-coursenow-' + key" name="'now' + key" type="checkbox" v-model="course.formation.now" @click="updateVuex('updateCourserCheck', $event, key)" :aria-checked="course.formation.now")
         | {{ $t('form.cademy_now')}}
     .row
-      input-app(:index="key" :name="'school-' + key" :value="{ parent: 'coursers', child: 'formation', content: 'school' }" type="text" translate="school" vuex="updateCourser" :errors="errors")
-      input-app(:index="key" :name="'course-' + key" :value="{ parent: 'coursers', child: 'formation', content: 'name' }" type="text" translate="course" vuex="updateCourser" :errors="errors")
+      app-input(:index="key" :name="'school-' + key" :value="{ parent: 'coursers', child: 'formation', content: 'school' }" type="text" translate="school" vuex="updateCourser" :errors="errors")
+      app-input(:index="key" :name="'course-' + key" :value="{ parent: 'coursers', child: 'formation', content: 'name' }" type="text" translate="course" vuex="updateCourser" :errors="errors")
     .row
       label(:for="'GET-coursedata__start-' + key")
         p {{ $t('form.start')}}:
@@ -36,9 +40,9 @@ draggable(:list="user.coursers"
         p {{ $t('form.finish')}}:
         el-date-picker(:id="'GET-coursedata__finish-' + key" name="coursedata-finish" type="month" v-model="course.formation.data_end" :placeholder="$t('form.data_place')" @change="updateVuex('updateCourser', $event, key)")
     .row
-      text-area-app(:index="key" :name="'courseabout-' + key" :value="{ parent: 'coursers', child: 'formation'}" translate="about_course" vuex="updateCourser")
+      app-textarea(:index="key" :name="'courseabout-' + key" :value="{ parent: 'coursers', child: 'formation'}" translate="about_course" vuex="updateCourser")
     .row
-      input-app(:index="key" :name="'schoolLink-' + key" :value="{ parent: 'coursers', child: 'formation', content: 'link' }" type="text" translate="link" vuex="updateCourser")
+      app-input(:index="key" :name="'schoolLink-' + key" :value="{ parent: 'coursers', child: 'formation', content: 'link' }" type="text" translate="link" vuex="updateCourser")
   box
     button.btn.plus.large(v-scroll-to="'#course-' + user.coursers.length" type="button" @click="newComponent('coursers')" :aria-label="$t('aria-label.course_add')")
       svg.icon(viewBox="0 -35 512 512" width="20" xmlns="http://www.w3.org/2000/svg")
@@ -51,15 +55,15 @@ draggable(:list="user.coursers"
 import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
 import { scrollTo } from '@/directive/scroll.js'
 
-import Box from '@/components/curriculo/Box'
-import InputApp from '@/components/forms/InputApp'
-import TextAreaApp from '@/components/forms/TextAreaApp'
+import Box from '@/components/curriculo/box'
+import AppInput from '@/components/inputs/app-input'
+import AppTextarea from '@/components/inputs/app-textarea'
 
 export default {
   name: 'courses',
   props: ['errors'],
   mixins: [mixinUpdateStore],
-  components: { Box, InputApp, TextAreaApp },
+  components: { Box, AppInput, AppTextarea },
   directives: { 'scroll-to': scrollTo },
   data () {
     return {

@@ -1,15 +1,15 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 
-import App from './App.vue'
-import HeaderApp from './components/base/Header'
-import FooterApp from './components/base/Footer'
+import App from './app.vue'
+import AppHeader from './components/base/app-header'
+import AppFooter from './components/base/app-footer'
 import VueRouter from 'vue-router'
 
 const localVue = createLocalVue()
 
 localVue.use(VueRouter)
-localVue.component('header-app', HeaderApp)
-localVue.component('footer-app', FooterApp)
+localVue.component('app-header', AppHeader)
+localVue.component('app-footer', AppFooter)
 
 const router = new VueRouter()
 
@@ -23,12 +23,12 @@ describe('App', () => {
     expect(wrapper.exists()).toBeTruthy()
   })
   it('App contains HeaderApp', () => {
-    expect(wrapper.findComponent(HeaderApp).exists()).toBeTruthy()
+    expect(wrapper.findComponent(AppHeader).exists()).toBeTruthy()
   })
   it('App contains Main', () => {
     expect(wrapper.get('main')).toBeTruthy()
   })
   it('App contains FooterApp', () => {
-    expect(wrapper.findComponent(FooterApp).exists()).toBeTruthy()
+    expect(wrapper.findComponent(AppFooter).exists()).toBeTruthy()
   })
 })

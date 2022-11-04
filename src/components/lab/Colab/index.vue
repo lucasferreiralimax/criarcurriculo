@@ -18,7 +18,7 @@ import { api } from '@/api'
 const HTTP = axios.create({ baseURL: api.github })
 
 export default {
-  name: 'hitech',
+  name: 'colab',
   data() {
     return {
       contributors: null

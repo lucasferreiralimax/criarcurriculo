@@ -34,7 +34,7 @@ section.mark.text-center
 </template>
 
 <script>
-import Hitech from '@/components/lab/Hitech'
+import Hitech from '@/components/lab/hitech'
 import { list_country } from '@/i18n/list_languages'
 
 export default {

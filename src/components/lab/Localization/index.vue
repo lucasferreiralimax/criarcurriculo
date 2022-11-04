@@ -12,7 +12,7 @@ import { list_languages } from '@//i18n/list_languages'
 import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
 
 export default {
-  name: 'pluralization',
+  name: 'localization',
   mixins: [mixinUpdateStore],
   created () { this.setLocale() },
   data () {
@@ -84,7 +84,7 @@ export default {
     text-align-last center
     top 0
     left -140px
-    width auto    
+    width auto
     option
       color #000
 +htmlDir()
