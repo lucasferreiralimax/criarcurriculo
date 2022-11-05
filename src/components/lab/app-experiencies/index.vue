@@ -51,7 +51,7 @@ draggable(:list="user.exps"
 import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
 import { scrollTo } from '@/directive/scroll.js'
 
-import AppBox from '@/components/curriculo/app-box'
+import AppBox from '@/components/lab/app-box'
 import AppInput from '@/components/inputs/app-input'
 import AppTextarea from '@/components/inputs/app-textarea'
 

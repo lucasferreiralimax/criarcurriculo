@@ -74,9 +74,9 @@ form#curriculo(:class="{ renderActive: user.name}")
 import { mapState } from 'vuex'
 import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
 
-import AppBox from '@/components/curriculo/app-box'
-import AppCourses from '@/components/curriculo/app-courses'
-import AppExperiencies from '@/components/curriculo/app-experiencies'
+import AppBox from '@/components/lab/app-box'
+import AppCourses from '@/components/lab/app-courses'
+import AppExperiencies from '@/components/lab/app-experiencies'
 import AppInput from '@/components/inputs/app-input'
 import AppInputCep from '@/components/inputs/app-input-cep'
 import AppInputCrud from '@/components/inputs/app-input-crud'

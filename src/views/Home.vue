@@ -31,9 +31,9 @@ section.home.content
 <script>
 import { mapState } from 'vuex'
 
-import FormCurriculo from '@/components/curriculo/form-curriculo'
-import AppActions from '@/components/curriculo/app-actions'
-import AppRender from '@/components/curriculo/app-render'
+import FormCurriculo from '@/components/lab/form-curriculo'
+import AppActions from '@/components/lab/app-actions'
+import AppRender from '@/components/lab/app-render'
 import AppFontSelect from '@/components/lab/app-font-select'
 import AppIconRender from '@/components/lab/app-icon-render'
 import AppLayout from '@/components/lab/app-layout'
