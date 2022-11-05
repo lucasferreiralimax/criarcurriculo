@@ -1,6 +1,6 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 
-import App from './app.vue'
+import App from './App.vue'
 import AppHeader from './components/base/app-header'
 import AppFooter from './components/base/app-footer'
 import VueRouter from 'vue-router'

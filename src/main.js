@@ -1,10 +1,10 @@
 import Vue from 'vue'
-import i18n from '@/i18n'
-import App from '@/app.vue'
-import router from '@/router'
-import store from '@/store'
+import i18n from './i18n'
+import App from './App.vue'
+import router from './router'
+import store from './store'
 
-import '@/registerServiceWorker'
+import './registerServiceWorker'
 
 import VueHead from 'vue-head'
 import { DatePicker, Tag, Input, Button, Carousel, Select, Option, CarouselItem, Switch } from 'element-ui'
