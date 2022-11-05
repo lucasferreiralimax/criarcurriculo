@@ -8,7 +8,7 @@ section.mark.text-center
 
 <script>
 export default {
-  name: 'not-found',
+  name: 'notfound',
   head: {
     title: function () {
       return {
