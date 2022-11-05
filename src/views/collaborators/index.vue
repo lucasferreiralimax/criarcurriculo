@@ -1,6 +1,6 @@
 <template lang="pug">
 section.mark.text-center
-  colab
+  app-colab
   p {{ $t('view.about.text3') }}
     a(href='https://github.com/lucasferreiralimax/criarcurriculo' target='_blank' rel="noopener")  {{ $t('view.about.text4') }}
   p {{ $t('view.about.contact') }}
@@ -8,7 +8,7 @@ section.mark.text-center
 </template>
 
 <script>
-import Colab from '@/components/lab/colab'
+import AppColab from '@/components/lab/app-colab'
 
 export default {
   name: 'collaborators',
@@ -19,6 +19,6 @@ export default {
       }
     }
   },
-  components: { Colab }
+  components: { AppColab }
 }
 </script>

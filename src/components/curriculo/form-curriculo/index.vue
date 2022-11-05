@@ -67,7 +67,7 @@ form#curriculo(:class="{ renderActive: user.name}")
   courses(:errors="errors")
   // Experiencies
   experiencies(:errors="errors")
-  notification-alert
+  app-notification-alert
 </template>
 
 <script>
@@ -86,7 +86,7 @@ import AppSelectMaritals from '@/components/inputs/app-select-maritals'
 import AppSelectHobby from '@/components/inputs/app-select-hobby'
 import AppSelectTravel from '@/components/inputs/app-select-travel'
 import AppTextarea from '@/components/inputs/app-textarea'
-import NotificationAlert from '@/components/lab/notification-alert'
+import AppNotificationAlert from '@/components/lab/app-notification-alert'
 
 export default {
   name: 'form-curriculo',
@@ -99,7 +99,7 @@ export default {
     Courses, Experiencies,
     AppSelectHobby, AppSelectTravel,
     AppSelectGenre, AppSelectMaritals,
-    AppTextarea, NotificationAlert
+    AppTextarea, AppNotificationAlert
   },
   created () {
     this.setLocalStore()

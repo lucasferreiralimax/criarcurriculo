@@ -29,12 +29,12 @@ section.mark.text-center
         img(v-if="country.flag" :src="require(`@/assets/flags/${country.flag}.svg`)" :alt="country.name" width="30")
         | {{ country.name }}
   section.tech
-    hitech
+    app-hitech
     iframe.facebook(src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcurriculonovo&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share")
 </template>
 
 <script>
-import Hitech from '@/components/lab/hitech'
+import AppHitech from '@/components/lab/app-hitech'
 import { list_country } from '@/i18n/list_languages'
 
 export default {
@@ -51,7 +51,7 @@ export default {
       countrys: list_country
     }
   },
-  components: { Hitech }
+  components: { AppHitech }
 }
 </script>
 

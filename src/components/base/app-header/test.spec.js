@@ -3,9 +3,9 @@ import { shallowMount } from '@vue/test-utils'
 import AppHeader from './index.vue'
 import AppLogo from '@/components/base/app-logo'
 import AppNavigation from '@/components/base/app-navigation'
-import Localization from '@/components/lab/localization'
-import Theme from '@/components/lab/theme'
-import ScrollPage from '@/components/lab/scroll-page'
+import AppLocalization from '@/components/lab/app-localization'
+import AppTheme from '@/components/lab/app-theme'
+import AppScrollPage from '@/components/lab/app-scroll-page'
 
 const wrapper = shallowMount(AppHeader)
 
@@ -19,13 +19,13 @@ describe('Header', () => {
   it('Header contains AppNavigation', () => {
     expect(wrapper.findComponent(AppNavigation).exists()).toBeTruthy()
   })
-  it('Header contains Localization', () => {
-    expect(wrapper.findComponent(Localization).exists()).toBeTruthy()
+  it('Header contains AppLocalization', () => {
+    expect(wrapper.findComponent(AppLocalization).exists()).toBeTruthy()
   })
-  it('Header contains ThemeApp', () => {
-    expect(wrapper.findComponent(Theme).exists()).toBeTruthy()
+  it('Header contains AppTheme', () => {
+    expect(wrapper.findComponent(AppTheme).exists()).toBeTruthy()
   })
-  it('Header contains ScrollPage', () => {
-    expect(wrapper.findComponent(ScrollPage).exists()).toBeTruthy()
+  it('Header contains AppScrollPage', () => {
+    expect(wrapper.findComponent(AppScrollPage).exists()).toBeTruthy()
   })
 })

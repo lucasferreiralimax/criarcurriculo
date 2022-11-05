@@ -2,22 +2,28 @@
 header.header
   app-logo(type="link")
   app-navigation
-  localization
-  theme
-  scroll-page
+  app-localization
+  app-theme
+  app-scroll-page
 </template>
 
 <script>
 import AppLogo from '@/components/base/app-logo'
 import AppNavigation from '@/components/base/app-navigation'
-import Localization from '@/components/lab/localization'
-import Theme from '@/components/lab/theme'
-import ScrollPage from '@/components/lab/scroll-page'
+import AppLocalization from '@/components/lab/app-localization'
+import AppTheme from '@/components/lab/app-theme'
+import AppScrollPage from '@/components/lab/app-scroll-page'
 import { scrollTo } from '@/directive/scroll.js'
 
 export default {
   name: 'app-header',
-  components: { AppLogo, AppNavigation, Localization, Theme, ScrollPage },
+  components: {
+    AppLogo,
+    AppNavigation,
+    AppLocalization,
+    AppTheme,
+    AppScrollPage
+  },
   directives: { 'scroll-to': scrollTo },
   created () { window.addEventListener('scroll', this.fixedHeader) },
   destroyed () { window.removeEventListener('scroll', this.fixedHeader) },

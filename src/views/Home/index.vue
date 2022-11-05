@@ -20,11 +20,11 @@ section.home.content
   .container
     form-curriculo
     actions
-      font-select
-      icon-render
-      theme(:actions="true")
-      layout
-      accounts
+      app-font-select
+      app-icon-render
+      app-theme(:actions="true")
+      app-layout
+      app-accounts
     render
 </template>
 
@@ -34,11 +34,11 @@ import { mapState } from 'vuex'
 import FormCurriculo from '@/components/curriculo/form-curriculo'
 import Actions from '@/components/curriculo/actions'
 import Render from '@/components/curriculo/render'
-import FontSelect from '@/components/lab/font-select'
-import IconRender from '@/components/lab/icon-render'
-import Layout from '@/components/lab/layout'
-import Theme from '@/components/lab/theme'
-import Accounts from '@/components/lab/accounts'
+import AppFontSelect from '@/components/lab/app-font-select'
+import AppIconRender from '@/components/lab/app-icon-render'
+import AppLayout from '@/components/lab/app-layout'
+import AppTheme from '@/components/lab/app-theme'
+import AppAccounts from '@/components/lab/app-accounts'
 
 export default {
   name: 'home',
@@ -50,11 +50,11 @@ export default {
     FormCurriculo,
     Actions,
     Render,
-    FontSelect,
-    IconRender,
-    Layout,
-    Theme,
-    Accounts
+    AppFontSelect,
+    AppIconRender,
+    AppLayout,
+    AppTheme,
+    AppAccounts
   },
   mounted () { this.$store.commit("updateHome", true) },
   destroyed () { this.$store.commit("updateHome", false) }
