@@ -2,7 +2,7 @@ import { shallowMount, createLocalVue } from '@vue/test-utils'
 
 import { mutations } from '@/mutations'
 import Vuex from 'vuex'
-import Home from './index.vue'
+import Home from './Home.vue'
 
 const localVue = createLocalVue()
 

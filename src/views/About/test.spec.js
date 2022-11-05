@@ -1,6 +1,6 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 
-import About from './index.vue'
+import About from './About.vue'
 import { Carousel, CarouselItem } from 'element-ui'
 
 const localVue = createLocalVue()

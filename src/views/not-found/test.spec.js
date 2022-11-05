@@ -1,6 +1,6 @@
 import { shallowMount, RouterLinkStub } from '@vue/test-utils'
 
-import NotFound from './index.vue'
+import NotFound from './NotFound.vue'
 
 const wrapper = shallowMount(NotFound, {
   stubs: {

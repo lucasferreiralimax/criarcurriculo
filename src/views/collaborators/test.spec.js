@@ -1,11 +1,11 @@
 import { shallowMount } from '@vue/test-utils'
 
-import Colab from './index.vue'
+import Collaborators from './Collaborators.vue'
 
-const wrapper = shallowMount(Colab)
+const wrapper = shallowMount(Collaborators)
 
-describe('Colab', () => {
-  it('is Colab a vue instance', () => {
+describe('Collaborators', () => {
+  it('is Collaborators a vue instance', () => {
     expect(wrapper.exists()).toBeTruthy()
   })
   it('link to Github', () => {
