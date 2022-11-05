@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import i18n from './i18n'
-import app from './app.vue'
+import App from './app.vue'
 import router from './router'
 import store from './store'
 
@@ -48,5 +48,5 @@ new Vue({
   i18n,
   router,
   store,
-  render: h => h(app)
+  render: h => h(App)
 }).$mount('#app')
