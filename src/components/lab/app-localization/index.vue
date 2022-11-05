@@ -8,7 +8,7 @@ label.pluralization(for="locale")
 </template>
 
 <script>
-import { list_languages } from '@//i18n/list_languages'
+import { list_languages } from '@/i18n/list_languages'
 import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
 
 export default {
