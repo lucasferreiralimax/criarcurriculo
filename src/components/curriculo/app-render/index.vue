@@ -177,7 +177,7 @@ import { mapState } from 'vuex'
 import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
 
 export default {
-  name: 'render',
+  name: 'app-render',
   computed: mapState({
     user: state => state.user,
     icon_render: state => state.icon_render,

@@ -19,21 +19,21 @@ section.home.content
         h2#start {{ $t('view.home.text2') }}
   .container
     form-curriculo
-    actions
+    app-actions
       app-font-select
       app-icon-render
       app-theme(:actions="true")
       app-layout
       app-accounts
-    render
+    app-render
 </template>
 
 <script>
 import { mapState } from 'vuex'
 
 import FormCurriculo from '@/components/curriculo/form-curriculo'
-import Actions from '@/components/curriculo/actions'
-import Render from '@/components/curriculo/render'
+import AppActions from '@/components/curriculo/app-actions'
+import AppRender from '@/components/curriculo/app-render'
 import AppFontSelect from '@/components/lab/app-font-select'
 import AppIconRender from '@/components/lab/app-icon-render'
 import AppLayout from '@/components/lab/app-layout'
@@ -48,8 +48,8 @@ export default {
   }),
   components: {
     FormCurriculo,
-    Actions,
-    Render,
+    AppActions,
+    AppRender,
     AppFontSelect,
     AppIconRender,
     AppLayout,

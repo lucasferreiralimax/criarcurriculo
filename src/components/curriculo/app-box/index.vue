@@ -25,7 +25,7 @@
 import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
 
 export default {
-  name: 'box',
+  name: 'app-box',
   props: ['title', 'translate', 'type', 'value'],
   mixins: [mixinUpdateStore],
   data () {

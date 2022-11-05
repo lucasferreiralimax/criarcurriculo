@@ -16,7 +16,7 @@ import { mixinUpdateStore } from '@/mixins/mixinUpdateStore.js'
 import { mixinRender } from '@/mixins/mixinRender.js'
 
 export default {
-  name: 'actions',
+  name: 'app-actions',
   mixins: [mixinUpdateStore, mixinRender]
 }
 </script>
