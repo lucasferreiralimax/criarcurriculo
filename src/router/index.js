@@ -9,22 +9,22 @@ export default new VueRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import(/* webpackChunkName: "home" */ './views/Home.vue')
+      component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue')
     },
     {
       path: '/about',
       name: 'about',
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
     },
     {
       path: '/contributors',
       name: 'collaborators',
-      component: () => import(/* webpackChunkName: "collaborators" */ './views/Collaborators.vue')
+      component: () => import(/* webpackChunkName: "collaborators" */ '../views/Collaborators.vue')
     },
     {
       path: '/*',
       name: 'notfound',
-      component: () => import(/* webpackChunkName: "notfound" */ './views/NotFound.vue')
+      component: () => import(/* webpackChunkName: "notfound" */ '../views/NotFound.vue')
     }
   ],
   scrollBehavior () {
