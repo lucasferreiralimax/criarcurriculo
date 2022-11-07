@@ -86,7 +86,7 @@ export default {
     justify-content center
     align-items center
   &.github
-    background url('../assets/bg-grey.jpg')
+    background url('../assets/backgrounds/bg-grey.jpg')
     svg
       transform translateY(-10px)
     path
@@ -94,10 +94,10 @@ export default {
     a
       color #fff
   &.help
-    background url('../assets/bg-rosa.jpg')
+    background url('../assets/backgrounds/bg-rosa.jpg')
     color #fff
   &.colab
-    background url('../assets/bg-green.jpg')
+    background url('../assets/backgrounds/bg-green.jpg')
     color #fff
     svg
       fill #fff
