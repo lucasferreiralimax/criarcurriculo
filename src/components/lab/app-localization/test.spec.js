@@ -1,7 +1,7 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 
 import { list_languages } from '@/i18n/list_languages'
-import { mutations } from '@/mutations'
+import { mutations } from '@/store/mutations'
 import Vuex from 'vuex'
 import AppLocalization from './index.vue'
 

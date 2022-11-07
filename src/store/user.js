@@ -1,4 +1,4 @@
-import { photoBase } from './assets/photoBase.js'
+import { photoBase } from '../assets/photoBase.js'
 
 export function userEmpty() {
   return {

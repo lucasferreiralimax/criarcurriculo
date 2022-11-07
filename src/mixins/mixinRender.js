@@ -1,5 +1,5 @@
 import { mapState } from 'vuex'
-import { userEmpty } from '../user'
+import { userEmpty } from '@/store/user'
 
 export const mixinRender = {
   computed: mapState({

@@ -1,6 +1,6 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 
-import { mutations } from '@/mutations'
+import { mutations } from '@/store/mutations'
 import Vuex from 'vuex'
 import Home from './Home.vue'
 

@@ -1,7 +1,7 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 
-import { user } from '@/user'
-import { mutations } from '@/mutations'
+import { user } from '@/store/user'
+import { mutations } from '@/store/mutations'
 import Vuex from 'vuex'
 import AppInputCep from './index.vue'
 

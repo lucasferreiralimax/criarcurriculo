@@ -1,6 +1,6 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 
-import { user } from '@/user'
+import { user } from '@/store/user'
 import Vuex from 'vuex'
 import Render from './index.vue'
 
