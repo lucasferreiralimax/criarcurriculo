@@ -36,31 +36,37 @@ section.render(:class="{ 'viewfixed' : viewfixed, 'no-icon' : !icon_render }")
           | {{ user.end.localidade }}
           | {{ (user.end.logradouro || user.end.localidade) && user.end.uf ? ' &bull; ' : ''}}
           | {{ user.end.uf }}
-        draggable.contact-info(:list="user.telephones"
-                  ghost-class="ghost"
-                  @start="dragging = true"
-                  @end="dragging = false"
-                  @change="updateVuex('updateTelephone', $event)")
+        draggable.contact-info(
+          :list="user.telephones"
+          ghost-class="ghost"
+          @start="dragging = true"
+          @end="dragging = false"
+          @change="updateVuex('updateTelephone', $event)"
+        )
           label(:for="'GET-telephone-' + key" v-if="user.telephones" v-for="(telephone, key) in user.telephones")
             p
               svg.icon-phone(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 348.077 348.077" width="13")
                 path(d="M340.273 275.083l-53.755-53.761c-10.707-10.664-28.438-10.34-39.518.744l-27.082 27.076a792.327 792.327 0 0 1-5.344-2.973c-17.102-9.476-40.509-22.464-65.14-47.113-24.704-24.701-37.704-48.144-47.209-65.257-1.003-1.813-1.964-3.561-2.913-5.221l18.176-18.149 8.936-8.947c11.097-11.1 11.403-28.826.721-39.521L73.39 8.194c-10.682-10.68-28.421-10.356-39.518.744l-15.15 15.237.414.411c-5.08 6.482-9.325 13.958-12.484 22.02C3.74 54.28 1.927 61.603 1.098 68.941-6 127.785 20.89 181.564 93.866 254.541c100.875 100.868 182.167 93.248 185.674 92.876 7.638-.913 14.958-2.738 22.397-5.627 7.992-3.122 15.463-7.361 21.941-12.43l.331.294 15.348-15.029c11.074-11.098 11.393-28.83.716-39.542z")
               | {{ telephone }}
-        draggable.contact-info(:list="user.emails"
-                  ghost-class="ghost"
-                  @start="dragging = true"
-                  @end="dragging = false"
-                  @change="updateVuex('updateEmail', $event)")
+        draggable.contact-info(
+          :list="user.emails"
+          ghost-class="ghost"
+          @start="dragging = true"
+          @end="dragging = false"
+          @change="updateVuex('updateEmail', $event)"
+        )
           label(:for="'GET-email-' + key" v-if="user.emails" v-for="(email, key) in user.emails")
             p
               svg.icon-email(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="13")
                 path(d="M467 61H45C20.218 61 0 81.196 0 106v300c0 24.72 20.128 45 45 45h422c24.72 0 45-20.128 45-45V106c0-24.72-20.128-45-45-45zm-6.214 30L256.954 294.833 51.359 91h409.427zM30 399.788V112.069l144.479 143.24L30 399.788zM51.213 421l144.57-144.57 50.657 50.222c5.864 5.814 15.327 5.795 21.167-.046L317 277.213 460.787 421H51.213zM482 399.787L338.213 256 482 112.212v287.575z")
               | {{ email }}
-        draggable.contact-info(:list="user.sites"
-                  ghost-class="ghost"
-                  @start="dragging = true"
-                  @end="dragging = false"
-                  @change="updateVuex('updateSite', $event)")
+        draggable.contact-info(
+          :list="user.sites"
+          ghost-class="ghost"
+          @start="dragging = true"
+          @end="dragging = false"
+          @change="updateVuex('updateSite', $event)"
+        )
           label(:for="'GET-site-' + key" v-if="user.sites" v-for="(site, key) in user.sites")
             p
               svg.icon-site(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438.536 438.536" width="13")
@@ -72,31 +78,37 @@ section.render(:class="{ 'viewfixed' : viewfixed, 'no-icon' : !icon_render }")
           pre {{ user.about }}
       .languages(v-if="user.languages.length !== 0")
         h2 {{ user.languages.length <= 1 ? $tc('form.language', 1) : $tc('form.language', 2) }}
-        draggable(tag="ul"
-                  :list="user.languages"
-                  ghost-class="ghost"
-                  @start="dragging = true"
-                  @end="dragging = false"
-                  @change="updateVuex('updateSite', $event)")
+        draggable(
+          tag="ul"
+          :list="user.languages"
+          ghost-class="ghost"
+          @start="dragging = true"
+          @end="dragging = false"
+          @change="updateVuex('updateSite', $event)"
+        )
           li(v-if="user.languages" v-for="(language, key) in user.languages")
             label(:for="'GET-language-' + key" v-if="language")
               | {{ language }}
       label.hobby(v-if="user.hobbies[0] && user.name")
         h2 {{ user.hobbies.length <= 1 ? $tc('form.hobby', 1) : $tc('form.hobby', 2) }}
-        draggable(tag="ul"
-                  :list="user.hobbies"
-                  ghost-class="ghost"
-                  @start="dragging = true"
-                  @end="dragging = false")
+        draggable(
+          tag="ul"
+          :list="user.hobbies"
+          ghost-class="ghost"
+          @start="dragging = true"
+          @end="dragging = false"
+        )
           li(v-for="hobby in user.hobbies") {{ hobby }}
       .cademy(v-if="user.coursers[0]")
         h2 {{ $t('form.cademy')}}
-        draggable(:list="user.coursers"
+        draggable(
+          :list="user.coursers"
           ghost-class="ghost"
           .handle=".handle"
           @start="dragging = true"
           @end="dragging = false"
-          @change="updateVuex('updateCourser', $event)")
+          @change="updateVuex('updateCourser', $event)"
+        )
           .coursers(v-for="(course, key) in user.coursers")
             label(:for="'GET-school-' + key" v-if="course.formation.school")
               h3
@@ -129,12 +141,14 @@ section.render(:class="{ 'viewfixed' : viewfixed, 'no-icon' : !icon_render }")
             hr(v-if="key !== (user.coursers.length - 1)")
       .exps(v-if="user.exps[0]")
         h2 {{ $t('form.exp')}}
-        draggable(:list="user.exps"
+        draggable(
+          :list="user.exps"
           ghost-class="ghost"
           handle=".handle"
           @start="dragging = true"
           @end="dragging = false"
-          @change="updateVuex('updateExp', $event)")
+          @change="updateVuex('updateExp', $event)"
+        )
           .experiencies(v-for="(exp, key) in user.exps")
             label(:for="'GET-company-' + key" v-if="exp.experience.name")
               h3

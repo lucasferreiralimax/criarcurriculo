@@ -5,15 +5,18 @@ draggable(:list="user.exps"
   handle=".handle"
   @start="dragging = true"
   @end="dragging = false"
-  @change="updateVuex('updateExp', $event)")
-  app-box(v-if="user.exps.length !== 0"
-                :id="'exp-' + key"
-                :key="key"
-                title="true"
-                type="exps"
-                :value="{ id: key, parent: 'exps', child: 'experience' }"
-                translate="exp"
-                v-for="(exp, key) in user.exps")
+  @change="updateVuex('updateExp', $event)"
+)
+  app-box(
+    v-if="user.exps.length !== 0"
+    :id="'exp-' + key"
+    :key="key"
+    title="true"
+    type="exps"
+    :value="{ id: key, parent: 'exps', child: 'experience' }"
+    translate="exp"
+    v-for="(exp, key) in user.exps"
+  )
     template(#action)
       .actions
         button.handle.btn.bullet.small.left(type="button" :aria-label="$t('aria-label.move') + ' ' + exp.experience.name")
