@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 import axios from 'axios'
-import pt_BR from './pt-BR.json'
+import pt_BR from './locales/pt-BR.json'
 import { list_languages } from './list_languages'
 
 Vue.use(VueI18n)
@@ -45,7 +45,7 @@ export function loadLanguageAsync(lang) {
   }
 
   // If the language hasn't been loaded yet
-  return import(/* webpackChunkName: "lang-[request]" */ `@/i18n/${lang}.json`).then(
+  return import(/* webpackChunkName: "lang-[request]" */ `./locales/${lang}.json`).then(
     messages => {
       messages.default.locale = languages
       i18n.setLocaleMessage(lang, messages.default)
