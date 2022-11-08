@@ -6,18 +6,17 @@ const wrapper = shallowMount(AppHitech)
 
 const credits_logo_array = wrapper.findAll('.hitech a.credits_logo')
 const credits_logo = [
-  { name: 'Javascript',      url: 'https://developer.mozilla.org/pt-BR/docs/Aprender/JavaScript' },
+  { name: 'JavaScript',      url: 'https://developer.mozilla.org/pt-BR/docs/Aprender/JavaScript' },
   { name: 'HTML5',           url: 'https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5' },
   { name: 'CSS3',            url: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS3' },
-  { name: 'Vue.js',          url: 'https://vuejs.org' },
+  { name: 'Vue',             url: 'https://vuejs.org' },
   { name: 'Element',         url: 'https://element.eleme.io' },
   { name: 'Firebase',        url: 'https://firebase.google.com' },
   { name: 'Pug.js',          url: 'https://pugjs.org' },
-  { name: 'Stylus.js',       url: 'http://stylus-lang.com' },
+  { name: 'Stylus',          url: 'http://stylus-lang.com' },
   { name: 'Github',          url: 'https://github.com/lucasferreiralimax/criarcurriculo' },
   { name: 'Git',             url: 'https://git-scm.com' },
   { name: 'Google',          url: 'https://google.com' },
-  { name: 'Heroku',          url: 'https://www.heroku.com' },
   { name: 'Babel.js',        url: 'https://babeljs.io' },
   { name: 'Node.js',         url: 'https://nodejs.org' },
   { name: 'Cypress',         url: 'https://www.cypress.io' },
