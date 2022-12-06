@@ -1,6 +1,6 @@
 import { list_languages } from '../../../src/i18n/list_languages'
 
-const list_tech = ['Github', 'Heroku', 'Google', 'Firebase', 'HTML5', 'CSS3', 'Javascript', 'Pug.js', 'Stylus.js', 'Babel.js', 'Node.js', 'Git', 'Vue.js', 'Cypress', 'Firefox', 'Element']
+const list_tech = ['Github', 'Google', 'Firebase', 'HTML5', 'CSS3', 'JavaScript', 'Pug.js', 'Stylus', 'Babel.js', 'Node.js', 'Git', 'Vue', 'Cypress', 'Firefox', 'Element']
 
 function testeMakeHeart(lang, text) {
   cy.wait(500)
@@ -15,7 +15,7 @@ describe('Validar Tecnologias', () => {
   })
   for(let tech of list_tech) {
     it(`Tech ${tech}`, () => {
-      cy.contains('.credits_logo p', tech)   
+      cy.contains('.credits_logo p', tech)
     })
   }
   it('Feito com Coração', () => {
