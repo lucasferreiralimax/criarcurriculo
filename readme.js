@@ -164,7 +164,7 @@ yarn serve
 #### ¿Con quién puedes hablar sobre el proyecto?
 #### С кем вы можете поговорить о проекте?
 #### À qui pouvez-vous parler du projet?
-#### Projeyle ilgili kim konuşabilirsin?
+#### Proje ile ilgili kiminle konuşabilirsin ?
 #### Gyda phwy allwch chi siarad am y prosiect?
 #### 誰がプロジェクトについて話すことができますか？
 #### 你能谈谈这个项目吗？
