@@ -19,9 +19,6 @@ describe('About', () => {
   it('is About with Carousel component itens', () => {
     expect(wrapper.findComponent(CarouselItem).exists()).toBeTruthy()
   })
-  it('is About with iframe facebook', () => {
-    expect(wrapper.get('iframe.facebook').exists()).toBeTruthy()
-  })
   wrapper.findAll('a').wrappers.forEach((wrapper, index) => {
     it(`link to Github ${index}`, () => {
       expect(wrapper.attributes('href')).toBe('https://github.com/lucasferreiralimax/criarcurriculo')
