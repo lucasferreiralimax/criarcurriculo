@@ -41,12 +41,6 @@ Vue.use(Carousel)
 Vue.use(CarouselItem)
 Vue.use(Switch)
 Vue.use(VueTheMask)
-
 Vue.config.productionTip = false
 
-new Vue({
-  i18n,
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
+new Vue({ i18n, router, store, render: h => h(App) }).$mount('#app')
