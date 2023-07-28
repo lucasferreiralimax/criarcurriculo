@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
-import axios from 'axios'
 import pt_BR from './locales/pt-BR.json'
 import { list_languages } from './list_languages'
 
@@ -23,7 +22,6 @@ const loadedLanguages = ['pt-BR'] // our default language that is preloaded
 
 function setI18nLanguage (lang) {
   i18n.locale = lang
-  axios.defaults.headers.common['Accept-Language'] = lang
   document.querySelector('html').setAttribute('lang', lang)
   if(lang == 'ar-SA') {
     document.querySelector('html').setAttribute('dir', 'RTL')

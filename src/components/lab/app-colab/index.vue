@@ -13,9 +13,7 @@ article.colab(v-if="contributors")
         figcaption @{{ user.login }}
 </template>
 <script>
-import axios from 'axios'
 import { api } from '@/api'
-const HTTP = axios.create({ baseURL: api.github })
 
 export default {
   name: 'app-colab',
@@ -27,19 +25,20 @@ export default {
   created () { this.search_contributors() },
   methods: {
     search_contributors () {
-      HTTP.get()
-      .then(response => {
-        this.contributors = response.data
-        this.contributors.push({
-          avatar_url: 'https://mir-s3-cdn-cf.behance.net/user/115/98114c14142593.5e397f7be38d6.png',
-          login: 'Denise Monteiro',
-          contributions: 1,
-          html_url: 'https://www.denimon.info'
+      fetch(api.github)
+        .then(response => response.json())
+        .then(response => {
+          this.contributors = response
+          this.contributors.push({
+            avatar_url: 'https://mir-s3-cdn-cf.behance.net/user/115/98114c14142593.5e397f7be38d6.png',
+            login: 'Denise Monteiro',
+            contributions: 1,
+            html_url: 'https://www.denimon.info'
+          })
         })
-      })
-      .catch(e => {
-        this.errors.push(e)
-      })
+        .catch(e => {
+          this.errors.push(e)
+        })
     }
   }
 }
