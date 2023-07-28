@@ -12,7 +12,6 @@
     "readme": "node -r esm readme.js"
   },
   "dependencies": {
-    "axios": "^1.4.0",
     "core-js": "^3.26.0",
     "element-ui": "^2.15.1",
     "moment": "^2.29.1",
@@ -39,6 +38,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "esm": "^3.2.25",
+    "jest-fetch-mock": "^3.0.3",
     "jest-transform-stub": "^2.0.0",
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.0.0",
