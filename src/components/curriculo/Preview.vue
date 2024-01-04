@@ -27,23 +27,26 @@ section.preview(v-if="checkPreview")
           template(v-if="store.curriculo.address.city || store.curriculo.address.country")
             | moro em {{ store.curriculo.address.city ? ` ${store.curriculo.address.city}` : `` }}
             | {{ store.curriculo.address.country ? `${store.curriculo.address.country}` : `` }}
-          template(v-if="store.curriculo.address.travel") , disponível para viagens
+          template(v-if="store.curriculo.address.travel")
+            v-icon.mx-2 mdi-airplane
+            | Disponível para viagens
         p.mt-1
-          template(v-if="store.curriculo.contact.email || store.curriculo.contact.phone")
-            | {{ store.curriculo.contact.email ? `Email: ` : `` }}
+          template(v-if="store.curriculo.contact.email")
+            v-icon.mr-2 mdi-email-outline
             b.mr-2(v-if="store.curriculo.contact.email") {{ store.curriculo.contact.email }}
-            | {{ store.curriculo.contact.phone ? `Telefone: ` : `` }}
+          template(v-if="store.curriculo.contact.phone")
+            v-icon.mr-2 mdi-phone
             b(v-if="store.curriculo.contact.phone") {{ store.curriculo.contact.phone }}
         p.mt-1
           template(v-if="store.curriculo.contact.site")
-            | {{ store.curriculo.contact.site ? `Site: ` : `` }}
+            v-icon.mr-2 mdi-web
             a.mr-2(v-if="store.curriculo.contact.site" :href="store.curriculo.contact.site" target="_blank")
-              b {{ store.curriculo.contact.site }}
+              b {{ store.curriculo.contact.site.replace(/https:\/\//g, "") }}
         p.mt-1
           template(v-if="store.curriculo.contact.linkedin")
-            | {{ store.curriculo.contact.linkedin ? `Linkedin: ` : `` }}
+            v-icon.mr-2 mdi-linkedin
             a.mr-2(v-if="store.curriculo.contact.linkedin" :href="store.curriculo.contact.linkedin" target="_blank")
-              b {{ store.curriculo.contact.linkedin }}
+              b {{ store.curriculo.contact.linkedin.replace(/https:\/\//g, "") }}
   v-divider
   template(v-if="store.curriculo.about")
     h3.my-2 Sobre mim
