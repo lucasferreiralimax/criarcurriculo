@@ -15,7 +15,7 @@ main
     | Esse projeto foi idealizado para ajudar na criação de um Currículo Vivo
     br
     | Totalmente profissional, para você conquistar seus sonhos e objetivos conforme sua disposição
-  Box
+  Box(collapse="true")
     template(#icon)
       ToolingIcon
     template(#heading) Tecnologias
