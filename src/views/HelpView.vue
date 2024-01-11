@@ -40,15 +40,15 @@ function copyBitcoin({target}) {
 
 <template lang="pug">
 main
-  Box(collapse="true" select="true")
-    template(#icon)
-      BitcoinIcon
-    template(#heading) Bitcoin
-    p Faça uma doação em bitcoin
-    p Carteira para doações &nbsp;
-      a.pointer( @click="copyValue" href="bitcoin:BC1QYRKAGKLQAJSF64MJGJ0L99WSUHVY9CNHHYSA82?message=doa%C3%A7%C3%A3o")
-        strong.pointer bc1qyrkagklqajsf64mjgj0l99wsuhvy9cnhhysa82
-    img.pointer(@click="copyBitcoin" width="250" src="@/assets/bitcoin.png" alt="bitcoin:BC1QYRKAGKLQAJSF64MJGJ0L99WSUHVY9CNHHYSA82?message=doa%C3%A7%C3%A3o")
+  //Box(collapse="true" select="true")
+  //  template(#icon)
+  //    BitcoinIcon
+  //  template(#heading) Bitcoin
+  //  p Faça uma doação em bitcoin
+  //  p Carteira para doações &nbsp;
+  //    a.pointer( @click="copyValue" href="bitcoin:BC1QYRKAGKLQAJSF64MJGJ0L99WSUHVY9CNHHYSA82?message=doa%C3%A7%C3%A3o")
+  //      strong.pointer bc1qyrkagklqajsf64mjgj0l99wsuhvy9cnhhysa82
+  //  img.pointer(@click="copyBitcoin" width="250" src="@/assets/bitcoin.png" alt="bitcoin:BC1QYRKAGKLQAJSF64MJGJ0L99WSUHVY9CNHHYSA82?message=doa%C3%A7%C3%A3o")
   Box(collapse="true" select="true")
     template(#icon)
       DonateIcon
