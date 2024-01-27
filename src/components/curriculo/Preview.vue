@@ -58,7 +58,7 @@ section.preview(v-if="checkPreview")
     template(v-for="(formation, index) in store.curriculo.formation")
       p.my-5.mb-0
         b {{ formation.course }} - {{ formation.institute }}
-      p.my-5.mt-0.mb-0
+      p.my-5.mt-0.mb-0.description-text
         | {{ formation.about }}
       p(v-if="formation.ref")
         | Referência:
@@ -76,7 +76,7 @@ section.preview(v-if="checkPreview")
     template(v-for="(experience, index) in store.curriculo.experience")
       p.my-5.mb-0
         b {{ experience.company }} - {{ experience.work }}
-      p.my-5.mt-0.mb-0
+      p.my-5.mt-0.mb-0.description-text
         | {{ experience.about }}
       p(v-if="experience.ref")
         | Referência:
@@ -94,6 +94,8 @@ v-btn.btn.my-5.rounded-lg(block @click="magicLucas" color="info" variant="flat" 
   padding 1.5rem 2rem
   a
     color #000
+  .description-text
+    white-space pre-wrap
 
 .box-personal
   display grid
