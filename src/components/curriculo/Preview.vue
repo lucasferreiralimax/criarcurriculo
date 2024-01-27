@@ -49,12 +49,12 @@ section.preview(v-if="checkPreview")
               b {{ store.curriculo.contact.linkedin.replace(/https:\/\//g, "") }}
   v-divider
   template(v-if="store.curriculo.about")
-    h3.my-2 Sobre mim
+    h3.my-2.font-weight-bold Sobre mim
     p.my-5.mt-1.ws-wrap
       | {{ store.curriculo.about }}
     v-divider
   template(v-if="store.curriculo.formation.length > 0")
-    h3.my-2 Formação
+    h3.my-2.font-weight-bold Formação
     template(v-for="(formation, index) in store.curriculo.formation")
       p.my-5.mb-0
         b {{ formation.course }} - {{ formation.institute }}
@@ -66,13 +66,13 @@ section.preview(v-if="checkPreview")
           | {{ formation.ref }}
     v-divider.my-5
   template(v-if="store.curriculo.languages.length > 0")
-    h3.my-2 Idiomas
+    h3.my-2.font-weight-bold Idiomas
     p.my-5.mt-0
       span.mr-1(v-for="(language, index) in store.curriculo.languages")
         | {{ language.name }} {{ languagesLevel[language.percent] }} {{store.curriculo.languages.length !== index + 1 ? '•' : '' }}
     v-divider.my-5
   template(v-if="store.curriculo.experience.length > 0")
-    h3.my-2 Experiências
+    h3.my-2.font-weight-bold Experiências
     template(v-for="(experience, index) in store.curriculo.experience")
       p.my-5.mb-0
         b {{ experience.company }} - {{ experience.work }}
