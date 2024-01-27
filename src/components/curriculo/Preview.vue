@@ -57,7 +57,7 @@ section.preview(v-if="checkPreview")
     h3.my-2.font-weight-bold Formação
     template(v-for="(formation, index) in store.curriculo.formation")
       p.my-5.mb-0
-        b {{ formation.course }} - {{ formation.institute }}
+        b {{ formation.institute }} - {{ formation.course }}
       p.my-5.mt-0.mb-0.description-text
         | {{ formation.about }}
       p(v-if="formation.ref")
