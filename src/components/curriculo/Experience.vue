@@ -51,9 +51,10 @@ Box.experience(v-for="(experience, index) in store.curriculo.experience")
     v-col(cols="12" sm="6" v-if="experience.work && experience.company && experience.dateFirst")
       v-text-field(label="Data Conclusão" v-model="experience.dateEnd" hide-details="auto" clearable type="date")
   v-row(v-if="experience.work && experience.company && experience.dateFirst")
-    v-col(cols="12" sm="6")
-      v-text-field(label="Atividades" v-model="experience.about" hide-details="auto" clearable)
-    v-col(cols="12" sm="6")
+    v-col(cols="12")
+      v-textarea(label="Atividades" v-model="experience.about" hide-details="auto")
+  v-row(v-if="experience.work && experience.company && experience.dateFirst")
+    v-col(cols="12")
       v-text-field(label="Referência" v-model="experience.ref" hide-details="auto" clearable)
 v-btn.btn.py-8.rounded-lg(
   block

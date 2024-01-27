@@ -51,9 +51,10 @@ Box.academy(v-for="(formation, index) in store.curriculo.formation")
     v-col(cols="12" sm="6" v-if="formation.institute && formation.course && formation.dateFirst")
       v-text-field(label="Data Conclusão" v-model="formation.dateEnd" hide-details="auto" clearable type="date")
   v-row(v-if="formation.institute && formation.course && formation.dateFirst")
-    v-col(cols="12" sm="6")
-      v-text-field(label="Atividades" v-model="formation.about" hide-details="auto" clearable)
-    v-col(cols="12" sm="6")
+    v-col(cols="12")
+      v-textarea(label="Atividades" v-model="formation.about" hide-details="auto")
+  v-row(v-if="formation.institute && formation.course && formation.dateFirst")
+    v-col(cols="12")
       v-text-field(label="Referência" v-model="formation.ref" hide-details="auto" clearable)
 v-btn.btn.my-5.py-8.rounded-lg(
   block
