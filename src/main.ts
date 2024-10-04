@@ -13,7 +13,7 @@ import App from './App.vue'
 // Composables
 import { createApp } from 'vue'
 
-import './registerServiceWorker'
+// import './registerServiceWorker'
 
 const app = createApp(App)
 

@@ -1,13 +1,13 @@
 <template>
-  <v-footer height="40" app>
+  <v-footer app height="40">
     <a
       v-for="item in items"
       :key="item.title"
-      :href="item.href"
-      :title="item.title"
       class="d-inline-block mx-2 social-link"
+      :href="item.href"
       rel="noopener noreferrer"
       target="_blank"
+      :title="item.title"
     >
       <v-icon
         :icon="item.icon"
@@ -19,11 +19,11 @@
       class="text-caption text-disabled"
       style="position: absolute; right: 16px;"
     >
-      &copy; 2016-{{ (new Date()).getFullYear() }} <span class="d-none d-sm-inline-block">Vuetify, LLC</span>
+      &copy; 2018-{{ (new Date()).getFullYear() }} <span class="d-none d-sm-inline-block">Criar Currículo</span>
       —
       <a
         class="text-decoration-none on-surface"
-        href="https://vuetifyjs.com/about/licensing/"
+        href="https://github.com/lucasferreiralimax/criarcurriculo?tab=MIT-1-ov-file"
         rel="noopener noreferrer"
         target="_blank"
       >
