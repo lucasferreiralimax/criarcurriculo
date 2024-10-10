@@ -1,6 +1,11 @@
+.render-print
+  display none
+  &.no-icon svg
+    display none
+
 @media print
   *
-    -ms-filternone !important
+    -ms-filter none !important
     background transparent !important
     box-shadow none !important
     filter none !important
@@ -22,43 +27,17 @@
   .fontType,
   .themeApp
   .carousel
+  .render
     display none !important
     opacity 0 !important
 
   .viewblocked
     opacity 1 !important
 
-  .render, .view
-    bottom 0 !important
-    left 0 !important
-    padding 0 !important
-    right 0 !important
-    top 0 !important
-    width 100% !important
-    &:after
-      display none !important
-    &.no-icon svg
-      display none
-    *
-      display block
-    svg
-      display inline
-    span, p, b
-      display inline-block
+  .render-print
+    display block
     .content
-      bottom 0 !important
-      display block !important
-      filter blur(0) !important
-      font-weight normal
       height 100% !important
-      left 0 !important
-      overflow hidden !important
       padding 0 !important
-      pointer-events none
-      position relative !important
-      right 0 !important
-      top 0 !important
-      transform scale(1) !important
-      width 100% !important
     .layout-mirror .figure
       right 0

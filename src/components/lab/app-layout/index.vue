@@ -171,7 +171,7 @@ export default {
   .cademy,
   .languages,
   .hobby,
-  label[for="GET-about"]
+  .about-me
     text-align right
   .contact-personal,
   .contact-address
@@ -207,7 +207,7 @@ export default {
     border 0
     &.photo
       max-width calc(100% - 188px)
-  [for="GET-about"],
+  .about-me,
   .languages,
   .hobby,
   .cademy,
@@ -253,7 +253,7 @@ export default {
     border 0
     text-align right
     max-width calc(100% - 188px)
-  [for="GET-about"],
+  .about-me,
   .languages,
   .hobby,
   .cademy,
@@ -305,7 +305,7 @@ export default {
     .cademy,
     .languages,
     .hobby,
-    label[for="GET-about"]
+    .about-me
       text-align left
     .contact-personal,
     .contact-address
@@ -356,7 +356,7 @@ export default {
       padding-right 0
       &.photo
         max-width calc(100% - 188px)
-    [for="GET-about"],
+    .about-me,
     .languages,
     .hobby,
     .cademy,
@@ -389,7 +389,7 @@ export default {
       padding-left 0
       text-align left
       max-width calc(100% - 188px)
-    [for="GET-about"],
+    .about-me,
     .languages,
     .hobby,
     .cademy,

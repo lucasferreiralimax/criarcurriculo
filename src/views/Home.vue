@@ -26,6 +26,7 @@ section.home.content
       app-layout
       app-accounts
     app-render
+    app-render-print
 </template>
 
 <script>
@@ -34,6 +35,7 @@ import { mapState } from 'vuex'
 import FormCurriculo from '@/components/form-curriculo'
 import AppActions from '@/components/lab/app-actions'
 import AppRender from '@/components/lab/app-render'
+import AppRenderPrint from '@/components/lab/app-render-print'
 import AppFontSelect from '@/components/lab/app-font-select'
 import AppIconRender from '@/components/lab/app-icon-render'
 import AppLayout from '@/components/lab/app-layout'
@@ -50,6 +52,7 @@ export default {
     FormCurriculo,
     AppActions,
     AppRender,
+    AppRenderPrint,
     AppFontSelect,
     AppIconRender,
     AppLayout,
