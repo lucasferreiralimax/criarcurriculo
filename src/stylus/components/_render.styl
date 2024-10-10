@@ -4,13 +4,6 @@
     display none
   &.no-icon .figure svg
     display inline-block
-
-  label
-    &[for^='GET-telephone'],
-    &[for^='GET-email'],
-    &[for^='GET-site']
-      margin-right 1em
-      display inline-flex
   +tablet()
     box-sizing border-box
     float right
@@ -99,6 +92,16 @@
       margin-top 0
   .experiencies:last-of-type hr
     display none
+  .contacts
+    display flex
+    flex-wrap wrap
+    gap 0px 10px
+    .contact-information
+      display flex
+    .contact-draggble
+      display flex
+      flex-wrap wrap
+      gap 0px 10px
   .info
     margin-bottom 20px
     width 100%
@@ -113,13 +116,6 @@
       min-height 157px
     p
       line-height 20px
-  .contact-personal, .contact-address
-    width 100%
-    display flex
-    float left
-    clear both
-  .contact-info
-    float left
   .languages li, .hobby li
     background #fff
     border 1px solid rgba(#000, .3)
@@ -186,12 +182,6 @@
 
 +htmlDir()
   .render
-    label
-      &[for^='GET-telephone'],
-      &[for^='GET-email'],
-      &[for^='GET-site']
-        margin-right 0
-        margin-left 1em
     +tablet()
       right auto
       left 1em
@@ -204,8 +194,6 @@
     .info.photo
       padding-left 0
       padding-right 120px
-    .contact-info
-      float right
     .exps, .hobby, .cademy, .about-me
       clear both
 
