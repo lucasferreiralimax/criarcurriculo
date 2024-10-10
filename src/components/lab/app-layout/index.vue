@@ -173,24 +173,13 @@ export default {
   .hobby,
   .about-me
     text-align right
-  .contact-personal,
-  .contact-address
-    float right
-    text-align right
-    justify-content flex-end
-  .contact-info
-    float right
+  .contacts
+    flex-direction row-reverse
   .figure
     right 2rem
   .info.photo
     padding-left 0
     padding-right 140px
-  label
-    &[for^='GET-telephone'],
-    &[for^='GET-email'],
-    &[for^='GET-site']
-      margin-right 0
-      margin-left 1em
   .btn.handle.move
     left 0
     right auto
@@ -234,19 +223,8 @@ export default {
     right 2em
     img
       height 140px
-  label
-    &[for^='GET-telephone'],
-    &[for^='GET-email'],
-    &[for^='GET-site']
-      margin-right 0
-      margin-left 1em
-  .contact-personal,
-  .contact-address
-    float right
-    text-align right
-    justify-content flex-end
-  .contact-info
-    float right
+  .contacts
+    flex-direction row-reverse
   .info
     transform translateX(0)
     padding-left 0
@@ -307,25 +285,14 @@ export default {
     .hobby,
     .about-me
       text-align left
-    .contact-personal,
-    .contact-address
-      float right
-      text-align right
-      justify-content flex-end
-    .contact-info
-      float left
+    .contacts
+      flex-direction row-reverse
     .figure
       left 3em
       right auto
     .info.photo
       padding-left 120px
       padding-right 0
-    label
-      &[for^='GET-telephone'],
-      &[for^='GET-email'],
-      &[for^='GET-site']
-        margin-right 1em !important
-        margin-left 0 !important
     .btn.handle.move
       left 0
       left auto
@@ -374,16 +341,8 @@ export default {
     .figure
       left 2em
       right auto
-    .contact-personal,
-    .contact-address
-      float right
-      text-align right
-      justify-content flex-end
-    .contact-info
-      float left
-      label
-        margin-left 0
-        margin-right 1rem
+    .contacts
+      flex-direction row-reverse
     .info
       transform translateX(0)
       padding-left 0
