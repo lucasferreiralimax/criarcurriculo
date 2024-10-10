@@ -28,12 +28,13 @@ export default {
       fetch(api.github)
         .then(response => response.json())
         .then(response => {
+          console.log(response)
           this.contributors = response
           this.contributors.push({
-            avatar_url: 'https://mir-s3-cdn-cf.behance.net/user/115/98114c14142593.5e397f7be38d6.png',
+            avatar_url: 'https://media.licdn.com/dms/image/v2/D4D03AQGAJYNQzOLj8w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1709559774802?e=1733961600&v=beta&t=QKT0vPpGQuCSyfVg64cbQsyyxC-NT6SlwliyiqttUTo',
             login: 'Denise Monteiro',
             contributions: 1,
-            html_url: 'https://www.denimon.info'
+            html_url: 'https://www.linkedin.com/in/denimon'
           })
         })
         .catch(e => {
