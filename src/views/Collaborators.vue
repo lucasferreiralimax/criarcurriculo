@@ -15,8 +15,15 @@ export default {
   head: {
     title: function () {
       return {
-        inner: this.$t('view.about.colab')
+        inner: this.$t('view.about.colab'),
+        separator: '|',
+        complement: `${this.$t('view.home.name1')} ${this.$t('view.home.name2')}`
       }
+    }
+  },
+  watch: {
+    '$i18n.locale'() {
+      this.$emit('updateHead');
     }
   },
   components: { AppColab }
