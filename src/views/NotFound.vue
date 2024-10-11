@@ -12,9 +12,16 @@ export default {
   head: {
     title: function () {
       return {
-        inner: this.$t('view.notfound.text1')
+        inner: this.$t('view.notfound.text1'),
+        separator: '|',
+        complement: `${this.$t('view.home.name1')} ${this.$t('view.home.name2')}`
       }
     }
-  }
+  },
+  watch: {
+    '$i18n.locale'() {
+      this.$emit('updateHead');
+    }
+  },
 }
 </script>
