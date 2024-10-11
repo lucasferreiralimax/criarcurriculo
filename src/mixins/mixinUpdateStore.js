@@ -58,6 +58,10 @@ export const mixinUpdateStore = {
     },
     updateVuex (name, e, id) {
       switch (name) {
+        case 'updateName':
+          this.$store.commit(name, e.target.value)
+          document.title = e.target.value ? `${e.target.value} | ${this.$t('view.home.name2')}` : this.$t('view.home.name2')
+          break
         case 'updateCep':
           this.$store.commit(name, e.target.value.replace(/\D+/g, ''))
           break
