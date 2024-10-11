@@ -1,6 +1,12 @@
-break(value)
-  @media (max-width: value)
-    {block}
+break(value, type = 'max')
+  if type == 'max'
+    @media (max-width: value)
+      {block}
+  else if type == 'min'
+    @media (min-width: value)
+      {block}
+  else
+    throw new Error('Invalid type. Use "max" or "min".')
 
 mobile()
   @media (min-width: 640px)
