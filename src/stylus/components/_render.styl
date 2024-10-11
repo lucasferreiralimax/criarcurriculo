@@ -14,6 +14,12 @@
     &.viewfixed
       position fixed
       top 0
+  +break(2400px, 'min')
+    &.viewfixed .view
+        max-width 70%
+        position absolute
+        right 1rem
+
 
 .view
   width calc(100% - 20px)
