@@ -41,8 +41,15 @@ export default {
   head: {
     title: function () {
       return {
-        inner: this.$t('nav.about')
+        inner: this.$t('nav.about'),
+        separator: '|',
+        complement: `${this.$t('view.home.name1')} ${this.$t('view.home.name2')}`
       }
+    }
+  },
+  watch: {
+    '$i18n.locale'() {
+      this.$emit('updateHead');
     }
   },
   data () {
