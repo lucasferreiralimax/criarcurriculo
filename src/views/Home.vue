@@ -60,6 +60,11 @@ export default {
       }
     }
   },
+  watch: {
+    '$i18n.locale'() {
+      this.$emit('updateHead');
+    }
+  },
   components: {
     FormCurriculo,
     AppActions,
