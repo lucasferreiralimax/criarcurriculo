@@ -46,8 +46,20 @@ export default {
   name: 'home',
   computed: mapState({
     theme_app: state => state.theme_app,
-    home_app: state => state.home_app
+    home_app: state => state.home_app,
+    user: state => state.user,
   }),
+  head: {
+    title: function () {
+      if(this.user.name) {
+        return {
+          inner: this.user.name,
+          separator: '|',
+          complement: this.$t('view.home.name2')
+        }
+      }
+    }
+  },
   components: {
     FormCurriculo,
     AppActions,
