@@ -2,8 +2,8 @@
 section.render-print(:class="{ 'no-icon' : !icon_render }")
   .view
     .content(:class="layout_render")
-      .figure
-        figure(v-if="user.photo")
+      .figure(v-if="user.photo")
+        figure
           img#photo(:src="user.photo" :alt="user.name" width="auto")
       .info(:class="{ 'photo': user.photo }" v-if="user.name || user.maritalstatus")
         h1 {{ user.name }}
