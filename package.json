@@ -12,11 +12,11 @@
     "readme": "node -r esm readme.js"
   },
   "dependencies": {
-    "core-js": "^3.32.0",
+    "core-js": "^3.40.0",
     "element-ui": "^2.15.13",
     "moment": "^2.29.4",
     "register-service-worker": "^1.7.1",
-    "vue": "^2.7.14",
+    "vue": "^2.7.16",
     "vue-head": "^2.0.12",
     "vue-i18n": "^8.28.2",
     "vue-router": "^3.6.5",
