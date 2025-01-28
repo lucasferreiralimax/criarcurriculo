@@ -55,6 +55,17 @@ export const mixinRender = {
       this.$store.commit('updateErrors', this.errors)
       return this.errors
     },
+    getMailto(email) {
+      return `mailto:${email}`;
+    },
+    formatSiteDisplay(url) {
+      // Remove 'http://' ou 'https://'
+      return url.replace(/(^\w+:|^)\/\//, '');
+    },
+    ensureHttps(url) {
+      // Force 'https://' only
+      return url.startsWith('http://') || url.startsWith('https://') ? url : `https://${url}`;
+    },
     printRender () {
       if(!this.errorsCheck().length) {
         let scroll_end = (document.querySelector('#app').clientHeight - document.querySelector('#app').parentElement.offsetHeight)
